@@ -1,3 +1,4 @@
+/*https://leetcode-cn.com/problems/html-entity-parser/*/
 export default entityParser;
 
 function entityParser(text: string): string {
