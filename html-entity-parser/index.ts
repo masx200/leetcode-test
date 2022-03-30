@@ -1,3 +1,5 @@
+export default entityParser;
+
 function entityParser(text: string): string {
 return text.replace(entityRegExp,replacer);
 };
