@@ -25,7 +25,12 @@ https://deno.land/x/udd#installation
 ```
 ./test.cmd
 ```
+2.升级依赖
 
+```
+deno task udd
+
+```
 #### 参与贡献
 
 1. Fork 本仓库
