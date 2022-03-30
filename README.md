@@ -14,6 +14,10 @@ leetcode测试
 
 https://deno.land/#installation
 
+2. 安装 `udd`
+
+https://deno.land/x/udd#installation
+
 #### 使用说明
 
 1. 测试
