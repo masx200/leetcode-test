@@ -1,4 +1,7 @@
-{ "importMap": "import_map.json","tasks": {
-    "udd": "udd *.ts"
-   
-  } }
+{
+  "importMap": "import_map.json",
+  "tasks": {
+    "udd": "udd '*.ts'",
+    "install-udd": "deno install -A -f -n udd https://deno.land/x/udd@0.7.3/main.ts"
+  }
+}

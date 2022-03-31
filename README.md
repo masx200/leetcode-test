@@ -23,14 +23,15 @@ https://deno.land/x/udd#installation
 1. 测试
 
 ```
-./test.cmd
+deno test 
 ```
+
 2.升级依赖
 
 ```
 deno task udd
-
 ```
+
 #### 参与贡献
 
 1. Fork 本仓库
