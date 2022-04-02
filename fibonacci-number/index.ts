@@ -1,7 +1,12 @@
 // My code goes here
 /**https://leetcode-cn.com/problems/fibonacci-number/ */
-export default function fibonacciNumber(n: number): number {
-    return Number(getfbnq(BigInt(n)));
+export default function fibonacciNumber(n: number): number | bigint {
+    const result = getfbnq(BigInt(n));
+    if (result < Number.MAX_SAFE_INTEGER) {
+        return Number(result);
+    } else {
+        return result;
+    }
 }
 
 function getfbnq(num: bigint): bigint {
