@@ -1,7 +1,12 @@
 // My code goes here
 /** https://leetcode-cn.com/problems/climbing-stairs */
-export default function climbStairs(n: number): number {
-    return Number(getClimbStairs(BigInt(n)));
+export default function climbStairs(n: number): number| bigint {
+  const result =   getClimbStairs(BigInt(n));
+if (result < Number.MAX_SAFE_INTEGER) {
+        return Number(result);
+    } else {
+        return result;
+    }
 }
 
 function getClimbStairs(num: bigint): bigint {
