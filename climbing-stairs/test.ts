@@ -7,6 +7,7 @@ Deno.test("climbing-stairs", () => {
         { input: 1, output: 1 },
         { input: 2, output: 2 },
         { input: 3, output: 3 },
+{ input: 99, output: 354224848179261915075n },
     ];
     examples.forEach(({ input, output }) => {
         assertStrictEquals(climbStairs(input), output);
