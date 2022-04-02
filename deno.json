@@ -4,7 +4,8 @@
         "udd": "udd '*.ts'",
         "install-udd": "deno install -A -f -n udd https://deno.land/x/udd@0.7.3/main.ts",
         "fmt": "deno fmt --config deno.json",
-        "test": "deno test --config deno.json"
+        "test": "deno test --config deno.json",
+        "lint": "deno lint --config deno.json"
     },
     "fmt": {
         "options": {

@@ -14,6 +14,14 @@ https://leetcode-cn.com/problems/reverse-linked-list/
 
 https://leetcode-cn.com/problems/html-entity-parser/
 
+https://leetcode-cn.com/problems/two-sum/
+
+https://leetcode-cn.com/problems/fei-bo-na-qi-shu-lie-lcof/
+
+https://leetcode-cn.com/problems/climbing-stairs/
+
+https://leetcode-cn.com/problems/fibonacci-number/
+
 #### 安装教程
 
 1. 安装`deno`
@@ -42,6 +50,12 @@ deno task udd
 
 ```
 deno task fmt
+```
+
+4.lint
+
+```
+deno task lint
 ```
 
 #### 参与贡献
