@@ -1,5 +1,5 @@
 /**https://leetcode-cn.com/problems/html-entity-parser/*/
-export default function entityParser(text: string): string {
+export default function htmlEntityParser(text: string): string {
     return text.replace(entityRegExp, replacer);
 }
 const replacer = (a: string) => {
