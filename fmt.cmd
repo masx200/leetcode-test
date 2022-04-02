@@ -1,1 +1,1 @@
-deno fmt
+deno fmt --config deno.json

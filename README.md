@@ -8,6 +8,12 @@ leetcode测试
 
 软件架构说明
 
+包含的内容如下
+
+https://leetcode-cn.com/problems/reverse-linked-list/
+
+https://leetcode-cn.com/problems/html-entity-parser/
+
 #### 安装教程
 
 1. 安装`deno`
@@ -23,13 +29,19 @@ https://deno.land/x/udd#installation
 1. 测试
 
 ```
-deno test 
+deno task test
 ```
 
 2.升级依赖
 
 ```
 deno task udd
+```
+
+3.格式化
+
+```
+deno task fmt
 ```
 
 #### 参与贡献
