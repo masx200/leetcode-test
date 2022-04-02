@@ -7,6 +7,7 @@ Deno.test("fibonacci-number", () => {
         { input: 3, output: 2 },
         { input: 4, output: 3 },
         { input: 30, output: 832040 },
+        { input: 20, output: 6765 },
     ];
     examples.forEach(({ input, output }) => {
         assertStrictEquals(fibonacciNumber(input), output);

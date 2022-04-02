@@ -7,6 +7,7 @@ Deno.test("fei-bo-na-qi-shu-lie-lcof", () => {
         { input: 1, output: 1 },
         { input: 0, output: 0 },
         { input: 60, output: 8745084 },
+        { input: 20, output: 6765 },
     ];
     examples.forEach(({ input, output }) => {
         assertStrictEquals(fei_bo_na_qi_shu_lie_lcof(input), output);
