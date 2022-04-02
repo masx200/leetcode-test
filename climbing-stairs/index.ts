@@ -19,11 +19,10 @@ function getClimbStairs(num: bigint): bigint {
         if (cacheClimbStairs.has(e)) {
             continue;
         } else {
-            const r =
-                cacheClimbStairs.get(e) ||
+            const r = cacheClimbStairs.get(e) ||
                 bigInt(cacheClimbStairs.get(e - 1n) || getClimbStairs(e - 1n)) +
                     bigInt(
-                        cacheClimbStairs.get(e - 2n) || getClimbStairs(e - 2n)
+                        cacheClimbStairs.get(e - 2n) || getClimbStairs(e - 2n),
                     );
             cacheClimbStairs.set(e, r);
         }

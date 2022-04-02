@@ -19,8 +19,7 @@ function getfbnq(num: bigint): bigint {
         if (feibonq.has(e)) {
             continue;
         } else {
-            const r =
-                feibonq.get(e) ||
+            const r = feibonq.get(e) ||
                 bigInt(feibonq.get(e - 1n) || getfbnq(e - 1n)) +
                     bigInt(feibonq.get(e - 2n) || getfbnq(e - 2n));
             feibonq.set(e, r);
