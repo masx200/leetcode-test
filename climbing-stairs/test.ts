@@ -10,6 +10,9 @@ Deno.test("climbing-stairs", () => {
         { input: 1, output: 1 },
         { input: 2, output: 2 },
         { input: 3, output: 3 },
+        { input: 45, output: 1836311903 },
+        { input: 44, output: 1134903170 },
+        { input: 46, output: 1134903170 + 1836311903 },
         { input: 99, output: 354224848179261915075n },
     ];
     examples.forEach(({ input, output }) => {
