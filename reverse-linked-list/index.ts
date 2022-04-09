@@ -22,11 +22,18 @@ export class ListNode {
 export default function reverseLinkedList(
     head: ListNode | null,
 ): ListNode | null {
-    if (null === head) {
+    let ans = null;
+    let x = head;
+    while (x != null) {
+        ans = new ListNode(x.val, ans);
+        x = x.next;
+    }
+    return ans;
+    /*  if (null === head) {
         return null;
     }
 
-    return ArrayToListNode(Array.from(ListNodeToArray(head)).reverse());
+    return ArrayToListNode(Array.from(ListNodeToArray(head)).reverse()); */
 }
 
 export function ArrayToListNode(array: Array<number>): ListNode | null {
