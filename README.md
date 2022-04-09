@@ -60,6 +60,20 @@ deno task fmt
 deno task lint
 ```
 
+5.使用模块
+
+```ts
+import {} from "https://gitee.com/masx200/leetcode-test/raw/master/mod.ts";
+```
+
+```ts
+import {} from "https://github.com/masx200/leetcode-test/raw/master/mod.ts";
+```
+
+```ts
+import {} from "https://cdn.jsdelivr.net/gh/masx200/leetcode-test/mod.ts";
+```
+
 #### 参与贡献
 
 1. Fork 本仓库
