@@ -1,4 +1,7 @@
 export default function myPow(x: number, n: number): number {
+    if (Number.isFinite(n) && !Number.isInteger(n)) {
+        throw Error("not integer:" + n);
+    }
     if (Number.isNaN(x) || Number.isNaN(n)) {
         throw Error("nan:" + x + "," + n);
     }
