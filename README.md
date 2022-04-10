@@ -26,6 +26,8 @@ https://leetcode-cn.com/problems/merge-sorted-array/
 
 https://leetcode-cn.com/problems/powx-n/
 
+https://leetcode-cn.com/problems/que-shi-de-shu-zi-lcof/
+
 #### 安装教程
 
 1. 安装`deno`
