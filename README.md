@@ -28,6 +28,8 @@ https://leetcode-cn.com/problems/powx-n/
 
 https://leetcode-cn.com/problems/que-shi-de-shu-zi-lcof/
 
+https://leetcode-cn.com/problems/find-all-numbers-disappeared-in-an-array
+
 #### 安装教程
 
 1. 安装`deno`
