@@ -24,6 +24,8 @@ https://leetcode-cn.com/problems/fibonacci-number/
 
 https://leetcode-cn.com/problems/merge-sorted-array/
 
+https://leetcode-cn.com/problems/powx-n/
+
 #### 安装教程
 
 1. 安装`deno`

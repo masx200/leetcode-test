@@ -1,4 +1,7 @@
 {
+    "compilerOptions": {
+        "strict": true
+    },
     "importMap": "import_map.json",
     "tasks": {
         "udd": "udd '*.ts'",
