@@ -14,4 +14,3 @@ Deno.test("find-all-numbers-disappeared-in-an-array", () => {
         assertEquals(output, find_all_numbers_disappeared_in_an_array(input));
     });
 });
-
