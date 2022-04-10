@@ -1,10 +1,10 @@
 import { assertStrictEquals } from "../deps.ts";
-import { fibonacciNumber } from "../mod.ts";
+import { fibonacci_Number } from "../mod.ts";
 
 Deno.test("fibonacci-number", () => {
     const examples: {
         input: number;
-        output: ReturnType<typeof fibonacciNumber>;
+        output: ReturnType<typeof fibonacci_Number>;
     }[] = [
         { input: 2, output: 1 },
         { input: 3, output: 2 },
@@ -14,6 +14,6 @@ Deno.test("fibonacci-number", () => {
         { input: 99, output: 218922995834555169026n },
     ];
     examples.forEach(({ input, output }) => {
-        assertStrictEquals(fibonacciNumber(input), output);
+        assertStrictEquals(fibonacci_Number(input), output);
     });
 });

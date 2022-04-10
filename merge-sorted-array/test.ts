@@ -1,9 +1,9 @@
 import { assertEquals } from "../deps.ts";
-import { mergeSortedArray } from "../mod.ts";
+import { merge_Sorted_Array } from "../mod.ts";
 Deno.test("merge-sorted-array", () => {
     const examples: {
-        input: Parameters<typeof mergeSortedArray>;
-        output: Parameters<typeof mergeSortedArray>[0];
+        input: Parameters<typeof merge_Sorted_Array>;
+        output: Parameters<typeof merge_Sorted_Array>[0];
     }[] = [
         {
             input: [[1, 2, 3, 0, 0, 0], 3, [2, 5, 6], 3],
@@ -13,7 +13,7 @@ Deno.test("merge-sorted-array", () => {
         { input: [[0], 0, [1], 1], output: [1] },
     ];
     examples.forEach(({ input, output }) => {
-        mergeSortedArray(...input);
+        merge_Sorted_Array(...input);
         assertEquals(output, input[0]);
     });
 });

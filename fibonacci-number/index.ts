@@ -1,6 +1,6 @@
 // My code goes here
 /**https://leetcode-cn.com/problems/fibonacci-number/ */
-export default function fibonacciNumber(n: number): number | bigint {
+export default function fibonacci_Number(n: number): number | bigint {
     const result = getfbnq(BigInt(n));
     if (result < Number.MAX_SAFE_INTEGER) {
         return Number(result);

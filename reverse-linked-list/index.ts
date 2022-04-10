@@ -19,7 +19,7 @@ export class ListNode {
     }
 }
 /**https://leetcode-cn.com/problems/reverse-linked-list/ */
-export default function reverseLinkedList(
+export default function reverse_Linked_List(
     head: ListNode | null,
 ): ListNode | null {
     let ans = null;

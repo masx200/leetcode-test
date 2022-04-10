@@ -1,5 +1,5 @@
 import { assert } from "../deps.ts";
-import { htmlEntityParser } from "../mod.ts";
+import { html_Entity_Parser } from "../mod.ts";
 
 Deno.test("html-entity-parser", () => {
     const testData: { input: string; output: string }[] = [
@@ -27,7 +27,7 @@ Deno.test("html-entity-parser", () => {
 
     assert(
         testData.every(
-            ({ input, output }) => htmlEntityParser(input) === output,
+            ({ input, output }) => html_Entity_Parser(input) === output,
         ),
     );
 });

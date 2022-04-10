@@ -30,6 +30,8 @@ https://leetcode-cn.com/problems/que-shi-de-shu-zi-lcof/
 
 https://leetcode-cn.com/problems/find-all-numbers-disappeared-in-an-array
 
+https://leetcode-cn.com/problems/move-zeroes/
+
 #### 安装教程
 
 1. 安装`deno`

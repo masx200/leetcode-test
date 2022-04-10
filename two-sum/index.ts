@@ -1,5 +1,5 @@
 /**https://leetcode-cn.com/problems/two-sum/ */
-export default function twoSum(nums: number[], target: number): number[] {
+export default function two_Sum(nums: number[], target: number): number[] {
     // const cache_result = new Set<number>()
     const storeNumstoindex = new Map<number, number>();
 

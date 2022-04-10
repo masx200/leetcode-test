@@ -1,5 +1,9 @@
 import { assert, equal } from "../deps.ts";
-import { ArrayToListNode, ListNodeToArray, reverseLinkedList } from "../mod.ts";
+import {
+    ArrayToListNode,
+    ListNodeToArray,
+    reverse_Linked_List,
+} from "../mod.ts";
 
 Deno.test("reverse-linked-list", () => {
     const testData: { input: Array<number>; output: Array<number> }[] = [
@@ -21,11 +25,15 @@ Deno.test("reverse-linked-list", () => {
         testData.every(
             ({ input, output }) =>
                 equal(
-                    ListNodeToArray(reverseLinkedList(ArrayToListNode(input))),
+                    ListNodeToArray(
+                        reverse_Linked_List(ArrayToListNode(input)),
+                    ),
                     output,
                 ) &&
                 equal(
-                    ListNodeToArray(reverseLinkedList(ArrayToListNode(output))),
+                    ListNodeToArray(
+                        reverse_Linked_List(ArrayToListNode(output)),
+                    ),
                     input,
                 ),
         ),

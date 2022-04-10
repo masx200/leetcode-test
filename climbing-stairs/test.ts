@@ -1,10 +1,10 @@
 import { assertStrictEquals } from "../deps.ts";
-import { climbStairs } from "../mod.ts";
+import { climbing_stairs } from "../mod.ts";
 
 Deno.test("climbing-stairs", () => {
     const examples: {
         input: number;
-        output: ReturnType<typeof climbStairs>;
+        output: ReturnType<typeof climbing_stairs>;
     }[] = [
         { input: 10, output: 89 },
         { input: 1, output: 1 },
@@ -16,6 +16,6 @@ Deno.test("climbing-stairs", () => {
         { input: 99, output: 354224848179261915075n },
     ];
     examples.forEach(({ input, output }) => {
-        assertStrictEquals(climbStairs(input), output);
+        assertStrictEquals(climbing_stairs(input), output);
     });
 });
