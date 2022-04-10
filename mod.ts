@@ -1,7 +1,7 @@
 import merge_Sorted_Array from "./merge-sorted-array/index.ts";
 import pow_x_n from "./powx-n/index.ts";
 export { pow_bigint } from "./powx-n/index.ts";
-
+export { default as shu_zhi_de_zheng_shu_ci_fang_lcof } from "./shu-zhi-de-zheng-shu-ci-fang-lcof/index.ts";
 import html_Entity_Parser from "./html-entity-parser/index.ts";
 
 import reverse_Linked_List from "./reverse-linked-list/index.ts";

@@ -34,6 +34,8 @@ https://leetcode-cn.com/problems/move-zeroes/
 
 https://leetcode-cn.com/problems/unique-morse-code-words/
 
+https://leetcode-cn.com/problems/shu-zhi-de-zheng-shu-ci-fang-lcof/
+
 #### 安装教程
 
 1. 安装`deno`
