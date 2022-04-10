@@ -36,6 +36,10 @@ https://leetcode-cn.com/problems/unique-morse-code-words/
 
 https://leetcode-cn.com/problems/shu-zhi-de-zheng-shu-ci-fang-lcof/
 
+https://leetcode-cn.com/problems/sqrtx/
+
+https://leetcode-cn.com/problems/jJ0w9p/
+
 #### 安装教程
 
 1. 安装`deno`
