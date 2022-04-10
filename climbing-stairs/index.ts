@@ -1,7 +1,7 @@
 // My code goes here
 /** https://leetcode-cn.com/problems/climbing-stairs */
-export default function climbing_stairs(n: number): number | bigint {
-    const result = getClimbStairs(BigInt(n));
+export default function climbing_stairs(n: number | bigint): number | bigint {
+    const result = climbing_stairs_bigint(BigInt(n));
     if (result < Number.MAX_SAFE_INTEGER) {
         return Number(result);
     } else {
@@ -9,7 +9,7 @@ export default function climbing_stairs(n: number): number | bigint {
     }
 }
 
-function getClimbStairs(num: bigint): bigint {
+export function climbing_stairs_bigint(num: bigint): bigint {
     if (num < 1) {
         throw Error("must grater than one");
     }
@@ -25,14 +25,18 @@ function getClimbStairs(num: bigint): bigint {
             continue;
         } else {
             const r = cacheClimbStairs.get(e) ||
-                bigInt(cacheClimbStairs.get(e - 1n) || getClimbStairs(e - 1n)) +
+                bigInt(
+                        cacheClimbStairs.get(e - 1n) ||
+                            climbing_stairs_bigint(e - 1n),
+                    ) +
                     bigInt(
-                        cacheClimbStairs.get(e - 2n) || getClimbStairs(e - 2n),
+                        cacheClimbStairs.get(e - 2n) ||
+                            climbing_stairs_bigint(e - 2n),
                     );
             cacheClimbStairs.set(e, r);
         }
     }
-    return getClimbStairs(num);
+    return climbing_stairs_bigint(num);
 }
 const cacheClimbStairs = new Map<bigint, bigint>([
     [1n, 1n],

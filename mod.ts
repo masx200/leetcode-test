@@ -6,9 +6,11 @@ import html_Entity_Parser from "./html-entity-parser/index.ts";
 import reverse_Linked_List from "./reverse-linked-list/index.ts";
 
 import climbing_stairs from "./climbing-stairs/index.ts";
+export { climbing_stairs_bigint } from "./climbing-stairs/index.ts";
 import fei_bo_na_qi_shu_lie_lcof from "./fei-bo-na-qi-shu-lie-lcof/index.ts";
 
 import fibonacci_Number from "./fibonacci-number/index.ts";
+export { fibonacci_bigint } from "./fibonacci-number/index.ts";
 import two_Sum from "./two-sum/index.ts";
 export { fibonacci_Number };
 export { two_Sum };
