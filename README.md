@@ -2,7 +2,7 @@
 
 #### 介绍
 
-leetcode测试
+leetcode 测试
 
 #### 软件架构
 
@@ -31,6 +31,8 @@ https://leetcode-cn.com/problems/que-shi-de-shu-zi-lcof/
 https://leetcode-cn.com/problems/find-all-numbers-disappeared-in-an-array
 
 https://leetcode-cn.com/problems/move-zeroes/
+
+https://leetcode-cn.com/problems/unique-morse-code-words/
 
 #### 安装教程
 
@@ -68,7 +70,7 @@ deno task fmt
 deno task lint
 ```
 
-5.使用模块
+5.导入模块
 
 ```ts
 import {} from "https://gitee.com/masx200/leetcode-test/raw/master/mod.ts";
@@ -80,6 +82,28 @@ import {} from "https://github.com/masx200/leetcode-test/raw/master/mod.ts";
 
 ```ts
 import {} from "https://cdn.jsdelivr.net/gh/masx200/leetcode-test/mod.ts";
+```
+
+6.使用举例
+
+```ts
+import {
+    ArrayToListNode,
+    climbing_stairs,
+    fei_bo_na_qi_shu_lie_lcof,
+    fibonacci_Number,
+    find_all_numbers_disappeared_in_an_array,
+    html_Entity_Parser,
+    ListNode,
+    ListNodeToArray,
+    merge_Sorted_Array,
+    move_zeros,
+    pow_x_n,
+    que_shi_de_shu_zi_lcof,
+    reverse_Linked_List,
+    two_Sum,
+    unique_morse_code_words,
+} from "./mod.ts";
 ```
 
 #### 参与贡献

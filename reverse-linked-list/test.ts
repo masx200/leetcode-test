@@ -1,4 +1,4 @@
-import { assert, equal } from "../deps.ts";
+import { assertEquals } from "../deps.ts";
 import {
     ArrayToListNode,
     ListNodeToArray,
@@ -21,21 +21,14 @@ Deno.test("reverse-linked-list", () => {
         },
     ];
 
-    assert(
-        testData.every(
-            ({ input, output }) =>
-                equal(
-                    ListNodeToArray(
-                        reverse_Linked_List(ArrayToListNode(input)),
-                    ),
-                    output,
-                ) &&
-                equal(
-                    ListNodeToArray(
-                        reverse_Linked_List(ArrayToListNode(output)),
-                    ),
-                    input,
-                ),
-        ),
-    );
+    testData.forEach(function ({ input, output }) {
+        assertEquals(
+            ListNodeToArray(reverse_Linked_List(ArrayToListNode(input))),
+            output,
+        );
+        assertEquals(
+            ListNodeToArray(reverse_Linked_List(ArrayToListNode(output))),
+            input,
+        );
+    });
 });

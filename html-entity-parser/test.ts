@@ -1,4 +1,4 @@
-import { assert } from "../deps.ts";
+import { assertEquals } from "../deps.ts";
 import { html_Entity_Parser } from "../mod.ts";
 
 Deno.test("html-entity-parser", () => {
@@ -25,9 +25,7 @@ Deno.test("html-entity-parser", () => {
         },
     ];
 
-    assert(
-        testData.every(
-            ({ input, output }) => html_Entity_Parser(input) === output,
-        ),
-    );
+    testData.forEach(function ({ input, output }) {
+        assertEquals(html_Entity_Parser(input), output);
+    });
 });
