@@ -79,7 +79,7 @@ import {} from "https://gitee.com/masx200/leetcode-test/raw/master/mod.ts";
 ```
 
 ```ts
-import {} from "https://github.com/masx200/leetcode-test/raw/master/mod.ts";
+import {} from "https://raw.githubusercontent.com/masx200/leetcode-test/master/mod.ts";
 ```
 
 ```ts
@@ -93,7 +93,7 @@ import {} from "https://gitee.com/masx200/leetcode-test/raw/4.0.1/mod.ts";
 ```
 
 ```ts
-import {} from "https://github.com/masx200/leetcode-test/raw/4.0.1/mod.ts";
+import {} from "https://raw.githubusercontent.com/masx200/leetcode-test/4.0.1/mod.ts";
 ```
 
 ```ts

@@ -1,5 +1,6 @@
-import { assertAlmostEquals } from "../deps.ts";
+import { assert } from "../deps.ts";
 import { pow_x_n } from "../mod.ts";
+import { float64equals } from "../utils/float64equals.ts";
 
 Deno.test("powx-n", () => {
     const examples: {
@@ -7,6 +8,7 @@ Deno.test("powx-n", () => {
         output: ReturnType<typeof pow_x_n>;
     }[] = [
         { input: [2.0, 10], output: 1024.0 },
+        { input: [100, 100], output: 1e200 },
         { input: [2.1, 3], output: 9.261 },
         { input: [2.0, -2], output: 0.25 },
         {
@@ -37,6 +39,6 @@ Deno.test("powx-n", () => {
         { input: [0, -Infinity], output: Infinity },
     ];
     examples.forEach(({ input, output }) => {
-        assertAlmostEquals(output, pow_x_n(...input));
+        assert(float64equals(output, pow_x_n(...input)));
     });
 });
