@@ -1,5 +1,6 @@
 import merge_Sorted_Array from "./merge-sorted-array/index.ts";
 import pow_x_n from "./powx-n/index.ts";
+export { pow_bigint } from "./powx-n/index.ts";
 
 import html_Entity_Parser from "./html-entity-parser/index.ts";
 

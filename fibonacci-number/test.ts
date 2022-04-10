@@ -1,5 +1,5 @@
 import { assertStrictEquals } from "../deps.ts";
-import { fibonacci_Number } from "../mod.ts";
+import { fibonacci_bigint, fibonacci_Number } from "../mod.ts";
 
 Deno.test("fibonacci-number", () => {
     const examples: {
@@ -15,5 +15,23 @@ Deno.test("fibonacci-number", () => {
     ];
     examples.forEach(({ input, output }) => {
         assertStrictEquals(fibonacci_Number(input), output);
+    });
+});
+Deno.test("fibonacci_bigint", () => {
+    const examples: {
+        input: Parameters<typeof fibonacci_bigint>[0];
+        output: ReturnType<typeof fibonacci_bigint>;
+    }[] = [
+        { input: 2n, output: 1n },
+        { input: 3n, output: 2n },
+        { input: 4n, output: 3n },
+        { input: 30n, output: 832040n },
+        { input: 20n, output: 6765n },
+        { input: 21n, output: 10946n },
+        { input: 22n, output: 6765n + 10946n },
+        { input: 99n, output: 218922995834555169026n },
+    ];
+    examples.forEach(({ input, output }) => {
+        assertStrictEquals(fibonacci_bigint(input), output);
     });
 });

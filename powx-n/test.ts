@@ -1,8 +1,8 @@
-import { assert } from "../deps.ts";
-import { pow_x_n } from "../mod.ts";
+import { assert, assertStrictEquals } from "../deps.ts";
+import { pow_bigint, pow_x_n } from "../mod.ts";
 import { float64equals } from "../utils/float64equals.ts";
 
-Deno.test("powx-n", () => {
+Deno.test("pow_x-n", () => {
     const examples: {
         input: Parameters<typeof pow_x_n>;
         output: ReturnType<typeof pow_x_n>;
@@ -40,5 +40,31 @@ Deno.test("powx-n", () => {
     ];
     examples.forEach(({ input, output }) => {
         assert(float64equals(output, pow_x_n(...input)));
+    });
+});
+Deno.test("pow_bigint", () => {
+    const examples: {
+        input: Parameters<typeof pow_bigint>;
+        output: ReturnType<typeof pow_bigint>;
+    }[] = [
+        { input: [BigInt(2), 10n], output: BigInt(1024.0) },
+        {
+            input: [100n, 100n],
+            output:
+                100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000n,
+        },
+
+        {
+            input: [2n, 6n],
+            output: BigInt(64.0),
+        },
+        {
+            input: [688n, 68n],
+            output:
+                9036781882805851290639597927040482406482157574559116099548211283603471044068107755100184208020371364454930798169267683149572972315418389823766231220691565768687216159600116784986771438012727296n,
+        },
+    ];
+    examples.forEach(({ input, output }) => {
+        assertStrictEquals(output, pow_bigint(...input));
     });
 });

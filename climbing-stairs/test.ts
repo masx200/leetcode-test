@@ -1,5 +1,5 @@
 import { assertStrictEquals } from "../deps.ts";
-import { climbing_stairs } from "../mod.ts";
+import { climbing_stairs, climbing_stairs_bigint } from "../mod.ts";
 
 Deno.test("climbing-stairs", () => {
     const examples: {
@@ -17,5 +17,23 @@ Deno.test("climbing-stairs", () => {
     ];
     examples.forEach(({ input, output }) => {
         assertStrictEquals(climbing_stairs(input), output);
+    });
+});
+Deno.test("climbing_stairs_bigint", () => {
+    const examples: {
+        input: Parameters<typeof climbing_stairs_bigint>[0];
+        output: ReturnType<typeof climbing_stairs_bigint>;
+    }[] = [
+        { input: 10n, output: 89n },
+        { input: 1n, output: 1n },
+        { input: 2n, output: 2n },
+        { input: 3n, output: 3n },
+        { input: 45n, output: 1836311903n },
+        { input: 44n, output: 1134903170n },
+        { input: 46n, output: 1134903170n + 1836311903n },
+        { input: 99n, output: 354224848179261915075n },
+    ];
+    examples.forEach(({ input, output }) => {
+        assertStrictEquals(climbing_stairs_bigint(input), output);
     });
 });
