@@ -1,15 +1,3 @@
-// My code goes here
-/**
- * Definition for singly-linked list.
- * class ListNode {
- *     val: number
- *     next: ListNode | null
- *     constructor(val?: number, next?: ListNode | null) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.next = (next===undefined ? null : next)
- *     }
- * }
- */
 export class ListNode {
     val: number;
     next: ListNode | null;
@@ -18,7 +6,6 @@ export class ListNode {
         this.next = next === undefined ? null : next;
     }
 }
-/**https://leetcode-cn.com/problems/reverse-linked-list/ */
 export default function reverse_Linked_List(
     head: ListNode | null,
 ): ListNode | null {
@@ -29,11 +16,6 @@ export default function reverse_Linked_List(
         x = x.next;
     }
     return ans;
-    /*  if (null === head) {
-        return null;
-    }
-
-    return ArrayToListNode(Array.from(ListNodeToArray(head)).reverse()); */
 }
 
 export function ArrayToListNode(array: Array<number>): ListNode | null {

@@ -22,7 +22,6 @@ export function SqrtNumber(x: number, delta: number = Number.EPSILON): number {
     if (x === 1) {
         return 1;
     }
-    // const delta = 1e-1;
     let y = x;
     let z = x;
     while (z == x || Math.abs(z - y) > delta) {

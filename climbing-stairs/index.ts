@@ -1,5 +1,3 @@
-// My code goes here
-/** https://leetcode-cn.com/problems/climbing-stairs */
 export default function climbing_stairs(n: number | bigint): number | bigint {
     const result = climbing_stairs_bigint(BigInt(n));
     if (result < Number.MAX_SAFE_INTEGER) {
@@ -18,7 +16,6 @@ export function climbing_stairs_bigint(num: bigint): bigint {
     if (typeof cached !== "undefined") {
         return cached;
     }
-    //   num = Math.floor(num);
     num = bigInt(num);
     for (let e = 1n; e <= num; e++) {
         if (cacheClimbStairs.has(e)) {

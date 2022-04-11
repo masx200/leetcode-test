@@ -1,4 +1,3 @@
-/**https://leetcode-cn.com/problems/html-entity-parser/*/
 export default function html_Entity_Parser(text: string): string {
     return text.replace(entityRegExp, replacer);
 }

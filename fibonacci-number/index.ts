@@ -1,5 +1,3 @@
-// My code goes here
-/**https://leetcode-cn.com/problems/fibonacci-number/ */
 export default function fibonacci_Number(n: number | bigint): number | bigint {
     const result = fibonacci_bigint(BigInt(n));
     if (result < Number.MAX_SAFE_INTEGER) {
@@ -18,7 +16,6 @@ export function fibonacci_bigint(num: bigint): bigint {
     if (typeof cached !== "undefined") {
         return cached;
     }
-    //   num = Math.floor(num);
     num = bigInt(num);
     for (let e = 0n; e <= num; e++) {
         if (feibonq.has(e)) {
@@ -37,4 +34,3 @@ const feibonq = new Map<bigint, bigint>([
     [1n, 1n],
     [2n, 1n],
 ]);
-//[bigInt(0), bigInt(1), bigInt(1)];

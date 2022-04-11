@@ -5,7 +5,6 @@ export default function myPow(x: number, n: number): number {
     if (Number.isNaN(x) || Number.isNaN(n)) {
         throw Error("nan:" + x + "," + n);
     }
-    // console.log(x, n);
     if (x === Infinity) {
         return n > 0 ? Infinity : n < 0 ? 0 : 1;
     }
@@ -18,16 +17,6 @@ export default function myPow(x: number, n: number): number {
     if (n === -Infinity) {
         return x === 0 ? Infinity : 0;
     }
-    // setTimeout(() => {
-    //     cacheStore.clear();
-    // }, 0);
-    // const cached = cacheStore.get(`${x},${n}`);
-    // if (cached) {
-    //     console.log("cached");
-    //     console.log(x, n);
-    //     return cached;
-    // }
-
     const result = n === 1
         ? x
         : x < 0
@@ -42,35 +31,9 @@ export default function myPow(x: number, n: number): number {
         ? myPow(1 / x, -n)
         : n % 2
         ? x * myPow(x, n - 1)
-        : /* lazyMultiplyPositive(
-                  () => x,
-                  () => myPow(x, n - 1)
-              ) */
-            myPow(x * x, Math.floor(n / 2));
-    /* lazyMultiplyPositive(
-            () => myPow(x, Math.floor(n / 2)),
-            () => myPow(x, n - Math.floor(n / 2)),
-        ); */
-
-    // cacheStore.set(`${x},${n}`, result);
+        : myPow(x * x, Math.floor(n / 2));
     return result;
 }
-//缓存命中率过低
-// const cacheStore = new Map<`${number},${number}`, number>();
-
-// function lazyMultiplyPositive(a: () => number, b: () => number): number {
-//     if (Math.random() < 0.5) {
-//         [b, a] = [a, b];
-//     }
-//     const l = a();
-//     if (l === 0) {
-//         return 0;
-//     } else if (l === Infinity) {
-//         return Infinity;
-//     } else {
-//         return l * b();
-//     }
-// }
 export function pow_bigint(x: bigint, n: bigint): bigint {
     if (n < 0) {
         throw Error("result not bigint:" + x + "," + n);
@@ -85,20 +48,8 @@ export function pow_bigint(x: bigint, n: bigint): bigint {
         ? 0n
         : n === 0n
         ? 1n
-        : // : n < 0
-        // ? pow_bigint(1 / x, -n)
-            n % 2n
-            ? x * pow_bigint(x, n - 1n)
-            : /* lazyMultiplyPositive(
-                  () => x,
-                  () => myPow(x, n - 1)
-              ) */
-                pow_bigint(x * x, n / 2n);
-    /* lazyMultiplyPositive(
-            () => myPow(x, Math.floor(n / 2)),
-            () => myPow(x, n - Math.floor(n / 2)),
-        ); */
-
-    // cacheStore.set(`${x},${n}`, result);
+        : n % 2n
+        ? x * pow_bigint(x, n - 1n)
+        : pow_bigint(x * x, n / 2n);
     return result;
 }

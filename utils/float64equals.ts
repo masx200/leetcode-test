@@ -1,5 +1,4 @@
 export function float64equals(a: number, b: number): boolean {
-    // console.log(a, b);
     if (!Number.isFinite(a) || !Number.isFinite(b)) {
         return a === b;
     }
