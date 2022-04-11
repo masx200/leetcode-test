@@ -78,19 +78,7 @@ deno task lint
 
 5.导入模块
 
-不指定版本号
 
-```ts
-import {} from "https://gitee.com/masx200/leetcode-test/raw/master/mod.ts";
-```
-
-```ts
-import {} from "https://raw.githubusercontent.com/masx200/leetcode-test/master/mod.ts";
-```
-
-```ts
-import {} from "https://cdn.jsdelivr.net/gh/masx200/leetcode-test/mod.ts";
-```
 
 指定版本号
 
