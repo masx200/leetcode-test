@@ -40,6 +40,8 @@ https://leetcode-cn.com/problems/sqrtx/
 
 https://leetcode-cn.com/problems/jJ0w9p/
 
+https://leetcode-cn.com/problems/reverse-linked-list-ii/
+
 #### 安装教程
 
 1. 安装`deno`

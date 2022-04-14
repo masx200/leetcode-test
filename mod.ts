@@ -17,6 +17,8 @@ import { ArrayToListNode } from "./reverse-linked-list/ArrayToListNode.ts";
 import { ListNode } from "./reverse-linked-list/ListNode.ts";
 import { ListNodeToArray } from "./reverse-linked-list/ListNodeToArray.ts";
 import { SqrtNumber } from "./sqrtx/SqrtNumber.ts";
+import { get_deep_next_of_list } from "./reverse-linked-list-ii/get_deep_next_of_list.ts";
+import { get_length_of_list } from "./reverse-linked-list-ii/get_length_of_list.ts";
 export { fibonacci_Number };
 export { two_Sum };
 export { merge_Sorted_Array };
@@ -33,3 +35,6 @@ export { default as unique_morse_code_words } from "./unique-morse-code-words/in
 export { default as sqrt_x } from "./sqrtx/index.ts";
 export { default as jJ0w9p } from "./jJ0w9p/index.ts";
 export { SqrtNumber };
+export { default as reverse_linked_list_ii } from "./reverse-linked-list-ii/index.ts";
+export { get_deep_next_of_list };
+export { get_length_of_list };
