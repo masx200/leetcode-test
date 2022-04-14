@@ -78,8 +78,6 @@ deno task lint
 
 5.导入模块
 
-
-
 指定版本号
 
 ```ts
@@ -96,8 +94,8 @@ import {} from "https://cdn.jsdelivr.net/gh/masx200/leetcode-test@4.0.1/mod.ts";
 
 ```ts
 import * as masx200LeetcodeTest from "https://deno.land/x/masx200_leetcode_test@4.0.4/mod.ts";
-
 ```
+
 6.使用举例
 
 ```ts
