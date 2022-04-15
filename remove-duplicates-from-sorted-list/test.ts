@@ -17,7 +17,7 @@ Deno.test("remove-duplicates-from-sorted-list", () => {
     examples.forEach(({ input, output }) => {
         assertEquals(
             ListNodeToArray(removeDuplicates(ArrayToListNode(input))),
-            output
+            output,
         );
     });
 });

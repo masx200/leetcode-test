@@ -10,7 +10,7 @@ Deno.test("remove-duplicates-from-sorted-list-ii", () => {
     examples.forEach(({ input, output }) => {
         assertEquals(
             ListNodeToArray(removeDuplicates2(ArrayToListNode(input))),
-            output
+            output,
         );
     });
 });
