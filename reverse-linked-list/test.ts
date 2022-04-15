@@ -6,18 +6,18 @@ import {
     reverse_Linked_List,
 } from "../mod.ts";
 Deno.test("ArrayToListNode", () => {
-    assertEquals(ArrayToListNode([]), ArrayToListNode([]));
+    assertEquals(ArrayToListNode([]), new ListNode());
     assertEquals(
-        ArrayToListNode([1, 3, 5, 5, 1, 6, 3, 6, 1]),
-        ArrayToListNode([1, 3, 5, 5, 1, 6, 3, 6, 1])
+       ListNodeToArray( ArrayToListNode([1, 3, 5, 5, 1, 6, 3, 6, 1])),
+        ([1, 3, 5, 5, 1, 6, 3, 6, 1])
     );
 });
 Deno.test("ListNodeToArray", () => {
     assertEquals(
         ListNodeToArray(new ListNode(5, null)),
-        ListNodeToArray({ val: 5, next: null })
+        [5]
     );
-    assertEquals(ListNodeToArray(null), ListNodeToArray(null));
+    assertEquals(ListNodeToArray(null), []);
 });
 Deno.test("reverse-linked-list", () => {
     const testData: { input: Array<number>; output: Array<number> }[] = [
