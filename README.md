@@ -58,6 +58,10 @@ https://leetcode-cn.com/problems/merge-k-sorted-lists/
 
 https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array-ii/
 
+https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list-ii/
+
+https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/
+
 #### 安装教程
 
 1. 安装`deno`
