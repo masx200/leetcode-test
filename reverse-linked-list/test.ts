@@ -6,7 +6,7 @@ import {
     reverse_Linked_List,
 } from "../mod.ts";
 Deno.test("ArrayToListNode", () => {
-    assertEquals(ArrayToListNode([]), new ListNode());
+    assertEquals(ArrayToListNode([]), null);
     assertEquals(
        ListNodeToArray( ArrayToListNode([1, 3, 5, 5, 1, 6, 3, 6, 1])),
         ([1, 3, 5, 5, 1, 6, 3, 6, 1])
