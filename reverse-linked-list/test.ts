@@ -8,14 +8,14 @@ import {
 Deno.test("ArrayToListNode", () => {
     assertEquals(ArrayToListNode([]), null);
     assertEquals(
-       ListNodeToArray( ArrayToListNode([1, 3, 5, 5, 1, 6, 3, 6, 1])),
-        ([1, 3, 5, 5, 1, 6, 3, 6, 1])
+        ListNodeToArray(ArrayToListNode([1, 3, 5, 5, 1, 6, 3, 6, 1])),
+        [1, 3, 5, 5, 1, 6, 3, 6, 1],
     );
 });
 Deno.test("ListNodeToArray", () => {
     assertEquals(
         ListNodeToArray(new ListNode(5, null)),
-        [5]
+        [5],
     );
     assertEquals(ListNodeToArray(null), []);
 });
@@ -38,11 +38,11 @@ Deno.test("reverse-linked-list", () => {
     testData.forEach(function ({ input, output }) {
         assertEquals(
             ListNodeToArray(reverse_Linked_List(ArrayToListNode(input))),
-            output
+            output,
         );
         assertEquals(
             ListNodeToArray(reverse_Linked_List(ArrayToListNode(output))),
-            input
+            input,
         );
     });
 });
