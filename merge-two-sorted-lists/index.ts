@@ -11,7 +11,7 @@
  */
 
 import { ListNode } from "../reverse-linked-list/ListNode.ts";
-
+/* RangeError: Maximum call stack size exceeded */
 export default function mergeTwoLists(
     list1: ListNode | null,
     list2: ListNode | null,

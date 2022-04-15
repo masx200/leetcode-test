@@ -20027,7 +20027,7 @@ Deno.test("merge-k-sorted-lists", () => {
     examples.forEach(({ input, output }) => {
         assertEquals(
             output,
-            ListNodeToArray(mergeKLists((input.map(a=>ArrayToListNode(a))))),
+            ListNodeToArray(mergeKLists(input.map((a) => ArrayToListNode(a)))),
         );
     });
 });
