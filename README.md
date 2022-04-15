@@ -113,11 +113,11 @@ import {} from "https://deno.land/x/masx200_leetcode_test@4.0.4/mod.ts";
 6.使用举例
 
 ```ts
-import { climbing_stairs_bigint } from "./mod.ts";
+import { climbing_stairs_bigint } from "https://deno.land/x/masx200_leetcode_test@4.0.7/mod.ts";
 ```
 
 ```ts
-import climbing_stairs from "./climbing-stairs/index.ts";
+import climbing_stairs from "https://deno.land/x/masx200_leetcode_test@4.0.7/climbing-stairs/index.ts";
 ```
 
 #### 参与贡献

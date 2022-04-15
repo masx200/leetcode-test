@@ -1,5 +1,5 @@
 import { assertStrictEquals } from "../deps.ts";
-import { fei_bo_na_qi_shu_lie_lcof } from "../mod.ts";
+import fei_bo_na_qi_shu_lie_lcof from "./index.ts";
 
 Deno.test("fei-bo-na-qi-shu-lie-lcof", () => {
     const examples: { input: number; output: number }[] = [
