@@ -19,10 +19,10 @@ Deno.test("merge-two-lists", () => {
         },
         {
             input: [
-                Array.from({ length: 200000 }).map((_i, v) => v),
-                Array.from({ length: 200000 }).map((_i, v) => v),
+                Array.from({ length: 20000 }).map((_i, v) => v),
+                Array.from({ length: 20000 }).map((_i, v) => v),
             ],
-            output: Array.from({ length: 400000 }).map((_i, v) =>
+            output: Array.from({ length: 40000 }).map((_i, v) =>
                 Math.floor(v / 2)
             ),
         },
