@@ -1,4 +1,32 @@
 export const solutions = new Map<string, () => Promise<{ default: unknown }>>([
     ["1410 HTML 实体解析器", () => import("./html-entity-parser/index.ts")],
     ["1 两数之和", () => import("./two-sum/index.ts")],
+    ["509 斐波那契数", () => import("./fibonacci-number/index.ts")],
+    ["70. 爬楼梯", () => import("./climbing-stairs/index.ts")],
+    ["206. 反转链表", () => import("./reverse-linked-list/index.ts")],
+    [
+        "剑指 Offer 10- I 斐波那契数列",
+        () => import("./fei-bo-na-qi-shu-lie-lcof/index.ts"),
+    ],
+    ["88 合并两个有序数组", () => import("./merge-sorted-array/index.ts")],
+    ["283 移动零", () => import("./move-zeroes/index.ts")],
+    [
+        "448. 找到所有数组中消失的数字",
+        () => import("./find-all-numbers-disappeared-in-an-array/index.ts"),
+    ],
+    [
+        "剑指 Offer 53 - II 0～n-1中缺失的数字",
+        () => import("./que-shi-de-shu-zi-lcof/index.ts"),
+    ],
+    ["88 合并两个有序数组", () => import("./merge-sorted-array/index.ts")],
+    ["88 合并两个有序数组", () => import("./merge-sorted-array/index.ts")],
+    ["88 合并两个有序数组", () => import("./merge-sorted-array/index.ts")],
+    ["88 合并两个有序数组", () => import("./merge-sorted-array/index.ts")],
+    ["88 合并两个有序数组", () => import("./merge-sorted-array/index.ts")],
+    ["88 合并两个有序数组", () => import("./merge-sorted-array/index.ts")],
+    ["88 合并两个有序数组", () => import("./merge-sorted-array/index.ts")],
+    ["88 合并两个有序数组", () => import("./merge-sorted-array/index.ts")],
+    ["88 合并两个有序数组", () => import("./merge-sorted-array/index.ts")],
+    ["88 合并两个有序数组", () => import("./merge-sorted-array/index.ts")],
+    ["88 合并两个有序数组", () => import("./merge-sorted-array/index.ts")],
 ]);
