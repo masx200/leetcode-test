@@ -46,6 +46,14 @@ https://leetcode-cn.com/problems/lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof/
 
 https://leetcode-cn.com/problems/kth-node-from-end-of-list-lcci/
 
+https://leetcode-cn.com/problems/merge-two-sorted-lists/
+
+https://leetcode-cn.com/problems/he-bing-liang-ge-pai-xu-de-lian-biao-lcof/
+
+https://leetcode-cn.com/problems/vvXgSW/
+
+https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/
+
 #### 安装教程
 
 1. 安装`deno`
