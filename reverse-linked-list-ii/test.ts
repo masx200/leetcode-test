@@ -17,6 +17,7 @@ Deno.test("reverse_linked_list_ii", () => {
         { input: [[3, 5], 1, 2], output: [5, 3] },
         { input: [[1, 2, 3], 1, 3], output: [3, 2, 1] },
         { input: [[1, 2, 3, 4, 5], 3, 4], output: [1, 2, 4, 3, 5] },
+        { input: [[1, 2, 3, 4], 1, 3], output: [3, 2, 1, 4] },
     ];
     examples.forEach(({ input, output }) => {
         assertEquals(
