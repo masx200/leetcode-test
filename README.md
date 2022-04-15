@@ -42,6 +42,10 @@ https://leetcode-cn.com/problems/jJ0w9p/
 
 https://leetcode-cn.com/problems/reverse-linked-list-ii/
 
+https://leetcode-cn.com/problems/lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof/
+
+https://leetcode-cn.com/problems/kth-node-from-end-of-list-lcci/
+
 #### 安装教程
 
 1. 安装`deno`
