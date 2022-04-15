@@ -54,6 +54,8 @@ https://leetcode-cn.com/problems/vvXgSW/
 
 https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/
 
+https://leetcode-cn.com/problems/merge-k-sorted-lists/
+
 #### 安装教程
 
 1. 安装`deno`
