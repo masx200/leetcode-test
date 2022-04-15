@@ -3,13 +3,14 @@ import pow_x_n from "./powx-n/index.ts";
 export { pow_bigint } from "./powx-n/pow_bigint.ts";
 export { default as shu_zhi_de_zheng_shu_ci_fang_lcof } from "./shu-zhi-de-zheng-shu-ci-fang-lcof/index.ts";
 import html_Entity_Parser from "./html-entity-parser/index.ts";
-
+export { default as merge_two_sorted_lists } from "./merge-two-sorted-lists/index.ts";
+export { default as he_bing_liang_ge_pai_xu_de_lian_biao_lcof } from "./he-bing-liang-ge-pai-xu-de-lian-biao-lcof/index.ts";
 import reverse_Linked_List from "./reverse-linked-list/index.ts";
-
+export { default as vvXgSW } from "./vvXgSW/index.ts";
 import climbing_stairs from "./climbing-stairs/index.ts";
 export { climbing_stairs_bigint } from "./climbing-stairs/climbing_stairs_bigint.ts";
 import fei_bo_na_qi_shu_lie_lcof from "./fei-bo-na-qi-shu-lie-lcof/index.ts";
-
+export { default as remove_duplicates_from_sorted_array } from "./remove-duplicates-from-sorted-array/index.ts";
 import fibonacci_Number from "./fibonacci-number/index.ts";
 export { fibonacci_bigint } from "./fibonacci-number/fibonacci_bigint.ts";
 import two_Sum from "./two-sum/index.ts";
@@ -19,6 +20,7 @@ import { ListNodeToArray } from "./reverse-linked-list/ListNodeToArray.ts";
 import { SqrtNumber } from "./sqrtx/SqrtNumber.ts";
 import { get_deep_next_of_list } from "./reverse-linked-list-ii/get_deep_next_of_list.ts";
 import { get_length_of_list } from "./reverse-linked-list-ii/get_length_of_list.ts";
+import { float64equals } from "./utils/float64equals.ts";
 export { fibonacci_Number };
 export { two_Sum };
 export { merge_Sorted_Array };
@@ -40,3 +42,4 @@ export { get_deep_next_of_list };
 export { get_length_of_list };
 export { default as lian_biao_zhong_dao_shu_di_kge_jie_dian_lcof } from "./lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof/index.ts";
 export { default as kth_node_from_end_of_list_lcci } from "./kth-node-from-end-of-list-lcci/index.ts";
+export { float64equals };
