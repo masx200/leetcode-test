@@ -1,5 +1,5 @@
 import { assertEquals } from "../deps.ts";
-import { merge_Sorted_Array } from "../mod.ts";
+import merge_Sorted_Array from "./index.ts";
 Deno.test("merge-sorted-array", () => {
     const examples: {
         input: Parameters<typeof merge_Sorted_Array>;

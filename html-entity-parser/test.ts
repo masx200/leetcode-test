@@ -1,5 +1,5 @@
 import { assertEquals } from "../deps.ts";
-import { html_Entity_Parser } from "../mod.ts";
+import html_Entity_Parser from "./index.ts";
 
 Deno.test("html-entity-parser", () => {
     const testData: { input: string; output: string }[] = [

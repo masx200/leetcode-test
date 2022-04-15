@@ -1,5 +1,6 @@
 import { assertAlmostEquals, assertEquals } from "../deps.ts";
-import { sqrt_x, SqrtNumber } from "../mod.ts";
+import { SqrtNumber } from "../mod.ts";
+import sqrt_x from "./index.ts";
 Deno.test("sqrt-x", () => {
     const examples: {
         input: Parameters<typeof sqrt_x>[0];

@@ -1,3 +1,4 @@
+import lian_biao_zhong_dao_shu_di_kge_jie_dian_lcof from "./index.ts";
 Deno.test("lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof", () => {
     const examples: {
         input: [number[], number];
@@ -20,8 +21,4 @@ Deno.test("lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof", () => {
     });
 });
 import { assertEquals } from "../deps.ts";
-import {
-    ArrayToListNode,
-    lian_biao_zhong_dao_shu_di_kge_jie_dian_lcof,
-    ListNodeToArray,
-} from "../mod.ts";
+import { ArrayToListNode, ListNodeToArray } from "../mod.ts";

@@ -1,5 +1,5 @@
 import { assertStrictEquals } from "../deps.ts";
-import { unique_morse_code_words } from "../mod.ts";
+import unique_morse_code_words from "./index.ts";
 
 Deno.test("unique-morse-code-words", () => {
     const examples: {

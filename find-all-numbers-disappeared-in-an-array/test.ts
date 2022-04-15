@@ -1,4 +1,4 @@
-import { find_all_numbers_disappeared_in_an_array } from "../mod.ts";
+import find_all_numbers_disappeared_in_an_array from "./index.ts";
 import { assertEquals } from "../deps.ts";
 
 Deno.test("find-all-numbers-disappeared-in-an-array", () => {

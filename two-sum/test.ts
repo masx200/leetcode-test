@@ -1,5 +1,5 @@
 import { assertEquals } from "../deps.ts";
-import { two_Sum } from "../mod.ts";
+import two_Sum from "./index.ts";
 
 Deno.test("two-sum", () => {
     const examples: {

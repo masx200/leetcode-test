@@ -1,10 +1,6 @@
 import { assertEquals } from "../deps.ts";
-import {
-    ArrayToListNode,
-    ListNodeToArray,
-    reverse_linked_list_ii,
-} from "../mod.ts";
-
+import { ArrayToListNode, ListNodeToArray } from "../mod.ts";
+import reverse_linked_list_ii from "./index.ts";
 Deno.test("reverse_linked_list_ii", () => {
     const examples: {
         input: [Array<number>, number, number];

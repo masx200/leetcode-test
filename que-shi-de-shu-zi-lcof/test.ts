@@ -1,5 +1,5 @@
 import { assertStrictEquals } from "../deps.ts";
-import { que_shi_de_shu_zi_lcof } from "../mod.ts";
+import que_shi_de_shu_zi_lcof from "./index.ts";
 
 Deno.test("que-shi-de-shu-zi-lcof", () => {
     const examples: {

@@ -1,7 +1,7 @@
 import { assert, assertStrictEquals } from "../deps.ts";
-import { pow_bigint, pow_x_n } from "../mod.ts";
+import { pow_bigint } from "../mod.ts";
 import { float64equals } from "../utils/float64equals.ts";
-
+import pow_x_n from "./index.ts";
 Deno.test("pow_x-n", () => {
     const examples: {
         input: Parameters<typeof pow_x_n>;
