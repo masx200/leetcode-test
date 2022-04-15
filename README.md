@@ -107,29 +107,17 @@ import {} from "https://cdn.jsdelivr.net/gh/masx200/leetcode-test@4.0.1/mod.ts";
 ```
 
 ```ts
-import * as masx200LeetcodeTest from "https://deno.land/x/masx200_leetcode_test@4.0.4/mod.ts";
+import {} from "https://deno.land/x/masx200_leetcode_test@4.0.4/mod.ts";
 ```
 
 6.使用举例
 
 ```ts
-import {
-    ArrayToListNode,
-    climbing_stairs,
-    fei_bo_na_qi_shu_lie_lcof,
-    fibonacci_Number,
-    find_all_numbers_disappeared_in_an_array,
-    html_Entity_Parser,
-    ListNode,
-    ListNodeToArray,
-    merge_Sorted_Array,
-    move_zeros,
-    pow_x_n,
-    que_shi_de_shu_zi_lcof,
-    reverse_Linked_List,
-    two_Sum,
-    unique_morse_code_words,
-} from "./mod.ts";
+import { climbing_stairs_bigint } from "./mod.ts";
+```
+
+```ts
+import climbing_stairs from "./climbing-stairs/index.ts";
 ```
 
 #### 参与贡献
