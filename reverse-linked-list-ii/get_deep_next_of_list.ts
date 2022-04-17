@@ -14,13 +14,13 @@ import { ListNode } from "../reverse-linked-list/ListNode.ts";
 export function get_deep_next_of_list(list: ListNode, index: number): ListNode {
     if (index === 0) return list;
     const head = list;
-    let pre_start = head;
+    let start = head;
     for (let i = 0; i < index; i++) {
-        if (pre_start.next) {
-            pre_start = pre_start.next;
+        if (start.next) {
+            start = start.next;
         } else {
             throw Error("out of bounds:" + index);
         }
     }
-    return pre_start;
+    return start;
 }
