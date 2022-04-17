@@ -84,6 +84,8 @@ https://leetcode-cn.com/problems/middle-of-the-linked-list/
 
 https://leetcode-cn.com/problems/super-pow/
 
+https://leetcode-cn.com/problems/implement-queue-using-stacks
+
 #### 安装教程
 
 1. 安装`deno`
