@@ -70,6 +70,10 @@ https://leetcode-cn.com/problems/richest-customer-wealth/
 
 https://leetcode-cn.com/problems/palindrome-linked-list/
 
+https://leetcode-cn.com/problems/fan-zhuan-lian-biao-lcof
+
+https://leetcode-cn.com/problems/UHnkqh/
+
 #### 安装教程
 
 1. 安装`deno`
