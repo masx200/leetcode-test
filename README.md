@@ -68,6 +68,8 @@ https://leetcode-cn.com/problems/linked-list-cycle-ii/
 
 https://leetcode-cn.com/problems/richest-customer-wealth/
 
+https://leetcode-cn.com/problems/palindrome-linked-list/
+
 #### 安装教程
 
 1. 安装`deno`
