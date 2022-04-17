@@ -74,6 +74,10 @@ https://leetcode-cn.com/problems/fan-zhuan-lian-biao-lcof
 
 https://leetcode-cn.com/problems/UHnkqh/
 
+https://leetcode-cn.com/problems/intersection-of-two-linked-lists-lcci/
+
+https://leetcode-cn.com/problems/intersection-of-two-linked-lists/
+
 #### 安装教程
 
 1. 安装`deno`
