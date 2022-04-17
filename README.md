@@ -62,6 +62,10 @@ https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list-ii/
 
 https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/
 
+https://leetcode-cn.com/problems/linked-list-cycle/
+
+https://leetcode-cn.com/problems/linked-list-cycle-ii/
+
 #### 安装教程
 
 1. 安装`deno`
