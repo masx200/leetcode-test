@@ -24,6 +24,9 @@ import { get_length_of_list } from "./reverse-linked-list-ii/get_length_of_list.
 import { float64equals } from "./utils/float64equals.ts";
 import { sum } from "./richest-customer-wealth/sum.ts";
 import { get_end_of_list } from "./merge-in-between-linked-lists/get_end_of_list.ts";
+import { superPow_mod } from "./super-pow/superPow_mod.ts";
+import { multiply_Mod } from "./super-pow/multiply_Mod.ts";
+import { pow_bigint_mod } from "./super-pow/pow_bigint_mod.ts";
 
 // export { fibonacci_Number };
 // export { two_Sum };
@@ -49,3 +52,6 @@ export { get_length_of_list };
 export { float64equals };
 // export { solutions } from "./solutions.ts";
 export { get_end_of_list };
+export { superPow_mod };
+export { multiply_Mod };
+export { pow_bigint_mod };
