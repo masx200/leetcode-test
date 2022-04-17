@@ -96,6 +96,14 @@ https://leetcode-cn.com/problems/binary-tree-preorder-traversal/
 
 https://leetcode-cn.com/problems/binary-tree-postorder-traversal/
 
+https://leetcode-cn.com/problems/balanced-binary-tree
+
+https://leetcode-cn.com/problems/invert-binary-tree/
+
+https://leetcode-cn.com/problems/maximum-depth-of-binary-tree
+
+https://leetcode-cn.com/problems/symmetric-tree/
+
 #### 安装教程
 
 1. 安装`deno`
