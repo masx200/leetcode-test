@@ -90,6 +90,12 @@ https://leetcode-cn.com/problems/yong-liang-ge-zhan-shi-xian-dui-lie-lcof/
 
 https://leetcode-cn.com/problems/decode-string/
 
+https://leetcode-cn.com/problems/binary-tree-inorder-traversal/
+
+https://leetcode-cn.com/problems/binary-tree-preorder-traversal/
+
+https://leetcode-cn.com/problems/binary-tree-postorder-traversal/
+
 #### 安装教程
 
 1. 安装`deno`

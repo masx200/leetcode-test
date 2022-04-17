@@ -27,7 +27,8 @@ import { get_end_of_list } from "./merge-in-between-linked-lists/get_end_of_list
 import { superPow_mod } from "./super-pow/superPow_mod.ts";
 import { multiply_Mod } from "./super-pow/multiply_Mod.ts";
 import { pow_bigint_mod } from "./super-pow/pow_bigint_mod.ts";
-
+import { TreeNode } from "./binary-tree-inorder-traversal/TreeNode.ts";
+export { TreeNode };
 // export { fibonacci_Number };
 // export { two_Sum };
 // export { merge_Sorted_Array };
