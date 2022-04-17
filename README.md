@@ -86,6 +86,10 @@ https://leetcode-cn.com/problems/super-pow/
 
 https://leetcode-cn.com/problems/implement-queue-using-stacks
 
+https://leetcode-cn.com/problems/yong-liang-ge-zhan-shi-xian-dui-lie-lcof/
+
+https://leetcode-cn.com/problems/decode-string/
+
 #### 安装教程
 
 1. 安装`deno`
