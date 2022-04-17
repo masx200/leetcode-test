@@ -1,3 +1,4 @@
+export { sum };
 // import merge_Sorted_Array from "./merge-sorted-array/index.ts";
 // import pow_x_n from "./powx-n/index.ts";
 export { pow_bigint } from "./powx-n/pow_bigint.ts";
@@ -21,6 +22,7 @@ import { SqrtNumber } from "./sqrtx/SqrtNumber.ts";
 import { get_deep_next_of_list } from "./reverse-linked-list-ii/get_deep_next_of_list.ts";
 import { get_length_of_list } from "./reverse-linked-list-ii/get_length_of_list.ts";
 import { float64equals } from "./utils/float64equals.ts";
+import { sum } from "./richest-customer-wealth/index.ts";
 
 // export { fibonacci_Number };
 // export { two_Sum };

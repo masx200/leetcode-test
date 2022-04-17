@@ -66,6 +66,8 @@ https://leetcode-cn.com/problems/linked-list-cycle/
 
 https://leetcode-cn.com/problems/linked-list-cycle-ii/
 
+https://leetcode-cn.com/problems/richest-customer-wealth/
+
 #### 安装教程
 
 1. 安装`deno`
