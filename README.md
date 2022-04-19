@@ -108,6 +108,7 @@ https://leetcode-cn.com/problems/mini-parser/
 
 https://leetcode-cn.com/problems/lexicographical-numbers/
 
+https://leetcode-cn.com/problems/binary-search/
 
 #### 安装教程
 
