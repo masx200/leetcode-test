@@ -1,5 +1,3 @@
-// This is the interface that allows for creating nested lists.
-
 import { NestedInteger } from "./NestedInteger.ts";
 
 const deserializeArray = function (s: string): NestedInteger {
@@ -53,5 +51,3 @@ const nums = Array.from({
 const isDigit = (ch: string) => {
     return nums.includes(ch);
 };
-// console.log(deserialize("[123,[456,[789]]]"))
-// console.log(deserialize("123456789"))

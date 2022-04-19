@@ -1,7 +1,6 @@
 export default function decodeString(s: string): string {
     if (s.includes("[")) {
         const d = s.replace(/\d+\[[a-z]+\]/g, (substring) => {
-            // console.log(substring)
             const [count, encoded_string] = substring.slice(0, -1).split("[");
             return encoded_string.repeat(Number(count));
         });

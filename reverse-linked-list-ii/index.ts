@@ -8,8 +8,6 @@ export default function reverseBetween(
     left: number,
     right: number,
 ): ListNode | null {
-    // const sequence=new WeakMap<ListNode,ListNode>()
-
     if (!head) return head;
     if (!head.next) return head;
     if (left === right) return head;
@@ -28,46 +26,12 @@ export default function reverseBetween(
     const start = get_deep_next_of_list(head, left - 1);
     const end = get_deep_next_of_list(head, right - 1);
     const succ = get_deep_next_of_list(head, right - 1).next;
-    // if (right < length) {
-
-    //     const result = reverseBetween(head, left, right - 1)
-    //     if (result) {
-    //         result.next = succ
-    //     }
-    //     return result
-    // }
-
-    //head
-
     const reverse = new WeakMap<ListNode, ListNode>();
-    // if (left !== 1) {
-    //     for (let i = 1; i < left; i++) {
-    //         if (start.next) {
-    //             start = start.next
-    //         }
-    //     }
-    // }
-    // console.log({ start: start.val })
-    // for (let i = 1; i < right; i++) {
-    //     if (end.next) {
-    //         end = end.next
-    //     }
-    // }
-    // console.log({ end: end.val })
     const pre_start = get_deep_next_of_list(head, left - 1 - 1);
-
-    /* head
-    for (let i = 1; i < left - 1; i++) {
-        if (pre_start.next) {
-            pre_start = pre_start.next
-        }
-    } */
 
     for (let l: null | ListNode = start; l !== end; l = l.next) {
         if (!l) break;
-        // sequence.set(l,l.next)
         if (l.next) {
-            // console.log([l, l.next])
             reverse.set(l.next, l);
         }
     }

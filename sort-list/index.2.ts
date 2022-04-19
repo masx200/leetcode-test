@@ -16,7 +16,6 @@ const sortList = function (head: ListNode | null) {
             for (let i = 1; i < subLength && curr.next !== null; i++) {
                 curr = curr.next;
             }
-            //    curr= get_deep_next_of_list(curr,subLength-1)
             const head2 = curr.next;
             curr.next = null;
             curr = head2;
@@ -27,7 +26,6 @@ const sortList = function (head: ListNode | null) {
             ) {
                 curr = curr.next;
             }
-            //  curr= get_deep_next_of_list(curr,subLength-1)
             let next = null;
             if (curr !== null) {
                 next = curr.next;
