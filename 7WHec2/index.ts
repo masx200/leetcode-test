@@ -1,1 +1,1 @@
-export { default } from "../sort-list/index.ts";
+export { default } from "../sort-list/index.2.ts";
