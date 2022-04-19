@@ -1,4 +1,3 @@
-
 import mergeTwoLists from "../merge-two-sorted-lists/index.ts";
 import { get_length_of_list } from "../reverse-linked-list-ii/get_length_of_list.ts";
 import { ListNode } from "../reverse-linked-list/ListNode.ts";
