@@ -118,6 +118,10 @@ https://leetcode-cn.com/problems/sort-an-array/
 
 https://leetcode-cn.com/problems/aMhZSa/
 
+https://leetcode-cn.com/problems/sort-list
+
+https://leetcode-cn.com/problems/7WHec2
+
 #### 安装教程
 
 1. 安装`deno`

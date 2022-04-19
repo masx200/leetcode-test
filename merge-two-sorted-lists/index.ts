@@ -35,29 +35,29 @@ export default function mergeTwoLists(
     prev.next = l1 === null ? l2 : l1;
 
     return prehead.next;
-    // const small = list1.val < list2.val;
-    // const first = Math.min(list1.val, list2.val);
-    // const next = list1.val < list2.val
-    //     ? mergeTwoLists(list1.next, list2)
-    //     : mergeTwoLists(list2.next, list1);
-    // const result = new ListNode(first, next);
-
-    // const result = small ? list1 : list2;
-    // let head: ListNode | null = result;
-    // let p1: ListNode | null = small ? list1.next : list1;
-    // let p2: ListNode | null = small ? list2 : list2.next;
-    // while (p1 && p2 && head) {
-    //     if (p1.val < p2.val) {
-    //         head.next = p1;
-    //         p1 = p1.next;
-    //     } else {
-    //         head.next = p2;
-    //         p2 = p2.next;
-    //     }
-    //     head = head.next;
-    // }
-    // return result;
 }
+// const small = list1.val < list2.val;
+// const first = Math.min(list1.val, list2.val);
+// const next = list1.val < list2.val
+//     ? mergeTwoLists(list1.next, list2)
+//     : mergeTwoLists(list2.next, list1);
+// const result = new ListNode(first, next);
+
+// const result = small ? list1 : list2;
+// let head: ListNode | null = result;
+// let p1: ListNode | null = small ? list1.next : list1;
+// let p2: ListNode | null = small ? list2 : list2.next;
+// while (p1 && p2 && head) {
+//     if (p1.val < p2.val) {
+//         head.next = p1;
+//         p1 = p1.next;
+//     } else {
+//         head.next = p2;
+//         p2 = p2.next;
+//     }
+//     head = head.next;
+// }
+// return result;
 // export default function mergeTwoLists(list1: ListNode | null, list2: ListNode | null): ListNode | null {
 //     if(!list1){return list2}
 //     if(!list2){return list1}
