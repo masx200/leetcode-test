@@ -114,6 +114,8 @@ https://leetcode-cn.com/problems/sorted-merge-lcci/
 
 https://leetcode-cn.com/problems/shortest-distance-to-a-character/
 
+https://leetcode-cn.com/problems/sort-an-array/
+
 #### 安装教程
 
 1. 安装`deno`
