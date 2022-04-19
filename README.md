@@ -116,6 +116,8 @@ https://leetcode-cn.com/problems/shortest-distance-to-a-character/
 
 https://leetcode-cn.com/problems/sort-an-array/
 
+https://leetcode-cn.com/problems/aMhZSa/
+
 #### 安装教程
 
 1. 安装`deno`
