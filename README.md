@@ -106,6 +106,9 @@ https://leetcode-cn.com/problems/symmetric-tree/
 
 https://leetcode-cn.com/problems/mini-parser/
 
+https://leetcode-cn.com/problems/lexicographical-numbers/
+
+
 #### 安装教程
 
 1. 安装`deno`
