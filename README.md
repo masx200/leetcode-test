@@ -138,6 +138,8 @@ https://leetcode-cn.com/problems/counting-bits/
 
 https://leetcode-cn.com/problems/implement-rand10-using-rand7/
 
+https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/
+
 #### 安装教程
 
 1. 安装`deno`
