@@ -134,6 +134,8 @@ https://leetcode-cn.com/problems/single-number-ii/
 
 https://leetcode-cn.com/problems/single-number/
 
+https://leetcode-cn.com/problems/counting-bits/
+
 #### 安装教程
 
 1. 安装`deno`
