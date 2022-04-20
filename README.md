@@ -128,6 +128,12 @@ https://leetcode-cn.com/problems/add-strings/
 
 https://leetcode-cn.com/problems/valid-parentheses
 
+https://leetcode-cn.com/problems/hamming-distance/
+
+https://leetcode-cn.com/problems/single-number-ii/
+
+https://leetcode-cn.com/problems/single-number/
+
 #### 安装教程
 
 1. 安装`deno`
