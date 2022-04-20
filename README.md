@@ -136,6 +136,8 @@ https://leetcode-cn.com/problems/single-number/
 
 https://leetcode-cn.com/problems/counting-bits/
 
+https://leetcode-cn.com/problems/implement-rand10-using-rand7/
+
 #### 安装教程
 
 1. 安装`deno`
