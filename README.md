@@ -160,6 +160,8 @@ https://leetcode-cn.com/problems/find-the-difference/
 
 https://leetcode-cn.com/problems/max-consecutive-ones/
 
+https://leetcode-cn.com/problems/maximum-width-of-binary-tree/
+
 #### 安装教程
 
 1. 安装`deno`
