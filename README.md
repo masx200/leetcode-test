@@ -162,6 +162,10 @@ https://leetcode-cn.com/problems/max-consecutive-ones/
 
 https://leetcode-cn.com/problems/maximum-width-of-binary-tree/
 
+https://leetcode-cn.com/problems/clumsy-factorial/
+
+https://leetcode-cn.com/problems/rotate-function/
+
 #### 安装教程
 
 1. 安装`deno`
