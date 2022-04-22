@@ -45,12 +45,13 @@ export default function widthOfBinaryTree(root: TreeNode | null): number {
             max_width = Math.max(
                 max_width,
                 Number(
-                    1n + bigint_max(...latest.keys()) -
+                    1n +
+                        bigint_max(...latest.keys()) -
                         bigint_min(...latest.keys()),
                 ),
             );
         } else break;
     }
 
-    return (max_width);
+    return max_width;
 }
