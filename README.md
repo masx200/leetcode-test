@@ -178,6 +178,10 @@ https://leetcode-cn.com/problems/binary-tree-zigzag-level-order-traversal/
 
 https://leetcode-cn.com/problems/maximum-depth-of-n-ary-tree/
 
+https://leetcode-cn.com/problems/n-ary-tree-preorder-traversal/
+
+https://leetcode-cn.com/problems/n-ary-tree-postorder-traversal/
+
 #### 安装教程
 
 1. 安装`deno`
