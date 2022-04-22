@@ -156,6 +156,10 @@ https://leetcode-cn.com/problems/reverse-string/
 
 https://leetcode-cn.com/problems/implement-strstr/
 
+https://leetcode-cn.com/problems/find-the-difference/
+
+https://leetcode-cn.com/problems/max-consecutive-ones/
+
 #### 安装教程
 
 1. 安装`deno`

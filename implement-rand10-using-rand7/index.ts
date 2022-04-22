@@ -36,11 +36,3 @@ export default function rand10(): number /* : number */ {
         return (a % 10) + 1;
     }
 }
-// //0 or 1
-// function rand2()/* : number */ {
-//     let a=rand7()
-// while(a>6){
-//     a=rand7()
-// }
-// return a%2
-// };
