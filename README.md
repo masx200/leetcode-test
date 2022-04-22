@@ -188,6 +188,8 @@ https://leetcode-cn.com/problems/hPov7L/
 
 https://leetcode-cn.com/problems/find-largest-value-in-each-tree-row/
 
+https://leetcode-cn.com/problems/partition-list/
+
 #### 安装教程
 
 1. 安装`deno`
