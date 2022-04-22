@@ -150,6 +150,12 @@ https://leetcode-cn.com/problems/power-of-three/
 
 https://leetcode-cn.com/problems/goat-latin/
 
+https://leetcode-cn.com/problems/power-of-four/
+
+https://leetcode-cn.com/problems/reverse-string/
+
+https://leetcode-cn.com/problems/implement-strstr/
+
 #### 安装教程
 
 1. 安装`deno`
