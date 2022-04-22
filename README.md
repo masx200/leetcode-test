@@ -146,6 +146,10 @@ https://leetcode-cn.com/problems/maximum-subarray/
 
 https://leetcode-cn.com/problems/power-of-two/
 
+https://leetcode-cn.com/problems/power-of-three/
+
+https://leetcode-cn.com/problems/goat-latin/
+
 #### 安装教程
 
 1. 安装`deno`
