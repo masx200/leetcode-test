@@ -144,6 +144,8 @@ https://leetcode-cn.com/problems/add-two-numbers/
 
 https://leetcode-cn.com/problems/maximum-subarray/
 
+https://leetcode-cn.com/problems/power-of-two/
+
 #### 安装教程
 
 1. 安装`deno`
