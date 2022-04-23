@@ -198,6 +198,8 @@ https://leetcode-cn.com/problems/design-circular-deque/
 
 https://leetcode-cn.com/problems/making-a-large-island
 
+https://leetcode-cn.com/problems/island-perimeter/
+
 #### 安装教程
 
 1. 安装`deno`
