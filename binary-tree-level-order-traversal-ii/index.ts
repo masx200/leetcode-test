@@ -18,8 +18,8 @@ export default function levelOrderBottom(root: TreeNode | null): number[][] {
     const current: TreeNode[] = [root];
     const result: number[][] = [];
 
-    level(current, (r) => result.unshift(r));
-    return result;
+    level(current, (r) => result.push(r));
+    return result.reverse();
 }
 
 // function levelOrder(root: TreeNode | null): number[][] {
