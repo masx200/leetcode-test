@@ -200,6 +200,8 @@ https://leetcode-cn.com/problems/making-a-large-island
 
 https://leetcode-cn.com/problems/island-perimeter/
 
+https://leetcode-cn.com/problems/max-area-of-island/
+
 #### 安装教程
 
 1. 安装`deno`
