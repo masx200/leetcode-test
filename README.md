@@ -204,6 +204,10 @@ https://leetcode-cn.com/problems/max-area-of-island/
 
 https://leetcode-cn.com/problems/number-of-islands/
 
+https://leetcode-cn.com/problems/implement-trie-prefix-tree
+
+https://leetcode-cn.com/problems/longest-word-in-dictionary/
+
 #### 安装教程
 
 1. 安装`deno`

@@ -1,5 +1,10 @@
 // deno-lint-ignore no-explicit-any
-export default function MyQueue<T = any>() {
+export default function MyQueue<T = any>(): {
+    empty: () => boolean;
+    peek: () => T;
+    pop: () => T;
+    push: (x: T) => void;
+} {
     const storage = new Map<bigint, T>();
     let left = BigInt(0);
     let right = BigInt(0);
