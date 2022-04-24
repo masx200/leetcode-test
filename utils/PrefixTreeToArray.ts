@@ -1,6 +1,6 @@
 import { PrefixTree } from "../implement-trie-prefix-tree/PrefixTree.ts";
 //小心调用栈溢出
-// export function PrefixTreeTraverse(root: PrefixTree): Array<string> {
+// export function PrefixTreeToArray(root: PrefixTree): Array<string> {
 //     const r: Array<string> = [];
 //     traverse(root, (s) => r.push(s));
 //     return r;
@@ -15,7 +15,7 @@ import { PrefixTree } from "../implement-trie-prefix-tree/PrefixTree.ts";
 //     });
 // }
 //循环
-export function PrefixTreeTraverse(root: PrefixTree): Array<string> {
+export function PrefixTreeToArray(root: PrefixTree): Array<string> {
     if (root.children.size === 0) {
         return [];
     }
@@ -51,7 +51,7 @@ export function PrefixTreeTraverse(root: PrefixTree): Array<string> {
     return res;
 }
 //尾递归
-// export function PrefixTreeTraverse(root: PrefixTree): Array<string> {
+// export function PrefixTreeToArray(root: PrefixTree): Array<string> {
 //     const r: Array<string> = [];
 //     let result = traverse(root, "", (s) => r.push(s))?.flat(Infinity);
 //     while (Array.isArray(result)) {
