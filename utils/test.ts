@@ -5,6 +5,21 @@ import { PrefixTreeTraverse } from "./PrefixTreeTraverse.ts";
 
 Deno.test("Prefix-Tree", () => {
     const words = [
+        "a",
+        "banana",
+        "app",
+        "appl",
+        "ap",
+        "apply",
+        "apple",
+        "w",
+        "wo",
+        "wor",
+        "worl",
+        "world",
+        "apple",
+        "a",
+        "e",
         "ZXhwb3J0IHsgc3VtIH07",
         "ZXhwb3J0IHsgcG93X2JpZ2ludCB9IGZyb20gIi4vcG93eC1uL3Bvd19iaWdpbnQudHMiOw==",
         "ZXhwb3J0IHsgY2xpbWJpbmdfc3RhaXJzX2JpZ2ludCB9IGZyb2…tc3RhaXJzL2NsaW1iaW5nX3N0YWlyc19iaWdpbnQudHMiOw==",
