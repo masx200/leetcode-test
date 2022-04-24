@@ -22,7 +22,7 @@ import { bigint_max } from "./maximum-width-of-binary-tree/bigint_max.ts";
 import { bigint_min } from "./maximum-width-of-binary-tree/bigint_min.ts";
 import { Node } from "./n-ary-tree-level-order-traversal/Node.ts";
 import { PrefixTree } from "./implement-trie-prefix-tree/PrefixTree.ts";
-// import { TrieEach } from "./longest-word-in-dictionary/TrieEach.ts";
+export { PrefixTreeClear };
 import { PrefixTreeInsert } from "./design-add-and-search-words-data-structure/PrefixTreeInsert.ts";
 import { PrefixTreeTraverse } from "./utils/PrefixTreeTraverse.ts";
 import { PriorityQueue } from "./kth-largest-element-in-a-stream/PriorityQueue.ts";
@@ -30,6 +30,7 @@ import { PrefixTreeSearch } from "./implement-trie-prefix-tree/PrefixTreeSearch.
 import { PrefixTreeSearchPrefix } from "./implement-trie-prefix-tree/PrefixTreeSearchPrefix.ts";
 import { PrefixTreeStartsWith } from "./implement-trie-prefix-tree/PrefixTreeStartsWith.ts";
 import { PrefixTreeSearchEach } from "./longest-word-in-dictionary/PrefixTreeSearchEach.ts";
+import { PrefixTreeClear } from "./utils/PrefixTreeClear.ts";
 export { TreeNode };
 export { ArrayToListNode, ListNode, ListNodeToArray };
 export { SqrtNumber };
