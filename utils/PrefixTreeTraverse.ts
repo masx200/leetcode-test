@@ -55,9 +55,12 @@ export function PrefixTreeTraverse(root: PrefixTree): Array<string> {
 //     const r: Array<string> = [];
 //     let result = traverse(root, "", (s) => r.push(s))?.flat(Infinity);
 //     while (Array.isArray(result)) {
+//         if (result.length === 0) {
+//             break;
+//         }
 //         // console.log(result);
 //         // prompt('pause')
-//         result = result
+//         const temp = result
 //             .flat(Infinity)
 //             .map(function (f) {
 //                 const res = f();
@@ -67,8 +70,10 @@ export function PrefixTreeTraverse(root: PrefixTree): Array<string> {
 //             })
 //             .flat(Infinity)
 //             .filter(
-//                 (f) => typeof f === "function"
+//                 (f) => typeof f === "function",
 //             ) as unknown as (() => void)[];
+//         // console.log(temp);
+//         result = temp;
 //     }
 //     return r;
 // }
@@ -76,9 +81,9 @@ export function PrefixTreeTraverse(root: PrefixTree): Array<string> {
 // function traverse(
 //     root: PrefixTree,
 //     prefix: string,
-//     output: (s: string) => void
+//     output: (s: string) => void,
 // ): void | (() => void)[] {
-//     console.log(root, prefix, output);
+//     // console.log(root, prefix, output);
 //     if (root.children.size === 0) {
 //         return;
 //     }
