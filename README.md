@@ -220,6 +220,14 @@ https://leetcode-cn.com/problems/g5c51o/
 
 https://leetcode-cn.com/problems/top-k-frequent-elements/
 
+https://leetcode-cn.com/problems/sort-array-by-increasing-frequency/
+
+https://leetcode-cn.com/problems/sort-characters-by-frequency/
+
+https://leetcode-cn.com/problems/kth-largest-element-in-a-stream/
+
+https://leetcode-cn.com/problems/jBjn9C/
+
 #### 安装教程
 
 1. 安装`deno`
