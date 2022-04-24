@@ -1,5 +1,7 @@
 import { PrefixTreeInsert } from "../design-add-and-search-words-data-structure/PrefixTreeInsert.ts";
 import { PrefixTree } from "./PrefixTree.ts";
+import { PrefixTreeSearch } from "./PrefixTreeSearch.ts";
+import { PrefixTreeStartsWith } from "./PrefixTreeStartsWith.ts";
 
 interface Trie {
     insert(word: string): void;
@@ -9,7 +11,6 @@ interface Trie {
     startsWith(prefix: string): boolean;
 }
 export default Trie;
-
 function Trie(): Trie {
     const root: PrefixTree = PrefixTree();
     function insert(word: string): void {
@@ -28,23 +29,23 @@ function Trie(): Trie {
         // }
         // node.isEnd = true;
     }
-    function searchPrefix(prefix: string): PrefixTree | undefined {
-        let node = root;
-        for (const ch of prefix) {
-            const next = node.children.get(ch);
-            if (!next) {
-                return;
-            }
+    // function searchPrefix(prefix: string): PrefixTree | undefined {
+    //     let node = root;
+    //     for (const ch of prefix) {
+    //         const next = node.children.get(ch);
+    //         if (!next) {
+    //             return;
+    //         }
 
-            node = next;
-        }
-        return node;
-    }
+    //         node = next;
+    //     }
+    //     return node;
+    // }
     function search(word: string) {
-        return !!searchPrefix(word)?.isEnd;
+        return PrefixTreeSearch(root, word);
     }
     function startsWith(prefix: string) {
-        return !!searchPrefix(prefix);
+        return PrefixTreeStartsWith(root, prefix);
     }
     return { insert, search, startsWith };
 }

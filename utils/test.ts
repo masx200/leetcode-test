@@ -4,7 +4,7 @@ import { PrefixTree } from "../implement-trie-prefix-tree/PrefixTree.ts";
 import { PrefixTreeTraverse } from "./PrefixTreeTraverse.ts";
 import { test_words } from "./test_words.ts";
 
-Deno.test("Prefix-Tree", () => {
+Deno.test("Prefix-Tree-Insert-Traverse", () => {
     const words = test_words;
     const tree = PrefixTree();
     words.forEach((word) => PrefixTreeInsert(tree, word));
