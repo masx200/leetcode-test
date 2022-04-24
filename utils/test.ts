@@ -12,4 +12,5 @@ Deno.test("Prefix-Tree", () => {
     const right = new Set(PrefixTreeTraverse(tree));
     // console.log(left, right);
     assertEquals(left, right);
+    assertEquals([], PrefixTreeTraverse(PrefixTree()));
 });
