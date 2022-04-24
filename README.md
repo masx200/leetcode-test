@@ -214,6 +214,8 @@ https://leetcode-cn.com/problems/binary-gap/
 
 https://leetcode-cn.com/problems/design-add-and-search-words-data-structure/
 
+https://leetcode-cn.com/problems/words-frequency-lcci/
+
 #### 安装教程
 
 1. 安装`deno`
