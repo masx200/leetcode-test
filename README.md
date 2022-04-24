@@ -216,6 +216,10 @@ https://leetcode-cn.com/problems/design-add-and-search-words-data-structure/
 
 https://leetcode-cn.com/problems/words-frequency-lcci/
 
+https://leetcode-cn.com/problems/g5c51o/
+
+https://leetcode-cn.com/problems/top-k-frequent-elements/
+
 #### 安装教程
 
 1. 安装`deno`
