@@ -30,7 +30,7 @@ export function PrefixTreeTraverse(root: PrefixTree): Array<string> {
         child: e[1],
     }));
     while (prefix_and_entries.length > 0) {
-        // console.log(prefix_and_entries);
+        // console.log(prefix_and_entries.length);
         // prompt("pause");
         const temp: typeof prefix_and_entries = [];
         for (const entry of prefix_and_entries) {
