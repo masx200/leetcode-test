@@ -1,4 +1,5 @@
 import { PrefixTree } from "../implement-trie-prefix-tree/PrefixTree.ts";
+import { PrefixTreeInsert } from "./PrefixTreeInsert.ts";
 
 interface WordDictionary {
     addWord(word: string): void;
@@ -7,26 +8,28 @@ interface WordDictionary {
 export default WordDictionary;
 function WordDictionary(): WordDictionary {
     const root: PrefixTree = PrefixTree();
-    function insert(word: string) {
-        if (word.length === 0) return;
-        let node = root;
-        for (const ch of word) {
-            const next = node.children.get(ch) ??
-                (() => {
-                    const next = PrefixTree();
-                    node.children.set(ch, next);
-                    return next;
-                })();
+    function insert(word: string): void {
+        PrefixTreeInsert(root, word);
+        // if (word.length === 0) return;
+        // let node = root;
+        // for (const ch of word) {
+        //     const next =
+        //         node.children.get(ch) ??
+        //         (() => {
+        //             const next = PrefixTree();
+        //             node.children.set(ch, next);
+        //             return next;
+        //         })();
 
-            node = next;
-        }
-        node.isEnd = true;
-        // console.log(JSON.stringify(root, (k, v) => {
-        //     if (v instanceof Map) {
-        //         return Object.fromEntries(v)
-        //     }
-        //     return v
-        // }))
+        //     node = next;
+        // }
+        // node.isEnd = true;
+        // // console.log(JSON.stringify(root, (k, v) => {
+        // //     if (v instanceof Map) {
+        // //         return Object.fromEntries(v)
+        // //     }
+        // //     return v
+        // // }))
     }
     function search(word: string): boolean {
         return match(word, 0, root);
