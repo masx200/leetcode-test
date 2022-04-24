@@ -208,6 +208,12 @@ https://leetcode-cn.com/problems/implement-trie-prefix-tree
 
 https://leetcode-cn.com/problems/longest-word-in-dictionary/
 
+https://leetcode-cn.com/problems/QC3q1f/
+
+https://leetcode-cn.com/problems/binary-gap/
+
+https://leetcode-cn.com/problems/design-add-and-search-words-data-structure/
+
 #### 安装教程
 
 1. 安装`deno`
