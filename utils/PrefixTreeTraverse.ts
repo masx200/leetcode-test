@@ -14,6 +14,7 @@ import { PrefixTree } from "../implement-trie-prefix-tree/PrefixTree.ts";
 //         return traverse(child, (s: string) => output(key + s));
 //     });
 // }
+//循环
 export function PrefixTreeTraverse(root: PrefixTree): Array<string> {
     if (root.children.size === 0) {
         return [];
@@ -29,6 +30,8 @@ export function PrefixTreeTraverse(root: PrefixTree): Array<string> {
         child: e[1],
     }));
     while (prefix_and_entries.length > 0) {
+        // console.log(prefix_and_entries);
+        // prompt("pause");
         const temp: typeof prefix_and_entries = [];
         for (const entry of prefix_and_entries) {
             const { prefix, key, child } = entry;
@@ -47,3 +50,45 @@ export function PrefixTreeTraverse(root: PrefixTree): Array<string> {
     }
     return res;
 }
+//尾递归
+// export function PrefixTreeTraverse(root: PrefixTree): Array<string> {
+//     const r: Array<string> = [];
+//     let result = traverse(root, "", (s) => r.push(s))?.flat(Infinity);
+//     while (Array.isArray(result)) {
+//         // console.log(result);
+//         // prompt('pause')
+//         result = result
+//             .flat(Infinity)
+//             .map(function (f) {
+//                 const res = f();
+//                 // console.log(res);
+//                 // prompt("pause");
+//                 return res;
+//             })
+//             .flat(Infinity)
+//             .filter(
+//                 (f) => typeof f === "function"
+//             ) as unknown as (() => void)[];
+//     }
+//     return r;
+// }
+
+// function traverse(
+//     root: PrefixTree,
+//     prefix: string,
+//     output: (s: string) => void
+// ): void | (() => void)[] {
+//     console.log(root, prefix, output);
+//     if (root.children.size === 0) {
+//         return;
+//     }
+//     return [...root.children]
+//         .map(([key, child]) => {
+//             if (child.isEnd) {
+//                 output(prefix + key);
+//             }
+//             return () => traverse(child, prefix + key, output);
+//         })
+//         .flat(Infinity)
+//         .filter((f) => typeof f === "function") as unknown as (() => void)[];
+// }
