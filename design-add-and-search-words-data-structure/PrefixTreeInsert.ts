@@ -15,12 +15,6 @@ export function PrefixTreeInsert(root: PrefixTree, word: string): void {
             node = next;
         }
         node.isEnd = true;
-        // console.log(JSON.stringify(root, (k, v) => {
-        //     if (v instanceof Map) {
-        //         return Object.fromEntries(v)
-        //     }
-        //     return v
-        // }))
     }
     return insert(word);
 }

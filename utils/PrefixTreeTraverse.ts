@@ -40,7 +40,7 @@ export function PrefixTreeTraverse(root: PrefixTree): Array<string> {
                     prefix: prefix + key,
                     key: e[0],
                     child: e[1],
-                }))
+                })),
             );
         }
         prefix_and_entries = temp;
