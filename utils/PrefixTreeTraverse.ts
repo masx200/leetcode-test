@@ -61,7 +61,7 @@ export function PrefixTreeTraverse(root: PrefixTree): Array<string> {
 //         // console.log(result);
 //         // prompt('pause')
 //         const temp = result
-//             .flat(Infinity)
+//             // .flat(Infinity)
 //             .map(function (f) {
 //                 const res = f();
 //                 // console.log(res);
@@ -70,7 +70,7 @@ export function PrefixTreeTraverse(root: PrefixTree): Array<string> {
 //             })
 //             .flat(Infinity)
 //             .filter(
-//                 (f) => typeof f === "function",
+//                 (f) => typeof f === "function"
 //             ) as unknown as (() => void)[];
 //         // console.log(temp);
 //         result = temp;
@@ -81,19 +81,21 @@ export function PrefixTreeTraverse(root: PrefixTree): Array<string> {
 // function traverse(
 //     root: PrefixTree,
 //     prefix: string,
-//     output: (s: string) => void,
+//     output: (s: string) => void
 // ): void | (() => void)[] {
 //     // console.log(root, prefix, output);
 //     if (root.children.size === 0) {
 //         return;
 //     }
-//     return [...root.children]
-//         .map(([key, child]) => {
-//             if (child.isEnd) {
-//                 output(prefix + key);
-//             }
-//             return () => traverse(child, prefix + key, output);
-//         })
-//         .flat(Infinity)
-//         .filter((f) => typeof f === "function") as unknown as (() => void)[];
+//     return (
+//         [...root.children]
+//             .map(([key, child]) => {
+//                 if (child.isEnd) {
+//                     output(prefix + key);
+//                 }
+//                 return () => traverse(child, prefix + key, output);
+//             })
+//             // .flat(Infinity)
+//             .filter((f) => typeof f === "function") as unknown as (() => void)[]
+//     );
 // }
