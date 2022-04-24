@@ -31,7 +31,7 @@ import { PrefixTreeSearchPrefix } from "./implement-trie-prefix-tree/PrefixTreeS
 import { PrefixTreeStartsWith } from "./implement-trie-prefix-tree/PrefixTreeStartsWith.ts";
 import { PrefixTreeSearchEach } from "./longest-word-in-dictionary/PrefixTreeSearchEach.ts";
 import { PrefixTreeClear } from "./utils/PrefixTreeClear.ts";
-import { PrefixTreeFromArray } from "./utils/PrefixTreefromArray.ts";
+import { PrefixTreeFromArray } from "./utils/PrefixTreeFromArray.ts";
 import { PrefixTreeForEach } from "./utils/PrefixTreeForEach.ts";
 export { TreeNode };
 export { ArrayToListNode, ListNode, ListNodeToArray };
