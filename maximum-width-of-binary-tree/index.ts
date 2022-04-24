@@ -2,19 +2,6 @@ import { TreeNode } from "../binary-tree-inorder-traversal/TreeNode.ts";
 import { bigint_max } from "./bigint_max.ts";
 import { bigint_min } from "./bigint_min.ts";
 
-/**
- * Definition for a binary tree node.
- * class TreeNode {
- *     val: number
- *     left: TreeNode | null
- *     right: TreeNode | null
- *     constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.left = (left===undefined ? null : left)
- *         this.right = (right===undefined ? null : right)
- *     }
- * }
- */
 export default function widthOfBinaryTree(root: TreeNode | null): number {
     if (!root) return 0;
     let current: Map<bigint, TreeNode> = new Map([[BigInt(0), root]]);

@@ -1,15 +1,3 @@
-/**
- * Definition for Node.
- * class Node {
- *     val: number
- *     children: Node[]
- *     constructor(val?: number, children?: Node[]) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.children = (children===undefined ? [] : children)
- *     }
- * }
- */
-
 import { Node } from "../n-ary-tree-level-order-traversal/Node.ts";
 export default function maxDepth(root: Node | null): number {
     if (!root) return 0;

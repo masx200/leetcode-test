@@ -1,16 +1,5 @@
 import { Node } from "../n-ary-tree-level-order-traversal/Node.ts";
 
-/**
- * Definition for node.
- * class Node {
- *     val: number
- *     children: Node[]
- *     constructor(val?: number) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.children = []
- *     }
- * }
- */
 export default function postorder(root: Node | null): number[] {
     if (!root) {
         return [];
