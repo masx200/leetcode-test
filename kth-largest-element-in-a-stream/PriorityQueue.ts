@@ -8,7 +8,7 @@ export interface PriorityQueue<T = any> {
     tail: () => T | undefined;
     pop: () => T | undefined;
     shift: () => T | undefined;
-    at: (index: number) => T | undefined;
+   // at: (index: number) => T | undefined;
 }
 
 /**
