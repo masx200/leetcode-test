@@ -1,7 +1,5 @@
 // deno-lint-ignore no-explicit-any
-export default function MyCircularDeque<T = any>(
-    k = Infinity,
-): {
+export default interface MyCircularDeque<T = any> {
     isEmpty: () => boolean;
     getFront: () => T | number;
     deleteFront: () => boolean;
@@ -10,8 +8,13 @@ export default function MyCircularDeque<T = any>(
     deleteLast: () => boolean;
     getRear: () => T | number;
     isFull: () => boolean;
-    length: number;
-} {
+    max_size: number;
+}
+
+// deno-lint-ignore no-explicit-any
+export default function MyCircularDeque<T = any>(
+    k = Infinity,
+): MyCircularDeque<T> {
     // console.log('MyCircularDeque', k)
     if (k < 1) throw Error("k greater than or equal  one");
     const storage = new Map<bigint, T>();
@@ -121,7 +124,7 @@ export default function MyCircularDeque<T = any>(
         deleteLast,
         getRear,
         isFull,
-        length: k,
+        max_size: k,
     };
 }
 // class MyCircularDeque {

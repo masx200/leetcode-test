@@ -1,8 +1,11 @@
 // deno-lint-ignore no-explicit-any
-export default function CQueue<T = any>(): {
+export default interface CQueue<T = any> {
     appendTail: (value: T) => void;
     deleteHead: () => T | number;
-} {
+}
+
+// deno-lint-ignore no-explicit-any
+export default function CQueue<T = any>(): CQueue<T> {
     const inStack: Array<T> = [];
     const outStack: Array<T> = [];
     function deleteHead(): T | number {

@@ -1,12 +1,5 @@
-/**
- * Your KthLargest object will be instantiated and called as such:
- * var obj = new KthLargest(k, nums)
- * var param_1 = obj.add(val)
- */
 // deno-lint-ignore no-explicit-any
-export function PriorityQueue<T = any>(
-    comparator: (a: T, b: T) => number,
-): {
+export interface PriorityQueue<T = any> {
     clear: () => void;
     length: () => number;
     comparator: (a: T, b: T) => number;
@@ -15,7 +8,18 @@ export function PriorityQueue<T = any>(
     tail: () => T | undefined;
     pop: () => T | undefined;
     shift: () => T | undefined;
-} {
+    at: (index: number) => T | undefined;
+}
+
+/**
+ * Your KthLargest object will be instantiated and called as such:
+ * var obj = new KthLargest(k, nums)
+ * var param_1 = obj.add(val)
+ */
+// deno-lint-ignore no-explicit-any
+export function PriorityQueue<T = any>(
+    comparator: (a: T, b: T) => number,
+): PriorityQueue<T> {
     //默认升序
     //comparator Function used to determine the order of the elements. It is expected to return a negative value if the head argument is less than the second argument, zero if they're equal, and a positive value otherwise.
     const data: T[] = [];
@@ -101,5 +105,8 @@ export function PriorityQueue<T = any>(
     function clear() {
         data.length = 0;
     }
-    return { clear, length, comparator, offer, head, tail, pop, shift };
+    function at(index: number): T | undefined {
+        return data.at(index);
+    }
+    return { clear, length, comparator, offer, head, tail, pop, shift, at };
 }
