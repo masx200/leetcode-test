@@ -234,6 +234,10 @@ https://leetcode-cn.com/problems/xu-lie-hua-er-cha-shu-lcof
 
 https://leetcode-cn.com/problems/serialize-and-deserialize-binary-tree
 
+https://leetcode-cn.com/problems/cousins-in-binary-tree/
+
+https://leetcode-cn.com/problems/number-of-recent-calls/
+
 #### 安装教程
 
 1. 安装`deno`
