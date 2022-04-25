@@ -8,7 +8,7 @@ export interface PriorityQueue<T = any> {
     tail: () => T | undefined;
     pop: () => T | undefined;
     shift: () => T | undefined;
-    at: (index: number) => T | undefined;
+   // at: (index: number) => T | undefined;
 }
 
 /**
@@ -105,8 +105,8 @@ export function PriorityQueue<T = any>(
     function clear() {
         data.length = 0;
     }
-    function at(index: number): T | undefined {
-        return data.at(index);
-    }
-    return { clear, length, comparator, offer, head, tail, pop, shift, at };
+    //function at(index: number): T | undefined {
+    //    return data.at(index);
+   // }
+    return { clear, length, comparator, offer, head, tail, pop, shift/*, at*/ };
 }
