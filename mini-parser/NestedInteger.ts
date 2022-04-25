@@ -1,7 +1,7 @@
 import { NestedIntegerType } from "./NestedIntegerType.ts";
 
 export class NestedInteger {
-    [k: number]: NestedInteger;
+    [k: number]: NestedInteger
     length = 0;
     valueOf() {
         return this.value;

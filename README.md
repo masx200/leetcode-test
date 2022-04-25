@@ -230,6 +230,10 @@ https://leetcode-cn.com/problems/jBjn9C/
 
 https://leetcode-cn.com/problems/random-pick-index
 
+https://leetcode-cn.com/problems/xu-lie-hua-er-cha-shu-lcof
+
+https://leetcode-cn.com/problems/serialize-and-deserialize-binary-tree
+
 #### 安装教程
 
 1. 安装`deno`
