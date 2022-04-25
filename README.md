@@ -244,6 +244,8 @@ https://leetcode-cn.com/problems/dui-cheng-de-er-cha-shu-lcof/
 
 https://leetcode-cn.com/problems/ping-heng-er-cha-shu-lcof/
 
+https://leetcode-cn.com/problems/peeking-iterator
+
 #### 安装教程
 
 1. 安装`deno`
