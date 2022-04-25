@@ -1,4 +1,4 @@
 export const enum NestedIntegerType {
-    interger = "interger",
+    integer = "integer",
     array = "array",
 }

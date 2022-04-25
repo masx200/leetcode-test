@@ -1,7 +1,7 @@
 import { NestedIntegerType } from "./NestedIntegerType.ts";
 
 export class NestedInteger {
-    [k: number]: NestedInteger
+    [k: number]: NestedInteger;
     length = 0;
     valueOf() {
         return this.value;
@@ -14,7 +14,7 @@ export class NestedInteger {
     constructor(value?: number) {
         if (typeof value === "number") {
             this.value = value;
-            this.type = NestedIntegerType.interger;
+            this.type = NestedIntegerType.integer;
         } else {
             this.type = NestedIntegerType.array;
             this.value = 0;
@@ -22,7 +22,7 @@ export class NestedInteger {
     }
 
     isInteger(): boolean {
-        return this.type === NestedIntegerType.interger;
+        return this.type === NestedIntegerType.integer;
     }
 
     getInteger(): number | null {

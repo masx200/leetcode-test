@@ -1,4 +1,4 @@
-export type PrefixTree = {
+export interface PrefixTree  {
     children: Map<string, PrefixTree>;
     isEnd: boolean;
 };

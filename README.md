@@ -228,6 +228,8 @@ https://leetcode-cn.com/problems/kth-largest-element-in-a-stream/
 
 https://leetcode-cn.com/problems/jBjn9C/
 
+https://leetcode-cn.com/problems/random-pick-index
+
 #### 安装教程
 
 1. 安装`deno`

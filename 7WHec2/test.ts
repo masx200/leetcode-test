@@ -2,7 +2,7 @@ import { assertEquals } from "../deps.ts";
 import { ArrayToListNode, ListNodeToArray } from "../mod.ts";
 import sortList from "./index.ts";
 
-Deno.test("sort-list", () => {
+Deno.test("sort-list-2", () => {
     const inputs = [
         [4, 2, 1, 3],
         [-1, 5, 3, 4, 0],
