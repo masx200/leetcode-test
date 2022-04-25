@@ -1,5 +1,5 @@
 import { PrefixTree } from "../implement-trie-prefix-tree/PrefixTree.ts";
-import { PrefixTreeToArray } from "./PrefixTreeToArray.ts";
+import { PrefixTreeToArray1 as PrefixTreeToArray } from "./PrefixTreeToArray1.ts";
 
 export function PrefixTreeForEach(
     root: PrefixTree,

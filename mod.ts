@@ -24,7 +24,7 @@ import { Node } from "./n-ary-tree-level-order-traversal/Node.ts";
 import { PrefixTree } from "./implement-trie-prefix-tree/PrefixTree.ts";
 export { PrefixTreeClear };
 import { PrefixTreeInsert } from "./design-add-and-search-words-data-structure/PrefixTreeInsert.ts";
-import { PrefixTreeToArray } from "./utils/PrefixTreeToArray.ts";
+import { PrefixTreeToArray1 as PrefixTreeToArray } from "./utils/PrefixTreeToArray1.ts";
 import { PriorityQueue } from "./kth-largest-element-in-a-stream/PriorityQueue.ts";
 import { PrefixTreeSearch } from "./implement-trie-prefix-tree/PrefixTreeSearch.ts";
 import { PrefixTreeSearchPrefix } from "./implement-trie-prefix-tree/PrefixTreeSearchPrefix.ts";
