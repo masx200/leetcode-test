@@ -254,6 +254,8 @@ https://leetcode-cn.com/problems/h54YBf/
 
 https://leetcode-cn.com/problems/serialize-and-deserialize-bst/
 
+https://leetcode-cn.com/problems/encode-n-ary-tree-to-binary-tree/
+
 #### 安装教程
 
 1. 安装`deno`
