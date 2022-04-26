@@ -1,8 +1,8 @@
 export class Node {
     val: number;
     children: Node[];
-    constructor(val?: number) {
+    constructor(val?: number, children?: Node[]) {
         this.val = val === undefined ? 0 : val;
-        this.children = [];
+        this.children = children === undefined ? [] : children;
     }
 }
