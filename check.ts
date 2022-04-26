@@ -8,6 +8,7 @@ async function printFilesNames() {
             includeFiles: true,
             includeDirs: false,
             exts: ["ts"],
+            skip: [/node_modules/],
         })
     ) {
         console.log(entry.path);
