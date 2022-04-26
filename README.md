@@ -256,6 +256,8 @@ https://leetcode-cn.com/problems/serialize-and-deserialize-bst/
 
 https://leetcode-cn.com/problems/encode-n-ary-tree-to-binary-tree/
 
+https://leetcode-cn.com/problems/serialize-and-deserialize-n-ary-tree/
+
 #### 安装教程
 
 1. 安装`deno`
