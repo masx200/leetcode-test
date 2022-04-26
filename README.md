@@ -248,6 +248,8 @@ https://leetcode-cn.com/problems/peeking-iterator
 
 https://leetcode-cn.com/problems/clone-graph
 
+https://leetcode-cn.com/problems/clone-n-ary-tree/
+
 #### 安装教程
 
 1. 安装`deno`
