@@ -9,11 +9,13 @@ Deno.test("ArrayToListNode", () => {
     );
 });
 Deno.test("ListNodeToArray", () => {
-    assertEquals(
-        ListNodeToArray(new ListNode(5, null)),
-        [5],
-    );
+    assertEquals(ListNodeToArray(new ListNode(5, null)), [5]);
     assertEquals(ListNodeToArray(null), []);
+    assertEquals(ListNodeToArray(new ListNode(5, new ListNode(10))), [5, 10]);
+    assertEquals(
+        ListNodeToArray(new ListNode(5, new ListNode(10, new ListNode(100)))),
+        [5, 10, 100],
+    );
 });
 Deno.test("reverse-linked-list", () => {
     const testData: { input: Array<number>; output: Array<number> }[] = [
