@@ -260,6 +260,10 @@ https://leetcode-cn.com/problems/serialize-and-deserialize-n-ary-tree/
 
 https://leetcode-cn.com/problems/remove-element
 
+https://leetcode-cn.com/problems/shan-chu-lian-biao-de-jie-dian-lcof
+
+https://leetcode-cn.com/problems/remove-linked-list-elements
+
 #### 安装教程
 
 1. 安装`deno`
