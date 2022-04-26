@@ -300,6 +300,12 @@ deno task fmt
 deno task lint
 ```
 
+5.type check
+
+```
+deno task check
+```
+
 5.导入模块
 
 指定版本号
