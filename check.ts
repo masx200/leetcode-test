@@ -4,12 +4,14 @@ import { walk } from "https://deno.land/std@0.136.0/fs/mod.ts";
 async function printFilesNames() {
     console.log("type check start!");
     const stack: string[] = [];
-    for await (const entry of walk(".", {
-        includeFiles: true,
-        includeDirs: false,
-        exts: ["ts"],
-        skip: [/node_modules/],
-    })) {
+    for await (
+        const entry of walk(".", {
+            includeFiles: true,
+            includeDirs: false,
+            exts: ["ts"],
+            skip: [/node_modules/],
+        })
+    ) {
         console.log(entry.path);
         if (stack.length < 10) {
             stack.push(entry.path);

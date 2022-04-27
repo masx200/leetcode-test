@@ -266,6 +266,10 @@ https://leetcode-cn.com/problems/remove-linked-list-elements
 
 https://leetcode-cn.com/problems/pacific-atlantic-water-flow/
 
+https://leetcode-cn.com/problems/fu-za-lian-biao-de-fu-zhi-lcof/
+
+https://leetcode-cn.com/problems/copy-list-with-random-pointer/
+
 #### 安装教程
 
 1. 安装`deno`

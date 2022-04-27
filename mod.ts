@@ -58,3 +58,4 @@ export { PrefixTreeSearchEach };
 export { PrefixTreeFromArray };
 export { PrefixTreeForEach };
 export { GraphNode };
+export { Node as RandomNode } from "./copy-list-with-random-pointer/Node.ts";
