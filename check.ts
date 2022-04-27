@@ -24,6 +24,7 @@ async function printFilesNames({ skip }: { skip?: RegExp }) {
     }
 }
 if (import.meta.main) {
+    /* deno run -A "check.ts" "--skip=npm|utils" */
     const args = parse(Deno.args);
     const skip = args.skip ? new RegExp(String(args.skip)) : undefined;
     await printFilesNames({ skip })
