@@ -1,6 +1,6 @@
 export default function nextGreaterElement(
     nums1: number[],
-    nums2: number[]
+    nums2: number[],
 ): number[] {
     const map = new Map();
     const stack = [];

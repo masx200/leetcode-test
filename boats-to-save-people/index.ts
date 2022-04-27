@@ -1,6 +1,6 @@
 export default function numRescueBoats(
     people: number[],
-    limit: number
+    limit: number,
 ): number {
     let l = 0,
         r = people.length - 1;

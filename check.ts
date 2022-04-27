@@ -35,8 +35,9 @@ if (import.meta.main) {
         ? args.skip.map((s) => new RegExp(s))
         : undefined;
     await printFilesNames({ skip })
-        .then(() => console.log("type check Done!"))
-        // .catch(console.error);
+        .then(() => console.log("type check Done!"));
+    // .catch(console.error);
+    
 }
 
 async function runDenoCheck(stack: string[]) {
