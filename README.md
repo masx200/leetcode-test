@@ -284,6 +284,12 @@ https://leetcode-cn.com/problems/design-hashset/
 
 https://leetcode-cn.com/problems/next-greater-element-i/
 
+https://leetcode-cn.com/problems/find-peak-element/
+
+https://leetcode-cn.com/problems/N6YdxV/
+
+https://leetcode-cn.com/problems/search-a-2d-matrix/
+
 #### 安装教程
 
 1. 安装`deno`
