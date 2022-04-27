@@ -8,3 +8,5 @@ export {
 export { default as random } from "https://cdn.skypack.dev/lodash@4.17.21/random?dts";
 
 export { default as uniqBy } from "https://cdn.skypack.dev/lodash@4.17.21/uniqBy?dts";
+
+export { default as intersection } from "https://cdn.skypack.dev/lodash@4.17.21/intersection?dts";

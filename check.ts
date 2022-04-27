@@ -24,20 +24,27 @@ async function printFilesNames() {
     }
 }
 
-printFilesNames().then(() => console.log("type check Done!"));
+await printFilesNames()
+    .then(() => console.log("type check Done!"))
+    .catch(console.error);
 
 async function runDenoCheck(stack: string[]) {
     const process = Deno.run({
-        cmd: ["deno", "check", ...stack],
+        cmd: ["deno", "check", "--remote", ...stack],
         stderr: "piped",
         stdout: "piped",
     });
-    /*        const [status/* , stdout, stderr */
-    //] =  */
-    await Promise.all([
+    const [status, stdout, stderr] = await Promise.all([
         process.status(),
-        // process.output(),
-        // process.stderrOutput(),
+        process.output(),
+        process.stderrOutput(),
     ]);
+    const decoder = new TextDecoder();
+    const out = decoder.decode(stdout);
+    const err = decoder.decode(stderr);
+    console.log(status, out, err);
     process.close();
+    if (!status.success) {
+        throw new Error("type check failed:" + out + err);
+    }
 }
