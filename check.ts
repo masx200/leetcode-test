@@ -1,17 +1,15 @@
 import { walk } from "https://deno.land/std@0.136.0/fs/mod.ts";
-
+import { parse } from "https://deno.land/std@0.136.0/flags/mod.ts";
 // Async
-async function printFilesNames() {
+async function printFilesNames({ skip }: { skip?: RegExp }) {
     console.log("type check start!");
     const stack: string[] = [];
-    for await (
-        const entry of walk(".", {
-            includeFiles: true,
-            includeDirs: false,
-            exts: ["ts"],
-            skip: [/node_modules/],
-        })
-    ) {
+    for await (const entry of walk(".", {
+        includeFiles: true,
+        includeDirs: false,
+        exts: ["ts"],
+        skip: [/node_modules/, skip].filter(Boolean) as RegExp[],
+    })) {
         console.log(entry.path);
         if (stack.length < 10) {
             stack.push(entry.path);
@@ -25,14 +23,18 @@ async function printFilesNames() {
         await runDenoCheck(stack);
     }
 }
-
-await printFilesNames()
-    .then(() => console.log("type check Done!"))
-    .catch(console.error);
+if (import.meta.main) {
+    const args = parse(Deno.args);
+    const skip = args.skip ? new RegExp(String(args.skip)) : undefined;
+    await printFilesNames({ skip })
+        .then(() => console.log("type check Done!"))
+        .catch(console.error);
+}
 
 async function runDenoCheck(stack: string[]) {
+    const cmd = ["deno", "check", "--remote", ...stack];
     const process = Deno.run({
-        cmd: ["deno", "check", "--remote", ...stack],
+        cmd: cmd,
         stderr: "piped",
         stdout: "piped",
     });
@@ -44,7 +46,7 @@ async function runDenoCheck(stack: string[]) {
     const decoder = new TextDecoder();
     const out = decoder.decode(stdout);
     const err = decoder.decode(stderr);
-    console.log(status, out, err);
+    console.log(cmd, status, out, err);
     process.close();
     if (!status.success) {
         throw new Error("type check failed:" + out + err);
