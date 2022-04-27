@@ -272,6 +272,16 @@ https://leetcode-cn.com/problems/copy-list-with-random-pointer/
 
 https://leetcode-cn.com/problems/search-insert-position/
 
+https://leetcode-cn.com/problems/boats-to-save-people/
+
+https://leetcode-cn.com/problems/top-k-frequent-words/
+
+https://leetcode-cn.com/problems/kth-largest-element-in-an-array/
+
+https://leetcode-cn.com/problems/contains-duplicate/
+
+https://leetcode-cn.com/problems/design-hashset/
+
 #### 安装教程
 
 1. 安装`deno`
