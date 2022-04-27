@@ -270,6 +270,8 @@ https://leetcode-cn.com/problems/fu-za-lian-biao-de-fu-zhi-lcof/
 
 https://leetcode-cn.com/problems/copy-list-with-random-pointer/
 
+https://leetcode-cn.com/problems/search-insert-position/
+
 #### 安装教程
 
 1. 安装`deno`

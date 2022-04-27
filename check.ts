@@ -1,17 +1,19 @@
 import { walk } from "https://deno.land/std@0.136.0/fs/mod.ts";
 import { parse } from "https://deno.land/std@0.136.0/flags/mod.ts";
 // Async
-async function printFilesNames({ skip }: { skip?: RegExp }) {
+async function printFilesNames({ skip }: { skip?: RegExp | RegExp[] }) {
     console.log("type check start!");
     const stack: string[] = [];
-    for await (const entry of walk(".", {
-        includeFiles: true,
-        includeDirs: false,
-        exts: ["ts"],
-        skip: [/node_modules/, skip].filter(Boolean) as RegExp[],
-    })) {
+    for await (
+        const entry of walk(".", {
+            includeFiles: true,
+            includeDirs: false,
+            exts: ["ts"],
+            skip: [/node_modules/, skip].flat().filter(Boolean) as RegExp[],
+        })
+    ) {
         console.log(entry.path);
-        if (stack.length < 10) {
+        if (stack.length < 15) {
             stack.push(entry.path);
         } else {
             await runDenoCheck([...stack, entry.path]);
@@ -26,7 +28,12 @@ async function printFilesNames({ skip }: { skip?: RegExp }) {
 if (import.meta.main) {
     /* deno run -A "check.ts" "--skip=npm|utils" */
     const args = parse(Deno.args);
-    const skip = args.skip ? new RegExp(String(args.skip)) : undefined;
+    console.log(args);
+    const skip = typeof args.skip === "string"
+        ? new RegExp(String(args.skip))
+        : Array.isArray(args.skip)
+        ? args.skip.map((s) => new RegExp(s))
+        : undefined;
     await printFilesNames({ skip })
         .then(() => console.log("type check Done!"))
         .catch(console.error);
