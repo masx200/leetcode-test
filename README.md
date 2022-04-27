@@ -294,6 +294,8 @@ https://leetcode-cn.com/problems/minimum-size-subarray-sum/
 
 https://leetcode-cn.com/problems/maximum-number-of-vowels-in-a-substring-of-given-length/
 
+https://leetcode-cn.com/problems/majority-element/
+
 #### 安装教程
 
 1. 安装`deno`
