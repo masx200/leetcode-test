@@ -282,6 +282,8 @@ https://leetcode-cn.com/problems/contains-duplicate/
 
 https://leetcode-cn.com/problems/design-hashset/
 
+https://leetcode-cn.com/problems/next-greater-element-i/
+
 #### 安装教程
 
 1. 安装`deno`
