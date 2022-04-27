@@ -290,6 +290,10 @@ https://leetcode-cn.com/problems/N6YdxV/
 
 https://leetcode-cn.com/problems/search-a-2d-matrix/
 
+https://leetcode-cn.com/problems/minimum-size-subarray-sum/
+
+https://leetcode-cn.com/problems/maximum-number-of-vowels-in-a-substring-of-given-length/
+
 #### 安装教程
 
 1. 安装`deno`
