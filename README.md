@@ -298,6 +298,8 @@ https://leetcode-cn.com/problems/majority-element/
 
 https://leetcode-cn.com/problems/permutations/
 
+https://leetcode-cn.com/problems/permutations-ii/
+
 #### 安装教程
 
 1. 安装`deno`
