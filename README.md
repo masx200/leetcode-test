@@ -300,6 +300,8 @@ https://leetcode-cn.com/problems/permutations/
 
 https://leetcode-cn.com/problems/permutations-ii/
 
+https://leetcode-cn.com/problems/valid-sudoku/
+
 #### 安装教程
 
 1. 安装`deno`
