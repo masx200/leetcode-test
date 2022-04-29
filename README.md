@@ -296,6 +296,8 @@ https://leetcode-cn.com/problems/maximum-number-of-vowels-in-a-substring-of-give
 
 https://leetcode-cn.com/problems/majority-element/
 
+https://leetcode-cn.com/problems/permutations/
+
 #### 安装教程
 
 1. 安装`deno`
