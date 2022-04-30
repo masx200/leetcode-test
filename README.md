@@ -306,6 +306,8 @@ https://leetcode-cn.com/problems/n-queens/
 
 https://leetcode-cn.com/problems/eight-queens-lcci/
 
+https://leetcode-cn.com/problems/sudoku-solver/
+
 #### 安装教程
 
 1. 安装`deno`
