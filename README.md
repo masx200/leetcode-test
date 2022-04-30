@@ -308,6 +308,8 @@ https://leetcode-cn.com/problems/eight-queens-lcci/
 
 https://leetcode-cn.com/problems/sudoku-solver/
 
+https://leetcode.cn/problems/generate-parentheses
+
 #### 安装教程
 
 1. 安装`deno`
