@@ -35,16 +35,16 @@ function solveSudoku(board: string[][]): void {
                 column,
                 rows,
                 columns,
-                subboxes
+                subboxes,
             );
             return [index, chars.length];
-        })
+        }),
     );
     //排序可选数最少的空格
     spaces.sort(
         (a, b) =>
             (space_to_charscount.get(a) ?? 0) -
-            (space_to_charscount.get(b) ?? 0)
+            (space_to_charscount.get(b) ?? 0),
     );
     // const sorted: [number, number, Array<string>][] = spaces
     //     .map(
@@ -94,7 +94,7 @@ function dfs(
     rows: Record<string, boolean>[],
     columns: Record<string, boolean>[],
     subboxes: Record<string, boolean>[][],
-    board: string[][]
+    board: string[][],
 ): boolean {
     // console.log(spaces);
     if (spaces.size === 0) {
@@ -109,7 +109,7 @@ function dfs(
         spaces_and_chars.push([row, column, chars] as [
             number,
             number,
-            string[]
+            string[],
         ]);
         if (chars.length === 1) {
             break;
@@ -183,7 +183,7 @@ function dfs(
             columns,
             /*   cloned */
             subboxes,
-            board
+            board,
         );
         if (result) {
             return result;
@@ -202,7 +202,7 @@ function get_available_chars(
     column: number,
     rows: Record<string, boolean>[],
     columns: Record<string, boolean>[],
-    subboxes: Record<string, boolean>[][]
+    subboxes: Record<string, boolean>[][],
 ): Array<string> {
     const array = Array.from({ length: 9 }).map((_v, i) => String(i + 1));
     const charset = new Set(array);
