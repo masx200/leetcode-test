@@ -328,6 +328,8 @@ https://leetcode-cn.com/problems/3sum/
 
 https://leetcode-cn.com/problems/range-sum-of-bst/
 
+https://leetcode-cn.com/problems/design-circular-queue/
+
 #### 安装教程
 
 1. 安装`deno`
