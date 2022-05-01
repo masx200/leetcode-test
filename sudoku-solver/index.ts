@@ -112,7 +112,7 @@ function dfs(
     rows: Record<string, boolean>[],
     columns: Record<string, boolean>[],
     subboxes: Record<string, boolean>[][],
-    board: string[][]
+    board: string[][],
 ): boolean {
     // console.log(spaces);
     if (spaces.size === 0) {
@@ -130,7 +130,7 @@ function dfs(
         spaces_and_chars.push([row, column, chars] as [
             number,
             number,
-            string[]
+            string[],
         ]);
         if (chars.length === 1) {
             break;
@@ -202,7 +202,7 @@ function dfs(
             columns,
             /*   cloned */
             subboxes,
-            board
+            board,
         );
         if (result) {
             return result;
@@ -221,7 +221,7 @@ function get_available_chars(
     column: number,
     rows: Record<string, boolean>[],
     columns: Record<string, boolean>[],
-    subboxes: Record<string, boolean>[][]
+    subboxes: Record<string, boolean>[][],
 ): Array<string> {
     const array = Array.from({ length: 9 }).map((_v, i) => String(i + 1));
     const charset = new Set(array);
