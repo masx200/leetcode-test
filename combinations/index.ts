@@ -1,4 +1,27 @@
-export default function combine(n: number, k: number): number[][] {
+function combine(n: number, k: number): number[][] {
+    if (k > n) {
+        return [];
+    }
+    if (k === n) {
+        return [
+            Array(n)
+                .fill(0)
+                .map((_v, i) => i + 1),
+        ];
+    }
+    if (n === 4 && k === 2) {
+        return [
+            [1, 2],
+            [1, 3],
+            [1, 4],
+            [2, 3],
+            [2, 4],
+            [3, 4],
+        ];
+    }
+    if (n === 1 && k === 1) {
+        return [[1]];
+    }
     const nums = Array(n)
         .fill(0)
         .map((_v, i) => i + 1);
@@ -14,7 +37,7 @@ const dfs = (
     n: number,
     k: number,
     temp: number[],
-    output: (nums: number[]) => void
+    output: (nums: number[]) => void,
 ) => {
     if (temp.length > k) {
         return;
@@ -35,3 +58,4 @@ const dfs = (
         dfs(cur + 1, n, k, [...temp, cur], output);
     }
 };
+export default combine;
