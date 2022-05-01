@@ -324,6 +324,10 @@ https://leetcode.cn/problems/number-of-1-bits/
 
 https://leetcode.cn/problems/er-jin-zhi-zhong-1de-ge-shu-lcof/
 
+https://leetcode-cn.com/problems/3sum/
+
+https://leetcode-cn.com/problems/range-sum-of-bst/
+
 #### 安装教程
 
 1. 安装`deno`
