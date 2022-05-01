@@ -104,8 +104,8 @@ function dfs(
     if (chars.length === 0) {
         return false;
     }
-    const clonedspaces = new Set(spaces);
-    clonedspaces.delete(pair_to_index(i, j));
+    // const clonedspaces = new Set(spaces);
+    // clonedspaces.delete(pair_to_index(i, j));
     // const clonedspaces = spaces.filter(([r, c]) => !(r == i && c == j));
 
     // if (pos < 0) {
@@ -134,10 +134,11 @@ function dfs(
         subboxes[Math.floor(i / 3)][Math.floor(j / 3)][char] = true;
 
         board[i][j] = char;
+        spaces.delete(pair_to_index(i, j));
         const result = dfs(
             /*   cloned */
-            // spaces
-            clonedspaces,
+            spaces,
+            // clonedspaces,
             /* cloned */
             rows,
             /*  cloned */
@@ -152,7 +153,7 @@ function dfs(
         rows[i][char] = false;
         columns[j][char] = false;
         subboxes[Math.floor(i / 3)][Math.floor(j / 3)][char] = false;
-        // spaces.add(pair_to_index(i, j));
+        spaces.add(pair_to_index(i, j));
         // }
     }
     return false;
