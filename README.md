@@ -320,6 +320,8 @@ https://leetcode.cn/problems/TVdhkn/
 
 https://leetcode-cn.com/problems/subsets/
 
+https://leetcode.cn/problems/number-of-1-bits/
+
 #### 安装教程
 
 1. 安装`deno`
