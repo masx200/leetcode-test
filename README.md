@@ -330,6 +330,10 @@ https://leetcode-cn.com/problems/range-sum-of-bst/
 
 https://leetcode-cn.com/problems/design-circular-queue/
 
+https://leetcode-cn.com/problems/shu-zu-zhong-zhong-fu-de-shu-zi-lcof/
+
+https://leetcode-cn.com/problems/find-the-duplicate-number/
+
 #### 安装教程
 
 1. 安装`deno`
