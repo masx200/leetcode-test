@@ -102,9 +102,13 @@ function dfs(
         if (h.length === 0) {
             return false;
         }
+        if (chars.length === 1) {
+            break;
+        }
         if (h.length < chars.length) {
             [i, j, chars] = [r, c, h];
         }
+
         // countcount++;
     }
     if (chars.length === 0) {
