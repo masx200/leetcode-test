@@ -11,4 +11,4 @@ export { default as uniqBy } from "https://cdn.skypack.dev/lodash@4.17.21/uniqBy
 
 export { default as intersection } from "https://cdn.skypack.dev/lodash@4.17.21/intersection?dts";
 
-export { default as isEqual } from "https://cdn.skypack.dev/lodash@4.17.21/isEqual?dts";
+// export { default as isEqual } from "https://cdn.skypack.dev/lodash@4.17.21/isEqual?dts";
