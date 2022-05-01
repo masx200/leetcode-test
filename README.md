@@ -336,6 +336,8 @@ https://leetcode-cn.com/problems/find-the-duplicate-number/
 
 https://leetcode-cn.com/problems/design-hashmap
 
+https://leetcode-cn.com/problems/perfect-squares/
+
 #### 安装教程
 
 1. 安装`deno`
