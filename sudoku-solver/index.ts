@@ -84,11 +84,18 @@ function dfs(
     for (const index of spaces) {
         // if (count > 10) break;
         const [row, column] = index_to_pair(index);
-        spaces_and_chars.push([
-            row,
-            column,
-            get_available_chars(row, column, rows, columns, subboxes),
-        ] as [number, number, string[]]);
+        const chars = get_available_chars(row, column, rows, columns, subboxes);
+        spaces_and_chars.push([row, column, chars] as [
+            number,
+            number,
+            string[]
+        ]);
+        if (chars.length === 1) {
+            break;
+        }
+        if (chars.length === 0) {
+            return false;
+        }
         // count++;
     }
     // Array.from(spaces).map(function (index) {
