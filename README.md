@@ -338,6 +338,8 @@ https://leetcode-cn.com/problems/design-hashmap
 
 https://leetcode-cn.com/problems/perfect-squares/
 
+https://leetcode-cn.com/problems/unique-paths/
+
 #### 安装教程
 
 1. 安装`deno`
