@@ -334,6 +334,8 @@ https://leetcode-cn.com/problems/shu-zu-zhong-zhong-fu-de-shu-zi-lcof/
 
 https://leetcode-cn.com/problems/find-the-duplicate-number/
 
+https://leetcode-cn.com/problems/design-hashmap
+
 #### 安装教程
 
 1. 安装`deno`
