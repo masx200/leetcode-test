@@ -1,6 +1,6 @@
 function solveSudoku(board: string[][]): void {
     // const spaces: [number, number][] = [];
-    const spaces = new Set<number>();
+    const spaces: number[] = []; //new Set<number>();
     const rows = new Array(9).fill(0).map(() => number_char_set(false));
     const columns = new Array(9).fill(0).map(() => number_char_set(false));
     const subboxes = new Array(3)
@@ -11,7 +11,8 @@ function solveSudoku(board: string[][]): void {
             const char = board[i][j];
             if (char === ".") {
                 // if (Math.random() - 0.5 > 0) {
-                spaces.add(pair_to_index(i, j));
+                spaces.push(pair_to_index(i, j));
+                // spaces.add(pair_to_index(i, j));
                 // } else {
                 //   spaces.unshift([i, j]);
                 // }
@@ -22,9 +23,29 @@ function solveSudoku(board: string[][]): void {
             }
         }
     }
-    if (spaces.size === 0) {
+    if (spaces.length === 0) {
         return;
     }
+
+    const space_to_charscount: Map<number, number> = new Map(
+        spaces.map((index) => {
+            const [row, column] = index_to_pair(index);
+            const chars = get_available_chars(
+                row,
+                column,
+                rows,
+                columns,
+                subboxes
+            );
+            return [index, chars.length];
+        })
+    );
+    //排序可选数最少的空格
+    spaces.sort(
+        (a, b) =>
+            (space_to_charscount.get(a) ?? 0) -
+            (space_to_charscount.get(b) ?? 0)
+    );
     // const sorted: [number, number, Array<string>][] = spaces
     //     .map(
     //         ([row, column]) =>
@@ -41,7 +62,7 @@ function solveSudoku(board: string[][]): void {
     // }
 
     /*  const result = */
-    dfs(spaces, rows, columns, subboxes, board);
+    dfs(new Set(spaces), rows, columns, subboxes, board);
     // if (result) {
     //     for (const [row, column, char] of result) {
     //         board[row][column] = char;
@@ -185,12 +206,11 @@ function get_available_chars(
 ): Array<string> {
     const array = Array.from({ length: 9 }).map((_v, i) => String(i + 1));
     const charset = new Set(array);
+    const set1 = rows[row];
+    const set2 = columns[column];
+    const set3 = subboxes[Math.floor(row / 3)][Math.floor(column / 3)];
     for (const char of array) {
-        if (
-            rows[row][char] ||
-            columns[column][char] ||
-            subboxes[Math.floor(row / 3)][Math.floor(column / 3)][char]
-        ) {
+        if (set1[char] || set2[char] || set3[char]) {
             charset.delete(char);
         }
     }
