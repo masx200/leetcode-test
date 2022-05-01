@@ -80,26 +80,32 @@ function dfs(
         return true;
     }
     const spaces_and_chars: [number, number, string[]][] = [];
+    // let count = 0;
     for (const index of spaces) {
+        // if (count > 10) break;
         const [row, column] = index_to_pair(index);
         spaces_and_chars.push([
             row,
             column,
             get_available_chars(row, column, rows, columns, subboxes),
         ] as [number, number, string[]]);
+        // count++;
     }
     // Array.from(spaces).map(function (index) {
 
     // });
     let [i, j, chars] = spaces_and_chars[0];
     //查找可选数最少的空格
+    // let countcount = 0;
     for (const [r, c, h] of spaces_and_chars) {
+        // if (countcount > 10) break;
         if (h.length === 0) {
             return false;
         }
         if (h.length < chars.length) {
             [i, j, chars] = [r, c, h];
         }
+        // countcount++;
     }
     if (chars.length === 0) {
         return false;
