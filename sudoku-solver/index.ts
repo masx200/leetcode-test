@@ -1,7 +1,6 @@
-// import { default as cloneDeep } from "https://cdn.skypack.dev/lodash@4.17.21/cloneDeep?dts";
 function solveSudoku(board: string[][]): void {
-    const spaces: [number, number][] = [];
-
+    // const spaces: [number, number][] = [];
+    const spaces = new Set<number>();
     const rows = new Array(9).fill(0).map(() => number_char_set(false));
     const columns = new Array(9).fill(0).map(() => number_char_set(false));
     const subboxes = new Array(3)
@@ -12,7 +11,7 @@ function solveSudoku(board: string[][]): void {
             const char = board[i][j];
             if (char === ".") {
                 // if (Math.random() - 0.5 > 0) {
-                spaces.push([i, j]);
+                spaces.add(pair_to_index(i, j));
                 // } else {
                 //   spaces.unshift([i, j]);
                 // }
@@ -23,7 +22,7 @@ function solveSudoku(board: string[][]): void {
             }
         }
     }
-    if (spaces.length === 0) {
+    if (spaces.size === 0) {
         return;
     }
     // const sorted: [number, number, Array<string>][] = spaces
@@ -50,6 +49,12 @@ function solveSudoku(board: string[][]): void {
     // }
     return;
 }
+function index_to_pair(index: number): [number, number] {
+    return [Math.floor(index / 9), index % 9];
+}
+function pair_to_index(row: number, column: number) {
+    return column + 9 * row;
+}
 function number_char_set(def: boolean): Record<string, boolean> {
     return {
         1: def,
@@ -64,23 +69,28 @@ function number_char_set(def: boolean): Record<string, boolean> {
     };
 }
 function dfs(
-    spaces: [number, number][],
+    spaces: Set<number>,
     rows: Record<string, boolean>[],
     columns: Record<string, boolean>[],
     subboxes: Record<string, boolean>[][],
     board: string[][]
 ): boolean {
-    if (spaces.length === 0) {
+    // console.log(spaces);
+    if (spaces.size === 0) {
         return true;
     }
-    const spaces_and_chars = spaces.map(
-        ([row, column]) =>
-            [
-                row,
-                column,
-                get_available_chars(row, column, rows, columns, subboxes),
-            ] as [number, number, string[]]
-    );
+    const spaces_and_chars: [number, number, string[]][] = [];
+    for (const index of spaces) {
+        const [row, column] = index_to_pair(index);
+        spaces_and_chars.push([
+            row,
+            column,
+            get_available_chars(row, column, rows, columns, subboxes),
+        ] as [number, number, string[]]);
+    }
+    // Array.from(spaces).map(function (index) {
+
+    // });
     let [i, j, chars] = spaces_and_chars[0];
     //查找可选数最少的空格
     for (const [r, c, h] of spaces_and_chars) {
@@ -94,7 +104,9 @@ function dfs(
     if (chars.length === 0) {
         return false;
     }
-    const clonedspaces = spaces.filter(([r, c]) => !(r == i && c == j));
+    const clonedspaces = new Set(spaces);
+    clonedspaces.delete(pair_to_index(i, j));
+    // const clonedspaces = spaces.filter(([r, c]) => !(r == i && c == j));
 
     // if (pos < 0) {
     //     return true;
@@ -123,6 +135,8 @@ function dfs(
 
         board[i][j] = char;
         const result = dfs(
+            /*   cloned */
+            // spaces
             clonedspaces,
             /* cloned */
             rows,
@@ -138,6 +152,7 @@ function dfs(
         rows[i][char] = false;
         columns[j][char] = false;
         subboxes[Math.floor(i / 3)][Math.floor(j / 3)][char] = false;
+        // spaces.add(pair_to_index(i, j));
         // }
     }
     return false;
@@ -268,3 +283,4 @@ export default solveSudoku;
 //         9: def,
 //     };
 // }
+// import { default as cloneDeep } from "https://cdn.skypack.dev/lodash@4.17.21/cloneDeep?dts";
