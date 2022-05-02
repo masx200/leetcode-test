@@ -340,6 +340,10 @@ https://leetcode-cn.com/problems/perfect-squares/
 
 https://leetcode-cn.com/problems/unique-paths/
 
+https://leetcode-cn.com/problems/design-linked-list/
+
+https://leetcode-cn.com/problems/er-cha-shu-de-jing-xiang-lcof/
+
 #### 安装教程
 
 1. 安装`deno`

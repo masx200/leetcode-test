@@ -1,3 +1,5 @@
+import { DoublyLinkedList } from "./design-linked-list/DoublyLinkedList.ts";
+export { DoublyLinkedList };
 export { sum };
 export { pow_bigint } from "./powx-n/pow_bigint.ts";
 export { climbing_stairs_bigint } from "./climbing-stairs/climbing_stairs_bigint.ts";
@@ -34,6 +36,7 @@ import { PrefixTreeClear } from "./utils/PrefixTreeClear.ts";
 import { PrefixTreeFromArray } from "./utils/PrefixTreeFromArray.ts";
 import { PrefixTreeForEach } from "./utils/PrefixTreeForEach.ts";
 import { Node as GraphNode } from "./clone-graph/Node.ts";
+
 export { TreeNode };
 export { ArrayToListNode, ListNode, ListNodeToArray };
 export { SqrtNumber };
