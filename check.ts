@@ -1,5 +1,5 @@
-import { walk } from "https://deno.land/std@0.138.0/fs/mod.ts";
-import { parse } from "https://deno.land/std@0.138.0/flags/mod.ts";
+import { parse, walk } from "./deps.ts";
+
 // Async
 async function printFilesNames({ skip }: { skip?: RegExp | RegExp[] }) {
     console.log("type check start!");
