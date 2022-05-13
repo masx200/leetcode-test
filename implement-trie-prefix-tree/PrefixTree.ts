@@ -2,6 +2,9 @@ export interface PrefixTree {
     children: Map<string, PrefixTree>;
     isEnd: boolean;
 }
-export function PrefixTree(): PrefixTree {
-    return { children: new Map(), isEnd: false };
+export function PrefixTree(
+    isEnd = false,
+    children = new Map<string, PrefixTree>(),
+): PrefixTree {
+    return { children: children, isEnd: isEnd };
 }

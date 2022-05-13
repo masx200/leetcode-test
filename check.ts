@@ -27,6 +27,11 @@ async function printFilesNames({ skip }: { skip?: RegExp | RegExp[] }) {
 }
 if (import.meta.main) {
     /* deno run -A "check.ts" "--skip=npm|utils" */
+    await start();
+    // .catch(console.error);
+}
+
+async function start() {
     const args = parse(Deno.args);
     console.log(args);
     const skip = typeof args.skip === "string"
@@ -36,7 +41,6 @@ if (import.meta.main) {
         : undefined;
     await printFilesNames({ skip })
         .then(() => console.log("type check Done!"));
-    // .catch(console.error);
 }
 
 async function runDenoCheck(stack: string[]) {

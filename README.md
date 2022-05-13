@@ -344,6 +344,8 @@ https://leetcode-cn.com/problems/design-linked-list/
 
 https://leetcode-cn.com/problems/er-cha-shu-de-jing-xiang-lcof/
 
+https://leetcode.cn/problems/one-away-lcci
+
 #### 安装教程
 
 1. 安装`deno`
