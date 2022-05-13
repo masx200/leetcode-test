@@ -348,6 +348,8 @@ https://leetcode.cn/problems/one-away-lcci
 
 https://leetcode.cn/problems/palindrome-number
 
+https://leetcode.cn/problems/reverse-integer/
+
 #### 安装教程
 
 1. 安装`deno`
