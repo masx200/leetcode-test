@@ -350,6 +350,8 @@ https://leetcode.cn/problems/palindrome-number
 
 https://leetcode.cn/problems/reverse-integer/
 
+https://leetcode.cn/problems/zigzag-conversion/
+
 #### 安装教程
 
 1. 安装`deno`
