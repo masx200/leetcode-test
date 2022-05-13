@@ -346,6 +346,8 @@ https://leetcode-cn.com/problems/er-cha-shu-de-jing-xiang-lcof/
 
 https://leetcode.cn/problems/one-away-lcci
 
+https://leetcode.cn/problems/palindrome-number
+
 #### 安装教程
 
 1. 安装`deno`
