@@ -354,6 +354,14 @@ https://leetcode.cn/problems/zigzag-conversion/
 
 https://leetcode.cn/problems/roman-to-integer/
 
+https://leetcode.cn/problems/1fGaJU/
+
+https://leetcode.cn/problems/largest-triangle-area/
+
+https://leetcode.cn/problems/pascals-triangle/
+
+https://leetcode.cn/problems/pascals-triangle-ii/
+
 #### 安装教程
 
 1. 安装`deno`

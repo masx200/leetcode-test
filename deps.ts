@@ -13,3 +13,4 @@ export { default as intersection } from "https://cdn.skypack.dev/lodash@4.17.21/
 
 export { walk } from "https://deno.land/std@0.139.0/fs/mod.ts";
 export { parse } from "https://deno.land/std@0.139.0/flags/mod.ts";
+export { combinations } from "https://deno.land/x/combinatorics@1.1.2/mod.ts";
