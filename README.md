@@ -378,6 +378,8 @@ https://leetcode.cn/problems/longest-common-prefix/
 
 https://leetcode.com/problems/implement-trie-ii-prefix-tree/
 
+https://leetcode.cn/problems/merge-intervals/
+
 #### 安装教程
 
 1. 安装`deno`
