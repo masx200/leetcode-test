@@ -41,6 +41,7 @@ import { TrieNodeCountWordsEqualTo } from "./implement-trie-ii-prefix-tree/TrieN
 import { TrieNodeCountWordsStartingWith } from "./implement-trie-ii-prefix-tree/TrieNodeCountWordsStartingWith.ts";
 import { TrieNodeErase } from "./implement-trie-ii-prefix-tree/TrieNodeErase.ts";
 import { TrieNodeInsert } from "./implement-trie-ii-prefix-tree/TrieNodeInsert.ts";
+import { PrefixTreeSearchPrefixEach } from "./longest-word-in-dictionary/PrefixTreeSearchPrefixEach.ts";
 export {
     TrieNode,
     TrieNodeCountWordsEqualTo,
@@ -70,6 +71,6 @@ export { PriorityQueue };
 export { PrefixTreeSearch, PrefixTreeSearchPrefix, PrefixTreeStartsWith };
 export { PrefixTreeSearchEach };
 export { PrefixTreeFromArray };
-export { PrefixTreeForEach };
+export { PrefixTreeForEach, PrefixTreeSearchPrefixEach };
 export { GraphNode };
 export { Node as RandomNode } from "./copy-list-with-random-pointer/Node.ts";
