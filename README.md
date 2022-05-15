@@ -374,6 +374,8 @@ https://leetcode.cn/problems/construct-the-rectangle/
 
 https://leetcode.cn/problems/design-skiplist/
 
+https://leetcode.cn/problems/longest-common-prefix/
+
 #### 安装教程
 
 1. 安装`deno`
