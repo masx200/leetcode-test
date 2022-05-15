@@ -36,7 +36,18 @@ import { PrefixTreeClear } from "./utils/PrefixTreeClear.ts";
 import { PrefixTreeFromArray } from "./utils/PrefixTreeFromArray.ts";
 import { PrefixTreeForEach } from "./utils/PrefixTreeForEach.ts";
 import { Node as GraphNode } from "./clone-graph/Node.ts";
-
+import { TrieNode } from "./implement-trie-ii-prefix-tree/TrieNode.ts";
+import { TrieNodeCountWordsEqualTo } from "./implement-trie-ii-prefix-tree/TrieNodeCountWordsEqualTo.ts";
+import { TrieNodeCountWordsStartingWith } from "./implement-trie-ii-prefix-tree/TrieNodeCountWordsStartingWith.ts";
+import { TrieNodeErase } from "./implement-trie-ii-prefix-tree/TrieNodeErase.ts";
+import { TrieNodeInsert } from "./implement-trie-ii-prefix-tree/TrieNodeInsert.ts";
+export {
+    TrieNode,
+    TrieNodeCountWordsEqualTo,
+    TrieNodeCountWordsStartingWith,
+    TrieNodeErase,
+    TrieNodeInsert,
+};
 export { TreeNode };
 export { ArrayToListNode, ListNode, ListNodeToArray };
 export { SqrtNumber };
