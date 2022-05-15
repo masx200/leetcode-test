@@ -362,6 +362,18 @@ https://leetcode.cn/problems/pascals-triangle/
 
 https://leetcode.cn/problems/pascals-triangle-ii/
 
+https://leetcode.cn/problems/IDBivT/
+
+https://leetcode.cn/problems/bracket-lcci/
+
+https://leetcode.cn/problems/encode-and-decode-tinyurl/
+
+https://leetcode.cn/problems/design-parking-system/
+
+https://leetcode.cn/problems/construct-the-rectangle/
+
+https://leetcode.cn/problems/design-skiplist/
+
 #### 安装教程
 
 1. 安装`deno`
