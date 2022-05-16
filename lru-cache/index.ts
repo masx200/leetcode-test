@@ -38,7 +38,7 @@ function LRUCache(capacity: number) {
     }
     return { get, put };
 }
-
+type LRUCache = ReturnType<typeof LRUCache>;
 export default LRUCache;
 
 /**

@@ -400,6 +400,8 @@ https://leetcode.cn/problems/gray-code/
 
 https://leetcode.cn/problems/lru-cache/
 
+https://leetcode.cn/problems/132-pattern/
+
 #### 安装教程
 
 1. 安装`deno`
