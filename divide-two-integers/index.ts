@@ -38,19 +38,32 @@ function divide(dividend: number, divisor: number): number {
     const growrate = divisor;
     while (divisor * result < dividend) {
         result = result * growrate;
+        // console.log({ result, divisor, dividend });
     }
     const decreaserate = Math.floor(Math.log2(growrate));
     while (divisor * result > dividend) {
         result = result >> decreaserate;
+        // console.log({ result, divisor, dividend });
     }
     while (divisor * result < dividend) {
+        result = result << 1;
+        // console.log({ result, divisor, dividend });
+    }
+    while (divisor * result > dividend) {
+        result = Math.floor(result / 1.5);
+        // console.log({ result, divisor, dividend });
+    }
+
+    while (divisor * result < dividend) {
         result++;
+        // console.log({ result, divisor, dividend });
     }
     while (divisor * result > dividend) {
         result--;
+        // console.log({ result, divisor, dividend });
     }
 
     return Math.min(maxInt, Math.max(minInt, result));
 }
-// console.log(divide(-2147483648, 4));
+// console.log(divide(214748364, 45));
 export default divide;
