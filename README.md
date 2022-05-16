@@ -382,6 +382,8 @@ https://leetcode.cn/problems/merge-intervals/
 
 https://leetcode.cn/problems/successor-lcci/
 
+https://leetcode.cn/problems/sum-lists-lcci/
+
 #### 安装教程
 
 1. 安装`deno`
