@@ -386,6 +386,10 @@ https://leetcode.cn/problems/sum-lists-lcci/
 
 https://leetcode.cn/problems/merge-two-binary-trees/
 
+https://leetcode.cn/problems/add-binary/
+
+https://leetcode.cn/problems/JFETK5/
+
 #### 安装教程
 
 1. 安装`deno`
