@@ -380,6 +380,8 @@ https://leetcode.com/problems/implement-trie-ii-prefix-tree/
 
 https://leetcode.cn/problems/merge-intervals/
 
+https://leetcode.cn/problems/successor-lcci/
+
 #### 安装教程
 
 1. 安装`deno`
