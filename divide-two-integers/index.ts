@@ -34,36 +34,27 @@ function divide(dividend: number, divisor: number): number {
         return Math.abs(dividend >> binaryexp);
     }
 
-    let result = 1;
-    const growrate = divisor;
-    while (divisor * result < dividend) {
-        result = result * growrate;
-        // console.log({ result, divisor, dividend });
+    let left = 1;
+    let right = 2;
+    while (!(divisor * left <= dividend && divisor * right >= dividend)) {
+        left = left << 1;
+        right = right << 1;
+        // console.log({ left, right });
     }
-    const decreaserate = Math.floor(Math.log2(growrate));
-    while (divisor * result > dividend) {
-        result = result >> decreaserate;
-        // console.log({ result, divisor, dividend });
+    while (-left + right > 1) {
+        const middle = (left + right) >> 1;
+        if (divisor * middle > dividend) {
+            right = middle;
+        } else {
+            left = middle;
+        }
+        // console.log({ left, right });
+        if (left === right) break;
     }
-    while (divisor * result < dividend) {
-        result = result << 1;
-        // console.log({ result, divisor, dividend });
-    }
-    while (divisor * result > dividend) {
-        result = Math.floor(result / 1.5);
-        // console.log({ result, divisor, dividend });
-    }
-
-    while (divisor * result < dividend) {
-        result++;
-        // console.log({ result, divisor, dividend });
-    }
-    while (divisor * result > dividend) {
-        result--;
-        // console.log({ result, divisor, dividend });
-    }
+    const result = left;
 
     return Math.min(maxInt, Math.max(minInt, result));
 }
+// console.log(214748364 / 45);
 // console.log(divide(214748364, 45));
 export default divide;
