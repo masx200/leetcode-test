@@ -396,6 +396,8 @@ https://leetcode.cn/problems/xoh6Oh/
 
 https://leetcode.cn/problems/search-a-2d-matrix-ii/
 
+https://leetcode.cn/problems/gray-code/
+
 #### 安装教程
 
 1. 安装`deno`
