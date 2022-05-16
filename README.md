@@ -390,6 +390,10 @@ https://leetcode.cn/problems/add-binary/
 
 https://leetcode.cn/problems/JFETK5/
 
+https://leetcode.cn/problems/divide-two-integers/
+
+https://leetcode.cn/problems/xoh6Oh/
+
 #### 安装教程
 
 1. 安装`deno`
