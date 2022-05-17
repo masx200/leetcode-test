@@ -45,7 +45,7 @@ function divide(dividend: number, divisor: number): number {
     // }
     while (-left + right > 1) {
         const middle = (left + right) >> 1;
-        if (multiplyInteger(divisor, middle) > dividend) {
+        if (multiplyIntegerGreater(divisor, middle, dividend) >= dividend) {
             right = middle;
         } else {
             left = middle;
@@ -57,8 +57,7 @@ function divide(dividend: number, divisor: number): number {
 
     return Math.min(maxInt, Math.max(minInt, result));
 }
-
-function multiplyInteger(x: number, y: number): number {
+function multiplyIntegerGreater(x: number, y: number, z: number): number {
     if (!Number.isInteger(y) || !Number.isInteger(x)) {
         throw Error("not integer");
     }
@@ -68,10 +67,11 @@ function multiplyInteger(x: number, y: number): number {
     ) {
         throw Error("Invalid number");
     }
-    return x < 0
-        ? -multiplyInteger(-x, y)
+    if (x > 0 && y > 0 && (x > z || y > z)) return z + 1;
+    return (x < 0
+        ? -multiplyIntegerGreater(-x, y, z)
         : y < 0
-        ? -multiplyInteger(x, -y)
+        ? -multiplyIntegerGreater(x, -y, z)
         : x === 0
         ? 0
         : y === 0
@@ -81,9 +81,37 @@ function multiplyInteger(x: number, y: number): number {
         : y === 1
         ? x
         : x < y
-        ? multiplyInteger(y, x)
+        ? multiplyIntegerGreater(y, x, z)
         : y & 1
-        ? x + multiplyInteger(x, y - 1)
-        : multiplyInteger(x + x, Math.abs(y >> 1));
+        ? x + multiplyIntegerGreater(x, y - 1, z)
+        : multiplyIntegerGreater(x + x, Math.abs(y >> 1), z));
 }
+// function multiplyInteger(x: number, y: number): number {
+//     if (!Number.isInteger(y) || !Number.isInteger(x)) {
+//         throw Error("not integer");
+//     }
+//     if (
+//         Number.isNaN(x) || Number.isNaN(y) || !Number.isFinite(x) ||
+//         !Number.isFinite(y)
+//     ) {
+//         throw Error("Invalid number");
+//     }
+//     return x < 0
+//         ? -multiplyInteger(-x, y)
+//         : y < 0
+//         ? -multiplyInteger(x, -y)
+//         : x === 0
+//         ? 0
+//         : y === 0
+//         ? 0
+//         : x === 1
+//         ? y
+//         : y === 1
+//         ? x
+//         : x < y
+//         ? multiplyInteger(y, x)
+//         : y & 1
+//         ? x + multiplyInteger(x, y - 1)
+//         : multiplyInteger(x + x, Math.abs(y >> 1));
+// }
 export default divide;
