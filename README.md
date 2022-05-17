@@ -406,6 +406,8 @@ https://leetcode.cn/problems/verifying-an-alien-dictionary/
 
 https://leetcode.cn/problems/validate-binary-search-tree/
 
+https://leetcode.cn/problems/word-search/
+
 #### 安装教程
 
 1. 安装`deno`
