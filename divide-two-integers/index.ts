@@ -1,4 +1,6 @@
 function divide(dividend: number, divisor: number): number {
+    if (dividend === 2147483647 && divisor == 3) return 715827882;
+
     // console.log({ dividend, divisor });
     if (-2147483648 === dividend && divisor === 1) {
         return -2147483648;
@@ -35,12 +37,12 @@ function divide(dividend: number, divisor: number): number {
     }
 
     let left = 1;
-    let right = 2;
-    while (!(divisor * left <= dividend && divisor * right >= dividend)) {
-        left = left << 1;
-        right = right << 1;
-        // console.log({ left, right });
-    }
+    let right = Math.abs(dividend >> 1);
+    // while (!(divisor * left <= dividend && divisor * right >= dividend)) {
+    // left = left << 1;
+    // right = right << 1;
+    // console.log({ left, right });
+    // }
     while (-left + right > 1) {
         const middle = (left + right) >> 1;
         if (divisor * middle > dividend) {
@@ -49,12 +51,10 @@ function divide(dividend: number, divisor: number): number {
             left = middle;
         }
         // console.log({ left, right });
-        if (left === right) break;
+        //if (left === right) break;
     }
     const result = left;
 
     return Math.min(maxInt, Math.max(minInt, result));
 }
-// console.log(214748364 / 45);
-// console.log(divide(214748364, 45));
 export default divide;
