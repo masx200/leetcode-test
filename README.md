@@ -412,6 +412,8 @@ https://leetcode.cn/problems/convert-bst-to-greater-tree/
 
 https://leetcode.cn/problems/binary-search-tree-to-greater-sum-tree/
 
+https://leetcode.cn/problems/first-bad-version/
+
 #### 安装教程
 
 1. 安装`deno`
