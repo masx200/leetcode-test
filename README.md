@@ -408,6 +408,10 @@ https://leetcode.cn/problems/validate-binary-search-tree/
 
 https://leetcode.cn/problems/word-search/
 
+https://leetcode.cn/problems/convert-bst-to-greater-tree/
+
+https://leetcode.cn/problems/binary-search-tree-to-greater-sum-tree/
+
 #### 安装教程
 
 1. 安装`deno`
