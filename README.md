@@ -402,6 +402,8 @@ https://leetcode.cn/problems/lru-cache/
 
 https://leetcode.cn/problems/132-pattern/
 
+https://leetcode.cn/problems/verifying-an-alien-dictionary/
+
 #### 安装教程
 
 1. 安装`deno`
