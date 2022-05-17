@@ -414,6 +414,8 @@ https://leetcode.cn/problems/binary-search-tree-to-greater-sum-tree/
 
 https://leetcode.cn/problems/first-bad-version/
 
+https://leetcode.cn/problems/squares-of-a-sorted-array/
+
 #### 安装教程
 
 1. 安装`deno`
