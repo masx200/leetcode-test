@@ -418,6 +418,18 @@ https://leetcode.cn/problems/squares-of-a-sorted-array/
 
 https://leetcode.cn/problems/flood-fill/
 
+https://leetcode.cn/problems/multiply-strings/
+
+https://leetcode.cn/problems/recursive-mulitply-lcci/
+
+https://leetcode.cn/problems/sort-colors/
+
+https://leetcode.cn/problems/set-matrix-zeroes/
+
+https://leetcode.cn/problems/length-of-last-word/
+
+https://leetcode.cn/problems/valid-number/
+
 #### 安装教程
 
 1. 安装`deno`
