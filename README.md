@@ -438,6 +438,8 @@ https://leetcode.cn/problems/restore-ip-addresses/
 
 https://leetcode.cn/problems/0on3uN/
 
+https://leetcode.cn/problems/minimum-moves-to-equal-array-elements-ii/
+
 #### 安装教程
 
 1. 安装`deno`
