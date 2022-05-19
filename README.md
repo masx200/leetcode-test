@@ -440,6 +440,10 @@ https://leetcode.cn/problems/0on3uN/
 
 https://leetcode.cn/problems/minimum-moves-to-equal-array-elements-ii/
 
+https://leetcode.cn/problems/ti-huan-kong-ge-lcof/
+
+https://leetcode.cn/problems/cong-wei-dao-tou-da-yin-lian-biao-lcof/
+
 #### 安装教程
 
 1. 安装`deno`
