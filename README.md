@@ -450,6 +450,8 @@ https://leetcode.cn/problems/linked-list-cycle-lcci/
 
 https://leetcode.cn/problems/all-ancestors-of-a-node-in-a-directed-acyclic-graph/
 
+https://leetcode.cn/problems/ju-zhen-zhong-de-lu-jing-lcof/
+
 #### 安装教程
 
 1. 安装`deno`
