@@ -448,6 +448,8 @@ https://leetcode.cn/problems/c32eOV/
 
 https://leetcode.cn/problems/linked-list-cycle-lcci/
 
+https://leetcode.cn/problems/all-ancestors-of-a-node-in-a-directed-acyclic-graph/
+
 #### 安装教程
 
 1. 安装`deno`
