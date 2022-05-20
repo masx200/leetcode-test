@@ -464,6 +464,8 @@ https://leetcode.cn/problems/min-stack/
 
 https://leetcode.cn/problems/bao-han-minhan-shu-de-zhan-lcof/
 
+https://leetcode.cn/problems/longest-substring-without-repeating-characters
+
 #### 安装教程
 
 1. 安装`deno`
