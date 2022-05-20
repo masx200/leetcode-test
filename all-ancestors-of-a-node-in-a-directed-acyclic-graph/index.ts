@@ -17,14 +17,10 @@ export default function getAncestors(n: number, edges: number[][]): number[][] {
             if (!Ancestors.has(v)) {
                 Ancestors.add(v);
 
-                childToParents.get(v)?.forEach(
-                    callbackfn,
-                );
+                childToParents.get(v)?.forEach(callbackfn);
             }
         };
-        childToParents.get(i)?.forEach(
-            callbackfn,
-        );
+        childToParents.get(i)?.forEach(callbackfn);
         result.push(Array.from(Ancestors).sort((a, b) => a - b));
     }
     return result;

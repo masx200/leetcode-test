@@ -1,6 +1,8 @@
 export default function exist(board: string[][], word: string): boolean {
     if (
-        word.length === 1 && board.length === 1 && board[0].length === 1 &&
+        word.length === 1 &&
+        board.length === 1 &&
+        board[0].length === 1 &&
         word === board[0][0]
     ) {
         return true;
@@ -17,10 +19,12 @@ export default function exist(board: string[][], word: string): boolean {
         Array.from(a).map(() => false)
     );
     // console.log(starts)
-    const directions: Array<[number, number]> = [[0, 1], [1, 0], [0, -1], [
-        -1,
-        0,
-    ]];
+    const directions: Array<[number, number]> = [
+        [0, 1],
+        [1, 0],
+        [0, -1],
+        [-1, 0],
+    ];
     function dfs(
         word: string,
         i: number,
@@ -38,9 +42,7 @@ export default function exist(board: string[][], word: string): boolean {
             const y = j + s;
             if (x >= 0 && y >= 0 && x < row && y < col) {
                 if (!visited[x][y]) {
-                    if (
-                        dfs(word.slice(1), x, y /*  visited */)
-                    ) {
+                    if (dfs(word.slice(1), x, y /*  visited */)) {
                         visited[i][j] = false;
                         return true;
                     } /* else {

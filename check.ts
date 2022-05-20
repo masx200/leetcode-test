@@ -39,8 +39,7 @@ async function start() {
         : Array.isArray(args.skip)
         ? args.skip.map((s) => new RegExp(s))
         : undefined;
-    await printFilesNames({ skip })
-        .then(() => console.log("type check Done!"));
+    await printFilesNames({ skip }).then(() => console.log("type check Done!"));
 }
 
 async function runDenoCheck(stack: string[]) {

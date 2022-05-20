@@ -8,7 +8,8 @@ function height(root: TreeNode | null): number {
     const leftHeight = height(root.left);
     const rightHeight = height(root.right);
     if (
-        leftHeight === -1 || rightHeight == -1 ||
+        leftHeight === -1 ||
+        rightHeight == -1 ||
         Math.abs(leftHeight - rightHeight) > 1
     ) {
         return -1;

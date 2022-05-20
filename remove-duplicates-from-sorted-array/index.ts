@@ -12,8 +12,8 @@ export default function removeDuplicates(nums: number[]): number {
             count++;
         }
     }
-    should_delete.forEach((i) => nums[i] = Infinity);
+    should_delete.forEach((i) => (nums[i] = Infinity));
     const temp = nums.filter((a) => a < Infinity);
-    temp.forEach((v, i) => nums[i] = v);
+    temp.forEach((v, i) => (nums[i] = v));
     return count;
 }

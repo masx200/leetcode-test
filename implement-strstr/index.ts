@@ -7,9 +7,9 @@ export default function strStr(haystack: string, needle: string): number {
     // if(index===-1){return -1}
 
     const spl = Array.from(haystack);
-    const ind = [...spl.entries()].filter(([_i, a]) => a === needle[0]).map((
-        [i],
-    ) => i);
+    const ind = [...spl.entries()]
+        .filter(([_i, a]) => a === needle[0])
+        .map(([i]) => i);
 
     if (ind.length === 0) return -1;
     for (const i of ind) {

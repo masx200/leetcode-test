@@ -4,20 +4,24 @@ export default function isValidBST(root: TreeNode | null): boolean {
     if (!root) return false;
     let result = true;
     let last: number | undefined;
-    inorder(root, (a) => {
-        if (signal.aborted) throw Error("aborted");
+    inorder(
+        root,
+        (a) => {
+            if (signal.aborted) throw Error("aborted");
 
-        if (typeof last === "undefined") {
-            last = a;
-        } else {
-            if (a > last) {
+            if (typeof last === "undefined") {
                 last = a;
             } else {
-                signal.aborted = true;
-                result = false;
+                if (a > last) {
+                    last = a;
+                } else {
+                    signal.aborted = true;
+                    result = false;
+                }
             }
-        }
-    }, signal);
+        },
+        signal,
+    );
     return result;
 }
 interface Signal {

@@ -1,7 +1,9 @@
 export default function restoreIpAddresses(s: string): string[] {
     if (
         s.length === 12 &&
-        (Number(s[0]) >= 3 || Number(s[3]) >= 3 || Number(s[6]) >= 3 ||
+        (Number(s[0]) >= 3 ||
+            Number(s[3]) >= 3 ||
+            Number(s[6]) >= 3 ||
             Number(s[9]) >= 3)
     ) {
         return [];
@@ -20,9 +22,7 @@ function dfs(s: string, address: number[], output: (r: string) => void) {
         }
     }
 
-    if (
-        s.length > 3 * (4 - address.length) || s.length < (4 - address.length)
-    ) {
+    if (s.length > 3 * (4 - address.length) || s.length < 4 - address.length) {
         return;
     }
 

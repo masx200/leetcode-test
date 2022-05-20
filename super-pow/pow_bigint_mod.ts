@@ -16,6 +16,6 @@ export function pow_bigint_mod(x: bigint, n: bigint, m: bigint): bigint {
         ? 1n
         : n % 2n
         ? multiply_Mod(x, pow_bigint_mod(x, n - 1n, m), m)
-        : (pow_bigint_mod(multiply_Mod(x, x, m), n / 2n, m) % m);
+        : pow_bigint_mod(multiply_Mod(x, x, m), n / 2n, m) % m;
     return result;
 }

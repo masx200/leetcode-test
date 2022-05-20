@@ -9,10 +9,12 @@ export default function floodFill(
     dfs(image, sr, sc, currColor, newColor);
     return image;
 }
-const directions: Array<[number, number]> = [[0, 1], [1, 0], [0, -1], [
-    -1,
-    0,
-]];
+const directions: Array<[number, number]> = [
+    [0, 1],
+    [1, 0],
+    [0, -1],
+    [-1, 0],
+];
 function dfs(
     image: number[][],
     sr: number,
@@ -22,12 +24,7 @@ function dfs(
 ) {
     const row = image.length;
     const col = image[0].length;
-    if (
-        sr >= row ||
-        sr < 0 ||
-        sc < 0 ||
-        sc >= col
-    ) {
+    if (sr >= row || sr < 0 || sc < 0 || sc >= col) {
         return;
     }
     if (image[sr][sc] === oldColor) {

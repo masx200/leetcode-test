@@ -1,6 +1,6 @@
 export default function MinStack() {
     const stack = [] as [number, number][];
-    return ({
+    return {
         push(x: number): void {
             stack.push([x, Math.min(x, stack.at(-1)?.[1] ?? Infinity)]);
         },
@@ -17,7 +17,7 @@ export default function MinStack() {
             if (typeof res === "undefined") throw Error("empty stack");
             return res;
         },
-    });
+    };
 }
 
 /**

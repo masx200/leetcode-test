@@ -6,7 +6,7 @@
     "tasks": {
         "udd": "udd  '*/*.ts' '*.ts'",
         "install-udd": "deno install -A -f -n udd https://deno.land/x/udd@0.7.3/main.ts",
-        "fmt": "deno fmt --config deno.json",
+        "fmt": "deno fmt --config deno.json && npx prettier --write '*.ts' '*/*.ts' '*.json' '*.md'",
         "test": "deno test --config deno.json",
         "lint": "deno lint --config deno.json",
         "check": "deno run  -A check.ts"

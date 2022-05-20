@@ -12,9 +12,7 @@ export default function longestWord(words: string[]): string {
     }
     let longest = "";
     for (const word of words) {
-        if (
-            PrefixTreeSearchEach(root, word /* true */)
-        ) {
+        if (PrefixTreeSearchEach(root, word /* true */)) {
             if (
                 word.length > longest.length ||
                 (word.length === longest.length && word < longest)

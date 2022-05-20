@@ -11,9 +11,12 @@ import { rand7 } from "./rand7.ts";
  * @return a random integer in the range 1 to 7
  */
 export default function rand10(): number {
-    const a = rand7() - 1 + 7 * (rand7() - 1) + (rand7() - 1) * 7 * 7 +
+    const a = rand7() -
+        1 +
+        7 * (rand7() - 1) +
+        (rand7() - 1) * 7 * 7 +
         7 * 7 * 7 * (rand7() - 1);
-    return a < 2401 ? (1 + a % 10) : rand10();
+    return a < 2401 ? 1 + (a % 10) : rand10();
 }
 
 // /* function rand10(): number /* : number */ {

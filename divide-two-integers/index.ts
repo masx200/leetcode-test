@@ -18,7 +18,7 @@ function divide(dividend: number, divisor: number): number {
     if (divisor < 0) return -divide(dividend, -divisor);
 
     const maxInt = Math.pow(2, 31) - 1;
-    const minInt = -(Math.pow(2, 31));
+    const minInt = -Math.pow(2, 31);
     if (dividend === divisor) return 1;
     if (dividend === 0) return 0;
 
@@ -62,13 +62,15 @@ function multiplyIntegerGreater(x: number, y: number, z: number): number {
         throw Error("not integer");
     }
     if (
-        Number.isNaN(x) || Number.isNaN(y) || !Number.isFinite(x) ||
+        Number.isNaN(x) ||
+        Number.isNaN(y) ||
+        !Number.isFinite(x) ||
         !Number.isFinite(y)
     ) {
         throw Error("Invalid number");
     }
     if (x > 0 && y > 0 && (x > z || y > z)) return z + 1;
-    return (x < 0
+    return x < 0
         ? -multiplyIntegerGreater(-x, y, z)
         : y < 0
         ? -multiplyIntegerGreater(x, -y, z)
@@ -84,7 +86,7 @@ function multiplyIntegerGreater(x: number, y: number, z: number): number {
         ? multiplyIntegerGreater(y, x, z)
         : y & 1
         ? x + multiplyIntegerGreater(x, y - 1, z)
-        : multiplyIntegerGreater(x + x, Math.abs(y >> 1), z));
+        : multiplyIntegerGreater(x + x, Math.abs(y >> 1), z);
 }
 // function multiplyInteger(x: number, y: number): number {
 //     if (!Number.isInteger(y) || !Number.isInteger(x)) {

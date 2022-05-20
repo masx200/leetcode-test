@@ -3,7 +3,9 @@ export default function multiply(x: number, y: number): number {
         throw Error("not integer");
     }
     if (
-        Number.isNaN(x) || Number.isNaN(y) || !Number.isFinite(x) ||
+        Number.isNaN(x) ||
+        Number.isNaN(y) ||
+        !Number.isFinite(x) ||
         !Number.isFinite(y)
     ) {
         throw Error("Invalid number");
