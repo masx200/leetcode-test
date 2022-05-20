@@ -472,6 +472,10 @@ https://leetcode.cn/problems/4ueAj6/
 
 https://leetcode.cn/problems/insert-into-a-sorted-circular-linked-list/
 
+https://leetcode.cn/problems/insert-delete-getrandom-o1/
+
+https://leetcode.cn/problems/FortPu/
+
 #### 安装教程
 
 1. 安装`deno`
