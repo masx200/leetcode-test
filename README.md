@@ -460,6 +460,10 @@ https://leetcode.cn/problems/zheng-ze-biao-da-shi-pi-pei-lcof/
 
 https://leetcode-cn.com/problems/ba-zi-fu-chuan-zhuan-huan-cheng-zheng-shu-lcof/
 
+https://leetcode.cn/problems/min-stack/
+
+https://leetcode.cn/problems/bao-han-minhan-shu-de-zhan-lcof/
+
 #### 安装教程
 
 1. 安装`deno`
