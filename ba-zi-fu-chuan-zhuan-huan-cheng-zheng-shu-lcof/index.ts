@@ -1,1 +1,1 @@
-export {default} from "../string-to-integer-atoi/index.ts"
+export { default } from "../string-to-integer-atoi/index.ts";
