@@ -1,8 +1,19 @@
+export default MyCircularQueue;
 // deno-lint-ignore no-explicit-any
-export default function MyCircularQueue<T = any>(
+type MyCircularQueue<T = any> = {
+    isEmpty: () => boolean;
+    Front: () => T | number;
+    deQueue: () => boolean;
+    enQueue: (value: T) => boolean;
+    Rear: () => T | number;
+    isFull: () => boolean;
+    length: number;
+};
+// deno-lint-ignore no-explicit-any
+function MyCircularQueue<T = any>(
     // deno-lint-ignore no-inferrable-types
-    k: number = Infinity,
-) {
+    k: number = Infinity
+): MyCircularQueue<T> {
     // console.log('MyCircularDeque', k)
     if (k < 1) {
         throw Error("k greater than or equal  one");
