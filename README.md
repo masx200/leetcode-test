@@ -466,6 +466,8 @@ https://leetcode.cn/problems/bao-han-minhan-shu-de-zhan-lcof/
 
 https://leetcode.cn/problems/longest-substring-without-repeating-characters
 
+https://leetcode.cn/problems/delete-node-in-a-linked-list/
+
 #### 安装教程
 
 1. 安装`deno`
