@@ -476,6 +476,12 @@ https://leetcode.cn/problems/insert-delete-getrandom-o1/
 
 https://leetcode.cn/problems/FortPu/
 
+https://leetcode.cn/problems/inorder-successor-in-bst/
+
+https://leetcode.cn/problems/P5rCT8/
+
+https://leetcode.cn/problems/n-repeated-element-in-size-2n-array/
+
 #### 安装教程
 
 1. 安装`deno`
