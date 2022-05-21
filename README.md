@@ -504,6 +504,8 @@ https://leetcode.cn/problems/encrypt-and-decrypt-strings/
 
 https://leetcode.cn/problems/all-oone-data-structure/
 
+https://leetcode.cn/problems/find-the-winner-of-the-circular-game/
+
 #### 安装教程
 
 1. 安装`deno`
