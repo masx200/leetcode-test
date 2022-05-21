@@ -492,6 +492,10 @@ https://leetcode.cn/problems/bLyHh0/
 
 https://leetcode.cn/problems/fizz-buzz/
 
+https://leetcode.cn/problems/lru-cache-lcci/
+
+https://leetcode.cn/problems/implement-stack-using-queues
+
 #### 安装教程
 
 1. 安装`deno`
