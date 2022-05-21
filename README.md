@@ -486,6 +486,10 @@ https://leetcode.cn/problems/populating-next-right-pointers-in-each-node/
 
 https://leetcode.cn/problems/populating-next-right-pointers-in-each-node-ii/
 
+https://leetcode.cn/problems/number-of-provinces/
+
+https://leetcode.cn/problems/bLyHh0/
+
 #### 安装教程
 
 1. 安装`deno`
