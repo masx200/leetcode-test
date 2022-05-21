@@ -508,6 +508,8 @@ https://leetcode.cn/problems/find-the-winner-of-the-circular-game/
 
 https://leetcode.cn/problems/add-two-integers/
 
+https://leetcode.cn/problems/recover-a-tree-from-preorder-traversal
+
 #### 安装教程
 
 1. 安装`deno`
