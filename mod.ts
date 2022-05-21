@@ -18,7 +18,7 @@ import { multiply_Mod } from "./super-pow/multiply_Mod.ts";
 import { pow_bigint_mod } from "./super-pow/pow_bigint_mod.ts";
 import { TreeNode } from "./binary-tree-inorder-traversal/TreeNode.ts";
 import { NestedInteger } from "./mini-parser/NestedInteger.ts";
-import { NestedIntegerType } from "./mini-parser/NestedIntegerType.ts";
+
 import { rand7 } from "./implement-rand10-using-rand7/rand7.ts";
 import { bigint_max } from "./maximum-width-of-binary-tree/bigint_max.ts";
 import { bigint_min } from "./maximum-width-of-binary-tree/bigint_min.ts";
@@ -60,7 +60,7 @@ export { superPow_mod };
 export { multiply_Mod };
 export { pow_bigint_mod };
 export { NestedInteger };
-export { NestedIntegerType };
+
 export { rand7 };
 export { bigint_max, bigint_min };
 export { NAryNode };
