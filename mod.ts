@@ -74,3 +74,4 @@ export { PrefixTreeFromArray };
 export { PrefixTreeForEach, PrefixTreeSearchPrefixEach };
 export { GraphNode };
 export { Node as RandomNode } from "./copy-list-with-random-pointer/Node.ts";
+export { Node as TreeNextNode } from "./populating-next-right-pointers-in-each-node/Node.ts";

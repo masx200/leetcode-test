@@ -482,6 +482,10 @@ https://leetcode.cn/problems/P5rCT8/
 
 https://leetcode.cn/problems/n-repeated-element-in-size-2n-array/
 
+https://leetcode.cn/problems/populating-next-right-pointers-in-each-node/
+
+https://leetcode.cn/problems/populating-next-right-pointers-in-each-node-ii/
+
 #### 安装教程
 
 1. 安装`deno`
