@@ -506,6 +506,8 @@ https://leetcode.cn/problems/all-oone-data-structure/
 
 https://leetcode.cn/problems/find-the-winner-of-the-circular-game/
 
+https://leetcode.cn/problems/add-two-integers/
+
 #### 安装教程
 
 1. 安装`deno`
