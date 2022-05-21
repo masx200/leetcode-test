@@ -500,6 +500,8 @@ https://leetcode.cn/problems/binary-search-tree-iterator/
 
 https://leetcode.cn/problems/kTOapQ
 
+https://leetcode.cn/problems/encrypt-and-decrypt-strings/
+
 #### 安装教程
 
 1. 安装`deno`
