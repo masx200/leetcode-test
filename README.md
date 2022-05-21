@@ -490,6 +490,8 @@ https://leetcode.cn/problems/number-of-provinces/
 
 https://leetcode.cn/problems/bLyHh0/
 
+https://leetcode.cn/problems/fizz-buzz/
+
 #### 安装教程
 
 1. 安装`deno`
