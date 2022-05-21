@@ -502,6 +502,8 @@ https://leetcode.cn/problems/kTOapQ
 
 https://leetcode.cn/problems/encrypt-and-decrypt-strings/
 
+https://leetcode.cn/problems/all-oone-data-structure/
+
 #### 安装教程
 
 1. 安装`deno`
