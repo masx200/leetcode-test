@@ -1,7 +1,6 @@
 import { PrefixTree } from "../implement-trie-prefix-tree/PrefixTree.ts";
 
 export function PrefixTreeInsert(root: PrefixTree, word: string): void {
-    // function insert(word: string) {
     if (word.length === 0) return;
     let node = root;
     for (const ch of word) {
@@ -15,6 +14,4 @@ export function PrefixTreeInsert(root: PrefixTree, word: string): void {
         node = next;
     }
     node.isEnd = true;
-    // }
-    // return insert(word);
 }
