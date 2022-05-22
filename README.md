@@ -516,6 +516,10 @@ https://leetcode.cn/problems/swap-nodes-in-pairs/
 
 https://leetcode.cn/problems/kth-smallest-element-in-a-bst
 
+https://leetcode.cn/problems/iIQa4I/
+
+https://leetcode.cn/problems/daily-temperatures/
+
 #### 安装教程
 
 1. 安装`deno`
