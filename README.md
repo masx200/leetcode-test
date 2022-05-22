@@ -512,6 +512,8 @@ https://leetcode.cn/problems/recover-a-tree-from-preorder-traversal
 
 https://leetcode.cn/problems/valid-anagram/
 
+https://leetcode.cn/problems/swap-nodes-in-pairs/
+
 #### 安装教程
 
 1. 安装`deno`
