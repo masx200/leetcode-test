@@ -17,6 +17,7 @@ import { get_end_of_list } from "./get_end_of_list.ts";
 import { greater_equal_length_of_list } from "./greater_equal_length_of_list.ts";
 
 function reverseKGroup(head: ListNode | null, k: number): ListNode | null {
+    if (k <= 1) return head;
     if (!head) return null;
     if (greater_equal_length_of_list(head, k)) {
         const res = new ListNode(0, head);
