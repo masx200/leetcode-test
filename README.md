@@ -522,6 +522,10 @@ https://leetcode.cn/problems/daily-temperatures/
 
 https://leetcode.cn/problems/reverse-nodes-in-k-group/
 
+https://leetcode.cn/problems/vEAB3K
+
+https://leetcode.cn/problems/is-graph-bipartite/
+
 #### 安装教程
 
 1. 安装`deno`
