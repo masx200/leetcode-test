@@ -514,6 +514,8 @@ https://leetcode.cn/problems/valid-anagram/
 
 https://leetcode.cn/problems/swap-nodes-in-pairs/
 
+https://leetcode.cn/problems/kth-smallest-element-in-a-bst
+
 #### 安装教程
 
 1. 安装`deno`
