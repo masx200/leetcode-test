@@ -536,6 +536,8 @@ https://leetcode.cn/problems/find-closest-lcci/
 
 https://leetcode.cn/problems/parsing-a-boolean-expression/
 
+https://leetcode.cn/problems/max-increase-to-keep-city-skyline
+
 #### 安装教程
 
 1. 安装`deno`
