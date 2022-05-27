@@ -534,6 +534,8 @@ https://leetcode.cn/problems/happy-number
 
 https://leetcode.cn/problems/find-closest-lcci/
 
+https://leetcode.cn/problems/parsing-a-boolean-expression/
+
 #### 安装教程
 
 1. 安装`deno`
