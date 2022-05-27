@@ -540,6 +540,8 @@ https://leetcode.cn/problems/max-increase-to-keep-city-skyline
 
 https://leetcode.cn/problems/build-array-from-permutation/
 
+https://leetcode.cn/problems/convert-binary-number-in-a-linked-list-to-integer
+
 #### 安装教程
 
 1. 安装`deno`
