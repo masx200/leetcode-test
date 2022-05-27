@@ -544,6 +544,8 @@ https://leetcode.cn/problems/convert-binary-number-in-a-linked-list-to-integer
 
 https://leetcode.cn/problems/root-equals-sum-of-children/
 
+https://leetcode.cn/problems/power-set-lcci/
+
 #### 安装教程
 
 1. 安装`deno`
