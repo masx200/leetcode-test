@@ -538,6 +538,8 @@ https://leetcode.cn/problems/parsing-a-boolean-expression/
 
 https://leetcode.cn/problems/max-increase-to-keep-city-skyline
 
+https://leetcode.cn/problems/build-array-from-permutation/
+
 #### 安装教程
 
 1. 安装`deno`
