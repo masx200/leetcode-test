@@ -560,6 +560,8 @@ https://leetcode.cn/problems/running-sum-of-1d-array/
 
 https://leetcode.cn/problems/partitioning-into-minimum-number-of-deci-binary-numbers/
 
+https://leetcode.cn/problems/queries-on-number-of-points-inside-a-circle/
+
 #### 安装教程
 
 1. 安装`deno`
