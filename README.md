@@ -548,6 +548,10 @@ https://leetcode.cn/problems/power-set-lcci/
 
 https://leetcode.cn/problems/remove-outermost-parentheses/
 
+https://leetcode.cn/problems/concatenation-of-array/
+
+https://leetcode.cn/problems/decode-xored-array/
+
 #### 安装教程
 
 1. 安装`deno`
