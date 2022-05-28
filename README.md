@@ -546,6 +546,8 @@ https://leetcode.cn/problems/root-equals-sum-of-children/
 
 https://leetcode.cn/problems/power-set-lcci/
 
+https://leetcode.cn/problems/remove-outermost-parentheses/
+
 #### 安装教程
 
 1. 安装`deno`
