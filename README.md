@@ -562,6 +562,8 @@ https://leetcode.cn/problems/partitioning-into-minimum-number-of-deci-binary-num
 
 https://leetcode.cn/problems/queries-on-number-of-points-inside-a-circle/
 
+https://leetcode.cn/problems/subrectangle-queries/
+
 #### 安装教程
 
 1. 安装`deno`
