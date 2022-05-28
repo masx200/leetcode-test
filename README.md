@@ -556,6 +556,8 @@ https://leetcode.cn/problems/final-value-of-variable-after-performing-operations
 
 https://leetcode.cn/problems/same-tree/
 
+https://leetcode.cn/problems/running-sum-of-1d-array/
+
 #### 安装教程
 
 1. 安装`deno`
