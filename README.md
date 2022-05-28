@@ -552,6 +552,8 @@ https://leetcode.cn/problems/concatenation-of-array/
 
 https://leetcode.cn/problems/decode-xored-array/
 
+https://leetcode.cn/problems/final-value-of-variable-after-performing-operations/
+
 #### 安装教程
 
 1. 安装`deno`
