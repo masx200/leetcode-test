@@ -1,8 +1,8 @@
 export default function calculate(s: string): number {
     const tokens = tokenize(s);
-    console.log(tokens);
+    // console.log(tokens);
     const ast = create_expression(tokens);
-    console.log(ast);
+    // console.log(ast);
     return calculate_expression(ast);
 }
 export function calculate_expression(ast: Expression): number {
@@ -34,7 +34,8 @@ export function calculate_expression(ast: Expression): number {
         if (ast.operator === "/") {
             //整数除法
             return Math.floor(
-                calculate_expression(ast.left) / calculate_expression(ast.right)
+                calculate_expression(ast.left) /
+                    calculate_expression(ast.right),
             );
         }
     }

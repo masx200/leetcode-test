@@ -572,6 +572,8 @@ https://leetcode.cn/problems/steps-to-make-array-non-decreasing/
 
 https://leetcode.cn/problems/basic-calculator/
 
+https://leetcode.cn/problems/evaluate-reverse-polish-notation/
+
 #### 安装教程
 
 1. 安装`deno`
