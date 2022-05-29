@@ -34,8 +34,7 @@ export function calculate_expression(ast: Expression): number {
         if (ast.operator === "/") {
             //整数除法
             return Math.floor(
-                calculate_expression(ast.left) /
-                    calculate_expression(ast.right),
+                calculate_expression(ast.left) / calculate_expression(ast.right)
             );
         }
     }
@@ -83,13 +82,40 @@ export function tokenize(s: string): Tokens {
 export function create_expression(tokens: Tokens): Expression {
     throw Error("not implemented");
 }
-type State =
-    | "initial"
-    | "unary-operator"
-    | "parentheses"
-    | "number"
-    | "binary-operator";
+const enum State {
+    "initial",
+    "unary",
+    "parentheses",
+    "number",
+    "binary",
+}
 const valid_end_states = ["parentheses", "number"];
+const enum TokenType {
+    "number",
+    "operator",
+    "parentheses",
+}
+const transform: Record<State, Record<TokenType, State>> = {
+    [State.initial]: {
+        [TokenType.operator]: State.unary,
+        [TokenType.number]: State.number,
+        [TokenType.parentheses]: State.parentheses,
+    },
+    [State.unary]: {
+        [TokenType.number]: State.number,
+        [TokenType.parentheses]: State.parentheses,
+    },
+    [State.binary]: {
+        [TokenType.number]: State.number,
+        [TokenType.parentheses]: State.parentheses,
+    },
+    [State.parentheses]: {
+        [TokenType.operator]: State.unary,
+    },
+    [State.number]: {
+        [TokenType.operator]: State.binary,
+    },
+} as Record<State, Record<TokenType, State>>;
 type Expression =
     | BinaryExpression
     | NumericLiteral
