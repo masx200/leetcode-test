@@ -86,7 +86,7 @@ function tokenize(s: string): Tokens {
             stack[stack.length - 1].push(last);
         }
     }
-    if (stack.length > 1) throw Error("parentheses mismatch");
+    if (stack.length !== 1) throw Error("parentheses mismatch");
     return tokens;
 }
 
