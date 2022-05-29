@@ -6,7 +6,7 @@ export default function calculate(s: string): number {
     console.log(ast);
     return calculate_expression(ast);
 }
-Deno.test("calculate-expression", () => {
+Deno.test("calculate-simple-expression", () => {
     assertEquals(
         -199 + 5998,
         calculate_expression({
@@ -21,7 +21,32 @@ Deno.test("calculate-expression", () => {
                 type: "NumericLiteral",
                 value: 5998,
             },
-        }),
+        })
+    );
+});
+Deno.test("calculate-Parenthesized-expression", () => {
+    assertEquals(
+        -(-199 + 5998),
+        calculate_expression({
+            type: "UnaryExpression",
+            operator: "-",
+            argument: {
+                type: "ParenthesizedExpression",
+                expression: {
+                    type: "BinaryExpression",
+                    operator: "+",
+                    left: {
+                        operator: "-",
+                        type: "UnaryExpression",
+                        argument: { type: "NumericLiteral", value: 199 },
+                    },
+                    right: {
+                        type: "NumericLiteral",
+                        value: 5998,
+                    },
+                },
+            },
+        })
     );
 });
 Deno.test("simple-tokenize", () => {
