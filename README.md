@@ -568,6 +568,8 @@ https://leetcode.cn/problems/apply-discount-to-prices/
 
 https://leetcode.cn/problems/validate-ip-address/
 
+https://leetcode.cn/problems/steps-to-make-array-non-decreasing/
+
 #### 安装教程
 
 1. 安装`deno`
