@@ -564,6 +564,8 @@ https://leetcode.cn/problems/queries-on-number-of-points-inside-a-circle/
 
 https://leetcode.cn/problems/subrectangle-queries/
 
+https://leetcode.cn/problems/apply-discount-to-prices/
+
 #### 安装教程
 
 1. 安装`deno`
