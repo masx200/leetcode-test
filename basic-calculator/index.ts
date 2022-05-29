@@ -62,7 +62,7 @@ export function tokenize(s: string): Tokens {
             const num = Number(digits.join(""));
             stack[stack.length - 1].push(num);
         }
-        if (["+", "-"].includes(value)) {
+        if (["+", "-", "/", "*"].includes(value)) {
             stack[stack.length - 1].push(value);
         }
         if (value === "(") {
