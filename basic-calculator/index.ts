@@ -1,4 +1,3 @@
-import { assertEquals } from "../deps.ts";
 export default function calculate(s: string): number {
     const tokens = tokenize(s);
     console.log(tokens);
@@ -6,104 +5,7 @@ export default function calculate(s: string): number {
     console.log(ast);
     return calculate_expression(ast);
 }
-Deno.test("calculate-simple-expression", () => {
-    assertEquals(
-        -199 + 5998,
-        calculate_expression({
-            type: "BinaryExpression",
-            operator: "+",
-            left: {
-                operator: "-",
-                type: "UnaryExpression",
-                argument: { type: "NumericLiteral", value: 199 },
-            },
-            right: {
-                type: "NumericLiteral",
-                value: 5998,
-            },
-        }),
-    );
-});
-Deno.test("calculate-Parenthesized-expression", () => {
-    assertEquals(
-        -(-199 + 5998),
-        calculate_expression({
-            type: "UnaryExpression",
-            operator: "-",
-            argument: {
-                type: "ParenthesizedExpression",
-                expression: {
-                    type: "BinaryExpression",
-                    operator: "+",
-                    left: {
-                        operator: "-",
-                        type: "UnaryExpression",
-                        argument: { type: "NumericLiteral", value: 199 },
-                    },
-                    right: {
-                        type: "NumericLiteral",
-                        value: 5998,
-                    },
-                },
-            },
-        }),
-    );
-});
-Deno.test("simple-tokenize", () => {
-    assertEquals(tokenize("-199+5998"), ["-", 199, "+", 5998]);
-});
-Deno.test("Parenthesized-tokenize", () => {
-    assertEquals(tokenize("8+(-199+5998)+87"), [
-        8,
-        "+",
-        ["-", 199, "+", 5998],
-        "+",
-        87,
-    ]);
-});
-Deno.test("simple-expression", () => {
-    assertEquals(create_expression(["-", 199, "+", 5998]), {
-        type: "BinaryExpression",
-        operator: "+",
-        left: {
-            operator: "-",
-            type: "UnaryExpression",
-            argument: { type: "NumericLiteral", value: 199 },
-        },
-        right: {
-            type: "NumericLiteral",
-            value: 5998,
-        },
-    });
-});
-Deno.test("Parenthesized-expression", () => {
-    assertEquals(create_expression(["-", ["-", 199, "+", 5998]]), {
-        operator: "-",
-        type: "UnaryExpression",
-        argument: {
-            type: "BinaryExpression",
-            operator: "+",
-            left: {
-                operator: "-",
-                type: "UnaryExpression",
-                argument: { type: "NumericLiteral", value: 199 },
-            },
-            right: {
-                type: "NumericLiteral",
-                value: 5998,
-            },
-        },
-    });
-});
-
-Deno.test("simple-calculate", () => {
-    assertEquals(calculate("-199+5998"), -199 + 5998);
-});
-
-Deno.test("Parenthesized-calculate", () => {
-    assertEquals(calculate("-(-199+5998)+87"), -(-199 + 5998) + 87);
-});
-function calculate_expression(ast: Expression): number {
+export function calculate_expression(ast: Expression): number {
     if (ast.type === "NumericLiteral") {
         return ast.value;
     }
@@ -130,7 +32,8 @@ function calculate_expression(ast: Expression): number {
         }
 
         if (ast.operator === "/") {
-            return (
+            //整数除法
+            return Math.floor(
                 calculate_expression(ast.left) / calculate_expression(ast.right)
             );
         }
@@ -142,7 +45,7 @@ function calculate_expression(ast: Expression): number {
 }
 type Tokens = Array<string | number | Tokens>;
 
-function tokenize(s: string): Tokens {
+export function tokenize(s: string): Tokens {
     const tokens: Tokens = [];
     const stack: Tokens[] = [tokens];
     for (let i = 0; i < s.length; i++) {
@@ -176,9 +79,16 @@ function tokenize(s: string): Tokens {
     return tokens;
 }
 
-function create_expression(tokens: Tokens): Expression {
+export function create_expression(tokens: Tokens): Expression {
     throw Error("not implemented");
 }
+type State =
+    | "initial"
+    | "unary-operator"
+    | "parentheses"
+    | "number"
+    | "binary-operator";
+const valid_end_states = ["parentheses", "number"];
 type Expression =
     | BinaryExpression
     | NumericLiteral
