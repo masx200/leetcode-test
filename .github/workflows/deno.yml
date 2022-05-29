@@ -39,7 +39,7 @@ jobs:
               run: deno lint
 
             - name: Run tests
-              run: deno test -A
+              run: deno test -A --unstable
 
             - name: Run check
-              run: deno task check
+              run: deno task check 
