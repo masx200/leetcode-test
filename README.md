@@ -566,6 +566,8 @@ https://leetcode.cn/problems/subrectangle-queries/
 
 https://leetcode.cn/problems/apply-discount-to-prices/
 
+https://leetcode.cn/problems/validate-ip-address/
+
 #### 安装教程
 
 1. 安装`deno`
