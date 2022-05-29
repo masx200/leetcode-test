@@ -1,4 +1,4 @@
-function totalSteps(nums: number[]): number {
+export default function totalSteps(nums: number[]): number {
     let ans = 0;
 
     const n = nums.length;
