@@ -1,14 +1,28 @@
 import { assertEquals } from "../deps.ts";
-
-function calculate(s: string): number {
+export default function calculate(s: string): number {
     const tokens = tokenize(s);
     console.log(tokens);
-    const ast = createast(tokens);
+    const ast = create_expression(tokens);
     console.log(ast);
-    return calcast(ast);
+    return calculate_expression(ast);
 }
-Deno.test("simple-calculate", () => {
-    assertEquals(calculate("-199+5998"), -199 + 5998);
+Deno.test("calculate-expression", () => {
+    assertEquals(
+        -199 + 5998,
+        calculate_expression({
+            type: "BinaryExpression",
+            operator: "+",
+            left: {
+                operator: "-",
+                type: "UnaryExpression",
+                argument: { type: "NumericLiteral", value: 199 },
+            },
+            right: {
+                type: "NumericLiteral",
+                value: 5998,
+            },
+        }),
+    );
 });
 Deno.test("simple-tokenize", () => {
     assertEquals(tokenize("-199+5998"), ["-", 199, "+", 5998]);
@@ -22,35 +36,63 @@ Deno.test("Parenthesized-tokenize", () => {
         87,
     ]);
 });
+Deno.test("simple-expression", () => {
+    assertEquals(create_expression(["-", 199, "+", 5998]), {
+        type: "BinaryExpression",
+        operator: "+",
+        left: {
+            operator: "-",
+            type: "UnaryExpression",
+            argument: { type: "NumericLiteral", value: 199 },
+        },
+        right: {
+            type: "NumericLiteral",
+            value: 5998,
+        },
+    });
+});
+
+Deno.test("simple-calculate", () => {
+    assertEquals(calculate("-199+5998"), -199 + 5998);
+});
+
 Deno.test("Parenthesized-calculate", () => {
     assertEquals(calculate("-(-199+5998)+87"), -(-199 + 5998) + 87);
 });
-function calcast(ast: Expression): number {
+function calculate_expression(ast: Expression): number {
     if (ast.type === "NumericLiteral") {
         return ast.value;
     }
     if (ast.type === "UnaryExpression") {
         if (ast.operator === "-") {
-            return -1 * calcast(ast.argument);
+            return -1 * calculate_expression(ast.argument);
         }
     }
     if (ast.type === "BinaryExpression") {
         if (ast.operator === "-") {
-            return calcast(ast.left) - calcast(ast.right);
+            return (
+                calculate_expression(ast.left) - calculate_expression(ast.right)
+            );
         }
         if (ast.operator === "*") {
-            return calcast(ast.left) * calcast(ast.right);
+            return (
+                calculate_expression(ast.left) * calculate_expression(ast.right)
+            );
         }
         if (ast.operator === "+") {
-            return calcast(ast.left) + calcast(ast.right);
+            return (
+                calculate_expression(ast.left) + calculate_expression(ast.right)
+            );
         }
 
         if (ast.operator === "/") {
-            return calcast(ast.left) / calcast(ast.right);
+            return (
+                calculate_expression(ast.left) / calculate_expression(ast.right)
+            );
         }
     }
     if (ast.type === "ParenthesizedExpression") {
-        return calcast(ast.expression);
+        return calculate_expression(ast.expression);
     }
     throw Error("not implemented");
 }
@@ -90,7 +132,9 @@ function tokenize(s: string): Tokens {
     return tokens;
 }
 
-function createast(tokens: Tokens): Expression {}
+function create_expression(tokens: Tokens): Expression {
+    throw Error("not implemented");
+}
 type Expression =
     | BinaryExpression
     | NumericLiteral
@@ -108,7 +152,6 @@ interface UnaryExpression {
     type: "UnaryExpression";
     operator: "void" | "throw" | "delete" | "!" | "+" | "-" | "~" | "typeof";
     argument: Expression;
-    prefix: boolean;
 }
 interface BinaryExpression {
     type: "BinaryExpression";
