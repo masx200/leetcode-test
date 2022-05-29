@@ -9,6 +9,7 @@ function totalSteps(nums: number[]): number {
     for (let i = n - 2; i >= 0; i--) {
         let count = 0;
         while (stk.length && nums[i] > stk[stk.length - 1][0]) {
+            //count取最大值
             count = Math.max(count + 1, stk[stk.length - 1][1]);
             stk.pop();
         }
