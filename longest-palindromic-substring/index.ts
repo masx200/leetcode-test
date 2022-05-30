@@ -1,6 +1,31 @@
 export default function longestPalindrome(s: string): string {
     if (s.length < 2) return s;
     const length = s.length;
+    let ans = "";
+    let i = 0;
+    while (i < length) {
+        const str1 = expand(s, i, i);
+        const str2 = expand(s, i, i + 1);
+        ans = [str1, str2].reduce((p, v) => (p.length > v.length ? p : v), ans);
+
+        i = i + 1;
+    }
+    return ans;
+}
+
+function expand(s: string, i: number, j: number): string {
+    while (i >= 0 && j < s.length && s[i] === s[j]) {
+        i--;
+        j++;
+    }
+
+    const str = s.slice(i + 1, j);
+
+    return str;
+}
+/* function longestPalindrome(s: string): string {
+    if (s.length < 2) return s;
+    const length = s.length;
     let max_length = 1;
     let start = 0;
     const cache = new Array<boolean>(length * (length + 1) / 2);
@@ -31,3 +56,4 @@ export default function longestPalindrome(s: string): string {
 
     return s.slice(start, start + max_length);
 }
+ */
