@@ -1,51 +1,86 @@
+function buildParenthesizedExpression(token: Token) {
+    if (!Array.isArray(token)) {
+        throw Error("accident token type");
+    }
+    const inner_expression = buildExpression(token);
+    if (!inner_expression) {
+        throw Error("empty expression");
+    }
+    const current_expression: Expression = {
+        type: "ParenthesizedExpression",
+        expression: inner_expression,
+    };
+    return current_expression;
+}
+function buildNumericLiteralExpression(token: Token) {
+    if (typeof token !== "number") {
+        throw Error("accident token type");
+    }
+    const current_expression: Expression = {
+        type: "NumericLiteral",
+        value: token,
+    };
+    return current_expression;
+}
 export default function calculate(s: string): number {
     const tokens = tokenize(s);
 
-    const ast = create_expression(tokens);
+    const ast = buildExpression(tokens);
 
-    return calculate_expression(ast);
+    return evaluate(ast);
 }
-export function calculate_expression(ast: Expression): number {
+export function evaluate(ast: Expression): number {
     if (ast.type === "NumericLiteral") {
         return ast.value;
     }
     if (ast.type === "UnaryExpression") {
         if (ast.operator === "-") {
-            return -1 * calculate_expression(ast.argument);
+            return -1 * evaluate(ast.argument);
         }
     }
     if (ast.type === "BinaryExpression") {
         if (ast.operator === "-") {
             return (
-                calculate_expression(ast.left) - calculate_expression(ast.right)
+                evaluate(ast.left) - evaluate(ast.right)
             );
         }
         if (ast.operator === "*") {
             return (
-                calculate_expression(ast.left) * calculate_expression(ast.right)
+                evaluate(ast.left) * evaluate(ast.right)
             );
         }
         if (ast.operator === "+") {
             return (
-                calculate_expression(ast.left) + calculate_expression(ast.right)
+                evaluate(ast.left) + evaluate(ast.right)
             );
         }
 
         if (ast.operator === "/") {
-            const num1 = calculate_expression(ast.left);
-            const num2 = calculate_expression(ast.right);
+            const num1 = evaluate(ast.left);
+            const num2 = evaluate(ast.right);
             const sign = Math.sign(num2) * Math.sign(num1);
             return sign * Math.floor(Math.abs(num1) / Math.abs(num2));
             //整数除法
         }
     }
     if (ast.type === "ParenthesizedExpression") {
-        return calculate_expression(ast.expression);
+        return evaluate(ast.expression);
     }
     throw Error("not support expression");
 }
-export type Tokens = Array<string | number | Tokens>;
+type Token = Tokens extends (infer P)[] ? P : never;
 
+type Tokens = Array<string | number | Tokens>;
+function getTokenType(token: Token) {
+    const tokentype: TokenType = typeof token === "number"
+        ? TokenType["number"]
+        : typeof token === "string"
+        ? TokenType["operator"]
+        : Array.isArray(token)
+        ? TokenType["parentheses"]
+        : TokenType["unknown"];
+    return tokentype;
+}
 export function tokenize(s: string): Tokens {
     const tokens: Tokens = [];
     const stack: Tokens[] = [tokens];
@@ -79,9 +114,7 @@ export function tokenize(s: string): Tokens {
     if (stack.length !== 1) throw Error("parentheses mismatch");
     return tokens;
 }
-
-export function create_expression(tokens: Tokens): Expression {
-    // console.log(tokens);
+export function buildExpression(tokens: Tokens): Expression {
     if (tokens.length === 0) {
         throw Error("empty expression");
     }
@@ -91,13 +124,7 @@ export function create_expression(tokens: Tokens): Expression {
 
     const pendingleft: Expression[] = [];
     for (const token of tokens) {
-        const tokentype: TokenType = typeof token === "number"
-            ? TokenType["number"]
-            : typeof token === "string"
-            ? TokenType["operator"]
-            : Array.isArray(token)
-            ? TokenType["parentheses"]
-            : TokenType["unknown"];
+        const tokentype: TokenType = getTokenType(token);
         if (tokentype === TokenType.unknown) throw Error("unknown token");
         state = transform[state][tokentype] ?? State.unknown;
         if (state === State.unknown) throw Error("unknown state");
@@ -109,18 +136,10 @@ export function create_expression(tokens: Tokens): Expression {
                 throw Error("accident token type");
             }
         }
-        if (state === State.parentheses) {
-            if (!Array.isArray(token)) {
-                throw Error("accident token type");
-            }
-            const inner_expression = create_expression(token);
-            if (!inner_expression) {
-                throw Error("empty expression");
-            }
-            const current_expression: Expression = {
-                type: "ParenthesizedExpression",
-                expression: inner_expression,
-            };
+        if ([State.parentheses, State.number].includes(state)) {
+            const current_expression: Expression = State.number === state
+                ? buildNumericLiteralExpression(token)
+                : buildParenthesizedExpression(token);
             if (pendingtype.length === 0 && pendingoperator.length === 0) {
                 pendingleft.push(current_expression);
             } else {
@@ -147,55 +166,23 @@ export function create_expression(tokens: Tokens): Expression {
                 }
             }
         }
-        if (state === State.number) {
-            if (typeof token !== "number") {
-                throw Error("accident token type");
-            }
-            const current_expression: Expression = {
-                type: "NumericLiteral",
-                value: token,
-            };
-            if (pendingtype.length === 0 && pendingoperator.length === 0) {
-                pendingleft.push(current_expression);
-            } else {
-                const type = pendingtype[pendingtype.length - 1];
-                pendingtype.pop();
-                const operator = pendingoperator[pendingoperator.length - 1];
-                pendingoperator.pop();
-                if (type === "BinaryExpression") {
-                    const left = pendingleft[pendingleft.length - 1];
-                    pendingleft.pop();
-                    pendingleft.push({
-                        operator: operator as BinaryExpression["operator"],
-                        type: "BinaryExpression",
-                        left,
-                        right: current_expression,
-                    });
-                }
-                if (type === "UnaryExpression") {
-                    pendingleft.push({
-                        operator: operator as UnaryExpression["operator"],
-                        type: "UnaryExpression",
-                        argument: current_expression,
-                    });
-                }
-            }
-        }
+
         if (state === State.binary) {
             pendingtype.push("BinaryExpression");
             if (typeof token === "string") {
                 pendingoperator.push(token as ExpressionOperator);
+            } else {
+                throw Error("accident token type");
             }
         }
     }
     if (valid_end_states.includes(state) && pendingleft.length) {
-        // console.log(JSON.stringify(pendingleft[0], null, 4));
         return pendingleft[0];
     } else {
         throw new Error("unexpected end state or empty expression");
     }
 }
-export const enum State {
+const enum State {
     "initial",
     "unary",
     "parentheses",
@@ -204,7 +191,7 @@ export const enum State {
     "unknown",
 }
 const valid_end_states = [State["parentheses"], State["number"]];
-export const enum TokenType {
+const enum TokenType {
     "number",
     "operator",
     "parentheses",
@@ -231,29 +218,30 @@ const transform: Record<State, Record<TokenType, State>> = {
         [TokenType.operator]: State.binary,
     },
 } as Record<State, Record<TokenType, State>>;
-export type ExpressionType = Expression["type"];
-export type ExpressionOperator =
+type ExpressionType = Expression["type"];
+
+type ExpressionOperator =
     | UnaryExpression["operator"]
     | BinaryExpression["operator"];
-export type Expression =
+type Expression =
     | BinaryExpression
     | NumericLiteral
     | UnaryExpression
     | ParenthesizedExpression;
-export interface ParenthesizedExpression {
+interface ParenthesizedExpression {
     type: "ParenthesizedExpression";
     expression: Expression;
 }
-export interface NumericLiteral {
+interface NumericLiteral {
     type: "NumericLiteral";
     value: number;
 }
-export interface UnaryExpression {
+interface UnaryExpression {
     type: "UnaryExpression";
     operator: "void" | "throw" | "delete" | "!" | "+" | "-" | "~" | "typeof";
     argument: Expression;
 }
-export interface BinaryExpression {
+interface BinaryExpression {
     type: "BinaryExpression";
     operator:
         | "+"
@@ -282,3 +270,9 @@ export interface BinaryExpression {
     left: Expression;
     right: Expression;
 }
+export const OperatorPriority: Record<string, number> = {
+    "+": 12,
+    "-": 12,
+    "*": 13,
+    "/": 13,
+};

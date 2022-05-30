@@ -1,14 +1,10 @@
 import { assertEquals } from "../deps.ts";
-import calculate, {
-    calculate_expression,
-    create_expression,
-    tokenize,
-} from "./index.ts";
+import calculate, { buildExpression, evaluate, tokenize } from "./index.ts";
 
 Deno.test("calculate-simple-expression", () => {
     assertEquals(
         -199 + 5998,
-        calculate_expression({
+        evaluate({
             type: "BinaryExpression",
             operator: "+",
             left: {
@@ -26,7 +22,7 @@ Deno.test("calculate-simple-expression", () => {
 Deno.test("calculate-Parenthesized-expression", () => {
     assertEquals(
         -(-199 + 5998),
-        calculate_expression({
+        evaluate({
             type: "UnaryExpression",
             operator: "-",
             argument: {
@@ -61,7 +57,7 @@ Deno.test("Parenthesized-tokenize", () => {
     ]);
 });
 Deno.test("simple-expression", () => {
-    assertEquals(create_expression(["-", 199, "+", 5998]), {
+    assertEquals(buildExpression(["-", 199, "+", 5998]), {
         type: "BinaryExpression",
         operator: "+",
         left: {
@@ -76,7 +72,7 @@ Deno.test("simple-expression", () => {
     });
 });
 Deno.test("Parenthesized-expression", () => {
-    assertEquals(create_expression(["-", ["-", 199, "+", 5998]]), {
+    assertEquals(buildExpression(["-", ["-", 199, "+", 5998]]), {
         operator: "-",
         type: "UnaryExpression",
         argument: {
