@@ -84,6 +84,10 @@ export function tokenize(s: string): Tokens {
 export function create_expression(tokens: Tokens): Expression | undefined {
     let expression: Expression | undefined;
     let state = State.initial;
+    const pendingtype: ExpressionType[] = [];
+    const pendingoperator: ExpressionOperator[] = [];
+
+    const pendingleft: Expression[] = [];
     for (const token of tokens) {
         const tokentype: TokenType =
             typeof token === "number"
@@ -139,6 +143,11 @@ const transform: Record<State, Record<TokenType, State>> = {
         [TokenType.operator]: State.binary,
     },
 } as Record<State, Record<TokenType, State>>;
+type ExpressionType = Expression["type"];
+
+type ExpressionOperator =
+    | UnaryExpression["operator"]
+    | BinaryExpression["operator"];
 type Expression =
     | BinaryExpression
     | NumericLiteral
