@@ -1,8 +1,8 @@
 export default function calculate(s: string): number {
     const tokens = tokenize(s);
-    // console.log(tokens);
+
     const ast = create_expression(tokens);
-    // console.log(ast);
+
     if (!ast) return 0;
     return calculate_expression(ast);
 }
@@ -100,8 +100,14 @@ export function create_expression(tokens: Tokens): Expression | undefined {
         if (tokentype === TokenType.unknown) throw Error("unknown token");
         state = transform[state][tokentype] ?? State.unknown;
         if (state === State.unknown) throw Error("unknown state");
-        console.log(token, tokentype, state);
-        console.log(pendingtype, pendingoperator, pendingleft);
+        if (state === State.unary) {
+        }
+        if (state === State.parentheses) {
+        }
+        if (state === State.number) {
+        }
+        if (state === State.binary) {
+        }
     }
     if (valid_end_states.includes(state)) {
         return expression;
@@ -109,7 +115,7 @@ export function create_expression(tokens: Tokens): Expression | undefined {
         throw new Error("unexpected end state");
     }
 }
-const enum State {
+export const enum State {
     "initial",
     "unary",
     "parentheses",
@@ -118,7 +124,7 @@ const enum State {
     "unknown",
 }
 const valid_end_states = [State["parentheses"], State["number"]];
-const enum TokenType {
+export const enum TokenType {
     "number",
     "operator",
     "parentheses",
@@ -139,7 +145,7 @@ const transform: Record<State, Record<TokenType, State>> = {
         [TokenType.parentheses]: State.parentheses,
     },
     [State.parentheses]: {
-        [TokenType.operator]: State.unary,
+        [TokenType.operator]: State.binary,
     },
     [State.number]: {
         [TokenType.operator]: State.binary,
