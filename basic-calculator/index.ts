@@ -82,7 +82,26 @@ export function tokenize(s: string): Tokens {
 }
 
 export function create_expression(tokens: Tokens): Expression | undefined {
-    throw Error("not implemented");
+    let expression: Expression | undefined;
+    let state = State.initial;
+    for (const token of tokens) {
+        const tokentype: TokenType =
+            typeof token === "number"
+                ? TokenType["number"]
+                : typeof token === "string"
+                ? TokenType["operator"]
+                : Array.isArray(token)
+                ? TokenType["parentheses"]
+                : TokenType["unknown"];
+        if (tokentype === TokenType.unknown) throw Error("unknown token");
+        state = transform[state][tokentype] ?? State.unknown;
+        if (state === State.unknown) throw Error("unknown state");
+    }
+    if (valid_end_states.includes(state)) {
+        return expression;
+    }else{
+        throw new Error("unexpected end state")
+    }
 }
 const enum State {
     "initial",
@@ -90,12 +109,14 @@ const enum State {
     "parentheses",
     "number",
     "binary",
+    "unknown",
 }
-const valid_end_states = ["parentheses", "number"];
+const valid_end_states = [State["parentheses"], State["number"]];
 const enum TokenType {
     "number",
     "operator",
     "parentheses",
+    "unknown",
 }
 const transform: Record<State, Record<TokenType, State>> = {
     [State.initial]: {
