@@ -40,19 +40,13 @@ export function evaluate(ast: Expression): number {
     }
     if (ast.type === "BinaryExpression") {
         if (ast.operator === "-") {
-            return (
-                evaluate(ast.left) - evaluate(ast.right)
-            );
+            return evaluate(ast.left) - evaluate(ast.right);
         }
         if (ast.operator === "*") {
-            return (
-                evaluate(ast.left) * evaluate(ast.right)
-            );
+            return evaluate(ast.left) * evaluate(ast.right);
         }
         if (ast.operator === "+") {
-            return (
-                evaluate(ast.left) + evaluate(ast.right)
-            );
+            return evaluate(ast.left) + evaluate(ast.right);
         }
 
         if (ast.operator === "/") {
@@ -148,14 +142,30 @@ export function buildExpression(tokens: Tokens): Expression {
                 const operator = pendingoperator[pendingoperator.length - 1];
                 pendingoperator.pop();
                 if (type === "BinaryExpression") {
+                    //优先级更高
+
                     const left = pendingleft[pendingleft.length - 1];
-                    pendingleft.pop();
-                    pendingleft.push({
-                        operator: operator as BinaryExpression["operator"],
-                        type: "BinaryExpression",
-                        left,
-                        right: current_expression,
-                    });
+
+                    if (
+                        left.type === "BinaryExpression" &&
+                        ["*", "/"].includes(operator) &&
+                        ["+", "-"].includes(left.operator)
+                    ) {
+                        left.right = {
+                            type: "BinaryExpression",
+                            operator: operator as BinaryExpression["operator"],
+                            left: left.right,
+                            right: current_expression,
+                        };
+                    } else {
+                        pendingleft.pop();
+                        pendingleft.push({
+                            operator: operator as BinaryExpression["operator"],
+                            type: "BinaryExpression",
+                            left,
+                            right: current_expression,
+                        });
+                    }
                 }
                 if (type === "UnaryExpression") {
                     pendingleft.push({
