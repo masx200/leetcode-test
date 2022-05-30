@@ -582,6 +582,8 @@ https://leetcode.cn/problems/calculator-lcci
 
 https://leetcode.cn/problems/longest-palindromic-substring
 
+https://leetcode.cn/problems/remove-nth-node-from-end-of-list
+
 #### 安装教程
 
 1. 安装`deno`
