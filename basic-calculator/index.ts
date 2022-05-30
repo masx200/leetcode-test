@@ -99,8 +99,8 @@ export function create_expression(tokens: Tokens): Expression | undefined {
     }
     if (valid_end_states.includes(state)) {
         return expression;
-    }else{
-        throw new Error("unexpected end state")
+    } else {
+        throw new Error("unexpected end state");
     }
 }
 const enum State {
