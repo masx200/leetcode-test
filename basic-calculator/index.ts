@@ -82,7 +82,6 @@ export function tokenize(s: string): Tokens {
 }
 
 export function create_expression(tokens: Tokens): Expression | undefined {
-    let expression: Expression | undefined;
     let state = State.initial;
     const pendingtype: ExpressionType[] = [];
     const pendingoperator: ExpressionOperator[] = [];
@@ -101,18 +100,96 @@ export function create_expression(tokens: Tokens): Expression | undefined {
         state = transform[state][tokentype] ?? State.unknown;
         if (state === State.unknown) throw Error("unknown state");
         if (state === State.unary) {
+            pendingtype.push("UnaryExpression");
+            if (typeof token === "string") {
+                pendingoperator.push(token as ExpressionOperator);
+            } else {
+                throw Error("accident token type");
+            }
         }
         if (state === State.parentheses) {
+            if (!Array.isArray(token)) {
+                throw Error("accident token type");
+            }
+            const inner_expression = create_expression(token);
+            if (!inner_expression) {
+                throw Error("empty expression");
+            }
+            const current_expression: Expression = {
+                type: "ParenthesizedExpression",
+                expression: inner_expression,
+            };
+            if (pendingtype.length === 0 && pendingoperator.length === 0) {
+                pendingleft.push(current_expression);
+            } else {
+                const type = pendingtype[pendingtype.length - 1];
+                pendingtype.pop();
+                const operator = pendingoperator[pendingoperator.length - 1];
+                pendingoperator.pop();
+                if (type === "BinaryExpression") {
+                    const left = pendingleft[pendingleft.length - 1];
+                    pendingleft.pop();
+                    pendingleft.push({
+                        operator: operator as BinaryExpression["operator"],
+                        type: "BinaryExpression",
+                        left,
+                        right: current_expression,
+                    });
+                }
+                if (type === "UnaryExpression") {
+                    pendingleft.push({
+                        operator: operator as UnaryExpression["operator"],
+                        type: "UnaryExpression",
+                        argument: current_expression,
+                    });
+                }
+            }
         }
         if (state === State.number) {
+            if (typeof token !== "number") {
+                throw Error("accident token type");
+            }
+            const current_expression: Expression = {
+                type: "NumericLiteral",
+                value: token,
+            };
+            if (pendingtype.length === 0 && pendingoperator.length === 0) {
+                pendingleft.push(current_expression);
+            } else {
+                const type = pendingtype[pendingtype.length - 1];
+                pendingtype.pop();
+                const operator = pendingoperator[pendingoperator.length - 1];
+                pendingoperator.pop();
+                if (type === "BinaryExpression") {
+                    const left = pendingleft[pendingleft.length - 1];
+                    pendingleft.pop();
+                    pendingleft.push({
+                        operator: operator as BinaryExpression["operator"],
+                        type: "BinaryExpression",
+                        left,
+                        right: current_expression,
+                    });
+                }
+                if (type === "UnaryExpression") {
+                    pendingleft.push({
+                        operator: operator as UnaryExpression["operator"],
+                        type: "UnaryExpression",
+                        argument: current_expression,
+                    });
+                }
+            }
         }
         if (state === State.binary) {
+            pendingtype.push("BinaryExpression");
+            if (typeof token === "string") {
+                pendingoperator.push(token as ExpressionOperator);
+            }
         }
     }
-    if (valid_end_states.includes(state)) {
-        return expression;
+    if (valid_end_states.includes(state) && pendingleft.length) {
+        return pendingleft[0];
     } else {
-        throw new Error("unexpected end state");
+        throw new Error("unexpected end state or empty expression");
     }
 }
 export const enum State {
