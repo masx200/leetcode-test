@@ -3,7 +3,6 @@ export default function calculate(s: string): number {
 
     const ast = create_expression(tokens);
 
-    if (!ast) return 0;
     return calculate_expression(ast);
 }
 export function calculate_expression(ast: Expression): number {
@@ -81,7 +80,7 @@ export function tokenize(s: string): Tokens {
     return tokens;
 }
 
-export function create_expression(tokens: Tokens): Expression | undefined {
+export function create_expression(tokens: Tokens): Expression {
     // console.log(tokens);
     if (tokens.length === 0) {
         throw Error("empty expression");
