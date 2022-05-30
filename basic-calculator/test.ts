@@ -99,3 +99,8 @@ Deno.test("simple-calculate", () => {
 Deno.test("Parenthesized-calculate", () => {
     assertEquals(calculate("-(-199+5998)+87"), -(-199 + 5998) + 87);
 });
+Deno.test("testcases-calculate", () => {
+    assertEquals(calculate("1 + 1"), 2);
+    assertEquals(calculate(" 2-1 + 2 "), 3);
+    assertEquals(calculate("(1+(4+5+2)-3)+(6+8)"), 23);
+});
