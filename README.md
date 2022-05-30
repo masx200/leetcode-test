@@ -580,6 +580,8 @@ https://leetcode.cn/problems/basic-calculator-ii/
 
 https://leetcode.cn/problems/calculator-lcci
 
+https://leetcode.cn/problems/longest-palindromic-substring
+
 #### 安装教程
 
 1. 安装`deno`
