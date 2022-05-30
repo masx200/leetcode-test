@@ -100,6 +100,8 @@ export function create_expression(tokens: Tokens): Expression | undefined {
         if (tokentype === TokenType.unknown) throw Error("unknown token");
         state = transform[state][tokentype] ?? State.unknown;
         if (state === State.unknown) throw Error("unknown state");
+        console.log(token, tokentype, state);
+        console.log(pendingtype, pendingoperator, pendingleft);
     }
     if (valid_end_states.includes(state)) {
         return expression;
