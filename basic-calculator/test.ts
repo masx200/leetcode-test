@@ -20,7 +20,7 @@ Deno.test("calculate-simple-expression", () => {
                 type: "NumericLiteral",
                 value: 5998,
             },
-        }),
+        })
     );
 });
 Deno.test("calculate-Parenthesized-expression", () => {
@@ -45,7 +45,7 @@ Deno.test("calculate-Parenthesized-expression", () => {
                     },
                 },
             },
-        }),
+        })
     );
 });
 Deno.test("simple-tokenize", () => {
@@ -80,16 +80,19 @@ Deno.test("Parenthesized-expression", () => {
         operator: "-",
         type: "UnaryExpression",
         argument: {
-            type: "BinaryExpression",
-            operator: "+",
-            left: {
-                operator: "-",
-                type: "UnaryExpression",
-                argument: { type: "NumericLiteral", value: 199 },
-            },
-            right: {
-                type: "NumericLiteral",
-                value: 5998,
+            type: "ParenthesizedExpression",
+            expression: {
+                type: "BinaryExpression",
+                operator: "+",
+                left: {
+                    operator: "-",
+                    type: "UnaryExpression",
+                    argument: { type: "NumericLiteral", value: 199 },
+                },
+                right: {
+                    type: "NumericLiteral",
+                    value: 5998,
+                },
             },
         },
     });

@@ -82,6 +82,10 @@ export function tokenize(s: string): Tokens {
 }
 
 export function create_expression(tokens: Tokens): Expression | undefined {
+    // console.log(tokens);
+    if (tokens.length === 0) {
+        throw Error("empty expression");
+    }
     let state = State.initial;
     const pendingtype: ExpressionType[] = [];
     const pendingoperator: ExpressionOperator[] = [];
@@ -187,6 +191,7 @@ export function create_expression(tokens: Tokens): Expression | undefined {
         }
     }
     if (valid_end_states.includes(state) && pendingleft.length) {
+        // console.log(JSON.stringify(pendingleft[0], null, 4));
         return pendingleft[0];
     } else {
         throw new Error("unexpected end state or empty expression");
