@@ -91,14 +91,13 @@ export function create_expression(tokens: Tokens): Expression {
 
     const pendingleft: Expression[] = [];
     for (const token of tokens) {
-        const tokentype: TokenType =
-            typeof token === "number"
-                ? TokenType["number"]
-                : typeof token === "string"
-                ? TokenType["operator"]
-                : Array.isArray(token)
-                ? TokenType["parentheses"]
-                : TokenType["unknown"];
+        const tokentype: TokenType = typeof token === "number"
+            ? TokenType["number"]
+            : typeof token === "string"
+            ? TokenType["operator"]
+            : Array.isArray(token)
+            ? TokenType["parentheses"]
+            : TokenType["unknown"];
         if (tokentype === TokenType.unknown) throw Error("unknown token");
         state = transform[state][tokentype] ?? State.unknown;
         if (state === State.unknown) throw Error("unknown state");
