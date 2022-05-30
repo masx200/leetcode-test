@@ -574,6 +574,8 @@ https://leetcode.cn/problems/basic-calculator/
 
 https://leetcode.cn/problems/evaluate-reverse-polish-notation/
 
+https://leetcode.cn/problems/sum-of-root-to-leaf-binary-numbers/
+
 #### 安装教程
 
 1. 安装`deno`
