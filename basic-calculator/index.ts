@@ -270,9 +270,3 @@ interface BinaryExpression {
     left: Expression;
     right: Expression;
 }
-export const OperatorPriority: Record<string, number> = {
-    "+": 12,
-    "-": 12,
-    "*": 13,
-    "/": 13,
-};
