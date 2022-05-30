@@ -3,6 +3,7 @@ export default function calculate(s: string): number {
     // console.log(tokens);
     const ast = create_expression(tokens);
     // console.log(ast);
+    if (!ast) return 0;
     return calculate_expression(ast);
 }
 export function calculate_expression(ast: Expression): number {
@@ -32,10 +33,11 @@ export function calculate_expression(ast: Expression): number {
         }
 
         if (ast.operator === "/") {
+            const num1 = calculate_expression(ast.left);
+            const num2 = calculate_expression(ast.right);
+            const sign = Math.sign(num2) * Math.sign(num1);
+            return sign * Math.floor(Math.abs(num1) / Math.abs(num2));
             //整数除法
-            return Math.floor(
-                calculate_expression(ast.left) / calculate_expression(ast.right)
-            );
         }
     }
     if (ast.type === "ParenthesizedExpression") {
@@ -79,7 +81,7 @@ export function tokenize(s: string): Tokens {
     return tokens;
 }
 
-export function create_expression(tokens: Tokens): Expression {
+export function create_expression(tokens: Tokens): Expression | undefined {
     throw Error("not implemented");
 }
 const enum State {
