@@ -43,9 +43,9 @@ export function calculate_expression(ast: Expression): number {
     if (ast.type === "ParenthesizedExpression") {
         return calculate_expression(ast.expression);
     }
-    throw Error("not implemented");
+    throw Error("not support expression");
 }
-type Tokens = Array<string | number | Tokens>;
+export type Tokens = Array<string | number | Tokens>;
 
 export function tokenize(s: string): Tokens {
     const tokens: Tokens = [];
@@ -233,30 +233,29 @@ const transform: Record<State, Record<TokenType, State>> = {
         [TokenType.operator]: State.binary,
     },
 } as Record<State, Record<TokenType, State>>;
-type ExpressionType = Expression["type"];
-
-type ExpressionOperator =
+export type ExpressionType = Expression["type"];
+export type ExpressionOperator =
     | UnaryExpression["operator"]
     | BinaryExpression["operator"];
-type Expression =
+export type Expression =
     | BinaryExpression
     | NumericLiteral
     | UnaryExpression
     | ParenthesizedExpression;
-interface ParenthesizedExpression {
+export interface ParenthesizedExpression {
     type: "ParenthesizedExpression";
     expression: Expression;
 }
-interface NumericLiteral {
+export interface NumericLiteral {
     type: "NumericLiteral";
     value: number;
 }
-interface UnaryExpression {
+export interface UnaryExpression {
     type: "UnaryExpression";
     operator: "void" | "throw" | "delete" | "!" | "+" | "-" | "~" | "typeof";
     argument: Expression;
 }
-interface BinaryExpression {
+export interface BinaryExpression {
     type: "BinaryExpression";
     operator:
         | "+"
