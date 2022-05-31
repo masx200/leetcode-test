@@ -584,6 +584,8 @@ https://leetcode.cn/problems/longest-palindromic-substring
 
 https://leetcode.cn/problems/remove-nth-node-from-end-of-list
 
+https://leetcode.cn/problems/check-if-string-is-a-prefix-of-array/
+
 #### 安装教程
 
 1. 安装`deno`
