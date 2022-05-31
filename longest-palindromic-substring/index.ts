@@ -7,7 +7,7 @@ export default function longestPalindrome(s: string): string {
         const str1 = expand(s, i, i);
         const str2 = expand(s, i, i + 1);
         ans = [str1, str2].reduce((p, v) => (p.length > v.length ? p : v), ans);
-
+if(ans===s)return s
         i = i + 1;
     }
     return ans;
