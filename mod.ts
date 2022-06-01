@@ -42,6 +42,7 @@ import { TrieNodeCountWordsStartingWith } from "./implement-trie-ii-prefix-tree/
 import { TrieNodeErase } from "./implement-trie-ii-prefix-tree/TrieNodeErase.ts";
 import { TrieNodeInsert } from "./implement-trie-ii-prefix-tree/TrieNodeInsert.ts";
 import { PrefixTreeSearchPrefixEach } from "./longest-word-in-dictionary/PrefixTreeSearchPrefixEach.ts";
+import { NestedIntegerFrom } from "./flatten-nested-list-iterator/NestedIntegerFrom.ts";
 export {
     TrieNode,
     TrieNodeCountWordsEqualTo,
@@ -60,7 +61,7 @@ export { superPow_mod };
 export { multiply_Mod };
 export { pow_bigint_mod };
 export { NestedInteger };
-
+export { NestedIntegerFrom };
 export { rand7 };
 export { bigint_max, bigint_min };
 export { NAryNode };
