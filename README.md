@@ -600,6 +600,8 @@ https://leetcode.cn/problems/integer-break
 
 https://leetcode.cn/problems/flatten-nested-list-iterator/
 
+https://leetcode.cn/problems/map-sum-pairs/
+
 #### 安装教程
 
 1. 安装`deno`

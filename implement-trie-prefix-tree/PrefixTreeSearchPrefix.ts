@@ -4,18 +4,25 @@ import { PrefixTree } from "./PrefixTree.ts";
 export function PrefixTreeSearchPrefix<T extends PrefixTree | TrieNode>(
     root: T,
     prefix: string,
+    {
+        end,
+        each,
+    }: {
+        each?: (node: T) => void;
+
+        end?: (node: T) => void;
+    } = {},
 ): T | undefined {
-    // function searchPrefix(prefix: string): PrefixTree | undefined {
     let node = root;
+    each?.(root);
     for (const ch of prefix) {
         const next: T = node.children.get(ch) as T;
         if (!next) {
             return;
         }
-
+        each?.(next);
         node = next;
     }
+    end?.(node);
     return node;
-    // }
-    // return searchPrefix(prefix);
 }

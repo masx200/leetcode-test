@@ -6,7 +6,7 @@ import { examples } from "./examples.ts";
 import { PrefixTreeClear } from "./PrefixTreeClear.ts";
 import { PrefixTreeFromArray } from "./PrefixTreeFromArray.ts";
 import { PrefixTreeForEach } from "./PrefixTreeForEach.ts";
-import { PrefixTreeToArray2 } from "./PrefixTreeToArray2.ts";
+// import { PrefixTreeToArray2 } from "./PrefixTreeToArray2.ts";
 
 Deno.test("Prefix-Tree-from-array-for-each-PrefixTreeToArray1", () => {
     const words = [
@@ -44,15 +44,15 @@ Deno.test("Prefix-Tree-Insert-PrefixTreeToArray1-clear", () => {
     PrefixTreeClear(tree);
     assertEquals([], PrefixTreeToArray1(tree));
 });
-Deno.test("Prefix-Tree-Insert-PrefixTreeToArray2-clear", () => {
-    const words = examples;
-    const tree = PrefixTree();
-    words.forEach((word) => PrefixTreeInsert(tree, word));
-    const left = new Set(words);
-    const right = new Set(PrefixTreeToArray2(tree));
-    // console.log(left, right);
-    assertEquals(left, right);
-    assertEquals([], PrefixTreeToArray2(PrefixTree()));
-    PrefixTreeClear(tree);
-    assertEquals([], PrefixTreeToArray2(tree));
-});
+// Deno.test("Prefix-Tree-Insert-PrefixTreeToArray2-clear", () => {
+//     const words = examples;
+//     const tree = PrefixTree();
+//     words.forEach((word) => PrefixTreeInsert(tree, word));
+//     const left = new Set(words);
+//     const right = new Set(PrefixTreeToArray2(tree));
+//     // console.log(left, right);
+//     assertEquals(left, right);
+//     assertEquals([], PrefixTreeToArray2(PrefixTree()));
+//     PrefixTreeClear(tree);
+//     assertEquals([], PrefixTreeToArray2(tree));
+// });

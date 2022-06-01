@@ -18,7 +18,7 @@ import { multiply_Mod } from "./super-pow/multiply_Mod.ts";
 import { pow_bigint_mod } from "./super-pow/pow_bigint_mod.ts";
 import { TreeNode } from "./binary-tree-inorder-traversal/TreeNode.ts";
 import { NestedInteger } from "./mini-parser/NestedInteger.ts";
-
+export { PrefixTreeWithSum };
 import { rand7 } from "./implement-rand10-using-rand7/rand7.ts";
 import { bigint_max } from "./maximum-width-of-binary-tree/bigint_max.ts";
 import { bigint_min } from "./maximum-width-of-binary-tree/bigint_min.ts";
@@ -43,6 +43,7 @@ import { TrieNodeErase } from "./implement-trie-ii-prefix-tree/TrieNodeErase.ts"
 import { TrieNodeInsert } from "./implement-trie-ii-prefix-tree/TrieNodeInsert.ts";
 import { PrefixTreeSearchPrefixEach } from "./longest-word-in-dictionary/PrefixTreeSearchPrefixEach.ts";
 import { NestedIntegerFrom } from "./flatten-nested-list-iterator/NestedIntegerFrom.ts";
+import { PrefixTreeWithSum } from "./map-sum-pairs/PrefixTreeWithSum.ts";
 export {
     TrieNode,
     TrieNodeCountWordsEqualTo,
