@@ -596,6 +596,8 @@ https://leetcode.cn/problems/find-players-with-zero-or-one-losses
 
 https://leetcode.cn/problems/integer-to-roman/
 
+https://leetcode.cn/problems/integer-break
+
 #### 安装教程
 
 1. 安装`deno`
