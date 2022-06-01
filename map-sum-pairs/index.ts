@@ -4,16 +4,16 @@ import { PrefixTreeWithSum } from "./PrefixTreeWithSum.ts";
 
 class MapSum {
     #root = new PrefixTreeWithSum();
-
+    #map = new Map<string, number>();
     insert(key: string, val: number): void {
-        const value = PrefixTreeSearchPrefix(this.#root, key)?.value ?? 0;
+        const value = this.#map.get(key) ?? 0;
         if (value === 0) {
             PrefixTreeInsert(this.#root, key, {
                 each: (node) => (node.sum += val),
                 create: () => new PrefixTreeWithSum(),
-                end(node) {
-                    node.value = val;
-                },
+                // end(node) {
+                //     node.value = val;
+                // },
             });
         } else {
             const delta = -value + val;
@@ -21,11 +21,12 @@ class MapSum {
                 each(node) {
                     node.sum += delta;
                 },
-                end(node) {
-                    node.value = val;
-                },
+                // end(node) {
+                //     node.value = val;
+                // },
             });
         }
+        this.#map.set(key, val);
     }
 
     sum(prefix: string): number {
