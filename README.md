@@ -606,6 +606,8 @@ https://leetcode.cn/problems/delete-middle-node-lcci/
 
 https://leetcode.cn/problems/qiu-12n-lcof/
 
+https://leetcode.cn/problems/sum-of-all-subset-xor-totals/
+
 #### 安装教程
 
 1. 安装`deno`
