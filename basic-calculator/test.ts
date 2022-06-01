@@ -1,5 +1,8 @@
 import { assertEquals } from "../deps.ts";
-import calculate, { buildExpression, evaluate, tokenize } from "./index.ts";
+import { buildExpression } from "./buildExpression.ts";
+import { evaluate } from "./evaluate.ts";
+import calculate from "./index.ts";
+import { tokenize } from "./tokenize.ts";
 
 Deno.test("calculate-simple-expression", () => {
     assertEquals(

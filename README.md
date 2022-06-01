@@ -586,6 +586,10 @@ https://leetcode.cn/problems/remove-nth-node-from-end-of-list
 
 https://leetcode.cn/problems/check-if-string-is-a-prefix-of-array/
 
+https://leetcode.cn/problems/Jf1JuT/
+
+https://leetcode.cn/problems/alien-dictionary/
+
 #### 安装教程
 
 1. 安装`deno`
