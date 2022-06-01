@@ -590,6 +590,8 @@ https://leetcode.cn/problems/Jf1JuT/
 
 https://leetcode.cn/problems/alien-dictionary/
 
+https://leetcode.cn/problems/matchsticks-to-square/
+
 #### 安装教程
 
 1. 安装`deno`
