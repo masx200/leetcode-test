@@ -602,6 +602,10 @@ https://leetcode.cn/problems/flatten-nested-list-iterator/
 
 https://leetcode.cn/problems/map-sum-pairs/
 
+https://leetcode.cn/problems/delete-middle-node-lcci/
+
+https://leetcode.cn/problems/qiu-12n-lcof/
+
 #### 安装教程
 
 1. 安装`deno`
