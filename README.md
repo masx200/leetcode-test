@@ -598,6 +598,8 @@ https://leetcode.cn/problems/integer-to-roman/
 
 https://leetcode.cn/problems/integer-break
 
+https://leetcode.cn/problems/flatten-nested-list-iterator/
+
 #### 安装教程
 
 1. 安装`deno`
