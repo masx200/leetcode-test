@@ -38,17 +38,14 @@
  */
 
 import { NestedInteger } from "../mini-parser/NestedInteger.ts";
-function* NestedIntegerIterator(nestedList: NestedInteger[]) {
-    nestedList = Array.from(nestedList);
-    while (nestedList.length) {
-        const nestedInteger = nestedList.shift();
-        if (!nestedInteger) {
-            return;
-        }
+function* NestedIntegerIterator(
+    nestedList: NestedInteger[],
+): Generator<number | null, void, unknown> {
+    for (const nestedInteger of nestedList) {
         if (nestedInteger.isInteger()) {
             yield nestedInteger.getInteger();
         } else {
-            nestedList.unshift(...nestedInteger.getList());
+            yield* NestedIntegerIterator(nestedInteger.getList());
         }
     }
 }
