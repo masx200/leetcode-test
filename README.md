@@ -610,6 +610,8 @@ https://leetcode.cn/problems/sum-of-all-subset-xor-totals/
 
 https://leetcode.cn/problems/w6cpku
 
+https://leetcode.cn/problems/zuo-xuan-zhuan-zi-fu-chuan-lcof/
+
 #### 安装教程
 
 1. 安装`deno`
