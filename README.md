@@ -632,6 +632,8 @@ https://leetcode.cn/problems/maximum-number-of-words-found-in-sentences
 
 https://leetcode.cn/problems/xor-operation-in-an-array/
 
+https://leetcode.cn/problems/minimum-sum-of-four-digit-number-after-splitting-digits
+
 #### 安装教程
 
 1. 安装`deno`
