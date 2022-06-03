@@ -638,6 +638,8 @@ https://leetcode.cn/problems/qIsx9U/
 
 https://leetcode.cn/problems/moving-average-from-data-stream/
 
+https://leetcode.cn/problems/design-an-ordered-stream/
+
 #### 安装教程
 
 1. 安装`deno`
