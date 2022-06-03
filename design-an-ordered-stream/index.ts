@@ -12,7 +12,7 @@ export default class OrderedStream {
             throw Error("range error");
         }
         this.#store.set(idKey, value);
-        if (this.#ptr === idKey && (this.#store.has(idKey))) {
+        if (this.#ptr === idKey && this.#store.has(idKey)) {
             const res: string[] = [];
             let i = this.#ptr;
             for (; this.#store.has(i); i++) {
