@@ -618,6 +618,8 @@ https://leetcode.cn/problems/NYBBNL/
 
 https://leetcode.cn/problems/increasing-order-search-tree/
 
+https://leetcode.cn/problems/two-sum-ii-input-array-is-sorted/
+
 #### 安装教程
 
 1. 安装`deno`
