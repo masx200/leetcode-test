@@ -620,6 +620,10 @@ https://leetcode.cn/problems/increasing-order-search-tree/
 
 https://leetcode.cn/problems/two-sum-ii-input-array-is-sorted/
 
+https://leetcode.cn/problems/two-sum-iv-input-is-a-bst
+
+https://leetcode.cn/problems/opLdQZ
+
 #### 安装教程
 
 1. 安装`deno`
