@@ -612,6 +612,8 @@ https://leetcode.cn/problems/w6cpku
 
 https://leetcode.cn/problems/zuo-xuan-zhuan-zi-fu-chuan-lcof/
 
+https://leetcode.cn/problems/consecutive-numbers-sum
+
 #### 安装教程
 
 1. 安装`deno`
