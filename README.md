@@ -624,6 +624,8 @@ https://leetcode.cn/problems/two-sum-iv-input-is-a-bst
 
 https://leetcode.cn/problems/opLdQZ
 
+https://leetcode.cn/problems/delete-node-in-a-bst/
+
 #### 安装教程
 
 1. 安装`deno`
