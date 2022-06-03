@@ -634,6 +634,10 @@ https://leetcode.cn/problems/xor-operation-in-an-array/
 
 https://leetcode.cn/problems/minimum-sum-of-four-digit-number-after-splitting-digits
 
+https://leetcode.cn/problems/qIsx9U/
+
+https://leetcode.cn/problems/moving-average-from-data-stream/
+
 #### 安装教程
 
 1. 安装`deno`
