@@ -614,6 +614,10 @@ https://leetcode.cn/problems/zuo-xuan-zhuan-zi-fu-chuan-lcof/
 
 https://leetcode.cn/problems/consecutive-numbers-sum
 
+https://leetcode.cn/problems/NYBBNL/
+
+https://leetcode.cn/problems/increasing-order-search-tree/
+
 #### 安装教程
 
 1. 安装`deno`

@@ -6,7 +6,7 @@ export default function inorderTraversal(root: TreeNode | null): number[] {
     inorder(root, (a) => res.push(a));
     return res;
 }
-function inorder(root: TreeNode | null, output: (a: number) => void) {
+export function inorder(root: TreeNode | null, output: (a: number) => void) {
     if (!root) return;
     inorder(root.left, output);
     output(root.val);
