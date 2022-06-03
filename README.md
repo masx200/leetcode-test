@@ -642,6 +642,8 @@ https://leetcode.cn/problems/design-an-ordered-stream/
 
 https://leetcode.cn/problems/find-elements-in-a-contaminated-binary-tree/
 
+https://leetcode.cn/problems/complete-binary-tree-inserter/
+
 #### 安装教程
 
 1. 安装`deno`
