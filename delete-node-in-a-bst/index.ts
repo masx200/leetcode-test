@@ -15,7 +15,7 @@ import { TreeNode } from "../binary-tree-inorder-traversal/TreeNode.ts";
  */
 export default function deleteNode(
     root: TreeNode | null,
-    key: number
+    key: number,
 ): TreeNode | null {
     if (!root) return null;
 

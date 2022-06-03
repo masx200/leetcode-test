@@ -12,10 +12,6 @@ export function ArrayToListNode(array: Array<number>): ListNode | null {
         cur.next = l;
         cur = cur.next;
     }
-    // array.slice(1).reduce((p, v) => {
-    //     const l = new ListNode(v);
-    //     p.next = l;
-    //     return l;
-    // }, list);
+
     return list;
 }

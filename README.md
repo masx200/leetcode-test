@@ -626,6 +626,8 @@ https://leetcode.cn/problems/opLdQZ
 
 https://leetcode.cn/problems/delete-node-in-a-bst/
 
+https://leetcode.cn/problems/merge-nodes-in-between-zeros/
+
 #### 安装教程
 
 1. 安装`deno`
