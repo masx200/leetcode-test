@@ -648,6 +648,8 @@ https://leetcode.cn/problems/unique-email-addresses/
 
 https://leetcode.cn/problems/generate-random-point-in-a-circle/
 
+https://leetcode.cn/problems/design-an-atm-machine/
+
 #### 安装教程
 
 1. 安装`deno`
