@@ -31,13 +31,13 @@ export default function ATM() {
                 if ((changedStore.get(money) ?? 0) > 0 && amount >= money) {
                     const d = Math.min(
                         Math.floor(amount / money),
-                        changedStore.get(money) ?? 0
+                        changedStore.get(money) ?? 0,
                     );
                     amount -= money * d;
                     delta[money] += d;
                     changedStore.set(
                         money,
-                        -d + (changedStore.get(money) ?? 0)
+                        -d + (changedStore.get(money) ?? 0),
                     );
                 }
             }
