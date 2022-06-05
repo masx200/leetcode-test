@@ -662,6 +662,10 @@ https://leetcode.cn/problems/guess-numbers/
 
 https://leetcode.cn/problems/distribute-candies/
 
+https://leetcode.cn/problems/minimum-index-sum-of-two-lists/
+
+https://leetcode.cn/problems/range-addition-ii/
+
 #### 安装教程
 
 1. 安装`deno`
