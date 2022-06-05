@@ -658,6 +658,8 @@ https://leetcode.cn/problems/string-rotation-lcci
 
 https://leetcode.cn/problems/rotate-string/
 
+https://leetcode.cn/problems/guess-numbers/
+
 #### 安装教程
 
 1. 安装`deno`
