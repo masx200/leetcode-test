@@ -1,17 +1,19 @@
 export default function ProductOfNumbers() {
-    const numbers: number[] = [];
+    const array = [1];
+
     return {
         add(num: number): void {
-            numbers.push(num);
+            if (num === 0) {
+                array[0] = 1;
+                array.length = 1;
+            } else {
+                array.push(num * array[array.length - 1]);
+            }
         },
 
         getProduct(k: number): number {
-            let result = 1;
-            for (const value of numbers.slice(-k)) {
-                if (value === 0) return 0;
-                result *= value;
-            }
-            return result;
+            if (k > array.length - 1) return 0;
+            return array[array.length - 1] / array[array.length - 1 - k];
         },
     };
 }
