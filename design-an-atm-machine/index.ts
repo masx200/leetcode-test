@@ -1,5 +1,5 @@
 export default function ATM() {
-    const moneyStore = new Map([
+    let moneyStore = new Map([
         [20, 0],
         [50, 0],
         [100, 0],
@@ -9,17 +9,17 @@ export default function ATM() {
     const indexToMoney = [20, 50, 100, 200, 500];
     return {
         deposit(banknotesCount: number[]): void {
-            for (const [index, count] of banknotesCount.entries()) {
+            for (let i = 0; i < 5; i++) {
+                const index = i;
+                const count = banknotesCount[i];
                 const key = indexToMoney[index];
-                if (!moneyStore.has(key)) {
-                    throw new Error("moneyStore Not Found");
-                }
+
                 moneyStore.set(key, (moneyStore.get(key) ?? 0) + count);
             }
         },
 
         withdraw(amount: number): number[] {
-            const delta = Object.fromEntries([
+            const delta = new Map([
                 [20, 0],
                 [50, 0],
                 [100, 0],
@@ -34,7 +34,7 @@ export default function ATM() {
                         changedStore.get(money) ?? 0,
                     );
                     amount -= money * d;
-                    delta[money] += d;
+                    delta.set(money, +d + (delta.get(money) ?? 0));
                     changedStore.set(
                         money,
                         -d + (changedStore.get(money) ?? 0),
@@ -44,10 +44,9 @@ export default function ATM() {
             if (amount > 0) {
                 return [-1];
             } else {
-                changedStore.forEach((value, key) =>
-                    moneyStore.set(key, value)
-                );
-                return Object.values(delta);
+                moneyStore = changedStore;
+
+                return Array.from(delta.values());
             }
         },
     };
