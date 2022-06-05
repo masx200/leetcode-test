@@ -654,6 +654,10 @@ https://leetcode.cn/problems/rle-iterator
 
 https://leetcode.cn/problems/product-of-the-last-k-numbers/
 
+https://leetcode.cn/problems/string-rotation-lcci
+
+https://leetcode.cn/problems/rotate-string/
+
 #### 安装教程
 
 1. 安装`deno`
