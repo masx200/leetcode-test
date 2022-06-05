@@ -660,6 +660,8 @@ https://leetcode.cn/problems/rotate-string/
 
 https://leetcode.cn/problems/guess-numbers/
 
+https://leetcode.cn/problems/distribute-candies/
+
 #### 安装教程
 
 1. 安装`deno`
