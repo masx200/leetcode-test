@@ -68,7 +68,7 @@ export function SegmentTree(
     start = 0,
     end = 0,
     value = 0,
-    children = [],
+    children: SegmentTree[] = [],
 ): SegmentTree {
     return { start, end, value, children };
 }
