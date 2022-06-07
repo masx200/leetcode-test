@@ -1,3 +1,5 @@
+import { SegmentTree } from "./SegmentTree.ts";
+
 export default class MyCalendarThree {
     #root: SegmentTree = SegmentTree(
         Number.MIN_SAFE_INTEGER,
@@ -57,18 +59,4 @@ export default class MyCalendarThree {
 
         return this.#result;
     }
-}
-export interface SegmentTree {
-    start: number;
-    end: number;
-    value: number;
-    children: SegmentTree[];
-}
-export function SegmentTree(
-    start = 0,
-    end = 0,
-    value = 0,
-    children: SegmentTree[] = [],
-): SegmentTree {
-    return { start, end, value, children };
 }

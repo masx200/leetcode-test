@@ -44,6 +44,7 @@ import { TrieNodeInsert } from "./implement-trie-ii-prefix-tree/TrieNodeInsert.t
 import { PrefixTreeSearchPrefixEach } from "./longest-word-in-dictionary/PrefixTreeSearchPrefixEach.ts";
 import { NestedIntegerFrom } from "./flatten-nested-list-iterator/NestedIntegerFrom.ts";
 import { PrefixTreeWithSum } from "./map-sum-pairs/PrefixTreeWithSum.ts";
+import { SegmentTree } from "./my-calendar-iii/SegmentTree.ts";
 export {
     TrieNode,
     TrieNodeCountWordsEqualTo,
@@ -77,3 +78,4 @@ export { PrefixTreeForEach, PrefixTreeSearchPrefixEach };
 export { GraphNode };
 export { Node as RandomNode } from "./copy-list-with-random-pointer/Node.ts";
 export { Node as TreeNextNode } from "./populating-next-right-pointers-in-each-node/Node.ts";
+export { SegmentTree };
