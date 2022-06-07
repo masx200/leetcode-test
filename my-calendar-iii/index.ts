@@ -33,11 +33,8 @@ export default class MyCalendarThree {
                 ...segments.map(([a, b]) => SegmentTree(a, b, node.value)),
             );
         }
-        if (node.children.length) {
-            return this.#searchChildren(start, end, node.children);
-        }
 
-        return [];
+        return this.#searchChildren(start, end, node.children);
     }
 
     #searchChildren(
