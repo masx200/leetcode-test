@@ -1,7 +1,7 @@
 export default class MyCalendarThree {
     #root: SegmentTree = SegmentTree(
         Number.MIN_SAFE_INTEGER,
-        Number.MAX_SAFE_INTEGER
+        Number.MAX_SAFE_INTEGER,
     );
     #result = 0;
 
@@ -18,7 +18,7 @@ export default class MyCalendarThree {
 
         if (!node.children.length) {
             const points = Array.from(
-                new Set([node.start, node.end + 1, start, end + 1])
+                new Set([node.start, node.end + 1, start, end + 1]),
             ).sort((a, b) => a - b);
             const segments = points
                 .map((v, i, a) => [v, a[i + 1] - 1])
@@ -26,7 +26,7 @@ export default class MyCalendarThree {
                 .filter(([a, b]) => node.start <= a && node.end >= b);
 
             node.children.push(
-                ...segments.map(([a, b]) => SegmentTree(a, b, node.value))
+                ...segments.map(([a, b]) => SegmentTree(a, b, node.value)),
             );
         }
         if (node.children.length) {
@@ -39,7 +39,7 @@ export default class MyCalendarThree {
     #searchChildren(
         start: number,
         end: number,
-        nodes: SegmentTree[]
+        nodes: SegmentTree[],
     ): SegmentTree[] {
         return nodes.map((child) => this.#search(start, end, child)).flat();
     }
@@ -68,7 +68,7 @@ export function SegmentTree(
     start = 0,
     end = 0,
     value = 0,
-    children = []
+    children = [],
 ): SegmentTree {
     return { start, end, value, children };
 }
