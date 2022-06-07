@@ -8,6 +8,8 @@ export default class MyCalendarThree {
     #result = 0;
 
     #search(start: number, end: number, node: SegmentTree): SegmentTree[] {
+        start = Math.max(start, node.start);
+        end = Math.min(end, node.end);
         if (start > end || start > node.end || end < node.start) {
             return [];
         }
