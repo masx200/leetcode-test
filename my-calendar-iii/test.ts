@@ -18,11 +18,10 @@ Deno.test("my-calendar-iii", () => {
         [5, 15, 7],
         [5, 10, 7],
         [25, 55, 7],
+        [1, 100000, 8],
+        [1, 100000, 9],
     ] as const;
     args.forEach(([start, end, result]) => {
-        assertEquals(
-            result,
-            temp.book(start, end),
-        );
+        assertEquals(result, temp.book(start, end));
     });
 });
