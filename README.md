@@ -674,6 +674,8 @@ https://leetcode.cn/problems/koko-eating-bananas
 
 https://leetcode.cn/problems/my-calendar-ii/
 
+https://leetcode.cn/problems/my-calendar-i
+
 #### 安装教程
 
 1. 安装`deno`
