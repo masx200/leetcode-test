@@ -676,6 +676,8 @@ https://leetcode.cn/problems/my-calendar-ii/
 
 https://leetcode.cn/problems/my-calendar-i
 
+https://leetcode.cn/problems/range-sum-query-immutable
+
 #### 安装教程
 
 1. 安装`deno`
