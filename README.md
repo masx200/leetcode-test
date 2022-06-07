@@ -680,6 +680,8 @@ https://leetcode.cn/problems/range-sum-query-immutable
 
 https://leetcode.cn/problems/time-based-key-value-store/
 
+https://leetcode.cn/problems/range-sum-query-mutable/
+
 #### 安装教程
 
 1. 安装`deno`
