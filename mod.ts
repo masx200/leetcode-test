@@ -45,6 +45,9 @@ import { PrefixTreeSearchPrefixEach } from "./longest-word-in-dictionary/PrefixT
 import { NestedIntegerFrom } from "./flatten-nested-list-iterator/NestedIntegerFrom.ts";
 import { PrefixTreeWithSum } from "./map-sum-pairs/PrefixTreeWithSum.ts";
 import { SegmentTree } from "./my-calendar-iii/SegmentTree.ts";
+import { cos } from "./valid-boomerang/cos.ts";
+import { dot } from "./valid-boomerang/dot.ts";
+import { norm } from "./valid-boomerang/norm.ts";
 export {
     TrieNode,
     TrieNodeCountWordsEqualTo,
@@ -79,3 +82,4 @@ export { GraphNode };
 export { Node as RandomNode } from "./copy-list-with-random-pointer/Node.ts";
 export { Node as TreeNextNode } from "./populating-next-right-pointers-in-each-node/Node.ts";
 export { SegmentTree };
+export { cos, dot, norm };

@@ -684,6 +684,8 @@ https://leetcode.cn/problems/range-sum-query-mutable/
 
 https://leetcode.cn/problems/range-sum-query-2d-immutable
 
+https://leetcode.cn/problems/valid-boomerang/
+
 #### 安装教程
 
 1. 安装`deno`
