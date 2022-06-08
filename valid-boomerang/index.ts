@@ -1,5 +1,6 @@
 import { float64equals } from "../utils/float64equals.ts";
-import { cos } from "./cos.ts";
+import { dot } from "./dot.ts";
+import { norm } from "./norm.ts";
 
 export default function isBoomerang(points: number[][]): boolean {
     if (points.length !== 3) return false;
@@ -14,5 +15,10 @@ export default function isBoomerang(points: number[][]): boolean {
     }
     const vector1: [number, number] = [x2 - x1, y2 - y1];
     const vector2: [number, number] = [x3 - x1, y3 - y1];
-    return !float64equals(Math.abs(cos(vector2, vector1)), 1);
+    // return !float64equals(Math.abs(cos(vector2, vector1)), 1);
+    const innerProduct = dot(vector2, vector1);
+    return !float64equals(
+        Math.abs(innerProduct),
+        norm(vector2) * norm(vector1),
+    );
 }
