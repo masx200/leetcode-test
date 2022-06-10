@@ -1,6 +1,8 @@
 // deno-lint-ignore no-explicit-any
 export interface PriorityQueue<T = any> {
+    /**clear all elements */
     clear: () => void;
+    /**get length of elements */
     length: () => number;
     /** comparator Function used to determine the order of the elements. It is expected to return a negative value if the head argument is less than the second argument, zero if they're equal, and a positive value otherwise. */
     comparator: (a: T, b: T) => number;
@@ -15,6 +17,7 @@ export interface PriorityQueue<T = any> {
     /**get and delete min element */
     shift: () => T | undefined;
     // at: (index: number) => T | undefined;
+    toArray(): T[];
 }
 
 /**
@@ -24,10 +27,14 @@ export interface PriorityQueue<T = any> {
 export function PriorityQueue<T = any>(
     /** comparator Function used to determine the order of the elements. It is expected to return a negative value if the head argument is less than the second argument, zero if they're equal, and a positive value otherwise. */
     comparator: (a: T, b: T) => number,
+    values?: T[],
 ): PriorityQueue<T> {
     //默认升序
     //comparator Function used to determine the order of the elements. It is expected to return a negative value if the head argument is less than the second argument, zero if they're equal, and a positive value otherwise.
     const data: T[] = [];
+    if (values?.length) {
+        values.forEach((value) => offer(value));
+    }
     function length(): number {
         return data.length;
     }
@@ -113,7 +120,11 @@ export function PriorityQueue<T = any>(
     //function at(index: number): T | undefined {
     //    return data.at(index);
     // }
+    function toArray() {
+        return Array.from(data);
+    }
     return {
+        toArray,
         clear,
         length,
         comparator,
