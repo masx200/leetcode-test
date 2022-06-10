@@ -692,6 +692,8 @@ https://leetcode.cn/problems/VvJkup/
 
 https://leetcode.cn/problems/minimum-number-of-operations-to-move-all-balls-to-each-box/
 
+https://leetcode.cn/problems/remove-all-adjacent-duplicates-in-string
+
 #### 安装教程
 
 1. 安装`deno`
