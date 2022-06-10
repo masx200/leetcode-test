@@ -686,6 +686,8 @@ https://leetcode.cn/problems/range-sum-query-2d-immutable
 
 https://leetcode.cn/problems/valid-boomerang/
 
+https://leetcode.cn/problems/random-point-in-non-overlapping-rectangles/
+
 #### 安装教程
 
 1. 安装`deno`
