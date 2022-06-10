@@ -690,6 +690,8 @@ https://leetcode.cn/problems/random-point-in-non-overlapping-rectangles/
 
 https://leetcode.cn/problems/VvJkup/
 
+https://leetcode.cn/problems/minimum-number-of-operations-to-move-all-balls-to-each-box/
+
 #### 安装教程
 
 1. 安装`deno`
