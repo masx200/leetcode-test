@@ -694,6 +694,8 @@ https://leetcode.cn/problems/minimum-number-of-operations-to-move-all-balls-to-e
 
 https://leetcode.cn/problems/remove-all-adjacent-duplicates-in-string
 
+https://leetcode.cn/problems/last-stone-weight
+
 #### 安装教程
 
 1. 安装`deno`

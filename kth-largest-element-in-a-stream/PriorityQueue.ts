@@ -2,22 +2,27 @@
 export interface PriorityQueue<T = any> {
     clear: () => void;
     length: () => number;
+    /** comparator Function used to determine the order of the elements. It is expected to return a negative value if the head argument is less than the second argument, zero if they're equal, and a positive value otherwise. */
     comparator: (a: T, b: T) => number;
+    /**add one element  */
     offer: (value: T) => void;
+    /** get min element */
     head: () => T | undefined;
+    /** get max element */
     tail: () => T | undefined;
+    /**get and delete max element */
     pop: () => T | undefined;
+    /**get and delete min element */
     shift: () => T | undefined;
     // at: (index: number) => T | undefined;
 }
 
 /**
- * Your KthLargest object will be instantiated and called as such:
- * var obj = new KthLargest(k, nums)
- * var param_1 = obj.add(val)
+ * comparator Function used to determine the order of the elements. It is expected to return a negative value if the head argument is less than the second argument, zero if they're equal, and a positive value otherwise.
  */
 // deno-lint-ignore no-explicit-any
 export function PriorityQueue<T = any>(
+    /** comparator Function used to determine the order of the elements. It is expected to return a negative value if the head argument is less than the second argument, zero if they're equal, and a positive value otherwise. */
     comparator: (a: T, b: T) => number,
 ): PriorityQueue<T> {
     //默认升序
