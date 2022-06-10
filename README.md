@@ -688,6 +688,8 @@ https://leetcode.cn/problems/valid-boomerang/
 
 https://leetcode.cn/problems/random-point-in-non-overlapping-rectangles/
 
+https://leetcode.cn/problems/VvJkup/
+
 #### 安装教程
 
 1. 安装`deno`
