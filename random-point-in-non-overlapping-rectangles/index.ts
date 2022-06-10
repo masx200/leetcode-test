@@ -1,88 +1,52 @@
 export default class Solution {
-    #rect_arrays: array_of_integer_points_for_the_rectangle[];
-    #weights: number[];
-    #prefix_sum: number[];
-    #length: number;
+    #arr: number[];
+    #rects: number[][];
 
-    #pickRectangle(): array_of_integer_points_for_the_rectangle {
-        const index = Math.floor(Math.random() * this.#length);
-        let left = 0;
-        let right = this.#prefix_sum.length - 1;
-        while (right - left >= 1) {
-            // console.log(left, right);
-            const middle = Math.floor((right - left) / 2) + left;
-            // console.log(middle);
-            const floor = this.#prefix_sum[middle - 1] ?? 0;
-            const ceil = this.#prefix_sum[middle];
-            // console.log(floor, ceil);
-            if (floor < index && index <= ceil) {
-                return this.#rect_arrays[middle];
-            } else if (index > ceil) {
-                left = middle + 1;
-            } else if (index <= floor) {
-                right = middle;
+    constructor(rects: number[][]) {
+        this.#arr = [0];
+        this.#rects = rects;
+        for (const rect of rects) {
+            const [a, b, x, y] = rect;
+            this.#arr.push(
+                this.#arr[this.#arr.length - 1] + (x - a + 1) * (y - b + 1),
+            );
+        }
+    }
+    pick() {
+        let k = Math.floor(Math.random() * this.#arr[this.#arr.length - 1]);
+        const rectIndex = this.#binarySearch(this.#arr, k + 1) - 1;
+        k -= this.#arr[rectIndex];
+        const rect = this.#rects[rectIndex];
+        const [a, b, , y] = rect;
+        const col = y - b + 1;
+        const da = Math.floor(k / col);
+        const db = k - col * da;
+        return [a + da, b + db];
+    }
+    #binarySearch(arr: number[], target: number) {
+        let low = 0;
+        let high = arr.length - 1;
+        while (low <= high) {
+            const mid = Math.floor((high + low) / 2);
+            const num = arr[mid];
+            if (num === target) {
+                return mid;
+            } else if (num > target) {
+                high = mid - 1;
+            } else {
+                low = mid + 1;
             }
         }
-        return this.#rect_arrays[left];
-    }
-    constructor(rects: number[][]) {
-        this.#rect_arrays = rects.map(
-            (rect) => new array_of_integer_points_for_the_rectangle(rect),
-        );
-        this.#weights = this.#rect_arrays.map((array) => array.length);
-        this.#length = 0;
-        this.#prefix_sum = Array.from(this.#weights);
-        for (const [index, weight] of this.#weights.entries()) {
-            this.#length =
-                this.#prefix_sum[index] =
-                    index === 0 ? weight : weight + this.#prefix_sum[index - 1];
-        }
-    }
-
-    pick(): number[] {
-        const rectangle = this.#pickRectangle();
-        const length = rectangle.length;
-        const index = Math.floor(Math.random() * length);
-        return rectangle.get(index);
+        return low;
     }
 }
-class array_of_integer_points_for_the_rectangle {
-    #x1: number;
-
-    #y1: number;
-    #row: number;
-    #col: number;
-    constructor(rect: number[]) {
-        const [x1, y1, x2, y2] = rect;
-        // console.log(x1, y2, x2, y1)
-        this.#x1 = x1;
-
-        this.#y1 = y1;
-        this.#row = x2 - x1 + 1;
-        this.#col = y2 - y1 + 1;
-        // console.log(this.#row, this.#col)
-        this.length = this.#row * this.#col;
-    }
-
-    readonly length: number;
-
-    get(index: number): [number, number] {
-        const row = Math.floor(index / this.#row);
-        const col = Math.floor(index % this.#row);
-        const x = this.#x1 + col;
-        const y = this.#y1 + row;
-        return [x, y];
-    }
-}
-
 // const result: Record<string, number> = {};
 // const solution = new Solution([
 //     [-2, -2, 1, 1],
 //     [2, 2, 4, 6],
 // ]);
-// // console.log(solution.pick());
-// // console.log(solution)
-// for (let i = 0; i < 921000; i++) {
+
+// for (let i = 0; i < 92100000; i++) {
 //     const point = solution.pick();
 //     const key = JSON.stringify(point);
 //     result[key] = 1 + (result[key] ?? 0);
