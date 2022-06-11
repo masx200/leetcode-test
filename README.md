@@ -700,6 +700,8 @@ https://leetcode.cn/problems/beautiful-arrangement
 
 https://leetcode.cn/problems/flip-string-to-monotone-increasing
 
+https://leetcode.cn/problems/fraction-to-recurring-decimal
+
 #### 安装教程
 
 1. 安装`deno`

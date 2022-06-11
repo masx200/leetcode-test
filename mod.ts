@@ -48,6 +48,7 @@ import { SegmentTree } from "./my-calendar-iii/SegmentTree.ts";
 import { cos } from "./valid-boomerang/cos.ts";
 import { dot } from "./valid-boomerang/dot.ts";
 import { norm } from "./valid-boomerang/norm.ts";
+import { abs_bigint } from "./fraction-to-recurring-decimal/index.ts";
 export {
     TrieNode,
     TrieNodeCountWordsEqualTo,
@@ -83,3 +84,4 @@ export { Node as RandomNode } from "./copy-list-with-random-pointer/Node.ts";
 export { Node as TreeNextNode } from "./populating-next-right-pointers-in-each-node/Node.ts";
 export { SegmentTree };
 export { cos, dot, norm };
+export { abs_bigint };
