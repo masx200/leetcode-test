@@ -48,7 +48,12 @@ import { SegmentTree } from "./my-calendar-iii/SegmentTree.ts";
 import { cos } from "./valid-boomerang/cos.ts";
 import { dot } from "./valid-boomerang/dot.ts";
 import { norm } from "./valid-boomerang/norm.ts";
-import { abs_bigint } from "./fraction-to-recurring-decimal/index.ts";
+export { greatest_common_divisor };
+export { calculateStraightLineEquation, uniqueStraightLineEquation };
+import { greatest_common_divisor } from "./max-points-on-a-line/greatest_common_divisor.ts";
+import { abs_bigint } from "./fraction-to-recurring-decimal/abs_bigint.ts";
+import { calculateStraightLineEquation } from "./max-points-on-a-line/calculateStraightLineEquation.ts";
+import { uniqueStraightLineEquation } from "./max-points-on-a-line/uniqueStraightLineEquation.ts";
 export {
     TrieNode,
     TrieNodeCountWordsEqualTo,

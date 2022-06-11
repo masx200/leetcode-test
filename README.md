@@ -702,6 +702,8 @@ https://leetcode.cn/problems/flip-string-to-monotone-increasing
 
 https://leetcode.cn/problems/fraction-to-recurring-decimal
 
+https://leetcode.cn/problems/max-points-on-a-line/
+
 #### 安装教程
 
 1. 安装`deno`
