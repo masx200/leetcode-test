@@ -698,6 +698,8 @@ https://leetcode.cn/problems/last-stone-weight
 
 https://leetcode.cn/problems/beautiful-arrangement
 
+https://leetcode.cn/problems/flip-string-to-monotone-increasing
+
 #### 安装教程
 
 1. 安装`deno`
