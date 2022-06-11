@@ -1,5 +1,6 @@
 // deno-lint-ignore no-explicit-any
 export interface PriorityQueue<T = any> {
+    isEmpty(): boolean;
     /**clear all elements */
     clear: () => void;
     /**get length of elements */
@@ -29,11 +30,15 @@ export function PriorityQueue<T = any>(
     comparator: (a: T, b: T) => number,
     values?: T[],
 ): PriorityQueue<T> {
+    if (typeof comparator !== "function") {
+        throw Error("expect comparator to be function");
+    }
     //默认升序
     //comparator Function used to determine the order of the elements. It is expected to return a negative value if the head argument is less than the second argument, zero if they're equal, and a positive value otherwise.
     const data: T[] = [];
     if (values?.length) {
-        values.forEach((value) => offer(value));
+        values.forEach((value) => data.push(value));
+        data.sort(comparator);
     }
     function length(): number {
         return data.length;
@@ -123,7 +128,11 @@ export function PriorityQueue<T = any>(
     function toArray() {
         return Array.from(data);
     }
+    function isEmpty() {
+        return data.length === 0;
+    }
     return {
+        isEmpty,
         toArray,
         clear,
         length,
