@@ -704,6 +704,8 @@ https://leetcode.cn/problems/fraction-to-recurring-decimal
 
 https://leetcode.cn/problems/max-points-on-a-line/
 
+https://leetcode.cn/problems/find-and-replace-pattern
+
 #### 安装教程
 
 1. 安装`deno`
