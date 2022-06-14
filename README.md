@@ -706,6 +706,8 @@ https://leetcode.cn/problems/max-points-on-a-line/
 
 https://leetcode.cn/problems/find-and-replace-pattern
 
+https://leetcode.cn/problems/diagonal-traverse/
+
 #### 安装教程
 
 1. 安装`deno`
