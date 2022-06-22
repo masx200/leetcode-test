@@ -726,6 +726,8 @@ https://leetcode.cn/problems/diagonal-traverse/
 
 https://leetcode.cn/problems/prison-cells-after-n-days/
 
+https://leetcode.cn/problems/find-a-value-of-a-mysterious-function-closest-to-target/
+
 #### 安装教程
 
 1. 安装`deno`
