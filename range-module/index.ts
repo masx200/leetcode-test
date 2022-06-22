@@ -37,6 +37,7 @@ export default class RangeModule {
             // }
         } else {
             return node.value >= node.end - node.start + 1;
+            // return node.value === 1;
         }
         // }
 
@@ -59,6 +60,7 @@ export default class RangeModule {
             },
         });
         for (const node of nodes) {
+            // node.value = 1;
             node.value = node.end - node.start + 1;
         }
         // console.log("addRange", JSON.stringify(this.#root, null, 4));
