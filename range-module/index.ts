@@ -27,13 +27,13 @@ export default class RangeModule {
                 this.#isRangeTracked(left, right, child)
             );
             // console.log(node, isRangeTracked_result);
-            if (can_cache_result) {
-                node.value = isRangeTracked_result ? 1 : 0;
+            // if (can_cache_result) {
+            //     node.value = isRangeTracked_result ? 1 : 0;
                 // this.#SegmentTree_to_isRangeTracked.set(
                 //     node,
                 //     isRangeTracked_result
                 // );
-            }
+            // }
             return isRangeTracked_result;
             // }
         } else {
@@ -54,11 +54,13 @@ export default class RangeModule {
 
     addRange(left: number, right: number): void {
         // console.log("addRange", left, right);
+        const parents: SegmentTree[] = [];
         const nodes = searchSegmentLeaf(left, right - 1, this.#root, {
             each: (node) => {
                 // this.#SegmentTree_to_isRangeTracked.delete(node);
                 if (node.children.length) {
-                    node.value = -1;
+                    // node.value = -1;
+                    parents.push(node);
                 }
                 // return console.log(node);
             },
@@ -67,6 +69,7 @@ export default class RangeModule {
             // node.value = 1;
             node.value = node.end - node.start + 1;
         }
+        this.#update_parents(parents);
         // console.log("addRange", JSON.stringify(this.#root, null, 4));
         // console.log(SegmentTree_to_isRangeTracked);
     }
@@ -77,14 +80,24 @@ export default class RangeModule {
         // console.log(SegmentTree_to_isRangeTracked);
         return this.#isRangeTracked(left, right - 1, this.#root);
     }
+    #update_parents(nodes: SegmentTree[]) {
+        for (let i = nodes.length - 1; i >= 0; i--) {
+            const node = nodes[i];
+            node.value = node.children.every((child) => child.value > 0)
+                ? 1
+                : 0;
+        }
+    }
 
     removeRange(left: number, right: number): void {
         // console.log("removeRange", left, right);
+        const parents: SegmentTree[] = [];
         const nodes = searchSegmentLeaf(left, right - 1, this.#root, {
             each: (node) => {
                 // this.#SegmentTree_to_isRangeTracked.delete(node);
                 if (node.children.length) {
-                    node.value = -1;
+                    // node.value = -1;
+                    parents.push(node);
                 }
                 // return console.log(node);
             },
@@ -92,6 +105,7 @@ export default class RangeModule {
         for (const node of nodes) {
             node.value = 0;
         }
+        this.#update_parents(parents);
         // console.log(SegmentTree_to_isRangeTracked);
         // console.log("removeRange", JSON.stringify(this.#root, null, 4));
     }
