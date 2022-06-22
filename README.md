@@ -724,6 +724,8 @@ https://leetcode.cn/problems/find-and-replace-pattern
 
 https://leetcode.cn/problems/diagonal-traverse/
 
+https://leetcode.cn/problems/prison-cells-after-n-days/
+
 #### 安装教程
 
 1. 安装`deno`
@@ -771,29 +773,17 @@ deno task check
 指定版本号
 
 ```ts
-import {} from "https://gitee.com/masx200/leetcode-test/raw/4.1.1/mod.ts";
-```
-
-```ts
-import {} from "https://raw.githubusercontent.com/masx200/leetcode-test/4.1.1/mod.ts";
-```
-
-```ts
-import {} from "https://cdn.jsdelivr.net/gh/masx200/leetcode-test@4.1.1/mod.ts";
-```
-
-```ts
-import {} from "https://deno.land/x/masx200_leetcode_test@4.1.1/mod.ts";
+import {} from "https://deno.land/x/masx200_leetcode_test@7.0.0/mod.ts";
 ```
 
 6.使用举例
 
 ```ts
-import { climbing_stairs_bigint } from "https://deno.land/x/masx200_leetcode_test@4.1.1/mod.ts";
+import { climbing_stairs_bigint } from "https://deno.land/x/masx200_leetcode_test@7.0.0/mod.ts";
 ```
 
 ```ts
-import climbing_stairs from "https://deno.land/x/masx200_leetcode_test@4.1.1/climbing-stairs/index.ts";
+import climbing_stairs from "https://deno.land/x/masx200_leetcode_test@7.0.0/climbing-stairs/index.ts";
 ```
 
 #### 参与贡献
