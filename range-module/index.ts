@@ -2,7 +2,7 @@ import { searchSegmentLeaf } from "../mod.ts";
 import { SegmentTree } from "../my-calendar-iii/SegmentTree.ts";
 
 export default class RangeModule {
-    #SegmentTree_to_isRangeTracked = new WeakMap<SegmentTree, boolean>();
+    // #SegmentTree_to_isRangeTracked = new WeakMap<SegmentTree, boolean>();
     #isRangeTracked(left: number, right: number, node: SegmentTree): boolean {
         // console.log("isRangeTracked", left, right, node);
         if (left > right || left > node.end || right < node.start) {
@@ -12,10 +12,10 @@ export default class RangeModule {
         if (node.children.length) {
             const can_cache_result = left <= node.start && right >= node.end;
             if (can_cache_result) {
-                const isRangeTrackedCached = this.#SegmentTree_to_isRangeTracked
-                    .get(node);
-                if (typeof isRangeTrackedCached !== "undefined") {
-                    return isRangeTrackedCached;
+                const isRangeTrackedCached = node.value;
+                // this.#SegmentTree_to_isRangeTracked.get(node);
+                if (isRangeTrackedCached >= 0) {
+                    return isRangeTrackedCached === 1;
                 }
             }
             // const isRangeTrackedCached = SegmentTree_to_isRangeTracked.get(node);
@@ -28,10 +28,11 @@ export default class RangeModule {
             );
             // console.log(node, isRangeTracked_result);
             if (can_cache_result) {
-                this.#SegmentTree_to_isRangeTracked.set(
-                    node,
-                    isRangeTracked_result,
-                );
+                node.value = isRangeTracked_result ? 1 : 0;
+                // this.#SegmentTree_to_isRangeTracked.set(
+                //     node,
+                //     isRangeTracked_result
+                // );
             }
             return isRangeTracked_result;
             // }
@@ -55,7 +56,10 @@ export default class RangeModule {
         // console.log("addRange", left, right);
         const nodes = searchSegmentLeaf(left, right - 1, this.#root, {
             each: (node) => {
-                this.#SegmentTree_to_isRangeTracked.delete(node);
+                // this.#SegmentTree_to_isRangeTracked.delete(node);
+                if (node.children.length) {
+                    node.value = -1;
+                }
                 // return console.log(node);
             },
         });
@@ -78,7 +82,10 @@ export default class RangeModule {
         // console.log("removeRange", left, right);
         const nodes = searchSegmentLeaf(left, right - 1, this.#root, {
             each: (node) => {
-                this.#SegmentTree_to_isRangeTracked.delete(node);
+                // this.#SegmentTree_to_isRangeTracked.delete(node);
+                if (node.children.length) {
+                    node.value = -1;
+                }
                 // return console.log(node);
             },
         });
