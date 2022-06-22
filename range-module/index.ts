@@ -6,7 +6,7 @@ export default class RangeModule {
     #isRangeTracked(left: number, right: number, node: SegmentTree): boolean {
         // console.log("isRangeTracked", left, right, node);
         if (left > right || left > node.end || right < node.start) {
-            return true;
+            return false;
         }
         // if (left <= node.start && right >= node.end) {
         if (node.children.length) {
@@ -23,9 +23,14 @@ export default class RangeModule {
             //     console.log(node, isRangeTrackedCached);
             //     return isRangeTrackedCached;
             // } else {
-            const isRangeTracked_result = node.children.every((child) =>
-                this.#isRangeTracked(left, right, child)
-            );
+            const isRangeTracked_result = node.children
+                .filter((node) => {
+                    if (left > right || left > node.end || right < node.start) {
+                        return false;
+                    }
+                    return true;
+                })
+                .every((child) => this.#isRangeTracked(left, right, child));
             // console.log(node, isRangeTracked_result);
             // if (can_cache_result) {
             //     node.value = isRangeTracked_result ? 1 : 0;
