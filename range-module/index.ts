@@ -5,7 +5,7 @@ export default class RangeModule {
     #root: SegmentTree = SegmentTree(
         Number.MIN_SAFE_INTEGER,
         Number.MAX_SAFE_INTEGER,
-        0
+        0,
     );
 
     addRange(left: number, right: number): void {
