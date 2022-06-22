@@ -47,7 +47,7 @@ Deno.test("RangeModule", () => {
         const ans = Reflect.apply(
             Reflect.get(rangeModule, target),
             rangeModule,
-            arg
+            arg,
         );
         if (typeof result === "boolean") {
             assertEquals(ans, result);

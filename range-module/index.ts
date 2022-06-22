@@ -5,7 +5,7 @@ export default class RangeModule {
     #root: SegmentTree = SegmentTree(
         Number.MIN_SAFE_INTEGER,
         Number.MAX_SAFE_INTEGER,
-        0
+        0,
     );
 
     addRange(left: number, right: number): void {
@@ -31,7 +31,7 @@ export default class RangeModule {
 function isRangeTracked(
     left: number,
     right: number,
-    node: SegmentTree
+    node: SegmentTree,
 ): boolean {
     if (node.children.length) {
         return node.children.every((node) => isRangeTracked(left, right, node));
