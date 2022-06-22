@@ -83,6 +83,7 @@ export default class RangeModule {
         // const nodes = searchSegmentLeaf(left, right - 1, this.#root);
         // return nodes.every((node) => node.value === 1);
         // console.log(SegmentTree_to_isRangeTracked);
+        // console.log(JSON.stringify(this.#root, null, 4));
         return this.#isRangeTracked(left, right - 1, this.#root);
     }
     #update_parents(nodes: SegmentTree[]) {

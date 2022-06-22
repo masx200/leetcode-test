@@ -1,6 +1,6 @@
 import { assertEquals } from "../deps.ts";
 import RangeModule from "./index.ts";
-Deno.test("RangeModule", () => {
+Deno.test("RangeModule-1", () => {
     const rangeModule = new RangeModule();
     const targets = [
         // "RangeModule",
@@ -38,6 +38,60 @@ Deno.test("RangeModule", () => {
         false,
         null,
         true,
+    ] as const;
+
+    for (let i = 0; i < targets.length; i++) {
+        const target = targets[i];
+        const arg = args[i];
+        const result = results[i];
+        const ans = Reflect.apply(
+            Reflect.get(rangeModule, target),
+            rangeModule,
+            arg,
+        );
+        // console.log(target, arg, ans, result);
+        if (typeof result === "boolean") {
+            assertEquals(ans, result);
+        }
+    }
+});
+Deno.test("RangeModule-2", () => {
+    const rangeModule = new RangeModule();
+
+    const targets = [
+        "addRange",
+        "queryRange",
+        "removeRange",
+        "removeRange",
+        "addRange",
+        "queryRange",
+        "addRange",
+        "queryRange",
+        "removeRange",
+    ] as const;
+
+    const args = [
+        [5, 8],
+        [3, 4],
+        [5, 6],
+        [3, 6],
+        [1, 3],
+        [2, 3],
+        [4, 8],
+        [2, 3],
+        [4, 9],
+    ] as const;
+    const results = [
+        // null,
+        null,
+        false,
+        null,
+        null,
+        null,
+        true,
+        null,
+        true,
+        null,
     ] as const;
 
     for (let i = 0; i < targets.length; i++) {
