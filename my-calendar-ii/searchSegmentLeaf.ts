@@ -5,7 +5,9 @@ export function searchSegmentLeaf(
     start: number,
     end: number,
     node: SegmentTree,
+    options: { each?(node: SegmentTree): void } = {},
 ): SegmentTree[] {
+    const { each } = options;
     start = Math.max(start, node.start);
     end = Math.min(end, node.end);
     if (start > end || start > node.end || end < node.start) {
@@ -13,9 +15,14 @@ export function searchSegmentLeaf(
     }
 
     if (start <= node.start && end >= node.end) {
-        return node.children.length
-            ? searchSegmentChildren(start, end, node.children)
-            : [node];
+        each?.(node);
+        if (node.children.length) {
+            return searchSegmentChildren(start, end, node.children, options);
+        } else {
+            return [node];
+        }
+        // ? searchSegmentChildren(start, end, node.children, options)
+        // : [node];
     }
 
     if (!node.children.length) {
@@ -32,7 +39,8 @@ export function searchSegmentLeaf(
         );
     }
     if (node.children.length) {
-        return searchSegmentChildren(start, end, node.children);
+        each?.(node);
+        return searchSegmentChildren(start, end, node.children, options);
     }
 
     return [];

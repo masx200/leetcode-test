@@ -49,6 +49,7 @@ Deno.test("RangeModule", () => {
             rangeModule,
             arg,
         );
+        // console.log(target, arg, ans, result);
         if (typeof result === "boolean") {
             assertEquals(ans, result);
         }
