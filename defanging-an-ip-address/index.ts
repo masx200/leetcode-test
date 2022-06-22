@@ -1,4 +1,4 @@
 export default function defangIPaddr(address: string): string {
-    //@ts-ignore
+    /*     ////// @ts-ignore */
     return address.replaceAll(".", "[.]");
 }
