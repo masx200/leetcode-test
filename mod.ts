@@ -54,6 +54,8 @@ import { greatest_common_divisor } from "./max-points-on-a-line/greatest_common_
 import { abs_bigint } from "./fraction-to-recurring-decimal/abs_bigint.ts";
 import { calculateStraightLineEquation } from "./max-points-on-a-line/calculateStraightLineEquation.ts";
 import { uniqueStraightLineEquation } from "./max-points-on-a-line/uniqueStraightLineEquation.ts";
+import { searchSegmentChildren } from "./my-calendar-ii/searchSegmentChildren.ts";
+import { searchSegmentTree } from "./my-calendar-ii/searchSegmentTree.ts";
 export {
     TrieNode,
     TrieNodeCountWordsEqualTo,
@@ -89,4 +91,4 @@ export { Node as RandomNode } from "./copy-list-with-random-pointer/Node.ts";
 export { Node as TreeNextNode } from "./populating-next-right-pointers-in-each-node/Node.ts";
 export { SegmentTree };
 export { cos, dot, norm };
-export { abs_bigint };
+export { abs_bigint, searchSegmentChildren, searchSegmentTree };

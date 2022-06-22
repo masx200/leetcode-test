@@ -5,8 +5,8 @@ export interface SegmentTree {
     children: SegmentTree[];
 }
 export function SegmentTree(
-    start = 0,
-    end = 0,
+    start = Number.MIN_SAFE_INTEGER,
+    end = Number.MAX_SAFE_INTEGER,
     value = 0,
     children: SegmentTree[] = [],
 ): SegmentTree {

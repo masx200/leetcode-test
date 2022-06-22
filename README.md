@@ -728,6 +728,8 @@ https://leetcode.cn/problems/prison-cells-after-n-days/
 
 https://leetcode.cn/problems/find-a-value-of-a-mysterious-function-closest-to-target/
 
+https://leetcode.cn/problems/range-module/
+
 #### 安装教程
 
 1. 安装`deno`
