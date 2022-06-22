@@ -1,5 +1,5 @@
 import { SegmentTree } from "../my-calendar-iii/SegmentTree.ts";
-import { searchSegmentTree } from "./searchSegmentTree.ts";
+import { searchSegmentLeaf } from "./searchSegmentLeaf.ts";
 
 export default class MyCalendarTwo {
     #root: SegmentTree = SegmentTree(
@@ -19,7 +19,7 @@ export default class MyCalendarTwo {
         return true;
     }
     book(start: number, end: number): boolean {
-        const nodes = searchSegmentTree(start, end - 1, this.#root);
+        const nodes = searchSegmentLeaf(start, end - 1, this.#root);
 
         return this.#increase(nodes);
     }

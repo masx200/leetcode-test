@@ -1,7 +1,7 @@
 import { SegmentTree } from "../my-calendar-iii/SegmentTree.ts";
 import { searchSegmentChildren } from "./searchSegmentChildren.ts";
 
-export function searchSegmentTree(
+export function searchSegmentLeaf(
     start: number,
     end: number,
     node: SegmentTree,

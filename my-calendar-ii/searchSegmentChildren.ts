@@ -1,5 +1,5 @@
 import { SegmentTree } from "../my-calendar-iii/SegmentTree.ts";
-import { searchSegmentTree } from "./searchSegmentTree.ts";
+import { searchSegmentLeaf } from "./searchSegmentLeaf.ts";
 
 export function searchSegmentChildren(
     start: number,
@@ -8,7 +8,7 @@ export function searchSegmentChildren(
 ): SegmentTree[] {
     const trees: SegmentTree[] = [];
     for (const child of nodes) {
-        trees.push(...searchSegmentTree(start, end, child));
+        trees.push(...searchSegmentLeaf(start, end, child));
     }
     return trees;
 }
