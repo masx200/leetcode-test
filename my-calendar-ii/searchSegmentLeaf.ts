@@ -34,9 +34,7 @@ export function searchSegmentLeaf(
             .slice(0, -1)
             .filter(([a, b]) => node.start <= a && node.end >= b);
 
-        node.children.push(
-            ...segments.map(([a, b]) => SegmentTree(a, b, node.value)),
-        );
+        node.children = segments.map(([a, b]) => SegmentTree(a, b, node.value));
     }
     if (node.children.length) {
         each?.(node);
