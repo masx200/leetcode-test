@@ -730,6 +730,8 @@ https://leetcode.cn/problems/find-a-value-of-a-mysterious-function-closest-to-ta
 
 https://leetcode.cn/problems/range-module/
 
+https://leetcode.cn/problems/substring-with-concatenation-of-all-words
+
 #### 安装教程
 
 1. 安装`deno`

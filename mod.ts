@@ -56,6 +56,7 @@ import { calculateStraightLineEquation } from "./max-points-on-a-line/calculateS
 import { uniqueStraightLineEquation } from "./max-points-on-a-line/uniqueStraightLineEquation.ts";
 import { searchSegmentChildren } from "./my-calendar-ii/searchSegmentChildren.ts";
 import { searchSegmentLeaf } from "./my-calendar-ii/searchSegmentLeaf.ts";
+import { counter } from "./substring-with-concatenation-of-all-words/counter.ts";
 export {
     TrieNode,
     TrieNodeCountWordsEqualTo,
@@ -92,3 +93,4 @@ export { Node as TreeNextNode } from "./populating-next-right-pointers-in-each-n
 export { SegmentTree };
 export { cos, dot, norm };
 export { abs_bigint, searchSegmentChildren, searchSegmentLeaf };
+export { counter };
