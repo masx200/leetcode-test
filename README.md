@@ -738,6 +738,8 @@ https://leetcode.cn/problems/remove-zero-sum-consecutive-nodes-from-linked-list/
 
 https://leetcode.cn/problems/find-center-of-star-graph/
 
+https://leetcode.cn/problems/string-compression/
+
 #### 安装教程
 
 1. 安装`deno`
