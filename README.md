@@ -748,6 +748,8 @@ https://leetcode.cn/problems/sign-of-the-product-of-an-array/
 
 https://leetcode.cn/problems/truncate-sentence/
 
+https://leetcode.cn/problems/check-if-one-string-swap-can-make-strings-equal/
+
 #### 安装教程
 
 1. 安装`deno`
