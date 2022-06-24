@@ -94,3 +94,4 @@ export { SegmentTree };
 export { cos, dot, norm };
 export { abs_bigint, searchSegmentChildren, searchSegmentLeaf };
 export { counter };
+export { Node as MultilevelDoublyLinkedListNode } from "./flatten-a-multilevel-doubly-linked-list/Node.ts";
