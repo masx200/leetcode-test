@@ -742,6 +742,8 @@ https://leetcode.cn/problems/string-compression/
 
 https://leetcode.cn/problems/determine-color-of-a-chessboard-square/
 
+https://leetcode.cn/problems/number-of-different-integers-in-a-string/
+
 #### 安装教程
 
 1. 安装`deno`
