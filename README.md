@@ -740,6 +740,8 @@ https://leetcode.cn/problems/find-center-of-star-graph/
 
 https://leetcode.cn/problems/string-compression/
 
+https://leetcode.cn/problems/determine-color-of-a-chessboard-square/
+
 #### 安装教程
 
 1. 安装`deno`
