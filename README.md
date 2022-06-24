@@ -732,6 +732,8 @@ https://leetcode.cn/problems/range-module/
 
 https://leetcode.cn/problems/substring-with-concatenation-of-all-words
 
+https://leetcode.cn/problems/remove-zero-sum-consecutive-nodes-from-linked-list/
+
 #### 安装教程
 
 1. 安装`deno`
