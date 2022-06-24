@@ -744,6 +744,8 @@ https://leetcode.cn/problems/determine-color-of-a-chessboard-square/
 
 https://leetcode.cn/problems/number-of-different-integers-in-a-string/
 
+https://leetcode.cn/problems/sign-of-the-product-of-an-array/
+
 #### 安装教程
 
 1. 安装`deno`
