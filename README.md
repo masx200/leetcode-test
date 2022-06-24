@@ -746,6 +746,8 @@ https://leetcode.cn/problems/number-of-different-integers-in-a-string/
 
 https://leetcode.cn/problems/sign-of-the-product-of-an-array/
 
+https://leetcode.cn/problems/truncate-sentence/
+
 #### 安装教程
 
 1. 安装`deno`
