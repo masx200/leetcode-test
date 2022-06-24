@@ -736,6 +736,8 @@ https://leetcode.cn/problems/check-if-binary-string-has-at-most-one-segment-of-o
 
 https://leetcode.cn/problems/remove-zero-sum-consecutive-nodes-from-linked-list/
 
+https://leetcode.cn/problems/find-center-of-star-graph/
+
 #### 安装教程
 
 1. 安装`deno`
