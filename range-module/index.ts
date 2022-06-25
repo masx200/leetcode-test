@@ -85,6 +85,9 @@ export default class RangeModule {
                 node.children.length = 0;
             }
         }
+        // console.log(JSON.stringify(this.#root, null, 4));
+        this.#merge_children(parents);
+        // console.log(JSON.stringify(this.#root, null, 4));
     }
 
     queryRange(left: number, right: number): boolean {
@@ -100,6 +103,44 @@ export default class RangeModule {
             node.value = node.children.every((child) => child.value > 0)
                 ? 1
                 : 0;
+            // this.#node_to_all_zero.set(
+            //     node,
+            //     node.children.every((child) =>
+            //         this.#node_to_all_zero.get(child)
+            //     ),
+            // );
+        }
+    }
+    #merge_children(nodes: SegmentTree[]) {
+        for (let i = nodes.length - 1; i >= 0; i--) {
+            const node = nodes[i];
+            if (node.children.every((child) => child.value > 0)) {
+                node.children.length = 0;
+            }
+            if (
+                node.children.every(
+                    (child) => child.children.length === 0 && child.value === 0,
+                )
+            ) {
+                node.children.length = 0;
+            }
+
+            // if (node.children.length) {
+            //     console.log(node.children);
+            //     for (let i = 0; i < node.children.length - 1; i++) {
+            //         const child = node.children[i];
+            //         if (child.value===0&&child.value === node.children[i + 1].value) {
+            //             child.end = node.children[i + 1].end;
+
+            //             node.children.splice(i + 1, 1);
+            //         }
+            //     }
+            //     console.log(node.children);
+            // }
+
+            // node.value = node.children.every((child) => child.value > 0)
+            //     ? 1
+            //     : 0;
             // this.#node_to_all_zero.set(
             //     node,
             //     node.children.every((child) =>
@@ -127,6 +168,7 @@ export default class RangeModule {
             // this.#node_to_all_zero.set(node, true);
         }
         this.#update_parents(parents);
+        this.#merge_children(parents);
         // console.log(SegmentTree_to_isRangeTracked);
         // console.log("removeRange", JSON.stringify(this.#root, null, 4));
 
@@ -135,5 +177,6 @@ export default class RangeModule {
         //         node.children.length = 0;
         //     }
         // }
+        // console.log(JSON.stringify(this.#root, null, 4));
     }
 }
