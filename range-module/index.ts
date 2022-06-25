@@ -55,7 +55,7 @@ export default class RangeModule {
     #root: SegmentTree = SegmentTree(
         Number.MIN_SAFE_INTEGER,
         Number.MAX_SAFE_INTEGER,
-        0
+        0,
     );
 
     addRange(left: number, right: number): void {
@@ -74,6 +74,7 @@ export default class RangeModule {
         for (const node of nodes) {
             node.value = 1;
             // node.value = node.end - node.start + 1;
+            // this.#node_to_all_zero.set(node, false);
         }
         this.#update_parents(parents);
         // console.log("addRange", JSON.stringify(this.#root, null, 4));
@@ -99,9 +100,15 @@ export default class RangeModule {
             node.value = node.children.every((child) => child.value > 0)
                 ? 1
                 : 0;
+            // this.#node_to_all_zero.set(
+            //     node,
+            //     node.children.every((child) =>
+            //         this.#node_to_all_zero.get(child)
+            //     ),
+            // );
         }
     }
-
+    // #node_to_all_zero = new WeakMap<SegmentTree, boolean>();
     removeRange(left: number, right: number): void {
         // console.log("removeRange", left, right);
         const parents: SegmentTree[] = [];
@@ -117,9 +124,16 @@ export default class RangeModule {
         });
         for (const node of nodes) {
             node.value = 0;
+            // this.#node_to_all_zero.set(node, true);
         }
         this.#update_parents(parents);
         // console.log(SegmentTree_to_isRangeTracked);
         // console.log("removeRange", JSON.stringify(this.#root, null, 4));
+
+        // for (const node of parents) {
+        //     if (this.#node_to_all_zero.get(node)) {
+        //         node.children.length = 0;
+        //     }
+        // }
     }
 }
