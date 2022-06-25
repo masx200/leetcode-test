@@ -26,8 +26,9 @@ export default class TextEditor {
             this.left += text;
             this.position = this.left.length;
         } else {
-            this.right = this.slice(this.position, this.length);
-            this.left = this.slice(0, this.position) + text;
+            const all_text = this.left + this.right;
+            this.right = all_text.slice(this.position, this.length);
+            this.left = all_text.slice(0, this.position) + text;
             this.position = this.left.length;
         }
     }
@@ -40,10 +41,11 @@ export default class TextEditor {
             this.position = this.left.length;
             return count;
         } else {
+            const all_text = this.left + this.right;
             const count = Math.min(k, this.position);
-            this.right = this.slice(this.position, this.length);
+            this.right = all_text.slice(this.position, this.length);
             const end = Math.max(0, this.position - k);
-            this.left = this.slice(0, end);
+            this.left = all_text.slice(0, end);
             this.position = this.left.length;
             return count;
         }
