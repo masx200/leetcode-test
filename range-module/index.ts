@@ -3,26 +3,17 @@ import { SegmentTree } from "../my-calendar-iii/SegmentTree.ts";
 
 export default class RangeModule {
     #isRangeTracked(left: number, right: number, node: SegmentTree): boolean {
-        // console.log("isRangeTracked", left, right, node);
         if (left > right || left > node.end || right < node.start) {
             return false;
         }
-        // if (left <= node.start && right >= node.end) {
         if (node.children.length) {
             const can_cache_result = left <= node.start && right >= node.end;
             if (can_cache_result) {
                 const isRangeTrackedCached = node.value;
-                // this.#SegmentTree_to_isRangeTracked.get(node);
                 if (isRangeTrackedCached >= 0) {
-                    // return isRangeTrackedCached === 1;
                     return isRangeTrackedCached > 0;
                 }
             }
-            // const isRangeTrackedCached = SegmentTree_to_isRangeTracked.get(node);
-            // if (typeof isRangeTrackedCached !== "undefined") {
-            //     console.log(node, isRangeTrackedCached);
-            //     return isRangeTrackedCached;
-            // } else {
             const isRangeTracked_result = node.children
                 .filter((node) => {
                     if (left > right || left > node.end || right < node.start) {
@@ -31,26 +22,10 @@ export default class RangeModule {
                     return true;
                 })
                 .every((child) => this.#isRangeTracked(left, right, child));
-            // console.log(node, isRangeTracked_result);
-            // if (can_cache_result) {
-            //     node.value = isRangeTracked_result ? 1 : 0;
-            // this.#SegmentTree_to_isRangeTracked.set(
-            //     node,
-            //     isRangeTracked_result
-            // );
-            // }
             return isRangeTracked_result;
-            // }
         } else {
-            // return node.value >= node.end - node.start + 1;
             return node.value > 0;
-            // return node.value === 1;
         }
-        // }
-
-        // if (node.children.length) {
-        //     return node.children.every((node) => isRangeTracked(left, right, node));
-        // }
     }
     #root: SegmentTree = SegmentTree(
         Number.MIN_SAFE_INTEGER,
@@ -59,42 +34,27 @@ export default class RangeModule {
     );
 
     addRange(left: number, right: number): void {
-        // console.log("addRange", left, right);
         const parents: SegmentTree[] = [];
         const nodes = searchSegmentLeaf(left, right - 1, this.#root, {
             each: (node) => {
-                // this.#SegmentTree_to_isRangeTracked.delete(node);
                 if (node.children.length) {
-                    // node.value = -1;
                     parents.push(node);
                 }
-                // return console.log(node);
             },
         });
         for (const node of nodes) {
             node.value = 1;
-            // node.value = node.end - node.start + 1;
-            // this.#node_to_all_zero.set(node, false);
         }
         this.#update_parents(parents);
-        // console.log("addRange", JSON.stringify(this.#root, null, 4));
-        // console.log(SegmentTree_to_isRangeTracked);
-
         for (const node of parents) {
             if (node.value > 0) {
                 node.children.length = 0;
             }
         }
-        // console.log(JSON.stringify(this.#root, null, 4));
         this.#merge_children(parents);
-        // console.log(JSON.stringify(this.#root, null, 4));
     }
 
     queryRange(left: number, right: number): boolean {
-        // const nodes = searchSegmentLeaf(left, right - 1, this.#root);
-        // return nodes.every((node) => node.value === 1);
-        // console.log(SegmentTree_to_isRangeTracked);
-        // console.log(JSON.stringify(this.#root, null, 4));
         return this.#isRangeTracked(left, right - 1, this.#root);
     }
     #update_parents(nodes: SegmentTree[]) {
@@ -103,12 +63,6 @@ export default class RangeModule {
             node.value = node.children.every((child) => child.value > 0)
                 ? 1
                 : 0;
-            // this.#node_to_all_zero.set(
-            //     node,
-            //     node.children.every((child) =>
-            //         this.#node_to_all_zero.get(child)
-            //     ),
-            // );
         }
     }
     #merge_children(nodes: SegmentTree[]) {
@@ -124,59 +78,21 @@ export default class RangeModule {
             ) {
                 node.children.length = 0;
             }
-
-            // if (node.children.length) {
-            //     console.log(node.children);
-            //     for (let i = 0; i < node.children.length - 1; i++) {
-            //         const child = node.children[i];
-            //         if (child.value===0&&child.value === node.children[i + 1].value) {
-            //             child.end = node.children[i + 1].end;
-
-            //             node.children.splice(i + 1, 1);
-            //         }
-            //     }
-            //     console.log(node.children);
-            // }
-
-            // node.value = node.children.every((child) => child.value > 0)
-            //     ? 1
-            //     : 0;
-            // this.#node_to_all_zero.set(
-            //     node,
-            //     node.children.every((child) =>
-            //         this.#node_to_all_zero.get(child)
-            //     ),
-            // );
         }
     }
-    // #node_to_all_zero = new WeakMap<SegmentTree, boolean>();
     removeRange(left: number, right: number): void {
-        // console.log("removeRange", left, right);
         const parents: SegmentTree[] = [];
         const nodes = searchSegmentLeaf(left, right - 1, this.#root, {
             each: (node) => {
-                // this.#SegmentTree_to_isRangeTracked.delete(node);
                 if (node.children.length) {
-                    // node.value = -1;
                     parents.push(node);
                 }
-                // return console.log(node);
             },
         });
         for (const node of nodes) {
             node.value = 0;
-            // this.#node_to_all_zero.set(node, true);
         }
         this.#update_parents(parents);
         this.#merge_children(parents);
-        // console.log(SegmentTree_to_isRangeTracked);
-        // console.log("removeRange", JSON.stringify(this.#root, null, 4));
-
-        // for (const node of parents) {
-        //     if (this.#node_to_all_zero.get(node)) {
-        //         node.children.length = 0;
-        //     }
-        // }
-        // console.log(JSON.stringify(this.#root, null, 4));
     }
 }

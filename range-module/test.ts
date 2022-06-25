@@ -3,7 +3,6 @@ import RangeModule from "./index.ts";
 Deno.test("RangeModule-1", () => {
     const rangeModule = new RangeModule();
     const targets = [
-        // "RangeModule",
         "addRange",
         "removeRange",
         "queryRange",
@@ -16,7 +15,6 @@ Deno.test("RangeModule-1", () => {
     ] as const;
 
     const args = [
-        // ([],
         [10, 20],
         [14, 16],
         [10, 14],
@@ -28,7 +26,6 @@ Deno.test("RangeModule-1", () => {
         [16, 17000],
     ] as const;
     const results = [
-        // null,
         null,
         null,
         true,
@@ -49,7 +46,6 @@ Deno.test("RangeModule-1", () => {
             rangeModule,
             arg,
         );
-        // console.log(target, arg, ans, result);
         if (typeof result === "boolean") {
             assertEquals(ans, result);
         }
@@ -82,7 +78,6 @@ Deno.test("RangeModule-2", () => {
         [4, 9],
     ] as const;
     const results = [
-        // null,
         null,
         false,
         null,
@@ -103,7 +98,6 @@ Deno.test("RangeModule-2", () => {
             rangeModule,
             arg,
         );
-        // console.log(target, arg, ans, result);
         if (typeof result === "boolean") {
             assertEquals(ans, result);
         }
