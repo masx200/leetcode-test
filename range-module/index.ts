@@ -2,7 +2,6 @@ import { searchSegmentLeaf } from "../mod.ts";
 import { SegmentTree } from "../my-calendar-iii/SegmentTree.ts";
 
 export default class RangeModule {
-    // #SegmentTree_to_isRangeTracked = new WeakMap<SegmentTree, boolean>();
     #isRangeTracked(left: number, right: number, node: SegmentTree): boolean {
         // console.log("isRangeTracked", left, right, node);
         if (left > right || left > node.end || right < node.start) {
@@ -56,7 +55,7 @@ export default class RangeModule {
     #root: SegmentTree = SegmentTree(
         Number.MIN_SAFE_INTEGER,
         Number.MAX_SAFE_INTEGER,
-        0,
+        0
     );
 
     addRange(left: number, right: number): void {
