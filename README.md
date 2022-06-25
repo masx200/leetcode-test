@@ -760,6 +760,10 @@ https://leetcode.cn/problems/Qv1Da2/
 
 https://leetcode.cn/problems/design-a-text-editor/
 
+https://leetcode.cn/problems/paint-house/
+
+https://leetcode.cn/problems/JEj789/
+
 #### 安装教程
 
 1. 安装`deno`
