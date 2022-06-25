@@ -764,6 +764,8 @@ https://leetcode.cn/problems/paint-house/
 
 https://leetcode.cn/problems/JEj789/
 
+https://leetcode.cn/problems/OrIXps/
+
 #### 安装教程
 
 1. 安装`deno`
