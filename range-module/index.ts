@@ -15,7 +15,8 @@ export default class RangeModule {
                 const isRangeTrackedCached = node.value;
                 // this.#SegmentTree_to_isRangeTracked.get(node);
                 if (isRangeTrackedCached >= 0) {
-                    return isRangeTrackedCached === 1;
+                    // return isRangeTrackedCached === 1;
+                    return isRangeTrackedCached > 0;
                 }
             }
             // const isRangeTrackedCached = SegmentTree_to_isRangeTracked.get(node);
@@ -42,7 +43,8 @@ export default class RangeModule {
             return isRangeTracked_result;
             // }
         } else {
-            return node.value >= node.end - node.start + 1;
+            // return node.value >= node.end - node.start + 1;
+            return node.value > 0;
             // return node.value === 1;
         }
         // }
@@ -71,12 +73,18 @@ export default class RangeModule {
             },
         });
         for (const node of nodes) {
-            // node.value = 1;
-            node.value = node.end - node.start + 1;
+            node.value = 1;
+            // node.value = node.end - node.start + 1;
         }
         this.#update_parents(parents);
         // console.log("addRange", JSON.stringify(this.#root, null, 4));
         // console.log(SegmentTree_to_isRangeTracked);
+
+        for (const node of parents) {
+            if (node.value > 0) {
+                node.children.length = 0;
+            }
+        }
     }
 
     queryRange(left: number, right: number): boolean {
@@ -116,4 +124,3 @@ export default class RangeModule {
         // console.log("removeRange", JSON.stringify(this.#root, null, 4));
     }
 }
-// const SegmentTree_to_isRangeTracked = new Map<SegmentTree, boolean>();
