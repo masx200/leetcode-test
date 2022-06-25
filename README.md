@@ -758,6 +758,8 @@ https://leetcode.cn/problems/flatten-a-multilevel-doubly-linked-list/
 
 https://leetcode.cn/problems/Qv1Da2/
 
+https://leetcode.cn/problems/design-a-text-editor/
+
 #### 安装教程
 
 1. 安装`deno`
