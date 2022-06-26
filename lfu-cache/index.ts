@@ -78,6 +78,7 @@ class LFUCache {
         const freq_set = this.#freq_to_keys.get(freq);
         freq_set && freq_set.delete(key);
         if (freq_set && freq_set.size === 0) {
+            this.#freq_to_keys.delete(freq);
             const node = this.#freq_to_node.get(freq);
             this.#freq_to_node.delete(freq);
             node && this.#linked_list.remove_node(node);
