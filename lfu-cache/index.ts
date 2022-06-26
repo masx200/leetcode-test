@@ -96,7 +96,7 @@ class LFUCache {
     }
     #insert_After(
         prev_node: DoublyLinkedList<number>,
-        new_node: DoublyLinkedList<number>
+        new_node: DoublyLinkedList<number>,
     ): void {
         const next = prev_node.next;
         const prev = prev_node;
@@ -123,8 +123,8 @@ class LFUCache {
     put(key: number, value: number): void {
         if (!this.#has(key)) {
             if (this.#size === this.#capacity) {
-                const to_be_removed_key =
-                    this.#least_frequently_recently_used_key();
+                const to_be_removed_key = this
+                    .#least_frequently_recently_used_key();
                 if (typeof to_be_removed_key === "number") {
                     this.#delete(to_be_removed_key);
                 }
