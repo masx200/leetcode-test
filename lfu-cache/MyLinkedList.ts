@@ -32,7 +32,7 @@ export class MyLinkedList<T = number> {
     }
     insert_Before(
         next_node: DoublyLinkedList<T>,
-        new_node: DoublyLinkedList<T>
+        new_node: DoublyLinkedList<T>,
     ): void {
         const next = next_node;
         const prev = next_node.prev;
@@ -58,7 +58,7 @@ export class MyLinkedList<T = number> {
     }
     insert_After(
         prev_node: DoublyLinkedList<T>,
-        new_node: DoublyLinkedList<T>
+        new_node: DoublyLinkedList<T>,
     ): void {
         const next = prev_node.next;
         const prev = prev_node;

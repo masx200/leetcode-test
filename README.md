@@ -768,6 +768,8 @@ https://leetcode.cn/problems/OrIXps/
 
 https://leetcode.cn/problems/lfu-cache/
 
+https://leetcode.cn/problems/random-pick-with-blacklist
+
 #### 安装教程
 
 1. 安装`deno`
