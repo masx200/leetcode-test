@@ -766,6 +766,8 @@ https://leetcode.cn/problems/JEj789/
 
 https://leetcode.cn/problems/OrIXps/
 
+https://leetcode.cn/problems/lfu-cache/
+
 #### 安装教程
 
 1. 安装`deno`
