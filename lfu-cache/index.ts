@@ -27,7 +27,7 @@ class MyLinkedList<T = number> {
     }
     insert_After(
         prev_node: DoublyLinkedList<T>,
-        new_node: DoublyLinkedList<T>,
+        new_node: DoublyLinkedList<T>
     ): void {
         const next = prev_node.next;
         const prev = prev_node;
@@ -119,6 +119,7 @@ class LFUCache {
     }
 
     get(key: number): number {
+        if (this.#capacity === 0) return -1;
         const value = this.#key_to_value.get(key);
         // debugger;
         if (typeof value === "number" && this.#has(key)) {
@@ -131,11 +132,12 @@ class LFUCache {
         return this.#key_to_value.has(key);
     }
     put(key: number, value: number): void {
+        if (this.#capacity === 0) return;
         // debugger;
         if (!this.#has(key)) {
             if (this.#size === this.#capacity) {
-                const to_be_removed_key = this
-                    .#least_frequently_recently_used_key();
+                const to_be_removed_key =
+                    this.#least_frequently_recently_used_key();
                 if (typeof to_be_removed_key === "number") {
                     this.#delete(to_be_removed_key);
                 }
