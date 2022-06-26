@@ -79,6 +79,7 @@ class LFUCache {
         }
         const freq_set = this.#freq_to_keys.get(freq);
         freq_set && freq_set.add(key);
+        /* 必须最后再删除,否则连不上去 */
         this.#remove_key_empty_freq_node(freq - 1, key);
     }
 
@@ -98,7 +99,7 @@ class LFUCache {
     }
     #insert_After(
         prev_node: DoublyLinkedList<number>,
-        new_node: DoublyLinkedList<number>,
+        new_node: DoublyLinkedList<number>
     ): void {
         const next = prev_node.next;
         const prev = prev_node;
@@ -127,8 +128,8 @@ class LFUCache {
         // debugger;
         if (!this.#has(key)) {
             if (this.#size === this.#capacity) {
-                const to_be_removed_key = this
-                    .#least_frequently_recently_used_key();
+                const to_be_removed_key =
+                    this.#least_frequently_recently_used_key();
                 if (typeof to_be_removed_key === "number") {
                     this.#delete(to_be_removed_key);
                 }
