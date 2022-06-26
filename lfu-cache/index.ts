@@ -54,10 +54,10 @@ class LFUCache {
         return this.#key_to_freq.size;
     }
     #increase(key: number): void {
+        // debugger;
         const freq = (this.#key_to_freq.get(key) ?? 0) + 1;
 
         this.#key_to_freq.set(key, freq);
-        this.#remove_key_empty_freq_node(freq - 1, key);
 
         if (!this.#freq_to_keys.has(freq)) {
             const node = DoublyLinkedList(freq);
@@ -68,6 +68,7 @@ class LFUCache {
                 this.#freq_to_node.set(freq, node);
             } else {
                 const prev = this.#freq_to_node.get(freq - 1);
+                // debugger;
                 if (!prev) {
                     throw new Error("accident prev is undefined");
                 }
@@ -78,6 +79,7 @@ class LFUCache {
         }
         const freq_set = this.#freq_to_keys.get(freq);
         freq_set && freq_set.add(key);
+        this.#remove_key_empty_freq_node(freq - 1, key);
     }
 
     #insert_First(node: DoublyLinkedList<number>): void {
@@ -111,7 +113,7 @@ class LFUCache {
     }
     get(key: number): number {
         const value = this.#key_to_value.get(key);
-        debugger;
+        // debugger;
         if (typeof value === "number" && this.#has(key)) {
             this.#increase(key);
             return value;
@@ -122,7 +124,7 @@ class LFUCache {
         return this.#key_to_value.has(key);
     }
     put(key: number, value: number): void {
-        debugger;
+        // debugger;
         if (!this.#has(key)) {
             if (this.#size === this.#capacity) {
                 const to_be_removed_key = this
