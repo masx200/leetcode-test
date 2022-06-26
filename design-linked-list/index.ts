@@ -1,6 +1,6 @@
 import { DoublyLinkedList } from "./DoublyLinkedList.ts";
-
-interface MyLinkedList<T> {
+// deno-lint-ignore no-explicit-any
+interface MyLinkedList<T = any> {
     get(index: number): T | number;
 
     addAtHead(val: T): void;
