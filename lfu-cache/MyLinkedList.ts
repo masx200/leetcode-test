@@ -27,6 +27,24 @@ export class MyLinkedList<T = number> {
     insert_First(node: DoublyLinkedList<T>): void {
         this.insert_After(this.#freq_list_head, node);
     }
+    append_last(node: DoublyLinkedList<T>): void {
+        this.insert_Before(this.#freq_list_tail, node);
+    }
+    insert_Before(
+        next_node: DoublyLinkedList<T>,
+        new_node: DoublyLinkedList<T>
+    ): void {
+        const next = next_node;
+        const prev = next_node.prev;
+        if (prev && next) {
+            prev.next = new_node;
+            new_node.prev = prev;
+            new_node.next = next;
+            next.prev = new_node;
+        } else {
+            throw Error("next prev_node not in list");
+        }
+    }
     remove_node(node: DoublyLinkedList<T>): void {
         const prev = node.prev;
         const next = node.next;
