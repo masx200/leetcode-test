@@ -48,3 +48,15 @@ Deno.test("lfu-cache-1", () => {
     assertEquals(4, lfu.get(4)); // 返回 4
     // cache=[3,4], cnt(4)=2, cnt(3)=3
 });
+
+Deno.test("lfu-cache-3", () => {
+    // cnt(x) = 键 x 的使用计数
+    // cache=[] 将显示最后一次使用的顺序（最左边的元素是最近的）
+    const lfu = new LFUCache(0);
+    lfu.put(0, 0); // cache=[1,_], cnt(1)=1
+
+    assertEquals(-1, lfu.get(0)); // 返回 1
+    // cache=[1,2], cnt(2)=1, cnt(1)=2
+
+    // cache=[3,4], cnt(4)=2, cnt(3)=3
+});
