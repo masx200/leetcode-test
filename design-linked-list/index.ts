@@ -19,8 +19,8 @@ interface MyLinkedList<T = any> {
 function MyLinkedList<T = any>(): MyLinkedList<T> {
     let size = 0;
     //头尾固定的伪节点
-    const head: DoublyLinkedList<undefined> = DoublyLinkedList(undefined);
-    const tail: DoublyLinkedList<undefined> = DoublyLinkedList(undefined);
+    const head: DoublyLinkedList<T> = DoublyLinkedList();
+    const tail: DoublyLinkedList<T> = DoublyLinkedList();
     head.next = tail;
     tail.prev = head;
 
