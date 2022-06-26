@@ -57,6 +57,7 @@ import { uniqueStraightLineEquation } from "./max-points-on-a-line/uniqueStraigh
 import { searchSegmentChildren } from "./my-calendar-ii/searchSegmentChildren.ts";
 import { searchSegmentLeaf } from "./my-calendar-ii/searchSegmentLeaf.ts";
 import { counter } from "./substring-with-concatenation-of-all-words/counter.ts";
+import { MyLinkedList } from "./lfu-cache/MyLinkedList.ts";
 export {
     TrieNode,
     TrieNodeCountWordsEqualTo,
@@ -95,3 +96,4 @@ export { cos, dot, norm };
 export { abs_bigint, searchSegmentChildren, searchSegmentLeaf };
 export { counter };
 export { Node as MultilevelDoublyLinkedListNode } from "./flatten-a-multilevel-doubly-linked-list/Node.ts";
+export { MyLinkedList };
