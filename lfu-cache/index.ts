@@ -49,7 +49,7 @@ class LFUCache {
     readonly #capacity: number;
     readonly #linked_list = new MyLinkedList<number>();
     constructor(capacity: number) {
-        if (capacity < 1) throw Error("capacity invalid");
+        if (capacity < 0) throw Error("capacity invalid");
         this.#capacity = capacity;
     }
 
