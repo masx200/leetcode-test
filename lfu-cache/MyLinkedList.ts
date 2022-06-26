@@ -1,34 +1,34 @@
 import { DoublyLinkedList } from "../design-linked-list/DoublyLinkedList.ts";
 
 export class MyLinkedList<T = number> {
-    readonly #freq_list_head = DoublyLinkedList<T>();
-    readonly #freq_list_tail = DoublyLinkedList<T>();
+    readonly #list_head = DoublyLinkedList<T>();
+    readonly #list_tail = DoublyLinkedList<T>();
     constructor() {
-        this.#freq_list_head.next = this.#freq_list_tail;
-        this.#freq_list_tail.prev = this.#freq_list_head;
+        this.#list_head.next = this.#list_tail;
+        this.#list_tail.prev = this.#list_head;
     }
     isEmpty() {
-        return this.#freq_list_head.next === this.#freq_list_tail;
+        return this.#list_head.next === this.#list_tail;
     }
     clear() {
-        this.#freq_list_head.next = this.#freq_list_tail;
-        this.#freq_list_tail.prev = this.#freq_list_head;
+        this.#list_head.next = this.#list_tail;
+        this.#list_tail.prev = this.#list_head;
     }
     last_node() {
-        return this.#freq_list_tail.prev === this.#freq_list_head
+        return this.#list_tail.prev === this.#list_head
             ? null
-            : this.#freq_list_tail.prev;
+            : this.#list_tail.prev;
     }
     first_node() {
-        return this.#freq_list_head.next === this.#freq_list_tail
+        return this.#list_head.next === this.#list_tail
             ? null
-            : this.#freq_list_head.next;
+            : this.#list_head.next;
     }
     insert_First(node: DoublyLinkedList<T>): void {
-        this.insert_After(this.#freq_list_head, node);
+        this.insert_After(this.#list_head, node);
     }
     append_last(node: DoublyLinkedList<T>): void {
-        this.insert_Before(this.#freq_list_tail, node);
+        this.insert_Before(this.#list_tail, node);
     }
     insert_Before(
         next_node: DoublyLinkedList<T>,
