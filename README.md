@@ -10,6 +10,9 @@ leetcode 测试
 
 包含的内容如下
 
+
+https://leetcode.cn/problems/linked-list-random-node/
+
 https://leetcode.cn/problems/count-asterisks/
 
 https://leetcode.cn/problems/longest-uncommon-subsequence-ii/
