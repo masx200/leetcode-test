@@ -790,6 +790,8 @@ https://leetcode.cn/problems/display-table-of-food-orders-in-a-restaurant/
 
 https://leetcode.cn/problems/ones-and-zeroes
 
+https://leetcode.cn/problems/flatten-binary-tree-to-linked-list
+
 #### 安装教程
 
 1. 安装`deno`
