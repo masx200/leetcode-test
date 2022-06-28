@@ -782,6 +782,8 @@ https://leetcode.cn/problems/wiggle-sort-ii
 
 https://leetcode.cn/problems/stack-of-plates-lcci/
 
+https://leetcode.cn/problems/shu-de-zi-jie-gou-lcof
+
 #### 安装教程
 
 1. 安装`deno`
