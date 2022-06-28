@@ -796,6 +796,8 @@ https://leetcode.cn/problems/flatten-binary-tree-to-linked-list
 
 https://leetcode.cn/problems/add-two-numbers-ii/
 
+https://leetcode.cn/problems/insertion-sort-list
+
 #### 安装教程
 
 1. 安装`deno`

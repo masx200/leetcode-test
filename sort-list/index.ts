@@ -3,7 +3,7 @@ import { ListNode } from "../reverse-linked-list/ListNode.ts";
 import { ListNodeToArray } from "../reverse-linked-list/ListNodeToArray.ts";
 import sortArray from "../sort-an-array/index.ts";
 
-const sortList = function (head: ListNode | null) {
+const sortList = function (head: ListNode | null): ListNode | null {
     if (head === null) {
         return head;
     }
