@@ -28,6 +28,7 @@ return Math.max(-1,...strs.filter((str1,i)=>{
 }
 
 const isSubseq = (s:string, t:string) => {
+if(s.length>t.length)return false
     let ptS = 0, ptT = 0;
     while (ptS < s.length && ptT < t.length) {
         if (s[ptS] === t[ptT]) {
