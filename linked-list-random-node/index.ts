@@ -9,21 +9,20 @@
  *     }
  * }
  */
-const array=Symbol()
-import{ListNode}from"../mod.ts"
+const array = Symbol();
+import { ListNode } from "../mod.ts";
 class Solution {
-    [array]:number[]=[]
+    [array]: number[] = [];
     constructor(head: ListNode | null) {
-while(head){
-    this[array].push(head.val)
-    
-    head=head.next
-}
+        while (head) {
+            this[array].push(head.val);
+
+            head = head.next;
+        }
     }
 
     getRandom(): number {
-        return this[array][Math.floor(this[array].length*Math.random())]
-
+        return this[array][Math.floor(this[array].length * Math.random())];
     }
 }
 
@@ -33,4 +32,4 @@ while(head){
  * var param_1 = obj.getRandom()
  */
 
-export default Solution
+export default Solution;
