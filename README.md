@@ -786,6 +786,8 @@ https://leetcode.cn/problems/shu-de-zi-jie-gou-lcof
 
 https://leetcode.cn/problems/display-table-of-food-orders-in-a-restaurant/
 
+https://leetcode.cn/problems/ones-and-zeroes
+
 #### 安装教程
 
 1. 安装`deno`
