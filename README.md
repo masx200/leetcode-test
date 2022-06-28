@@ -780,6 +780,8 @@ https://leetcode.cn/problems/reconstruct-original-digits-from-english/
 
 https://leetcode.cn/problems/wiggle-sort-ii
 
+https://leetcode.cn/problems/stack-of-plates-lcci/
+
 #### 安装教程
 
 1. 安装`deno`
