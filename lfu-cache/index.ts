@@ -13,7 +13,7 @@ class LFUCache {
     }
 
     #least_frequently_recently_used_key = (): number | undefined => {
-        const least_freq_node = this.#linked_list.first_node();
+        const least_freq_node = this.#linked_list.firstNode();
         const least_frequent = least_freq_node && least_freq_node.val;
 
         if (typeof least_frequent === "number") {
@@ -40,7 +40,7 @@ class LFUCache {
             this.#freq_to_keys.delete(freq);
             const node = this.#freq_to_node.get(freq);
             this.#freq_to_node.delete(freq);
-            node && this.#linked_list.remove_node(node);
+            node && this.#linked_list.removeNode(node);
         }
     }
 
@@ -57,7 +57,7 @@ class LFUCache {
             const node = DoublyLinkedList(freq);
             this.#freq_to_keys.set(freq, new Set());
             if (freq === 1) {
-                this.#linked_list.insert_First(node);
+                this.#linked_list.addFirst(node);
 
                 this.#freq_to_node.set(freq, node);
             } else {
@@ -66,7 +66,7 @@ class LFUCache {
                 if (!prev) {
                     throw new Error("accident prev is undefined");
                 }
-                this.#linked_list.insert_After(prev, node);
+                this.#linked_list.addAfter(prev, node);
 
                 this.#freq_to_node.set(freq, node);
             }
