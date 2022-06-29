@@ -12,7 +12,7 @@
  * }
  */
 
-import { inorder } from "../binary-tree-inorder-traversal/index.ts";
+import { inorder } from "../binary-tree-inorder-traversal/inorder.ts";
 import { TreeNode } from "../binary-tree-inorder-traversal/TreeNode.ts";
 export default function increasingBST(root: TreeNode | null): TreeNode | null {
     if (!root) return null;
