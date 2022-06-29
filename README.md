@@ -804,6 +804,10 @@ https://leetcode.cn/problems/convert-sorted-list-to-binary-search-tree
 
 https://leetcode.cn/problems/single-threaded-cpu/
 
+https://leetcode.cn/problems/liang-ge-lian-biao-de-di-yi-ge-gong-gong-jie-dian-lcof/
+
+https://leetcode.cn/problems/3u1WK4/
+
 #### 安装教程
 
 1. 安装`deno`
