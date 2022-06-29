@@ -2,7 +2,7 @@ import { ListNode } from "../reverse-linked-list/ListNode.ts";
 import { ListNodeToArray } from "../reverse-linked-list/ListNodeToArray.ts";
 
 export default function isPalindrome(head: ListNode | null): boolean {
-    if (!head) return false;
+    if (!head) return true;
     if (head.next === null) {
         return true;
     }

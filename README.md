@@ -366,6 +366,8 @@ https://leetcode.cn/problems/one-away-lcci
 
 https://leetcode.cn/problems/palindrome-number
 
+https://leetcode.cn/problems/palindrome-linked-list-lcci/
+
 https://leetcode.cn/problems/reverse-integer/
 
 https://leetcode.cn/problems/zigzag-conversion/
