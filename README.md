@@ -826,6 +826,10 @@ https://leetcode.cn/problems/list-of-depth-lcci/
 
 https://leetcode.cn/problems/swapping-nodes-in-a-linked-list/
 
+https://leetcode.cn/problems/reorder-list/
+
+https://leetcode.cn/problems/LGjMqU
+
 #### 安装教程
 
 1. 安装`deno`
