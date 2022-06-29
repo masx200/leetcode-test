@@ -812,6 +812,8 @@ https://leetcode.cn/problems/3u1WK4/
 
 https://leetcode.cn/problems/remove-duplicate-node-lcci/
 
+https://leetcode.cn/problems/binode-lcci/
+
 #### 安装教程
 
 1. 安装`deno`
