@@ -1,5 +1,5 @@
 import { TreeNode } from "../binary-tree-inorder-traversal/TreeNode.ts";
-import { level } from "../binary-tree-level-order-traversal-ii/index.ts";
+import { level } from "../binary-tree-level-order-traversal-ii/level.ts";
 
 export default function levelOrder(root: TreeNode | null): number[][] {
     if (!root) return [];

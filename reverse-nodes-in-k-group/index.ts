@@ -1,15 +1,3 @@
-/**
- * Definition for singly-linked list.
- * class ListNode {
- *     val: number
- *     next: ListNode | null
- *     constructor(val?: number, next?: ListNode | null) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.next = (next===undefined ? null : next)
- *     }
- * }
- */
-
 import { get_deep_next_of_list } from "../reverse-linked-list-ii/get_deep_next_of_list.ts";
 import reverse_Linked_List from "../reverse-linked-list/index.ts";
 import { ListNode } from "../reverse-linked-list/ListNode.ts";

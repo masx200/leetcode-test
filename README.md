@@ -822,6 +822,8 @@ https://leetcode.cn/problems/convert-binary-search-tree-to-sorted-doubly-linked-
 
 https://leetcode.cn/problems/maximum-twin-sum-of-a-linked-list/
 
+https://leetcode.cn/problems/list-of-depth-lcci/
+
 #### 安装教程
 
 1. 安装`deno`

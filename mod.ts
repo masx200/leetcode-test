@@ -58,6 +58,8 @@ import { searchSegmentChildren } from "./my-calendar-ii/searchSegmentChildren.ts
 import { searchSegmentLeaf } from "./my-calendar-ii/searchSegmentLeaf.ts";
 import { counter } from "./substring-with-concatenation-of-all-words/counter.ts";
 import { MyLinkedList } from "./lfu-cache/MyLinkedList.ts";
+import { level } from "./binary-tree-level-order-traversal-ii/level.ts";
+import { inorder } from "./binary-tree-inorder-traversal/inorder.ts";
 export {
     TrieNode,
     TrieNodeCountWordsEqualTo,
@@ -97,3 +99,5 @@ export { abs_bigint, searchSegmentChildren, searchSegmentLeaf };
 export { counter };
 export { Node as MultilevelDoublyLinkedListNode } from "./flatten-a-multilevel-doubly-linked-list/Node.ts";
 export { MyLinkedList };
+export { level };
+export { inorder };
