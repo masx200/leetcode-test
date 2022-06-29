@@ -816,6 +816,8 @@ https://leetcode.cn/problems/binode-lcci/
 
 https://leetcode.cn/problems/er-cha-sou-suo-shu-yu-shuang-xiang-lian-biao-lcof
 
+https://leetcode.cn/problems/partition-list-lcci/
+
 https://leetcode.cn/problems/convert-binary-search-tree-to-sorted-doubly-linked-list/
 
 #### 安装教程
