@@ -800,6 +800,10 @@ https://leetcode.cn/problems/insertion-sort-list
 
 https://leetcode.cn/problems/split-linked-list-in-parts/
 
+https://leetcode.cn/problems/convert-sorted-list-to-binary-search-tree
+
+https://leetcode.cn/problems/single-threaded-cpu/
+
 #### 安装教程
 
 1. 安装`deno`
