@@ -60,6 +60,7 @@ import { counter } from "./substring-with-concatenation-of-all-words/counter.ts"
 import { MyLinkedList } from "./lfu-cache/MyLinkedList.ts";
 import { level } from "./binary-tree-level-order-traversal-ii/level.ts";
 import { inorder } from "./binary-tree-inorder-traversal/inorder.ts";
+import { buildBST } from "./convert-sorted-list-to-binary-search-tree/buildBST.ts";
 export {
     TrieNode,
     TrieNodeCountWordsEqualTo,
@@ -100,4 +101,4 @@ export { counter };
 export { Node as MultilevelDoublyLinkedListNode } from "./flatten-a-multilevel-doubly-linked-list/Node.ts";
 export { MyLinkedList };
 export { level };
-export { inorder };
+export { buildBST, inorder };

@@ -1,6 +1,20 @@
 import { assertEquals } from "../deps.ts";
-import { ArrayToListNode, ListNodeToArray } from "../mod.ts";
+import {
+    ArrayToListNode,
+    get_length_of_list,
+    ListNodeToArray,
+} from "../mod.ts";
 import reverse_linked_list_ii from "./index.ts";
+import { ListNode } from "../reverse-linked-list/ListNode.ts";
+Deno.test("get_length_of_list", () => {
+    assertEquals(get_length_of_list(null), 0);
+    const list = ArrayToListNode([1, 2, 3, 4, 5]);
+    assertEquals(get_length_of_list(list), 5);
+    assertEquals(
+        get_length_of_list(new ListNode(1, new ListNode(1, new ListNode(1)))),
+        3,
+    );
+});
 Deno.test("reverse_linked_list_ii", () => {
     const examples: {
         input: [Array<number>, number, number];

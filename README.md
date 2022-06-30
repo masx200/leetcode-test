@@ -832,6 +832,8 @@ https://leetcode.cn/problems/reorder-list/
 
 https://leetcode.cn/problems/LGjMqU
 
+https://leetcode.cn/problems/convert-sorted-array-to-binary-search-tree/
+
 #### 安装教程
 
 1. 安装`deno`
