@@ -61,6 +61,7 @@ import { MyLinkedList } from "./lfu-cache/MyLinkedList.ts";
 import { level } from "./binary-tree-level-order-traversal-ii/level.ts";
 import { inorder } from "./binary-tree-inorder-traversal/inorder.ts";
 import { buildBST } from "./convert-sorted-list-to-binary-search-tree/buildBST.ts";
+import { traversal_bst_range } from "./tweet-counts-per-frequency/traversal_bst_range.ts";
 export {
     TrieNode,
     TrieNodeCountWordsEqualTo,
@@ -102,3 +103,4 @@ export { Node as MultilevelDoublyLinkedListNode } from "./flatten-a-multilevel-d
 export { MyLinkedList };
 export { level };
 export { buildBST, inorder };
+export { traversal_bst_range };
