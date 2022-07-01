@@ -840,6 +840,8 @@ https://leetcode.cn/problems/jewels-and-stones/
 
 https://leetcode.cn/problems/different-ways-to-add-parentheses/
 
+https://leetcode.cn/problems/1-bit-and-2-bit-characters/
+
 #### 安装教程
 
 1. 安装`deno`
