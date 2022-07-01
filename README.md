@@ -844,6 +844,8 @@ https://leetcode.cn/problems/1-bit-and-2-bit-characters/
 
 https://leetcode.cn/problems/design-twitter/
 
+https://leetcode.cn/problems/tweet-counts-per-frequency/
+
 #### 安装教程
 
 1. 安装`deno`
