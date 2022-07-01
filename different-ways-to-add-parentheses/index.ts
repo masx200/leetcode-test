@@ -4,77 +4,62 @@ export default function diffWaysToCompute(expression: string): number[] {
     }
     const regexp = /(?<operator>[\+\-\*])|(?<digit>\d+)/g;
     const groups = Array.from(expression.matchAll(regexp)).map(
-        (a) => a.groups
+        (a) => a.groups,
     ) as unknown as (
         | {
-              digit: string;
-              operator?: undefined;
-          }
+            digit: string;
+            operator?: undefined;
+        }
         | {
-              digit?: undefined;
-              operator: string;
-          }
+            digit?: undefined;
+            operator: string;
+        }
     )[];
-    const ans: number[] = [];
-    const output = (num: number) => {
-        ans.push(num);
-    };
-    diffWaysCalc(groups, output);
+    const ans: number[] = diffWaysCalc(groups);
     return ans;
 }
 function diffWaysCalc(
     groups: (
         | {
-              digit: number | string;
-              operator?: undefined;
-          }
+            digit: number | string;
+            operator?: undefined;
+        }
         | {
-              digit?: undefined;
-              operator: string;
-          }
+            digit?: undefined;
+            operator: string;
+        }
     )[],
-    output: (num: number) => void
-) {
+): number[] {
     if (groups.length === 1) {
-        output(Number(groups[0].digit));
-        return;
+        return [Number(groups[0].digit)];
     }
     if (groups.length === 3) {
-        return output(calc_three(groups));
+        return [calc_three(groups)];
     }
-    if (groups.length === 5) {
-        const [first, second, third, ...rest] = groups;
-        diffWaysCalc([first, second, third], (num: number) =>
-            diffWaysCalc([{ digit: num }, ...rest], output)
-        );
-        diffWaysCalc([third, ...rest], (num: number) =>
-            diffWaysCalc([first, second, { digit: num }], output)
-        );
+
+    const ans: number[] = [];
+    for (let i = 1; i < groups.length; i += 2) {
+        const operator = groups[i];
+        const left = diffWaysCalc(groups.slice(0, i));
+        const right = diffWaysCalc(groups.slice(i + 1));
+
+        left.map((a) =>
+            right.map((b) => calc_three([{ digit: a }, operator, { digit: b }]))
+        ).forEach((a) => ans.push(...a));
     }
-    for (let i = 0; i + 2 < groups.length; i += 2) {
-        const result_three = calc_three(groups.slice(i, i + 3));
-        diffWaysCalc(
-            [
-                ...groups.slice(0, i),
-                { digit: result_three },
-                ...groups.slice(i + 3),
-            ],
-            output
-        );
-    }
-    return;
+    return ans;
 }
 function calc_three(
     groups: (
         | {
-              digit: number | string;
-              operator?: undefined;
-          }
+            digit: number | string;
+            operator?: undefined;
+        }
         | {
-              digit?: undefined;
-              operator: string;
-          }
-    )[]
+            digit?: undefined;
+            operator: string;
+        }
+    )[],
 ): number {
     if (groups.length === 3) {
         const [a, b, c] = groups;
