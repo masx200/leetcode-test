@@ -838,6 +838,8 @@ https://leetcode.cn/problems/design-browser-history/
 
 https://leetcode.cn/problems/jewels-and-stones/
 
+https://leetcode.cn/problems/different-ways-to-add-parentheses/
+
 #### 安装教程
 
 1. 安装`deno`
