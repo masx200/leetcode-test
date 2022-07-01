@@ -836,6 +836,8 @@ https://leetcode.cn/problems/convert-sorted-array-to-binary-search-tree/
 
 https://leetcode.cn/problems/design-browser-history/
 
+https://leetcode.cn/problems/jewels-and-stones/
+
 #### 安装教程
 
 1. 安装`deno`
