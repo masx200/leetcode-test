@@ -8,11 +8,11 @@ const KthLargest: (k: number, nums: number[]) => KthLargest = function (
     nums,
 ) {
     //降序排列
-    const minheap = PriorityQueue<number>((a, b) => -a + b);
+    const minheap = PriorityQueue<number>((a, b) => -a + b, nums);
     //
-    for (const n of nums) {
-        minheap.offer(n);
-    }
+    // for (const n of nums) {
+    //     minheap.offer(n);
+    // }
     //Array.from(nums).sort((a, b) => -a + b)
 
     function add(val: number): number {
