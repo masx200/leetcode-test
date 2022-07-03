@@ -866,6 +866,8 @@ https://leetcode.cn/problems/maximum-nesting-depth-of-the-parentheses
 
 https://leetcode.cn/problems/count-number-of-pairs-with-absolute-difference-k/
 
+https://leetcode.cn/problems/cells-in-a-range-on-an-excel-sheet/
+
 #### 安装教程
 
 1. 安装`deno`
