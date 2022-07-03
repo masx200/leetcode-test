@@ -848,6 +848,8 @@ https://leetcode.cn/problems/tweet-counts-per-frequency/
 
 https://leetcode.cn/problems/delete-the-middle-node-of-a-linked-list
 
+https://leetcode.cn/problems/next-permutation/
+
 #### 安装教程
 
 1. 安装`deno`
