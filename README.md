@@ -852,6 +852,8 @@ https://leetcode.cn/problems/next-permutation/
 
 https://leetcode.cn/problems/next-greater-element-iii/
 
+https://leetcode.cn/problems/minimum-number-of-refueling-stops/
+
 #### 安装教程
 
 1. 安装`deno`
