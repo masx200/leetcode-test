@@ -2,7 +2,7 @@ export default function nextGreaterElement(
     nums1: number[],
     nums2: number[],
 ): number[] {
-    const map = new Map();
+    const map: Map<number, number> = new Map();
     const stack = [];
     for (let i = nums2.length - 1; i >= 0; --i) {
         const num = nums2[i];
@@ -14,8 +14,8 @@ export default function nextGreaterElement(
         stack.push(num);
         //    console.log(stack)
     }
-    const res = new Array(nums1.length)
+    const res: number[] = new Array(nums1.length)
         .fill(0)
-        .map((_, i) => map.get(nums1[i]));
+        .map((_, i) => map.get(nums1[i]) ?? -1);
     return res;
 }

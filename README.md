@@ -850,6 +850,8 @@ https://leetcode.cn/problems/delete-the-middle-node-of-a-linked-list
 
 https://leetcode.cn/problems/next-permutation/
 
+https://leetcode.cn/problems/next-greater-element-iii/
+
 #### 安装教程
 
 1. 安装`deno`
