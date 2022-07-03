@@ -864,6 +864,8 @@ https://leetcode.cn/problems/strong-password-checker/
 
 https://leetcode.cn/problems/maximum-nesting-depth-of-the-parentheses
 
+https://leetcode.cn/problems/count-number-of-pairs-with-absolute-difference-k/
+
 #### 安装教程
 
 1. 安装`deno`
