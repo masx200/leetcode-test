@@ -860,6 +860,8 @@ https://leetcode.cn/problems/decode-the-message/
 
 https://leetcode.cn/problems/p0NxJO
 
+https://leetcode.cn/problems/strong-password-checker/
+
 #### 安装教程
 
 1. 安装`deno`
