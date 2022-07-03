@@ -856,6 +856,8 @@ https://leetcode.cn/problems/minimum-number-of-refueling-stops/
 
 https://leetcode.cn/problems/hanota-lcci/
 
+https://leetcode.cn/problems/decode-the-message/
+
 #### 安装教程
 
 1. 安装`deno`
