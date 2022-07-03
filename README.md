@@ -862,6 +862,8 @@ https://leetcode.cn/problems/p0NxJO
 
 https://leetcode.cn/problems/strong-password-checker/
 
+https://leetcode.cn/problems/maximum-nesting-depth-of-the-parentheses
+
 #### 安装教程
 
 1. 安装`deno`
