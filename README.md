@@ -854,6 +854,8 @@ https://leetcode.cn/problems/next-greater-element-iii/
 
 https://leetcode.cn/problems/minimum-number-of-refueling-stops/
 
+https://leetcode.cn/problems/hanota-lcci/
+
 #### 安装教程
 
 1. 安装`deno`
