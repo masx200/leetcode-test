@@ -874,6 +874,8 @@ https://leetcode.cn/problems/contains-duplicate-ii/
 
 https://leetcode.cn/problems/spiral-matrix/
 
+https://leetcode.cn/problems/shun-shi-zhen-da-yin-ju-zhen-lcof
+
 #### 安装教程
 
 1. 安装`deno`
