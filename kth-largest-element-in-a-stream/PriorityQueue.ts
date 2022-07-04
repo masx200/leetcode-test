@@ -1,5 +1,6 @@
 // deno-lint-ignore no-explicit-any
 export interface PriorityQueue<T = any> {
+    at(index: number): T | undefined;
     isEmpty(): boolean;
     /**clear all elements */
     clear: () => void;
@@ -122,9 +123,9 @@ export function PriorityQueue<T = any>(
     function clear() {
         data.length = 0;
     }
-    //function at(index: number): T | undefined {
-    //    return data.at(index);
-    // }
+    function at(index: number): T | undefined {
+        return data.at(index);
+    }
     function toArray() {
         return Array.from(data);
     }
@@ -141,6 +142,7 @@ export function PriorityQueue<T = any>(
         head,
         tail,
         pop,
-        shift, /*, at*/
+        shift,
+        at,
     };
 }

@@ -884,6 +884,8 @@ https://leetcode.cn/problems/o8SXZn
 
 https://leetcode.cn/problems/insert-delete-getrandom-o1-duplicates-allowed/
 
+https://leetcode.cn/problems/find-median-from-data-stream/
+
 #### 安装教程
 
 1. 安装`deno`
