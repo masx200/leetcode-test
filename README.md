@@ -868,6 +868,8 @@ https://leetcode.cn/problems/count-number-of-pairs-with-absolute-difference-k/
 
 https://leetcode.cn/problems/cells-in-a-range-on-an-excel-sheet/
 
+https://leetcode.cn/problems/minimum-absolute-difference/
+
 #### 安装教程
 
 1. 安装`deno`
