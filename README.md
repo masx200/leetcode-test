@@ -878,6 +878,8 @@ https://leetcode.cn/problems/shun-shi-zhen-da-yin-ju-zhen-lcof
 
 https://leetcode.cn/problems/long-pressed-name/
 
+https://leetcode.cn/problems/three-steps-problem-lcci
+
 #### 安装教程
 
 1. 安装`deno`
