@@ -7,6 +7,7 @@ export {
     equal,
 } from "https://deno.land/std@0.145.0/testing/asserts.ts";
 export { default as random } from "https://cdn.skypack.dev/lodash@4.17.21/random?dts";
+export { default as zip } from "https://cdn.skypack.dev/lodash@4.17.21/zip?dts";
 
 export { default as uniqBy } from "https://cdn.skypack.dev/lodash@4.17.21/uniqBy?dts";
 

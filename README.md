@@ -872,6 +872,8 @@ https://leetcode.cn/problems/minimum-absolute-difference/
 
 https://leetcode.cn/problems/contains-duplicate-ii/
 
+https://leetcode.cn/problems/spiral-matrix/
+
 #### 安装教程
 
 1. 安装`deno`

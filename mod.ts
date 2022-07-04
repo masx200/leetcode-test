@@ -62,7 +62,9 @@ import { level } from "./binary-tree-level-order-traversal-ii/level.ts";
 import { inorder } from "./binary-tree-inorder-traversal/inorder.ts";
 import { buildBST } from "./convert-sorted-list-to-binary-search-tree/buildBST.ts";
 import { traversal_bst_range } from "./tweet-counts-per-frequency/traversal_bst_range.ts";
+import { left_rotate } from "./spiral-matrix/left_rotate.ts";
 export {
+    left_rotate,
     TrieNode,
     TrieNodeCountWordsEqualTo,
     TrieNodeCountWordsStartingWith,
