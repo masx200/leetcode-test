@@ -880,6 +880,8 @@ https://leetcode.cn/problems/long-pressed-name/
 
 https://leetcode.cn/problems/three-steps-problem-lcci
 
+https://leetcode.cn/problems/o8SXZn
+
 #### 安装教程
 
 1. 安装`deno`
