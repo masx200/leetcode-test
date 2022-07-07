@@ -888,6 +888,8 @@ https://leetcode.cn/problems/find-median-from-data-stream/
 
 https://leetcode.cn/problems/replace-words/
 
+https://leetcode.cn/problems/count-servers-that-communicate/
+
 #### 安装教程
 
 1. 安装`deno`
