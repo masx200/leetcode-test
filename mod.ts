@@ -63,6 +63,7 @@ import { inorder } from "./binary-tree-inorder-traversal/inorder.ts";
 import { buildBST } from "./convert-sorted-list-to-binary-search-tree/buildBST.ts";
 import { traversal_bst_range } from "./tweet-counts-per-frequency/traversal_bst_range.ts";
 import { left_rotate } from "./spiral-matrix/left_rotate.ts";
+import { binary_count_one_bigint } from "./cells-with-odd-values-in-a-matrix/binary_count_one_bigint.ts";
 export {
     left_rotate,
     TrieNode,
@@ -103,6 +104,6 @@ export { abs_bigint, searchSegmentChildren, searchSegmentLeaf };
 export { counter };
 export { Node as MultilevelDoublyLinkedListNode } from "./flatten-a-multilevel-doubly-linked-list/Node.ts";
 export { MyLinkedList };
-export { level };
+export { binary_count_one_bigint, level };
 export { buildBST, inorder };
 export { traversal_bst_range };
