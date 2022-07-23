@@ -21,4 +21,4 @@ export { Heap } from "https://cdn.skypack.dev/@datastructures-js/heap@4.1.0/?dts
 export {
     BinarySearchTree,
     BinarySearchTreeNode,
-} from "https://cdn.skypack.dev/@datastructures-js/binary-search-tree@5.0.0/?dts";
+} from "https://cdn.skypack.dev/@datastructures-js/binary-search-tree@5.0.0/index.js?dts";
