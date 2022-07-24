@@ -886,6 +886,8 @@ https://leetcode.cn/problems/o8SXZn
 
 https://leetcode.cn/problems/insert-delete-getrandom-o1-duplicates-allowed/
 
+https://leetcode.cn/problems/distance-between-bus-stops/
+
 https://leetcode.cn/problems/find-median-from-data-stream/
 
 https://leetcode.cn/problems/replace-words/
