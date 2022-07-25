@@ -882,6 +882,8 @@ https://leetcode.cn/problems/long-pressed-name/
 
 https://leetcode.cn/problems/three-steps-problem-lcci
 
+https://leetcode.cn/problems/most-stones-removed-with-same-row-or-column
+
 https://leetcode.cn/problems/o8SXZn
 
 https://leetcode.cn/problems/insert-delete-getrandom-o1-duplicates-allowed/
