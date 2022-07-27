@@ -64,6 +64,9 @@ import { buildBST } from "./convert-sorted-list-to-binary-search-tree/buildBST.t
 import { traversal_bst_range } from "./tweet-counts-per-frequency/traversal_bst_range.ts";
 import { left_rotate } from "./spiral-matrix/left_rotate.ts";
 import { binary_count_one_bigint } from "./cells-with-odd-values-in-a-matrix/binary_count_one_bigint.ts";
+import { Fraction } from "./fraction-addition-and-subtraction/Fraction.ts";
+import { parseFraction } from "./fraction-addition-and-subtraction/parseFraction.ts";
+import { deduplication } from "./fraction-addition-and-subtraction/deduplication.ts";
 export {
     left_rotate,
     TrieNode,
@@ -107,3 +110,4 @@ export { MyLinkedList };
 export { binary_count_one_bigint, level };
 export { buildBST, inorder };
 export { traversal_bst_range };
+export { deduplication, Fraction, parseFraction };
