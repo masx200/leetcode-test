@@ -906,6 +906,8 @@ https://leetcode.cn/problems/ur2n8P/
 
 https://leetcode.cn/problems/fraction-addition-and-subtraction/
 
+https://leetcode.cn/problems/triangle
+
 #### 安装教程
 
 1. 安装`deno`
