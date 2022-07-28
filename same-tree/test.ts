@@ -21,14 +21,14 @@ Deno.test("same-tree", () => {
                 val: 1,
                 left: { val: 1, left: null, right: null },
                 right: { val: 2, left: null, right: null },
-            }
-        )
+            },
+        ),
     );
     assert(
         !isSameTree(
             { val: 1, left: { val: 2, left: null, right: null }, right: null },
-            { val: 1, left: null, right: { val: 2, left: null, right: null } }
-        )
+            { val: 1, left: null, right: { val: 2, left: null, right: null } },
+        ),
     );
     assert(
         isSameTree(
@@ -41,7 +41,7 @@ Deno.test("same-tree", () => {
                 val: 1,
                 left: { val: 2, left: null, right: null },
                 right: { val: 3, left: null, right: null },
-            }
-        )
+            },
+        ),
     );
 });
