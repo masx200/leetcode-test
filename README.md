@@ -910,6 +910,8 @@ https://leetcode.cn/problems/fraction-addition-and-subtraction/
 
 https://leetcode.cn/problems/triangle
 
+https://leetcode.cn/problems/rank-transform-of-an-array
+
 #### 安装教程
 
 1. 安装`deno`
