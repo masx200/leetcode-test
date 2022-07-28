@@ -4,11 +4,15 @@
 
 leetcode 测试
 
-#### 软件架构
+### 软件架构
 
-软件架构说明
+#### 软件架构说明
 
-包含的内容如下
+##### 包含的内容如下
+
+https://leetcode.cn/problems/remove-duplicate-letters
+
+https://leetcode.cn/problems/smallest-subsequence-of-distinct-characters
 
 https://leetcode.cn/problems/yuan-quan-zhong-zui-hou-sheng-xia-de-shu-zi-lcof/
 
