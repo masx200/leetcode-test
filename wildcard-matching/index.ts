@@ -82,7 +82,7 @@ function check_words(s: string, words: string[]): boolean {
 
     // console.log(matched_array);
     if (!matched_array.length) return false;
-    matched_array.sort(() => Math.random() - 0.5);
+    // matched_array.sort(() => Math.random() - 0.5);
     const first_half = words.slice(0, mid_index);
     const second_half = words.slice(mid_index + 1);
     return matched_array.some((matched) => {
