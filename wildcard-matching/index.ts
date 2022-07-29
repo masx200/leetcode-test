@@ -20,7 +20,7 @@ export default function isMatch(s: string, p: string): boolean {
     return false;
 }
 function check_includes(s: string, p: string) {
-    const words = p.split(/\?|\*+/g).filter(Boolean);
+    const words = Array.from(new Set(p.split(/\?|\*+/g).filter(Boolean)));
 
     if (
         words.some((word) => {
