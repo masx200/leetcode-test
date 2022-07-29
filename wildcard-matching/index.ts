@@ -40,7 +40,7 @@ function check_fixs(s: string, words: string[]): boolean {
         if (suffix) {
             const matched = str.match(
                 //@ts-ignore
-                new RegExp(`^(.*?)${suffix.replaceAll("?", ".")}$`),
+                new RegExp(`^(.*?)${suffix.replaceAll("?", ".")}$`)
             );
             if (!matched) return false;
             str = matched[1];
@@ -48,7 +48,7 @@ function check_fixs(s: string, words: string[]): boolean {
         if (prefix) {
             const matched = str.match(
                 //@ts-ignore
-                new RegExp(`^${prefix.replaceAll("?", ".")}(.*?)$`),
+                new RegExp(`^${prefix.replaceAll("?", ".")}(.*?)$`)
             );
             if (!matched) return false;
             str = matched[1];
@@ -63,7 +63,7 @@ function check_regular(s: string, p: string): boolean {
     return new RegExp(
         //@ts-ignore
         "^" + p.replaceAll("?", ".").replaceAll(/\*+/g, ".*") + "$",
-        "g",
+        "g"
     ).test(s);
 }
 function check_words(s: string, words: string[]): boolean {
@@ -74,12 +74,12 @@ function check_words(s: string, words: string[]): boolean {
     const middle = words[mid_index];
     const matched_array = Array.from(
         //@ts-ignore
-        s.matchAll(new RegExp(`${middle.replaceAll("?", ".")}`, "g")),
+        s.matchAll(new RegExp(`${middle.replaceAll("?", ".")}`, "g"))
     );
-    matched_array.sort(() => Math.random() - 0.5);
+
     // console.log(matched_array);
     if (!matched_array.length) return false;
-
+    matched_array.sort(() => Math.random() - 0.5);
     const first_half = words.slice(0, mid_index);
     const second_half = words.slice(mid_index + 1);
     return matched_array.some((matched) => {
