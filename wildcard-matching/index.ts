@@ -76,6 +76,7 @@ function check_words(s: string, words: string[]): boolean {
         //@ts-ignore
         s.matchAll(new RegExp(`${middle.replaceAll("?", ".")}`, "g")),
     );
+    matched_array.sort(() => Math.random() - 0.5);
     // console.log(matched_array);
     if (!matched_array.length) return false;
 
