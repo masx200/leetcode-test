@@ -6,11 +6,14 @@ export default function isMatch(s: string, p: string): boolean {
     const words = p.split(/\*+/g);
     // console.log(words);
 
-    if (words.length === 1) {
-        return check_regular(s, p);
-    }
     if (words.length === 2 && words[0] === "" && words[1] === "") {
         return true;
+    }
+    if (
+        words.length === 1 ||
+        (words.length === 2 && (words[0] === "" || words[1] === ""))
+    ) {
+        return check_regular(s, p);
     }
     if (!check_includes(s, p)) return false;
     if (words.length >= 2) {
@@ -21,7 +24,6 @@ export default function isMatch(s: string, p: string): boolean {
 }
 function check_includes(s: string, p: string) {
     const words = Array.from(new Set(p.split(/\?|\*+/g).filter(Boolean)));
-
     if (
         words.some((word) => {
             return !s.includes(word);
@@ -40,7 +42,7 @@ function check_fixs(s: string, words: string[]): boolean {
         if (suffix) {
             const matched = str.match(
                 //@ts-ignore
-                new RegExp(`^(.*?)${suffix.replaceAll("?", ".")}$`),
+                new RegExp(`^(.*?)${suffix.replaceAll("?", ".")}$`)
             );
             if (!matched) return false;
             str = matched[1];
@@ -48,7 +50,7 @@ function check_fixs(s: string, words: string[]): boolean {
         if (prefix) {
             const matched = str.match(
                 //@ts-ignore
-                new RegExp(`^${prefix.replaceAll("?", ".")}(.*?)$`),
+                new RegExp(`^${prefix.replaceAll("?", ".")}(.*?)$`)
             );
             if (!matched) return false;
             str = matched[1];
@@ -62,8 +64,8 @@ function check_regular(s: string, p: string): boolean {
     // console.log("check_regular", s, p);
     return new RegExp(
         //@ts-ignore
-        "^" + p.replaceAll("?", ".") + "$",
-        "g",
+        "^" + p.replaceAll("?", ".").replaceAll(/\*+/g, ".*") + "$",
+        "g"
     ).test(s);
 }
 function check_words(s: string, words: string[]): boolean {
@@ -71,13 +73,13 @@ function check_words(s: string, words: string[]): boolean {
     if (words.length === 0) return true;
     const mid_index = words.reduce(
         (a, v, i) => (v.length > words[a].length ? i : a),
-        Math.floor(words.length / 2),
+        Math.floor(words.length / 2)
     );
     // const mid_index = Math.floor(words.length / 2);
     const middle = words[mid_index];
     const matched_array = Array.from(
         //@ts-ignore
-        s.matchAll(new RegExp(`${middle.replaceAll("?", ".")}`, "g")),
+        s.matchAll(new RegExp(`${middle.replaceAll("?", ".")}`, "g"))
     );
 
     // console.log(matched_array);
