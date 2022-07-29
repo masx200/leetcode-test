@@ -2,7 +2,6 @@
 export default function isMatch(s: string, p: string): boolean {
     // console.log(s, p);
     if (s === p) return true;
-    if (!check_includes(s, p)) return false;
 
     const words = p.split(/\*+/g);
     // console.log(words);
@@ -13,6 +12,7 @@ export default function isMatch(s: string, p: string): boolean {
     if (words.length === 2 && words[0] === "" && words[1] === "") {
         return true;
     }
+    if (!check_includes(s, p)) return false;
     if (words.length >= 2) {
         return check_fixs(s, words);
     }
@@ -67,7 +67,7 @@ function check_regular(s: string, p: string): boolean {
     ).test(s);
 }
 function check_words(s: string, words: string[]): boolean {
-    console.log("check_words", s, words);
+    // console.log("check_words", s, words);
     if (words.length === 0) return true;
 
     const mid_index = Math.floor(words.length / 2);
