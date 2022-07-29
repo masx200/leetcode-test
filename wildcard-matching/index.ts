@@ -62,7 +62,7 @@ function check_regular(s: string, p: string): boolean {
     // console.log("check_regular", s, p);
     return new RegExp(
         //@ts-ignore
-        "^" + p.replaceAll("?", ".").replaceAll(/\*+/g, ".*") + "$",
+        "^" + p.replaceAll("?", ".") + "$",
         "g",
     ).test(s);
 }
