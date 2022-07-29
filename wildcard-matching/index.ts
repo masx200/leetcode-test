@@ -1,97 +1,92 @@
-import { assertEquals } from "https://deno.land/std@0.149.0/testing/asserts.ts";
+// deno-lint-ignore-file ban-ts-comment
 export default function isMatch(s: string, p: string): boolean {
-    console.log(s, p);
-    const words = Array.from(p.matchAll(/[a-z]+/g)).map((a) => a[0]);
-    if (!words.every((word) => s.includes(word))) return false;
-    p = p.replaceAll(/\*+/g, "*");
-
-    const result = dfs(s, p);
-    console.log(s, p, result);
-    return result;
-}
-function dfs(s: string, p: string): boolean {
-    console.log(s, p);
-    if (p === "*") return true;
+    // console.log(s, p);
     if (s === p) return true;
-    if (s.length && p.length && p[0] !== "?" && p[0] !== "*" && p[0] !== s[0]) {
-        return false;
+    if (!check_includes(s, p)) return false;
+
+    const words = p.split(/\*+/g);
+    // console.log(words);
+
+    if (words.length === 1) {
+        return check_regular(s, p);
     }
+    if (words.length === 2 && words[0] === "" && words[1] === "") {
+        return true;
+    }
+    if (words.length >= 2) {
+        return check_fixs(s, words);
+    }
+
+    return false;
+}
+function check_includes(s: string, p: string) {
+    const words = p.split(/\?|\*+/g).filter(Boolean);
+
     if (
-        s.length &&
-        p.length &&
-        p[p.length - 1] !== "?" &&
-        p[p.length - 1] !== "*" &&
-        p[p.length - 1] !== s[s.length - 1]
+        words.some((word) => {
+            return !s.includes(word);
+        })
     ) {
         return false;
     }
-    if (
-        p.length &&
-        s.length &&
-        (p[p.length - 1] === s[s.length - 1] || p[p.length - 1] === "?")
-    ) {
-        return dfs(s.slice(0, -1), p.slice(0, -1));
-    }
-    if (p.length && s.length && (p[0] === s[0] || p[0] === "?")) {
-        return dfs(s.slice(1), p.slice(1));
-    }
-    if (p.length && s.length && p[0] === "*") {
-        return (
-            dfs(s, p.slice(1)) ||
-            Array(s.length)
-                .fill(0)
-                .map((_v, i) => i + 1)
-                .some((i) => dfs(s.slice(i), p.slice(1)))
-        );
-    }
-    if (p.length && s.length && p[p.length - 1] === "*") {
-        return (
-            dfs(s, p.slice(0, -1)) ||
-            Array(s.length)
-                .fill(0)
-                .map((_v, i) => i + 1)
-                .some((i) => dfs(s.slice(0, -i), p.slice(0, -1)))
-        );
+    return true;
+}
+function check_fixs(s: string, words: string[]): boolean {
+    // console.log("check_fixs", s, words);
+    if (words.length >= 2) {
+        const prefix = words[0];
+        const suffix = words[words.length - 1];
+        let str = s;
+        if (suffix) {
+            const matched = str.match(
+                //@ts-ignore
+                new RegExp(`^(.*?)${suffix.replaceAll("?", ".")}$`),
+            );
+            if (!matched) return false;
+            str = matched[1];
+        }
+        if (prefix) {
+            const matched = str.match(
+                //@ts-ignore
+                new RegExp(`^${prefix.replaceAll("?", ".")}(.*?)$`),
+            );
+            if (!matched) return false;
+            str = matched[1];
+        }
+        const rest = words.slice(1, words.length - 1);
+        return check_words(str, rest);
     }
     return false;
 }
-console.log("simple test");
-assertEquals(false, isMatch("aa", "a"));
-assertEquals(false, isMatch("cb", "?a"));
-assertEquals(true, isMatch("aa", "*"));
-assertEquals(true, isMatch("", "******"));
+function check_regular(s: string, p: string): boolean {
+    // console.log("check_regular", s, p);
+    return new RegExp(
+        //@ts-ignore
+        "^" + p.replaceAll("?", ".").replaceAll(/\*+/g, ".*") + "$",
+        "g",
+    ).test(s);
+}
+function check_words(s: string, words: string[]): boolean {
+    console.log("check_words", s, words);
+    if (words.length === 0) return true;
 
-assertEquals(true, isMatch("b", "b"));
-assertEquals(true, isMatch("adceb", "*b"));
-assertEquals(true, isMatch("dceb", "*b"));
-assertEquals(true, isMatch("adceb", "a*b"));
-assertEquals(true, isMatch("adceb", "*a*b"));
-console.log("hard test");
-assertEquals(
-    true,
-    isMatch(
-        "baabbabababaabbabababbaabbbbaaabaaabbbbaaaaaabbbbaaabaaabbbbbabaabbbbbbbbabbbabbabbbbabbbbabbbbbbabababbaaaabbbbaabaaababbbabaaaabaabbbabbaabbabbbbabaababbbbbbbabbaaaabaaabbaaabaaaaababbbaaaabbbbbabbabb",
-        "ba*ba*bb*a********abaa*bb**abb**b***ab**b*b*babb***a*bb*aaabb*****b*aabb**aa**b*a***b*bb*b*bb*a*bbbbb**",
-    ),
-);
-assertEquals(
-    false,
-    isMatch(
-        "abbaaababaaaabaaaaabaabbabababbaaabaaabaabaaaabbababaaaabababaabababbbbaabaabbbbbaababbbbbbbbaaababbbabbbbaabbbababbbabababbaabaaabaaabbbbbabaaaababababbbaabbaabbabbbaabbbaabaabaabbaabbbbbabbaabbbaabbb",
-        "***a****a***a*bba*a**aba******b**a*a*b***aa***b*ab*ab*aab*ab*b*abbaa***b**a*bb*b*ab*a*abba**bb*****a",
-    ),
-);
-assertEquals(
-    false,
-    isMatch(
-        "abbabaaabbabbaababbabbbbbabbbabbbabaaaaababababbbabababaabbababaabbbbbbaaaabababbbaabbbbaabbbbababababbaabbaababaabbbababababbbbaaabbbbbabaaaabbababbbbaababaabbababbbbbababbbabaaaaaaaabbbbbaabaaababaaaabb",
-        "**aa*****ba*a*bb**aa*ab****a*aaaaaa***a*aaaa**bbabb*b*b**aaaaaaaaa*a********ba*bbb***a*ba*bb*bb**a*b*bb",
-    ),
-);
-assertEquals(
-    false,
-    isMatch(
-        "aaaabaabaabbbabaabaabbbbaabaaabaaabbabbbaaabbbbbbabababbaabbabbbbaababaaabbbababbbaabbbaabbaaabbbaabbbbbaaaabaaabaabbabbbaabababbaabbbabababbaabaaababbbbbabaababbbabbabaaaaaababbbbaabbbbaaababbbbaabbbbb",
-        "**a*b*b**b*b****bb******b***babaab*ba*a*aaa***baa****b***bbbb*bbaa*a***a*a*****a*b*a*a**ba***aa*a**a*",
-    ),
-);
+    const mid_index = Math.floor(words.length / 2);
+    const middle = words[mid_index];
+    const matched_array = Array.from(
+        //@ts-ignore
+        s.matchAll(new RegExp(`${middle.replaceAll("?", ".")}`, "g")),
+    );
+    // console.log(matched_array);
+    if (!matched_array.length) return false;
+
+    const first_half = words.slice(0, mid_index);
+    const second_half = words.slice(mid_index + 1);
+    return matched_array.some((matched) => {
+        // console.log(matched);
+        const length = matched[0].length;
+        if ("number" !== typeof matched.index) return false;
+        const left = s.slice(0, matched.index);
+        const right = s.slice(matched.index + length);
+        return check_words(left, first_half) && check_words(right, second_half);
+    });
+}
