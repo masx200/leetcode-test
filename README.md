@@ -10,6 +10,10 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/largest-component-size-by-common-factor
+
+https://leetcode.cn/problems/maximum-level-sum-of-a-binary-tree/
+
 https://leetcode.cn/problems/valid-square/
 
 https://leetcode.cn/problems/wildcard-matching
