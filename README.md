@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/orderly-queue/
+
 https://leetcode.cn/problems/generate-a-string-with-characters-that-have-odd-counts/
 
 https://leetcode.cn/problems/maximum-number-of-groups-entering-a-competition/
