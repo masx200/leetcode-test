@@ -1,10 +1,10 @@
 import { NestedInteger } from "./NestedInteger.ts";
 
-const deserializeArray = function (s: string): NestedInteger {
+function deserializeArray(s: string): NestedInteger {
     if (s[0] !== "[") {
         return new NestedInteger(parseInt(s));
     }
-    const stack = [];
+    const stack: NestedInteger[] = [];
     let num = 0;
     let negative = false;
     for (let i = 0; i < s.length; i++) {
@@ -35,7 +35,7 @@ const deserializeArray = function (s: string): NestedInteger {
     } else {
         throw Error("accident");
     }
-};
+}
 
 export default function deserialize(s: string): NestedInteger {
     if (s.startsWith("[")) {
@@ -48,6 +48,6 @@ export default function deserialize(s: string): NestedInteger {
 const nums = Array.from({
     length: 10,
 }).map((_v, i) => String(i));
-const isDigit = (ch: string) => {
+function isDigit(ch: string) {
     return nums.includes(ch);
-};
+}

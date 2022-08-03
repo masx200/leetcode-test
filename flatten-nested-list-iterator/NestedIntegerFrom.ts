@@ -1,8 +1,12 @@
 import { NestedInteger } from "../mini-parser/NestedInteger.ts";
 import { NestedArray } from "./NestedArray.ts";
 
-export function NestedIntegerFrom(array: NestedArray) {
+export function NestedIntegerFrom(array: NestedArray | number): NestedInteger {
+    if (typeof array === "number") {
+        return new NestedInteger(array);
+    }
     const nestedInteger = new NestedInteger();
+
     for (const value of array) {
         if (typeof value === "number") {
             nestedInteger.add(new NestedInteger(value));
