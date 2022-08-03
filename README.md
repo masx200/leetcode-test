@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/evaluate-boolean-binary-tree/
+
 https://leetcode.cn/problems/minimum-distance-between-bst-nodes/
 
 https://leetcode.cn/problems/minimum-absolute-difference-in-bst/
