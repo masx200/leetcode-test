@@ -10,6 +10,10 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/minimum-distance-between-bst-nodes/
+
+https://leetcode.cn/problems/minimum-absolute-difference-in-bst/
+
 https://leetcode.cn/problems/sum-of-left-leaves/
 
 https://leetcode.cn/problems/shift-2d-grid
