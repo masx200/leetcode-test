@@ -1,6 +1,6 @@
 function orderlyQueue(s: string, k: number): string {
     
-    if(s.length==1)return s
+    if(s.length==1||!k)return s
 if(k===1){
     
     
