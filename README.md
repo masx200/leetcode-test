@@ -958,6 +958,10 @@ https://leetcode.cn/problems/merge-strings-alternately/
 
 https://leetcode.cn/problems/insert-interval/
 
+https://leetcode.cn/problems/shu-zu-zhong-shu-zi-chu-xian-de-ci-shu-lcof/
+
+https://leetcode.cn/problems/shu-zu-zhong-shu-zi-chu-xian-de-ci-shu-ii-lcof/
+
 #### 安装教程
 
 1. 安装`deno`
