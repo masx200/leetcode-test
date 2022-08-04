@@ -962,6 +962,10 @@ https://leetcode.cn/problems/shu-zu-zhong-shu-zi-chu-xian-de-ci-shu-lcof/
 
 https://leetcode.cn/problems/shu-zu-zhong-shu-zi-chu-xian-de-ci-shu-ii-lcof/
 
+https://leetcode.cn/problems/path-sum-ii/
+
+https://leetcode.cn/problems/er-cha-shu-zhong-he-wei-mou-yi-zhi-de-lu-jing-lcof/
+
 #### 安装教程
 
 1. 安装`deno`

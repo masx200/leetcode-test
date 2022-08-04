@@ -11,6 +11,6 @@ Deno.test("shu-zu-zhong-shu-zi-chu-xian-de-ci-shu-lcof", () => {
     ];
     assertEquals(
         outputs.map((a) => new Set(a)),
-        inputs.map(singleNumbers).map((a) => new Set(a))
+        inputs.map(singleNumbers).map((a) => new Set(a)),
     );
 });
