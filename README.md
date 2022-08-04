@@ -956,6 +956,8 @@ https://leetcode.cn/problems/rotate-image/
 
 https://leetcode.cn/problems/merge-strings-alternately/
 
+https://leetcode.cn/problems/insert-interval/
+
 #### 安装教程
 
 1. 安装`deno`
