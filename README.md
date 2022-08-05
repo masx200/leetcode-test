@@ -10,6 +10,10 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/binary-tree-pruning/
+
+https://leetcode.cn/problems/pOCWxh/
+
 https://leetcode.cn/problems/word-ladder/
 
 https://leetcode.cn/problems/add-one-row-to-tree/
