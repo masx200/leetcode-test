@@ -12,6 +12,28 @@ leetcode 测试
 
 https://leetcode.cn/problems/add-one-row-to-tree/
 
+https://leetcode.cn/problems/minimum-subsequence-in-non-increasing-order/
+
+https://leetcode.cn/problems/evaluate-boolean-binary-tree/
+
+https://leetcode.cn/problems/minimum-distance-between-bst-nodes/
+
+https://leetcode.cn/problems/minimum-absolute-difference-in-bst/
+
+https://leetcode.cn/problems/sum-of-left-leaves/
+
+https://leetcode.cn/problems/shift-2d-grid
+
+https://leetcode.cn/problems/convert-1d-array-into-2d-array/
+
+https://leetcode.cn/problems/univalued-binary-tree/
+
+https://leetcode.cn/problems/mean-of-array-after-removing-some-elements/
+
+https://leetcode.cn/problems/n-th-tribonacci-number/
+
+https://leetcode.cn/problems/orderly-queue/
+
 https://leetcode.cn/problems/generate-a-string-with-characters-that-have-odd-counts/
 
 https://leetcode.cn/problems/maximum-number-of-groups-entering-a-competition/
@@ -933,6 +955,18 @@ https://leetcode.cn/problems/triangle
 https://leetcode.cn/problems/rank-transform-of-an-array
 
 https://leetcode.cn/problems/rotate-image/
+
+https://leetcode.cn/problems/merge-strings-alternately/
+
+https://leetcode.cn/problems/insert-interval/
+
+https://leetcode.cn/problems/shu-zu-zhong-shu-zi-chu-xian-de-ci-shu-lcof/
+
+https://leetcode.cn/problems/shu-zu-zhong-shu-zi-chu-xian-de-ci-shu-ii-lcof/
+
+https://leetcode.cn/problems/path-sum-ii/
+
+https://leetcode.cn/problems/er-cha-shu-zhong-he-wei-mou-yi-zhi-de-lu-jing-lcof/
 
 #### 安装教程
 
