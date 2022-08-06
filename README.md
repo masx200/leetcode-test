@@ -10,6 +10,12 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/smallest-index-with-equal-value/
+
+https://leetcode.cn/problems/qi-wang-ge-shu-tong-ji/
+
+https://leetcode.cn/problems/percentage-of-letter-in-string/
+
 https://leetcode.cn/problems/subtract-the-product-and-sum-of-digits-of-an-integer/
 
 https://leetcode.cn/problems/goal-parser-interpretation/
