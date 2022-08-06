@@ -314,6 +314,8 @@ https://leetcode-cn.com/problems/number-of-recent-calls/
 
 https://leetcode-cn.com/problems/H8086Q/
 
+https://leetcode.cn/problems/create-target-array-in-the-given-order/
+
 https://leetcode-cn.com/problems/dui-cheng-de-er-cha-shu-lcof/
 
 https://leetcode-cn.com/problems/ping-heng-er-cha-shu-lcof/
