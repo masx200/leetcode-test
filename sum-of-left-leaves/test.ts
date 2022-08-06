@@ -1,4 +1,4 @@
-import { assertEquals } from "https://deno.land/std@0.150.0/testing/asserts.ts";
+import { assertEquals } from "https://deno.land/std@0.151.0/testing/asserts.ts";
 import { TreeNode } from "../binary-tree-inorder-traversal/TreeNode.ts";
 import sumOfLeftLeaves from "./index.ts";
 Deno.test("sum-of-left-leaves", () => {

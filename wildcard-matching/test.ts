@@ -1,4 +1,4 @@
-import { assertEquals } from "https://deno.land/std@0.150.0/testing/asserts.ts";
+import { assertEquals } from "https://deno.land/std@0.151.0/testing/asserts.ts";
 import isMatch from "./index.ts";
 Deno.test("wildcard-matching-1", () => {
     // console.log("simple test");

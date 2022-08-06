@@ -175,9 +175,6 @@ function dfs(
     //.map((_v, i) => String(i + 1))
     // .sort(() => Math.random() - 0.5);
     for (const char of chars.sort(() => Math.random() - 0.5)) {
-        // const clonedrows = cloneDeep(rows);
-        // const clonedcolumns = cloneDeep(columns);
-        // const clonedsubboxes = cloneDeep(subboxes);
         // if (
         //     !rows[i][char] &&
         //     !columns[j][char] &&
@@ -340,4 +337,3 @@ export default solveSudoku;
 //         9: def,
 //     };
 // }
-// import { default as cloneDeep } from "https://cdn.skypack.dev/lodash@4.17.21/cloneDeep?dts";

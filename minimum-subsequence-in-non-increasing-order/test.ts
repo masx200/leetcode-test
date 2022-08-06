@@ -1,4 +1,4 @@
-import { assertEquals } from "https://deno.land/std@0.150.0/testing/asserts.ts";
+import { assertEquals } from "https://deno.land/std@0.151.0/testing/asserts.ts";
 import minSubsequence from "./index.ts";
 Deno.test("minimum-subsequence-in-non-increasing-order", () => {
     const inputs = [[4, 3, 10, 9, 8], [4, 4, 7, 6, 7], [6]];
