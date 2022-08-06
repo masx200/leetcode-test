@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/subtract-the-product-and-sum-of-digits-of-an-integer/
+
 https://leetcode.cn/problems/goal-parser-interpretation/
 
 https://leetcode.cn/problems/first-letter-to-appear-twice/
