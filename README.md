@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/goal-parser-interpretation/
+
 https://leetcode.cn/problems/first-letter-to-appear-twice/
 
 https://leetcode.cn/problems/string-matching-in-an-array/
