@@ -6,7 +6,7 @@
  */
 export type IsBadVersion = (version: number) => boolean;
 
-const solution = function (isBadVersion: IsBadVersion) {
+function solution(isBadVersion: IsBadVersion) {
     return function (n: number): number {
         let left = 1;
         let right = n;
@@ -21,5 +21,5 @@ const solution = function (isBadVersion: IsBadVersion) {
 
         return left;
     };
-};
+}
 export default solution;
