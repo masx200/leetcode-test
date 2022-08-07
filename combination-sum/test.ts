@@ -18,6 +18,6 @@ Deno.test("combination-sum", function () {
     ];
     assertEquals(
         inputs.map(([c, t]) => combinationSum(c, t)),
-        outputs
+        outputs,
     );
 });
