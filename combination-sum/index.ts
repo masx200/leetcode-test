@@ -12,7 +12,7 @@ function dfs(
     candidates: number[],
     target: number,
     path: number[],
-    output: (path: number[]) => number
+    output: (path: number[]) => void
 ) {
     if (target === 0) {
         output(path);
