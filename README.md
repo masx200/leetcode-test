@@ -960,6 +960,10 @@ https://leetcode.cn/problems/most-stones-removed-with-same-row-or-column
 
 https://leetcode.cn/problems/o8SXZn
 
+https://leetcode.cn/problems/reformat-date/
+
+https://leetcode.cn/problems/detonate-the-maximum-bombs/
+
 https://leetcode.cn/problems/insert-delete-getrandom-o1-duplicates-allowed/
 
 https://leetcode.cn/problems/distance-between-bus-stops/
