@@ -10,6 +10,12 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/bu-yong-jia-jian-cheng-chu-zuo-jia-fa-lcof/
+
+https://leetcode.cn/problems/add-without-plus-lcci/
+
+https://leetcode.cn/problems/exclusive-time-of-functions/
+
 https://leetcode.cn/problems/smallest-index-with-equal-value/
 
 https://leetcode.cn/problems/qi-wang-ge-shu-tong-ji/
