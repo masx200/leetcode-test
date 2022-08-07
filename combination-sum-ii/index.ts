@@ -5,14 +5,7 @@ export default function combinationSum2(
     candidates.sort((a, b) => -b + a);
     const ans: number[][] = [];
 
-    const non_repeat = new Set<string>();
     dfs(candidates, target, [], function (path: number[]) {
-        const str = path.join(",");
-
-        if (non_repeat.has(str)) {
-            return;
-        }
-        non_repeat.add(str);
         return ans.push(path);
     });
     return ans;
@@ -24,7 +17,6 @@ function dfs(
     path: number[],
     output: (path: number[]) => void
 ) {
-    // console.log(candidates, target, path);
     if (target === 0) {
         output(path);
         return;
@@ -32,12 +24,19 @@ function dfs(
 
     for (const [index, can] of candidates.entries()) {
         if (target >= can) {
-            dfs(
-                candidates.slice(index + 1),
-                target - can,
-                [...path, can],
-                output
-            );
+            if (
+                !(
+                    candidates[index - 1] &&
+                    candidates[index] === candidates[index - 1]
+                )
+            ) {
+                dfs(
+                    candidates.slice(index + 1),
+                    target - can,
+                    [...path, can],
+                    output
+                );
+            }
         } else {
             return;
         }
