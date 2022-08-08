@@ -3,10 +3,7 @@ import { PriorityQueue } from "./PriorityQueue.ts";
 interface KthLargest {
     add(val: number): number;
 }
-const KthLargest: (k: number, nums: number[]) => KthLargest = function (
-    k,
-    nums,
-) {
+function KthLargest(k: number, nums: number[]) {
     //降序排列
     const minheap = PriorityQueue<number>((a, b) => -a + b, nums);
     //
@@ -14,7 +11,6 @@ const KthLargest: (k: number, nums: number[]) => KthLargest = function (
     //     minheap.offer(n);
     // }
     //Array.from(nums).sort((a, b) => -a + b)
-
     function add(val: number): number {
         minheap.offer(val);
         // minheap.sort((a, b) => -a + b)
@@ -30,5 +26,5 @@ const KthLargest: (k: number, nums: number[]) => KthLargest = function (
         throw Error("pop empty heap");
     }
     return { add };
-};
+}
 export default KthLargest;
