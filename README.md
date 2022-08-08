@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/search-in-rotated-sorted-array-ii/
+
 https://leetcode.cn/problems/special-binary-string/
 
 https://leetcode.cn/problems/combination-sum-ii/
