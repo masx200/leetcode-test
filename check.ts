@@ -1,7 +1,7 @@
 import { parse, walk } from "./deps.ts";
 import AsyncLimiterClass, {
     AsyncCurrentLimiter,
-} from "https://cdn.skypack.dev/@masx200/async-task-current-limiter?dts";
+} from "https://cdn.skypack.dev/@masx200/async-task-current-limiter@2.1.0?dts";
 import { WalkEntry } from "https://deno.land/std@0.151.0/fs/_util.ts";
 function searchFilesNames({
     skip,
