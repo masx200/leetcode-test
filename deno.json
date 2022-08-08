@@ -9,7 +9,7 @@
         "fmt": " deno fmt --config deno.json",
         "test": "deno test  --parallel --unstable -A --config deno.json",
         "lint": "deno lint --config deno.json",
-        "check": "deno run --unstable -A check.ts"
+        "check": "deno run --unstable -A --config deno.json check.ts "
     },
     "fmt": {
         "options": {

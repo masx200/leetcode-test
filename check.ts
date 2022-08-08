@@ -1,29 +1,24 @@
 import { parse, walk } from "./deps.ts";
-
-// Async
-async function printFilesNames({ skip }: { skip?: RegExp | RegExp[] }) {
+import AsyncLimiterClass, {
+    AsyncCurrentLimiter,
+} from "https://cdn.skypack.dev/@masx200/async-task-current-limiter?dts";
+import { WalkEntry } from "https://deno.land/std@0.151.0/fs/_util.ts";
+function searchFilesNames({
+    skip,
+}: // limiter,
+    {
+        skip?: RegExp | RegExp[];
+        // limiter: AsyncCurrentLimiter;
+    }) {
     console.log("type check start!");
-    const stack: string[] = [];
-    for await (
-        const entry of walk(".", {
-            includeFiles: true,
-            includeDirs: false,
-            exts: ["ts"],
-            skip: [/node_modules/, skip].flat().filter(Boolean) as RegExp[],
-        })
-    ) {
-        console.log(entry.path);
-        if (stack.length < 15) {
-            stack.push(entry.path);
-        } else {
-            await runDenoCheck([...stack, entry.path]);
-            stack.length = 0;
-            // console.log({ status, stdout, stderr });
-        }
-    }
-    if (stack.length) {
-        await runDenoCheck(stack);
-    }
+
+    const entry_iter = walk(".", {
+        includeFiles: true,
+        includeDirs: false,
+        exts: ["ts"],
+        skip: [/node_modules/, skip].flat().filter(Boolean) as RegExp[],
+    });
+    return entry_iter;
 }
 if (import.meta.main) {
     /* deno run -A "check.ts" "--skip=npm|utils" */
@@ -31,7 +26,31 @@ if (import.meta.main) {
     // .catch(console.error);
 }
 
+async function parallel_check(
+    entry_iter: AsyncIterableIterator<WalkEntry>,
+    limiter: AsyncCurrentLimiter,
+) {
+    const stack: string[] = [];
+
+    const ps: Array<Promise<void>> = [];
+    for await (const entry of entry_iter) {
+        console.log(entry.path);
+        if (stack.length < 15) {
+            stack.push(entry.path);
+        } else {
+            ps.push(limiter.run(() => runDenoCheck([...stack, entry.path])));
+            stack.length = 0;
+            // console.log({ status, stdout, stderr });
+        }
+    }
+    if (stack.length) {
+        ps.push(limiter.run(() => runDenoCheck(stack)));
+    }
+    await Promise.all(ps);
+}
+
 async function start() {
+    const limiter = new AsyncLimiterClass(navigator.hardwareConcurrency);
     const args = parse(Deno.args);
     console.log(args);
     const skip = typeof args.skip === "string"
@@ -39,7 +58,9 @@ async function start() {
         : Array.isArray(args.skip)
         ? args.skip.map((s) => new RegExp(s))
         : undefined;
-    await printFilesNames({ skip }).then(() => console.log("type check Done!"));
+    const entry_iter = searchFilesNames({ skip });
+    await parallel_check(entry_iter, limiter);
+    console.log("type check Done!");
 }
 
 async function runDenoCheck(stack: string[]) {
