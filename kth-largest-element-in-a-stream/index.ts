@@ -3,7 +3,7 @@ import { PriorityQueue } from "./PriorityQueue.ts";
 interface KthLargest {
     add(val: number): number;
 }
-function KthLargest(k: number, nums: number[]) {
+function KthLargest(k: number, nums: number[]): KthLargest {
     //降序排列
     const minheap = PriorityQueue<number>((a, b) => -a + b, nums);
     //
