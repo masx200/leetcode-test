@@ -1,4 +1,5 @@
 export function climbing_stairs_bigint(num: bigint): bigint {
+    if (num === 0n) return 1n;
     if (num < 1) {
         throw Error("must grater than one");
     }
