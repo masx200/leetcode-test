@@ -1,13 +1,5 @@
 import { TreeNode } from "../binary-tree-inorder-traversal/TreeNode.ts";
 
-// function levelOrder(root: TreeNode | null): number[][] {
-// if(!root){return []}
-//     const current:TreeNode[]=[root]
-//     const result: number[][] =[]
-// level(current,r=>result.push(r))
-//     return result
-// };
-
 export function level(nodes: TreeNode[], output: (r: number[]) => void) {
     if (nodes.length === 0) return;
 
