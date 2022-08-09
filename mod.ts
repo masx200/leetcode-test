@@ -1,6 +1,6 @@
 import { DoublyLinkedList } from "./design-linked-list/DoublyLinkedList.ts";
 export { DoublyLinkedList };
-export { sum };
+export { Array_to_circular_linked_list, sum };
 export { pow_bigint } from "./powx-n/pow_bigint.ts";
 export { climbing_stairs_bigint } from "./climbing-stairs/climbing_stairs_bigint.ts";
 export { fibonacci_bigint } from "./fibonacci-number/fibonacci_bigint.ts";
@@ -69,6 +69,7 @@ import { Fraction } from "./fraction-addition-and-subtraction/Fraction.ts";
 import { parseFraction } from "./fraction-addition-and-subtraction/parseFraction.ts";
 import { deduplication } from "./fraction-addition-and-subtraction/deduplication.ts";
 import { parse_complex } from "./complex-number-multiplication/parse_complex.ts";
+import { Array_to_circular_linked_list } from "./4ueAj6/circular-linked-list.ts";
 export {
     left_rotate,
     TrieNode,

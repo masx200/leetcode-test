@@ -2,7 +2,7 @@ import mergeTwoLists from "../merge-two-sorted-lists/index.ts";
 import { get_length_of_list } from "../reverse-linked-list-ii/get_length_of_list.ts";
 import { ListNode } from "../reverse-linked-list/ListNode.ts";
 
-const sortList = function (head: ListNode | null) {
+function sortList(head: ListNode | null): ListNode | null {
     if (head === null) {
         return head;
     }
@@ -40,5 +40,5 @@ const sortList = function (head: ListNode | null) {
         }
     }
     return dummyHead.next;
-};
+}
 export default sortList;

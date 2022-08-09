@@ -9,19 +9,20 @@ export default function getAncestors(n: number, edges: number[][]): number[][] {
         }
         set.add(parent);
     }
-    const result: number[][] = [];
+    return Array.from({ length: n }).map((_, i) =>
+        handle_graph(childToParents, i)
+    );
+}
 
-    for (let i = 0; i < n; i++) {
-        const Ancestors = new Set<number>();
-        const callbackfn = (v: number) => {
-            if (!Ancestors.has(v)) {
-                Ancestors.add(v);
+function handle_graph(childToParents: Map<number, Set<number>>, i: number) {
+    const Ancestors = new Set<number>();
+    function callbackfn(v: number) {
+        if (!Ancestors.has(v)) {
+            Ancestors.add(v);
 
-                childToParents.get(v)?.forEach(callbackfn);
-            }
-        };
-        childToParents.get(i)?.forEach(callbackfn);
-        result.push(Array.from(Ancestors).sort((a, b) => a - b));
+            childToParents.get(v)?.forEach(callbackfn);
+        }
     }
-    return result;
+    childToParents.get(i)?.forEach(callbackfn);
+    return Array.from(Ancestors).sort((a, b) => a - b);
 }

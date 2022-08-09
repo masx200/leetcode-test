@@ -9,6 +9,6 @@ Deno.test("search-in-rotated-sorted-array-ii", () => {
     const outputs = [true, false, true];
     assertEquals(
         outputs,
-        inputs.map(([nums, target]) => search(nums, target))
+        inputs.map(([nums, target]) => search(nums, target)),
     );
 });

@@ -1,8 +1,7 @@
-const addToArrayForm = function (A: number[], K: number): number[] {
+function addToArrayForm(A: number[], K: number): number[] {
     const res = [];
 
-    let i = A.length - 1,
-        carry = 0;
+    let i = A.length - 1, carry = 0;
 
     while (i >= 0 || K != 0) {
         const x = i >= 0 ? A[i] : 0;
@@ -19,7 +18,9 @@ const addToArrayForm = function (A: number[], K: number): number[] {
 
         K = Math.floor(K / 10);
     }
-    if (carry) res.push(carry);
+    if (carry) {
+        res.push(carry);
+    }
     return res.reverse();
-};
+}
 export default addToArrayForm;

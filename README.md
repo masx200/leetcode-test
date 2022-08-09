@@ -10,6 +10,10 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/da-yin-cong-1dao-zui-da-de-nwei-shu-lcof/
+
+https://leetcode.cn/problems/minimum-value-to-get-positive-step-by-step-sum/
+
 https://leetcode.cn/problems/search-in-rotated-sorted-array-ii/
 
 https://leetcode.cn/problems/special-binary-string/
