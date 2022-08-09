@@ -1,13 +1,15 @@
 function twoSum(nums: number[], target: number): number[] {
-    const storeNumstoindex = new Map<number, number>();
-
-    for (const [i, num1] of nums.entries()) {
-        const num2 = target - num1;
-        const index2 = storeNumstoindex.get(num2);
-        if (typeof index2 !== "undefined") {
-            return [nums[i], nums[index2]];
-        } else {
-            storeNumstoindex.set(num1, i);
+    let i = 0;
+    let j = nums.length - 1;
+    while (i < j) {
+        const sum = nums[i] + nums[j];
+        if (sum === target) {
+            return [nums[i], nums[j]];
+        }
+        if (sum > target) {
+            j--;
+        } else if (sum < target) {
+            i++;
         }
     }
     throw Error("should not go here");
