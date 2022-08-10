@@ -10,6 +10,10 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/short-encoding-of-words/
+
+https://leetcode.cn/problems/reformat-the-string/
+
 https://leetcode.cn/problems/nth-digit/
 
 https://leetcode.cn/problems/shu-zi-xu-lie-zhong-mou-yi-wei-de-shu-zi-lcof/
