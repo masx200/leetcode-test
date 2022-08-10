@@ -24,11 +24,21 @@ function constructArr(a: number[]): number[] {
 
         if (left === 0) {
             //前缀乘积
+
+            // for (let i = 1; i <= right; i++) {
+            //     set(left, i, get(left, i - 1) * get(i, i));
+            // }
+            // return get(left, right);
             //error: RangeError: Maximum call stack size exceeded
             return get(left, right - 1) * get(right, right);
         }
         if (right === a.length - 1) {
             //后缀乘积
+
+            // for (let i = right - 1; i >= left; i--) {
+            //     set(i, right, get(i, i) * get(i + 1, right));
+            // }
+            // return get(left, right);
             //error: RangeError: Maximum call stack size exceeded
             return get(left, left) * get(left + 1, right);
         }
