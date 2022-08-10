@@ -1,0 +1,9 @@
+{
+    "type": "module",
+    "name": "leetcode-test",
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": "https://gitee.com/masx200/leetcode-test",
+    "author": "masx200 <34191203+masx200@users.noreply.github.com>",
+    "license": "MIT"
+}
