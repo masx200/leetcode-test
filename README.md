@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/gou-jian-cheng-ji-shu-zu-lcof/
+
 https://leetcode.cn/problems/sliding-window-maximum/
 
 https://leetcode.cn/problems/hua-dong-chuang-kou-de-zui-da-zhi-lcof/
