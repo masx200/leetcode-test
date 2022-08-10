@@ -1,4 +1,4 @@
-import { assertEquals } from 'https://deno.land/std@0.151.0/testing/asserts.ts';
+import { assertEquals } from "https://deno.land/std@0.151.0/testing/asserts.ts";
 import convertBST from "./index.ts";
 Deno.test("convert-bst-to-greater-tree", () => {
     const inputs = [
@@ -49,5 +49,5 @@ Deno.test("convert-bst-to-greater-tree", () => {
         },
         { val: 1, left: null, right: { val: 1, left: null, right: null } },
     ];
-    assertEquals(inputs.map((input, ) => convertBST(input)), outputs);
+    assertEquals(inputs.map((input) => convertBST(input)), outputs);
 });
