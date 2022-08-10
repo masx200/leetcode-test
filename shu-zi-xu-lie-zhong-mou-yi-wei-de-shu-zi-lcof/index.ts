@@ -1,33 +1,43 @@
 function findNthDigit(n: number): number {
-    return Number(str[n] ?? cached.get(n) ?? 0);
+    if (n < 10) {
+        return n;
+    }
+    if (!data.length) {
+        init();
+    }
+
+    const selected = data.find((v) => v.prev <= n && v.total > n);
+    // console.log(selected)
+    if (!selected) throw Error("accident not found");
+    const offset = n - selected.prev;
+    const current = selected.start + Math.floor(offset / selected.part);
+    // console.log(current)
+    return Number(String(current)[offset % selected.part]);
 }
-const str = Array.from({ length: 1000000 }, (_, i) => i).join("");
-const cached = new Map([
-    [7654321, 2],
-    [12345678, 2],
-    [3333333, 3],
-    [87654321, 8],
-    [123456789, 2],
-    [22222222, 3],
-    [999999999, 9],
-    [1111111111, 1],
-    [2147483647, 2],
-    [1000000000, 1],
-    [10000000, 7],
-    [1000000, 1],
-    [100000, 2],
-    [10000, 7],
-    [25, 7],
-    [24, 1],
-    [23, 6],
-    [5, 5],
-    [6, 6],
-    [4, 4],
-    [2, 2],
-    [1, 1],
-    [100000000, 8],
-    [3, 3],
-    [11, 0],
-    [22, 1],
-]);
+const data: Array<{
+    prev: number;
+    total: number;
+    part: number;
+    start: number;
+    end: number;
+}> = [];
+function init() {
+    let prev = 0;
+    let total = 10;
+    let part = 1;
+    let start = 0;
+
+    let end = 10;
+    while (total <= (2 ** 31 - 1) * 10) {
+        data.push({ prev, total: total, part: part, start, end });
+
+        part++;
+        start = end;
+        end *= 10;
+        prev = total;
+        total += part * (end - start);
+    }
+    // console.log(data)
+}
+
 export default findNthDigit;
