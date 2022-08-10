@@ -10,6 +10,12 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/sliding-window-maximum/
+
+https://leetcode.cn/problems/hua-dong-chuang-kou-de-zui-da-zhi-lcof/
+
+https://leetcode.cn/problems/solve-the-equation/
+
 https://leetcode.cn/problems/diao-zheng-shu-zu-shun-xu-shi-qi-shu-wei-yu-ou-shu-qian-mian-lcof/
 
 https://leetcode.cn/problems/ba-shu-zu-pai-cheng-zui-xiao-de-shu-lcof/

@@ -39,7 +39,8 @@ Deno.test("pow_x-n", () => {
         { input: [0, -Infinity], output: Infinity },
     ];
     examples.forEach(({ input, output }) => {
-        assert(float64equals(output, pow_x_n(...input)));
+        const result = pow_x_n(...input);
+        assert(float64equals(output, result, 1e-10), `${output}!==${result} `);
     });
 });
 Deno.test("pow_bigint", () => {
