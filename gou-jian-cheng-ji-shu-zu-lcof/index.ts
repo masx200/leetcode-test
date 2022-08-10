@@ -1,62 +1,25 @@
 function constructArr(a: number[]): number[] {
     if (a.length <= 1) return a;
-    const product_cache = new Map<number, Map<number, number>>();
-    function get(left: number, right: number): number {
-        const cached = product_cache.get(left)?.get(right);
-        if (typeof cached !== "undefined") {
-            return cached;
-        }
-        const result = compute(left, right);
-        set(left, right, result);
-        return result;
-    }
-    function set(left: number, right: number, value: number) {
-        const map = product_cache.get(left) ?? new Map<number, number>();
-        product_cache.set(left, map);
-        map.set(right, value);
-    }
-    function compute(left: number, right: number): number {
-        if (left > right || left < 0 || right > a.length - 1) {
-            throw Error("index out of bounds");
-        }
+    const length = a.length;
+    const answer = new Array<number>(length);
 
-        if (left === right) return a[left];
-
-        if (left === 0) {
-            //前缀乘积
-
-            // for (let i = 1; i <= right; i++) {
-            //     set(left, i, get(left, i - 1) * get(i, i));
-            // }
-            // return get(left, right);
-            //error: RangeError: Maximum call stack size exceeded
-            return get(left, right - 1) * get(right, right);
-        }
-        if (right === a.length - 1) {
-            //后缀乘积
-
-            // for (let i = right - 1; i >= left; i--) {
-            //     set(i, right, get(i, i) * get(i + 1, right));
-            // }
-            // return get(left, right);
-            //error: RangeError: Maximum call stack size exceeded
-            return get(left, left) * get(left + 1, right);
-        }
-        //二分乘积 内存溢出
-        const mid = Math.floor((left + right) / 2);
-
-        return get(left, mid) * get(mid + 1, right);
+    // answer[i] 表示索引 i 左侧所有元素的乘积
+    // 因为索引为 '0' 的元素左侧没有元素， 所以 answer[0] = 1
+    answer[0] = 1;
+    for (let i = 1; i < length; i++) {
+        answer[i] = a[i - 1] * answer[i - 1];
     }
 
-    return Array.from(
-        { length: a.length },
-        (_, i) =>
-            i === a.length - 1
-                ? get(0, a.length - 2)
-                : i === 0
-                ? get(1, a.length - 1)
-                : get(0, Math.max(0, i - 1)) *
-                    get(Math.min(a.length - 1, i + 1), a.length - 1),
-    );
+    // R 为右侧所有元素的乘积
+    // 刚开始右边没有元素，所以 R = 1
+    let R = 1;
+    for (let i = length - 1; i >= 0; i--) {
+        // 对于索引 i，左边的乘积为 answer[i]，右边的乘积为 R
+        answer[i] = answer[i] * R;
+        // R 需要包含右边所有的乘积，所以计算下一个结果时需要将当前值乘到 R 上
+        R *= a[i];
+    }
+    return answer;
 }
+
 export default constructArr;
