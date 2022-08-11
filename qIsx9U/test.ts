@@ -4,8 +4,8 @@ import { assertEquals } from "https://deno.land/std@0.151.0/testing/asserts.ts";
 import { float64equals } from "../utils/float64equals.ts";
 
 Deno.test("moving-average-from-data-stream", () => {
-    // MovingAverage;
-
+    const variable_name = "movingAverage";
+    const class_name = "MovingAverage";
     const inputs: Array<[string[], number[][]]> = [
         [
             ["MovingAverage", "next", "next", "next", "next"],
@@ -173,7 +173,7 @@ Deno.test("moving-average-from-data-stream", () => {
         const out = outputs[i];
 
         const fn = new Function(
-            "MovingAverage",
+            class_name,
             `
         
         const res=[];
@@ -182,12 +182,12 @@ ${
                     .map(function (name, i) {
                         if (i === 0) {
                             return `
-        const movingAverage =new MovingAverage(${args[i].join(", ")});
+        const ${variable_name} =new ${class_name}(${args[i].join(", ")});
 
         res.push(null);
                     `;
                         }
-                        return `res.push(movingAverage.${name}(${
+                        return `res.push(${variable_name}.${name}(${
                             args[i].join(", ")
                         }));`;
                     })
@@ -214,7 +214,7 @@ ${
                     ),
                     `${result} !== ${expected}`,
                 );
-            } else if (result !== null) {
+            } else if (expected !== null) {
                 assertEquals(result, expected);
             }
         });
