@@ -1,6 +1,3 @@
-/**
- Do not return anything, modify s in-place instead.
- */
 export default function reverseString(s: string[]): void {
     if (s.length < 2) return;
     const half = Math.floor(s.length / 2);

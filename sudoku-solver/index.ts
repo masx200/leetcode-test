@@ -79,7 +79,6 @@ function solveSudoku(board: string[][]): void {
     //   spaces.push([row, column]);
     // }
 
-    /*  const result = */
     dfs(new Set(spaces), rows, columns, subboxes, board);
     // if (result) {
     //     for (const [row, column, char] of result) {
@@ -180,24 +179,21 @@ function dfs(
         //     !columns[j][char] &&
         //     !subboxes[Math.floor(i / 3)][Math.floor(j / 3)][char]
         // ) {
-        /*     cloned */
+
         rows[i][char] = true;
-        /* cloned */
+
         columns[j][char] = true;
-        /*   cloned */
+
         subboxes[Math.floor(i / 3)][Math.floor(j / 3)][char] = true;
 
         board[i][j] = char;
         spaces.delete(pair_to_index(i, j));
         const result = dfs(
-            /*   cloned */
             spaces,
             // clonedspaces,
-            /* cloned */
+
             rows,
-            /*  cloned */
             columns,
-            /*   cloned */
             subboxes,
             board,
         );

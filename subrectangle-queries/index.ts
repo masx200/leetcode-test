@@ -22,10 +22,3 @@ export default class SubrectangleQueries {
         return this.#rectangle[row][col];
     }
 }
-
-/**
- * Your SubrectangleQueries object will be instantiated and called as such:
- * var obj = new SubrectangleQueries(rectangle)
- * obj.updateSubrectangle(row1,col1,row2,col2,newValue)
- * var param_2 = obj.getValue(row,col)
- */

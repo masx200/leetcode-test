@@ -1,41 +1,32 @@
-// deno-lint-ignore no-explicit-any
 export interface PriorityQueue<T = any> {
     at(index: number): T | undefined;
     isEmpty(): boolean;
-    /**clear all elements */
+
     clear: () => void;
-    /**get length of elements */
+
     length: () => number;
-    /** comparator Function used to determine the order of the elements. It is expected to return a negative value if the head argument is less than the second argument, zero if they're equal, and a positive value otherwise. */
+
     comparator: (a: T, b: T) => number;
-    /**add one element  */
+
     offer: (value: T) => void;
-    /** get min element */
+
     head: () => T | undefined;
-    /** get max element */
+
     tail: () => T | undefined;
-    /**get and delete max element */
+
     pop: () => T | undefined;
-    /**get and delete min element */
+
     shift: () => T | undefined;
-    // at: (index: number) => T | undefined;
     toArray(): T[];
 }
 
-/**
- * comparator Function used to determine the order of the elements. It is expected to return a negative value if the head argument is less than the second argument, zero if they're equal, and a positive value otherwise.
- */
-// deno-lint-ignore no-explicit-any
 export function PriorityQueue<T = any>(
-    /** comparator Function used to determine the order of the elements. It is expected to return a negative value if the head argument is less than the second argument, zero if they're equal, and a positive value otherwise. */
     comparator: (a: T, b: T) => number,
     values?: T[],
 ): PriorityQueue<T> {
     if (typeof comparator !== "function") {
         throw Error("expect comparator to be function");
     }
-    //默认升序
-    //comparator Function used to determine the order of the elements. It is expected to return a negative value if the head argument is less than the second argument, zero if they're equal, and a positive value otherwise.
     const data: T[] = [];
     if (values?.length) {
         values.forEach((value) => data.push(value));

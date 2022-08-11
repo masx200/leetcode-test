@@ -11,9 +11,6 @@ class MapSum {
             PrefixTreeInsert(this.#root, key, {
                 each: (node) => (node.sum += val),
                 create: () => new PrefixTreeWithSum(),
-                // end(node) {
-                //     node.value = val;
-                // },
             });
         } else {
             const delta = -value + val;
@@ -21,9 +18,6 @@ class MapSum {
                 each(node) {
                     node.sum += delta;
                 },
-                // end(node) {
-                //     node.value = val;
-                // },
             });
         }
         this.#map.set(key, val);
@@ -34,10 +28,4 @@ class MapSum {
     }
 }
 
-/**
- * Your MapSum object will be instantiated and called as such:
- * var obj = new MapSum()
- * obj.insert(key,val)
- * var param_2 = obj.sum(prefix)
- */
 export default MapSum;

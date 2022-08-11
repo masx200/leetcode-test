@@ -30,9 +30,4 @@ class FindElements {
         return this.#values.has(target);
     }
 }
-/**
- * Your FindElements object will be instantiated and called as such:
- * var obj = new FindElements(root)
- * var param_1 = obj.find(target)
- */
 export default FindElements;

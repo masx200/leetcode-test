@@ -12,9 +12,3 @@ export default function Solution(
         },
     };
 }
-
-/**
- * Your Solution object will be instantiated and called as such:
- * var obj = new Solution(radius, x_center, y_center)
- * var param_1 = obj.randPoint()
- */

@@ -6,7 +6,7 @@ export function PrefixTreeSearchEach(
     // each = false,
 ) {
     // function search(word: string, each = false) {
-    return !!PrefixTreeSearchPrefixEach(root, word /*  each */)?.isEnd;
+    return !!PrefixTreeSearchPrefixEach(root, word)?.isEnd;
     // }
     // return search(word, each);
 }

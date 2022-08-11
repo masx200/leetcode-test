@@ -1,10 +1,5 @@
-/**
- Do not return anything, modify matrix in-place instead.
- */
 export default function setZeroes(matrix: number[][]): void {
     const m = matrix.length;
-    // const n = matrix[0].length;
-
     const zerorows: number[] = [];
     const zerocols: number[] = [];
     matrix.forEach((a, i) => {

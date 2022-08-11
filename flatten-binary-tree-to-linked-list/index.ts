@@ -1,8 +1,5 @@
 import { TreeNode } from "../mod.ts";
 
-/**
- Do not return anything, modify root in-place instead.
- */
 export default function flatten(root: TreeNode | null): void {
     const list: TreeNode[] = [];
     preorderTraversal(root, list);

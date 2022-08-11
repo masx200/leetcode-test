@@ -1,7 +1,3 @@
-/**
- Do not return anything, modify matrix in-place instead.
- */
-
 import { zip } from "../deps.ts";
 
 function rotate(matrix: number[][]): void {

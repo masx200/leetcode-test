@@ -21,7 +21,6 @@ function searchFilesNames({
     return entry_iter;
 }
 if (import.meta.main) {
-    /* deno run -A "check.ts" "--skip=npm|utils" */
     await start();
     // .catch(console.error);
 }

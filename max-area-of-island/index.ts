@@ -23,14 +23,7 @@ function getIslandsAreas(grid: number[][]): number[] {
             if (grid[r][c] == 1) {
                 // ++num_islands;
                 let islandarea = 0;
-                dfs(
-                    grid,
-                    r,
-                    c,
-                    cache,
-                    (/* p: [number, number] */) => islandarea++,
-                    /*  island.push(p) */
-                );
+                dfs(grid, r, c, cache, () => islandarea++);
                 islandareas.push(islandarea);
             }
         }
@@ -44,7 +37,7 @@ function dfs(
     r: number,
     c: number,
     cache: Set<number>,
-    output: (/* p: [number, number] */) => void,
+    output: () => void,
 ): void {
     const m = grid.length;
     if (m === 0) return;
@@ -59,7 +52,7 @@ function dfs(
         return;
     }
     cache.add(id);
-    output(); /* [r, c] */
+    output();
     dfs(grid, r - 1, c, cache, output);
     dfs(grid, r + 1, c, cache, output);
     dfs(grid, r, c - 1, cache, output);

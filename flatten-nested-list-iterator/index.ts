@@ -47,10 +47,4 @@ class NestedIterator {
     }
 }
 
-/**
- * Your ParkingSystem object will be instantiated and called as such:
- * var obj = new NestedIterator(nestedList)
- * var a: number[] = []
- * while (obj.hasNext()) a.push(obj.next());
- */
 export default NestedIterator;

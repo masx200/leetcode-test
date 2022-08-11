@@ -11,6 +11,13 @@
         "lint": "deno lint --config deno.json",
         "check": "deno run --unstable -A --config deno.json check.ts "
     },
+    "lint": {
+        "rules": {
+            "exclude": [
+                "no-explicit-any"
+            ]
+        }
+    },
     "fmt": {
         "options": {
             "indentWidth": 4,

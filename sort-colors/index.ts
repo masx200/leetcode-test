@@ -1,6 +1,3 @@
-/**
- Do not return anything, modify nums in-place instead.
- */
 export default function sortColors(nums: number[]): void {
     const store = Array(3).fill(0);
 

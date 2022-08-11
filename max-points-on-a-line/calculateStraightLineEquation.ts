@@ -1,4 +1,3 @@
-/* ax+by+c=0 */
 export function calculateStraightLineEquation(
     point1: number[],
     point2: number[],

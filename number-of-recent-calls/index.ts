@@ -1,12 +1,3 @@
-// class RecentCounter {
-//     constructor() {
-
-//     }
-
-//     ping(t: number): number {
-
-//     }
-// }
 interface RecentCounter {
     ping(t: number): number;
 }
@@ -21,9 +12,5 @@ function RecentCounter(): RecentCounter {
     }
     return { ping };
 }
-/**
- * Your RecentCounter object will be instantiated and called as such:
- * var obj = new RecentCounter()
- * var param_1 = obj.ping(t)
- */
+
 export default RecentCounter;

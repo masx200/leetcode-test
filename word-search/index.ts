@@ -25,11 +25,7 @@ export default function exist(board: string[][], word: string): boolean {
         [0, -1],
         [-1, 0],
     ];
-    function dfs(
-        word: string,
-        i: number,
-        j: number, /*  visited: boolean[][] */
-    ): boolean {
+    function dfs(word: string, i: number, j: number): boolean {
         // console.log({ word, i, j })
         // console.log(visited)
         if (board[i][j] !== word[0]) return false;
@@ -42,7 +38,7 @@ export default function exist(board: string[][], word: string): boolean {
             const y = j + s;
             if (x >= 0 && y >= 0 && x < row && y < col) {
                 if (!visited[x][y]) {
-                    if (dfs(word.slice(1), x, y /*  visited */)) {
+                    if (dfs(word.slice(1), x, y)) {
                         visited[i][j] = false;
                         return true;
                     } /* else {

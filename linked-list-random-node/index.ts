@@ -15,10 +15,4 @@ class Solution {
     }
 }
 
-/**
- * Your Solution object will be instantiated and called as such:
- * var obj = new Solution(head)
- * var param_1 = obj.getRandom()
- */
-
 export default Solution;

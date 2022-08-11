@@ -1,9 +1,3 @@
-/**
- * The knows API is defined in the parent class Relation.
- * isBadVersion(version: number): boolean {
- *     ...
- * };
- */
 export type IsBadVersion = (version: number) => boolean;
 
 function solution(isBadVersion: IsBadVersion) {
