@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/design-authentication-manager/
+
 https://leetcode.cn/problems/design-bitset/
 
 https://leetcode.cn/problems/operations-lcci/
