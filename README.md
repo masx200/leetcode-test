@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/fi9suh/
+
 https://leetcode.cn/problems/vertical-order-traversal-of-a-binary-tree/
 
 https://leetcode.cn/problems/group-the-people-given-the-group-size-they-belong-to/
