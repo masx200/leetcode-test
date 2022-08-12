@@ -46,6 +46,6 @@ Deno.test("vertical-order-traversal-of-a-binary-tree", () => {
     ];
     assertEquals(
         inputs.map((input) => verticalOrder(input)),
-        outputs
+        outputs,
     );
 });
