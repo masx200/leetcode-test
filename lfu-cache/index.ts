@@ -24,6 +24,7 @@ class LFUCache {
                 }
             }
         }
+        return;
     };
     #delete(key: number): void {
         const freq = this.#key_to_freq.get(key);
