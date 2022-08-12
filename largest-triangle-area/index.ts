@@ -17,16 +17,16 @@ export default function largestTriangleArea(points: number[][]): number {
 
     return ret;
 }
-const triangleArea = (
+function triangleArea(
     x1: number,
     y1: number,
     x2: number,
     y2: number,
     x3: number,
     y3: number,
-) => {
+) {
     return (
         0.5 *
         Math.abs(x1 * y2 + x2 * y3 + x3 * y1 - x1 * y3 - x2 * y1 - x3 * y2)
     );
-};
+}
