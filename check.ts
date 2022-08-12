@@ -63,7 +63,7 @@ async function start() {
 }
 
 async function runDenoCheck(stack: string[]) {
-    const cmd = ["deno", "check", "--unstable", "--remote", ...stack];
+    const cmd = ["deno", "check", "--unstable", ...stack];
     const process = Deno.run({
         cmd: cmd,
         stderr: "piped",

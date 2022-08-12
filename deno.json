@@ -3,14 +3,11 @@
         "strict": true,
         "noImplicitAny": true,
         "noImplicitReturns": true,
-        "esModuleInterop": true,
+
         "noImplicitThis": true,
         "alwaysStrict": true,
         "noUnusedLocals": true,
-        "noUnusedParameters": true,
-        "isolatedModules": true,
-        "target": "esnext",
-        "module": "esnext"
+        "noUnusedParameters": true
     },
     "importMap": "import_map.json",
     "tasks": {
