@@ -1,7 +1,7 @@
 import { assertEquals } from "../deps.ts";
 import MyCalendarThree from "./index.ts";
 
-Deno.test("my-calendar-ii", () => {
+Deno.test("my-calendar-i", () => {
     const temp = new MyCalendarThree();
     const args = [
         [10, 20, true],
