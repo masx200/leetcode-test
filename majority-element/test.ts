@@ -1,4 +1,4 @@
-import { assertEquals } from "https://deno.land/std@0.151.0/testing/asserts.ts";
+import { assertEquals } from "https://deno.land/std@0.152.0/testing/asserts.ts";
 import majorityElement from "./index.ts";
 Deno.test("majority-element", () => {
     const inputs = [

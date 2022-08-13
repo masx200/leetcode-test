@@ -1,4 +1,4 @@
-import { assertEquals } from "https://deno.land/std@0.151.0/testing/asserts.ts";
+import { assertEquals } from "https://deno.land/std@0.152.0/testing/asserts.ts";
 import removeDuplicates from "./index.ts";
 Deno.test("remove-all-adjacent-duplicates-in-string", () => {
     assertEquals(["abbaca", "azxxzy"].map(removeDuplicates), ["ca", "ay"]);
