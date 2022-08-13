@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/zui-xiao-de-kge-shu-lcof/
+
 https://leetcode.cn/problems/ugly-number-ii/
 
 https://leetcode.cn/problems/chou-shu-lcof/
