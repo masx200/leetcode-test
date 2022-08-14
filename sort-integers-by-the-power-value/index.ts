@@ -1,3 +1,5 @@
+import { cache } from "./cache.ts";
+
 export default getKth;
 function getKth(lo: number, hi: number, k: number): number {
     const arr = Array(hi - lo + 1)
@@ -13,23 +15,6 @@ function getKth(lo: number, hi: number, k: number): number {
 
     return arr[k - 1];
 }
-
-function cache<T extends (...args: any[]) => any>(fn: T): T {
-    const store = new Map<string, ReturnType<T>>();
-
-    return ((...args) => {
-        const key = args.length === 1 ? args[0] : JSON.stringify(args);
-        const cached = store.get(key);
-        if (store.has(key)) {
-            return cached as ReturnType<T>;
-        }
-        const result = Reflect.apply(fn, undefined, args);
-        store.set(key, result);
-
-        return result;
-    }) as T;
-}
-
 const getWeight = cache(function (x: number): number {
     if (x === 1) {
         return 0;
