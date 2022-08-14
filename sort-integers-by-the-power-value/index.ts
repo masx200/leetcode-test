@@ -18,7 +18,7 @@ function cache<T extends (...args: any[]) => any>(fn: T): T {
     const store = new Map<string, ReturnType<T>>();
 
     return ((...args) => {
-        const key = JSON.stringify(args);
+        const key = args.length === 1 ? args[0] : JSON.stringify(args);
         const cached = store.get(key);
         if (store.has(key)) {
             return cached as ReturnType<T>;
