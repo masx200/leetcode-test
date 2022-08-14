@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/design-a-stack-with-increment-operation/
+
 https://leetcode.cn/problems/ugly-number/
 
 https://leetcode.cn/problems/get-kth-magic-number-lcci/

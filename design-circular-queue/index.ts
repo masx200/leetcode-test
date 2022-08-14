@@ -7,15 +7,15 @@ type MyCircularQueue<T = any> = {
     enQueue: (value: T) => boolean;
     Rear: () => T | number;
     isFull: () => boolean;
-    capcity: number;
+    capacity: number;
 };
 // deno-lint-ignore no-explicit-any
 function MyCircularQueue<T = any>(
     // deno-lint-ignore no-inferrable-types
-    capcity: number = Infinity,
+    capacity: number = Infinity,
 ): MyCircularQueue<T> {
     // console.log('MyCircularDeque', k)
-    if (capcity < 1) {
+    if (capacity < 1) {
         throw Error("k greater than or equal  one");
     }
     const storage = new Map<bigint, T>();
@@ -123,7 +123,15 @@ function MyCircularQueue<T = any>(
         return r as T;
     }
     function isFull(): boolean {
-        return storage.size >= capcity;
+        return storage.size >= capacity;
     }
-    return { isEmpty, Front, deQueue, enQueue, Rear, isFull, capcity: capcity };
+    return {
+        isEmpty,
+        Front,
+        deQueue,
+        enQueue,
+        Rear,
+        isFull,
+        capacity: capacity,
+    };
 }

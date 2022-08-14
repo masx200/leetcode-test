@@ -8,15 +8,15 @@ export default interface MyCircularDeque<T = any> {
     deleteLast: () => boolean;
     getRear: () => T | number;
     isFull: () => boolean;
-    capcity: number;
+    capacity: number;
 }
 
 // deno-lint-ignore no-explicit-any
 export default function MyCircularDeque<T = any>(
-    capcity = Infinity,
+    capacity = Infinity,
 ): MyCircularDeque<T> {
     // console.log('MyCircularDeque', k)
-    if (capcity < 1) throw Error("k greater than or equal  one");
+    if (capacity < 1) throw Error("k greater than or equal  one");
     const storage = new Map<bigint, T>();
     let min = BigInt(0);
     let max = BigInt(0);
@@ -113,7 +113,7 @@ export default function MyCircularDeque<T = any>(
         return r as T;
     }
     function isFull(): boolean {
-        return storage.size >= capcity;
+        return storage.size >= capacity;
     }
     return {
         isEmpty,
@@ -124,6 +124,6 @@ export default function MyCircularDeque<T = any>(
         deleteLast,
         getRear,
         isFull,
-        capcity: capcity,
+        capacity: capacity,
     };
 }
