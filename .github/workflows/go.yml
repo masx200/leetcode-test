@@ -21,6 +21,6 @@ jobs:
     - name: main
       run: go run main.go
 
-    #- name: Test
-    #  run: cd serialize-and-deserialize-binary-tree && go test -v ./...
+    - name: Test
+      run: go test -v ./...
       
