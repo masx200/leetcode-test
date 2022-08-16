@@ -1,4 +1,3 @@
-// deno-lint-ignore no-explicit-any
 export default interface MyCircularDeque<T = any> {
     isEmpty: () => boolean;
     getFront: () => T | number;
@@ -11,17 +10,14 @@ export default interface MyCircularDeque<T = any> {
     capacity: number;
 }
 
-// deno-lint-ignore no-explicit-any
 export default function MyCircularDeque<T = any>(
     capacity = Infinity,
 ): MyCircularDeque<T> {
-    // console.log('MyCircularDeque', k)
     if (capacity < 1) throw Error("k greater than or equal  one");
     const storage = new Map<bigint, T>();
     let min = BigInt(0);
     let max = BigInt(0);
     const initial = 0n;
-    // function storage.size { return storage.size }
     function insertLast(value: T): boolean {
         if (isFull()) return false;
 
@@ -33,7 +29,6 @@ export default function MyCircularDeque<T = any>(
             max = initial;
         }
 
-        // console.log('insertLast', value, storage)
         return true;
     }
 
@@ -42,26 +37,14 @@ export default function MyCircularDeque<T = any>(
         else {
             storage.delete(min);
             min++;
-            // console.log('deleteFront', storage)
             if (storage.size === 0) {
                 min = initial;
             }
             return true;
         }
-        // if (storage.has(min)) {
-        //     // const r = storage.get(min);
-        //     storage.delete(min);
-        //     min++;
-        //     max--
-        //     console.log('deleteFront', storage)
-        //     return true
-        // } else { return false }
-
-        // return r as T;
     }
 
     function getFront(): T | number {
-        // console.log('getFront', storage)
         if (isEmpty()) return -1;
         const r = storage.get(min);
         return r as T;
@@ -79,10 +62,6 @@ export default function MyCircularDeque<T = any>(
             storage.set(initial, value);
             min = initial;
         }
-        // storage.set(min - 1n, value);
-        // min--;
-        // max++
-        // console.log('insertFront', value, storage)
         return true;
     }
     function deleteLast(): boolean {
@@ -90,22 +69,13 @@ export default function MyCircularDeque<T = any>(
         else {
             storage.delete(max);
             max--;
-            // console.log('deleteLast', storage)
             if (storage.size === 0) {
                 max = initial;
             }
             return true;
         }
-        // if (storage.has(max - 1n + min)) {
-        //     // const r = storage.get(min);
-        //     storage.delete(max - 1n + min);
-        //     max--;
-        //     console.log('deleteLast', storage)
-        //     return true
-        // } else { return false }
     }
     function getRear(): T | number {
-        // console.log('getRear', storage)
         if (isEmpty()) return -1;
 
         const r = storage.get(max);
