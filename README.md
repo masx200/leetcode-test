@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-inorder-traversal/
+
 https://leetcode.cn/problems/design-a-stack-with-increment-operation/
 
 https://leetcode.cn/problems/ugly-number/
