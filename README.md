@@ -1169,8 +1169,9 @@ deno task lint
 ```
 deno task check
 ```
+### Deno
 
-5.导入模块
+1.导入模块
 
 指定版本号
 
@@ -1178,7 +1179,7 @@ deno task check
 import {} from "https://deno.land/x/masx200_leetcode_test@7.0.0/mod.ts";
 ```
 
-6.使用举例
+2.使用举例
 
 ```ts
 import { climbing_stairs_bigint } from "https://deno.land/x/masx200_leetcode_test@7.0.0/mod.ts";
@@ -1187,6 +1188,14 @@ import { climbing_stairs_bigint } from "https://deno.land/x/masx200_leetcode_tes
 ```ts
 import climbing_stairs from "https://deno.land/x/masx200_leetcode_test@7.0.0/climbing-stairs/index.ts";
 ```
+
+### Golang
+
+```
+go get github.com/masx200/leetcode-test
+```
+
+https://pkg.go.dev/github.com/masx200/leetcode-test
 
 #### 参与贡献
 
