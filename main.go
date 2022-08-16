@@ -6,6 +6,7 @@ import (
 	"os"
 	"os/exec"
 	"path"
+	"runtime"
 )
 
 func main() {
@@ -14,7 +15,7 @@ func main() {
 	if err != nil {
 		return
 	}
-	c := make(chan struct{})
+	c := make(chan struct{}, runtime.NumCPU())
 	for _, m := range matches {
 		go run(m, c)
 	}
