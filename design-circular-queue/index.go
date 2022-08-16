@@ -1,12 +1,17 @@
 package design_circular_queue
 
+import "errors"
+
 type MyCircularQueue struct {
 	capacity int
 	queue    []int
 }
 
-func Constructor(k int) MyCircularQueue {
-	return MyCircularQueue{capacity: k}
+func Constructor(capacity int) MyCircularQueue {
+	if capacity < 1 {
+		panic(errors.New("k greater than or equal  one"))
+	}
+	return MyCircularQueue{capacity: capacity}
 }
 
 func (d *MyCircularQueue) EnQueue(value int) bool {
