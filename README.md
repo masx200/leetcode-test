@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/first-missing-positive/
+
 https://leetcode.cn/problems/count-and-say/
 
 https://leetcode.cn/problems/4sum/
