@@ -7,14 +7,14 @@ import (
 )
 
 func largestNumber(nums []int) string {
-	sort.Slice(nums, func(i, j int) bool {
+	strs := MapSlice(nums, strconv.Itoa)
+	sort.Slice(strs, func(i, j int) bool {
 
-		a := nums[i]
-		b := nums[j]
-		return -ParseInt(strconv.Itoa(a)+strconv.Itoa(b))+ParseInt(strconv.Itoa(b)+strconv.Itoa(a)) < 0
+		a := strs[i]
+		b := strs[j]
+		return -ParseInt((a)+(b))+ParseInt((b)+(a)) < 0
 	})
 
-	strs := MapSlice(nums, strconv.Itoa)
 	if strs[0] == "0" {
 		return "0"
 	}
