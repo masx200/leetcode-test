@@ -25,8 +25,8 @@ func main() {
 	var MAXREQS = runtime.NumCPU()
 
 	var lim = make(chan struct{}, MAXREQS)
-	out := make(chan any)
-	in := make(chan string)
+	out := make(chan any, len(matches))
+	in := make(chan string, len(matches))
 	for range matches {
 
 		go handle(in, out, lim)
