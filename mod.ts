@@ -71,6 +71,8 @@ import { deduplication } from "./fraction-addition-and-subtraction/deduplication
 import { parse_complex } from "./complex-number-multiplication/parse_complex.ts";
 import { Array_to_circular_linked_list } from "./4ueAj6/circular-linked-list.ts";
 import { cache } from "./sort-integers-by-the-power-value/cache.ts";
+import { TreeNodeLeetCodeStringify } from "./utils/TreeNodeLeetCodeStringify.ts";
+import { TreeNodeLeetCodeParse } from "./utils/TreeNodeLeetCodeParse.ts";
 export {
     left_rotate,
     TrieNode,
@@ -114,4 +116,10 @@ export { MyLinkedList };
 export { binary_count_one_bigint, level };
 export { buildBST, inorder };
 export { traversal_bst_range };
-export { deduplication, Fraction, parseFraction };
+export {
+    deduplication,
+    Fraction,
+    parseFraction,
+    TreeNodeLeetCodeParse,
+    TreeNodeLeetCodeStringify,
+};
