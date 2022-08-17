@@ -21,8 +21,8 @@ func main() {
 
 	limiter := sync2.NewLimiter(runtime.NumCPU())
 	ctx := context.Background()
-	out := make(chan any, )
-	in := make(chan string, )
+	out := make(chan any)
+	in := make(chan string)
 
 	for range matches {
 		limiter.Go(ctx, func() {
@@ -36,13 +36,14 @@ func main() {
 		in <- m
 
 	}
-	limiter.Wait()
 	for range matches {
 		var b = <-out
 		if nil != b {
 			panic(b)
 		}
 	}
+
+	limiter.Wait()
 }
 func run(m string, out chan any) {
 	defer func() {
