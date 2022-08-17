@@ -1,6 +1,7 @@
 package main
 
 import (
+	"errors"
 	"fmt"
 	"io/fs"
 	"os"
@@ -15,19 +16,28 @@ func main() {
 	if err != nil {
 		return
 	}
-	c := make(chan struct{}, runtime.NumCPU())
+	c := make(chan bool, runtime.NumCPU())
 	for _, m := range matches {
 		go run(m, c)
 	}
 	for range matches {
-		<-c
+		var b = <-c
+		if !b {
+			panic(errors.New("test failed"))
+		}
 	}
 }
-func run(m string, out chan struct{}) {
-
+func run(m string, out chan bool) {
 	defer func() {
-		out <- struct{}{}
+		var e = recover()
+		if e != nil {
+			fmt.Printf("%s\n", e)
+			out <- false
+			return
+		}
+		out <- true
 	}()
+
 	cmd := exec.Command("go", "test", "-v")
 
 	cmd.Dir = "./" + path.Dir(m)
