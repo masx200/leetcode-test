@@ -10,6 +10,10 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/maximum-product-difference-between-two-pairs/
+
+https://leetcode.cn/problems/largest-number/
+
 https://leetcode.cn/problems/maximum-equal-frequency/
 
 https://leetcode.cn/problems/deepest-leaves-sum/
