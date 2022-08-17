@@ -1,41 +1,57 @@
 package main
 
 import (
-	"errors"
+	"context"
 	"fmt"
 	"io/fs"
 	"os"
 	"os/exec"
 	"path"
 	"runtime"
+	"storj.io/common/sync2"
 )
 
 func main() {
 
 	var matches, err = (fs.Glob(os.DirFS("./"), "./*/go.mod"))
 	if err != nil {
+		fmt.Println(err)
 		return
 	}
-	c := make(chan bool, runtime.NumCPU())
+
+	limiter := sync2.NewLimiter(runtime.NumCPU())
+	ctx := context.Background()
+	out := make(chan any, runtime.NumCPU())
+	in := make(chan string, runtime.NumCPU())
+
+	for range matches {
+		limiter.Go(ctx, func() {
+			d := <-in
+			run(d, out)
+
+		})
+	}
 	for _, m := range matches {
-		go run(m, c)
+
+		in <- m
+
 	}
 	for range matches {
-		var b = <-c
-		if !b {
-			panic(errors.New("test failed"))
+		var b = <-out
+		if nil != b {
+			panic(b)
 		}
 	}
 }
-func run(m string, out chan bool) {
+func run(m string, out chan any) {
 	defer func() {
 		var e = recover()
 		if e != nil {
-			fmt.Printf("%s\n", e)
-			out <- false
+
+			out <- e
 			return
 		}
-		out <- true
+		out <- nil
 	}()
 
 	cmd := exec.Command("go", "test", "-v")
