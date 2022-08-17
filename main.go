@@ -6,8 +6,15 @@ import (
 	"os"
 	"os/exec"
 	"path"
+	"runtime"
 )
 
+func handle(in chan string, out chan any, lim chan struct{}) {
+	lim <- struct{}{}
+	d := <-in
+	run(d, out)
+	<-lim
+}
 func main() {
 
 	var matches, err = (fs.Glob(os.DirFS("./"), "./*/go.mod"))
@@ -15,17 +22,18 @@ func main() {
 		fmt.Println(err)
 		return
 	}
+	var MAXREQS = runtime.NumCPU()
 
+	var lim = make(chan struct{}, MAXREQS)
 	out := make(chan any)
 	in := make(chan string)
+	for range matches {
 
+		go handle(in, out, lim)
+
+	}
 	for _, m := range matches {
 
-		go func() {
-			d := <-in
-			run(d, out)
-
-		}()
 		in <- m
 	}
 
