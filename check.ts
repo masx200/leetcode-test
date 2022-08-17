@@ -37,7 +37,7 @@ async function parallel_check(
     }
 
     const entries = Object.values(
-        group(files, (_s: any, i: number) => i % 50),
+        group(files, (_s: any, i: number) => i % 40),
     ) as string[][];
 
     await Promise.all(
