@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/maximum-equal-frequency/
+
 https://leetcode.cn/problems/deepest-leaves-sum/
 
 https://leetcode.cn/problems/decode-ways
