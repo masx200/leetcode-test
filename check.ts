@@ -3,13 +3,14 @@ import AsyncLimiterClass, {
     AsyncCurrentLimiter,
 } from "https://cdn.skypack.dev/@masx200/async-task-current-limiter@2.1.0?dts";
 import { WalkEntry } from "https://deno.land/std@0.152.0/fs/_util.ts";
+import { group } from "./deps.ts";
 function searchFilesNames({
     skip,
 }: // limiter,
-{
-    skip?: RegExp | RegExp[];
-    // limiter: AsyncCurrentLimiter;
-}) {
+    {
+        skip?: RegExp | RegExp[];
+        // limiter: AsyncCurrentLimiter;
+    }) {
     console.log("type check start!");
 
     const entry_iter = walk(".", {
@@ -27,35 +28,32 @@ if (import.meta.main) {
 
 async function parallel_check(
     entry_iter: AsyncIterableIterator<WalkEntry>,
-    limiter: AsyncCurrentLimiter
+    limiter: AsyncCurrentLimiter,
 ) {
-    const stack: string[] = [];
+    const files: string[] = [];
 
-    const ps: Array<Promise<void>> = [];
     for await (const entry of entry_iter) {
-        if (stack.length < 15) {
-            stack.push(entry.path);
-        } else {
-            ps.push(limiter.run(() => runDenoCheck([...stack, entry.path])));
-            stack.length = 0;
-        }
+        files.push(entry.path);
     }
-    if (stack.length) {
-        ps.push(limiter.run(() => runDenoCheck(stack)));
-    }
-    await Promise.all(ps);
+
+    const entries = Object.values(
+        group(files, (_s: any, i: number) => i % 50),
+    ) as string[][];
+
+    await Promise.all(
+        entries.map((stack) => limiter.run(() => runDenoCheck(stack))),
+    );
 }
 
 async function start() {
     const limiter = new AsyncLimiterClass(navigator.hardwareConcurrency);
     const args = parse(Deno.args);
     console.log(args);
-    const skip =
-        typeof args.skip === "string"
-            ? new RegExp(String(args.skip))
-            : Array.isArray(args.skip)
-            ? args.skip.map((s) => new RegExp(s))
-            : undefined;
+    const skip = typeof args.skip === "string"
+        ? new RegExp(String(args.skip))
+        : Array.isArray(args.skip)
+        ? args.skip.map((s) => new RegExp(s))
+        : undefined;
     const entry_iter = searchFilesNames({ skip });
     await parallel_check(entry_iter, limiter);
     console.log("type check Done!");

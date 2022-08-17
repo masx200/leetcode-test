@@ -25,3 +25,4 @@ export {
 export { default as groupBy } from "https://cdn.skypack.dev/lodash@4.17.21/groupBy?dts";
 export { default as sum } from "https://cdn.skypack.dev/lodash@4.17.21/sum?dts";
 export { TreeNode } from "https://cdn.skypack.dev/leetcode-class@1.2.4?dts";
+export { default as group } from "https://esm.sh/array.prototype.group@1.1.1";
