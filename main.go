@@ -1,14 +1,11 @@
 package main
 
 import (
-	"context"
 	"fmt"
 	"io/fs"
 	"os"
 	"os/exec"
 	"path"
-	"runtime"
-	"storj.io/common/sync2"
 )
 
 func main() {
@@ -19,23 +16,19 @@ func main() {
 		return
 	}
 
-	limiter := sync2.NewLimiter(runtime.NumCPU())
-	ctx := context.Background()
 	out := make(chan any)
 	in := make(chan string)
 
-	for range matches {
-		limiter.Go(ctx, func() {
+	for _, m := range matches {
+
+		go func() {
 			d := <-in
 			run(d, out)
 
-		})
-	}
-	for _, m := range matches {
-
+		}()
 		in <- m
-
 	}
+
 	for range matches {
 		var b = <-out
 		if nil != b {
@@ -43,7 +36,6 @@ func main() {
 		}
 	}
 
-	limiter.Wait()
 }
 func run(m string, out chan any) {
 	defer func() {
