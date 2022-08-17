@@ -24,3 +24,4 @@ export {
 } from "https://cdn.skypack.dev/@datastructures-js/binary-search-tree@5.0.1/?dts";
 export { default as groupBy } from "https://cdn.skypack.dev/lodash@4.17.21/groupBy?dts";
 export { default as sum } from "https://cdn.skypack.dev/lodash@4.17.21/sum?dts";
+export { TreeNode } from "https://cdn.skypack.dev/leetcode-class@1.2.4?dts";
