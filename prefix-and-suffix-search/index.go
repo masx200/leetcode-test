@@ -1,20 +1,43 @@
 package index
 
+import "sort"
+
 type WordFilter struct {
 	d map[string]int
 }
+type Entry struct {
+	Key   string
+	Value int
+}
 
 func Constructor(words []string) WordFilter {
-	mp := map[string]int{}
+
+	m := map[string]int{}
 	for i, word := range words {
+
+		m[word] = i
+	}
+
+	entries := []Entry{}
+	for k, v := range m {
+		entries = append(entries, Entry{Key: k, Value: v})
+	}
+	sort.Slice(entries, func(i, j int) bool {
+
+		return entries[i].Value < entries[j].Value
+	})
+	d := map[string]int{}
+	for _, entry := range entries {
+		word := entry.Key
+		i := entry.Value
 		n := len(word)
 		for j := 1; j <= n; j++ {
 			for k := 1; k <= n; k++ {
-				mp[word[:j]+","+word[n-k:]] = i
+				d[word[:j]+","+word[n-k:]] = i
 			}
 		}
 	}
-	return WordFilter{d: mp}
+	return WordFilter{d: d}
 }
 
 func (w *WordFilter) F(pref string, suff string) int {
