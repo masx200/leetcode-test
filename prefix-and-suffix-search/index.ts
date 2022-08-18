@@ -2,18 +2,22 @@ class WordFilter {
     #d = new Map<string, number>();
 
     constructor(words: string[]) {
+        const m = new Map<string, number>();
         for (const [k, word] of words.entries()) {
-            // this.#d.set(hash(word, word), k);
+            m.set(word, k);
+        }
+
+        const entries = Array.from(m.entries()).sort((a, b) => a[1] - b[1]);
+        for (const [word, k] of entries) {
             for (let i = 1; i <= word.length; i++) {
                 for (let j = 1; j <= word.length; j++) {
                     const pref = word.substring(0, i);
                     const suff = word.substring(word.length - j);
-                    //  console.log(pref,suff,word,k)
+
                     this.#d.set(hash(pref, suff), k);
                 }
             }
         }
-        // console.log(this.#d);
     }
 
     f(pref: string, suff: string): number {
