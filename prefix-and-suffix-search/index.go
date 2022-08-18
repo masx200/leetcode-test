@@ -18,10 +18,7 @@ func Constructor(words []string) WordFilter {
 		m[word] = i
 	}
 
-	entries := []Entry{}
-	for k, v := range m {
-		entries = append(entries, Entry{Key: k, Value: v})
-	}
+	entries := EntriesMap(m)
 	sort.Slice(entries, func(i, j int) bool {
 
 		return entries[i].Value < entries[j].Value
@@ -38,6 +35,14 @@ func Constructor(words []string) WordFilter {
 		}
 	}
 	return WordFilter{d: d}
+}
+
+func EntriesMap(m map[string]int) []Entry {
+	entries := []Entry{}
+	for k, v := range m {
+		entries = append(entries, Entry{Key: k, Value: v})
+	}
+	return entries
 }
 
 func (w *WordFilter) F(pref string, suff string) int {
