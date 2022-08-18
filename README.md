@@ -10,6 +10,10 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/number-of-digit-one/
+
+https://leetcode.cn/problems/1nzheng-shu-zhong-1chu-xian-de-ci-shu-lcof/
+
 https://leetcode.cn/problems/maximum-number-of-balloons/
 
 https://leetcode.cn/problems/prefix-and-suffix-search/
