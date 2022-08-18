@@ -3,14 +3,14 @@ import AsyncLimiterClass, {
     AsyncCurrentLimiter,
 } from "https://cdn.skypack.dev/@masx200/async-task-current-limiter@2.1.0?dts";
 import { WalkEntry } from "https://deno.land/std@0.152.0/fs/_util.ts";
-import { group } from "./deps.ts";
+import { split_by_count } from "./utils/split_by_count.ts";
 function searchFilesNames({
     skip,
 }: // limiter,
-    {
-        skip?: RegExp | RegExp[];
-        // limiter: AsyncCurrentLimiter;
-    }) {
+{
+    skip?: RegExp | RegExp[];
+    // limiter: AsyncCurrentLimiter;
+}) {
     console.log("type check start!");
 
     const entry_iter = walk(".", {
@@ -28,7 +28,7 @@ if (import.meta.main) {
 
 async function parallel_check(
     entry_iter: AsyncIterableIterator<WalkEntry>,
-    limiter: AsyncCurrentLimiter,
+    limiter: AsyncCurrentLimiter
 ) {
     const files: string[] = [];
 
@@ -39,24 +39,19 @@ async function parallel_check(
     const entries = split_by_count(files, 30);
 
     await Promise.all(
-        entries.map((stack) => limiter.run(() => runDenoCheck(stack))),
+        entries.map((stack) => limiter.run(() => runDenoCheck(stack)))
     );
 }
-export function split_by_count<T>(files: T[], limit: number) {
-    return Object.values(
-        group(files, (_s: any, i: number) => i % (files.length / limit)),
-    ) as T[][];
-}
-
 async function start() {
     const limiter = new AsyncLimiterClass(navigator.hardwareConcurrency);
     const args = parse(Deno.args);
     console.log(args);
-    const skip = typeof args.skip === "string"
-        ? new RegExp(String(args.skip))
-        : Array.isArray(args.skip)
-        ? args.skip.map((s) => new RegExp(s))
-        : undefined;
+    const skip =
+        typeof args.skip === "string"
+            ? new RegExp(String(args.skip))
+            : Array.isArray(args.skip)
+            ? args.skip.map((s) => new RegExp(s))
+            : undefined;
     const entry_iter = searchFilesNames({ skip });
     await parallel_check(entry_iter, limiter);
     console.log("type check Done!");
