@@ -7,10 +7,10 @@ import { split_by_count } from "./utils/split_by_count.ts";
 function searchFilesNames({
     skip,
 }: // limiter,
-{
-    skip?: RegExp | RegExp[];
-    // limiter: AsyncCurrentLimiter;
-}) {
+    {
+        skip?: RegExp | RegExp[];
+        // limiter: AsyncCurrentLimiter;
+    }) {
     console.log("type check start!");
 
     const entry_iter = walk(".", {
@@ -28,7 +28,7 @@ if (import.meta.main) {
 
 async function parallel_check(
     entry_iter: AsyncIterableIterator<WalkEntry>,
-    limiter: AsyncCurrentLimiter
+    limiter: AsyncCurrentLimiter,
 ) {
     const files: string[] = [];
 
@@ -39,19 +39,18 @@ async function parallel_check(
     const entries = split_by_count(files, 30);
 
     await Promise.all(
-        entries.map((stack) => limiter.run(() => runDenoCheck(stack)))
+        entries.map((stack) => limiter.run(() => runDenoCheck(stack))),
     );
 }
 async function start() {
     const limiter = new AsyncLimiterClass(navigator.hardwareConcurrency);
     const args = parse(Deno.args);
     console.log(args);
-    const skip =
-        typeof args.skip === "string"
-            ? new RegExp(String(args.skip))
-            : Array.isArray(args.skip)
-            ? args.skip.map((s) => new RegExp(s))
-            : undefined;
+    const skip = typeof args.skip === "string"
+        ? new RegExp(String(args.skip))
+        : Array.isArray(args.skip)
+        ? args.skip.map((s) => new RegExp(s))
+        : undefined;
     const entry_iter = searchFilesNames({ skip });
     await parallel_check(entry_iter, limiter);
     console.log("type check Done!");
