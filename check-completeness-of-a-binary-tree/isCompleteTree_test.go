@@ -26,6 +26,8 @@ func TestIsCompleteTree(t *testing.T) {
 	var outputs = []bool{true, false, false, false, true, true, false}
 	assert.DeepEqual(t, slice.Map(inputs, func(input string) bool {
 		fmt.Println(input)
-		return IsCompleteTree(deserialize(input))
+		root := deserialize(input)
+		fmt.Println(root)
+		return IsCompleteTree(root)
 	}), outputs)
 }
