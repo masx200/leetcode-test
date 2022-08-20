@@ -9,6 +9,7 @@ Deno.test("implement-trie-prefix-tree-1", () => {
     assertEquals(true, trie.search("app"));
     assertEquals(true, trie.startsWith("ap")); // 返回 True
     assertEquals(true, trie.startsWith("app")); // 返回 True
+    assertEquals(false, trie.startsWith("annnnpp")); // 返回 True
 });
 import { assertEquals } from "../deps.ts";
 import Trie2 from "./Trie.ts";
@@ -22,4 +23,5 @@ Deno.test("implement-trie-prefix-tree-2", () => {
     assertEquals(true, trie.search("app"));
     assertEquals(true, trie.startsWith("ap")); // 返回 True
     assertEquals(true, trie.startsWith("app")); // 返回 True
+    assertEquals(false, trie.startsWith("annnnpp")); // 返回 True
 });
