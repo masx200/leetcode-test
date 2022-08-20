@@ -11,7 +11,7 @@ require (
 
 require (
 	github.com/egregors/TreeNode v1.0.3 // indirect
-	github.com/masx200/leetcode-test/utils v0.0.0-20220820053119-e216fb249226
+	github.com/masx200/leetcode-test/utils v0.0.0
 )
 
 replace github.com/masx200/leetcode-test/maximum-binary-tree-ii v0.0.0 => ../maximum-binary-tree-ii
