@@ -1232,3 +1232,17 @@ https://pkg.go.dev/github.com/masx200/leetcode-test
 2. 新建 Feat_xxx 分支
 3. 提交代码
 4. 新建 Pull Request
+
+### Building a Monorepo in Golang
+
+https://earthly.dev/blog/golang-monorepo/
+
+.vscode/settings.json
+
+```json
+{
+    "gopls": {
+        "experimentalWorkspaceModule": true
+    }
+}
+```
