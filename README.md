@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/smallest-string-starting-from-leaf/
+
 https://leetcode.cn/problems/maximum-binary-tree-ii/
 
 https://leetcode.cn/problems/maximum-binary-tree/
