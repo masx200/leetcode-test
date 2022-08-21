@@ -2,19 +2,58 @@ function parseAdd(expression: string): Expression {
     const content = expression.slice("(add ".length, -1);
     const list = parseList("(" + content + ")");
     console.log(list);
-    throw Error("Not implemented");
+    if (Array.isArray(list) && list.length !== 2) {
+        throw Error("Invalid expression");
+    }
+    return buildExpression(["add", ...list]);
 }
 function parseLet(expression: string): Expression {
     const content = expression.slice("(let ".length, -1);
     const list = parseList("(" + content + ")");
     console.log(list);
-    throw Error("Not implemented");
+    if (Array.isArray(list) && list.length == 0) {
+        throw Error("Invalid expression");
+    }
+    return buildExpression(["let", ...list]);
 }
 
 function parseMult(expression: string): Expression {
     const content = expression.slice("(mult ".length, -1);
     const list = parseList("(" + content + ")");
     console.log(list);
+    if (Array.isArray(list) && list.length !== 2) {
+        throw Error("Invalid expression");
+    }
+    return buildExpression(["mult", ...list]);
+}
+function buildExpression(list: string | number | ListArray): Expression {
+    console.log(list);
+    if (typeof list === "string") {
+        return { type: "Identifier", name: list };
+    }
+    if (typeof list === "number") {
+        return parseNumeric(list);
+    }
+
+    if (Array.isArray(list) && list.length == 0) {
+        throw Error("Invalid expression");
+    }
+    if (Array.isArray(list) && list[0] === "mult") {
+        return {
+            type: "MultExpression",
+
+            left: buildExpression(list[1]),
+            right: buildExpression(list[2]),
+        };
+    }
+    if (Array.isArray(list) && list[0] === "add") {
+        return {
+            type: "AddExpression",
+
+            left: buildExpression(list[1]),
+            right: buildExpression(list[2]),
+        };
+    }
     throw Error("Not implemented");
 }
 export type ListArray = Array<ListArray | string | number>;
@@ -28,11 +67,12 @@ function parseList(expression: string): ListArray {
     );
 }
 
-function parseNumeric(expression: string): Expression {
+function parseNumeric(expression: string | number): Expression {
     return { type: "NumericLiteral", value: Number(expression) };
 }
 
 function evaluate(expression: string): number {
+    console.log(expression);
     const ast = parse(expression);
     console.log(ast);
     return calculate(ast, new ScopeList());
