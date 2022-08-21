@@ -24,7 +24,7 @@ function parseList(expression: string): ListArray {
             .replaceAll("(", "[")
             .replaceAll(")", "]")
             .replaceAll(" ", ",")
-            .replaceAll(/[a-z]([a-z]|\d)*/g, (a) => '"' + a + '"')
+            .replaceAll(/[a-z]([a-z]|\d)*/g, (a) => '"' + a + '"'),
     );
 }
 
@@ -35,7 +35,7 @@ function parseNumeric(expression: string): Expression {
 function evaluate(expression: string): number {
     const ast = parse(expression);
     console.log(ast);
-    return calculate(ast);
+    return calculate(ast, new ScopeList());
 }
 function parse(expression: string): Expression {
     if (expression.length === 0) {
@@ -61,7 +61,12 @@ function parseIdentifier(expression: string): Expression {
     return { type: "Identifier", name: expression };
 }
 
-function calculate(expression: Expression): number {
+function calculate(expression: Expression, scope: ScopeList): number {
+    console.log(expression, scope);
+    switch (expression.type) {
+        case "NumericLiteral":
+            return expression.value;
+    }
     throw Error("Not implemented");
 }
 export type Expression =
@@ -73,7 +78,7 @@ export type Expression =
 export class ScopeList {
     constructor(
         public readonly variables: Map<string, number> = new Map(),
-        public parent: ScopeList | null | undefined = null
+        public parent: ScopeList | null | undefined = null,
     ) {}
 }
 export interface VariableDeclarator {
