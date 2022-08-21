@@ -1,7 +1,7 @@
 function parseAdd(expression: string): Expression {
     const content = expression.slice("(add ".length, -1);
     const list = parseList("(" + content + ")");
-    console.log(list);
+    // console.log(list);
     if (Array.isArray(list) && list.length !== 2) {
         throw Error("Invalid expression");
     }
@@ -10,7 +10,7 @@ function parseAdd(expression: string): Expression {
 function parseLet(expression: string): Expression {
     const content = expression.slice("(let ".length, -1);
     const list = parseList("(" + content + ")");
-    console.log(list);
+    // console.log(list);
     if (Array.isArray(list) && list.length == 0) {
         throw Error("Invalid expression");
     }
@@ -20,14 +20,40 @@ function parseLet(expression: string): Expression {
 function parseMult(expression: string): Expression {
     const content = expression.slice("(mult ".length, -1);
     const list = parseList("(" + content + ")");
-    console.log(list);
+    // console.log(list);
     if (Array.isArray(list) && list.length !== 2) {
         throw Error("Invalid expression");
     }
     return buildExpression(["mult", ...list]);
 }
 function buildExpression(list: string | number | ListArray): Expression {
-    console.log(list);
+    // console.log(list);
+    if (Array.isArray(list) && list[0] === "let") {
+        const variables = list.slice(1, -1).map(buildExpression);
+        // console.log(variables);
+        const declarations: VariableDeclarator[] = Array(variables.length / 2)
+            .fill(0)
+            .map((_, i) => {
+                const ident = variables[i * 2];
+                if (ident.type !== "Identifier") {
+                    throw Error("Invalid identifier");
+                }
+                return {
+                    type: "VariableDeclarator",
+                    id: ident,
+                    init: variables[i * 2 + 1],
+                };
+            });
+        return {
+            type: "LetExpression",
+
+            declarations: declarations,
+            return: {
+                type: "ReturnStatement",
+                argument: buildExpression(list[list.length - 1]),
+            },
+        };
+    }
     if (typeof list === "string") {
         return { type: "Identifier", name: list };
     }
@@ -72,9 +98,9 @@ function parseNumeric(expression: string | number): Expression {
 }
 
 function evaluate(expression: string): number {
-    console.log(expression);
+    // console.log(expression);
     const ast = parse(expression);
-    console.log(ast);
+    // console.log(ast);
     return calculate(ast, new ScopeList());
 }
 function parse(expression: string): Expression {
@@ -102,8 +128,10 @@ function parseIdentifier(expression: string): Expression {
 }
 
 function calculate(expression: Expression, scope: ScopeList): number {
-    console.log(expression, scope);
+    // console.log(expression, scope);
     switch (expression.type) {
+        case "Identifier":
+            return getVariable(scope, expression.name);
         case "NumericLiteral":
             return expression.value;
         case "MultExpression":
@@ -116,8 +144,17 @@ function calculate(expression: Expression, scope: ScopeList): number {
                 calculate(expression.left, scope) +
                 calculate(expression.right, scope)
             );
+        case "LetExpression": {
+            const newScope = new ScopeList(new Map(), scope);
+            expression.declarations.forEach((declaration) => {
+                newScope.variables.set(
+                    declaration.id.name,
+                    calculate(declaration.init, newScope),
+                );
+            });
+            return calculate(expression.return.argument, newScope);
+        }
     }
-    throw Error("Not implemented");
 }
 export type Expression =
     | Identifier
@@ -165,3 +202,15 @@ export interface Identifier {
     name: string;
 }
 export default evaluate;
+
+function getVariable(scope: ScopeList, name: string): number {
+    if (!scope.parent && !scope.variables.has(name)) {
+        throw Error("Variable not found:" + name);
+    }
+    const value = scope.variables.get(name);
+    if (scope.variables.has(name) && typeof value !== "undefined") {
+        return value;
+    }
+    if (scope.parent) return getVariable(scope.parent, name);
+    throw Error("Variable not found:" + name);
+}
