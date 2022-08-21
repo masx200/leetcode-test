@@ -12,7 +12,7 @@ require (
 )
 
 require (
-	github.com/egregors/TreeNode v1.0.3 // indirect
+	gitee.com/masx200/TreeNode v1.0.4 // indirect
 	github.com/google/go-cmp v0.5.8 // indirect
 )
 

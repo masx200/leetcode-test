@@ -1,6 +1,6 @@
 github.com/davecgh/go-spew v1.1.0 h1:ZDRjVQ15GmhC3fiQ8ni8+OwkZQO4DARzQgrnXU1Liz8=
-github.com/egregors/TreeNode v1.0.3 h1:oSel21BpUt99TWGrFJ1QbSBBEeQSdwOqOpX9eSqILNE=
-github.com/egregors/TreeNode v1.0.3/go.mod h1:c2sTJKaqtn/Ju3J7rFi6RvJqbLFAEObRDJP6yqRCdaA=
+gitee.com/masx200/TreeNode v1.0.4 h1:oSel21BpUt99TWGrFJ1QbSBBEeQSdwOqOpX9eSqILNE=
+gitee.com/masx200/TreeNode v1.0.4/go.mod h1:c2sTJKaqtn/Ju3J7rFi6RvJqbLFAEObRDJP6yqRCdaA=
 github.com/google/go-cmp v0.5.8 h1:e6P7q2lk1O+qJJb4BtCQXlK8vWEO8V1ZeuEdJNOqZyg=
 github.com/magiconair/properties v1.8.6 h1:5ibWZ6iY0NctNGWo87LalDlEZ6R41TqbbDamhfG/Qzo=
 github.com/magiconair/properties v1.8.6/go.mod h1:y3VJvCyxH9uVvJTWEGAELF3aiYNyPKd5NZ3oSwXrF60=

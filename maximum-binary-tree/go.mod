@@ -10,7 +10,7 @@ require (
 )
 
 require (
-	github.com/egregors/TreeNode v1.0.3 // indirect
+	gitee.com/masx200/TreeNode v1.0.4 // indirect
 	github.com/masx200/leetcode-test/utils v0.0.0
 )
 

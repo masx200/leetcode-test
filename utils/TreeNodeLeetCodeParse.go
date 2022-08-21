@@ -1,6 +1,6 @@
 package utils
 
-import treenode "github.com/egregors/TreeNode"
+import treenode "gitee.com/masx200/TreeNode"
 import serialize_and_deserialize_binary_tree "github.com/masx200/leetcode-test/serialize-and-deserialize-binary-tree"
 
 type TreeNode = serialize_and_deserialize_binary_tree.TreeNode

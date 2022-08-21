@@ -1,6 +1,6 @@
 package utils
 
-import treenode "github.com/egregors/TreeNode"
+import treenode "gitee.com/masx200/TreeNode"
 
 func TreeNodeLeetCodeStringify(t *TreeNode) string {
 
