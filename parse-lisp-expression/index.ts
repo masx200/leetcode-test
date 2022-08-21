@@ -1,10 +1,16 @@
 function evaluate(expression: string): number {}
-export default evaluate;
+
 export type Expression =
     | LetExpression
     | NumericLiteral
     | AddExpression
     | MultExpression;
+export class ScopeList {
+    constructor(
+        public readonly variables: Map<string, number> = new Map(),
+        public parent: ScopeList | null | undefined = null,
+    ) {}
+}
 export interface VariableDeclarator {
     type: "VariableDeclarator";
     id: LVal;
@@ -38,3 +44,4 @@ export interface Identifier {
     type: "Identifier";
     name: string;
 }
+export default evaluate;
