@@ -21,9 +21,14 @@ function parse(expression: string): Expression {
     if (expression.startsWith("(let ") && expression.endsWith(")")) {
         return parseLet(expression);
     }
+    if (/^[a-z]([a-z]|\d)*$/g.test(expression)) {
+        return parseIdentifier(expression);
+    }
     throw new Error("Unsupported expression");
 }
-
+function parseIdentifier(expression: string): Expression {
+    return { type: "Identifier", name: expression };
+}
 function parseLet(expression: string): Expression {
     const content = expression.slice("(let ".length, -1);
 }
