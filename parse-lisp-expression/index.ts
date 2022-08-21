@@ -30,6 +30,7 @@ function parseLet(expression: string): Expression {
 
 function calculate(expression: Expression): number {}
 export type Expression =
+    | Identifier
     | LetExpression
     | NumericLiteral
     | AddExpression
