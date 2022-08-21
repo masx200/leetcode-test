@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/print-binary-tree/
+
 https://leetcode.cn/problems/minimum-depth-of-binary-tree/
 
 https://leetcode.cn/problems/check-completeness-of-a-binary-tree/
