@@ -11,7 +11,7 @@ function parseLet(expression: string): Expression {
     const content = expression.slice("(let ".length, -1);
     const list = parseList("(" + content + ")");
     // console.log(list);
-    if (Array.isArray(list) && list.length <3) {
+    if (Array.isArray(list) && list.length < 3) {
         throw Error("Invalid expression");
     }
     return buildExpression(["let", ...list]);
@@ -55,7 +55,7 @@ function buildExpression(list: string | number | ListArray): Expression {
         };
     }
     if (typeof list === "string") {
-        return { type: "Identifier", name: list };
+        return parseIdentifier(list);
     }
     if (typeof list === "number") {
         return parseNumeric(list);
@@ -89,7 +89,7 @@ function parseList(expression: string): ListArray {
             .replaceAll("(", "[")
             .replaceAll(")", "]")
             .replaceAll(" ", ",")
-            .replaceAll(/[a-z]([a-z]|\d)*/g, (a) => '"' + a + '"'),
+            .replaceAll(/[a-z]([a-z]|\d)*/g, (a) => '"' + a + '"')
     );
 }
 
@@ -149,7 +149,7 @@ function calculate(expression: Expression, scope: ScopeList): number {
             expression.declarations.forEach((declaration) => {
                 newScope.variables.set(
                     declaration.id.name,
-                    calculate(declaration.init, newScope),
+                    calculate(declaration.init, newScope)
                 );
             });
             return calculate(expression.return.argument, newScope);
@@ -165,7 +165,7 @@ export type Expression =
 export class ScopeList {
     constructor(
         public readonly variables: Map<string, number> = new Map(),
-        public parent: ScopeList | null | undefined = null,
+        public parent: ScopeList | null | undefined = null
     ) {}
 }
 export interface VariableDeclarator {
