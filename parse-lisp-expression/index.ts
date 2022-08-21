@@ -12,9 +12,22 @@ function parse(expression: string): Expression {
     }
 
     if (/^\d+$/g.test(expression)) return parseNumeric(expression);
-
+    if (expression.startsWith("(add") && expression.endsWith(")")) {
+        return parseAdd(expression);
+    }
+    if (expression.startsWith("(mult") && expression.endsWith(")")) {
+        return parseMult(expression);
+    }
+    if (expression.startsWith("(let") && expression.endsWith(")")) {
+        return parseLet(expression);
+    }
     throw new Error("Unsupported expression");
 }
+
+function parseLet(expression: string): Expression {
+    const content = expression.slice(4, -1);
+}
+
 function calculate(expression: Expression): number {}
 export type Expression =
     | LetExpression
@@ -61,3 +74,11 @@ export interface Identifier {
     name: string;
 }
 export default evaluate;
+
+function parseAdd(expression: string): Expression {
+    const content = expression.slice(4, -1);
+}
+
+function parseMult(expression: string): Expression {
+    const content = expression.slice(5, -1);
+}
