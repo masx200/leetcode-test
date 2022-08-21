@@ -1,6 +1,6 @@
 import { TreeNode } from "../binary-tree-inorder-traversal/TreeNode.ts";
 import maxDepth from "../maximum-depth-of-binary-tree/index.ts";
-interface BinaryTreePosition {
+export interface BinaryTreePosition {
     node: TreeNode;
     row: number;
     col: number;
