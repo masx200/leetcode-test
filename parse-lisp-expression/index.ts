@@ -1,9 +1,40 @@
+function parseAdd(expression: string): Expression {
+    const content = expression.slice("(add ".length, -1);
+    const list = parseList("(" + content + ")");
+    console.log(list);
+    throw Error("Not implemented");
+}
+function parseLet(expression: string): Expression {
+    const content = expression.slice("(let ".length, -1);
+    const list = parseList("(" + content + ")");
+    console.log(list);
+    throw Error("Not implemented");
+}
+
+function parseMult(expression: string): Expression {
+    const content = expression.slice("(mult ".length, -1);
+    const list = parseList("(" + content + ")");
+    console.log(list);
+    throw Error("Not implemented");
+}
+export type ListArray = Array<ListArray | string | number>;
+function parseList(expression: string): ListArray {
+    return JSON.parse(
+        expression
+            .replaceAll("(", "[")
+            .replaceAll(")", "]")
+            .replaceAll(" ", ",")
+            .replaceAll(/[a-z]([a-z]|\d)*/g, (a) => '"' + a + '"')
+    );
+}
+
 function parseNumeric(expression: string): Expression {
     return { type: "NumericLiteral", value: Number(expression) };
 }
 
 function evaluate(expression: string): number {
     const ast = parse(expression);
+    console.log(ast);
     return calculate(ast);
 }
 function parse(expression: string): Expression {
@@ -29,11 +60,10 @@ function parse(expression: string): Expression {
 function parseIdentifier(expression: string): Expression {
     return { type: "Identifier", name: expression };
 }
-function parseLet(expression: string): Expression {
-    const content = expression.slice("(let ".length, -1);
-}
 
-function calculate(expression: Expression): number {}
+function calculate(expression: Expression): number {
+    throw Error("Not implemented");
+}
 export type Expression =
     | Identifier
     | LetExpression
@@ -80,11 +110,3 @@ export interface Identifier {
     name: string;
 }
 export default evaluate;
-
-function parseAdd(expression: string): Expression {
-    const content = expression.slice("(add ".length, -1);
-}
-
-function parseMult(expression: string): Expression {
-    const content = expression.slice("(mult ".length, -1);
-}
