@@ -73,6 +73,7 @@ import { Array_to_circular_linked_list } from "./4ueAj6/circular-linked-list.ts"
 import { cache } from "./sort-integers-by-the-power-value/cache.ts";
 import { TreeNodeLeetCodeStringify } from "./utils/TreeNodeLeetCodeStringify.ts";
 import { TreeNodeLeetCodeParse } from "./utils/TreeNodeLeetCodeParse.ts";
+import { getVariable, ScopeList } from "./parse-lisp-expression/index.ts";
 export {
     left_rotate,
     TrieNode,
@@ -123,3 +124,4 @@ export {
     TreeNodeLeetCodeParse,
     TreeNodeLeetCodeStringify,
 };
+export { getVariable, ScopeList };

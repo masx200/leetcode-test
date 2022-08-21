@@ -89,7 +89,7 @@ function parseList(expression: string): ListArray {
             .replaceAll("(", "[")
             .replaceAll(")", "]")
             .replaceAll(" ", ",")
-            .replaceAll(/[a-z]([a-z]|\d)*/g, (a) => '"' + a + '"')
+            .replaceAll(/[a-z]([a-z]|\d)*/g, (a) => '"' + a + '"'),
     );
 }
 
@@ -149,7 +149,7 @@ function calculate(expression: Expression, scope: ScopeList): number {
             expression.declarations.forEach((declaration) => {
                 newScope.variables.set(
                     declaration.id.name,
-                    calculate(declaration.init, newScope)
+                    calculate(declaration.init, newScope),
                 );
             });
             return calculate(expression.return.argument, newScope);
@@ -165,7 +165,7 @@ export type Expression =
 export class ScopeList {
     constructor(
         public readonly variables: Map<string, number> = new Map(),
-        public parent: ScopeList | null | undefined = null
+        public parent: ScopeList | null | undefined = null,
     ) {}
 }
 export interface VariableDeclarator {
@@ -202,8 +202,7 @@ export interface Identifier {
     name: string;
 }
 export default evaluate;
-
-function getVariable(scope: ScopeList, name: string): number {
+export function getVariable(scope: ScopeList, name: string): number {
     if (!scope.parent && !scope.variables.has(name)) {
         throw Error("Variable not found:" + name);
     }
