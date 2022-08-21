@@ -106,6 +106,16 @@ function calculate(expression: Expression, scope: ScopeList): number {
     switch (expression.type) {
         case "NumericLiteral":
             return expression.value;
+        case "MultExpression":
+            return (
+                calculate(expression.left, scope) *
+                calculate(expression.right, scope)
+            );
+        case "AddExpression":
+            return (
+                calculate(expression.left, scope) +
+                calculate(expression.right, scope)
+            );
     }
     throw Error("Not implemented");
 }
