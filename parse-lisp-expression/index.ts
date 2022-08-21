@@ -11,7 +11,7 @@ function parseLet(expression: string): Expression {
     const content = expression.slice("(let ".length, -1);
     const list = parseList("(" + content + ")");
     // console.log(list);
-    if (Array.isArray(list) && list.length == 0) {
+    if (Array.isArray(list) && list.length <3) {
         throw Error("Invalid expression");
     }
     return buildExpression(["let", ...list]);
