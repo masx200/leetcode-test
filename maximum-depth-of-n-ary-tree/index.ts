@@ -4,5 +4,5 @@ export default function maxDepth(root: Node | null): number {
     if (root.children.length === 0) {
         return 1;
     }
-    return !root ? 0 : Math.max(...root.children.map((n) => maxDepth(n))) + 1;
+    return Math.max(...root.children.map((n) => maxDepth(n))) + 1;
 }
