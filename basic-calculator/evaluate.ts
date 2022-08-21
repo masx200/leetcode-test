@@ -8,6 +8,7 @@ export function evaluate(ast: Expression): number {
         if (ast.operator === "-") {
             return -1 * evaluate(ast.argument);
         }
+        throw new Error(`Unary operator ${ast.operator} not supported`);
     }
     if (ast.type === "BinaryExpression") {
         if (ast.operator === "-") {
@@ -27,6 +28,7 @@ export function evaluate(ast: Expression): number {
             return sign * Math.floor(Math.abs(num1) / Math.abs(num2));
             //整数除法
         }
+        throw new Error(`Binary operator ${ast.operator} not supported`);
     }
     if (ast.type === "ParenthesizedExpression") {
         return evaluate(ast.expression);
