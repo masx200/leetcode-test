@@ -5,3 +5,7 @@ export type Expression =
     | NumericLiteral
     | AddExpression
     | MultExpression;
+export interface NumericLiteral {
+    type: "NumericLiteral";
+    value: number;
+}
