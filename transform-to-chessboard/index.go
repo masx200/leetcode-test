@@ -1,11 +1,13 @@
 package index
 
 func movesToChessboard(board [][]int) int {
-	var n = len(board)
-	var rowSum = 0
-	var colSum = 0
-	var rowDiff = 0
-	var colDiff = 0
+	var (
+		n       = len(board)
+		rowSum  = 0
+		colSum  = 0
+		rowDiff = 0
+		colDiff = 0
+	)
 	for i := 0; i < n; i++ {
 		for j := 0; j < n; j++ {
 			if itob((board[0][0]) ^ (board[i][0]) ^ (board[0][j]) ^ (board[i][j])) {
