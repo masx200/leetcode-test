@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/make-two-arrays-equal-by-reversing-sub-arrays/
+
 https://leetcode.cn/problems/transform-to-chessboard/
 
 https://leetcode.cn/problems/parse-lisp-expression/
