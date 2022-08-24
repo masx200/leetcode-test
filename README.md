@@ -10,6 +10,10 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/find-k-closest-elements/
+
+https://leetcode.cn/problems/k-closest-points-to-origin/
+
 https://leetcode.cn/problems/make-two-arrays-equal-by-reversing-sub-arrays/
 
 https://leetcode.cn/problems/transform-to-chessboard/
