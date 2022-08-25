@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/maximum-product-of-two-elements-in-an-array/
+
 https://leetcode.cn/problems/find-k-closest-elements/
 
 https://leetcode.cn/problems/k-closest-points-to-origin/
