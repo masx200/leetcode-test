@@ -6,15 +6,15 @@ export default function widthOfBinaryTree(root: TreeNode | null): number {
     if (!root) return 0;
     let current: Map<bigint, TreeNode> = new Map([[BigInt(0), root]]);
 
-    //内存溢出
+   
 
     let max_width = 1;
 
     while (true) {
-        //内存溢出
+       
 
         const latest: Map<bigint, TreeNode> = new Map();
-        current.forEach((value, key) => {
+       for(const [key,value]of current)  {
             const left = value?.left;
             const right = value?.right;
             if (left) {
@@ -23,10 +23,10 @@ export default function widthOfBinaryTree(root: TreeNode | null): number {
             if (right) {
                 latest.set(BigInt(key * 2n + 1n), right);
             }
-        });
+        }
 
         if (latest.size) {
-            // console.log(latest)
+            
             current = latest;
 
             max_width = Math.max(
