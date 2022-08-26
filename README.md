@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/preimage-size-of-factorial-zeroes-function/
+
 https://leetcode.cn/classic/problems/shuffle-the-array/
 
 https://leetcode.cn/problems/maximum-product-of-two-elements-in-an-array/
