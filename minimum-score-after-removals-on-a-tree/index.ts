@@ -4,7 +4,7 @@ export default function minimumScore(
 ): number {
     const n = nums.length;
     if (nums.length === 0) return 0;
-    const edgeMap = new Array<Array<number>>(nums.length).map(() =>
+    const edgeMap = new Array<Array<number>>(nums.length).fill([]).map(() =>
         [] as Array<number>
     );
 
@@ -12,7 +12,7 @@ export default function minimumScore(
         addEdge(edgeMap, a, b);
         addEdge(edgeMap, b, a);
     }
-    const children = new Array<Array<number>>(nums.length).map(() =>
+    const children = new Array<Array<number>>(nums.length).fill([]).map(() =>
         [] as Array<number>
     );
 
@@ -30,8 +30,8 @@ export default function minimumScore(
         let j = parent[i];
 
         while (typeof j === "number") {
-            if (ancestor[j][i]) break;
             ancestor[j][i] = true;
+
             j = parent[j];
         }
     }
