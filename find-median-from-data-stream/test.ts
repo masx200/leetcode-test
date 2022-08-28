@@ -33,8 +33,8 @@ Deno.test("find-median-from-data-stream-1", () => {
 Deno.test("find-median-from-data-stream-2", () => {
     const medianFinder = new MedianFinder1();
 
-    medianFinder.addNum(2);
-    assertEquals(medianFinder.findMedian(), 2);
-    medianFinder.addNum(3);
-    assertEquals(medianFinder.findMedian(), 2.5);
+    medianFinder.addNum(12);
+    assertEquals(medianFinder.findMedian(), 12);
+    medianFinder.addNum(13);
+    assertEquals(medianFinder.findMedian(), 12.5);
 });
