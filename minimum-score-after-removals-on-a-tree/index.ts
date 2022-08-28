@@ -9,42 +9,31 @@ export default function minimumScore(
     );
 
     for (const [a, b] of edges) {
-        addEdge(edgeMap, a, b);
-        addEdge(edgeMap, b, a);
+        edgeMap[a].push(b);
+        edgeMap[b].push(a);
     }
     const children = new Array<Array<number>>(nums.length).fill([]).map(() =>
         [] as Array<number>
     );
 
-    const parent = new Array<number | null>(nums.length).fill(null);
     const visited = new Set<number>();
     const xor = new Array<number>(nums.length).fill(0);
-    const ancestor = new Array(n).fill(0).map(() =>
+    const ancestorToGrandson = new Array(n).fill(0).map(() =>
         new Array<boolean>(n).fill(false)
     );
 
     const root = 0;
-    bfs([root], visited, edgeMap, children, parent, xor, nums);
-
-    for (let i = 1; i < n; i++) {
-        let j = parent[i];
-
-        while (typeof j === "number") {
-            ancestor[j][i] = true;
-
-            j = parent[j];
-        }
-    }
+    bfs([root], visited, edgeMap, children, ancestorToGrandson, xor, nums);
 
     let ans = Infinity;
     for (let i = 1; i < n; i++) {
         for (let j = i + 1; j < n; j++) {
             let a: number, b: number, c: number;
-            if (ancestor[i][j]) {
+            if (ancestorToGrandson[i][j]) {
                 a = xor[0] ^ xor[i];
                 b = xor[i] ^ xor[j];
                 c = xor[j];
-            } else if (ancestor[j][i]) {
+            } else if (ancestorToGrandson[j][i]) {
                 a = xor[0] ^ xor[j];
                 b = xor[j] ^ xor[i];
                 c = xor[i];
@@ -65,7 +54,7 @@ function bfs(
     visited: Set<number>,
     edgeMap: number[][],
     children: number[][],
-    parent: (number | null)[],
+    ancestorToGrandson: boolean[][],
     xor: number[],
     nums: number[],
 ) {
@@ -78,24 +67,22 @@ function bfs(
         const childs = edgeMap[node];
         if (childs.length) {
             for (const child of childs) {
-                if (!visited.has(child) && parent[child] !== node) {
+                if (!visited.has(child) && !ancestorToGrandson[node][child]) {
                     visited.add(child);
+                    children[node].push(child);
+                    for (let i = 0; i < nums.length; i++) {
+                        ancestorToGrandson[i][child] =
+                            ancestorToGrandson[i][node];
+                    }
+                    ancestorToGrandson[node][child] = true;
 
-                    addEdge(children, node, child);
-                    parent[child] = node;
                     temp.push(child);
                 }
             }
         }
     }
-    bfs(temp, visited, edgeMap, children, parent, xor, nums);
+    bfs(temp, visited, edgeMap, children, ancestorToGrandson, xor, nums);
     for (const node of nodes) {
         xor[node] = nums[node] ^ children[node].reduce((a, v) => a ^ xor[v], 0);
     }
-}
-
-function addEdge(edgemap: number[][], a: number, b: number) {
-    const arr = edgemap[a] ?? [];
-    arr.push(b);
-    edgemap[a] = arr;
 }
