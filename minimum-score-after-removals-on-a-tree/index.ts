@@ -8,7 +8,11 @@ export default function minimumScore(
     for (const k of edgeMap.keys()) {
         edgeMap[k] = [];
     }
-    buildEdge(edges, edgeMap);
+
+    for (const [a, b] of edges) {
+        addEdge(edgeMap, a, b);
+        addEdge(edgeMap, b, a);
+    }
     const children = new Array<Array<number>>(nums.length);
     for (const k of children.keys()) {
         children[k] = [];
@@ -48,18 +52,11 @@ export default function minimumScore(
                 b = xor[i];
                 c = xor[j];
             }
-            ans = Math.min(ans, getResult(a, b, c));
+            ans = Math.min(ans, Math.max(a, b, c) - Math.min(a, b, c));
         }
     }
 
     return ans;
-}
-
-function buildEdge(edges: number[][], edgeMap: number[][]) {
-    for (const [a, b] of edges) {
-        addEdge(edgeMap, a, b);
-        addEdge(edgeMap, b, a);
-    }
 }
 
 function bfs(
@@ -100,8 +97,4 @@ function addEdge(edgemap: number[][], a: number, b: number) {
     const arr = edgemap[a] ?? [];
     arr.push(b);
     edgemap[a] = arr;
-}
-
-function getResult(a: number, b: number, c: number) {
-    return Math.max(a, b, c) - Math.min(a, b, c);
 }
