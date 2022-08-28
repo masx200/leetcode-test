@@ -10,6 +10,10 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/lowest-common-ancestor-of-deepest-leaves/
+
+https://leetcode.cn/problems/smallest-subtree-with-all-the-deepest-nodes/
+
 https://leetcode.cn/problems/coin-change/
 
 https://leetcode.cn/problems/factorial-trailing-zeroes/
