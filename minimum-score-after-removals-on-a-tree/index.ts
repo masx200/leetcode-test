@@ -29,7 +29,10 @@ export default function minimumScore(
 
     for (let i = 1; i < n; i++) {
         let j = parent[i];
+        if (typeof j !== "number") break;
+        if (ancestor[j][i]) break;
         while (typeof j === "number") {
+            if (ancestor[j][i]) break;
             ancestor[j][i] = true;
             j = parent[j];
         }
