@@ -10,6 +10,14 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/first-common-ancestor-lcci/
+
+https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-search-tree/
+
+https://leetcode.cn/problems/er-cha-sou-suo-shu-de-zui-jin-gong-gong-zu-xian-lcof/
+
+https://leetcode.cn/problems/er-cha-shu-de-zui-jin-gong-gong-zu-xian-lcof/
+
 https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-tree/
 
 https://leetcode.cn/problems/lowest-common-ancestor-of-deepest-leaves/
