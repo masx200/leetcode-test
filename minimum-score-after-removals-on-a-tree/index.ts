@@ -4,19 +4,18 @@ export default function minimumScore(
 ): number {
     const n = nums.length;
     if (nums.length === 0) return 0;
-    const edgeMap = new Array<Array<number>>(nums.length);
-    for (const k of edgeMap.keys()) {
-        edgeMap[k] = [];
-    }
+    const edgeMap = new Array<Array<number>>(nums.length).map(() =>
+        [] as Array<number>
+    );
 
     for (const [a, b] of edges) {
         addEdge(edgeMap, a, b);
         addEdge(edgeMap, b, a);
     }
-    const children = new Array<Array<number>>(nums.length);
-    for (const k of children.keys()) {
-        children[k] = [];
-    }
+    const children = new Array<Array<number>>(nums.length).map(() =>
+        [] as Array<number>
+    );
+
     const parent = new Array<number | null>(nums.length).fill(null);
     const visited = new Set<number>();
     const xor = new Array<number>(nums.length).fill(0);
@@ -29,8 +28,7 @@ export default function minimumScore(
 
     for (let i = 1; i < n; i++) {
         let j = parent[i];
-        if (typeof j !== "number") break;
-        if (ancestor[j][i]) break;
+
         while (typeof j === "number") {
             if (ancestor[j][i]) break;
             ancestor[j][i] = true;
