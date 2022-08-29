@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/design-a-food-rating-system/
+
 https://leetcode.cn/problems/minimum-score-after-removals-on-a-tree/
 
 https://leetcode.cn/problems/first-common-ancestor-lcci/
