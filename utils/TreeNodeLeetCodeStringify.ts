@@ -13,3 +13,6 @@ function treeNodeCreate(t: TreeNode | null): TreeNodeClass | null {
     n.right = treeNodeCreate(t.right);
     return n;
 }
+export function TreeNodeLeetCodeToJSON(root: TreeNode | null): any[] {
+    return (TreeNodeClass.show(treeNodeCreate(root)));
+}

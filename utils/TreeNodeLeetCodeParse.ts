@@ -13,3 +13,6 @@ function treeNodeNew(t: TreeNodeClass | null): TreeNode | null {
     n.right = treeNodeNew(t.right);
     return n;
 }
+export function TreeNodeLeetCodeFromJSON(s: any[]): TreeNode | null {
+    return treeNodeNew(TreeNodeClass.create(s));
+}
