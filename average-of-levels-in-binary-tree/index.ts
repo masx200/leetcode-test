@@ -10,14 +10,6 @@ export default function averageOfLevels(root: TreeNode | null): number[] {
     return result;
     // return levelOrder(root).map(v=>sum(v)/v.length)
 }
-// function sum(a: Array<number>) {
-//     // return a.reduce((p, v) => p + v, 0);
-//     let r = 0;
-//     for (const v of a) {
-//         r += v;
-//     }
-//     return r;
-// }
 
 function level(nodes: TreeNode[], output: (r: number) => void) {
     if (nodes.length === 0) return;
