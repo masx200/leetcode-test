@@ -4,21 +4,16 @@ interface KthLargest {
     add(val: number): number;
 }
 function KthLargest(k: number, nums: number[]): KthLargest {
-    //降序排列
-    const minheap = PriorityQueue<number>((a, b) => -a + b, nums);
-    //
-    // for (const n of nums) {
-    //     minheap.offer(n);
-    // }
-    //Array.from(nums).sort((a, b) => -a + b)
+    const minheap = PriorityQueue<number>((a, b) => a - b, nums);
+
     function add(val: number): number {
         minheap.offer(val);
-        // minheap.sort((a, b) => -a + b)
+
         while (minheap.length() > k) {
-            minheap.pop();
+            minheap.shift();
         }
         if (minheap.length()) {
-            const tail = minheap.tail();
+            const tail = minheap.head();
             if (typeof tail !== "undefined") {
                 return tail;
             }

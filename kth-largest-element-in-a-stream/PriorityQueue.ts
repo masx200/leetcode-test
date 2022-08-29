@@ -1,5 +1,6 @@
+import { Heap } from "../deps.ts";
+
 export interface PriorityQueue<T = any> {
-    at(index: number): T | undefined;
     isEmpty(): boolean;
 
     clear: () => void;
@@ -12,10 +13,6 @@ export interface PriorityQueue<T = any> {
 
     head: () => T | undefined;
 
-    tail: () => T | undefined;
-
-    pop: () => T | undefined;
-
     shift: () => T | undefined;
     toArray(): T[];
 }
@@ -27,101 +24,37 @@ export function PriorityQueue<T = any>(
     if (typeof comparator !== "function") {
         throw Error("expect comparator to be function");
     }
-    const data: T[] = [];
-    if (values?.length) {
-        values.forEach((value) => data.push(value));
-        data.sort(comparator);
-    }
-    function length(): number {
-        return data.length;
-    }
-    function swap(i1: number, i2: number) {
-        [data[i1], data[i2]] = [data[i2], data[i1]];
-    }
-    function bubble_head_to_tail() {
-        if (data.length < 2) {
-            return;
-        }
-        for (let i = 0, j = 1; j < data.length && i < data.length; i++, j++) {
-            if (comparator(data[i], data[j]) > 0) {
-                swap(i, j);
-            } else {
-                break;
-            }
-        }
-    }
-    function bubble_tail_to_head() {
-        if (data.length < 2) {
-            return;
-        }
+    const data = new Heap<T>((a, b) => comparator(a, b));
+    values?.forEach((v) => data.push(v));
 
-        for (
-            let i = data.length - 2, j = data.length - 1;
-            j >= 0 && i >= 0;
-            i--, j--
-        ) {
-            if (comparator(data[i], data[j]) > 0) {
-                swap(i, j);
-            } else {
-                break;
-            }
-        }
+    function length(): number {
+        return data.size();
     }
 
     function offer(value: T) {
-        const f = head();
-        if (typeof f === "undefined") {
-            data.push(value);
-            return;
-        }
-        const l = tail();
-        if (typeof l === "undefined") {
-            data.push(value);
-            return;
-        }
-        if (comparator(value, l) > 0) {
-            data.push(value);
-        } else if (comparator(value, f) < 0) {
-            data.unshift(value);
-        } else {
-            if (comparator(value, data[Math.floor(data.length / 2)]) > 0) {
-                data.push(value);
-                bubble_tail_to_head();
-            } else {
-                data.unshift(value);
-                bubble_head_to_tail();
-            }
-        }
+        data.push(value);
     }
     function head() {
-        if (!data.length) {
+        // console.log(data)
+        if (!data.size()) {
             return undefined;
         }
-        return data[0];
+        return data.top();
     }
-    function tail() {
-        if (!data.length) {
-            return undefined;
-        }
-        return data[data.length - 1];
-    }
-    function pop() {
+
+    function shift() {
+        // console.log(data)
         return data.pop();
     }
-    function shift() {
-        return data.shift();
-    }
     function clear() {
-        data.length = 0;
+        data.clear();
     }
-    function at(index: number): T | undefined {
-        return data.at(index);
-    }
+
     function toArray() {
-        return Array.from(data);
+        return Array.from(data.sort()).sort(comparator) as T[];
     }
     function isEmpty() {
-        return data.length === 0;
+        return data.isEmpty();
     }
     return {
         isEmpty,
@@ -131,9 +64,7 @@ export function PriorityQueue<T = any>(
         comparator,
         offer,
         head,
-        tail,
-        pop,
+
         shift,
-        at,
     };
 }

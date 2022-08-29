@@ -113,7 +113,7 @@ Deno.test("PriorityQueue", () => {
         8,
         47,
     ];
-    const maxPQ = PriorityQueue((a, b) => a - b, data);
+    const maxPQ = PriorityQueue((a, b) => -a + b, data);
     assertEquals("function", typeof maxPQ.comparator);
     assertEquals(
         [
@@ -217,19 +217,19 @@ Deno.test("PriorityQueue", () => {
             97,
             98,
             99,
-        ],
+        ].sort((a, b) => -a + b),
         maxPQ.toArray(),
     );
     assertFalse(maxPQ.isEmpty());
     assertEquals(maxPQ.length(), 100);
-    assertEquals(maxPQ.tail(), 99);
+    // assertEquals(maxPQ.tail(), 99);
     assertEquals(maxPQ.head(), 0);
-    assertEquals(maxPQ.pop(), 99);
-    assertEquals(maxPQ.length(), 99);
     assertEquals(maxPQ.shift(), 0);
+    assertEquals(maxPQ.length(), 99);
+    assertEquals(maxPQ.shift(), 99);
     assertEquals(maxPQ.length(), 98);
-    assertEquals(maxPQ.tail(), 98);
-    assertEquals(maxPQ.head(), 1);
+    // assertEquals(maxPQ.tail(), 98);
+    assertEquals(maxPQ.head(), 98);
     maxPQ.offer(1000);
     maxPQ.offer(-1000);
     assertEquals(
@@ -334,10 +334,10 @@ Deno.test("PriorityQueue", () => {
             97,
             98,
             1000,
-        ],
+        ].sort((a, b) => -a + b),
         maxPQ.toArray(),
     );
-    assertEquals(maxPQ.tail(), 1000);
+    // assertEquals(maxPQ.tail(), 1000);
     assertEquals(maxPQ.head(), -1000);
     maxPQ.offer(50);
     assertEquals(
@@ -443,14 +443,14 @@ Deno.test("PriorityQueue", () => {
             97,
             98,
             1000,
-        ],
+        ].sort((a, b) => -a + b),
         maxPQ.toArray(),
     );
     assertEquals(maxPQ.length(), 101);
 
     const length = maxPQ.length();
     for (let i = 0; i < length; i++) {
-        assert(typeof maxPQ.pop() === "number");
+        assert(typeof maxPQ.shift() === "number");
     }
     assert(maxPQ.isEmpty());
     assertEquals(0, maxPQ.length());

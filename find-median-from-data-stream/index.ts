@@ -1,1 +1,1 @@
-export {default }from "./MedianFinder.ts"
+export { default } from "./MedianFinder.ts";
