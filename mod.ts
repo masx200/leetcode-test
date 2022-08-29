@@ -1,3 +1,4 @@
+export { TreeNodeLeetCodeFromJSON, TreeNodeLeetCodeToJSON };
 import { DoublyLinkedList } from "./design-linked-list/DoublyLinkedList.ts";
 export { DoublyLinkedList };
 export { Array_to_circular_linked_list, sum };
@@ -71,8 +72,14 @@ import { deduplication } from "./fraction-addition-and-subtraction/deduplication
 import { parse_complex } from "./complex-number-multiplication/parse_complex.ts";
 import { Array_to_circular_linked_list } from "./4ueAj6/circular-linked-list.ts";
 import { cache } from "./sort-integers-by-the-power-value/cache.ts";
-import { TreeNodeLeetCodeStringify } from "./utils/TreeNodeLeetCodeStringify.ts";
-import { TreeNodeLeetCodeParse } from "./utils/TreeNodeLeetCodeParse.ts";
+import {
+    TreeNodeLeetCodeStringify,
+    TreeNodeLeetCodeToJSON,
+} from "./utils/TreeNodeLeetCodeStringify.ts";
+import {
+    TreeNodeLeetCodeFromJSON,
+    TreeNodeLeetCodeParse,
+} from "./utils/TreeNodeLeetCodeParse.ts";
 import { getVariable, ScopeList } from "./parse-lisp-expression/index.ts";
 export {
     left_rotate,
