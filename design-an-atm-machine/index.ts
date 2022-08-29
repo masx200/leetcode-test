@@ -1,4 +1,10 @@
-export default function ATM() {
+export default ATM;
+type ATM = {
+    deposit(banknotesCount: number[]): void;
+    withdraw(amount: number): number[];
+};
+
+function ATM(): ATM {
     let moneyStore = new Map([
         [20, 0],
         [50, 0],
