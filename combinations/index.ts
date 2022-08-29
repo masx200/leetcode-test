@@ -32,13 +32,13 @@ function combine(n: number, k: number): number[][] {
     });
     return ans;
 }
-const dfs = (
+function dfs(
     cur: number,
     n: number,
     k: number,
     temp: number[],
     output: (nums: number[]) => void,
-) => {
+) {
     if (temp.length > k) {
         return;
     }
@@ -57,5 +57,5 @@ const dfs = (
     if (temp.length + 1 <= k) {
         dfs(cur + 1, n, k, [...temp, cur], output);
     }
-};
+}
 export default combine;

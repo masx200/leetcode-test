@@ -13,7 +13,6 @@ export default function copyRandomList(head: Node | null): Node | null {
         cloned.next = copyRandomList(head.next);
         cloned.random = copyRandomList(head.random);
         return cloned;
-        // cachedNode.set(head, {val: head.val}), Object.assign(cachedNode.get(head), {next: copyRandomList(head.next, cachedNode), random: copyRandomList(head.random, cachedNode)})
     }
     const result = cachedNode.get(head);
     return result ? result : null;
