@@ -1,3 +1,5 @@
 {
-    "imports": {}
+    "imports": {
+        "leetcode-class": "https://cdn.skypack.dev/leetcode-class@1.2.4?dts"
+    }
 }
