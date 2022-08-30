@@ -4,7 +4,7 @@ import { ListNode as Node } from "../reverse-linked-list/ListNode.ts";
 import { ArrayToCircularLinkedList } from "./ArrayToCircularLinkedList.ts";
 import insert from "./index.ts";
 
-Deno.test("insert-into-a-sorted-ArrayToCircularLinkedList", () => {
+Deno.test("insert-into-a-sorted-circular-linked-list", () => {
     const head = new Node(1);
     head.next = head;
     const node = new Node(2);
@@ -16,7 +16,7 @@ Deno.test("insert-into-a-sorted-ArrayToCircularLinkedList", () => {
     assertEquals(result?.next?.next?.val, 3);
     assertEquals(result?.next?.next?.next?.val, 1);
 });
-Deno.test("insert-into-a-sorted-ArrayToCircularLinkedList", () => {
+Deno.test("insert-into-a-sorted-circular-linked-list", () => {
     const inputs: Array<[number[], number]> = [
         [[1, 2], 3],
         [[3, 4, 1], 2],
@@ -34,6 +34,6 @@ Deno.test("insert-into-a-sorted-ArrayToCircularLinkedList", () => {
             const result = insert(head, insertVal);
             // console.log(result);
             return result;
-        }),
+        })
     );
 });
