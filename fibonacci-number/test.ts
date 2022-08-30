@@ -1,6 +1,7 @@
 import { assertStrictEquals } from "../deps.ts";
 import { fibonacci_bigint } from "../mod.ts";
 import fibonacci_Number from "./index.ts";
+
 Deno.test("fibonacci-number", () => {
     const examples: {
         input: number;

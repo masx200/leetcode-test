@@ -1,6 +1,6 @@
 import { assertEquals } from "../deps.ts";
-import removeDuplicateNodes from "./index.ts";
 import { ArrayToListNode } from "../reverse-linked-list/ArrayToListNode.ts";
+import removeDuplicateNodes from "./index.ts";
 
 Deno.test("remove-duplicate-node-lcci-1", () => {
     const input = ArrayToListNode([1, 2, 3, 3, 4, 4, 5]);

@@ -1,6 +1,8 @@
 import { assertEquals } from "https://deno.land/std@0.153.0/testing/asserts.ts";
 import { runScript } from "leetcode-class";
+
 import ATM from "./index.ts";
+
 Deno.test("design-an-atm-machine", () => {
     assertEquals(
         runScript(

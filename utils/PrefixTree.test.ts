@@ -1,11 +1,14 @@
 import { assertEquals } from "../deps.ts";
-import { PrefixTreeInsert } from "../design-add-and-search-words-data-structure/PrefixTreeInsert.ts";
+import {
+    PrefixTreeInsert,
+} from "../design-add-and-search-words-data-structure/PrefixTreeInsert.ts";
 import { PrefixTree } from "../implement-trie-prefix-tree/PrefixTree.ts";
-import { PrefixTreeToArray1 } from "./PrefixTreeToArray1.ts";
 import { examples } from "./examples.ts";
 import { PrefixTreeClear } from "./PrefixTreeClear.ts";
-import { PrefixTreeFromArray } from "./PrefixTreeFromArray.ts";
 import { PrefixTreeForEach } from "./PrefixTreeForEach.ts";
+import { PrefixTreeFromArray } from "./PrefixTreeFromArray.ts";
+import { PrefixTreeToArray1 } from "./PrefixTreeToArray1.ts";
+
 // import { PrefixTreeToArray2 } from "./PrefixTreeToArray2.ts";
 
 Deno.test("Prefix-Tree-from-array-for-each-PrefixTreeToArray1", () => {

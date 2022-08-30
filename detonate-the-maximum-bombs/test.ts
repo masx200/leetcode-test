@@ -1,5 +1,7 @@
 import { assertEquals } from "asserts";
+
 import maximumDetonation from "./index.ts";
+
 Deno.test("detonate-the-maximum-bombs", () => {
     assertEquals(
         [2, 1, 5],

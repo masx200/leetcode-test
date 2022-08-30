@@ -1,4 +1,5 @@
 import { groupBy, sum } from "../deps.ts";
+
 function distanceBetweenBusStops(
     distance: number[],
     start: number,

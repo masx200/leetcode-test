@@ -1,5 +1,7 @@
 import { assertEquals } from "https://deno.land/std@0.153.0/testing/asserts.ts";
+
 import solveEquation from "./index.ts";
+
 Deno.test("solve-the-equation", () => {
     const inputs = [
         "12x=99x",

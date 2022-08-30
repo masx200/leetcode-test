@@ -1,5 +1,7 @@
 import { assertEquals } from "https://deno.land/std@0.153.0/testing/asserts.ts";
+
 import constructArr from "./index.ts";
+
 Deno.test("gou-jian-cheng-ji-shu-zu-lcof", () => {
     assertEquals(constructArr([1, 2, 3, 4, 5]), [120, 60, 40, 30, 24]);
     assertEquals(constructArr([]), []);

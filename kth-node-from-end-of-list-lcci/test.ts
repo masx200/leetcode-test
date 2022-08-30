@@ -1,4 +1,7 @@
+import { assertEquals } from "../deps.ts";
+import { ArrayToListNode } from "../mod.ts";
 import kth_node_from_end_of_list_lcci from "./index.ts";
+
 Deno.test("kth-node-from-end-of-list-lcci", () => {
     const examples: {
         input: [number[], number];
@@ -15,5 +18,3 @@ Deno.test("kth-node-from-end-of-list-lcci", () => {
         );
     });
 });
-import { assertEquals } from "../deps.ts";
-import { ArrayToListNode } from "../mod.ts";

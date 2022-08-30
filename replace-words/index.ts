@@ -1,5 +1,6 @@
 import { PrefixTree } from "../implement-trie-prefix-tree/PrefixTree.ts";
 import { PrefixTreeInsert, PrefixTreeSearchPrefix } from "../mod.ts";
+
 export default function replaceWords(
     dictionary: string[],
     sentence: string,

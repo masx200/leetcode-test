@@ -1,6 +1,8 @@
 import { assertEquals } from "asserts";
 import { runScript } from "leetcode-class";
+
 import MyLinkedList from "./index.ts";
+
 Deno.test("design-linked-list", () => {
     assertEquals(
         runScript(

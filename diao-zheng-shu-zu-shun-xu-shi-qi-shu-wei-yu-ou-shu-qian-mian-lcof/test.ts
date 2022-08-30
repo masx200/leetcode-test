@@ -1,4 +1,5 @@
 import { assert, assertEquals } from "asserts";
+
 import exchange from "./index.ts";
 
 Deno.test(

@@ -1,4 +1,5 @@
 import { ListNode } from "../reverse-linked-list/ListNode.ts";
+
 export default function removeNthFromEnd(
     head: ListNode | null,
     n: number,

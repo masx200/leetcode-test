@@ -1,5 +1,7 @@
 import { assertEquals } from "https://deno.land/std@0.153.0/testing/asserts.ts";
+
 import findDiagonalOrder from "./index.ts";
+
 Deno.test("diagonal-traverse-ii", function () {
     assertEquals(
         [

@@ -1,7 +1,8 @@
-import removeDuplicates from "./index.ts";
 import { assertEquals } from "../deps.ts";
 import { ArrayToListNode } from "../reverse-linked-list/ArrayToListNode.ts";
 import { ListNodeToArray } from "../reverse-linked-list/ListNodeToArray.ts";
+import removeDuplicates from "./index.ts";
+
 Deno.test("remove-duplicates-from-sorted-list", () => {
     const examples: { input: number[]; output: number[] }[] = [
         { input: [1, 1, 2], output: [1, 2] },

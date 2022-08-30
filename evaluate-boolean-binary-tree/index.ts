@@ -1,5 +1,6 @@
 import { TreeNode } from "../mod.ts";
 import { Values } from "./Values.ts";
+
 function evaluateTree(root: TreeNode | null): boolean {
     if (!root) {
         return false;

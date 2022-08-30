@@ -1,6 +1,6 @@
 import { assertEquals } from "https://deno.land/std@0.153.0/testing/asserts.ts";
-import { runScript } from "../deps.ts";
 
+import { runScript } from "../deps.ts";
 import { TreeNodeLeetCodeFromJSON } from "../utils/TreeNodeLeetCodeParse.ts";
 import BSTIterator from "./index.ts";
 

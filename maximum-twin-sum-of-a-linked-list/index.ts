@@ -1,4 +1,5 @@
 import { ListNode } from "../mod.ts";
+
 export default function pairSum(head: ListNode | null): number {
     if (!head) return 0;
     let left = head;

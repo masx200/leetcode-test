@@ -1,4 +1,5 @@
 import addStrings from "../add-strings/index.ts";
+
 function multiply(x: string, y: string): string {
     // console.log('mul', x, y);
     if (x.length === 0 || y.length === 0) {

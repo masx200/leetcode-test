@@ -1,5 +1,6 @@
 import { PrefixTree } from "../implement-trie-prefix-tree/PrefixTree.ts";
 import { PrefixTreeSearchPrefixEach } from "./PrefixTreeSearchPrefixEach.ts";
+
 export function PrefixTreeSearchEach(
     root: PrefixTree,
     word: string,

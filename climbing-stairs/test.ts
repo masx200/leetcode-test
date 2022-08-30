@@ -1,6 +1,7 @@
 import { assertStrictEquals } from "../deps.ts";
 import { climbing_stairs_bigint } from "../mod.ts";
 import climbing_stairs from "./index.ts";
+
 Deno.test("climbing-stairs", () => {
     const examples: {
         input: number;

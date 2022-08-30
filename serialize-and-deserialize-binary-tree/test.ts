@@ -1,6 +1,7 @@
 import { TreeNode } from "../binary-tree-inorder-traversal/TreeNode.ts";
 import { assertEquals } from "../deps.ts";
 import { deserialize, serialize } from "./index.ts";
+
 Deno.test("serialize-and-deserialize-binary-tree-0", () => {
     const root = new TreeNode(20, null, new TreeNode(10));
 

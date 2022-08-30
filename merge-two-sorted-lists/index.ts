@@ -1,4 +1,5 @@
 import { ListNode } from "../reverse-linked-list/ListNode.ts";
+
 export default function mergeTwoLists(
     list1: ListNode | null,
     list2: ListNode | null,

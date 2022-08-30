@@ -1,5 +1,6 @@
-import removeDuplicates from "./index.ts";
 import { assertEquals } from "../deps.ts";
+import removeDuplicates from "./index.ts";
+
 Deno.test("remove-duplicates-from-sorted-array", () => {
     const examples: { input: number[]; output: number[] }[] = [
         { input: [1, 1, 2], output: [1, 2] },

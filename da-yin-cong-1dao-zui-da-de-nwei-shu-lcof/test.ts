@@ -1,5 +1,7 @@
 import { assertEquals } from "https://deno.land/std@0.153.0/testing/asserts.ts";
+
 import printNumbers from "./index.ts";
+
 Deno.test("da-yin-cong-1dao-zui-da-de-nwei-shu-lcof", () => {
     const outputs = [
         [1, 2, 3, 4, 5, 6, 7, 8, 9],

@@ -1,5 +1,6 @@
 const array = Symbol();
 import { ListNode } from "../mod.ts";
+
 class Solution {
     [array]: number[] = [];
     constructor(head: ListNode | null) {

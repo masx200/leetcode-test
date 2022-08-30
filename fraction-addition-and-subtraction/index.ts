@@ -2,6 +2,7 @@ import { greatest_common_divisor } from "../max-points-on-a-line/greatest_common
 import { deduplication } from "./deduplication.ts";
 import { Fraction } from "./Fraction.ts";
 import { parseFraction } from "./parseFraction.ts";
+
 function fractionAddition(expression: string): string {
     const fractions = parseFraction(expression);
 

@@ -1,5 +1,7 @@
 import { assertEquals } from "https://deno.land/std@0.153.0/testing/asserts.ts";
+
 import fractionAddition from "./index.ts";
+
 Deno.test("fraction-addition-and-subtraction", () => {
     assertEquals(
         "77464/145635",

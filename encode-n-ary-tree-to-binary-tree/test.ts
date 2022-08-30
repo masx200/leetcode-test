@@ -1,7 +1,8 @@
-import { Node } from "../n-ary-tree-level-order-traversal/Node.ts";
-import { assert, assertEquals } from "../deps.ts";
-import { decode, encode } from "./index.ts";
 import { TreeNode } from "../binary-tree-inorder-traversal/TreeNode.ts";
+import { assert, assertEquals } from "../deps.ts";
+import { Node } from "../n-ary-tree-level-order-traversal/Node.ts";
+import { decode, encode } from "./index.ts";
+
 Deno.test("encode-n-ary-tree-to-binary-tree-1", () => {
     const examples: { node: Node; tree: TreeNode }[] = [
         {

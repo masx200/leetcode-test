@@ -1,7 +1,7 @@
-import { assertEquals } from "../deps.ts";
-import listOfDepth from "./index.ts";
 import { TreeNode } from "../binary-tree-inorder-traversal/TreeNode.ts";
+import { assertEquals } from "../deps.ts";
 import { ArrayToListNode } from "../reverse-linked-list/ArrayToListNode.ts";
+import listOfDepth from "./index.ts";
 
 Deno.test("list-of-depth-lcci", () => {
     assertEquals(listOfDepth(null), []);

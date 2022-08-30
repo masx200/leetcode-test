@@ -1,4 +1,6 @@
-import { PrefixTreeInsert } from "../design-add-and-search-words-data-structure/PrefixTreeInsert.ts";
+import {
+    PrefixTreeInsert,
+} from "../design-add-and-search-words-data-structure/PrefixTreeInsert.ts";
 import { PrefixTree } from "../implement-trie-prefix-tree/PrefixTree.ts";
 
 export function PrefixTreeFromArray(values: string[]): PrefixTree {

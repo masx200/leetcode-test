@@ -1,5 +1,7 @@
 import { assertEquals } from "https://deno.land/std@0.153.0/testing/asserts.ts";
+
 import superPow from "./index.ts";
+
 Deno.test("super-pow", () => {
     const inputs = [
         [2, [3]],

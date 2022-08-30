@@ -1,5 +1,7 @@
 import { assertEquals } from "https://deno.land/std@0.153.0/testing/asserts.ts";
+
 import isMatch from "./index.ts";
+
 Deno.test("regular-expression-matching", () => {
     const inputs = [
         ["aaa", "a.a"],

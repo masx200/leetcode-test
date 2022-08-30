@@ -1,5 +1,7 @@
 import { assertEquals } from "https://deno.land/std@0.153.0/testing/asserts.ts";
+
 import mergeAlternately from "./index.ts";
+
 Deno.test("merge-strings-alternately", () => {
     const inputs = [
         ["abc", "pqr"],

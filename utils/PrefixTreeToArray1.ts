@@ -1,4 +1,5 @@
 import { PrefixTree } from "../implement-trie-prefix-tree/PrefixTree.ts";
+
 //小心调用栈溢出
 // export function PrefixTreeToArray(root: PrefixTree): Array<string> {
 //     const r: Array<string> = [];

@@ -1,5 +1,7 @@
 import { assertEquals } from "https://deno.land/std@0.153.0/testing/asserts.ts";
+
 import isValidBST from "./index.ts";
+
 Deno.test("validate-binary-search-tree", () => {
     const inputs = [
         {

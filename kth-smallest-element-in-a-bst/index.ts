@@ -1,4 +1,5 @@
 import { TreeNode } from "../binary-tree-inorder-traversal/TreeNode.ts";
+
 export default function kthSmallest(root: TreeNode | null, k: number): number {
     const res: number[] = [];
     // 中序遍历

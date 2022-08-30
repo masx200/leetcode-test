@@ -1,5 +1,7 @@
 import { assertEquals } from "https://deno.land/std@0.153.0/testing/asserts.ts";
+
 import addToArrayForm from "./index.ts";
+
 Deno.test("add-to-array-form-of-integer", () => {
     const inputs = [
         [[1, 2, 0, 0], 34],

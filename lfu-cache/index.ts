@@ -1,5 +1,6 @@
 import { DoublyLinkedList } from "../design-linked-list/DoublyLinkedList.ts";
 import { MyLinkedList } from "./MyLinkedList.ts";
+
 class LFUCache {
     readonly #key_to_freq: Map<number, number> = new Map();
     readonly #key_to_value: Map<number, number> = new Map();

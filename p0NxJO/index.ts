@@ -1,5 +1,6 @@
 import { Heap } from "../deps.ts";
 import { sum as sumarray } from "../richest-customer-wealth/sum.ts";
+
 function magicTower(nums: number[]): number {
     const heap = new Heap<number>((a, b) => a - b);
     if (sumarray(nums) < 0) {

@@ -1,4 +1,5 @@
 import { ListNode } from "../reverse-linked-list/ListNode.ts";
+
 export default function detectCycle(head: ListNode | null): ListNode | null {
     if (!head) return head;
     const cache = new Set<ListNode>();

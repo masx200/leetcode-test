@@ -4,8 +4,9 @@ import {
     get_length_of_list,
     ListNodeToArray,
 } from "../mod.ts";
-import reverse_linked_list_ii from "./index.ts";
 import { ListNode } from "../reverse-linked-list/ListNode.ts";
+import reverse_linked_list_ii from "./index.ts";
+
 Deno.test("get_length_of_list", () => {
     assertEquals(get_length_of_list(null), 0);
     const list = ArrayToListNode([1, 2, 3, 4, 5]);

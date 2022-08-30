@@ -1,4 +1,6 @@
+import { assertEquals } from "../deps.ts";
 import lengthLongestPath from "./index.ts";
+
 Deno.test("longest-absolute-file-path", () => {
     const inputs = [
         "dir\n\tsubdir1\n\tsubdir2\n\t\tfile.ext",
@@ -15,4 +17,3 @@ Deno.test("longest-absolute-file-path", () => {
         assertEquals(output, lengthLongestPath(input));
     });
 });
-import { assertEquals } from "../deps.ts";

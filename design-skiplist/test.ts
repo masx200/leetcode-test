@@ -1,5 +1,6 @@
-import Skiplist from "./index.ts";
 import { assertEquals } from "asserts";
+
+import Skiplist from "./index.ts";
 
 Deno.test("design-skiplist", () => {
     const skiplist: Skiplist = Skiplist();

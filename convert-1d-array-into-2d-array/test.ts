@@ -1,5 +1,6 @@
 import { assertEquals } from "../deps.ts";
 import convert1DArrayInto2DArray from "./index.ts";
+
 Deno.test("convert-1d-array-into-2d-array", () => {
     assertEquals(
         [

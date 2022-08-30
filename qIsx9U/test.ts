@@ -1,7 +1,8 @@
-import { assert } from "../deps.ts";
-import MovingAverage from "./index.ts";
 import { assertEquals } from "https://deno.land/std@0.153.0/testing/asserts.ts";
+
+import { assert } from "../deps.ts";
 import { float64equals } from "../utils/float64equals.ts";
+import MovingAverage from "./index.ts";
 
 Deno.test("moving-average-from-data-stream", () => {
     const variable_name = "movingAverage";

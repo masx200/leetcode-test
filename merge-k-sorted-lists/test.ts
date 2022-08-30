@@ -1,5 +1,8 @@
+import { assertEquals } from "../deps.ts";
+import { ArrayToListNode, ListNodeToArray } from "../mod.ts";
 import mergeKLists from "./index.ts";
 import { longlonginput } from "./longlonginput.ts";
+
 Deno.test("merge-k-sorted-lists", () => {
     const examples = [
         {
@@ -30,5 +33,3 @@ Deno.test("merge-k-sorted-lists", () => {
         );
     });
 });
-import { assertEquals } from "../deps.ts";
-import { ArrayToListNode, ListNodeToArray } from "../mod.ts";

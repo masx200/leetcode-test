@@ -1,5 +1,7 @@
-import FrontMiddleBackQueue from "./index.ts";
 import { assertEquals } from "asserts";
+
+import FrontMiddleBackQueue from "./index.ts";
+
 Deno.test("design-front-middle-back-queue", () => {
     const res: Array<number> = [];
     const q: FrontMiddleBackQueue = new FrontMiddleBackQueue();

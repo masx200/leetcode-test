@@ -1,4 +1,5 @@
 import { assertEquals } from "https://deno.land/std@0.153.0/testing/asserts.ts";
+
 import removeStones from "./index.ts";
 
 Deno.test("most-stones-removed-with-same-row-or-column", () => {

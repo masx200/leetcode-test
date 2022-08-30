@@ -1,4 +1,5 @@
 import { DoublyLinkedList } from "../design-linked-list/DoublyLinkedList.ts";
+
 // deno-lint-ignore no-explicit-any
 export class MyLinkedList<T = any> {
     readonly #list_head = DoublyLinkedList<T>();

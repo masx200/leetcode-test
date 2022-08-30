@@ -1,5 +1,6 @@
 import { TreeNode } from "../binary-tree-inorder-traversal/TreeNode.ts";
 import { inorder } from "./inorder.ts";
+
 export default function isValidBST(root: TreeNode | null): boolean {
     const signal: Signal = { aborted: false };
     if (!root) return false;

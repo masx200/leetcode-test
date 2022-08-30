@@ -1,6 +1,8 @@
 import { assertEquals } from "asserts";
 import { runScript } from "leetcode-class";
+
 import Twitter from "./index.ts";
+
 Deno.test("design-twitter", () => {
     assertEquals(
         runScript(

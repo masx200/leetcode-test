@@ -1,6 +1,8 @@
 import { assertEquals } from "https://deno.land/std@0.153.0/testing/asserts.ts";
+
 import { TreeNodeLeetCodeParse } from "../mod.ts";
 import deepestLeavesSum from "./index.ts";
+
 Deno.test("deepest-leaves-sum", () => {
     const inputs = [
         "[1,2,3,4,5,null,6,7,null,null,null,null,8]",

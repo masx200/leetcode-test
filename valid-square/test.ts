@@ -1,5 +1,7 @@
 import { assertEquals } from "https://deno.land/std@0.153.0/testing/asserts.ts";
+
 import validSquare from "./index.ts";
+
 Deno.test("valid-square", () => {
     const p1 = [0, 0],
         p2 = [1, 1],

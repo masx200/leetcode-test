@@ -1,6 +1,7 @@
 import { assertEquals } from "../deps.ts";
 import { ArrayToListNode, ListNodeToArray } from "../mod.ts";
 import mergeTwoLists from "./index.ts";
+
 Deno.test("merge-two-lists", () => {
     const examples: {
         input: [Array<number>, Array<number>];

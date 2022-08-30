@@ -1,7 +1,7 @@
 import { assertEquals } from "../deps.ts";
-import partition from "./index.ts";
-import { ListNode } from "../reverse-linked-list/ListNode.ts";
 import { ArrayToListNode } from "../reverse-linked-list/ArrayToListNode.ts";
+import { ListNode } from "../reverse-linked-list/ListNode.ts";
+import partition from "./index.ts";
 
 Deno.test("partition-list-lcci", () => {
     assertEquals(partition(null, 0), null);

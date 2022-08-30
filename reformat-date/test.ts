@@ -1,5 +1,7 @@
 import { assertEquals } from "https://deno.land/std@0.153.0/testing/asserts.ts";
+
 import reformatDate from "./index.ts";
+
 Deno.test("reformat-date", () => {
     const inputs = ["20th Oct 2052", "6th Jun 1933", "26th May 1960"];
     assertEquals(

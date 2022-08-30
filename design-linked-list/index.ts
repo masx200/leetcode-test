@@ -1,4 +1,5 @@
 import { DoublyLinkedList } from "./DoublyLinkedList.ts";
+
 // deno-lint-ignore no-explicit-any
 interface MyLinkedList<T = any> {
     get(index: number): T | number;

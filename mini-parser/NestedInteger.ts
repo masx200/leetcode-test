@@ -1,4 +1,5 @@
 import { NestedIntegerType } from "./NestedIntegerType.ts";
+
 export type NestedIntegerJSON = number | Array<NestedIntegerJSON>;
 export class NestedInteger extends Array<NestedInteger> {
     constructor(value?: number) {

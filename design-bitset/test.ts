@@ -1,5 +1,6 @@
-import Bitset from "./index.ts";
 import { assertEquals } from "https://deno.land/std@0.153.0/testing/asserts.ts";
+
+import Bitset from "./index.ts";
 
 Deno.test("design-bitset", () => {
     const bs = new Bitset(5); // bitset = "00000".

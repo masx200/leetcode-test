@@ -1,6 +1,7 @@
 import { assertEquals } from "../deps.ts";
 import { TreeNodeLeetCodeParse } from "../mod.ts";
 import constructMaximumBinaryTreeII from "./index.ts";
+
 Deno.test("maximum-binary-tree-ii", () => {
     const inputs: Array<[(number | null)[], number]> = [
         [[4, 1, 3, null, null, 2], 5],

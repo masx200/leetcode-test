@@ -1,5 +1,6 @@
 import { assertEquals } from "../deps.ts";
 import RangeModule from "./index.ts";
+
 Deno.test("RangeModule-1", () => {
     const rangeModule = new RangeModule();
     const targets = [

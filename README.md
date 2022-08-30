@@ -766,7 +766,7 @@ https://leetcode.cn/problems/delete-node-in-a-linked-list/
 
 https://leetcode.cn/problems/4ueAj6/
 
-https://leetcode.cn/problems/insert-into-a-sorted-circular-linked-list/
+https://leetcode.cn/problems/insert-into-a-sorted-ArrayToCircularLinkedList/
 
 https://leetcode.cn/problems/insert-delete-getrandom-o1/
 

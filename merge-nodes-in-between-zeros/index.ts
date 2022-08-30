@@ -1,6 +1,7 @@
 import { ArrayToListNode } from "../reverse-linked-list/ArrayToListNode.ts";
 import { ListNode } from "../reverse-linked-list/ListNode.ts";
 import { ListNodeIterator } from "./ListNodeIterator.ts";
+
 export default function mergeNodes(head: ListNode | null): ListNode | null {
     const result: number[] = [];
     let sum = 0;

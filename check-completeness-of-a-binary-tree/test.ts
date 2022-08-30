@@ -1,6 +1,8 @@
 import { assertEquals } from "https://deno.land/std@0.153.0/testing/asserts.ts";
-import isCompleteTree from "./index.ts";
+
 import { TreeNodeLeetCodeParse as deserialize } from "../utils/TreeNodeLeetCodeParse.ts";
+import isCompleteTree from "./index.ts";
+
 Deno.test("check-completeness-of-a-binary-tree", () => {
     const inputs = [
         "[1,2,3,4,5,6,7]",

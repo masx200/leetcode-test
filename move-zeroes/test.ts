@@ -1,5 +1,6 @@
 import { assertEquals } from "../deps.ts";
 import move_zeros from "./index.ts";
+
 Deno.test("move_zeros", () => {
     const examples: {
         input: Parameters<typeof move_zeros>[0];
