@@ -1,3 +1,4 @@
+import { groupBy, sum } from "../deps.ts";
 function distanceBetweenBusStops(
     distance: number[],
     start: number,
@@ -22,4 +23,3 @@ function distanceBetweenBusStops(
     );
 }
 export default distanceBetweenBusStops;
-import { groupBy, sum } from "../deps.ts";

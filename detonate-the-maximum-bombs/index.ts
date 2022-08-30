@@ -40,10 +40,6 @@ function get_count(edge: number, edges: Map<number, Array<number>>) {
 
     let current = Array.of(edge);
     while (current.length) {
-        // console.log(current)
-        // const nexts = current.map(a => (edges.get(a) ?? [])).flat()
-        // const temp = (nexts).filter(i => !visited.has(i))
-        // temp.forEach(i => visited.add(i))
         const temp = new Array<number>();
         for (const i of current) {
             visited.add(i);
@@ -56,16 +52,8 @@ function get_count(edge: number, edges: Map<number, Array<number>>) {
                     visited.add(j);
                 }
             }
-            // next_array?.forEach((j) => {
-            //     if (!visited.has(j)) {
-            //         temp.push(j);
-            //     }
-            //     visited.add(j);
-            // });
         }
-        // temp.forEach(i=>{
-        //      visited.add(i)
-        // })
+
         current = temp;
     }
     // console.log(visited)

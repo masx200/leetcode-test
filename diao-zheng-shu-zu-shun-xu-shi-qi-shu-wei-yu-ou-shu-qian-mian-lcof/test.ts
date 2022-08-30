@@ -1,7 +1,4 @@
-import {
-    assert,
-    assertEquals,
-} from "https://deno.land/std@0.153.0/testing/asserts.ts";
+import { assert, assertEquals } from "asserts";
 import exchange from "./index.ts";
 
 Deno.test(
