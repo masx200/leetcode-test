@@ -1,3 +1,6 @@
+import BrowserHistory from "./index.ts";
+import { assertEquals } from "asserts";
+import { runScript } from "leetcode-class";
 Deno.test("design-browser-history", () => {
     assertEquals(
         runScript(
@@ -27,7 +30,7 @@ Deno.test("design-browser-history", () => {
                 [2],
                 [7],
             ],
-            [BrowserHistory]
+            [BrowserHistory],
         ),
         [
             null,
@@ -41,9 +44,6 @@ Deno.test("design-browser-history", () => {
             "linkedin.com",
             "google.com",
             "leetcode.com",
-        ]
+        ],
     );
 });
-import { assertEquals } from "asserts";
-import { runScript } from "leetcode-class";
-import BrowserHistory from "./index.ts";

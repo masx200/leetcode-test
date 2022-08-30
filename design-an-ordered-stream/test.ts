@@ -1,3 +1,6 @@
+import OrderedStream from "./index.ts";
+import { assertEquals } from "asserts";
+import { runScript } from "leetcode-class";
 Deno.test("design-an-ordered-stream", () => {
     assertEquals(
         runScript(
@@ -11,6 +14,3 @@ Deno.test("design-an-ordered-stream", () => {
         [null, [], ["aaaaa"], ["bbbbb", "ccccc"], [], ["ddddd", "eeeee"]],
     );
 });
-import { assertEquals } from "https://deno.land/std@0.153.0/testing/asserts.ts";
-import { runScript } from "leetcode-class";
-import OrderedStream from "./index.ts";
