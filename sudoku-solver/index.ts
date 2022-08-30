@@ -1,6 +1,5 @@
 function solveSudoku(board: string[][]): void {
-    // const spaces: [number, number][] = [];
-    const spaces: number[] = []; //new Set<number>();
+    const spaces: number[] = [];
     const rows = new Array(9).fill(0).map(() => number_char_set(false));
     const columns = new Array(9).fill(0).map(() => number_char_set(false));
     const subboxes = new Array(3)
@@ -10,12 +9,7 @@ function solveSudoku(board: string[][]): void {
         for (let j = 0; j < 9; j++) {
             const char = board[i][j];
             if (char === ".") {
-                // if (Math.random() - 0.5 > 0) {
                 spaces.push(pair_to_index(i, j));
-                // spaces.add(pair_to_index(i, j));
-                // } else {
-                //   spaces.unshift([i, j]);
-                // }
             } else {
                 rows[i][char] = true;
                 columns[j][char] = true;
@@ -27,64 +21,7 @@ function solveSudoku(board: string[][]): void {
         return;
     }
 
-    // const space_to_charscount: Map<number, number> = new Map();
-    // while (true) {
-    //     let stop = true;
-    //     spaces = spaces.filter((index) => {
-    //         const [row, column] = index_to_pair(index);
-    //         const chars = get_available_chars(
-    //             row,
-    //             column,
-    //             rows,
-    //             columns,
-    //             subboxes
-    //         );
-    //         if (chars.length === 1) {
-    //             const char = chars[0];
-    //             board[row][column] = chars[0];
-    //             rows[row][char] = true;
-    //             columns[column][char] = true;
-    //             subboxes[Math.floor(row / 3)][Math.floor(column / 3)][char] =
-    //                 true;
-    //             stop = false;
-    //             space_to_charscount.delete(index);
-    //             return false;
-    //         }
-    //         space_to_charscount.set(index, chars.length);
-    //         return true;
-    //     });
-    //     if (stop) break;
-    // }
-    // if (spaces.length === 0) {
-    //     return;
-    // }
-    // //排序可选数最少的空格
-    // spaces.sort(
-    //     (a, b) =>
-    //         (space_to_charscount.get(a) ?? 0) -
-    //         (space_to_charscount.get(b) ?? 0)
-    // );
-    // const sorted: [number, number, Array<string>][] = spaces
-    //     .map(
-    //         ([row, column]) =>
-    //             [row, column, get_available_chars(row, column)] as [
-    //                 number,
-    //                 number,
-    //                 Array<string>
-    //             ]
-    //     )
-    //     .sort((a, b) => -a[2].length + b[2].length);
-    // spaces.length = 0;
-    // for (const [row, column] of sorted) {
-    //   spaces.push([row, column]);
-    // }
-
     dfs(new Set(spaces), rows, columns, subboxes, board);
-    // if (result) {
-    //     for (const [row, column, char] of result) {
-    //         board[row][column] = char;
-    //     }
-    // }
     return;
 }
 function index_to_pair(index: number): [number, number] {
@@ -113,14 +50,11 @@ function dfs(
     subboxes: Record<string, boolean>[][],
     board: string[][],
 ): boolean {
-    // console.log(spaces);
     if (spaces.size === 0) {
         return true;
     }
     const spaces_and_chars: [number, number, string[]][] = [];
-    // let count = 0;
     for (const index of spaces) {
-        // if (count > 10) break;
         const [row, column] = index_to_pair(index);
         const chars = get_available_chars(row, column, rows, columns, subboxes);
         if (chars.length === 0) {
@@ -134,17 +68,9 @@ function dfs(
         if (chars.length === 1) {
             break;
         }
-
-        // count++;
     }
-    // Array.from(spaces).map(function (index) {
-
-    // });
     let [i, j, chars] = spaces_and_chars[0];
-    //查找可选数最少的空格
-    // let countcount = 0;
     for (const [r, c, h] of spaces_and_chars) {
-        // if (countcount > 10) break;
         if (h.length === 0) {
             return false;
         }
@@ -155,31 +81,11 @@ function dfs(
         if (chars.length === 1) {
             break;
         }
-        // countcount++;
     }
     if (chars.length === 0) {
         return false;
     }
-    // const clonedspaces = new Set(spaces);
-    // clonedspaces.delete(pair_to_index(i, j));
-    // const clonedspaces = spaces.filter(([r, c]) => !(r == i && c == j));
-
-    // if (pos < 0) {
-    //     return true;
-    // }
-    // const [i, j, chars] = sorted[pos];
-    // const chars =
-
-    // Array.from({ length: 9 })
-    //.map((_v, i) => String(i + 1))
-    // .sort(() => Math.random() - 0.5);
     for (const char of chars.sort(() => Math.random() - 0.5)) {
-        // if (
-        //     !rows[i][char] &&
-        //     !columns[j][char] &&
-        //     !subboxes[Math.floor(i / 3)][Math.floor(j / 3)][char]
-        // ) {
-
         rows[i][char] = true;
 
         columns[j][char] = true;
@@ -190,8 +96,6 @@ function dfs(
         spaces.delete(pair_to_index(i, j));
         const result = dfs(
             spaces,
-            // clonedspaces,
-
             rows,
             columns,
             subboxes,
@@ -204,7 +108,6 @@ function dfs(
         columns[j][char] = false;
         subboxes[Math.floor(i / 3)][Math.floor(j / 3)][char] = false;
         spaces.add(pair_to_index(i, j));
-        // }
     }
     return false;
 }
@@ -229,107 +132,3 @@ function get_available_chars(
     return Array.from(charset);
 }
 export default solveSudoku;
-// export default function solveSudoku(board: string[][]): void {
-//     const spaces: [number, number][] = [];
-
-//     const rows = new Array(9).fill(0).map(() => number_char_set(false));
-//     const columns = new Array(9).fill(0).map(() => number_char_set(false));
-//     const subboxes = new Array(3)
-//         .fill(0)
-//         .map(() => new Array(3).fill(0).map(() => number_char_set(false)));
-//     for (let i = 0; i < 9; i++) {
-//         for (let j = 0; j < 9; j++) {
-//             const char = board[i][j];
-//             if (char === ".") {
-//                 // if (Math.random() - 0.5 > 0) {
-//                 spaces.push([i, j]);
-//                 // } else {
-//                 //   spaces.unshift([i, j]);
-//                 // }
-//             } else {
-//                 rows[i][char] = true;
-//                 columns[j][char] = true;
-//                 subboxes[Math.floor(i / 3)][Math.floor(j / 3)][char] = true;
-//             }
-//         }
-//     }
-//     if (spaces.length === 0) {
-//         return;
-//     }
-//     const sorted: [number, number, Array<string>][] = spaces
-//         .map(
-//             ([row, column]) =>
-//                 [row, column, get_available_chars(row, column)] as [
-//                     number,
-//                     number,
-//                     Array<string>,
-//                 ],
-//         )
-//         .sort((a, b) => -a[2].length + b[2].length);
-//     // spaces.length = 0;
-//     // for (const [row, column] of sorted) {
-//     //   spaces.push([row, column]);
-//     // }
-
-//     function get_available_chars(row: number, column: number): Array<string> {
-//         const array = Array.from({ length: 9 }).map((_v, i) => String(i + 1));
-//         const charset = new Set(array);
-//         for (const char of array) {
-//             if (
-//                 rows[row][char] ||
-//                 columns[column][char] ||
-//                 subboxes[Math.floor(row / 3)][Math.floor(column / 3)][char]
-//             ) {
-//                 charset.delete(char);
-//             }
-//         }
-//         return Array.from(charset);
-//     }
-//     function dfs(pos: number): boolean {
-//         if (pos < 0) {
-//             return true;
-//         }
-//         const [i, j, chars] = sorted[pos];
-//         // const chars =
-
-//         // Array.from({ length: 9 })
-//         //.map((_v, i) => String(i + 1))
-//         // .sort(() => Math.random() - 0.5);
-//         for (const char of chars.sort(() => Math.random() - 0.5)) {
-//             if (
-//                 !rows[i][char] &&
-//                 !columns[j][char] &&
-//                 !subboxes[Math.floor(i / 3)][Math.floor(j / 3)][char]
-//             ) {
-//                 rows[i][char] = true;
-//                 columns[j][char] = true;
-//                 subboxes[Math.floor(i / 3)][Math.floor(j / 3)][char] = true;
-
-//                 board[i][j] = char;
-//                 if (dfs(pos - 1)) {
-//                     return true;
-//                 }
-//                 rows[i][char] = false;
-//                 columns[j][char] = false;
-//                 subboxes[Math.floor(i / 3)][Math.floor(j / 3)][char] = false;
-//             }
-//         }
-//         return false;
-//     }
-
-//     dfs(spaces.length - 1);
-//     return;
-// }
-// function number_char_set(def: boolean): Record<string, boolean> {
-//     return {
-//         1: def,
-//         2: def,
-//         3: def,
-//         4: def,
-//         5: def,
-//         6: def,
-//         7: def,
-//         8: def,
-//         9: def,
-//     };
-// }
