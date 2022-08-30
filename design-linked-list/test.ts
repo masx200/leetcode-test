@@ -14,9 +14,9 @@ Deno.test("design-linked-list", () => {
                 "get",
             ],
             [[], [1], [3], [1, 2], [1], [1], [1]],
-            [MyLinkedList]
+            [MyLinkedList],
         ),
-        [null, null, null, null, 2, null, 3]
+        [null, null, null, null, 2, null, 3],
     );
 });
 Deno.test("design-linked-list", () => {
@@ -230,7 +230,7 @@ Deno.test("design-linked-list", () => {
                 [62],
                 [32],
             ],
-            [MyLinkedList]
+            [MyLinkedList],
         ),
         [
             null,
@@ -335,6 +335,6 @@ Deno.test("design-linked-list", () => {
             59,
             null,
             null,
-        ]
+        ],
     );
 });
