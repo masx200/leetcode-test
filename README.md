@@ -10,6 +10,10 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/zhan-de-ya-ru-dan-chu-xu-lie-lcof
+
+https://leetcode.cn/problems/validate-stack-sequences/
+
 https://leetcode.cn/problems/design-a-food-rating-system/
 
 https://leetcode.cn/problems/minimum-score-after-removals-on-a-tree/

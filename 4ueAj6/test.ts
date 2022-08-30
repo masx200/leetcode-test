@@ -34,6 +34,6 @@ Deno.test("insert-into-a-sorted-circular-linked-list", () => {
             const result = insert(head, insertVal);
             // console.log(result);
             return result;
-        })
+        }),
     );
 });
