@@ -1,6 +1,6 @@
 import deleteNode from "./index.ts";
 import { ArrayToListNode } from "../reverse-linked-list/ArrayToListNode.ts";
-import { assertEquals } from "https://deno.land/std@0.152.0/testing/asserts.ts";
+import { assertEquals } from "https://deno.land/std@0.153.0/testing/asserts.ts";
 Deno.test("remove-linked-list-elements", () => {
     assertEquals(
         ArrayToListNode([4, 1, 9, 10]),

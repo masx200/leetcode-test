@@ -1,5 +1,5 @@
 import AuthenticationManager from "./index.ts";
-import { assertEquals } from "https://deno.land/std@0.152.0/testing/asserts.ts";
+import { assertEquals } from "https://deno.land/std@0.153.0/testing/asserts.ts";
 
 Deno.test("design-authentication-manager", () => {
     const authenticationManager = new AuthenticationManager(5); // 构造 AuthenticationManager ，设置 timeToLive = 5 秒。

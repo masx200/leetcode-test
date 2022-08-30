@@ -1,4 +1,4 @@
-import { assertEquals } from "https://deno.land/std@0.152.0/testing/asserts.ts";
+import { assertEquals } from "https://deno.land/std@0.153.0/testing/asserts.ts";
 import rotate from "./index.ts";
 Deno.test("test-Rotate-Image-1", () => {
     const matrix = [

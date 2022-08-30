@@ -1,4 +1,4 @@
-import { assertEquals } from "https://deno.land/std@0.152.0/testing/asserts.ts";
+import { assertEquals } from "https://deno.land/std@0.153.0/testing/asserts.ts";
 import getAncestors from "./index.ts";
 Deno.test("all-ancestors-of-a-node-in-a-directed-acyclic-graph", () => {
     const outputs = [

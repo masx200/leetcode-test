@@ -1,5 +1,5 @@
 import { TreeNode } from "../mod.ts";
-import { assertEquals } from "https://deno.land/std@0.152.0/testing/asserts.ts";
+import { assertEquals } from "https://deno.land/std@0.153.0/testing/asserts.ts";
 import pathSum from "./index.ts";
 
 Deno.test("path-sum-ii", () => {

@@ -1,5 +1,5 @@
 import CombinationIterator from "./index.ts";
-import { assertEquals } from "https://deno.land/std@0.152.0/testing/asserts.ts";
+import { assertEquals } from "https://deno.land/std@0.153.0/testing/asserts.ts";
 
 Deno.test("iterator-for-combination", () => {
     const res = [];
