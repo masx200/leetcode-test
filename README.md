@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode-cn.com/problems/final-prices-with-a-special-discount-in-a-shop/
+
 https://leetcode-cn.com/problems/intersection-of-two-arrays/
 
 https://leetcode.cn/problems/zhan-de-ya-ru-dan-chu-xu-lie-lcof
