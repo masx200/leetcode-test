@@ -1,11 +1,11 @@
 export default function subsets(nums: number[]): number[][] {
-    const ans = [];
+    const ans: number[][] = [];
 
     for (let i = 0; i < 2 ** nums.length; i++) {
-        const temp = [];
+        const temp : number[]= [];
         for (
-            const [j, v] of Array.prototype.entries.call(
-                Array.from(i.toString(2)).reverse(),
+            const [j, v] of (
+                Array.from(i.toString(2)).reverse().entries()
             )
         ) {
             if (v === "1") {
