@@ -9,7 +9,7 @@ if(!root)return 0
     
     dfs(root,s=>res=Math.max(res,s));
     return res;
-};
+}
 function dfs(root: TreeNode | null,out:(s:number)=>void) {
         if (!root) {
             return 0;
