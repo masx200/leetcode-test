@@ -1,3 +1,4 @@
+import {TreeNode}from"../mod.ts"
 export default function longestUnivaluePath(root: TreeNode | null): number {
 
 if(!root)return 0
