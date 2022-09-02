@@ -1,6 +1,6 @@
 {
     "imports": {
         "leetcode-class": "https://cdn.skypack.dev/leetcode-class@1.2.4?dts",
-        "asserts": "https://deno.land/std@0.153.0/testing/asserts.ts"
+        "asserts": "https://deno.land/std@0.154.0/testing/asserts.ts"
     }
 }
