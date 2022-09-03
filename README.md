@@ -10,6 +10,12 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/jian-sheng-zi-ii-lcof/
+
+https://leetcode.cn/problems/jian-sheng-zi-lcof/
+
+https://leetcode.cn/problems/special-positions-in-a-binary-matrix/
+
 https://leetcode-cn.com/problems/maximum-length-of-pair-chain/
 
 https://leetcode.cn/classic/problems/longest-univalue-path
