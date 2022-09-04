@@ -12,10 +12,10 @@ export default function findLadders(
     const edge = buildEdge([...wordList, beginWord]);
     const length = ladderLength(beginWord, endWord, wordList, edge);
     if (!length) return [];
-    const current = beginWord;
+    const current = endWord;
     const path: string[] = [current];
     const visited = new Set<string>([current]);
-    dfs(current, res, edge, length, path, visited, endWord);
+    dfs(current, res, edge, length, path, visited, beginWord);
     return res;
 }
 function ladderLength(
