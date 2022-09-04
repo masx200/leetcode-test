@@ -5,7 +5,7 @@ function findDuplicateSubtrees(root: TreeNode | null) {
     const seen = new Map<string, [node: TreeNode | null, index: number]>();
     const repeat = new Set<TreeNode | null>();
     let idx = 0;
-    const dfs = (node: TreeNode | null) => {
+    function dfs(node: TreeNode | null) {
         if (!node) {
             return 0;
         }
@@ -19,7 +19,7 @@ function findDuplicateSubtrees(root: TreeNode | null) {
             seen.set(hash, [node, ++idx]);
             return idx;
         }
-    };
+    }
     dfs(root);
     return [...repeat];
 }
