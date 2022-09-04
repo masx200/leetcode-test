@@ -1,1 +1,1 @@
-export { default } from "../find-median-from-data-stream/MedianFinder.ts";
+export { default } from "../find-median-from-data-stream/index.ts";
