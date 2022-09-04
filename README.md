@@ -10,6 +10,16 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/word-ladder-ii/
+
+https://leetcode.cn/problems/M1oyTv/
+
+https://leetcode.cn/problems/minimum-window-substring/
+
+https://leetcode.cn/problems/find-smallest-letter-greater-than-target/
+
+https://leetcode.cn/problems/find-duplicate-subtrees/
+
 https://leetcode.cn/problems/jian-sheng-zi-ii-lcof/
 
 https://leetcode.cn/problems/jian-sheng-zi-lcof/
@@ -255,6 +265,8 @@ https://leetcode.cn/problems/string-matching-in-an-array/
 https://leetcode.cn/problems/binary-tree-pruning/
 
 https://leetcode.cn/problems/pOCWxh/
+
+https://leetcode.cn/problems/find-if-path-exists-in-graph/
 
 https://leetcode.cn/problems/word-ladder/
 
