@@ -4,9 +4,9 @@ function dfs(
     edge: Map<string, Set<string>>,
     length: number,
     path: string[],
-    visited: Set<string>,
+    // visited: Set<string>,
     endWord: string,
-    wordlevel: Map<string, number>
+    wordlevel: Map<string, number>,
 ) {
     if (path.length > length) return;
     if (current === endWord && path.length === length) {
@@ -15,22 +15,30 @@ function dfs(
     }
 
     for (const next of edge.get(current) ?? []) {
-        if (visited.has(next)) {
-            continue;
-        }
+        // if (visited.has(next)) {
+        //     continue;
+        // }
         if ((wordlevel.get(next) ?? 0) + 1 === wordlevel.get(current)) {
-            visited.add(next);
+            // visited.add(next);
             path.push(next);
-            dfs(next, res, edge, length, path, visited, endWord, wordlevel);
+            dfs(
+                next,
+                res,
+                edge,
+                length,
+                path,
+                /*  visited, */ endWord,
+                wordlevel,
+            );
             path.pop();
-            visited.delete(next);
+            // visited.delete(next);
         }
     }
 }
 function findLadders(
     beginWord: string,
     endWord: string,
-    wordList: string[]
+    wordList: string[],
 ): string[][] {
     const res: string[][] = [];
 
@@ -50,9 +58,9 @@ function findLadders(
 
     const current = endWord;
     const path: string[] = [current];
-    const visited = new Set<string>([current]);
+    // const visited = new Set<string>([current]);
 
-    dfs(current, res, edge, length, path, visited, beginWord, wordlevel);
+    dfs(current, res, edge, length, path, /*  visited, */ beginWord, wordlevel);
     return res;
 }
 function ladderLength(
@@ -60,7 +68,7 @@ function ladderLength(
     endWord: string,
     wordList: string[],
     edge: Map<string, Set<string>>,
-    wordlevel: Map<string, number>
+    wordlevel: Map<string, number>,
 ): number {
     const words = new Set(wordList);
     if (!words.has(endWord)) return 0;
