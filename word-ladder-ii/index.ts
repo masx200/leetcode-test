@@ -101,6 +101,7 @@ function dfs(
     if (path.length > length) return;
     if (current === endWord && path.length === length) {
         res.push([...path]);
+        return;
     }
 
     for (const next of edge.get(current) ?? []) {
