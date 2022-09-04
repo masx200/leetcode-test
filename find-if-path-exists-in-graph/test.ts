@@ -12,7 +12,7 @@ function testValidPath(validPath: {
         n: number,
         edges: number[][],
         source: number,
-        destination: number
+        destination: number,
     ): boolean;
 }) {
     assertEquals(true, validPath(1, [], 0, 0));
@@ -28,8 +28,8 @@ function testValidPath(validPath: {
                 [4, 3],
             ],
             0,
-            5
-        )
+            5,
+        ),
     );
     assertEquals(
         true,
@@ -41,7 +41,7 @@ function testValidPath(validPath: {
                 [2, 0],
             ],
             0,
-            2
-        )
+            2,
+        ),
     );
 }
