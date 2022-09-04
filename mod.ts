@@ -25,6 +25,7 @@ import { PrefixTreeSearch } from "./implement-trie-prefix-tree/PrefixTreeSearch.
 import { PrefixTreeSearchPrefix } from "./implement-trie-prefix-tree/PrefixTreeSearchPrefix.ts";
 import { PrefixTreeStartsWith } from "./implement-trie-prefix-tree/PrefixTreeStartsWith.ts";
 import { PriorityQueue } from "./kth-largest-element-in-a-stream/PriorityQueue.ts";
+import { UnionFind } from "./largest-component-size-by-common-factor/UnionFind.ts";
 import { MyLinkedList } from "./lfu-cache/MyLinkedList.ts";
 import { PrefixTreeSearchEach } from "./longest-word-in-dictionary/PrefixTreeSearchEach.ts";
 import { PrefixTreeSearchPrefixEach } from "./longest-word-in-dictionary/PrefixTreeSearchPrefixEach.ts";
@@ -133,4 +134,4 @@ export {
     TreeNodeLeetCodeParse,
     TreeNodeLeetCodeStringify,
 };
-export { ArrayToCircularDoublyTreeList, getVariable, ScopeList };
+export { ArrayToCircularDoublyTreeList, getVariable, ScopeList, UnionFind };
