@@ -1,42 +1,26 @@
-import { TreeNode } from "../mod.ts";
-import { cache } from "../sort-integers-by-the-power-value/cache.ts";
+import { TreeNode } from "../binary-tree-inorder-traversal/TreeNode.ts";
 
-export default function findDuplicateSubtrees(
-    root: TreeNode | null
-): Array<TreeNode | null> {
+function findDuplicateSubtrees(root: TreeNode | null) {
     if (!root) return [];
-
-    const hashedtree = new Map<string, TreeNode>();
-    const ans = new Map<string, TreeNode>();
-    level([root], (nodes) => {
-        for (const node of nodes) {
-            const hashed = serialize(node);
-            if (hashedtree.has(hashed)) {
-                ans.set(hashed, node);
-            }
-            hashedtree.set(hashed, node);
+    const seen = new Map<string, [node: TreeNode | null, index: number]>();
+    const repeat = new Set<TreeNode | null>();
+    let idx = 0;
+    const dfs = (node: TreeNode | null) => {
+        if (!node) {
+            return 0;
         }
-    });
-    return Array.from(ans.values());
+        const tri = [node.val, dfs(node.left), dfs(node.right)];
+        const hash = JSON.stringify(tri);
+        const pair = seen.get(hash);
+        if (seen.has(hash) && pair) {
+            repeat.add(pair[0]);
+            return pair[1];
+        } else {
+            seen.set(hash, [node, ++idx]);
+            return idx;
+        }
+    };
+    dfs(root);
+    return [...repeat];
 }
-
-function replacer(value: any): any {
-    return value instanceof TreeNode
-        ? [value.val, replacer(value.left), replacer(value.right)]
-        : value;
-}
-const serialize = cache(function serialize(root: TreeNode | null): string {
-    return JSON.stringify(root, (_key, value) => replacer(value));
-});
-function level(nodes: TreeNode[], output: (r: TreeNode[]) => void) {
-    if (nodes.length === 0) return;
-
-    output(nodes);
-
-    level(
-        nodes
-            .map((n) => [n.left, n.right].filter(Boolean) as TreeNode[])
-            .flat(),
-        output
-    );
-}
+export default findDuplicateSubtrees;
