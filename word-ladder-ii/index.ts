@@ -1,4 +1,45 @@
-export default function findLadders(
+function dfs(
+    current: string,
+    res: string[][],
+    edge: Map<string, Set<string>>,
+    length: number,
+    path: string[],
+    visited: Set<string>,
+    endWord: string,
+    wordlevel: Map<string, number>
+) {
+    const oldlev = wordlevel.get(current);
+    if (
+        wordlevel.has(current) &&
+        typeof oldlev !== "undefined" &&
+        oldlev < path.length
+    )
+        return;
+    if (path.length > length) return;
+    if (current === endWord && path.length === length) {
+        res.push([...path].reverse());
+        return;
+    }
+    if (!wordlevel.has(current)) {
+        wordlevel.set(current, path.length);
+    }
+    const level = wordlevel.get(current);
+    if (typeof level !== "undefined" && path.length < level) {
+        wordlevel.set(current, path.length);
+    }
+
+    for (const next of edge.get(current) ?? []) {
+        if (visited.has(next)) {
+            continue;
+        }
+        visited.add(next);
+        path.push(next);
+        dfs(next, res, edge, length, path, visited, endWord, wordlevel);
+        path.pop();
+        visited.delete(next);
+    }
+}
+function findLadders(
     beginWord: string,
     endWord: string,
     wordList: string[]
@@ -12,10 +53,15 @@ export default function findLadders(
     const edge = buildEdge([...wordList, beginWord]);
     const length = ladderLength(beginWord, endWord, wordList, edge);
     if (!length) return [];
+
     const current = endWord;
     const path: string[] = [current];
     const visited = new Set<string>([current]);
-    dfs(current, res, edge, length, path, visited, beginWord);
+    const wordlevel = new Map<string, number>([
+        [endWord, 1],
+        [beginWord, length],
+    ]);
+    dfs(current, res, edge, length, path, visited, beginWord, wordlevel);
     return res;
 }
 function ladderLength(
@@ -88,30 +134,4 @@ function addEdge(edge: Map<string, Set<string>>, word1: string, word2: string) {
     set.add(word2);
     edge.set(word1, set);
 }
-
-function dfs(
-    current: string,
-    res: string[][],
-    edge: Map<string, Set<string>>,
-    length: number,
-    path: string[],
-    visited: Set<string>,
-    endWord: string
-) {
-    if (path.length > length) return;
-    if (current === endWord && path.length === length) {
-        res.push([...path]);
-        return;
-    }
-
-    for (const next of edge.get(current) ?? []) {
-        if (visited.has(next)) {
-            continue;
-        }
-        visited.add(next);
-        path.push(next);
-        dfs(next, res, edge, length, path, visited, endWord);
-        path.pop();
-        visited.delete(next);
-    }
-}
+export default findLadders;
