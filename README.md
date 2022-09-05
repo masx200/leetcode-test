@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/minimum-height-tree-lcci/
+
 https://leetcode.cn/problems/word-ladder-ii/
 
 https://leetcode.cn/problems/M1oyTv/

@@ -4,9 +4,8 @@ function dfs(
     edge: Map<string, Set<string>>,
     length: number,
     path: string[],
-
     endWord: string,
-    wordlevel: Map<string, number>
+    wordlevel: Map<string, number>,
 ) {
     if (path.length > length) return;
     if (current === endWord && path.length === length) {
@@ -25,7 +24,7 @@ function dfs(
 function findLadders(
     beginWord: string,
     endWord: string,
-    wordList: string[]
+    wordList: string[],
 ): string[][] {
     const res: string[][] = [];
 
@@ -54,7 +53,7 @@ function ladderLength(
     endWord: string,
     wordList: string[],
     edge: Map<string, Set<string>>,
-    wordlevel: Map<string, number>
+    wordlevel: Map<string, number>,
 ): number {
     const words = new Set(wordList);
     if (!words.has(endWord)) return 0;
