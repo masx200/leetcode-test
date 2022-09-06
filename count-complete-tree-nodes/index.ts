@@ -3,7 +3,7 @@ import { TreeNode } from "../binary-tree-inorder-traversal/TreeNode.ts";
 export default function countNodes(
     root: TreeNode | null,
     leftDepth?: number,
-    rightDepth?: number
+    rightDepth?: number,
 ): number {
     if (root === null) return 0;
     let left = 0,
@@ -32,7 +32,7 @@ export default function countNodes(
     }
     return (
         1 +
-        countNodes(root.left, left-1) +
-        countNodes(root.right, undefined, right-1)
+        countNodes(root.left, left - 1) +
+        countNodes(root.right, undefined, right - 1)
     );
 }
