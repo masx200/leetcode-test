@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/number-of-good-pairs
+
 https://leetcode.cn/problems/count-unique-characters-of-all-substrings-of-a-given-string
 
 https://leetcode.cn/problems/minimum-height-tree-lcci/
