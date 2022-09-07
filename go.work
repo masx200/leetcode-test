@@ -16,4 +16,5 @@ use (
 	./serialize-and-deserialize-binary-tree
 	./transform-to-chessboard
 	./utils
+    ./count-complete-tree-nodes
 )
