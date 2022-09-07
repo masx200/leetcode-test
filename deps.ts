@@ -27,5 +27,5 @@ export { default as sum } from "https://cdn.skypack.dev/lodash@4.17.21/sum?dts";
 export {
     runScript,
     TreeNode,
-} from "https://cdn.skypack.dev/leetcode-class@1.2.4?dts";
+} from "https://esm.sh/@masx200/leetcode-class@1.2.5";
 export { default as group } from "https://esm.sh/array.prototype.group@1.1.1";
