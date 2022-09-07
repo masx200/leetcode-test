@@ -22,7 +22,8 @@
         "rules": {
             "include": [],
             "exclude": [
-                "no-explicit-any"
+                "no-explicit-any",
+                "ban-ts-comment"
             ]
         }
     },
