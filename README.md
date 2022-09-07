@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/minimum-moves-to-reach-target-with-rotations/
+
 https://leetcode.cn/problems/ternary-expression-parser/
 
 https://leetcode.cn/problems/bP4bmD/
