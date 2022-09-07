@@ -15,4 +15,4 @@ export default function constructArray(n: number, k: number): number[] {
         }
     }
     return answer;
-};
+}
