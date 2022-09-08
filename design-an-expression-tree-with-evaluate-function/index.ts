@@ -9,10 +9,10 @@ class TreeBuilder {
             } else {
                 const num2 = stack.pop();
                 const num1 = stack.pop();
-                if (typeof num2 !== "number") {
+                if (typeof num2 == "undefined") {
                     throw Error("number expected");
                 }
-                if (typeof num1 !== "number") {
+                if (typeof num1 == "undefined") {
                     throw Error("number expected");
                 }
                 if (char === "+") {
@@ -47,11 +47,11 @@ export class Node {
             case "+":
                 return l + r;
             case "-":
-                return r - l;
+                return l - r;
             case "*":
                 return l * r;
             case "/":
-                return Math.trunc(r / l);
+                return Math.trunc(l / r);
         }
         throw Error("unknown operator:" + this.val);
     }
