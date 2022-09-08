@@ -1,5 +1,5 @@
 export default function uniquePaths(m: number, n: number): number {
-    const dp = Array(m)
+    const dp: number[][] = Array(m)
         .fill(0)
         .map(() => Array(n).fill(0));
     for (let i = 0; i < m; i++) {
