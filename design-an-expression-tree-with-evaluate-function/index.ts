@@ -1,4 +1,4 @@
-export { TreeBuilder };
+export { TreeBuilder as default };
 class TreeBuilder {
     buildTree(postfix: string[]): Node {
         const stack: Node[] = [];
