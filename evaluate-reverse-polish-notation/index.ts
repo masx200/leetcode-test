@@ -15,21 +15,18 @@ export default function evalRPN(tokens: string[]): number {
             }
             if (char === "+") {
                 stack.push(num1 + num2);
-            }
-            if (char === "-") {
+            } else if (char === "-") {
                 stack.push(num1 - num2);
-            }
-            if (char === "*") {
+            } else if (char === "*") {
                 stack.push(num1 * num2);
-            }
-            if (char === "/") {
+            } else if (char === "/") {
                 const sign = Math.sign(num2) * Math.sign(num1);
                 stack.push(sign * Math.floor(Math.abs(num1) / Math.abs(num2)));
-            }
+            } else throw Error("unknown operator:" + char);
         }
     }
     return Number(stack[0]);
 }
-const isNumber = (token: string) => {
-    return !("+" === token || "-" === token || "*" === token || "/" === token);
-};
+export function isNumber(token: string) {
+    return /\d+/g.test(token);
+}
