@@ -30,9 +30,6 @@ export default function lengthLongestPath(input: string): number {
     // console.log(folder_current)
     return Math.max(0, ...Array.from(files_path.keys()).map((a) => a.length));
 }
-// console.log(lengthLongestPath(["file1.txt\nfile2.txt\nlongfile.txt", "dir\n\tsubdir1\n\t\tfile1.ext\n\t\tsubsubdir1\n\tsubdir2\n\t\tsubsubdir2\n\t\t\tfile2.ext", "dir\n\tsubdir1\n\tsubdir2\n\t\tfile.ext",
-//     "dir\n\tsubdir1\n\t\tfile1.ext\n\t\tsubsubdir1\n\tsubdir2\n\t\tsubsubdir2\n\t\t\tfile2.ext", "a"].join('\n')))
-// console.log(lengthLongestPath("a\n\tb\n\t\tc.txt\n\taaaa.txt"))
 
 function count_char(s: string, c: string): number {
     let count = 0;
