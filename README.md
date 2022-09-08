@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/image-smoother/
+
 https://leetcode.cn/problems/crawler-log-folder/
 
 https://leetcode.cn/problems/unique-paths-ii
