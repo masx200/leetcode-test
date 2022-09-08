@@ -1,4 +1,8 @@
-export default function NumMatrix(matrix: number[][]) {
+export default interface NumMatrix {
+    sumRegion(row1: number, col1: number, row2: number, col2: number): number;
+}
+
+export default function NumMatrix(matrix: number[][]): NumMatrix {
     const m = matrix.length;
     const n = matrix[0].length;
     const sums: number[][] = Array.from({ length: m + 1 }).map(() =>
