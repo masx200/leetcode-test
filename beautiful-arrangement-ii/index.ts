@@ -1,5 +1,4 @@
 export default function constructArray(n: number, k: number): number[] {
-
     const answer: number[] = new Array(n).fill(0);
     let idx = 0;
     for (let i = 1; i < n - k; ++i) {
