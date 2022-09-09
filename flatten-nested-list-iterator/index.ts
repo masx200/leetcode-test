@@ -1,6 +1,5 @@
 import { NestedInteger } from "../mini-parser/NestedInteger.ts";
-
-function* NestedIntegerIterator(
+export function* NestedIntegerIterator(
     nestedList: NestedInteger[],
 ): Generator<number | null, void, unknown> {
     for (const nestedInteger of nestedList) {
