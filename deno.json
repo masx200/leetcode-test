@@ -23,7 +23,8 @@
             "include": [],
             "exclude": [
                 "no-explicit-any",
-                "ban-ts-comment"
+                "ban-ts-comment",
+                "no-inferrable-types"
             ]
         }
     },
