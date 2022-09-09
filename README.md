@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/course-schedule/
+
 https://leetcode.cn/problems/QA2IGt/
 
 https://leetcode.cn/problems/course-schedule-ii/
