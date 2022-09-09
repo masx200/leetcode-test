@@ -1,4 +1,4 @@
-import { assertEquals } from "https://deno.land/std@0.154.0/testing/asserts.ts";
+import { assertEquals } from "https://deno.land/std@0.155.0/testing/asserts.ts";
 
 import { TreeNode } from "../mod.ts";
 import pathSum from "./index.ts";

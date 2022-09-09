@@ -1,5 +1,5 @@
 import Vector2D from "./index.ts";
-import { assertEquals } from "https://deno.land/std@0.154.0/testing/asserts.ts";
+import { assertEquals } from "https://deno.land/std@0.155.0/testing/asserts.ts";
 Deno.test("flatten-2d-vector", () => {
     const iterator = new Vector2D([[1, 2], [3], [4]]);
 
