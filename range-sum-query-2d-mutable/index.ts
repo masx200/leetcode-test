@@ -41,6 +41,6 @@ export default class NumMatrix {
         return sum;
     }
 }
-function lowbit(a: number) {
+export function lowbit(a: number) {
     return a & -a;
 }
