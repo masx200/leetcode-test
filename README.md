@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/minimum-cost-to-hire-k-workers/
+
 https://leetcode.cn/problems/number-of-closed-islands/
 
 https://leetcode.cn/problems/find-servers-that-handled-most-number-of-requests/
