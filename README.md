@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/binary-tree-paths/
+
 https://leetcode-cn.com/problems/trim-a-binary-search-tree/
 
 https://leetcode.cn/problems/course-schedule/
