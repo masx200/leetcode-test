@@ -1,9 +1,9 @@
 export default class StreamRank {
-    #bit = new BinaryIndexTree(50002);
+    #bit = new BinaryIndexTree(50001);
     constructor() {}
 
     track(x: number): void {
-        this.#bit.change(x + 1, 1);
+        this.#bit.update(x + 1, 1);
     }
 
     getRankOfNumber(x: number): number {
@@ -16,10 +16,10 @@ export class BinaryIndexTree {
     }
     #tree: number[];
     constructor(public size: number) {
-        this.#tree = Array(size).fill(0);
+        this.#tree = Array(size+1).fill(0);
     }
-    change(i: number, x: number) {
-        for (let p = i; p < this.size; p += BinaryIndexTree.lowbit(p)) {
+    update(i: number, x: number) {
+        for (let p = i; p <= this.size; p += BinaryIndexTree.lowbit(p)) {
             this.#tree[p] += x;
         }
     }

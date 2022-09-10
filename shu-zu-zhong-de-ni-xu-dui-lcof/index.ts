@@ -1,0 +1,17 @@
+import { BinaryIndexTree } from "../rank-from-stream-lcci/index.ts";
+import { le as binarySearch } from "https://esm.sh/@masx200/binary-search-bounds@2.0.5";
+export default function reversePairs(nums: number[]): number {
+    const n = nums.length;
+    const tmp = Array.from(nums);
+    tmp.sort((a, b) => a - b);
+    for (let i = 0; i < n; ++i) {
+        nums[i] = binarySearch(tmp, nums[i]) + 1;
+    }
+    const bit = new BinaryIndexTree(n);
+    let ans = 0;
+    for (let i = n - 1; i >= 0; i--) {
+        ans += bit.query(nums[i] - 1);
+        bit.update(nums[i], 1);
+    }
+    return ans;
+}

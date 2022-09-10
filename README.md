@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/shu-zu-zhong-de-ni-xu-dui-lcof/
+
 https://leetcode.cn/problems/rank-from-stream-lcci/
 
 https://leetcode.cn/problems/minimum-cost-to-hire-k-workers/
