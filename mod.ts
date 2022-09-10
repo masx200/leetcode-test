@@ -42,6 +42,7 @@ import { searchSegmentLeaf } from "./my-calendar-ii/searchSegmentLeaf.ts";
 import { SegmentTree } from "./my-calendar-iii/SegmentTree.ts";
 import { Node as NAryNode } from "./n-ary-tree-level-order-traversal/Node.ts";
 import { getVariable, ScopeList } from "./parse-lisp-expression/index.ts";
+import { BinaryIndexTree } from "./rank-from-stream-lcci/index.ts";
 import { get_deep_next_of_list } from "./reverse-linked-list-ii/get_deep_next_of_list.ts";
 import { get_length_of_list } from "./reverse-linked-list-ii/get_length_of_list.ts";
 import { ArrayToListNode } from "./reverse-linked-list/ArrayToListNode.ts";
@@ -72,7 +73,7 @@ import {
 import { cos } from "./valid-boomerang/cos.ts";
 import { dot } from "./valid-boomerang/dot.ts";
 import { norm } from "./valid-boomerang/norm.ts";
-
+export { BinaryIndexTree };
 export { TreeNodeLeetCodeFromJSON, TreeNodeLeetCodeToJSON };
 export { DoublyLinkedList };
 export { ArrayToCircularLinkedList, sum };
