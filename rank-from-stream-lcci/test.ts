@@ -6,9 +6,9 @@ Deno.test("rank-from-stream-lcci", () => {
         runScript(
             ["StreamRank", "getRankOfNumber", "track", "getRankOfNumber"],
             [[], [1], [0], [0]],
-            StreamRank
+            StreamRank,
         ),
-        [null, 0, null, 1]
+        [null, 0, null, 1],
     );
 });
 Deno.test("rank-from-stream-lcci", () => {
@@ -2022,7 +2022,7 @@ Deno.test("rank-from-stream-lcci", () => {
                 [50000],
                 [50000],
             ],
-            StreamRank
+            StreamRank,
         ),
         [
             null,
@@ -3027,6 +3027,6 @@ Deno.test("rank-from-stream-lcci", () => {
             null,
             null,
             1000,
-        ]
+        ],
     );
 });

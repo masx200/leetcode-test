@@ -16,7 +16,7 @@ export class BinaryIndexTree {
     }
     #tree: number[];
     constructor(public size: number) {
-        this.#tree = Array(size+1).fill(0);
+        this.#tree = Array(size + 1).fill(0);
     }
     update(i: number, x: number) {
         for (let p = i; p <= this.size; p += BinaryIndexTree.lowbit(p)) {
