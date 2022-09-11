@@ -20,7 +20,7 @@ export class NestedInteger extends Array<NestedInteger> {
             return this.getList().map((a) => a.toJSON());
         }
     }
-    [k: number]: NestedInteger
+    [k: number]: NestedInteger;
 
     valueOf() {
         return this.#value;

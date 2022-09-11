@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/longest-increasing-subsequence
+
 https://leetcode.cn/problems/special-array-with-x-elements-greater-than-or-equal-x/
 
 https://leetcode.cn/problems/jump-game/
