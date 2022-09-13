@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode-cn.com/problems/number-of-segments-in-a-string/
+
 https://leetcode.cn/problems/abbreviating-the-product-of-a-range/
 
 https://leetcode.cn/problems/snakes-and-ladders/
