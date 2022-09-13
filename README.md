@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/abbreviating-the-product-of-a-range/
+
 https://leetcode.cn/problems/snakes-and-ladders/
 
 https://leetcode.cn/problems/minesweeper/
