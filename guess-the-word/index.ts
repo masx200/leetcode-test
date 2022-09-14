@@ -1,6 +1,6 @@
 function findSecretWord(words: string[], master: Master) {
-    const seen = new Set();
-    while (true) {
+    const seen = new Set<string>();
+    while (words.length) {
         const j = Math.floor(Math.random() * words.length);
         const w = words[j];
         seen.add(w);
