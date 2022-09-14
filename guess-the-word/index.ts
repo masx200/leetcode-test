@@ -14,6 +14,8 @@ function findSecretWord(words: string[], master: Master) {
                         (c, k) => w[k] === c,
                     ).length
             );
+        } else {
+            return;
         }
     }
 }
