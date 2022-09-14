@@ -4,7 +4,7 @@ export default function uncommonFromSentences(
 ): string[] {
     const a = s1.split(" ");
 
-    const b = (s2.split(" "));
+    const b = s2.split(" ");
 
     const cnts = new Map<string, number>();
 
