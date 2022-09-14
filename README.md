@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/minimum-area-rectangle
+
 https://leetcode.cn/problems/bulb-switcher/
 
 https://leetcode.cn/problems/concatenated-words/
