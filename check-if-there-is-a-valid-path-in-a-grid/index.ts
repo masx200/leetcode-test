@@ -1,6 +1,6 @@
 import { UnionFind } from "../largest-component-size-by-common-factor/UnionFind.ts";
 export default function hasValidPath(grid: number[][]): boolean {
-    const uf = new UnionFind<string>();
+    const uf = new UnionFind();
     const row = grid.length, col = grid[0].length;
     const m = row, n = col;
     for (let i = 0; i < row; i++) {
@@ -10,16 +10,20 @@ export default function hasValidPath(grid: number[][]): boolean {
                     j + 1 < col &&
                     (grid[i][j + 1] == 1 || grid[i][j + 1] == 3 ||
                         grid[i][j + 1] == 5)
-                ) uf.union(JSON.stringify([i, j]), JSON.stringify([i, j + 1]));
+                ) {
+                    uf.union(i * col + j, i * col + j + 1);
+                }
             }
             if (grid[i][j] == 2 || grid[i][j] == 3 || grid[i][j] == 4) {
                 if (
                     i + 1 < row &&
                     (grid[i + 1][j] == 2 || grid[i + 1][j] == 5 ||
                         grid[i + 1][j] == 6)
-                ) uf.union(JSON.stringify([i, j]), JSON.stringify([i + 1, j]));
+                ) {
+                    uf.union(i * col + j, (i + 1) * col + j);
+                }
             }
         }
     }
-    return uf.connected(JSON.stringify([0, 0]), JSON.stringify([m - 1, n - 1]));
+    return uf.connected(0 * col + 0, (m - 1) * col + n - 1);
 }
