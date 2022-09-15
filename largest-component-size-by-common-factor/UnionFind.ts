@@ -1,16 +1,18 @@
-export class UnionFind {
-    #sizes: Map<number, number> = new Map();
-    #parents: Map<number, number> = new Map();
+export class UnionFind<T = number> {
+    #sizes: Map<T, number> = new Map();
+    #parents: Map<T, T> = new Map();
     constructor() {}
 
-    find(x: number) {
+    find(x: T): T {
         if (x !== (this.#parents.get(x) ?? x)) {
             this.#parents.set(x, this.find(this.#parents.get(x) ?? x));
         }
         return this.#parents.get(x) ?? x;
     }
-
-    union(a: number, b: number) {
+    connected(p: T, q: T): boolean {
+        return this.find(p) == this.find(q);
+    }
+    union(a: T, b: T) {
         const fa = this.find(a);
         const fb = this.find(b);
         if (fa == fb) {
