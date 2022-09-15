@@ -1,5 +1,7 @@
+import {
+    PrefixTreeInsert,
+} from "../design-add-and-search-words-data-structure/PrefixTreeInsert.ts";
 import { PrefixTree } from "../implement-trie-prefix-tree/PrefixTree.ts";
-import { PrefixTreeInsert } from "../design-add-and-search-words-data-structure/PrefixTreeInsert.ts";
 
 export default function findAllConcatenatedWordsInADict(
     words: string[],

@@ -1,5 +1,7 @@
 import { assertEquals } from "https://deno.land/std@0.155.0/testing/asserts.ts";
+
 import { default as TreeBuilder } from "./index.ts";
+
 Deno.test("design-an-expression-tree-with-evaluate-function", () => {
     assertEquals(
         [

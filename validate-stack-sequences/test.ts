@@ -1,5 +1,7 @@
 import { assertEquals } from "asserts";
+
 import validateStackSequences from "./index.ts";
+
 Deno.test("validate-stack-sequences", () => {
     const inputs = [
         [

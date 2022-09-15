@@ -1,5 +1,6 @@
-import NumMatrix from "./index.ts";
 import { assertEquals } from "https://deno.land/std@0.155.0/testing/asserts.ts";
+
+import NumMatrix from "./index.ts";
 
 Deno.test("range-sum-query-2d-mutable", () => {
     const matrix = [

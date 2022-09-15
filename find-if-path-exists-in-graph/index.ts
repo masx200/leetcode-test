@@ -1,4 +1,5 @@
 import { UnionFind } from "../largest-component-size-by-common-factor/UnionFind.ts";
+
 export default function validPath(
     n: number,
     edges: number[][],

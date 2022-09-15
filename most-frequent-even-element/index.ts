@@ -1,4 +1,5 @@
 import { counter } from "../substring-with-concatenation-of-all-words/counter.ts";
+
 export default mostFrequentEven;
 function mostFrequentEven(nums: number[]): number {
     const evens = nums.filter((a) => !(a % 2));

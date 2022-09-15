@@ -1,4 +1,5 @@
 import { assertEquals } from "https://deno.land/std@0.155.0/testing/asserts.ts";
+
 import abbreviateProduct from "./index.ts";
 
 Deno.test("abbreviating-the-product-of-a-range", () => {

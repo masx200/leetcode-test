@@ -1,5 +1,7 @@
 import { assertEquals } from "https://deno.land/std@0.155.0/testing/asserts.ts";
+
 import busiestServers from "./index.ts";
+
 Deno.test("find-servers-that-handled-most-number-of-requests", () => {
     assertEquals(
         [

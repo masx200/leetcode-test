@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/plus-one/
+
 https://leetcode.cn/problems/a-number-after-a-double-reversal/
 
 https://leetcode.cn/problems/minimum-time-difference/

@@ -1,5 +1,7 @@
 import { assertEquals } from "https://deno.land/std@0.155.0/testing/asserts.ts";
+
 import reversePairs from "./index.ts";
+
 Deno.test("shu-zu-zhong-de-ni-xu-dui-lcof", () => {
     assertEquals(reversePairs([7, 5, 6, 4]), 5);
 });

@@ -1,5 +1,6 @@
 export default busiestServers;
 import { AvlTree, Heap } from "../deps.ts";
+
 function busiestServers(
     k: number,
     arrival: number[],

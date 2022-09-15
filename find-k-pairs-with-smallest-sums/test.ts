@@ -1,5 +1,7 @@
 import { assertEquals } from "https://deno.land/std@0.155.0/testing/asserts.ts";
+
 import kSmallestPairs from "./index.ts";
+
 Deno.test("find-k-pairs-with-smallest-sums", () => {
     assertEquals(
         [[1, 2], [1, 4], [1, 6]],

@@ -1,4 +1,5 @@
 import { counter } from "../substring-with-concatenation-of-all-words/counter.ts";
+
 function mostCommonWord(paragraph: string, banned: string[]): string {
     const ban = new Set(banned);
     const cnt = counter(

@@ -1,4 +1,5 @@
 import { TreeNode } from "../mod.ts";
+
 export default trimBST;
 function trimBST(
     root: TreeNode | null,

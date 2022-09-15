@@ -1,5 +1,7 @@
 import { assertEquals } from "asserts";
+
 import getConcatenation from "./index.ts";
+
 Deno.test("concatenation-of-array", () => {
     assertEquals(
         [[1, 2, 1], [1, 3, 2, 1], [

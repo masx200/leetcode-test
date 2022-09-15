@@ -1,5 +1,7 @@
 import { assertEquals } from "https://deno.land/std@0.155.0/testing/asserts.ts";
+
 import evalRPN from "./index.ts";
+
 Deno.test("evaluate-reverse-polish-notation", () => {
     assertEquals(
         [

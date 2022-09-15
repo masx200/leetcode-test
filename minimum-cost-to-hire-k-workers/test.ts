@@ -1,5 +1,7 @@
 import { assertEquals } from "asserts";
+
 import mincostToHireWorkers from "./index.ts";
+
 Deno.test("minimum-cost-to-hire-k-workers", () => {
     const cases: [quality: number[], wage: number[], k: number, r: number][] = [
         [[10, 20, 5], [70, 50, 30], 2, 105.0],

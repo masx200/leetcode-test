@@ -1,6 +1,8 @@
 import { assertEquals } from "https://deno.land/std@0.155.0/testing/asserts.ts";
 import { runScript } from "leetcode-class";
+
 import StreamRank from "./index.ts";
+
 Deno.test("rank-from-stream-lcci", () => {
     assertEquals(
         runScript(
