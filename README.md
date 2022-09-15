@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/minimum-number-of-moves-to-make-palindrome/
+
 https://leetcode.cn/problems/GzCJIP/
 
 https://leetcode.cn/problems/min-cost-climbing-stairs/
