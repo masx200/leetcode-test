@@ -1,7 +1,7 @@
 import AsyncLimiterClass, {
     AsyncCurrentLimiter,
 } from "https://cdn.skypack.dev/@masx200/async-task-current-limiter@2.1.0?dts";
-import { WalkEntry } from "https://deno.land/std@0.155.0/fs/_util.ts";
+import { WalkEntry } from "https://deno.land/std@0.156.0/fs/_util.ts";
 
 import { parse, walk } from "./deps.ts";
 import { split_by_count } from "./utils/split_by_count.ts";
