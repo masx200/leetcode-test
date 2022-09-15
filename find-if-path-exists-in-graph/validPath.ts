@@ -21,7 +21,7 @@ export default function validPath(
     let rightcurrent = new Set([destination]);
     nodes.delete(destination);
     nodes.delete(source);
-  //  let step = 1;
+    //  let step = 1;
     while (current.size) {
         if (current.size > rightcurrent.size) {
             [current, rightcurrent] = [rightcurrent, current];
@@ -46,7 +46,7 @@ export default function validPath(
 
         if (temp.size === 0) return false;
         current = temp;
-      //  step = step + 1;
+        //  step = step + 1;
     }
 
     return false;
