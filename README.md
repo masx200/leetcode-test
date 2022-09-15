@@ -10,6 +10,10 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/GzCJIP/
+
+https://leetcode.cn/problems/min-cost-climbing-stairs/
+
 https://leetcode.cn/problems/three-consecutive-odds/
 
 https://leetcode.cn/problems/check-if-n-and-its-double-exist/
