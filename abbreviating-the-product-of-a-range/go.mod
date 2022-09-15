@@ -1,0 +1,1 @@
+module github.com/masx200/leetcode-test/abbreviating-the-product-of-a-range

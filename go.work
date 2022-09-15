@@ -1,6 +1,7 @@
 go 1.19
 
 use (
+	./abbreviating-the-product-of-a-range
 	.
 	./check-if-a-word-occurs-as-a-prefix-of-any-word-in-a-sentence
 	./counting-words-with-a-given-prefix
@@ -16,5 +17,5 @@ use (
 	./serialize-and-deserialize-binary-tree
 	./transform-to-chessboard
 	./utils
-    ./count-complete-tree-nodes
+	./count-complete-tree-nodes
 )
