@@ -10,6 +10,12 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/minimum-time-difference/
+
+https://leetcode.cn/problems/excel-sheet-column-title/
+
+https://leetcode.cn/problems/excel-sheet-column-number/
+
 https://leetcode.cn/problems/minimum-area-rectangle-ii/
 
 https://leetcode.cn/problems/minimum-area-rectangle
