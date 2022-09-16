@@ -16,7 +16,12 @@ export default class NumArray {
         return range(left, right, this.#root, 0, this.#len - 1);
     }
 }
-function build(node: TreeNode, start: number, end: number, nums: number[]) {
+export function build(
+    node: TreeNode,
+    start: number,
+    end: number,
+    nums: number[],
+) {
     if (start === end) {
         node.val = nums[start];
         return;
@@ -28,7 +33,7 @@ function build(node: TreeNode, start: number, end: number, nums: number[]) {
     build(node.right, mid + 1, end, nums);
     node.val = node.left.val + node.right.val;
 }
-function change(
+export function change(
     index: number,
     val: number,
     node: TreeNode,
@@ -50,7 +55,7 @@ function change(
     }
     node.val = node.left.val + node.right.val;
 }
-function range(
+export function range(
     left: number,
     right: number,
     node: TreeNode,
