@@ -80,7 +80,7 @@ function change(
         }
     }
 }
-function contains(target: Interval, current: Interval): boolean {
+export function contains(target: Interval, current: Interval): boolean {
     return target.left <= current.left &&
         target.down <= current.down &&
         target.right >= current.right &&

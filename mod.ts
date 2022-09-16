@@ -55,6 +55,12 @@ import { SegmentTree } from "./my-calendar-iii/SegmentTree.ts";
 import { Node as NAryNode } from "./n-ary-tree-level-order-traversal/Node.ts";
 import { getVariable, ScopeList } from "./parse-lisp-expression/index.ts";
 import { BinaryIndexTree } from "./rank-from-stream-lcci/index.ts";
+import {
+    contains,
+    Interval,
+    SegmentNode,
+    TwoDSplit,
+} from "./rectangle-area-ii/index.ts";
 import { get_deep_next_of_list } from "./reverse-linked-list-ii/get_deep_next_of_list.ts";
 import { get_length_of_list } from "./reverse-linked-list-ii/get_length_of_list.ts";
 import { ArrayToListNode } from "./reverse-linked-list/ArrayToListNode.ts";
@@ -132,7 +138,7 @@ export { PrefixTreeForEach, PrefixTreeSearchPrefixEach };
 export { GraphNode };
 export { Node as RandomNode } from "./copy-list-with-random-pointer/Node.ts";
 export { Node as TreeNextNode } from "./populating-next-right-pointers-in-each-node/Node.ts";
-export { SegmentTree };
+export { contains, Interval, SegmentNode, SegmentTree, TwoDSplit };
 export { cos, dot, norm };
 export { abs_bigint, searchSegmentChildren, searchSegmentLeaf };
 export { counter };
