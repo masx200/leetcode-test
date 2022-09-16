@@ -1,5 +1,4 @@
 function isUnique(astr: string): boolean {
-
-    return new Set(astr).size === astr.length
+    return new Set(astr).size === astr.length;
 }
-export default isUnique
+export default isUnique;
