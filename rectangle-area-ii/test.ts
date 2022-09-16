@@ -2,7 +2,12 @@ import rectangleArea, { TwoDSplit } from "./index.ts";
 import { assertEquals } from "https://deno.land/std@0.156.0/testing/asserts.ts";
 Deno.test("TwoDSplit-1", () => {
     const current = { left: 0, right: 1000000000, down: 0, up: 1000000000 };
-    const result = TwoDSplit(current);
+    const { left, right, up, down } = current;
+    const result = TwoDSplit(
+        current,
+        Math.floor((left + right) / 2),
+        Math.floor((down + up) / 2),
+    );
     // console.log(current, result);
     assertEquals(result, [
         { left: 0, right: 500000000, down: 0, up: 500000000 },
@@ -13,7 +18,12 @@ Deno.test("TwoDSplit-1", () => {
 });
 Deno.test("TwoDSplit-2", () => {
     const current = { left: 0, right: 3, down: 0, up: 3 };
-    const result = TwoDSplit(current);
+    const { left, right, up, down } = current;
+    const result = TwoDSplit(
+        current,
+        Math.floor((left + right) / 2),
+        Math.floor((down + up) / 2),
+    );
     // console.log(current, result);
     assertEquals(result, [
         { left: 0, right: 1, down: 0, up: 1 },
@@ -24,19 +34,34 @@ Deno.test("TwoDSplit-2", () => {
 });
 Deno.test("TwoDSplit-3", () => {
     const current = { left: 0, right: 1, down: 0, up: 1 };
-    const result = TwoDSplit(current);
+    const { left, right, up, down } = current;
+    const result = TwoDSplit(
+        current,
+        Math.floor((left + right) / 2),
+        Math.floor((down + up) / 2),
+    );
     // console.log(current, result);
     assertEquals(result, []);
 });
 Deno.test("TwoDSplit-4", () => {
     const current = { left: 0, right: 0, down: 0, up: 0 };
-    const result = TwoDSplit(current);
+    const { left, right, up, down } = current;
+    const result = TwoDSplit(
+        current,
+        Math.floor((left + right) / 2),
+        Math.floor((down + up) / 2),
+    );
     // console.log(current, result);
     assertEquals(result, []);
 });
 Deno.test("TwoDSplit-5", () => {
     const current = { left: 0, right: 6, down: 0, up: 1 };
-    const result = TwoDSplit(current);
+    const { left, right, up, down } = current;
+    const result = TwoDSplit(
+        current,
+        Math.floor((left + right) / 2),
+        Math.floor((down + up) / 2),
+    );
     // console.log(current, result);
     assertEquals(result, [{ left: 0, right: 3, down: 0, up: 1 }, {
         left: 3,

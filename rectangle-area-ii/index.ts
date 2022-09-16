@@ -75,18 +75,17 @@ function change(
 }
 export function TwoDSplit(
     current: Interval,
-    midx?: number,
-    midy?: number,
+    midx: number,
+    midy: number,
 ): Interval[] {
     const { left, right, up, down } = current;
 
     if (left > right || down > up) return [];
 
     if ((right - left) * (up - down) <= 1) return [];
-    const mx = typeof midx !== "undefined"
-        ? midx
-        : Math.floor((left + right) / 2);
-    const my = typeof midy !== "undefined" ? midy : Math.floor((down + up) / 2);
+    const mx = midx;
+
+    const my = midy;
 
     const lr = [
         { left: left, right: mx },
