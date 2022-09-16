@@ -47,7 +47,13 @@ function change(
         }
     } else {
         if (node.children.length === 0) {
-            const subinterval = TwoDSplit(current);
+            const midx = [target.left, target.right].filter((a) =>
+                current.left < a && current.right > a
+            )[0];
+            const midy = [target.down, target.up].filter((a) =>
+                current.down < a && current.up > a
+            )[0];
+            const subinterval = TwoDSplit(current, midx, midy);
             if (subinterval.length) {
                 node.children = subinterval.map(
                     (c) =>
@@ -76,14 +82,20 @@ function change(
             : node.value;
     }
 }
-export function TwoDSplit(current: Interval): Interval[] {
+export function TwoDSplit(
+    current: Interval,
+    midx?: number,
+    midy?: number,
+): Interval[] {
     const { left, right, up, down } = current;
 
     if (left > right || down > up) return [];
 
     if ((right - left) * (up - down) <= 1) return [];
-    const mx = Math.floor((left + right) / 2);
-    const my = Math.floor((down + up) / 2);
+    const mx = typeof midx !== "undefined"
+        ? midx
+        : Math.floor((left + right) / 2);
+    const my = typeof midy !== "undefined" ? midy : Math.floor((down + up) / 2);
 
     const lr = [
         { left: left, right: mx },
