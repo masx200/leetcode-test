@@ -12,6 +12,14 @@ function rectangleArea(rectangles: number[][]): number {
         // console.log(root, total);
     }
     // console.log(root, total);
+    // console.log(
+    //     JSON.stringify(
+    //         root,
+    //         (_k, v) => typeof v === "bigint" ? v.toString() : v,
+    //         4,
+    //     ),
+    // );
+    // console.log(root)
     return Number(root.value % BigInt(10 ** 9 + 7));
 }
 function change(
@@ -25,7 +33,10 @@ function change(
         target.down > current.up || target.left > current.right
     ) return;
     // console.log({ node, current, target, value });
-    const subinterval = binarySplit(current);
+    const subinterval = node.intervals.length
+        ? node.intervals
+        : binarySplit(current);
+    node.intervals = subinterval;
     if (
         target.left <= current.left && target.down <= current.down &&
         target.right >= current.right && target.up >= current.up
@@ -81,6 +92,7 @@ export class Node {
     constructor(
         public value: bigint = 0n,
         public children: Node[] = [],
+        public intervals: Interval[] = [],
     ) {}
 }
 export interface Interval {
