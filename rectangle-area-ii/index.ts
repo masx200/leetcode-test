@@ -5,7 +5,7 @@ function rectangleArea(rectangles: number[][]): number {
     const up = Math.max(...rectangles.map((a) => a[3]));
 
     const total = { left, right, down, up };
-    const root = new Node(total);
+    const root = new SegmentNode(total);
     // console.log(root, total);
     for (const [left, down, right, up] of rectangles) {
         change(root, /*  total, */ { left, right, down, up }, 1n);
@@ -16,7 +16,7 @@ function rectangleArea(rectangles: number[][]): number {
     return Number(root.value % BigInt(10 ** 9 + 7));
 }
 function change(
-    node: Node,
+    node: SegmentNode,
     // current: Interval,
     target: Interval,
     value: bigint,
@@ -51,7 +51,7 @@ function change(
             if (subinterval.length) {
                 node.children = subinterval.map(
                     (c) =>
-                        new Node(
+                        new SegmentNode(
                             c,
                             BigInt(c.right - c.left) *
                                 BigInt(c.up - c.down) *
@@ -103,11 +103,11 @@ export function binarySplit(current: Interval): Interval[] {
             left <= right && down <= up && (right - left) * (up - down),
     );
 }
-export class Node {
+export class SegmentNode {
     constructor(
         public interval: Interval = new Interval(),
         public value: bigint = 0n,
-        public children: Node[] = [],
+        public children: SegmentNode[] = [],
     ) {}
 }
 export class Interval {
