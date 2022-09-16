@@ -1,4 +1,4 @@
-import { assertEquals } from "https://deno.land/std@0.155.0/testing/asserts.ts";
+import { assertEquals } from "https://deno.land/std@0.156.0/testing/asserts.ts";
 
 import validPath from "./index.ts";
 import validPath2 from "./validPath.ts";

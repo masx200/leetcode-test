@@ -5,7 +5,7 @@ export {
     assertFalse,
     assertStrictEquals,
     equal,
-} from "https://deno.land/std@0.155.0/testing/asserts.ts";
+} from "https://deno.land/std@0.156.0/testing/asserts.ts";
 export { default as random } from "https://cdn.skypack.dev/lodash@4.17.21/random?dts";
 export { default as zip } from "https://cdn.skypack.dev/lodash@4.17.21/zip?dts";
 
@@ -13,10 +13,10 @@ export { default as uniqBy } from "https://cdn.skypack.dev/lodash@4.17.21/uniqBy
 
 export { default as intersection } from "https://cdn.skypack.dev/lodash@4.17.21/intersection?dts";
 
-export { walk } from "https://deno.land/std@0.155.0/fs/mod.ts";
-export { parse } from "https://deno.land/std@0.155.0/flags/mod.ts";
+export { walk } from "https://deno.land/std@0.156.0/fs/mod.ts";
+export { parse } from "https://deno.land/std@0.156.0/flags/mod.ts";
 export { combinations } from "https://deno.land/x/combinatorics@1.1.2/mod.ts";
-export { isIP } from "https://deno.land/std@0.155.0/node/internal/net.ts";
+export { isIP } from "https://deno.land/std@0.156.0/node/internal/net.ts";
 export { Heap } from "https://esm.sh/@datastructures-js/heap@4.1.2/?dts";
 export {
     AvlTree,

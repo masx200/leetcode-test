@@ -1,4 +1,4 @@
-import { assertEquals } from "https://deno.land/std@0.155.0/testing/asserts.ts";
+import { assertEquals } from "https://deno.land/std@0.156.0/testing/asserts.ts";
 
 import maxSlidingWindow from "./index.ts";
 
