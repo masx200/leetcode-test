@@ -71,6 +71,13 @@ function change(
         node.value = node.children.length
             ? node.children.reduce((a, n) => a + n.value, 0n)
             : node.value;
+        if (
+            node.value === value *
+                    BigInt(current.right - current.left) *
+                    BigInt(current.up - current.down) || node.value === 0n
+        ) {
+            node.children.length = 0;
+        }
     }
 }
 export function TwoDSplit(
