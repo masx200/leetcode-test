@@ -25,6 +25,7 @@ function change(
         target.down > current.up || target.left > current.right
     ) return;
     // console.log({ node, current, target, value });
+    const subinterval = binarySplit(current);
     if (
         target.left <= current.left && target.down <= current.down &&
         target.right >= current.right && target.up >= current.up
@@ -37,22 +38,26 @@ function change(
         }
     } else {
         if (node.children.length === 0) {
-            node.children = binarySplit(current).map((c) =>
-                new Node(
-                    BigInt(c.right - c.left) *
-                        BigInt(c.up - c.down) * BigInt(node.value > 0),
-                )
-            );
+            if (subinterval.length) {
+                node.children = subinterval.map((c) =>
+                    new Node(
+                        BigInt(c.right - c.left) *
+                            BigInt(c.up - c.down) * BigInt(node.value > 0),
+                    )
+                );
+            }
             // console.log("创建子节点", node.value, node.children);
         }
     }
-    for (const [index, next] of binarySplit(current).entries()) {
-        change(node.children[index], next, target, value);
+    if (subinterval.length) {
+        for (const [index, next] of subinterval.entries()) {
+            change(node.children[index], next, target, value);
+        }
+        //可能没有子节点
+        node.value = node.children.length
+            ? node.children.reduce((a, n) => a + n.value, 0n)
+            : node.value;
     }
-    //可能没有子节点
-    node.value = node.children.length
-        ? node.children.reduce((a, n) => a + n.value, 0n)
-        : node.value;
 }
 export function binarySplit(current: Interval): Interval[] {
     const { left, right, up, down } = current;
