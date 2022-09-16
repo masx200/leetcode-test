@@ -1,3 +1,7 @@
+function area(current: Interval): bigint {
+    return BigInt(current.right - current.left) *
+        BigInt(current.up - current.down);
+}
 function rectangleArea(rectangles: number[][]): number {
     const left = Math.min(...rectangles.map((a) => a[0]));
     const down = Math.min(...rectangles.map((a) => a[1]));
@@ -36,8 +40,8 @@ function change(
     ) {
         if (node.children.length === 0) {
             node.value = value *
-                BigInt(current.right - current.left) *
-                BigInt(current.up - current.down);
+                area(current);
+            node.full = true;
             return;
         }
     } else {
@@ -55,8 +59,7 @@ function change(
                     (c) =>
                         new SegmentNode(
                             c,
-                            BigInt(c.right - c.left) *
-                                BigInt(c.up - c.down) *
+                            area(c) *
                                 BigInt(node.value > 0),
                         ),
                 );
@@ -71,10 +74,10 @@ function change(
         node.value = node.children.length
             ? node.children.reduce((a, n) => a + n.value, 0n)
             : node.value;
+        node.full = node.value == area(current);
         if (
             node.value === value *
-                    BigInt(current.right - current.left) *
-                    BigInt(current.up - current.down) || node.value === 0n
+                    area(current) || node.value === 0n
         ) {
             node.children.length = 0;
         }
@@ -118,6 +121,7 @@ export class SegmentNode {
     constructor(
         public interval: Interval = new Interval(),
         public value: bigint = 0n,
+        public full = false,
         public children: SegmentNode[] = [],
     ) {}
 }
