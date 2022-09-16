@@ -1,4 +1,4 @@
-import { abs_bigint } from "./abs_bigint.ts";
+import { absBigint } from "./abs_bigint.ts";
 
 export default function fractionToDecimal(
     numerator: number,
@@ -11,8 +11,8 @@ export default function fractionToDecimal(
 
     const sb: string[] = [];
     if (a * b < 0) sb.push("-");
-    a = abs_bigint(a);
-    b = abs_bigint(b);
+    a = absBigint(a);
+    b = absBigint(b);
     sb.push(...(String(a / b) + "."));
     a %= b;
     const map = new Map<bigint, number>();
