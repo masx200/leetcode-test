@@ -13,7 +13,7 @@ function searchFilesNames({
         skip?: RegExp | RegExp[];
         // limiter: AsyncCurrentLimiter;
     }) {
-    console.log("type check start!");
+    // console.log("type check start!");
 
     const entry_iter = walk(".", {
         includeFiles: true,
@@ -51,11 +51,11 @@ async function start() {
     const skip = typeof args.skip === "string"
         ? new RegExp(String(args.skip))
         : Array.isArray(args.skip)
-        ? args.skip.map((s) => new RegExp(s))
+        ? args.skip.map((s: string | RegExp) => new RegExp(s))
         : undefined;
     const entry_iter = searchFilesNames({ skip });
     await parallel_check(entry_iter, limiter);
-    console.log("type check Done!");
+    // console.log("type check Done!");
 }
 
 async function runDenoCheck(stack: string[]) {
