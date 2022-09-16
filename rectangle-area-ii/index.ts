@@ -31,7 +31,6 @@ function change(
         return;
     }
     // console.log({ node, current, target, value });
-    const subinterval = binarySplit(current);
 
     if (
         target.left <= current.left &&
@@ -48,6 +47,7 @@ function change(
         }
     } else {
         if (node.children.length === 0) {
+            const subinterval = binarySplit(current);
             if (subinterval.length) {
                 node.children = subinterval.map(
                     (c) =>
@@ -62,7 +62,7 @@ function change(
             // console.log("创建子节点", node.value, node.children);
         }
     }
-    if (subinterval.length) {
+    if (node.children.length) {
         // for (const [index, next] of subinterval.entries()) {
         //     change(node.children[index], /* next, */ target, value);
         // }
