@@ -28,7 +28,7 @@ export default function rectangleArea(rectangles: number[][]): number {
                 root,
                 { left: down, right: up },
                 {
-                    call: (node) => {
+                    modify: (node) => {
                         node.count += diff;
 
                         node.value = Math.sign(node.count) *
@@ -87,13 +87,13 @@ export function update<
     node: T,
     target: { left: number; right: number },
     options: {
-        call: (a: T) => void;
+        modify: (a: T) => void;
         create: (target: { left: number; right: number }) => T;
         down: (a: T) => void;
         up: (a: T) => void;
     },
 ): void {
-    const { call, create, down, up } = options;
+    const { modify, create, down, up } = options;
     const current = node;
     if (
         target.right < current.left ||
@@ -107,7 +107,7 @@ export function update<
         target.right >= current.right
     ) {
         if (node.children.length === 0) {
-            call(node);
+            modify(node);
 
             return;
         }

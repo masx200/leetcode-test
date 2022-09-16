@@ -47,7 +47,7 @@ import { greatestCommonDivisor } from "./max-points-on-a-line/greatest_common_di
 import { uniqueStraightLineEquation } from "./max-points-on-a-line/uniqueStraightLineEquation.ts";
 import { bigintMax } from "./maximum-width-of-binary-tree/bigint_max.ts";
 import { bigintMin } from "./maximum-width-of-binary-tree/bigint_min.ts";
-import { get_end_of_list } from "./merge-in-between-linked-lists/get_end_of_list.ts";
+import { getEndOfList } from "./merge-in-between-linked-lists/get_end_of_list.ts";
 import { NestedInteger } from "./mini-parser/NestedInteger.ts";
 import { searchSegmentChildren } from "./my-calendar-ii/searchSegmentChildren.ts";
 import { searchSegmentLeaf } from "./my-calendar-ii/searchSegmentLeaf.ts";
@@ -123,7 +123,7 @@ export { SqrtNumber };
 export { get_deep_next_of_list };
 export { get_length_of_list };
 export { float64equals };
-export { get_end_of_list };
+export { getEndOfList };
 export { superPow_mod };
 export { multiply_Mod };
 export { pow_bigint_mod };
