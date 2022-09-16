@@ -31,7 +31,9 @@ function change(
     ) {
         return;
     }
-
+    if (
+        contains(current, target) && value && node.full
+    ) return;
     if (
         contains(target, current)
     ) {
