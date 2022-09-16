@@ -47,7 +47,7 @@ function change(
         }
     } else {
         if (node.children.length === 0) {
-            const subinterval = binarySplit(current);
+            const subinterval = TwoDSplit(current);
             if (subinterval.length) {
                 node.children = subinterval.map(
                     (c) =>
@@ -76,7 +76,7 @@ function change(
             : node.value;
     }
 }
-export function binarySplit(current: Interval): Interval[] {
+export function TwoDSplit(current: Interval): Interval[] {
     const { left, right, up, down } = current;
 
     if (left > right || down > up) return [];

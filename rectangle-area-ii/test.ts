@@ -1,8 +1,8 @@
-import rectangleArea, { binarySplit } from "./index.ts";
+import rectangleArea, { TwoDSplit } from "./index.ts";
 import { assertEquals } from "https://deno.land/std@0.156.0/testing/asserts.ts";
-Deno.test("binarySplit-1", () => {
+Deno.test("TwoDSplit-1", () => {
     const current = { left: 0, right: 1000000000, down: 0, up: 1000000000 };
-    const result = binarySplit(current);
+    const result = TwoDSplit(current);
     // console.log(current, result);
     assertEquals(result, [
         { left: 0, right: 500000000, down: 0, up: 500000000 },
@@ -11,9 +11,9 @@ Deno.test("binarySplit-1", () => {
         { left: 500000000, right: 1000000000, down: 500000000, up: 1000000000 },
     ]);
 });
-Deno.test("binarySplit-2", () => {
+Deno.test("TwoDSplit-2", () => {
     const current = { left: 0, right: 3, down: 0, up: 3 };
-    const result = binarySplit(current);
+    const result = TwoDSplit(current);
     // console.log(current, result);
     assertEquals(result, [
         { left: 0, right: 1, down: 0, up: 1 },
@@ -22,21 +22,21 @@ Deno.test("binarySplit-2", () => {
         { left: 1, right: 3, down: 1, up: 3 },
     ]);
 });
-Deno.test("binarySplit-3", () => {
+Deno.test("TwoDSplit-3", () => {
     const current = { left: 0, right: 1, down: 0, up: 1 };
-    const result = binarySplit(current);
+    const result = TwoDSplit(current);
     // console.log(current, result);
     assertEquals(result, []);
 });
-Deno.test("binarySplit-4", () => {
+Deno.test("TwoDSplit-4", () => {
     const current = { left: 0, right: 0, down: 0, up: 0 };
-    const result = binarySplit(current);
+    const result = TwoDSplit(current);
     // console.log(current, result);
     assertEquals(result, []);
 });
-Deno.test("binarySplit-5", () => {
+Deno.test("TwoDSplit-5", () => {
     const current = { left: 0, right: 6, down: 0, up: 1 };
-    const result = binarySplit(current);
+    const result = TwoDSplit(current);
     // console.log(current, result);
     assertEquals(result, [{ left: 0, right: 3, down: 0, up: 1 }, {
         left: 3,
