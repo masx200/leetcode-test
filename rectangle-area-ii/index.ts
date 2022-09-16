@@ -49,11 +49,12 @@ function change(
         if (node.children.length === 0) {
             const midx = [target.left, target.right].filter((a) =>
                 current.left < a && current.right > a
-            )[0];
+            )[0] ?? current.right;
             const midy = [target.down, target.up].filter((a) =>
                 current.down < a && current.up > a
-            )[0];
+            )[0] ?? current.up;
             const subinterval = TwoDSplit(current, midx, midy);
+            // console.log(current, subinterval);
             if (subinterval.length) {
                 node.children = subinterval.map(
                     (c) =>
@@ -112,7 +113,9 @@ export function TwoDSplit(
         .flat();
     return result.filter(
         ({ left, right, up, down }) =>
-            left <= right && down <= up && (right - left) * (up - down),
+            left <= right && down <= up && (right - left) * (up - down) &&
+            !(left === current.left && down === current.down &&
+                up === current.up && right === current.right),
     );
 }
 export class SegmentNode {
