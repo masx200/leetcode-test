@@ -1,4 +1,4 @@
-import { greatest_common_divisor } from "../max-points-on-a-line/greatest_common_divisor.ts";
+import { greatestCommonDivisor } from "../max-points-on-a-line/greatest_common_divisor.ts";
 import { deduplication } from "./deduplication.ts";
 import { Fraction } from "./Fraction.ts";
 import { parseFraction } from "./parseFraction.ts";
@@ -12,7 +12,7 @@ function fractionAddition(expression: string): string {
     const molecular = fractions
         .map((f) => (f.sign * f.molecular * denominator) / f.denominator)
         .reduce((a, b) => a + b);
-    const gcd = greatest_common_divisor(molecular, denominator);
+    const gcd = greatestCommonDivisor(molecular, denominator);
 
     return new Fraction({
         denominator: denominator / gcd,
