@@ -33,10 +33,7 @@ function change(
     }
 
     if (
-        target.left <= current.left &&
-        target.down <= current.down &&
-        target.right >= current.right &&
-        target.up >= current.up
+        contains(target, current)
     ) {
         if (node.children.length === 0) {
             node.value = value *
@@ -83,6 +80,13 @@ function change(
         }
     }
 }
+function contains(target: Interval, current: Interval): boolean {
+    return target.left <= current.left &&
+        target.down <= current.down &&
+        target.right >= current.right &&
+        target.up >= current.up;
+}
+
 export function TwoDSplit(
     current: Interval,
     midx: number,
