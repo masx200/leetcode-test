@@ -6,18 +6,15 @@ function rectangleArea(rectangles: number[][]): number {
 
     const total = { left, right, down, up };
     const root = new SegmentNode(total);
-    // console.log(root, total);
+
     for (const [left, down, right, up] of rectangles) {
-        change(root, /*  total, */ { left, right, down, up }, 1n);
-        // console.log(root, total);
+        change(root, { left, right, down, up }, 1n);
     }
 
-    // console.log(root)
     return Number(root.value % BigInt(10 ** 9 + 7));
 }
 function change(
     node: SegmentNode,
-    // current: Interval,
     target: Interval,
     value: bigint,
 ) {
@@ -30,7 +27,6 @@ function change(
     ) {
         return;
     }
-    // console.log({ node, current, target, value });
 
     if (
         target.left <= current.left &&
@@ -38,7 +34,6 @@ function change(
         target.right >= current.right &&
         target.up >= current.up
     ) {
-        // console.log("找到了包含target的范围了");
         if (node.children.length === 0) {
             node.value = value *
                 BigInt(current.right - current.left) *
@@ -54,7 +49,7 @@ function change(
                 current.down < a && current.up > a
             )[0] ?? current.up;
             const subinterval = TwoDSplit(current, midx, midy);
-            // console.log(current, subinterval);
+
             if (subinterval.length) {
                 node.children = subinterval.map(
                     (c) =>
@@ -66,18 +61,13 @@ function change(
                         ),
                 );
             }
-            // console.log("创建子节点", node.value, node.children);
         }
     }
     if (node.children.length) {
-        // for (const [index, next] of subinterval.entries()) {
-        //     change(node.children[index], /* next, */ target, value);
-        // }
-
         for (const child of node.children) {
             change(child, target, value);
         }
-        //可能没有子节点
+
         node.value = node.children.length
             ? node.children.reduce((a, n) => a + n.value, 0n)
             : node.value;
