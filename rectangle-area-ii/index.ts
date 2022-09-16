@@ -31,16 +31,16 @@ function change(
     ) {
         return;
     }
-    if (
-        contains(current, target) && value && node.full
-    ) return;
+    // if (
+    //     contains(current, target) && value && node.full
+    // ) return;
     if (
         contains(target, current)
     ) {
         if (node.children.length === 0) {
             node.value = value *
                 area(current);
-            node.full = true;
+            // node.full = true;
             return;
         }
     } else {
@@ -73,7 +73,7 @@ function change(
         node.value = node.children.length
             ? node.children.reduce((a, n) => a + n.value, 0n)
             : node.value;
-        node.full = node.value == area(current);
+        // node.full = node.value == area(current);
         if (
             node.value === value *
                     area(current) || node.value === 0n
@@ -127,7 +127,7 @@ export class SegmentNode {
     constructor(
         public interval: Interval = new Interval(),
         public value: bigint = 0n,
-        public full = false,
+        // public full = false,
         public children: SegmentNode[] = [],
     ) {}
 }
