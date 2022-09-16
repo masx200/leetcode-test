@@ -21,8 +21,6 @@ export function searchSegmentLeaf(
         } else {
             return [node];
         }
-        // ? searchSegmentChildren(start, end, node.children, options)
-        // : [node];
     }
 
     if (!node.children.length) {
