@@ -1,3 +1,4 @@
+import rectangleArea2 from "./rectangleArea.ts";
 import rectangleArea, { TwoDSplit } from "./index.ts";
 import { assertEquals } from "https://deno.land/std@0.156.0/testing/asserts.ts";
 Deno.test("TwoDSplit-1", () => {
@@ -72,16 +73,23 @@ Deno.test("TwoDSplit-5", () => {
 });
 
 Deno.test("rectangle-area-ii", () => {
-    assertEquals(rectangleArea([[0, 0, 1000000000, 1000000000]]), 49);
+    testrectangleArea(rectangleArea);
+});
+Deno.test("rectangle-area-ii", () => {
+    testrectangleArea(rectangleArea2);
 });
 
-Deno.test("rectangle-area-ii", () => {
+function testrectangleArea(
+    rectangleArea: {
+        (rectangles: number[][]): number;
+    },
+) {
+    assertEquals(rectangleArea([[0, 0, 1000000000, 1000000000]]), 49);
+
     assertEquals(rectangleArea([[0, 0, 2, 2], [0, 0, 1, 1]]), 4);
-});
-Deno.test("rectangle-area-ii", () => {
+
     assertEquals(rectangleArea([[0, 0, 2, 2], [1, 0, 2, 3], [1, 0, 3, 1]]), 6);
-});
-Deno.test("rectangle-area-ii", () => {
+
     assertEquals(
         rectangleArea([
             [93516, 44895, 94753, 69358],
@@ -101,4 +109,4 @@ Deno.test("rectangle-area-ii", () => {
         ]),
         971243962,
     );
-});
+}

@@ -1,4 +1,4 @@
-export function bigint_max(...bigs: bigint[]): bigint {
+export function bigintMax(...bigs: bigint[]): bigint {
     if (bigs.length === 0) {
         throw new Error("empty argument");
     }

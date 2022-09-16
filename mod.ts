@@ -3,10 +3,10 @@ import { inorder } from "./binary-tree-inorder-traversal/inorder.ts";
 import { TreeNode } from "./binary-tree-inorder-traversal/TreeNode.ts";
 import { level } from "./binary-tree-level-order-traversal-ii/level.ts";
 import {
-    binary_count_one_bigint,
+    binaryCountOneBigint,
 } from "./cells-with-odd-values-in-a-matrix/binary_count_one_bigint.ts";
 import { Node as GraphNode } from "./clone-graph/Node.ts";
-import { parse_complex } from "./complex-number-multiplication/parse_complex.ts";
+import { parseComplex } from "./complex-number-multiplication/parse_complex.ts";
 import { buildBST } from "./convert-sorted-list-to-binary-search-tree/buildBST.ts";
 import { PrefixTreeInsert } from "./design-add-and-search-words-data-structure/PrefixTreeInsert.ts";
 import { DoublyLinkedList } from "./design-linked-list/DoublyLinkedList.ts";
@@ -17,7 +17,7 @@ import { NestedIntegerFrom } from "./flatten-nested-list-iterator/NestedIntegerF
 import { deduplication } from "./fraction-addition-and-subtraction/deduplication.ts";
 import { Fraction } from "./fraction-addition-and-subtraction/Fraction.ts";
 import { parseFraction } from "./fraction-addition-and-subtraction/parseFraction.ts";
-import { abs_bigint } from "./fraction-to-recurring-decimal/abs_bigint.ts";
+import { absBigint } from "./fraction-to-recurring-decimal/abs_bigint.ts";
 import { rand7 } from "./implement-rand10-using-rand7/rand7.ts";
 import { TrieNode } from "./implement-trie-ii-prefix-tree/TrieNode.ts";
 import {
@@ -43,10 +43,10 @@ import { PrefixTreeWithSum } from "./map-sum-pairs/PrefixTreeWithSum.ts";
 import {
     calculateStraightLineEquation,
 } from "./max-points-on-a-line/calculateStraightLineEquation.ts";
-import { greatest_common_divisor } from "./max-points-on-a-line/greatest_common_divisor.ts";
+import { greatestCommonDivisor } from "./max-points-on-a-line/greatest_common_divisor.ts";
 import { uniqueStraightLineEquation } from "./max-points-on-a-line/uniqueStraightLineEquation.ts";
-import { bigint_max } from "./maximum-width-of-binary-tree/bigint_max.ts";
-import { bigint_min } from "./maximum-width-of-binary-tree/bigint_min.ts";
+import { bigintMax } from "./maximum-width-of-binary-tree/bigint_max.ts";
+import { bigintMin } from "./maximum-width-of-binary-tree/bigint_min.ts";
 import { get_end_of_list } from "./merge-in-between-linked-lists/get_end_of_list.ts";
 import { NestedInteger } from "./mini-parser/NestedInteger.ts";
 import { searchSegmentChildren } from "./my-calendar-ii/searchSegmentChildren.ts";
@@ -61,6 +61,11 @@ import {
     SegmentNode,
     TwoDSplit,
 } from "./rectangle-area-ii/index.ts";
+import {
+    OneSplit,
+    SegTree,
+    update,
+} from "./rectangle-area-ii/rectangleArea.ts";
 import { get_deep_next_of_list } from "./reverse-linked-list-ii/get_deep_next_of_list.ts";
 import { get_length_of_list } from "./reverse-linked-list-ii/get_length_of_list.ts";
 import { ArrayToListNode } from "./reverse-linked-list/ArrayToListNode.ts";
@@ -101,9 +106,9 @@ export { climbing_stairs_bigint } from "./climbing-stairs/climbing_stairs_bigint
 export { fibonacci_bigint } from "./fibonacci-number/fibonacci_bigint.ts";
 export { PrefixTreeWithSum };
 export { PrefixTreeClear };
-export { greatest_common_divisor };
+export { greatestCommonDivisor };
 export { calculateStraightLineEquation, uniqueStraightLineEquation };
-export { parse_complex };
+export { parseComplex };
 export {
     left_rotate,
     TrieNode,
@@ -125,7 +130,7 @@ export { pow_bigint_mod };
 export { NestedInteger };
 export { NestedIntegerFrom };
 export { rand7 };
-export { bigint_max, bigint_min };
+export { bigintMax, bigintMin };
 export { NAryNode };
 export { PrefixTree };
 export { PrefixTreeInsert };
@@ -140,13 +145,13 @@ export { Node as RandomNode } from "./copy-list-with-random-pointer/Node.ts";
 export { Node as TreeNextNode } from "./populating-next-right-pointers-in-each-node/Node.ts";
 export { contains, Interval, SegmentNode, SegmentTree, TwoDSplit };
 export { cos, dot, norm };
-export { abs_bigint, searchSegmentChildren, searchSegmentLeaf };
+export { absBigint, searchSegmentChildren, searchSegmentLeaf };
 export { counter };
 export { Node as MultilevelDoublyLinkedListNode } from "./flatten-a-multilevel-doubly-linked-list/Node.ts";
 export { MyLinkedList };
-export { binary_count_one_bigint, level };
+export { binaryCountOneBigint, level };
 export { buildBST, inorder };
-export { traversal_bst_range };
+export { OneSplit, SegTree, traversal_bst_range, update };
 export {
     deduplication,
     Fraction,

@@ -1,4 +1,4 @@
-export function bigint_min(...bigs: bigint[]): bigint {
+export function bigintMin(...bigs: bigint[]): bigint {
     if (bigs.length === 0) {
         throw new Error("empty argument");
     }
