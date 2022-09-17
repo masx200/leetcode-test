@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/design-compressed-string-iterator/
+
 https://leetcode.cn/problems/binary-search-tree-iterator-ii/
 
 https://leetcode.cn/contest/cnunionpay2022/problems/NyZD2B/
