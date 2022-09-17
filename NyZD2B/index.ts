@@ -62,14 +62,19 @@ class VendingMachine {
             if (!value) {
                 return;
             }
-            if (value.expires < time) {
+            if (value.expires < time || value.count <= 0) {
                 good[1] -= value.count;
                 toberemove.push(value);
             } else {
                 const diff = Math.min(number - count, value.count);
                 count += diff;
 
-                callbacks.push(() => value.count -= diff);
+                callbacks.push(() => {
+                    value.count -= diff;
+                    if (value.count <= 0) {
+                        tree.remove(value);
+                    }
+                });
                 cost += value.price * diff;
             }
         }, signal);
