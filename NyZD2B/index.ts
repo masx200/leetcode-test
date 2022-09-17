@@ -1,3 +1,7 @@
+import { AvlTree } from "https://esm.sh/@datastructures-js/binary-search-tree@5.0.2/?dts";
+
+import { traverseInOrder } from "./traverseInOrder.ts";
+
 class VendingMachine {
     #customer2discount = new Map<string, number>();
     #item2good = new Map<
@@ -26,7 +30,6 @@ class VendingMachine {
         good[1] += number;
         this.#item2good.set(item, good);
         good[0].insert({ expires: time + duration, price, count: number });
-        // console.log(good);
     }
 
     sell(
@@ -36,47 +39,49 @@ class VendingMachine {
         number: number,
     ): number {
         const good = this.#item2good.get(item);
-        // console.log(good);
+
         if (!good) return -1;
         if (good[1] < number) return -1;
-        let min: {
-            expires: number;
-            price: number;
-            count: number;
-        } | undefined;
+
         const tree = good[0];
         let count = 0;
-        const nodes: {
+
+        let cost = 0;
+        const toberemove: {
             expires: number;
             price: number;
             count: number;
         }[] = [];
-        let cost = 0;
-        const olds: typeof nodes = [];
-        while (tree.count() && count < number) {
-            min = tree.min()?.getValue();
-            if (!min) break;
-            tree.remove(min);
-            if (min.expires < time) {
-                good[1] -= min.count;
-            } else {
-                const diff = Math.min(number - count, min.count);
-                count += diff;
-                // console.log(count, diff);
-                nodes.push({ ...min, count: min.count - diff });
-                olds.push(min);
-                cost += min.price * diff;
+
+        const ac = new AbortController();
+        const { signal } = ac;
+        const callbacks: (() => void)[] = [];
+        traverseInOrder(tree, (node) => {
+            if (count >= number) return ac.abort();
+            const value = node.getValue();
+            if (!value) {
+                return;
             }
-        }
+            if (value.expires < time) {
+                good[1] -= value.count;
+                toberemove.push(value);
+            } else {
+                const diff = Math.min(number - count, value.count);
+                count += diff;
+
+                callbacks.push(() => value.count -= diff);
+                cost += value.price * diff;
+            }
+        }, signal);
+
+        toberemove.forEach((n) => tree.remove(n));
         if (good[1] < number || cost === 0) {
-            olds.forEach((n) => n.count > 0 && tree.insert(n));
             return -1;
         }
 
-        nodes.forEach((n) => n.count > 0 && tree.insert(n));
         good[1] -= number;
-        // console.log(good);
 
+        callbacks.forEach((c) => c());
         const discount = this.#customer2discount.get(customer) ?? 100;
         const result = Math.ceil(cost * discount / 100);
         this.#customer2discount.set(customer, Math.max(70, discount - 1));
@@ -84,4 +89,3 @@ class VendingMachine {
     }
 }
 export default VendingMachine;
-import { AvlTree } from "https://esm.sh/@datastructures-js/binary-search-tree@5.0.2/?dts";

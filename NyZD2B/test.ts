@@ -1,6 +1,8 @@
 import { assertEquals } from "asserts";
 import { runScript } from "leetcode-class";
+
 import VendingMachine from "./index.ts";
+
 Deno.test("VendingMachine", () => {
     assertEquals(
         [null, null, 10, -1, -1, -1],

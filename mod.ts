@@ -53,6 +53,7 @@ import { searchSegmentChildren } from "./my-calendar-ii/searchSegmentChildren.ts
 import { searchSegmentLeaf } from "./my-calendar-ii/searchSegmentLeaf.ts";
 import { SegmentTree } from "./my-calendar-iii/SegmentTree.ts";
 import { Node as NAryNode } from "./n-ary-tree-level-order-traversal/Node.ts";
+import { traverseInOrder } from "./NyZD2B/traverseInOrder.ts";
 import { getVariable, ScopeList } from "./parse-lisp-expression/index.ts";
 import { BinaryIndexTree } from "./rank-from-stream-lcci/index.ts";
 import {
@@ -159,4 +160,10 @@ export {
     TreeNodeLeetCodeParse,
     TreeNodeLeetCodeStringify,
 };
-export { ArrayToCircularDoublyTreeList, getVariable, ScopeList, UnionFind };
+export {
+    ArrayToCircularDoublyTreeList,
+    getVariable,
+    ScopeList,
+    traverseInOrder,
+    UnionFind,
+};
