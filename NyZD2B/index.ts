@@ -26,7 +26,7 @@ class VendingMachine {
         good[1] += number;
         this.#item2good.set(item, good);
         good[0].insert({ expires: time + duration, price, count: number });
-        console.log(good);
+        // console.log(good);
     }
 
     sell(
@@ -36,7 +36,7 @@ class VendingMachine {
         number: number,
     ): number {
         const good = this.#item2good.get(item);
-        console.log(good);
+        // console.log(good);
         if (!good) return -1;
         if (good[1] < number) return -1;
         let min: {
@@ -61,17 +61,18 @@ class VendingMachine {
             } else {
                 const diff = Math.min(number - count, min.count);
                 count += diff;
-                console.log(count, diff);
+                // console.log(count, diff);
                 nodes.push({ ...min, count: min.count - diff });
                 cost += min.price * diff;
             }
         }
 
         if (good[1] < number) return -1;
-        console.log(nodes);
+        // console.log(nodes);
         nodes.forEach((n) => n.count > 0 && tree.insert(n));
         good[1] -= number;
-        console.log(good);
+        // console.log(good);
+        if (cost === 0) return -1;
         const discount = this.#customer2discount.get(customer) ?? 100;
         const result = Math.ceil(cost * discount / 100);
         this.#customer2discount.set(customer, Math.max(70, discount - 1));
