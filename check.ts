@@ -38,7 +38,7 @@ async function parallel_check(
         files.push(entry.path);
     }
 
-    const entries = split_by_count(files, 30);
+    const entries = split_by_count(files, 50);
 
     await Promise.all(
         entries.map((stack) => limiter.run(() => runDenoCheck(stack))),
