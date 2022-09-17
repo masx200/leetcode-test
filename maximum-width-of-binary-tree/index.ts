@@ -1,6 +1,6 @@
 import { TreeNode } from "../binary-tree-inorder-traversal/TreeNode.ts";
-import { bigint_max } from "./bigint_max.ts";
-import { bigint_min } from "./bigint_min.ts";
+import { bigintMax } from "./bigint_max.ts";
+import { bigintMin } from "./bigint_min.ts";
 
 export default function widthOfBinaryTree(root: TreeNode | null): number {
     if (!root) return 0;
@@ -28,8 +28,8 @@ export default function widthOfBinaryTree(root: TreeNode | null): number {
                 max_width,
                 Number(
                     1n +
-                        bigint_max(...latest.keys()) -
-                        bigint_min(...latest.keys()),
+                        bigintMax(...latest.keys()) -
+                        bigintMin(...latest.keys()),
                 ),
             );
         } else break;
