@@ -1,4 +1,10 @@
-export default function RLEIterator(encoding: number[]) {
+export default interface RLEIterator {
+    next(n: number): number;
+}
+
+export default function RLEIterator(
+    encoding: number[],
+): RLEIterator {
     const generator = (function* () {
         for (let i = 0; i < encoding.length; i += 2) {
             yield { count: encoding[i], value: encoding[i + 1] };
