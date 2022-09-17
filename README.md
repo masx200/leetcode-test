@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/binary-watch
+
 https://leetcode.cn/problems/base-7/
 
 https://leetcode.cn/problems/design-compressed-string-iterator/
