@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/construct-binary-tree-from-inorder-and-postorder-traversal/
+
 https://leetcode.cn/problems/number-of-arithmetic-triplets/
 
 https://leetcode.cn/problems/7p8L0Z/
