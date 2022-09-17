@@ -12,7 +12,6 @@ class BSTIterator {
     constructor(root: TreeNode | null) {
         this.gen = InOrderIterator(root);
         this.result = this.gen.next();
-        // console.log(root, this);
     }
 
     next(): number {

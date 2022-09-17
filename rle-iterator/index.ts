@@ -1,15 +1,15 @@
 export default interface RLEIterator {
     next(n: number): number;
 }
-
+function* RLEGenerator(encoding: number[]) {
+    for (let i = 0; i < encoding.length; i += 2) {
+        yield { count: encoding[i], value: encoding[i + 1] };
+    }
+}
 export default function RLEIterator(
     encoding: number[],
 ): RLEIterator {
-    const generator = (function* () {
-        for (let i = 0; i < encoding.length; i += 2) {
-            yield { count: encoding[i], value: encoding[i + 1] };
-        }
-    })();
+    const generator = (RLEGenerator)(encoding);
 
     let count = 0;
     let value = 0;

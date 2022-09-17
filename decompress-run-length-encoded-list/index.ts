@@ -6,7 +6,6 @@ export default function decompressRLElist(nums: number[]): number[] {
         for (let i = 0; i < count; i++) {
             ans.push(value);
         }
-        // ans.push(...Array(count).fill(value))
     }
     return ans;
 }
