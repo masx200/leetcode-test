@@ -10,6 +10,10 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/permutation-ii-lcci/
+
+https://leetcode.cn/problems/zi-fu-chuan-de-pai-lie-lcof/
+
 https://leetcode.cn/problems/permutation-i-lcci/
 
 https://leetcode-cn.com/problems/uUsW3B/
