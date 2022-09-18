@@ -10,6 +10,10 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/smallest-even-multiple/
+
+https://leetcode.cn/problems/design-underground-system/
+
 https://leetcode.cn/problems/strictly-palindromic-number/
 
 https://leetcode.cn/problems/stone-game/
