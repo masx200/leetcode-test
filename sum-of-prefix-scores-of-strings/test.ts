@@ -1,6 +1,18 @@
 import { assertEquals } from "https://deno.land/std@0.156.0/testing/asserts.ts";
 import sumPrefixScores from "./index.ts";
+import sumPrefixScores2 from "./sumPrefixScores.ts";
 Deno.test("sum-of-prefix-scores-of-strings", () => {
+    testsumPrefixScores(sumPrefixScores);
+});
+Deno.test("sum-of-prefix-scores-of-strings", () => {
+    testsumPrefixScores(sumPrefixScores2);
+});
+
+function testsumPrefixScores(
+    sumPrefixScores: {
+        (words: string[]): number[];
+    },
+) {
     const outputs = [
         [24, 10, 34, 26, 32, 13, 34, 24, 20],
         [5, 4, 3, 2],
@@ -2031,4 +2043,4 @@ Deno.test("sum-of-prefix-scores-of-strings", () => {
         inputs.map(sumPrefixScores),
         outputs,
     );
-});
+}
