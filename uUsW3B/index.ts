@@ -1,1 +1,1 @@
-export {default}from "../combinations/index.ts"
+export { default } from "../combinations/index.ts";

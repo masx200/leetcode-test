@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/permutation-i-lcci/
+
 https://leetcode-cn.com/problems/uUsW3B/
 
 https://leetcode-cn.com/problems/maximum-rows-covered-by-columns/
