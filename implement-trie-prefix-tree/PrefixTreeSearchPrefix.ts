@@ -1,7 +1,4 @@
-import { TrieNode } from "../implement-trie-ii-prefix-tree/TrieNode.ts";
-import { PrefixTree } from "./PrefixTree.ts";
-
-export function PrefixTreeSearchPrefix<T extends PrefixTree | TrieNode>(
+export function PrefixTreeSearchPrefix<T extends { children: Map<string, T> }>(
     root: T,
     prefix: string,
     {
