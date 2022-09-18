@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/count-integers-with-even-digit-sum
+
 https://leetcode.cn/problems/sum-of-prefix-scores-of-strings/
 
 https://leetcode.cn/problems/count-days-spent-together/
