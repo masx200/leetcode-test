@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/removing-stars-from-a-string/
+
 https://leetcode.cn/problems/partition-to-k-equal-sum-subsets/
 
 https://leetcode.cn/problems/count-integers-with-even-digit-sum

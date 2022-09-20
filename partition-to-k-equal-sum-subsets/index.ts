@@ -11,7 +11,7 @@ export default function canPartitionKSubsets(
         let i = nums.length - 1;
         i >= 0 && nums[i] === sub;
         i--, k--, nums.pop()
-    // deno-lint-ignore no-empty
+        // deno-lint-ignore no-empty
     ) {
     }
 
