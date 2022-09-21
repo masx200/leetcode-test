@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/missing-number/
+
 https://leetcode.cn/problems/add-digits/
 
 https://leetcode-cn.com/problems/valid-palindrome/
