@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/reverse-bits/
+
 https://leetcode.cn/problems/license-key-formatting/
 
 https://leetcode.cn/problems/detect-capital/
