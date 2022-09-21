@@ -10,6 +10,10 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/k-similar-strings/
+
+https://leetcode.cn/problems/largest-3-same-digit-number-in-string/
+
 https://leetcode.cn/problems/ZbAuEH/
 
 https://leetcode.cn/problems/network-delay-time/
