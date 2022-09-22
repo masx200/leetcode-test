@@ -1,4 +1,4 @@
-import { assertEquals } from "https://deno.land/std@0.156.0/testing/asserts.ts";
+import { assertEquals } from "https://deno.land/std@0.157.0/testing/asserts.ts";
 
 import { TreeNode } from "../binary-tree-inorder-traversal/TreeNode.ts";
 import levelOrder from "../binary-tree-level-order-traversal/index.ts";
