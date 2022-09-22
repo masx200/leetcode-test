@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/summary-ranges/
+https://leetcode.cn/problems/finding-3-digit-even-numbers/
 https://leetcode.cn/problems/reverse-bits/
 
 https://leetcode.cn/problems/license-key-formatting/
