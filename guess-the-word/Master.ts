@@ -1,35 +1,35 @@
 export class Master {
-    #__secret: string;
-    #__wordset: Set<string>;
-    #__guesses: number;
-    #__found: boolean;
+    #secret: string;
+    #wordset: Set<string>;
+    #guesses: number;
+    #found: boolean;
     constructor(secret: string, wordlist: string[], numguesses: number) {
-        this.#__secret = secret;
-        this.#__wordset = new Set(wordlist);
-        this.#__guesses = numguesses;
-        this.#__found = false;
+        this.#secret = secret;
+        this.#wordset = new Set(wordlist);
+        this.#guesses = numguesses;
+        this.#found = false;
     }
     guess(word: string): number {
-        this.#__guesses -= 1;
-        if (word == this.#__secret) {
-            this.#__found = true;
+        this.#guesses -= 1;
+        if (word == this.#secret) {
+            this.#found = true;
             return word.length;
         }
-        if (!this.#__wordset.has(word)) {
+        if (!this.#wordset.has(word)) {
             return -1;
         }
         let matches = 0;
         for (let i = 0; i < word.length; ++i) {
-            if (word[i] == this.#__secret[i]) {
+            if (word[i] == this.#secret[i]) {
                 matches += 1;
             }
         }
         return matches;
     }
     getGuesses() {
-        return this.#__guesses;
+        return this.#guesses;
     }
     getFound() {
-        return this.#__found;
+        return this.#found;
     }
 }
