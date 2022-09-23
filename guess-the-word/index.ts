@@ -1,3 +1,5 @@
+import { Master } from "./Master.ts";
+
 function findSecretWord(words: string[], master: Master) {
     const seen = new Set<string>();
     while (words.length) {
@@ -20,6 +22,3 @@ function findSecretWord(words: string[], master: Master) {
     }
 }
 export default findSecretWord;
-export interface Master {
-    guess(word: string): number;
-}

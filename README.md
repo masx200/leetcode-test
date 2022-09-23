@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/shortest-path-in-a-hidden-grid/
+
 https://leetcode.cn/problems/delete-tree-nodes/
 
 https://leetcode.cn/problems/repeated-dna-sequences/

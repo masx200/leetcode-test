@@ -1,3 +1,5 @@
+import { CustomFunction } from "./CustomFunction.ts";
+
 function findSolution(customfunction: CustomFunction, z: number): number[][] {
     const min = customfunction.f(1, 1);
     const max = customfunction.f(1000, 1000);
@@ -19,6 +21,3 @@ function findSolution(customfunction: CustomFunction, z: number): number[][] {
     return res;
 }
 export default findSolution;
-export interface CustomFunction {
-    f(x: number, y: number): number;
-}
