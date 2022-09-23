@@ -1,5 +1,11 @@
 import { NestedIntegerType } from "./NestedIntegerType.ts";
-
+export function NestedIntegerToJSON(ni: NestedInteger): NestedIntegerJSON {
+    if (ni.isInteger()) {
+        return Number(ni.getInteger());
+    } else {
+        return ni.getList().map((a) => NestedIntegerToJSON(a));
+    }
+}
 export type NestedIntegerJSON = number | Array<NestedIntegerJSON>;
 export class NestedInteger extends Array<NestedInteger> {
     constructor(value?: number) {
@@ -13,13 +19,7 @@ export class NestedInteger extends Array<NestedInteger> {
         }
         this.length = 0;
     }
-    toJSON(): NestedIntegerJSON {
-        if (this.isInteger()) {
-            return this.#value;
-        } else {
-            return this.getList().map((a) => a.toJSON());
-        }
-    }
+
     [k: number]: NestedInteger;
 
     valueOf() {
