@@ -25,7 +25,7 @@ class GridMaster {
         if (Reflect.has(GridMaster.#directions, direction)) {
             const [a, b] = Reflect.get(GridMaster.#directions, direction);
             const value = this.#grid[row + a]?.[col + b];
-            // console.log(a, b, value);
+
             return Boolean(value);
         }
 
@@ -36,9 +36,9 @@ class GridMaster {
             const row = this.#row;
             const col = this.#col;
             const [a, b] = Reflect.get(GridMaster.#directions, direction);
-            // console.log(this.row, this.col, direction);
+
             [this.#row, this.#col] = [row + a, col + b];
-            // console.log(this.row, this.col, direction);
+
             return this.#grid[this.#row][this.#col];
         }
         return -1;

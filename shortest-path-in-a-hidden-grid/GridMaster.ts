@@ -16,27 +16,25 @@ class GridMaster {
         );
     }
     canMove(direction: string): boolean {
-        // console.log("canMove", this.row, this.col, direction);
         const row = this.#row;
         const col = this.#col;
         if (Reflect.has(GridMaster.#directions, direction)) {
             const [a, b] = Reflect.get(GridMaster.#directions, direction);
             const value = this.#grid[row + a]?.[col + b];
-            // console.log(a, b, value);
+
             return Boolean(value);
         }
 
         return false;
     }
     move(direction: string): void {
-        // console.log("Move", this.row, this.col, direction);
         if (this.canMove(direction)) {
             const row = this.#row;
             const col = this.#col;
             const [a, b] = Reflect.get(GridMaster.#directions, direction);
-            // console.log(this.row, this.col, direction);
+
             [this.#row, this.#col] = [row + a, col + b];
-            // console.log(this.row, this.col, direction);
+
             return;
         }
     }

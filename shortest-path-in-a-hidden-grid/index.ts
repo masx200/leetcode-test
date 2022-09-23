@@ -1,7 +1,6 @@
 import { GridMaster } from "./GridMaster.ts";
 
 export default function findShortestPath(master: GridMaster): number {
-    // console.log(master);
     const key = JSON.stringify([0, 0]);
     const grid: Map<string, number> = new Map();
 
@@ -13,8 +12,6 @@ export default function findShortestPath(master: GridMaster): number {
         col: number,
         visited: Set<string>,
     ) {
-        // console.log({ row, col, visited });
-        // console.log(master.row, master.col);
         const key = JSON.stringify([row, col]);
         if (master.isTarget()) {
             grid.set(key, 2);
@@ -36,7 +33,7 @@ export default function findShortestPath(master: GridMaster): number {
             }
         }
     }
-    // console.log(end, grid);
+
     if (end.length === 0) return -1;
     function bfs(
         pos: [number, number][],
