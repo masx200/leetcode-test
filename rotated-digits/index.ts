@@ -2,12 +2,12 @@ export default function rotatedDigits(n: number): number {
     if (typeof cache[n] !== "undefined") return cache[n];
 
     for (let i = 1; i <= 10000; i++) {
-        cache[i] = cache[i - 1] + Number(isrotatedDigit(i));
+        cache[i] = cache[i - 1] + Number(isRotatedDigit(i));
     }
 
     return cache[n] ?? 0;
 }
-function isrotatedDigit(n: number) {
+function isRotatedDigit(n: number) {
     const map: Record<string | number, number> = {
         0: 0,
         1: 1,

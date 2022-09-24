@@ -2,11 +2,7 @@ export class Fraction {
     sign: number;
     molecular: number;
     denominator: number;
-    toString() {
-        return `${
-            this.sign < 0 ? "-" : ""
-        }${this.molecular}/${this.denominator}`;
-    }
+
     constructor({
         sign = "+",
         molecular = 1,
@@ -23,4 +19,7 @@ export class Fraction {
         this.molecular = Math.abs(Number(molecular));
         this.denominator = Math.abs(Number(denominator));
     }
+}
+export function FractionToString(f: Fraction) {
+    return `${f.sign < 0 ? "-" : ""}${f.molecular}/${f.denominator}`;
 }
