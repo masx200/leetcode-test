@@ -16,7 +16,6 @@ export default function fraction(cont: number[]): number[] {
                         result,
                     ),
                 ],
-                false,
             );
         }
 
