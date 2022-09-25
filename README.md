@@ -10,6 +10,10 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/contest/weekly-contest-312/problems/sort-the-people/
+
+https://leetcode.cn/contest/weekly-contest-312/problems/find-all-good-indices/
+
 https://leetcode.cn/problems/remove-covered-intervals/
 
 https://leetcode.cn/problems/break-a-palindrome/
