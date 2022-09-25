@@ -22,24 +22,22 @@ export default function goodIndices(nums: number[], k: number): number[] {
         if (i === 0) {
             for (let j = n - 2; j > n - k - 1; j--) {
                 // console.log('post')
-                post[post.length - 1 - i] = nums[j] <= nums[j + 1]
-                    ? post[post.length - 1 - i] + 1
-                    : 1;
+                post[post.length - 1 - i] =
+                    nums[j] <= nums[j + 1] ? post[post.length - 1 - i] + 1 : 1;
             }
         } else {
-            const j = nums.length - 1 - i - k;
+            const j = nums.length - i - k;
             //   console.log(j,j+1)
             // console.log(nums[j+1],nums[j+2],nums[j+1] <= nums[j + 2])
             //   console.log()
             // console.log(post.length - 1 - i)
-            post[post.length - 1 - i] = nums[j + 1] <= nums[j + 2]
-                ? post[post.length - i] + 1
-                : 1;
+            post[post.length - 1 - i] =
+                nums[j] <= nums[j + 1] ? post[post.length - i] + 1 : 1;
         }
     }
     // console.log(pre, post)
 
-    return [...Array(n - k * 2).keys()].filter((i) =>
-        pre[i] >= k && post[i] >= k
-    ).map((i) => i + k);
+    return [...Array(n - k * 2).keys()]
+        .filter((i) => pre[i] >= k && post[i] >= k)
+        .map((i) => i + k);
 }
