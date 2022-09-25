@@ -2,13 +2,13 @@ export default function countRoutes(
     locations: number[],
     start: number,
     finish: number,
-    fuel: number
+    fuel: number,
 ): number {
     const MOD = 1000000007;
 
-    let n = locations.length;
-    let startPos = locations[start];
-    let finishPos = locations[finish];
+    const n = locations.length;
+    const startPos = locations[start];
+    const finishPos = locations[finish];
 
     locations.sort((a, b) => a - b);
     for (let i = 0; i < n; ++i) {
@@ -31,7 +31,7 @@ export default function countRoutes(
 
     for (let used = 0; used <= fuel; ++used) {
         for (let city = n - 2; city >= 0; --city) {
-            let delta = locations[city + 1] - locations[city];
+            const delta = locations[city + 1] - locations[city];
             if (used >= delta) {
                 dpL[city][used] =
                     ((((used == delta ? 0 : dpL[city + 1][used - delta]) * 2) %
@@ -41,7 +41,7 @@ export default function countRoutes(
             }
         }
         for (let city = 1; city < n; ++city) {
-            let delta = locations[city] - locations[city - 1];
+            const delta = locations[city] - locations[city - 1];
             if (used >= delta) {
                 dpR[city][used] =
                     ((((used == delta ? 0 : dpR[city - 1][used - delta]) * 2) %

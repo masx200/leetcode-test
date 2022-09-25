@@ -22,8 +22,9 @@ export default function goodIndices(nums: number[], k: number): number[] {
         if (i === 0) {
             for (let j = n - 2; j > n - k - 1; j--) {
                 // console.log('post')
-                post[post.length - 1 - i] =
-                    nums[j] <= nums[j + 1] ? post[post.length - 1 - i] + 1 : 1;
+                post[post.length - 1 - i] = nums[j] <= nums[j + 1]
+                    ? post[post.length - 1 - i] + 1
+                    : 1;
             }
         } else {
             const j = nums.length - i - k;
@@ -31,8 +32,9 @@ export default function goodIndices(nums: number[], k: number): number[] {
             // console.log(nums[j+1],nums[j+2],nums[j+1] <= nums[j + 2])
             //   console.log()
             // console.log(post.length - 1 - i)
-            post[post.length - 1 - i] =
-                nums[j] <= nums[j + 1] ? post[post.length - i] + 1 : 1;
+            post[post.length - 1 - i] = nums[j] <= nums[j + 1]
+                ? post[post.length - i] + 1
+                : 1;
         }
     }
     // console.log(pre, post)
