@@ -12,9 +12,9 @@ leetcode 测试
 
 https://leetcode.cn/problems/count-all-possible-routes/
 
-https://leetcode.cn/contest/weekly-contest-312/problems/sort-the-people/
+https://leetcode.cn/problems/sort-the-people/
 
-https://leetcode.cn/contest/weekly-contest-312/problems/find-all-good-indices/
+https://leetcode.cn/problems/find-all-good-indices/
 
 https://leetcode.cn/problems/remove-covered-intervals/
 
