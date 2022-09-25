@@ -9,6 +9,9 @@ export class UnionFind<T = number> {
         }
         return this.#parents.get(x) ?? x;
     }
+    size(x: T): number {
+        return (this.#sizes.get(this.find(x)) ?? 1);
+    }
     connected(p: T, q: T): boolean {
         return this.find(p) == this.find(q);
     }
