@@ -10,6 +10,10 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/missing-two-lcci/
+
+https://leetcode.cn/problems/single-number-iii/
+
 https://leetcode.cn/problems/longest-subarray-with-maximum-bitwise-and/
 
 https://leetcode.cn/problems/number-of-good-paths/
