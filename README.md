@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/shuffle-string/
+
 https://leetcode.cn/problems/make-the-string-great/
 
 https://leetcode.cn/problems/replace-all-s-to-avoid-consecutive-repeating-characters/
