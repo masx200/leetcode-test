@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/replace-all-s-to-avoid-consecutive-repeating-characters/
+
 https://leetcode.cn/problems/reformat-phone-number/
 
 https://leetcode.cn/problems/replace-all-digits-with-characters/
