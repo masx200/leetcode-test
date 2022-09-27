@@ -18,4 +18,5 @@ use (
 	./transform-to-chessboard
 	./utils
 	./count-complete-tree-nodes
+    ./tree-of-coprimes
 )
