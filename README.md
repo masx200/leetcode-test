@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/scramble-string/
+
 https://leetcode.cn/problems/smallest-string-with-a-given-numeric-value/
 
 https://leetcode.cn/problems/dungeon-game/
