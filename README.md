@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/replace-all-digits-with-characters/
+
 https://leetcode.cn/problems/largest-odd-number-in-string/
 
 https://leetcode.cn/problems/scramble-string/
