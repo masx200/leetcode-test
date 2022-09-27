@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/tree-of-coprimes/
+
 https://leetcode.cn/problems/check-if-all-characters-have-equal-number-of-occurrences/
 
 https://leetcode.cn/problems/cyJERH/
