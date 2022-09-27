@@ -21,7 +21,3 @@ require (
 	github.com/google/go-cmp v0.5.8 // indirect
 	github.com/stretchr/testify v1.8.0
 )
-
-// replace github.com/masx200/leetcode-test/serialize-and-deserialize-binary-tree v0.0.0-20220825072430-380d3e0e30a2 => ./serialize-and-deserialize-binary-tree
-
-// replace github.com/masx200/leetcode-test/utils v0.0.0-20220825072430-380d3e0e30a2 => ./utils
