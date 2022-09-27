@@ -33,21 +33,7 @@ function findWords(board: string[][], words: string[]): string[] {
         }
     });
 
-    // const mapper = new Map<string, Array<[number, number]>>();
     words = Array.from(ans);
-    // for (let i = 0; i < row; i++) {
-    //     for (let j = 0; j < col; j++) {
-    //         const v = board[i][j];
-    //         if (words.some((word) => v === word[0])) {
-    //             let list = mapper.get(v);
-    //             if (!list) {
-    //                 list = [];
-    //                 mapper.set(v, list);
-    //             }
-    //             list.push([i, j]);
-    //         }
-    //     }
-    // }
 
     const result = new Set<string>();
 
@@ -65,14 +51,6 @@ function findWords(board: string[][], words: string[]): string[] {
             }
         }
     }
-    // for (const word of ans) {
-    //     if (!result.has(word) && mapper.has(word[0])) {
-    //         for (const [i, j] of mapper.get(word[0]) || []) {
-    //             if (!result.has(word) && !visited[i][j])
-    //                 dfs(i, j, visited, board, row, col, "", root, result);
-    //         }
-    //     }
-    // }
 
     return Array.from(result);
 }
