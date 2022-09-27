@@ -21,7 +21,7 @@ function getCoprimes(nums: number[], edges: number[][]): number[] {
             }
         }
     }
-
+    const set = new Set(nums);
     const visited = new Set<number>();
     const currents: [number, number][][] = Array(51)
         .fill(0)
@@ -34,7 +34,7 @@ function getCoprimes(nums: number[], edges: number[][]): number[] {
         const value = nums[node];
 
         let ans = [-1, -1];
-        for (const i of Array(51).keys()) {
+        for (const i of set) {
             if (currents[i].length && prime[value][i]) {
                 const get = currents[i].at(-1) as [number, number];
 
