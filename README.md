@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/intersection-of-two-arrays-ii/
+
 https://leetcode.cn/problems/check-permutation-lcci/
 
 https://leetcode.cn/problems/utf-8-validation/
