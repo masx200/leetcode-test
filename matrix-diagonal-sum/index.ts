@@ -4,6 +4,6 @@ export default function diagonalSum(e: number[][]) {
             r === t.length - r - 1
                 ? e + t[r][r]
                 : e + t[r][r] + t[r][t.length - r - 1],
-        0
+        0,
     );
 }
