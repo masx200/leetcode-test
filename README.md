@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/alert-using-same-key-card-three-or-more-times-in-a-one-hour-period/
+
 https://leetcode.cn/problems/minimum-add-to-make-parentheses-valid/
 
 https://leetcode.cn/problems/swap-adjacent-in-lr-string/
