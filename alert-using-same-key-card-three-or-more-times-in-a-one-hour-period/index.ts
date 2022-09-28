@@ -4,7 +4,7 @@ export default function alertNames(
 ): string[] {
     const map = new Map<string, number[]>();
 
-    for (let [i, n] of keyName.entries()) {
+    for (const [i, n] of keyName.entries()) {
         const t = keyTime[i]
             .split(":")
             .map(Number)
