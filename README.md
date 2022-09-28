@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/smallest-k-lcci/
+
 https://leetcode.cn/problems/number-of-atoms/
 
 https://leetcode.cn/problems/brace-expansion-ii/
