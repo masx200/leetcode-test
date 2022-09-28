@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/array-nesting/
+
 https://leetcode.cn/problems/super-ugly-number/
 
 https://leetcode.cn/problems/ugly-number-iii/
