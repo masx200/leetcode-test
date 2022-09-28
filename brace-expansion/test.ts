@@ -1,7 +1,11 @@
 import { assertEquals } from "https://deno.land/std@0.157.0/testing/asserts.ts";
 import expand from "./index.ts";
 Deno.test("brace-expansion", () => {
-    const inputs = ["{a,b}c{d,e}f", "abcd"];
-    const outputs = [["acdf", "acef", "bcdf", "bcef"], ["abcd"]];
+    const inputs = ["{a,b}c{d,e}f", "abcd", "abc{x,y,m,n,p,q}"];
+    const outputs = [
+        ["acdf", "acef", "bcdf", "bcef"],
+        ["abcd"],
+        ["abcm", "abcn", "abcp", "abcq", "abcx", "abcy"],
+    ];
     assertEquals(inputs.map(expand), outputs);
 });
