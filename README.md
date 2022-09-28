@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/swap-adjacent-in-lr-string/
+
 https://leetcode.cn/problems/move-pieces-to-obtain-a-string/
 
 https://leetcode.cn/problems/k-th-symbol-in-grammar
