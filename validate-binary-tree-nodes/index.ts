@@ -21,17 +21,17 @@ export default function validateBinaryTreeNodes(
     )
         return false;
 
-    const visted = new Set<number>();
+    const visited = new Set<number>();
 
     const q = [degree.findIndex((a) => a === 0)];
     for (const i of q) {
-        if (visted.has(i)) continue;
+        if (visited.has(i)) continue;
 
-        visted.add(i);
+        visited.add(i);
         [leftChild[i], rightChild[i]]
             .filter((a) => a >= 0)
             .forEach((j) => q.push(j));
     }
 
-    return visted.size === n;
+    return visited.size === n;
 }
