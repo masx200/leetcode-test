@@ -1,7 +1,7 @@
 export default function validateBinaryTreeNodes(
     n: number,
     leftChild: number[],
-    rightChild: number[]
+    rightChild: number[],
 ): boolean {
     const degree = Array(n).fill(0);
     for (const i of leftChild) {
@@ -18,8 +18,9 @@ export default function validateBinaryTreeNodes(
             (n === 1 || Math.max(...degree) === 1) &&
             zeros.length === 1
         )
-    )
+    ) {
         return false;
+    }
 
     const visited = new Set<number>();
 
