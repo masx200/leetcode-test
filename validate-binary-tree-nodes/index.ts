@@ -3,30 +3,35 @@ export default function validateBinaryTreeNodes(
     leftChild: number[],
     rightChild: number[]
 ): boolean {
-    const record = new Array(n).fill(0);
-    const set = new Set(new Array(n).fill(0).map((_, index) => index));
-    //找到默认的根节点
-    for (let i = 0; i < n; i++) {
-        if (leftChild[i] >= 0) {
-            set.delete(leftChild[i]);
-        }
-        if (rightChild[i] >= 0) {
-            set.delete(rightChild[i]);
-        }
+    const degree = Array(n).fill(0);
+    for (const i of leftChild) {
+        if (i >= 0) degree[i]++;
     }
-    if (set.size != 1) return false;
-    const q = [...set];
-    while (q.length) {
-        let len = q.length;
-        while (len) {
-            const i = q.shift() as number;
-            len--;
-            //若是当前节点入度大于1则不是正确的二叉树
-            if (record[i]) return false;
-            record[i] = 1;
-            if (leftChild[i] >= 0) q.push(leftChild[i]);
-            if (rightChild[i] >= 0) q.push(rightChild[i]);
-        }
+    for (const i of rightChild) {
+        if (i >= 0) degree[i]++;
     }
-    return Math.min(...record) == 0 ? false : true;
+
+    const zeros = degree.filter((a) => a === 0);
+    if (
+        !(
+            Math.min(...degree) === 0 &&
+            (n === 1 || Math.max(...degree) === 1) &&
+            zeros.length === 1
+        )
+    )
+        return false;
+
+    const visted = new Set<number>();
+
+    const q = [degree.findIndex((a) => a === 0)];
+    for (const i of q) {
+        if (visted.has(i)) continue;
+
+        visted.add(i);
+        [leftChild[i], rightChild[i]]
+            .filter((a) => a >= 0)
+            .forEach((j) => q.push(j));
+    }
+
+    return visted.size === n;
 }
