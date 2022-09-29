@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/minimum-amount-of-time-to-collect-garbage/
+
 https://leetcode.cn/problems/find-a-corresponding-node-of-a-binary-tree-in-a-clone-of-that-tree/
 
 https://leetcode.cn/problems/validate-binary-tree-nodes/
