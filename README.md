@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/find-mode-in-binary-search-tree/
+
 https://leetcode.cn/problems/split-a-string-in-balanced-strings/
 
 https://leetcode.cn/problems/maximum-xor-after-operations/
