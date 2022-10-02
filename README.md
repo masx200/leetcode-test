@@ -1684,6 +1684,10 @@ deno task check
 
 https://deno.land/x/masx200_leetcode_test
 
+https://denopkg.com/masx200/leetcode-test
+
+https://cdn.jsdelivr.net/gh/masx200/leetcode-test/
+
 1.导入模块
 
 指定版本号
