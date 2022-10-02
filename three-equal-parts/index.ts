@@ -1,4 +1,4 @@
-import sum from "https://esm.sh/lodash@4.17.21/sum?dts";
+import sum from "https://cdn.skypack.dev/lodash@4.17.21/sum?dts";
 
 export default function threeEqualParts(arr: number[]): number[] {
     const summ = sum(arr);
