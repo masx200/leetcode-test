@@ -1,6 +1,7 @@
 go 1.19
 
 use (
+	./fancy-sequence
 	./abbreviating-the-product-of-a-range
 	.
 	./check-if-a-word-occurs-as-a-prefix-of-any-word-in-a-sentence
@@ -18,5 +19,5 @@ use (
 	./transform-to-chessboard
 	./utils
 	./count-complete-tree-nodes
-    ./tree-of-coprimes
+	./tree-of-coprimes
 )
