@@ -15,7 +15,7 @@ export class BinaryIndexTree<T = number> {
             operation: (a: number, b: number) => a + b,
             //@ts-ignore
             defaultValue: 0,
-        }
+        },
     ) {
         const { defaultValue, operation } = options;
         this.#tree = Array(size + 1).fill(defaultValue);
