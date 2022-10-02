@@ -7,11 +7,17 @@ export class BinaryIndexTree<T = number> {
     #tree: T[];
     constructor(
         public size: number,
-        //@ts-ignore
-        operation: (existing: T, applied: T) => T = (a: number, b: number) =>
-            a + b,
-        defaultValue: T = 0 as unknown as T,
+        options: {
+            operation: (existing: T, applied: T) => T;
+            defaultValue: T;
+        } = {
+            //@ts-ignore
+            operation: (a: number, b: number) => a + b,
+            //@ts-ignore
+            defaultValue: 0,
+        }
     ) {
+        const { defaultValue, operation } = options;
         this.#tree = Array(size + 1).fill(defaultValue);
         this.operation = operation;
         this.defaultValue = defaultValue;
