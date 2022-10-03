@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/bianry-number-to-string-lcci/
+
 https://leetcode.cn/problems/coloring-a-border/
 
 https://leetcode.cn/problems/letter-combinations-of-a-phone-number/
