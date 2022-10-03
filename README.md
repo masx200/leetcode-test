@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/find-minimum-in-rotated-sorted-array/
+
 https://leetcode.cn/problems/unique-binary-search-trees/
 
 https://leetcode.cn/problems/spiral-matrix-ii/
