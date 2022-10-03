@@ -16,7 +16,7 @@ export default function letterCombinations(digits: string): string[] {
             (
                 //@ts-ignore
                 p,
-                c, //@ts-ignore //@ts-ignore //@ts-ignore
+                c, //@ts-ignore 
             ) => p.map(
                 (v) =>
                     //@ts-ignore
