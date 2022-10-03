@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/paths-with-sum-lcci/
+
 https://leetcode.cn/problems/contains-duplicate-iii/
 
 https://leetcode.cn/problems/find-minimum-in-rotated-sorted-array/
