@@ -10,6 +10,10 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/maximize-the-confusion-of-an-exam/
+
+https://leetcode.cn/problems/max-consecutive-ones-iii/
+
 https://leetcode.cn/problems/path-sum-iii/
 
 https://leetcode.cn/problems/3Etpl5/
