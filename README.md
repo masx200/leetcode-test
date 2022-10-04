@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/sZ59z6/
+
 https://leetcode.cn/problems/LwUNpT/
 
 https://leetcode.cn/problems/change-minimum-characters-to-satisfy-one-of-three-conditions/
