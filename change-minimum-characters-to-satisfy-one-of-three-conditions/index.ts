@@ -11,12 +11,12 @@ export default function minCharacters(a: string, b: string): number {
         ans = Math.min(
             ans,
             fA.slice(0, i).reduce((a, b) => a + b, 0) +
-                fB.slice(i).reduce((a, b) => a + b, 0)
+                fB.slice(i).reduce((a, b) => a + b, 0),
         );
         ans = Math.min(
             ans,
             fB.slice(0, i).reduce((a, b) => a + b, 0) +
-                fA.slice(i).reduce((a, b) => a + b, 0)
+                fA.slice(i).reduce((a, b) => a + b, 0),
         );
     }
     return ans;
