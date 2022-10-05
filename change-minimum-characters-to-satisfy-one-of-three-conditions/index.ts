@@ -1,7 +1,7 @@
 export default function minCharacters(a: string, b: string): number {
-    const fA = new Array(26).fill(0);
-    const fB = new Array(26).fill(0);
-    const fC = new Array(26).fill(0);
+    const fA: number[] = new Array(26).fill(0);
+    const fB: number[] = new Array(26).fill(0);
+    const fC: number[] = new Array(26).fill(0);
     for (let i = 0; i < a.length; ++i) fA[a[i].charCodeAt(0) - 97]++;
     for (let i = 0; i < b.length; ++i) fB[b[i].charCodeAt(0) - 97]++;
     const c = a + b;
