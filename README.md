@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode-cn.com/problems/student-attendance-record-i/
+
 https://leetcode.cn/problems/student-attendance-record-ii
 
 https://leetcode.cn/problems/optimal-division/
