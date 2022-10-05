@@ -9,7 +9,7 @@ export default function masterMind(solution: string, guess: string): number[] {
     };
     for (let i = 0; i < solution.length; i++) {
         const s = solution[i];
-        let g = guess[i];
+        const g = guess[i];
         if (s === g) {
             m++;
         } else {
