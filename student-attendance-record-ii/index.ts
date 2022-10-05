@@ -3,11 +3,13 @@ const MOD = 1000000007;
 const maxnum = 10 ** 5;
 function checkRecord(n: number): number {
     if (dp.length === 0) {
+        dp.push(
+            ...new Array(maxnum + 1)
+                .fill(0)
+                .map(() => new Array(6).fill(0)),
+        );
         dp.length = maxnum + 1;
-        Object.assign(
-            dp,
-            new Array(maxnum + 1).fill(0).map(() => new Array(6).fill(0)),
-        ); // 长度，A 的数量，结尾连续 L 的数量
+        // 长度，A 的数量，结尾连续 L 的数量
         dp[0][0] = 1;
         for (let i = 1; i <= maxnum; i++) {
             // 以 P 结尾的数量
