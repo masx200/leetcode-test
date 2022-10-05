@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/numbers-with-same-consecutive-differences/
+
 https://leetcode.cn/problems/master-mind-lcci/
 
 https://leetcode.cn/problems/advantage-shuffle/
