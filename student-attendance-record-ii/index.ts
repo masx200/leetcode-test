@@ -32,12 +32,7 @@ function checkRecord(n: number): number {
         }
     }
 
-    let sum = 0;
-    for (let j = 0; j <= 1; j++) {
-        for (let k = 0; k <= 2; k++) {
-            sum = (sum + dp[n][j * 3 + k]) % MOD;
-        }
-    }
+    const sum = dp[n].reduce((a, b) => a + b, 0) % MOD;
     return sum;
 }
 export default checkRecord;
