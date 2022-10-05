@@ -1,6 +1,6 @@
 export default function intervalIntersection(
     firstList: number[][],
-    secondList: number[][],
+    secondList: number[][]
 ): number[][] {
     const events: [number, number][] = [];
     for (let i = 0; i < firstList.length; i++) {
@@ -14,7 +14,7 @@ export default function intervalIntersection(
     events.sort((a, b) => (a[0] === b[0] ? b[1] - a[1] : a[0] - b[0]));
     let height = 0;
     const ans: number[][] = [];
-    let range = [];
+    let range: number[] = [];
     for (let i = 0; i < events.length; i++) {
         const [pos, type] = events[i];
         if (type === 1) {
