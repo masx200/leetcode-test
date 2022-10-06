@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/all-possible-full-binary-trees/
+
 https://leetcode.cn/problems/numbers-with-repeated-digits
 
 https://leetcode.cn/problems/count-numbers-with-unique-digits/
