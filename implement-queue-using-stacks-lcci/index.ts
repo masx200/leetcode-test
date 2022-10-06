@@ -11,11 +11,11 @@ class MyQueue<T = any> {
             if (!this.#inStack.length) {
                 return -1;
             }
-            this.in2out();
+            this.#in2out();
         }
         return this.#outStack.pop() as T;
     }
-    in2out() {
+    #in2out() {
         while (this.#inStack.length) {
             this.#outStack.push(this.#inStack.pop() as T);
         }
@@ -25,7 +25,7 @@ class MyQueue<T = any> {
             if (!this.#inStack.length) {
                 return -1;
             }
-            this.in2out();
+            this.#in2out();
         }
         return this.#outStack[this.#outStack.length - 1] as T;
     }
