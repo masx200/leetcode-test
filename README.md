@@ -10,6 +10,10 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/count-numbers-with-unique-digits/
+
+https://leetcode.cn/problems/count-special-integers/
+
 https://leetcode.cn/problems/search-in-a-sorted-array-of-unknown-size/
 
 https://leetcode.cn/problems/array-partition/
