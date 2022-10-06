@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/smallest-difference-lcci/
+
 https://leetcode.cn/problems/queue-reconstruction-by-height/
 
 https://leetcode.cn/problems/design-file-system/
