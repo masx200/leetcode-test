@@ -1,9 +1,9 @@
 import { TreeNode } from "../binary-tree-inorder-traversal/TreeNode.ts";
-
+const memo = new Map<string, Array<TreeNode | null>>();
 export default function generateTrees(n: number): Array<TreeNode | null> {
     if (n == 0) return [];
     // 备忘录，避免重复计算
-    const memo = new Map<string, Array<TreeNode | null>>();
+
     /* 构造闭区间 [lo, hi] 组成的 BST */
     function build(lo: number, hi: number): Array<TreeNode | null> {
         const res: Array<TreeNode | null> = [];
