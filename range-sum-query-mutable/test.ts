@@ -1,4 +1,4 @@
-import { assertEquals } from "https://deno.land/std@0.158.0/testing/asserts.ts";
+import { assertEquals } from "https://deno.land/std@0.159.0/testing/asserts.ts";
 import { runScript } from "leetcode-class";
 import NumArray from "./index.ts";
 import NumArray2 from "./NumArray.ts";
