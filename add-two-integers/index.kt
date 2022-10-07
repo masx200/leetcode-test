@@ -6,9 +6,3 @@ class Solution {
     }
 }
 
-fun main(
-    /* args: Array<String> */
-) {
-    println(Solution().sum(111, 555))
-    println(Solution().sum(1191, 555))
-}
