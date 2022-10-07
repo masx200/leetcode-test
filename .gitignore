@@ -123,3 +123,4 @@ dist
 
 # Ignore Gradle build output directory
 build
+*.jar
