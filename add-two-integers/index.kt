@@ -3,3 +3,6 @@ class Solution {
         return num1 + num2
     }
 }
+// fun  main(/* args: Array<String> */) {
+//     println(Solution().sum(111,555))
+// }
