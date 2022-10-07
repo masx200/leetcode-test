@@ -1,3 +1,3 @@
 
-rootProject.name = "test"
+rootProject.name = "leetcode-test"
 
