@@ -2,6 +2,7 @@ package masx200.leetcode_test.design_skiplist
 
 class Skiplist {
     private val storage = hashMapOf<Int, Int>()
+
     fun search(target: Int): Boolean {
         return storage.getOrDefault(target, 0) > 0
     }
