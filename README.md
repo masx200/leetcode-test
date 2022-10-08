@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/insert-into-a-binary-search-tree/
+
 https://leetcode.cn/problems/adding-two-negabinary-numbers/
 
 https://leetcode.cn/problems/lMSNwu/
