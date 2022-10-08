@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/score-of-parentheses/
+
 https://leetcode.cn/problems/image-overlap/
 
 https://leetcode.cn/problems/reveal-cards-in-increasing-order/
