@@ -7,7 +7,7 @@ https://leetcode.cn/problems/insert-into-a-binary-search-tree/
 ```java []
 class Solution {
     public TreeNode insertIntoBST(TreeNode root, int val) {
-        
+
         if (root == null) // 如果当前节点为空，也就意味着val找到了合适的位置，此时创建节点直接返回。
             return new TreeNode(val);
         if (root.val < val){
@@ -31,12 +31,13 @@ class Solution {
  *     var right: TreeNode? = null
  * }
  */
+
 class Solution {
     fun insertIntoBST(root: TreeNode?, `val`: Int): TreeNode? {
-if(root==null)return TreeNode(`val`)
-if(root.`val`>`val`)root.left=insertIntoBST(root.left,`val`)
-if(root.`val`<`val`)root.right=insertIntoBST(root.right,`val`)
-return root
+        if (root == null) return TreeNode(`val`)
+        if (root.`val` > `val`) root.left = insertIntoBST(root.left, `val`)
+        if (root.`val` < `val`) root.right = insertIntoBST(root.right, `val`)
+        return root
     }
 }
 ```
@@ -57,11 +58,11 @@ return root
  */
 
 function insertIntoBST(root: TreeNode | null, val: number): TreeNode | null {
-    if(root === null) return { val,left:null,right:null }
-    if(root.val > val) root.left = insertIntoBST(root.left,val)
-    else if(root.val < val) root.right = insertIntoBST(root.right,val);
+    if (root === null) return { val, left: null, right: null };
+    if (root.val > val) root.left = insertIntoBST(root.left, val);
+    else if (root.val < val) root.right = insertIntoBST(root.right, val);
     return root;
-};
+}
 ```
 
 ```go []
@@ -95,10 +96,10 @@ public:
 ```
 
 ```php []
-class Solution 
+class Solution
 {
     // 递归函数，返回构造后 BST 的根节点
-    public function insertIntoBST($root, $val) 
+    public function insertIntoBST($root, $val)
     {
         if ($root === null) return new TreeNode($val);
 
@@ -107,7 +108,7 @@ class Solution
         } else {
             $root->right = $this->insertIntoBST($root->right, $val);
         }
-        
+
         return $root;
     }
 }
@@ -130,7 +131,7 @@ class Solution
 public class Solution {
     public TreeNode InsertIntoBST(TreeNode root, int val) {
 
-        
+
         if (root == null) // 如果当前节点为空，也就意味着val找到了合适的位置，此时创建节点直接返回。
             return new TreeNode(val);
         if (root.val < val){
