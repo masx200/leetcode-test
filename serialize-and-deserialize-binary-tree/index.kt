@@ -5,19 +5,19 @@ import masx200.leetcode_test.insert_into_a_binary_search_tree.TreeNode
 class Codec {
 
     fun serialize(root: TreeNode?): String {
-        fun serialize(node: Any?): String {
+        fun dfs(node: Any?): String {
             return when (node) {
                 null -> "null"
                 is TreeNode -> {
                     listOf(node.`val`, node.left, node.right).joinToString(",", "[", "]") { element
                         ->
-                        serialize(element)
+                        dfs(element)
                     }
                 }
                 else -> node.toString()
             }
         }
-        return serialize(root)
+        return dfs(root)
     }
 
     fun deserialize(data: String): TreeNode? {
