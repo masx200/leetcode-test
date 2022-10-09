@@ -1,7 +1,5 @@
 package masx200.leetcode_test.insert_into_a_binary_search_tree
 
-class TreeNode(var `val`: Int = 0, var left: TreeNode? = null, var right: TreeNode? = null) {}
-
 class Solution {
     fun insertIntoBST(root: TreeNode?, `val`: Int): TreeNode? {
         if (root == null) return TreeNode(`val`)
