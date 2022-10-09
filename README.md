@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/minimum-swaps-to-make-sequences-increasing/
+
 https://leetcode.cn/problems/6eUYwP/
 
 https://leetcode.cn/problems/three-in-one-lcci/
