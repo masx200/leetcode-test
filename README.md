@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/max-chunks-to-make-sorted/
+
 https://leetcode.cn/problems/longest-string-chain/
 
 https://leetcode.cn/problems/add-two-polynomials-represented-as-linked-lists/
