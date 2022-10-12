@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/add-two-polynomials-represented-as-linked-lists/
+
 https://leetcode.cn/problems/print-immutable-linked-list-in-reverse/
 
 https://leetcode.cn/problems/plus-one-linked-list/

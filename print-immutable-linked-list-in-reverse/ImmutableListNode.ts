@@ -11,7 +11,7 @@ export class ImmutableListNode {
         this.#print(this.#array[this.#index]);
     }
     getNext(): ImmutableListNode | null {
-        if (this.#index+1 >= this.#array.length) return null;
+        if (this.#index + 1 >= this.#array.length) return null;
         const next = new ImmutableListNode(this.#array, this.#print);
         next.#index = this.#index + 1;
         return next;
