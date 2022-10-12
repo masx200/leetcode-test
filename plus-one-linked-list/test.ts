@@ -3,7 +3,7 @@ import { ArrayToListNode } from "../reverse-linked-list/ArrayToListNode.ts";
 import { ListNodeToArray } from "../reverse-linked-list/ListNodeToArray.ts";
 import plusOne from "./index.ts";
 
-Deno.test("plus-one", () => {
+Deno.test("plus-one-linked-list", () => {
     const inputs = [
         [8, 9, 9],
         [9, 9, 9],
