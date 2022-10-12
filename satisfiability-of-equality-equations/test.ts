@@ -11,7 +11,7 @@ Deno.test({
                 ["a==b", "b!=c", "c==a"],
                 ["c==c", "b==d", "x!=z"],
             ].map((a) => equationsPossible(a)),
-            [false, true, true, false, true]
+            [false, true, true, false, true],
         );
     },
 });
