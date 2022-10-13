@@ -1,6 +1,7 @@
 .vscode
 target
 .idea
+.run
 # Logs
 logs
 *.log
@@ -126,3 +127,4 @@ dist
 # Ignore Gradle build output directory
 build
 *.jar
+.run/所有.run.xml
