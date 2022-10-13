@@ -1,8 +1,9 @@
 package masx200.leetcode_test.serialize_and_deserialize_binary_tree
 
 import masx200.leetcode_test.insert_into_a_binary_search_tree.TreeNode
-import org.junit.jupiter.api.Assertions.assertEquals
-import org.junit.jupiter.api.Test
+import org.testng.Assert.assertEquals
+import org.testng.annotations.Test
+
 
 internal class CodecTest {
     @Test
