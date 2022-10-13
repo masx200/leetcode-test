@@ -1,36 +1,36 @@
 {
-  "compilerOptions": {
-    "strict": true,
-    "noImplicitAny": true,
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "alwaysStrict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true
-  },
-  "importMap": "import_map.json",
-  "tasks": {
-    "udd": " deno run -A https://deno.land/x/udd@0.7.5/main.ts  '*.json' deps.ts '*.ts' '*/*.ts'",
-    "install-udd": "deno install -A -f -n udd https://deno.land/x/udd@0.7.5/main.ts",
-    "fmt": " deno fmt --config deno.json",
-    "test": "deno test  --parallel --unstable -A --config deno.json",
-    "lint": "deno lint --config deno.json",
-    "check": "deno run --unstable -A --config deno.json check.ts "
-  },
-  "lint": {
-    "rules": {
-      "include": [],
-      "exclude": [
-        "no-explicit-any",
-        "ban-ts-comment",
-        "no-inferrable-types"
-      ]
+    "compilerOptions": {
+        "strict": true,
+        "noImplicitAny": true,
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "alwaysStrict": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true
+    },
+    "importMap": "import_map.json",
+    "tasks": {
+        "udd": " deno run -A https://deno.land/x/udd@0.7.5/main.ts  '*.json' deps.ts '*.ts' '*/*.ts'",
+        "install-udd": "deno install -A -f -n udd https://deno.land/x/udd@0.7.5/main.ts",
+        "fmt": " deno fmt --config deno.json",
+        "test": "deno test  --parallel --unstable -A --config deno.json",
+        "lint": "deno lint --config deno.json",
+        "check": "deno run --unstable -A --config deno.json check.ts "
+    },
+    "lint": {
+        "rules": {
+            "include": [],
+            "exclude": [
+                "no-explicit-any",
+                "ban-ts-comment",
+                "no-inferrable-types"
+            ]
+        }
+    },
+    "fmt": {
+        "options": {
+            "indentWidth": 4,
+            "singleQuote": false
+        }
     }
-  },
-  "fmt": {
-    "options": {
-      "indentWidth": 4,
-      "singleQuote": false
-    }
-  }
 }
