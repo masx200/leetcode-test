@@ -14,6 +14,7 @@ class Codec {
                         dfs(element)
                     }
                 }
+
                 else -> node.toString()
             }
         }

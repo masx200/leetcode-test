@@ -1,6 +1,6 @@
 package masx200.leetcode_test.reveal_cards_in_increasing_order
 
-import java.util.LinkedList
+import java.util.*
 
 class Solution {
     fun deckRevealedIncreasing(deck: IntArray): IntArray {

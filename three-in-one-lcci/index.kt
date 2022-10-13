@@ -1,4 +1,5 @@
 package masx200.leetcode_test.three_in_one_lcci
+
 class TripleInOne(stackSize: Int) {
     private val stack: IntArray
     private val size = stackSize
@@ -6,6 +7,7 @@ class TripleInOne(stackSize: Int) {
     init {
         stack = IntArray((stackSize + 1) * 3) { 0 }
     }
+
     fun push(stackNum: Int, value: Int) {
 
         if (stack[stackNum] == size) return

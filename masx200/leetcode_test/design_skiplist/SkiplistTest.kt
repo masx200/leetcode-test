@@ -1,8 +1,7 @@
 package masx200.leetcode_test.design_skiplist
 
-import org.testng.Assert.assertEquals
-import org.testng.annotations.Test
-
+import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Test
 internal class SkiplistTest {
 
     @Test
