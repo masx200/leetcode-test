@@ -84,7 +84,7 @@ export class Poly extends Map<string[], number> {
     ): void {
         this.#map.forEach((v, k, _m) => {
             const key = this.#keys.get(k) ?? JSON.parse(k);
-            callbackfn.call(thisArg,v, key, this);
+            callbackfn.call(thisArg, v, key, this);
         }, thisArg);
     }
     values(): IterableIterator<number> {
