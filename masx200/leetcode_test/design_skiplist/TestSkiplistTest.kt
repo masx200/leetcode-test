@@ -2,10 +2,10 @@ package masx200.leetcode_test.design_skiplist
 
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-internal class SkiplistTest {
+ class TestSkiplistTest {
 
     @Test
-    fun search() {
+    fun Testsearch() {
         val skiplist = Skiplist()
         skiplist.add(1)
         skiplist.add(2)
