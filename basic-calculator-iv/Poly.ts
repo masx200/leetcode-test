@@ -78,9 +78,9 @@ export class Poly extends Map<string[], number> {
         callbackfn: (
             value: number,
             key: string[],
-            map: Map<string[], number>
+            map: Map<string[], number>,
         ) => void,
-        thisArg?: any
+        thisArg?: any,
     ): void {
         this.#map.forEach((v, k, _m) => {
             const key = this.#keys.get(k) ?? JSON.parse(k);
@@ -106,7 +106,7 @@ export class Poly extends Map<string[], number> {
             .sort(
                 (a, b) =>
                     -a[0].length + b[0].length ||
-                    a[0].join("").localeCompare(b[0].join(""))
+                    a[0].join("").localeCompare(b[0].join("")),
             )
             .map(([k, v]) => {
                 return [v, ...k].join("*");
