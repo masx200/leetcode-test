@@ -59,7 +59,7 @@
                     <mainClass>MainKt</mainClass>
                 </configuration>
             </plugin>
-              </plugins>
+        </plugins>
     </build>
 
     <dependencies>
@@ -85,7 +85,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-maven-plugin</artifactId>
-           <version>2.7.4</version>
+            <version>2.7.4</version>
             <scope>test</scope>
             <exclusions>
                 <exclusion>
@@ -96,6 +96,6 @@
         </dependency>
 
 
-      </dependencies>
+    </dependencies>
 
 </project>
