@@ -2,6 +2,7 @@ package masx200.leetcode_test.reveal_cards_in_increasing_order
 
 import java.util.*
 
+
 class Solution {
     fun deckRevealedIncreasing(deck: IntArray): IntArray {
         if (deck.isEmpty()) return deck
