@@ -96,13 +96,13 @@ Deno.test("Parenthesized-expression", () => {
         },
     });
 });
-Deno.test("simple-calculate", () => {
+Deno.test("basic-calculator-simple-calculate", () => {
     assertEquals(calculate("-199+5998"), -199 + 5998);
 });
-Deno.test("Parenthesized-calculate", () => {
+Deno.test("basic-calculator-Parenthesized-calculate", () => {
     assertEquals(calculate("-(-199+5998)+87"), -(-199 + 5998) + 87);
 });
-Deno.test("testcases-calculate", () => {
+Deno.test("basic-calculator-test-cases-calculate", () => {
     assertEquals(calculate("1 + 1"), 2);
     assertEquals(calculate(" 2-1 + 2 "), 3);
     assertEquals(calculate("(1+(4+5+2)-3)+(6+8)"), 23);
