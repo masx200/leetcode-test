@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/using-a-robot-to-print-the-lexicographically-smallest-string/
+
 https://leetcode.cn/problems/the-employee-that-worked-on-the-longest-task/
 
 https://leetcode.cn/problems/integer-replacement/
