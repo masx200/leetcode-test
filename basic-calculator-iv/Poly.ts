@@ -106,7 +106,7 @@ export class Poly extends Map<string[], number> {
             .sort(
                 (a, b) =>
                     -a[0].length + b[0].length ||
-                    a[0].join("").localeCompare(b[0].join("")),
+                    a[0].join("*").localeCompare(b[0].join("*")),
             )
             .map(([k, v]) => {
                 return [v, ...k].join("*");
