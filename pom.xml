@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xmlns="http://maven.apache.org/POM/4.0.0"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>leetcode-test</artifactId>
@@ -14,7 +12,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <kotlin.code.style>official</kotlin.code.style>
-        <kotlin.compiler.jvmTarget>1.8</kotlin.compiler.jvmTarget>
+        <kotlin.compiler.jvmTarget>18</kotlin.compiler.jvmTarget>
     </properties>
 
     <repositories>
@@ -34,6 +32,8 @@
                 <version>1.7.20</version>
                 <executions>
                     <execution>
+                        <?m2e execute onConfiguration,onIncremental?>
+
                         <id>compile</id>
                         <phase>process-sources</phase>
                         <goals>
@@ -41,6 +41,7 @@
                         </goals>
                     </execution>
                     <execution>
+                        <?m2e execute onConfiguration?>
                         <id>test-compile</id>
                         <phase>test-compile</phase>
                         <goals>

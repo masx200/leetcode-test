@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/the-employee-that-worked-on-the-longest-task/
+
 https://leetcode.cn/problems/integer-replacement/
 
 https://leetcode.cn/problems/distinct-subsequences-ii/
