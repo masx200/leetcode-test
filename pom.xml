@@ -3,8 +3,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>leetcode-test</artifactId>
-    <groupId>org.example</groupId>
-    <version>1.0-SNAPSHOT</version>
+    <groupId>org.masx200</groupId>
+    <version>1.0.0</version>
     <packaging>jar</packaging>
 
     <name>consoleApp</name>
