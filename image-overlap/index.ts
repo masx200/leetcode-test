@@ -1,9 +1,7 @@
-export default /**
- * @param {number[][]} img1
- * @param {number[][]} img2
- * @return {number}
- */
-function largestOverlap(img1: number[][], img2: number[][]) {
+export default function largestOverlap(
+    img1: number[][],
+    img2: number[][]
+): number {
     const len = img1.length;
     const count: number[][] = Array(2 * len + 1)
         .fill(0)
