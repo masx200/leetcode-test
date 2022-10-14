@@ -1,8 +1,9 @@
 package masx200.leetcode_test.design_skiplist
 
-import org.junit.jupiter.api.Assertions.assertEquals
-import org.junit.jupiter.api.Test
- class TestSkiplistTest {
+
+import kotlin.test.assertEquals
+import kotlin.test.Test
+class TestSkiplistTest {
 
     @Test
     fun Testsearch() {
