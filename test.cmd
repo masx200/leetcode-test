@@ -1,2 +1,7 @@
+go run main.go
 go test -v ./...
-deno test --config deno.json
+
+deno test --parallel --unstable -A  --config deno.json
+mvn test
+
+
