@@ -1794,17 +1794,17 @@ https://leetcode.cn/problems/er-cha-shu-zhong-he-wei-mou-yi-zhi-de-lu-jing-lcof/
 
 #### 安装教程
 
-1. 安装`deno`
+1.安装`deno`
 
 https://deno.land/#installation
 
-2. 安装 `udd`
+2.安装 `udd`
 
 https://deno.land/x/udd#installation
 
 #### 使用说明
 
-1. 测试
+1.测试
 
 ```
 deno task test
