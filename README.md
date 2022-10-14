@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/minimum-absolute-difference-queries/
+
 https://leetcode.cn/problems/boolean-evaluation-lcci/
 
 https://leetcode.cn/problems/build-an-array-with-stack-operations/
