@@ -1,8 +1,9 @@
 package masx200.leetcode_test.design_skiplist
 
 
-import kotlin.test.assertEquals
 import kotlin.test.Test
+import kotlin.test.assertEquals
+
 class TestSkiplistTest {
 
     @Test
