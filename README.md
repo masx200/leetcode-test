@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/boolean-evaluation-lcci/
+
 https://leetcode.cn/problems/build-an-array-with-stack-operations/
 
 https://leetcode.cn/problems/using-a-robot-to-print-the-lexicographically-smallest-string/
