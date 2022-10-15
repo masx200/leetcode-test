@@ -25,27 +25,31 @@
       <sourceFolder url="file://$MODULE_DIR$/add-two-integers" isTestSource="false" packagePrefix="masx200.leetcode_test.add_two_integers" />
       <sourceFolder url="file://$MODULE_DIR$/design-skiplist" isTestSource="false" packagePrefix="masx200.leetcode_test.design_skiplist" />
       <sourceFolder url="file://$MODULE_DIR$/insert-into-a-binary-search-tree" isTestSource="false" packagePrefix="masx200.leetcode_test.insert_into_a_binary_search_tree" />
+      <sourceFolder url="file://$MODULE_DIR$/min-cost-to-connect-all-points" isTestSource="false" packagePrefix="masx200.leetcode_test.min_cost_to_connect_all_points" />
+      <sourceFolder url="file://$MODULE_DIR$/possible-bipartition" isTestSource="false" packagePrefix="masx200.leetcode_test.possible_bipartition" />
       <sourceFolder url="file://$MODULE_DIR$/reveal-cards-in-increasing-order" isTestSource="false" packagePrefix="masx200.leetcode_test.reveal_cards_in_increasing_order" />
       <sourceFolder url="file://$MODULE_DIR$/serialize-and-deserialize-binary-tree" isTestSource="false" packagePrefix="masx200.leetcode_test.serialize_and_deserialize_binary_tree" />
-      <sourceFolder url="file://$MODULE_DIR$/test" isTestSource="true" packagePrefix="masx200.leetcode_test" />
+      <sourceFolder url="file://$MODULE_DIR$/test" isTestSource="true" packagePrefix="masx200" />
       <sourceFolder url="file://$MODULE_DIR$/three-in-one-lcci" isTestSource="false" packagePrefix="masx200.leetcode_test.three_in_one_lcci" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
-      <sourceFolder url="file://$MODULE_DIR$/" isTestSource="false" packagePrefix="masx200.leetcode_test" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Maven: org.jetbrains.kotlin:kotlin-test-junit5:1.7.20" level="project" />
-    <orderEntry type="library" name="Maven: org.jetbrains.kotlin:kotlin-test:1.7.20" level="project" />
-    <orderEntry type="library" name="Maven: org.junit.jupiter:junit-jupiter-api:5.6.0" level="project" />
-    <orderEntry type="library" name="Maven: org.apiguardian:apiguardian-api:1.1.0" level="project" />
-    <orderEntry type="library" name="Maven: org.opentest4j:opentest4j:1.2.0" level="project" />
-    <orderEntry type="library" name="Maven: org.junit.platform:junit-platform-commons:1.6.0" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: org.junit.jupiter:junit-jupiter-engine:5.6.0" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: org.junit.platform:junit-platform-engine:1.6.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.jetbrains.kotlin:kotlin-test-junit5:1.7.20" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.jetbrains.kotlin:kotlin-test:1.7.20" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.junit.jupiter:junit-jupiter-api:5.6.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.apiguardian:apiguardian-api:1.1.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.opentest4j:opentest4j:1.2.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.junit.platform:junit-platform-commons:1.6.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.junit.jupiter:junit-jupiter-engine:5.6.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.junit.platform:junit-platform-engine:1.6.0" level="project" />
     <orderEntry type="library" name="Maven: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.20" level="project" />
     <orderEntry type="library" name="Maven: org.jetbrains.kotlin:kotlin-stdlib:1.7.20" level="project" />
     <orderEntry type="library" name="Maven: org.jetbrains.kotlin:kotlin-stdlib-common:1.7.20" level="project" />
     <orderEntry type="library" name="Maven: org.jetbrains:annotations:13.0" level="project" />
     <orderEntry type="library" name="Maven: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.20" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.4.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.4.0" level="project" />
   </component>
 </module>
