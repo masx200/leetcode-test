@@ -27,9 +27,10 @@
       <sourceFolder url="file://$MODULE_DIR$/insert-into-a-binary-search-tree" isTestSource="false" packagePrefix="masx200.leetcode_test.insert_into_a_binary_search_tree" />
       <sourceFolder url="file://$MODULE_DIR$/reveal-cards-in-increasing-order" isTestSource="false" packagePrefix="masx200.leetcode_test.reveal_cards_in_increasing_order" />
       <sourceFolder url="file://$MODULE_DIR$/serialize-and-deserialize-binary-tree" isTestSource="false" packagePrefix="masx200.leetcode_test.serialize_and_deserialize_binary_tree" />
-      <sourceFolder url="file://$MODULE_DIR$/test" isTestSource="true" packagePrefix="masx200" />
+      <sourceFolder url="file://$MODULE_DIR$/test" isTestSource="true" packagePrefix="masx200.leetcode_test" />
       <sourceFolder url="file://$MODULE_DIR$/three-in-one-lcci" isTestSource="false" packagePrefix="masx200.leetcode_test.three_in_one_lcci" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
+      <sourceFolder url="file://$MODULE_DIR$/" isTestSource="false" packagePrefix="masx200.leetcode_test" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
