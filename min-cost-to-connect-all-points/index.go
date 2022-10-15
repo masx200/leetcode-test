@@ -46,7 +46,7 @@ func 曼哈顿距离(a []int, b []int) int {
 	return abs(a[0]-b[0]) + abs(a[1]-b[1])
 }
 
-var abs = func(x int) int {
+func abs(x int) int {
 	if x >= 0 {
 		return x
 	}
