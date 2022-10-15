@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/minimum-increment-to-make-array-unique/
+
 https://leetcode.cn/problems/number-of-ways-to-buy-pens-and-pencils/
 
 https://leetcode.cn/problems/minimum-absolute-difference-queries/
