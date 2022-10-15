@@ -25,8 +25,10 @@
     </repositories>
 
     <build>
-        <sourceDirectory>./</sourceDirectory>
+        <sourceDirectory>./add-two-integers</sourceDirectory>
+
         <testSourceDirectory>./test</testSourceDirectory>
+
         <plugins>
             <plugin>
                 <groupId>org.jetbrains.kotlin</groupId>
@@ -41,6 +43,18 @@
                         <goals>
                             <goal>compile</goal>
                         </goals>
+                        <configuration>
+                            <sourceDirs>
+                                <source>add-two-integers</source>
+                                <source>design-skiplist</source>
+                                <source>insert-into-a-binary-search-tree</source>
+                                <source>min-cost-to-connect-all-points</source>
+                                <source>possible-bipartition</source>
+                                <source>reveal-cards-in-increasing-order</source>
+                                <source>serialize-and-deserialize-binary-tree</source>
+                                <source>three-in-one-lcci</source>
+                            </sourceDirs>
+                        </configuration>
                     </execution>
                     <execution>
                         <?m2e execute onConfiguration?>
