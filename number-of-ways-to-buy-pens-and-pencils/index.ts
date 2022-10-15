@@ -10,3 +10,4 @@ export default function waysToBuyPensPencils(
         a +
         Math.floor(1 + (total - cost1 * i) / cost2), 0);
 }
+
