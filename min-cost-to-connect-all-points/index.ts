@@ -10,7 +10,7 @@ function minCostConnectPoints(points: number[][]): number {
     while (ds.size) {
         let mi = 0;
         let md = Infinity;
-        let p1 = [];
+        let p1: number[] = [];
         for (const [i, d] of ds) {
             const p = points[i];
             if (d < md) {
