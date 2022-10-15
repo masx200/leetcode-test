@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/possible-bipartition/
+
 https://leetcode.cn/problems/fruit-into-baskets/
 
 https://leetcode.cn/problems/min-cost-to-connect-all-points/
