@@ -3,14 +3,13 @@ export default function minDifference(
     queries: number[][]
 ): number[] {
     const n = nums.length;
-
 const sorted=[...new Set(nums)].sort((a,b)=>a-b)
- 
-   const presum = Array(100)
-        .fill(0)
-        .map(() => Array<number>(n).fill(0));
+    const presum:number[][] = Array(100)
+        
+       
 
     for (const k of sorted) {
+        presum[k-1]=Array<number>(n).fill(0)
         for (let i = 0; i < n; i++) {
             presum[k - 1][i] =
                 (i == 0 ? 0 : presum[k - 1][i - 1]) + Number(nums[i] == k);
