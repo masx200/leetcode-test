@@ -10,6 +10,10 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/sum-of-number-and-its-reverse/
+
+https://leetcode.cn/problems/count-number-of-distinct-integers-after-reverse-operations/
+
 https://leetcode.cn/problems/possible-bipartition/
 
 https://leetcode.cn/problems/fruit-into-baskets/
