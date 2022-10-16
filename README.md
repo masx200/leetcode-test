@@ -8,7 +8,11 @@ leetcode 测试
 
 #### 软件架构说明
 
+[![](https://jitpack.io/v/masx200/leetcode-test.svg)](https://jitpack.io/#masx200/leetcode-test)
+
 ##### 包含的内容如下
+
+region { 包含的内容如下
 
 https://leetcode.cn/problems/combination-sum-iii/
 
@@ -1827,6 +1831,9 @@ https://leetcode.cn/problems/shu-zu-zhong-shu-zi-chu-xian-de-ci-shu-ii-lcof/
 https://leetcode.cn/problems/path-sum-ii/
 
 https://leetcode.cn/problems/er-cha-shu-zhong-he-wei-mou-yi-zhi-de-lu-jing-lcof/
+
+
+} region 包含的内容如下
 
 #### 安装教程
 
