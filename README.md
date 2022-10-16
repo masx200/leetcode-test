@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/longest-valid-parentheses/
+
 https://leetcode.cn/problems/number-of-ways-to-select-buildings/
 
 https://leetcode.cn/problems/count-subarrays-with-fixed-bounds/
