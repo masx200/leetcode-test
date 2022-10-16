@@ -1,3 +1,6 @@
+export function lowbit(x: number) {
+    return x & -x;
+}
 const add = Symbol();
 export default class NumArray {
     #tree: number[];
@@ -12,12 +15,10 @@ export default class NumArray {
     [add](index: number, val: number) {
         while (index < this.#tree.length) {
             this.#tree[index] += val;
-            index += this.#lowBit(index);
+            index += lowbit(index);
         }
     }
-    #lowBit(x: number) {
-        return x & -x;
-    }
+
     update(index: number, val: number): void {
         this[add](index + 1, val - this.#nums[index]);
         this.#nums[index] = val;
@@ -30,7 +31,7 @@ export default class NumArray {
         let sum = 0;
         while (index > 0) {
             sum += this.#tree[index];
-            index -= this.#lowBit(index);
+            index -= lowbit(index);
         }
         return sum;
     }

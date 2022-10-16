@@ -1,9 +1,7 @@
 export class BinaryIndexTree<T = number> {
     defaultValue: T;
     operation: (existing: T, applied: T) => T;
-    static lowbit(x: number) {
-        return x & -x;
-    }
+
     #tree: T[];
     constructor(
         public size: number,
@@ -23,15 +21,18 @@ export class BinaryIndexTree<T = number> {
         this.defaultValue = defaultValue;
     }
     update(i: number, value: T) {
-        for (let p = i; p <= this.size; p += BinaryIndexTree.lowbit(p)) {
+        for (let p = i; p <= this.size; p += lowbit(p)) {
             this.#tree[p] = this.operation(this.#tree[p], value);
         }
     }
     query(n: number) {
         let ans = this.defaultValue;
-        for (let p = n; p > 0; p -= BinaryIndexTree.lowbit(p)) {
+        for (let p = n; p > 0; p -= lowbit(p)) {
             ans = this.operation(ans, this.#tree[p]);
         }
         return ans;
     }
+}
+export function lowbit(x: number) {
+    return x & -x;
 }
