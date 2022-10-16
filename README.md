@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/count-subarrays-with-fixed-bounds/
+
 https://leetcode.cn/problems/largest-positive-integer-that-exists-with-its-negative/
 
 https://leetcode.cn/problems/sum-of-number-and-its-reverse/
