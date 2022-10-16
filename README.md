@@ -12,7 +12,9 @@ leetcode 测试
 
 ##### 包含的内容如下
 
-region { 包含的内容如下
+<details>
+<summary>展开查看</summary>
+
 
 https://leetcode.cn/problems/combination-sum-iii/
 
@@ -1833,7 +1835,9 @@ https://leetcode.cn/problems/path-sum-ii/
 https://leetcode.cn/problems/er-cha-shu-zhong-he-wei-mou-yi-zhi-de-lu-jing-lcof/
 
 
-} region 包含的内容如下
+</details>
+
+
 
 #### 安装教程
 
