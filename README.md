@@ -10,13 +10,12 @@ leetcode 测试
 
 [![](https://jitpack.io/v/masx200/leetcode-test.svg)](https://jitpack.io/#masx200/leetcode-test)
 
-
 To get a Git project into your build:
 
 Step 1. Add the JitPack repository to your build file
 
-
 maven
+
 ```xml
 	<repositories>
 		<repository>
@@ -25,7 +24,9 @@ maven
 		</repository>
 	</repositories>
 ```
+
 Step 2. Add the dependency
+
 ```xml
 	<dependency>
 	    <groupId>com.github.masx200</groupId>
@@ -33,11 +34,11 @@ Step 2. Add the dependency
 	    <version>10.9.2</version>
 	</dependency>
 ```
+
 ##### 包含的内容如下
 
 <details>
 <summary>展开查看</summary>
-
 
 https://leetcode.cn/problems/combination-sum-iii/
 
@@ -1857,10 +1858,7 @@ https://leetcode.cn/problems/path-sum-ii/
 
 https://leetcode.cn/problems/er-cha-shu-zhong-he-wei-mou-yi-zhi-de-lu-jing-lcof/
 
-
 </details>
-
-
 
 #### 安装教程
 
