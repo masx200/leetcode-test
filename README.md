@@ -10,6 +10,29 @@ leetcode 测试
 
 [![](https://jitpack.io/v/masx200/leetcode-test.svg)](https://jitpack.io/#masx200/leetcode-test)
 
+
+To get a Git project into your build:
+
+Step 1. Add the JitPack repository to your build file
+
+
+maven
+```xml
+	<repositories>
+		<repository>
+		    <id>jitpack.io</id>
+		    <url>https://jitpack.io</url>
+		</repository>
+	</repositories>
+```
+Step 2. Add the dependency
+```xml
+	<dependency>
+	    <groupId>com.github.masx200</groupId>
+	    <artifactId>leetcode-test</artifactId>
+	    <version>10.9.2</version>
+	</dependency>
+```
 ##### 包含的内容如下
 
 <details>
