@@ -29,10 +29,10 @@ export default function Fancy(): Fancy {
         r_mult = (r_mult * multiplicativeInverse(m, MOD)) % MOD;
     }
 
-    const getIndex = function (idx: number): number {
+    function getIndex(idx: number): number {
         if (idx >= values.length) return -1;
         return Number((mult * BigInt(values[idx]) + add) % MOD);
-    };
+    }
     return { getIndex, multAll, addAll, append };
 }
 export function multiplicativeInverse(x: number, mod: bigint): bigint {

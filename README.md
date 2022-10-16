@@ -10,6 +10,8 @@ leetcode 测试
 
 ##### 包含的内容如下
 
+https://leetcode.cn/problems/combination-sum-iii/
+
 https://leetcode.cn/problems/range-product-queries-of-powers/
 
 https://leetcode.cn/problems/number-of-valid-clock-times/
