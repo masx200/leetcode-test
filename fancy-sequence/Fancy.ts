@@ -12,22 +12,22 @@ export default function Fancy(): Fancy {
     let mult = 1n;
     let r_mult = 1n;
 
-    const append = function (val: number): void {
+    function append(val: number): void {
         const result = ((BigInt(val) - add + MOD) * r_mult) % MOD;
         values.push(result);
-    };
+    }
 
-    const addAll = function (inc: number): void {
+    function addAll(inc: number): void {
         add = (add + BigInt(inc)) % MOD;
-    };
+    }
 
-    const multAll = function (m: number): void {
+    function multAll(m: number): void {
         const mb = BigInt(m);
         mult = (mult * mb) % MOD;
         add = (add * mb) % MOD;
 
         r_mult = (r_mult * multiplicativeInverse(m, MOD)) % MOD;
-    };
+    }
 
     const getIndex = function (idx: number): number {
         if (idx >= values.length) return -1;
@@ -35,14 +35,15 @@ export default function Fancy(): Fancy {
     };
     return { getIndex, multAll, addAll, append };
 }
-
-function multiplicativeInverse(x: number, mod: bigint): bigint {
+export function multiplicativeInverse(x: number, mod: bigint): bigint {
     if (typeof INVERSES[x] !== "undefined") {
         return INVERSES[x];
     }
     const xb = BigInt(x);
     const mb = BigInt(mod);
-    let y = 1n, m = mb, p = xb;
+    let y = 1n,
+        m = mb,
+        p = xb;
     m = m - 2n;
 
     for (let i = 0n; 1n << i < m; i++, p = (p * p) % mb) {
