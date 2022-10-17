@@ -1,2 +1,4 @@
+github.com/google/go-cmp v0.5.9 h1:O2Tfq5qg4qc4AmwVlvv0oLiVAGB7enBSJ2x2DqQFi38=
 github.com/masx200/leetcode-test/serialize-and-deserialize-binary-tree v0.0.0-20221017024708-ace31326376a h1:rrxgEyci7qy0zewa/kMMeq3Om6xPF08UXjClp0GLQgY=
 github.com/masx200/leetcode-test/serialize-and-deserialize-binary-tree v0.0.0-20221017024708-ace31326376a/go.mod h1:nc1u6804gce5vgxkH1Bg5ygDoAc/1AAJKCH0/XCB8/w=
+gotest.tools/v3 v3.4.0 h1:ZazjZUfuVeZGLAmlKKuyv3IKP5orXcwtOwDQH6YVr6o=

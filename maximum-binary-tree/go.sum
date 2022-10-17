@@ -1,0 +1,16 @@
+github.com/davecgh/go-spew v1.1.0 h1:ZDRjVQ15GmhC3fiQ8ni8+OwkZQO4DARzQgrnXU1Liz8=
+github.com/google/go-cmp v0.5.9 h1:O2Tfq5qg4qc4AmwVlvv0oLiVAGB7enBSJ2x2DqQFi38=
+github.com/magiconair/properties v1.8.6 h1:5ibWZ6iY0NctNGWo87LalDlEZ6R41TqbbDamhfG/Qzo=
+github.com/magiconair/properties v1.8.6/go.mod h1:y3VJvCyxH9uVvJTWEGAELF3aiYNyPKd5NZ3oSwXrF60=
+github.com/masx200/leetcode-TreeNode-go v1.0.5 h1:SCl1Ku93oMHWstzjoEa1hkh+gsRu9Lv/9/R9gIUamqI=
+github.com/masx200/leetcode-TreeNode-go v1.0.5/go.mod h1:eIc8UV+ltx46u5IfGFBG/U5CZ4hhWNckYbwykIBClqA=
+github.com/masx200/leetcode-test/maximum-binary-tree-ii v0.0.0-20221017024415-b8484fcc02e5 h1:9SA0xuqT1ZTuQOw4wrp4Q/xRY+3HyEqA00EvA35mmtM=
+github.com/masx200/leetcode-test/maximum-binary-tree-ii v0.0.0-20221017024415-b8484fcc02e5/go.mod h1:XSiL+YDAG9J6adK8nI22zEERWhHXlZ5vxw7Sgni+hms=
+github.com/masx200/leetcode-test/serialize-and-deserialize-binary-tree v0.0.0-20221017024708-ace31326376a h1:rrxgEyci7qy0zewa/kMMeq3Om6xPF08UXjClp0GLQgY=
+github.com/masx200/leetcode-test/serialize-and-deserialize-binary-tree v0.0.0-20221017024708-ace31326376a/go.mod h1:nc1u6804gce5vgxkH1Bg5ygDoAc/1AAJKCH0/XCB8/w=
+github.com/masx200/leetcode-test/utils v0.0.0-20221017025553-eab2a8255e3b h1:C/dbby/kFTa1RjbeIyJ06/hZr7TcPSewhUbSyU9CX7s=
+github.com/masx200/leetcode-test/utils v0.0.0-20221017025553-eab2a8255e3b/go.mod h1:taQg1hvh+G8bzv0i78083nfa/i8+e9P8SdDGB/paLws=
+github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
+github.com/stretchr/testify v1.7.0 h1:nwc3DEeHmmLAfoZucVR881uASk0Mfjw8xYJ99tb5CcY=
+gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c h1:dUUwHk2QECo/6vqA44rthZ8ie2QXMNeKRTHCNY2nXvo=
+gotest.tools/v3 v3.4.0 h1:ZazjZUfuVeZGLAmlKKuyv3IKP5orXcwtOwDQH6YVr6o=
