@@ -21,9 +21,7 @@ fun dfs(root: TreeNode?, k: Int): IntArray {
 
     for (i in 1..k) {
         var temp = Int.MIN_VALUE
-        for (
-        j in 0 until i
-        ) {
+        for (j in 0 until i) {
             temp = Math.max(temp, left[j] + right[i - 1 - j])
         }
         ans[i] = Math.max(ans[i], temp + root.`val`)

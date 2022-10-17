@@ -1,8 +1,5 @@
 package com.github.masx200.leetcode_test.min_cost_to_connect_all_points
 
-import kotlin.math.abs
-import kotlin.math.min
-
 class Solution {
     fun minCostConnectPoints(points: Array<IntArray>): Int {
         val p0 = points[0]
@@ -15,7 +12,6 @@ class Solution {
 
             var p1 = IntArray(0)
             ds.onEach { (i, d) ->
-
                 val p = points[i]
                 if (d < md) {
                     mi = i
@@ -26,16 +22,14 @@ class Solution {
             ds.remove(mi)
             ans += md
             ds.onEach { (i, d) ->
-
                 val p = points[i]
-                ds.set(i, min(d, 曼哈顿距离(p, p1)))
+                ds.set(i, Math.min(d, 曼哈顿距离(p, p1)))
             }
         }
         return ans
-
     }
 }
 
 fun 曼哈顿距离(a: IntArray, b: IntArray): Int {
-    return abs(a[0] - b[0]) + abs(a[1] - b[1])
+    return Math.abs(a[0] - b[0]) + Math.abs(a[1] - b[1])
 }
