@@ -87,6 +87,7 @@
                         <configuration>
                             <sourceDirs>
                                 <source>er-cha-shu-ran-se-UGC</source>
+                                <source>utils</source>
                                 <source>add-two-integers</source>
                                 <source>design-skiplist</source>
                                 <source>insert-into-a-binary-search-tree</source>
@@ -201,7 +202,7 @@
             <groupId>org.jetbrains.kotlinx</groupId>
             <artifactId>kotlinx-serialization-json</artifactId>
             <version>1.4.0</version>
-            <scope>test</scope>
+
         </dependency>
 
 
