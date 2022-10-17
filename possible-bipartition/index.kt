@@ -1,4 +1,4 @@
-package masx200.leetcode_test.possible_bipartition
+package org.masx200.leetcode_test.possible_bipartition
 
 class Solution {
     fun possibleBipartition(n: Int, dislikes: Array<IntArray>): Boolean {
