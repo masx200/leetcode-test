@@ -5,7 +5,7 @@
 
     <artifactId>leetcode-test</artifactId>
     <groupId>com.github.masx200</groupId>
-    <version>1.0.0</version>
+    <version>10.10.0</version>
     <packaging>jar</packaging>
 
     <name>leetcode-test</name>
