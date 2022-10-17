@@ -1,4 +1,4 @@
-package org.masx200.leetcode_test.possible_bipartition
+package com.github.masx200.leetcode_test.possible_bipartition
 
 class UnionFind<T> {
     fun union(a: T, b: T) {

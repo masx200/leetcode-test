@@ -1,4 +1,4 @@
-package org.masx200.leetcode_test.reveal_cards_in_increasing_order
+package com.github.masx200.leetcode_test.reveal_cards_in_increasing_order
 
 import java.util.*
 

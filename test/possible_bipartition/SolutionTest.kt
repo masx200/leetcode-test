@@ -1,4 +1,4 @@
-package org.masx200.leetcode_test.possible_bipartition
+package com.github.masx200.leetcode_test.possible_bipartition
 
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json

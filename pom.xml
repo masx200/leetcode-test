@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>leetcode-test</artifactId>
-    <groupId>org.masx200</groupId>
+    <groupId>com.github.masx200</groupId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
 

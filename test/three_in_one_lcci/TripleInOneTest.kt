@@ -1,4 +1,4 @@
-package org.masx200.leetcode_test.three_in_one_lcci
+package com.github.masx200.leetcode_test.three_in_one_lcci
 
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test

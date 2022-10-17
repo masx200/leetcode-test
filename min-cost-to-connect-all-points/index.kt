@@ -1,4 +1,4 @@
-package org.masx200.leetcode_test.min_cost_to_connect_all_points
+package com.github.masx200.leetcode_test.min_cost_to_connect_all_points
 
 import kotlin.math.abs
 import kotlin.math.min

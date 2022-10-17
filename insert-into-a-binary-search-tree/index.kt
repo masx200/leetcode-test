@@ -1,4 +1,4 @@
-package org.masx200.leetcode_test.insert_into_a_binary_search_tree
+package com.github.masx200.leetcode_test.insert_into_a_binary_search_tree
 
 class Solution {
     fun insertIntoBST(root: TreeNode?, `val`: Int): TreeNode {
