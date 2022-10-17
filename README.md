@@ -71,6 +71,8 @@ https://leetcode.cn/problems/count-number-of-distinct-integers-after-reverse-ope
 
 https://leetcode.cn/problems/possible-bipartition/
 
+https://leetcode.cn/problems/construct-binary-search-tree-from-preorder-traversal/
+
 https://leetcode.cn/problems/fruit-into-baskets/
 
 https://leetcode.cn/problems/WNC0Lk/
