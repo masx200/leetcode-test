@@ -20,6 +20,10 @@
 
     <repositories>
         <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+        <repository>
             <id>mavenCentral</id>
             <url>https://repo1.maven.org/maven2/</url>
         </repository>
@@ -48,7 +52,6 @@
                         <version>${kotlin.version}</version>
                     </dependency>
                 </dependencies>
-
 
 
                 <version>1.7.20</version>
@@ -129,6 +132,11 @@
     </build>
 
     <dependencies>
+        <dependency>
+            <groupId>com.github.masx200</groupId>
+            <artifactId>leetcode-treenode-java</artifactId>
+            <version>1.0.1</version>
+        </dependency>
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
             <artifactId>kotlin-test-junit5</artifactId>
