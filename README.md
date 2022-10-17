@@ -45,6 +45,8 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode.cn/problems/numbers-at-most-n-given-digit-set/
+
 https://leetcode.cn/problems/er-cha-shu-ran-se-UGC/
 
 https://leetcode.cn/problems/combination-sum-iii/
