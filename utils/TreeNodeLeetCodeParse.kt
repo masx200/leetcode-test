@@ -4,7 +4,7 @@ import com.github.masx200.leetcode_treenode_java.TreeNode.constructTree
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
 fun TreeNodeLeetCodeParse(s: String): TreeNode? {
-    return treeNodeNew(constructTree(Json.decodeFromString(s)))
+    return treeNodeNew(constructTree(Json.decodeFromString<Array<Int?>>(s)))
 }
 typealias TreeNodeClass = com.github.masx200.leetcode_treenode_java.TreeNode
 
