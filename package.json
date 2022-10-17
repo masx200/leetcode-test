@@ -1,7 +1,7 @@
 {
     "type": "module",
     "name": "@masx200/leetcode-test",
-    "version": "1.0.0",
+    "version": "10.10.0",
     "main": "index.js",
     "repository": {
         "type": "git",
