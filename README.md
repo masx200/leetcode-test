@@ -8,6 +8,8 @@ leetcode 测试
 
 #### 软件架构说明
 
+### maven
+
 [![](https://jitpack.io/v/masx200/leetcode-test.svg)](https://jitpack.io/#masx200/leetcode-test)
 
 To get a Git project into your build:
