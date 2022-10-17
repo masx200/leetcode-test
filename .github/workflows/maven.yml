@@ -24,3 +24,5 @@ jobs:
           cache: maven
       - name: test with Maven
         run: mvn test --file pom.xml
+      - name: install with maven
+        run: mvn  install -DskipTests
