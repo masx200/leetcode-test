@@ -1,4 +1,4 @@
-import { assertEquals } from "https://deno.land/std@0.159.0/testing/asserts.ts";
+import { assertEquals } from "https://deno.land/std@0.160.0/testing/asserts.ts";
 import waysToBuyPensPencils from "./index.ts";
 Deno.test("number-of-ways-to-buy-pens-and-pencils", () => {
     assertEquals(waysToBuyPensPencils(20, 10, 5), 9);
