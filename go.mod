@@ -5,7 +5,7 @@ go 1.18
 require (
 	github.com/masx200/leetcode-test/serialize-and-deserialize-binary-tree v0.0.0-20221017000141-5ff9e538c5da
 	github.com/masx200/leetcode-test/utils v0.0.0-20221017000141-5ff9e538c5da
-	gotest.tools/v3 v3.3.0
+	gotest.tools/v3 v3.4.0
 )
 
 require github.com/akrennmair/slice v0.0.0-20220105203817-49445747ab81
