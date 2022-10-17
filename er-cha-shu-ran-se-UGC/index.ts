@@ -1,9 +1,9 @@
 import { TreeNode } from "../binary-tree-inorder-traversal/TreeNode.ts";
-function maxValue(root: TreeNode | null, k: number) {
+function maxValue(root: TreeNode | null, k: number): number {
     return Math.max(...dfs(root, k));
 }
-function dfs(root: TreeNode | null, k: number) {
-    const ans = Array(k + 1).fill(0);
+function dfs(root: TreeNode | null, k: number): number[] {
+    const ans = Array<number>(k + 1).fill(0);
     if (!root) return ans;
 
     const left = dfs(root.left, k);
