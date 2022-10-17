@@ -1,6 +1,7 @@
+github.com/akrennmair/slice v0.0.0-20220105203817-49445747ab81/go.mod h1:jk5mJ+KFznfxbCEsOPgmJkozvBfVGeaqIMs31NhXlv0=
 github.com/masx200/leetcode-test/maximum-binary-tree-ii v0.0.0-20221013013845-c54bd13d5663/go.mod h1:oqX+13lMG74G7HX+HUgf27bUSAzLGFsVwFnhblx7MOA=
 github.com/masx200/leetcode-test/utils v0.0.0-20220825072430-380d3e0e30a2/go.mod h1:GHVmjGgidkD2HbnEwJFVT+H67tvNRV/qHqjmINz/dHo=
-golang.org/x/crypto v0.0.0-20200622213623-75b288015ac9 h1:psW17arqaxU48Z5kZ0CQnkZWQJsqcURM6tKiBApRjXI=
-golang.org/x/net v0.0.0-20201021035429-f5854403a974 h1:IX6qOQeG5uLjB/hjjwjedwfjND0hgjPMMyO1RoIXQNI=
-golang.org/x/text v0.3.3 h1:cokOdA+Jmi5PJGXLlLllQSgYigAEfHXJAERHVMaCc2k=
-golang.org/x/text v0.3.7 h1:olpwvP2KacW1ZWvsR7uQhoyTYvKAupfQrRGBFM352Gk=
+github.com/stretchr/objx v0.4.0/go.mod h1:YvHI0jy2hoMjB+UWwv71VJQ9isScKT/TqJzVSSt89Yw=
+github.com/stretchr/testify v1.7.1/go.mod h1:6Fq8oRcR53rry900zMqJjRRixrwX3KX962/h/Wwjteg=
+github.com/stretchr/testify v1.8.0/go.mod h1:yNjHg4UonilssWZ8iaSj1OCr/vHnekPRkoO+kdMU+MU=
+gopkg.in/yaml.v3 v3.0.1/go.mod h1:K4uyk7z7BCEPqu6E+C64Yfv1cQ7kz7rIZviUmN+EgEM=
