@@ -1,10 +1,3 @@
-github.com/davecgh/go-spew v1.1.0 h1:ZDRjVQ15GmhC3fiQ8ni8+OwkZQO4DARzQgrnXU1Liz8=
-github.com/google/go-cmp v0.5.8 h1:e6P7q2lk1O+qJJb4BtCQXlK8vWEO8V1ZeuEdJNOqZyg=
-github.com/masx200/leetcode-TreeNode-go v1.0.5 h1:SCl1Ku93oMHWstzjoEa1hkh+gsRu9Lv/9/R9gIUamqI=
 github.com/masx200/leetcode-TreeNode-go v1.0.5/go.mod h1:eIc8UV+ltx46u5IfGFBG/U5CZ4hhWNckYbwykIBClqA=
-github.com/masx200/leetcode-test/serialize-and-deserialize-binary-tree v0.0.0-20220825072430-380d3e0e30a2 h1:33VEOTS2x7yTFGGRWFVfNVyfgHgMKp3J44Cm40gv0WU=
-github.com/masx200/leetcode-test/serialize-and-deserialize-binary-tree v0.0.0-20220825072430-380d3e0e30a2/go.mod h1:WERZIbs/GoCIGQMt6FbOuDZBOkCi2oQlWFF88WfmKYI=
-github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
-github.com/stretchr/testify v1.7.0 h1:nwc3DEeHmmLAfoZucVR881uASk0Mfjw8xYJ99tb5CcY=
-gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c h1:dUUwHk2QECo/6vqA44rthZ8ie2QXMNeKRTHCNY2nXvo=
-gotest.tools/v3 v3.3.0 h1:MfDY1b1/0xN1CyMlQDac0ziEy9zJQd9CXBRRDHw2jJo=
+github.com/masx200/leetcode-test/serialize-and-deserialize-binary-tree v0.0.0-20221017000141-5ff9e538c5da h1:k/UDOFBUOEk6Khjn35L5NkoSshwaKd8Bc+TQONleQvU=
+github.com/masx200/leetcode-test/serialize-and-deserialize-binary-tree v0.0.0-20221017000141-5ff9e538c5da/go.mod h1:WERZIbs/GoCIGQMt6FbOuDZBOkCi2oQlWFF88WfmKYI=
