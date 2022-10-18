@@ -1,4 +1,4 @@
-import { assertEquals } from "https://deno.land/std@0.159.0/testing/asserts.ts";
+import { assertEquals } from "https://deno.land/std@0.160.0/testing/asserts.ts";
 import sumPrefixScores from "./index.ts";
 import sumPrefixScores2 from "./sumPrefixScores.ts";
 Deno.test("sum-of-prefix-scores-of-strings", () => {
