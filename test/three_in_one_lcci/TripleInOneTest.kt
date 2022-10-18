@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test
 
 internal class TripleInOneTest {
     @Test
-    fun push() {
+    fun testpush() {
         val tio = TripleInOne(1)
         tio.push(0, 1)
         tio.push(0, 2)

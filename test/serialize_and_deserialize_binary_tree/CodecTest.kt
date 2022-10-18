@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test
 
 internal class CodecTest {
     @Test
-    fun serialize() {
+    fun testserialize() {
      
         assertEquals(
             "[100,[-200,null,null],[300,[100,[20,null,null],[300,null,null]],null]]",
@@ -50,7 +50,7 @@ internal class CodecTest {
     }
 
     @Test
-    fun deserialize() {
+    fun testdeserialize() {
         assertEquals(
             "[100,[20,null,null],[300,[100,[20,null,null],[300,null,null]],null]]",
             Codec().serialize(

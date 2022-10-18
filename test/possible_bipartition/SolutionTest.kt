@@ -8,7 +8,7 @@ import kotlin.test.assertContentEquals
 internal class SolutionTest {
 
     @Test
-    fun possibleBipartition() {
+    fun testpossibleBipartition() {
         assertContentEquals(
             listOf(true, false, false), listOf(
                 Pair(4, "[[1,2],[1,3],[2,4]]"),

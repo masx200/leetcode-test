@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test
 internal class SolutionTest {
 
     @Test
-    fun sum() {
+    fun testsum() {
         assertEquals(Solution().sum(111, 555), 666)
 
         assertNotEquals(Solution().sum(111, 555), 6626)
