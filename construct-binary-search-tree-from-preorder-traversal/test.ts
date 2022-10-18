@@ -12,7 +12,7 @@ Deno.test("construct-binary-search-tree-from-preorder-traversal", () => {
         [
             [8, 5, 10, 1, 7, null, 12],
             [1, null, 3],
-        ].map(TreeNodeLeetCodeFromJSON)
+        ].map(TreeNodeLeetCodeFromJSON),
     );
     assertEquals(
         [
@@ -24,6 +24,6 @@ Deno.test("construct-binary-search-tree-from-preorder-traversal", () => {
         [
             [8, 5, 10, 1, 7, null, 12],
             [1, null, 3],
-        ]
+        ],
     );
 });
