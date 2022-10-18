@@ -1,4 +1,4 @@
-import { assertEquals } from "https://deno.land/std@0.159.0/testing/asserts.ts";
+import { assertEquals } from "https://deno.land/std@0.160.0/testing/asserts.ts";
 
 import { ListNode as Node } from "../reverse-linked-list/ListNode.ts";
 import { ArrayToCircularLinkedList } from "./ArrayToCircularLinkedList.ts";
