@@ -10,7 +10,7 @@ private fun treeNodeCreate(t: TreeNode?): TreeNodeClass? {
     if (t == null) {
         return null
     }
-    val n = TreeNodeClass.constructTree(arrayOf(0))
+    val n = TreeNodeClass()
     n.`val` = t.`val`
     n.left = treeNodeCreate(t.left)
     n.right = treeNodeCreate(t.right)
