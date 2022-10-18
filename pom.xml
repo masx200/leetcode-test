@@ -88,6 +88,7 @@
                             <sourceDirs>
                                 <sourceDir>construct-binary-search-tree-from-preorder-traversal</sourceDir>
                                 <source>er-cha-shu-ran-se-UGC</source>
+                                <source>er-cha-sou-suo-shu-de-di-kda-jie-dian-lcof</source>
                                 <source>utils</source>
                                 <source>add-two-integers</source>
                                 <source>design-skiplist</source>
