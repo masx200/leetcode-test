@@ -1,9 +1,10 @@
 package er_cha_sou_suo_shu_de_di_kda_jie_dian_lcof
 
-import serialize_and_deserialize_binary_tree "github.com/masx200/leetcode-test/serialize-and-deserialize-binary-tree"
-
 import (
+	"context"
 	"errors"
+
+	serialize_and_deserialize_binary_tree "github.com/masx200/leetcode-test/serialize-and-deserialize-binary-tree"
 )
 
 func KthLargest(root *TreeNode, k int) int {
@@ -14,8 +15,9 @@ type TreeNode = serialize_and_deserialize_binary_tree.TreeNode
 
 func kthLargest(root *TreeNode, k int) int {
 	i := 1
-	gen := ReverseInOrderIterator(root)
-
+	ctx, cancel := context.WithCancel(context.Background())
+	gen := ReverseInOrderIterator(ctx, root)
+	defer cancel()
 	for v := range gen {
 
 		if i == k {
@@ -25,26 +27,38 @@ func kthLargest(root *TreeNode, k int) int {
 	}
 	panic(errors.New("unreachable"))
 }
-func ReverseInOrderIterator(root *TreeNode) (gen chan int) {
+func ReverseInOrderIterator(ctx context.Context, root *TreeNode) (gen chan int) {
 	gen = make(chan int)
 
-	if root == nil {
-		close(gen)
-		return
-	}
 	go func() {
-		WriteAll(gen, ReverseInOrderIterator(root.Right))
 
-		gen <- root.Val
-		WriteAll(gen, ReverseInOrderIterator(root.Left))
-		close(gen)
+		defer close(gen)
+		if root == nil {
+
+			return
+		}
+		WriteAll(ctx, gen, ReverseInOrderIterator(ctx, root.Right))
+		select {
+		case <-ctx.Done():
+			return
+		default:
+			gen <- root.Val
+		}
+		WriteAll(ctx, gen, ReverseInOrderIterator(ctx, root.Left))
+
 	}()
 
 	return
 }
-func WriteAll(target chan int, source chan int) {
+func WriteAll(ctx context.Context, target chan int, source chan int) {
 
 	for v := range source {
-		target <- v
+		select {
+		case <-ctx.Done():
+			return
+		default:
+			target <- v
+		}
+
 	}
 }
