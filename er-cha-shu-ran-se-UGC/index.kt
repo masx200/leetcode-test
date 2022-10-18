@@ -8,7 +8,7 @@ class Solution {
     }
 }
 
-fun dfs(root: TreeNode?, k: Int): IntArray {
+private fun dfs(root: TreeNode?, k: Int): IntArray {
     val ans = IntArray(k + 1)
 
     if (root == null) {
