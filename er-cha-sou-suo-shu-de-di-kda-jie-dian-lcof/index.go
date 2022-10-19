@@ -42,7 +42,7 @@ select {
 		case <-ctx.Done():
 			return
 		default:
-			target <- v
+			{}
 		}
 
 		YieldAll(ctx, gen, ReverseInOrderIterator(ctx, root.Right))
