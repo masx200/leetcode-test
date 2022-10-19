@@ -37,28 +37,31 @@ func ReverseInOrderIterator(ctx context.Context, root *TreeNode) (gen chan int) 
 
 			return
 		}
-		WriteAll(ctx, gen, ReverseInOrderIterator(ctx, root.Right))
-		select {
-		case <-ctx.Done():
-			return
-		default:
-			gen <- root.Val
-		}
-		WriteAll(ctx, gen, ReverseInOrderIterator(ctx, root.Left))
+		YieldAll(ctx, gen, ReverseInOrderIterator(ctx, root.Right))
+		YieldOne(
+			ctx, gen, root.Val)
+
+		YieldAll(ctx, gen, ReverseInOrderIterator(ctx, root.Left))
 
 	}()
 
 	return
 }
-func WriteAll(ctx context.Context, target chan int, source chan int) {
+func YieldAll(ctx context.Context, target chan int, source chan int) {
 
 	for v := range source {
-		select {
-		case <-ctx.Done():
-			return
-		default:
-			target <- v
-		}
+		YieldOne(
+			ctx, target, v)
 
 	}
+}
+func YieldOne(ctx context.Context, target chan int, source int) {
+
+	select {
+	case <-ctx.Done():
+		return
+	default:
+		target <- source
+	}
+
 }
