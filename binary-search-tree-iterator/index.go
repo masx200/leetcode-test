@@ -44,6 +44,14 @@ func InOrderIterator(ctx context.Context, root *TreeNode) (gen chan int) {
 
 			return
 		}
+
+	select {
+		case <-ctx.Done():
+			return
+		default:
+			{}
+		}
+
 		YieldAll(ctx, gen, InOrderIterator(ctx, root.Left))
 		YieldOne(
 			ctx, gen, root.Val)
