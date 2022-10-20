@@ -38,11 +38,12 @@ func ReverseInOrderIterator(ctx context.Context, root *TreeNode) (gen chan int) 
 			return
 		}
 
-select {
+		select {
 		case <-ctx.Done():
 			return
 		default:
-			{}
+			{
+			}
 		}
 
 		YieldAll(ctx, gen, ReverseInOrderIterator(ctx, root.Right))
