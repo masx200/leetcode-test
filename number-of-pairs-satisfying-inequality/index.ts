@@ -1,4 +1,5 @@
 import { BinaryIndexTree } from "../rank-from-stream-lcci/BinaryIndexTree.ts";
+import { lowerBound } from "./lowerBound.ts";
 export default function numberOfPairs(
     nums1: number[],
     nums2: number[],
@@ -15,14 +16,4 @@ export default function numberOfPairs(
         t.update(lowerBound(b, x) + 1, +1);
     }
     return ans;
-}
-export function lowerBound(a: number[], x: number) {
-    let left = 0,
-        right = a.length;
-    while (left < right) {
-        const mid = Math.floor(left + (right - left) / 2);
-        if (a[mid] < x) left = mid + 1;
-        else right = mid;
-    }
-    return left;
 }

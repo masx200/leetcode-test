@@ -45,6 +45,8 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode.cn/problems/QO5KpG/
+
 https://leetcode.cn/problems/online-stock-span/
 
 https://leetcode.cn/problems/dota2-senate/

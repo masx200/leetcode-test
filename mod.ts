@@ -44,6 +44,7 @@ import { searchSegmentChildren } from "./my-calendar-ii/searchSegmentChildren.ts
 import { searchSegmentLeaf } from "./my-calendar-ii/searchSegmentLeaf.ts";
 import { SegmentTree } from "./my-calendar-iii/SegmentTree.ts";
 import { Node as NAryNode } from "./n-ary-tree-level-order-traversal/Node.ts";
+import { lowerBound } from "./number-of-pairs-satisfying-inequality/lowerBound.ts";
 import { traverseInOrder } from "./NyZD2B/traverseInOrder.ts";
 import { getVariable, ScopeList } from "./parse-lisp-expression/index.ts";
 import { BinaryIndexTree } from "./rank-from-stream-lcci/BinaryIndexTree.ts";
@@ -88,7 +89,7 @@ import {
 import { cos } from "./valid-boomerang/cos.ts";
 import { dot } from "./valid-boomerang/dot.ts";
 import { norm } from "./valid-boomerang/norm.ts";
-
+export { lowerBound };
 export { BinaryIndexTree };
 export { TreeNodeLeetCodeFromJSON, TreeNodeLeetCodeToJSON };
 export { DoublyLinkedList };
