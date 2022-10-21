@@ -47,7 +47,6 @@ export default function totalStrength(strength: number[]): number {
 
     return Number((ans + BigMOD) % BigMOD);
 }
-
-function last<T>(stack: T[]): T {
+export function last<T>(stack: T[]): T {
     return stack[stack.length - 1];
 }
