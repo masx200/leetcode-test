@@ -13,7 +13,7 @@ export default class NumArray {
     }
 
     sumRange(left: number, right: number): number {
-        return range(left, right, this.#root, 0, this.#len - 1);
+        return query(left, right, this.#root, 0, this.#len - 1);
     }
 }
 export function build(
@@ -55,7 +55,7 @@ export function change(
     }
     node.val = node.left.val + node.right.val;
 }
-export function range(
+export function query(
     left: number,
     right: number,
     node: TreeNode,
@@ -70,13 +70,13 @@ export function range(
         throw Error("node.left and node.right empty");
     }
     if (right <= mid) {
-        return range(left, right, node.left, start, mid);
+        return query(left, right, node.left, start, mid);
     } else if (left > mid) {
-        return range(left, right, node.right, mid + 1, end);
+        return query(left, right, node.right, mid + 1, end);
     } else {
         return (
-            range(left, mid, node.left, start, mid) +
-            range(mid + 1, right, node.right, mid + 1, end)
+            query(left, mid, node.left, start, mid) +
+            query(mid + 1, right, node.right, mid + 1, end)
         );
     }
 }
