@@ -1,13 +1,11 @@
 export function upperBound(
-    a: number[][],
-    x: number,
-    greater: (v: number[], x: number) => boolean,
-    left = 0,
-    right = a.length,
+    left: number,
+    right: number,
+    greater: (m: number) => boolean,
 ): number {
     while (left < right) {
         const mid = Math.floor(left + (right - left) / 2);
-        if (greater(a[mid], x)) right = mid;
+        if (greater(mid)) right = mid;
         else left = mid + 1;
     }
     return left;
