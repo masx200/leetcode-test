@@ -10,6 +10,7 @@ class SegmentTree<T> {
     ) {
         this.#root = new TreeNode<T>();
         this.#build(this.#root, start, end);
+
     }
     #build(node: TreeNode<T>, start: number, end: number) {
         if (start === end) {
