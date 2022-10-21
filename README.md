@@ -45,6 +45,8 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode.cn/problems/minimum-lines-to-represent-a-line-chart/
+
 https://leetcode.cn/problems/jump-game-ii/
 
 https://leetcode.cn/problems/search-in-rotated-sorted-array/
