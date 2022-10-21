@@ -45,6 +45,8 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode.cn/problems/maximum-profit-in-job-scheduling/
+
 https://leetcode.cn/problems/booking-concert-tickets-in-groups/
 
 https://leetcode.cn/problems/sum-of-total-strength-of-wizards/

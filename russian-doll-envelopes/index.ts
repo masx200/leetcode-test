@@ -24,8 +24,7 @@ export default function maxEnvelopes(envelopes: number[][]): number {
     }
     return f.length;
 }
-
-function binarySearch(f: number[], target: number) {
+export function binarySearch(f: number[], target: number) {
     let low = 0,
         high = f.length - 1;
     while (low < high) {
