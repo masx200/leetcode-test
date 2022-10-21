@@ -1,4 +1,4 @@
-import { le as binarySearch } from "https://esm.sh/@masx200/binary-search-bounds@2.0.5";
+import { le as lowerBound } from "https://esm.sh/@masx200/binary-search-bounds@2.0.5";
 import { BinaryIndexTree } from "../rank-from-stream-lcci/BinaryIndexTree.ts";
 
 export default function reversePairs(nums: number[]): number {
@@ -6,7 +6,7 @@ export default function reversePairs(nums: number[]): number {
     const tmp = Array.from(nums);
     tmp.sort((a, b) => a - b);
     for (let i = 0; i < n; ++i) {
-        nums[i] = binarySearch(tmp, nums[i]) + 1;
+        nums[i] = lowerBound(tmp, nums[i]) + 1;
     }
     const bit = new BinaryIndexTree(n);
     let ans = 0;

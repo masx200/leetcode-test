@@ -18,13 +18,13 @@ export default function maxEnvelopes(envelopes: number[][]): number {
         if (num > f[f.length - 1]) {
             f.push(num);
         } else {
-            const index = binarySearch(f, num);
+            const index = lowerBound(f, num);
             f[index] = num;
         }
     }
     return f.length;
 }
-export function binarySearch(f: number[], target: number) {
+export function lowerBound(f: number[], target: number) {
     let low = 0,
         high = f.length - 1;
     while (low < high) {

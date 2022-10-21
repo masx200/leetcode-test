@@ -40,15 +40,3 @@ export default class Solution {
         return low;
     }
 }
-// const result: Record<string, number> = {};
-// const solution = new Solution([
-//     [-2, -2, 1, 1],
-//     [2, 2, 4, 6],
-// ]);
-
-// for (let i = 0; i < 92100000; i++) {
-//     const point = solution.pick();
-//     const key = JSON.stringify(point);
-//     result[key] = 1 + (result[key] ?? 0);
-// }
-// console.log(result);

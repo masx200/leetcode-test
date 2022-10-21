@@ -1,17 +1,17 @@
 import { TreeNode } from "./TreeNode.ts";
 
 class SegmentTree<T> {
-    root: TreeNode<T>;
+    #root: TreeNode<T>;
     constructor(
         public start: number,
         public end: number,
         public initializer: (index: number) => T,
         public operation: (a: T, b: T) => T,
     ) {
-        this.root = new TreeNode<T>();
-        this.build(this.root, start, end);
+        this.#root = new TreeNode<T>();
+        this.#build(this.#root, start, end);
     }
-    build(node: TreeNode<T>, start: number, end: number) {
+    #build(node: TreeNode<T>, start: number, end: number) {
         if (start === end) {
             node.value = this.initializer(start);
             return;
@@ -19,14 +19,14 @@ class SegmentTree<T> {
         const mid = Math.floor((start + end) / 2);
         node.left = new TreeNode<T>();
         node.right = new TreeNode<T>();
-        this.build(node.left, start, mid);
-        this.build(node.right, mid + 1, end);
+        this.#build(node.left, start, mid);
+        this.#build(node.right, mid + 1, end);
         node.value = this.operation(node.left.value, node.right.value);
     }
     change(
         index: number,
         value: T,
-        node: TreeNode<T> = this.root,
+        node: TreeNode<T> = this.#root,
         start: number = this.start,
         end: number = this.end,
     ): void {
@@ -48,7 +48,7 @@ class SegmentTree<T> {
     query(
         left: number,
         right: number,
-        node: TreeNode<T> = this.root,
+        node: TreeNode<T> = this.#root,
         start: number = this.start,
         end: number = this.end,
     ): T {
