@@ -1,10 +1,5 @@
 export default function strStr(haystack: string, needle: string): number {
     if (needle.length == 0) return 0;
-    // return haystack.search(needle)
-
-    // const index=haystack.indexOf(needle[0])
-
-    // if(index===-1){return -1}
 
     const spl = Array.from(haystack);
     const ind = [...spl.entries()]
