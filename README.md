@@ -45,6 +45,8 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode.cn/problems/partition-array-into-disjoint-intervals/
+
 https://leetcode.cn/problems/maximum-profit-in-job-scheduling/
 
 https://leetcode.cn/problems/booking-concert-tickets-in-groups/
