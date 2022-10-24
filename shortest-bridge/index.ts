@@ -7,8 +7,7 @@ export default function shortestBridge(grid: number[][]): number {
     ];
 
     let firstIsland: [number, number][] = [];
-    loop:
-    for (const [i, a] of grid.entries()) {
+    loop: for (const [i, a] of grid.entries()) {
         for (const [j, v] of a.entries()) {
             if (v === 1) {
                 firstIsland.push([i, j]);
@@ -16,7 +15,8 @@ export default function shortestBridge(grid: number[][]): number {
                 for (const [x, y] of firstIsland) {
                     grid[x][y] = 2;
                     for (const [q, w] of directions) {
-                        const [e, r] = [x + q, y + w];
+                        const e = x + q;
+                        const r = y + w;
                         if (grid[e]?.[r] === 1) {
                             firstIsland.push([e, r]);
                             grid[e][r] = 2;
@@ -34,7 +34,8 @@ export default function shortestBridge(grid: number[][]): number {
         for (const [x, y] of firstIsland) {
             grid[x][y] = 2;
             for (const [q, w] of directions) {
-                const [e, r] = [x + q, y + w];
+                const e = x + q;
+                const r = y + w;
                 if (grid[e]?.[r] === 1) {
                     return step;
                 }
