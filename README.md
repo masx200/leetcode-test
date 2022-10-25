@@ -45,6 +45,8 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode.cn/problems/shortest-subarray-with-sum-at-least-k/
+
 https://leetcode.cn/problems/shortest-bridge/
 
 https://leetcode.cn/problems/partition-array-into-disjoint-intervals/
