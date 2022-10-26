@@ -33,7 +33,7 @@ import { PrefixTreeSearchEach } from "./longest-word-in-dictionary/PrefixTreeSea
 import { PrefixTreeSearchPrefixEach } from "./longest-word-in-dictionary/PrefixTreeSearchPrefixEach.ts";
 import { PrefixTreeWithSum } from "./map-sum-pairs/PrefixTreeWithSum.ts";
 import { calculateStraightLineEquation } from "./max-points-on-a-line/calculateStraightLineEquation.ts";
-import { greatestCommonDivisor } from "./max-points-on-a-line/greatest_common_divisor.ts";
+import { gcd } from "./max-points-on-a-line/greatest_common_divisor.ts";
 import { uniqueStraightLineEquation } from "./max-points-on-a-line/uniqueStraightLineEquation.ts";
 import { bigintMax } from "./maximum-width-of-binary-tree/bigint_max.ts";
 import { bigintMin } from "./maximum-width-of-binary-tree/bigint_min.ts";
@@ -73,6 +73,7 @@ import { multiply_Mod } from "./super-pow/multiply_Mod.ts";
 import { pow_bigint_mod } from "./super-pow/pow_bigint_mod.ts";
 import { superPow_mod } from "./super-pow/superPow_mod.ts";
 import { traversal_bst_range } from "./tweet-counts-per-frequency/traversal_bst_range.ts";
+import { gcd as gcdBigint } from "./ugly-number-iii/index.ts";
 import { float64equals } from "./utils/float64equals.ts";
 import { PrefixTreeClear } from "./utils/PrefixTreeClear.ts";
 import { PrefixTreeForEach } from "./utils/PrefixTreeForEach.ts";
@@ -99,10 +100,11 @@ export { climbing_stairs_bigint } from "./climbing-stairs/climbing_stairs_bigint
 export { fibonacci_bigint } from "./fibonacci-number/fibonacci_bigint.ts";
 export { PrefixTreeWithSum };
 export { PrefixTreeClear };
-export { greatestCommonDivisor };
+export { gcd };
 export { calculateStraightLineEquation, uniqueStraightLineEquation };
 export { parseComplex };
 export {
+    gcdBigint,
     left_rotate,
     TrieNode,
     TrieNodeCountWordsEqualTo,

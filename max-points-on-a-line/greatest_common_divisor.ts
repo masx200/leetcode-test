@@ -1,3 +1,3 @@
-export function greatestCommonDivisor(a: number, b: number): number {
-    return b != 0 ? greatestCommonDivisor(b, a % b) : a;
+export function gcd(a: number, b: number): number {
+    return b != 0 ? gcd(b, a % b) : a;
 }

@@ -1,4 +1,4 @@
-import { greatestCommonDivisor } from "../max-points-on-a-line/greatest_common_divisor.ts";
+import { gcd } from "../max-points-on-a-line/greatest_common_divisor.ts";
 
 export default getCoprimes;
 function getCoprimes(nums: number[], edges: number[][]): number[] {
@@ -17,7 +17,7 @@ function getCoprimes(nums: number[], edges: number[][]): number[] {
 
         for (const i of Array(51).keys()) {
             for (let j = i; j < 51; j++) {
-                prime[i][j] = prime[j][i] = greatestCommonDivisor(i, j) === 1;
+                prime[i][j] = prime[j][i] = gcd(i, j) === 1;
             }
         }
     }

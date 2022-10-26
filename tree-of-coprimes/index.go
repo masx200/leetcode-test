@@ -19,7 +19,7 @@ func getCoprimes(nums []int, edges [][]int) []int {
 		}
 		for i := 0; i < 51; i++ {
 			for j := i; j < 51; j++ {
-				prime[j][i] = greatestCommonDivisor(i, j) == 1
+				prime[j][i] = Gcd(i, j) == 1
 				prime[i][j] = prime[j][i]
 			}
 		}
@@ -66,9 +66,9 @@ func getCoprimes(nums []int, edges [][]int) []int {
 	return results
 }
 
-func greatestCommonDivisor(a int, b int) int {
+func Gcd(a int, b int) int {
 	for b != 0 {
-		return greatestCommonDivisor(b, a%b)
+		return Gcd(b, a%b)
 	}
 	return a
 }
