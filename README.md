@@ -45,6 +45,8 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode.cn/problems/smallest-subarrays-with-maximum-bitwise-or/
+
 https://leetcode.cn/problems/determine-if-two-events-have-conflict/
 
 https://leetcode.cn/problems/shortest-subarray-with-sum-at-least-k/
