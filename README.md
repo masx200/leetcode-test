@@ -45,6 +45,8 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode.cn/problems/increasing-subsequences/
+
 https://leetcode.cn/problems/car-fleet/
 
 https://leetcode.cn/problems/text-justification/
