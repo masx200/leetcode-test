@@ -22,9 +22,9 @@ class Codec {
     }
 
     fun deserialize(data: String): TreeNode? {
-
+        val datastr = data.replace(" ", "")
         var i = 0
-        fun dfs(): TreeNode? {
+        fun dfs(data: String): TreeNode? {
             val node = TreeNode()
             val children = mutableListOf<TreeNode?>()
             var sign = 1
@@ -50,7 +50,7 @@ class Codec {
                     sign = 1
                 } else if (data[i] == '[') {
                     i++
-                    children.add(dfs())
+                    children.add(dfs(data))
                 } else if (data[i] == ']') {
                     i++
                     children.forEachIndexed { index, tree ->
@@ -61,14 +61,14 @@ class Codec {
                 } else if (data.substring(i, i + 4) == "null") {
                     i += 4
                     children.add(null)
-                }
+                } else i++
             }
 
             return children[0]
         }
         return when (data) {
             "null" -> null
-            else -> dfs()
+            else -> dfs(datastr)
         }
     }
 }
