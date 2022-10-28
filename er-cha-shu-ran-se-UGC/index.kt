@@ -4,7 +4,7 @@ import com.github.masx200.leetcode_test.insert_into_a_binary_search_tree.TreeNod
 
 class Solution {
     fun maxValue(root: TreeNode?, k: Int): Int {
-        return dfs(root, k).max() ?: Int.MIN_VALUE
+        return dfs(root, k)[k]
     }
 }
 
