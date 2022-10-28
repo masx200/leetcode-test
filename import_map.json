@@ -1,6 +1,6 @@
 {
     "imports": {
         "leetcode-class": "https://esm.sh/@masx200/leetcode-class@1.2.5",
-        "asserts": "https://deno.land/std@0.160.0/testing/asserts.ts"
+        "asserts": "https://deno.land/std@0.161.0/testing/asserts.ts"
     }
 }

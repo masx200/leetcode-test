@@ -1,4 +1,4 @@
-import { assertEquals } from "https://deno.land/std@0.160.0/testing/asserts.ts";
+import { assertEquals } from "https://deno.land/std@0.161.0/testing/asserts.ts";
 import countComponents from "./index.ts";
 Deno.test("number-of-connected-components-in-an-undirected-graph", function () {
     const n = 5,
