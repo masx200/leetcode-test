@@ -45,6 +45,8 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode.cn/problems/nge-tou-zi-de-dian-shu-lcof
+
 https://leetcode.cn/problems/count-of-matches-in-tournament/
 
 https://leetcode.cn/problems/na-ying-bi/
