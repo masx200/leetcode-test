@@ -1,4 +1,4 @@
-package com.github.masx200.letter_case_permutation
+package com.github.masx200.leetcode_test.letter_case_permutation
 
 class Solution {
     fun letterCasePermutation(s: String): List<String> {
