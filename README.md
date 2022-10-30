@@ -45,6 +45,8 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode.cn/problems/magical-string/
+
 https://leetcode.cn/problems/er-cha-sou-suo-shu-de-hou-xu-bian-li-xu-lie-lcof/
 
 https://leetcode.cn/problems/nge-tou-zi-de-dian-shu-lcof
