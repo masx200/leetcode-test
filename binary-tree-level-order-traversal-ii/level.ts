@@ -1,4 +1,4 @@
-import { TreeNode } from '../binary-tree-inorder-traversal/TreeNode.ts';
+import { TreeNode } from "../binary-tree-inorder-traversal/TreeNode.ts";
 
 export function level(nodes: TreeNode[], output: (r: number[]) => void) {
     if (nodes.length === 0) return;

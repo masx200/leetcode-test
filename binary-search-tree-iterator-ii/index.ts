@@ -1,4 +1,4 @@
-import { TreeNode } from '../binary-tree-inorder-traversal/TreeNode.ts';
+import { TreeNode } from "../binary-tree-inorder-traversal/TreeNode.ts";
 
 export function* InOrderIterator(root: TreeNode | null): Generator<number> {
     if (!root) return;

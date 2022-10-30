@@ -1,8 +1,8 @@
-import { assertEquals } from 'https://deno.land/std@0.161.0/testing/asserts.ts';
+import { assertEquals } from "https://deno.land/std@0.161.0/testing/asserts.ts";
 
-import { ArrayToPolyNode } from './ArrayToPolyNode.ts';
-import addPoly from './index.ts';
-import { PolyNodeToArray } from './PolyNodeToArray.ts';
+import { ArrayToPolyNode } from "./ArrayToPolyNode.ts";
+import addPoly from "./index.ts";
+import { PolyNodeToArray } from "./PolyNodeToArray.ts";
 
 Deno.test("add-two-polynomials-represented-as-linked-lists", () => {
     const cases = [

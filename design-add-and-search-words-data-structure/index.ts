@@ -1,5 +1,5 @@
-import { PrefixTree } from '../implement-trie-prefix-tree/PrefixTree.ts';
-import { PrefixTreeInsert } from './PrefixTreeInsert.ts';
+import { PrefixTree } from "../implement-trie-prefix-tree/PrefixTree.ts";
+import { PrefixTreeInsert } from "./PrefixTreeInsert.ts";
 
 interface WordDictionary {
     addWord(word: string): void;

@@ -1,4 +1,4 @@
-import { TreeNode } from '../binary-tree-inorder-traversal/TreeNode.ts';
+import { TreeNode } from "../binary-tree-inorder-traversal/TreeNode.ts";
 
 export default function isBalanced(root: TreeNode | null): boolean {
     return height(root) >= 0;

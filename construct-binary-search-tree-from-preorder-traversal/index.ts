@@ -1,4 +1,4 @@
-import { TreeNode } from '../binary-tree-inorder-traversal/TreeNode.ts';
+import { TreeNode } from "../binary-tree-inorder-traversal/TreeNode.ts";
 
 export default function bstFromPreorder(preorder: number[]): TreeNode | null {
     let index = 0;

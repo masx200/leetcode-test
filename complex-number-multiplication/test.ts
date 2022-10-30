@@ -1,5 +1,5 @@
-import { assertEquals } from '../deps.ts';
-import complexNumberMultiply from './index.ts';
+import { assertEquals } from "../deps.ts";
+import complexNumberMultiply from "./index.ts";
 
 Deno.test("complex-number-multiplication", () => {
     const num1 = "1+1i";

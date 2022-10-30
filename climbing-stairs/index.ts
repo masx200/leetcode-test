@@ -1,4 +1,4 @@
-import { climbing_stairs_bigint } from './climbing_stairs_bigint.ts';
+import { climbing_stairs_bigint } from "./climbing_stairs_bigint.ts";
 
 export default function climbing_stairs(n: number | bigint): number | bigint {
     const result = climbing_stairs_bigint(BigInt(n));

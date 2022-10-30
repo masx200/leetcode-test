@@ -1,8 +1,8 @@
-import { assertEquals } from 'https://deno.land/std@0.161.0/testing/asserts.ts';
+import { assertEquals } from "https://deno.land/std@0.161.0/testing/asserts.ts";
 
-import { TreeNodeLeetCodeFromJSON } from '../utils/TreeNodeLeetCodeParse.ts';
-import { TreeNodeLeetCodeToJSON } from '../utils/TreeNodeLeetCodeStringify.ts';
-import bstFromPreorder from './index.ts';
+import { TreeNodeLeetCodeFromJSON } from "../utils/TreeNodeLeetCodeParse.ts";
+import { TreeNodeLeetCodeToJSON } from "../utils/TreeNodeLeetCodeStringify.ts";
+import bstFromPreorder from "./index.ts";
 
 Deno.test("construct-binary-search-tree-from-preorder-traversal", () => {
     assertEquals(

@@ -1,6 +1,6 @@
-import { assert, assertEquals } from '../deps.ts';
-import { Node } from '../n-ary-tree-level-order-traversal/Node.ts';
-import cloneTree from './index.ts';
+import { assert, assertEquals } from "../deps.ts";
+import { Node } from "../n-ary-tree-level-order-traversal/Node.ts";
+import cloneTree from "./index.ts";
 
 Deno.test("clone-n-ary-tree-0", () => {
     const root = {

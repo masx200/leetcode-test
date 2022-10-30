@@ -1,5 +1,5 @@
-import { assertEquals } from '../deps.ts';
-import maxArea from './index.ts';
+import { assertEquals } from "../deps.ts";
+import maxArea from "./index.ts";
 
 Deno.test("container-with-most-water", () => {
     const input = [1, 8, 6, 2, 5, 4, 8, 3, 7];

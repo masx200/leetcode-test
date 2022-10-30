@@ -1,4 +1,4 @@
-import { Computed } from './Computed.ts';
+import { Computed } from "./Computed.ts";
 
 export class SetWithMin extends Set<number> {
     #first = new Computed(() => (this.size ? Math.min(...this) : -1));

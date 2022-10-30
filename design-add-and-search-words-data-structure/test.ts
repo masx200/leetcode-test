@@ -1,5 +1,5 @@
-import { assertEquals } from '../deps.ts';
-import WordDictionary from './index.ts';
+import { assertEquals } from "../deps.ts";
+import WordDictionary from "./index.ts";
 
 Deno.test("design-add-and-search-words-data-structure", () => {
     const results: boolean[] = [];

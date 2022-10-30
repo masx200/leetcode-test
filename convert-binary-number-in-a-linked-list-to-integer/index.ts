@@ -1,4 +1,4 @@
-import { ListNode } from '../reverse-linked-list/ListNode.ts';
+import { ListNode } from "../reverse-linked-list/ListNode.ts";
 
 export default function getDecimalValue(head: ListNode | null): number {
     if (head?.val === 0) return getDecimalValue(head.next);

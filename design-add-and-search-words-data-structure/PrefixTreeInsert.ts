@@ -1,4 +1,4 @@
-import { PrefixTree } from '../implement-trie-prefix-tree/PrefixTree.ts';
+import { PrefixTree } from "../implement-trie-prefix-tree/PrefixTree.ts";
 
 export function PrefixTreeInsert<T extends PrefixTree>(
     root: T,

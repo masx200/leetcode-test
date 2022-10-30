@@ -1,4 +1,4 @@
-import { TreeNode } from '../binary-tree-inorder-traversal/TreeNode.ts';
+import { TreeNode } from "../binary-tree-inorder-traversal/TreeNode.ts";
 
 class CBTInserter {
     #root: TreeNode | null;

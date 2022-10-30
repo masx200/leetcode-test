@@ -1,4 +1,4 @@
-import { Node } from './Node.ts';
+import { Node } from "./Node.ts";
 
 const cachedNode = new WeakMap<Node, Node>();
 export default function copyRandomList(head: Node | null): Node | null {

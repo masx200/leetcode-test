@@ -1,4 +1,4 @@
-import { TreeNode } from '../mod.ts';
+import { TreeNode } from "../mod.ts";
 
 export function buildBST(
     start: number,

@@ -1,6 +1,6 @@
-import { buildExpression } from './buildExpression.ts';
-import { Expression } from './Expression.ts';
-import { Token } from './Token.ts';
+import { buildExpression } from "./buildExpression.ts";
+import { Expression } from "./Expression.ts";
+import { Token } from "./Token.ts";
 
 export function buildParenthesizedExpression(token: Token) {
     if (!Array.isArray(token)) {

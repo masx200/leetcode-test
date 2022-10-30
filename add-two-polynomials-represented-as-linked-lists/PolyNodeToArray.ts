@@ -1,4 +1,4 @@
-import { PolyNode } from './PolyNode.ts';
+import { PolyNode } from "./PolyNode.ts";
 
 export function PolyNodeToArray(
     list: PolyNode | null,

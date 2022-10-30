@@ -1,6 +1,6 @@
-import { TreeNode } from '../binary-tree-inorder-traversal/TreeNode.ts';
-import { inorder } from './inorder.ts';
-import { merge_sort } from './merge_sort.ts';
+import { TreeNode } from "../binary-tree-inorder-traversal/TreeNode.ts";
+import { inorder } from "./inorder.ts";
+import { merge_sort } from "./merge_sort.ts";
 
 export default function getAllElements(
     root1: TreeNode | null,

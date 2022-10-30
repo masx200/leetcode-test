@@ -1,5 +1,5 @@
-import { TreeNode } from '../binary-tree-inorder-traversal/TreeNode.ts';
-import { sum } from '../richest-customer-wealth/sum.ts';
+import { TreeNode } from "../binary-tree-inorder-traversal/TreeNode.ts";
+import { sum } from "../richest-customer-wealth/sum.ts";
 
 export default function averageOfLevels(root: TreeNode | null): number[] {
     if (!root) return [];

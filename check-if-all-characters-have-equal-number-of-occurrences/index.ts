@@ -1,4 +1,4 @@
-import { groupBy } from '../deps.ts';
+import { groupBy } from "../deps.ts";
 
 export default function areOccurrencesEqual(s: string): boolean {
     //@ts-ignore

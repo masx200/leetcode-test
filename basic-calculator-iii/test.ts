@@ -1,5 +1,5 @@
-import { assertEquals } from '../deps.ts';
-import calculate from './index.ts';
+import { assertEquals } from "../deps.ts";
+import calculate from "./index.ts";
 
 Deno.test("basic-calculator-iii", () => {
     assertEquals(calculate("-199+5998"), -199 + 5998);

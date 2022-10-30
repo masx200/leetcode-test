@@ -1,7 +1,7 @@
-import { assertEquals } from 'https://deno.land/std@0.161.0/testing/asserts.ts';
-import { runScript } from 'leetcode-class';
+import { assertEquals } from "https://deno.land/std@0.161.0/testing/asserts.ts";
+import { runScript } from "leetcode-class";
 
-import BookMyShow from './index.ts';
+import BookMyShow from "./index.ts";
 
 Deno.test("booking-concert-tickets-in-groups", () => {
     assertEquals(

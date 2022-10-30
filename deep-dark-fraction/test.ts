@@ -1,6 +1,6 @@
-import { assertEquals } from 'asserts';
+import { assertEquals } from "asserts";
 
-import fraction from './index.ts';
+import fraction from "./index.ts";
 
 Deno.test("deep-dark-fraction", () => {
     assertEquals(

@@ -1,6 +1,6 @@
-import { ListNode, TreeNode } from '../mod.ts';
-import { get_length_of_list } from '../reverse-linked-list-ii/get_length_of_list.ts';
-import { buildBST } from './buildBST.ts';
+import { ListNode, TreeNode } from "../mod.ts";
+import { get_length_of_list } from "../reverse-linked-list-ii/get_length_of_list.ts";
+import { buildBST } from "./buildBST.ts";
 
 export default function sortedListbuildBST(
     head: ListNode | null,

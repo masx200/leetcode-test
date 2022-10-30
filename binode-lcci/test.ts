@@ -1,6 +1,6 @@
-import { assertEquals } from '../deps.ts';
-import { TreeNode } from '../mod.ts';
-import increasingBST from './index.ts';
+import { assertEquals } from "../deps.ts";
+import { TreeNode } from "../mod.ts";
+import increasingBST from "./index.ts";
 
 Deno.test("binode-lcci-1", () => {
     assertEquals(

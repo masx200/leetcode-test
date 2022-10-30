@@ -1,6 +1,6 @@
-import { TreeNode } from '../binary-tree-inorder-traversal/TreeNode.ts';
-import { assertEquals } from '../deps.ts';
-import levelOrder from './index.ts';
+import { TreeNode } from "../binary-tree-inorder-traversal/TreeNode.ts";
+import { assertEquals } from "../deps.ts";
+import levelOrder from "./index.ts";
 
 Deno.test("binary-tree-level-order-traversal", () => {
     const root = new TreeNode(3);

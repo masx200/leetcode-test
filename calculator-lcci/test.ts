@@ -1,5 +1,5 @@
-import { assertEquals } from '../deps.ts';
-import calculate from './index.ts';
+import { assertEquals } from "../deps.ts";
+import calculate from "./index.ts";
 
 Deno.test("calculator-lcci", () => {
     assertEquals(calculate("3+2*2"), 7);

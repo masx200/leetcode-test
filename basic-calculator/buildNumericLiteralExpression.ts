@@ -1,5 +1,5 @@
-import { Expression } from './Expression.ts';
-import { Token } from './Token.ts';
+import { Expression } from "./Expression.ts";
+import { Token } from "./Token.ts";
 
 export function buildNumericLiteralExpression(token: Token) {
     if (typeof token !== "number") {

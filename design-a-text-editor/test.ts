@@ -1,5 +1,5 @@
-import { assertEquals } from '../deps.ts';
-import TextEditor from './index.ts';
+import { assertEquals } from "../deps.ts";
+import TextEditor from "./index.ts";
 
 Deno.test("design-a-text-editor-1", () => {
     const textEditor = new TextEditor();

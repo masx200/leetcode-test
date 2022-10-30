@@ -1,4 +1,4 @@
-import { Expression } from './Expression.ts';
+import { Expression } from "./Expression.ts";
 
 export interface BinaryExpression {
     type: "BinaryExpression";

@@ -1,4 +1,4 @@
-import { SetWithMin } from './SetWithMin.ts';
+import { SetWithMin } from "./SetWithMin.ts";
 
 class NumberContainers {
     #number_to_indices = new Map<number, SetWithMin>();

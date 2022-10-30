@@ -1,4 +1,4 @@
-import { Tokens } from './Tokens.ts';
+import { Tokens } from "./Tokens.ts";
 
 export function tokenize(s: string): Tokens {
     const tokens: Tokens = [];

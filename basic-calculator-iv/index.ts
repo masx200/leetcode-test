@@ -1,5 +1,5 @@
-import { parse } from './parse.ts';
-import { tokenize } from './tokenize.ts';
+import { parse } from "./parse.ts";
+import { tokenize } from "./tokenize.ts";
 
 export default function basicCalculatorIV(
     expression: string,

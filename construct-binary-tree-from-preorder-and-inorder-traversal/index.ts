@@ -1,4 +1,4 @@
-import { TreeNode } from '../mod.ts';
+import { TreeNode } from "../mod.ts";
 
 function buildTree(preorder: number[], inorder: number[]): TreeNode | null {
     const map = new Map<number, number>();

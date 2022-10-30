@@ -1,5 +1,5 @@
-import { Fraction } from '../fraction-addition-and-subtraction/Fraction.ts';
-import { fractionAdd } from '../fraction-addition-and-subtraction/index.ts';
+import { Fraction } from "../fraction-addition-and-subtraction/Fraction.ts";
+import { fractionAdd } from "../fraction-addition-and-subtraction/index.ts";
 
 export default function fraction(cont: number[]): number[] {
     const result = cont.reduceRight((p, c) =>

@@ -1,4 +1,4 @@
-import { UnionFind } from '../largest-component-size-by-common-factor/UnionFind.ts';
+import { UnionFind } from "../largest-component-size-by-common-factor/UnionFind.ts";
 
 export default function hasValidPath(grid: number[][]): boolean {
     const uf = new UnionFind();
