@@ -1,4 +1,4 @@
-import { BinarySearchTree } from "https://esm.sh/@datastructures-js/binary-search-tree@5.0.2/?dts";
+import { BinarySearchTree } from "https://esm.sh/@datastructures-js/binary-search-tree@5.0.2/";
 
 export function traverseInOrder<
     T extends BinarySearchTree<any>,
@@ -11,7 +11,7 @@ export function traverseInOrder<
         throw new Error(".traverseInOrder expects a callback function");
     }
 
-    const traverseRecursive = (current: ReturnType<T["root"]> | null) => {
+    function traverseRecursive(current: ReturnType<T["root"]> | null) {
         if (signal?.aborted) {
             return;
         }
@@ -27,7 +27,7 @@ export function traverseInOrder<
         cb(current);
         //@ts-ignore
         traverseRecursive(current.getRight());
-    };
+    }
     //@ts-ignore
     traverseRecursive(tree.root());
 }

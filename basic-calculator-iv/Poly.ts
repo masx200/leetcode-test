@@ -2,7 +2,10 @@ export class Poly extends Map<string[], number> {
     clear(): void {
         super.clear();
         this.#keys.clear();
-        this.#map.clear();
+        this.#values.clear();
+    }
+    get size() {
+        return this.#keys.size;
     }
     constructor(entries?: Iterable<[string[], number]>) {
         super();
@@ -13,16 +16,16 @@ export class Poly extends Map<string[], number> {
         }
     }
     has(key: string[]): boolean {
-        return this.#map.has(JSON.stringify(key));
+        return this.#values.has(JSON.stringify(key));
     }
-    #map = new Map<string, number>();
+    #values = new Map<string, number>();
     #keys = new Map<string, string[]>();
     get(key: string[]) {
-        return this.#map.get(JSON.stringify(key));
+        return this.#values.get(JSON.stringify(key));
     }
     set(key: string[], value: number) {
         const k = JSON.stringify(key);
-        this.#map.set(k, value);
+        this.#values.set(k, value);
         this.#keys.set(k, key);
         return this;
     }
@@ -67,9 +70,9 @@ export class Poly extends Map<string[], number> {
     }
     delete(key: string[]): boolean {
         const k = JSON.stringify(key);
-        if (this.#map.has(k)) {
+        if (this.#values.has(k)) {
             this.#keys.delete(k);
-            this.#map.delete(k);
+            this.#values.delete(k);
             return true;
         }
         return false;
@@ -82,20 +85,20 @@ export class Poly extends Map<string[], number> {
         ) => void,
         thisArg?: any,
     ): void {
-        this.#map.forEach((v, k, _m) => {
+        this.#values.forEach((v, k, _m) => {
             const key = this.#keys.get(k) ?? JSON.parse(k);
             callbackfn.call(thisArg, v, key, this);
         }, thisArg);
     }
     values(): IterableIterator<number> {
-        return this.#map.values();
+        return this.#values.values();
     }
     keys(): IterableIterator<string[]> {
         return this.#keys.values();
     }
     *entries(): IterableIterator<[string[], number]> {
         for (const [k, key] of this.#keys.entries()) {
-            yield [key, this.#map.get(k) ?? 0];
+            yield [key, this.#values.get(k) ?? 0];
         }
     }
     [Symbol.iterator]() {

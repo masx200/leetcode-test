@@ -45,6 +45,8 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode.cn/problems/design-movie-rental-system/
+
 https://leetcode.cn/problems/XxZZjK/
 
 https://leetcode.cn/problems/magical-string/

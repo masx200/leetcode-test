@@ -1,4 +1,4 @@
-import { AvlTree } from "https://esm.sh/@datastructures-js/binary-search-tree@5.0.2/?dts";
+import { AvlTree } from "https://esm.sh/@datastructures-js/binary-search-tree@5.0.2/";
 
 import { traverseInOrder } from "./traverseInOrder.ts";
 
