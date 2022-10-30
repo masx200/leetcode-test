@@ -1,4 +1,4 @@
-import { assertEquals } from "https://deno.land/std@0.161.0/testing/asserts.ts";
+import { assertEquals } from "asserts";
 import getCoprimes from "./index.ts";
 Deno.test("tree-of-coprimes", () => {
     const inputs: [nums: number[], edges: number[][]][] = [

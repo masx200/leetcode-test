@@ -1,5 +1,5 @@
-import { State } from "./State.ts";
-import { TokenType } from "./TokenType.ts";
+import { State } from './State.ts';
+import { TokenType } from './TokenType.ts';
 
 export const transform: Record<State, Record<TokenType, State>> = {
     [State.initial]: {

@@ -1,4 +1,4 @@
-import { ListNode } from "../mod.ts";
+import { ListNode } from '../mod.ts';
 
 export default function deleteMiddle(head: ListNode | null): ListNode | null {
     const dummy = new ListNode();

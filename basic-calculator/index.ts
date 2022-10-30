@@ -1,6 +1,6 @@
-import { buildExpression } from "./buildExpression.ts";
-import { evaluate } from "./evaluate.ts";
-import { tokenize } from "./tokenize.ts";
+import { buildExpression } from './buildExpression.ts';
+import { evaluate } from './evaluate.ts';
+import { tokenize } from './tokenize.ts';
 
 export default function calculate(s: string): number {
     const tokens = tokenize(s);

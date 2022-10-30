@@ -1,5 +1,5 @@
-import { assertEquals } from "../deps.ts";
-import MyCircularDeque from "./index.ts";
+import { assertEquals } from '../deps.ts';
+import MyCircularDeque from './index.ts';
 
 Deno.test("design-circular-deque", () => {
     const circularDeque: MyCircularDeque = MyCircularDeque(3); // 设置容量大小为3

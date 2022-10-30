@@ -1,4 +1,4 @@
-import { TreeNode } from "../binary-tree-inorder-traversal/TreeNode.ts";
+import { TreeNode } from '../binary-tree-inorder-traversal/TreeNode.ts';
 
 export default function deepestLeavesSum(root: TreeNode | null): number {
     if (!root) return 0;

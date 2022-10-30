@@ -5,7 +5,7 @@ export {
     assertFalse,
     assertStrictEquals,
     equal,
-} from "https://deno.land/std@0.161.0/testing/asserts.ts";
+} from "asserts";
 export { default as random } from "https://cdn.skypack.dev/lodash@4.17.21/random?dts";
 export { default as countBy } from "https://cdn.skypack.dev/lodash@4.17.21/countBy?dts";
 export { default as zip } from "https://cdn.skypack.dev/lodash@4.17.21/zip?dts";

@@ -1,6 +1,6 @@
-import { assertEquals } from "asserts";
+import { assertEquals } from 'asserts';
 
-import getConcatenation from "./index.ts";
+import getConcatenation from './index.ts';
 
 Deno.test("concatenation-of-array", () => {
     assertEquals(

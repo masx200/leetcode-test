@@ -1,5 +1,6 @@
-import { assertEquals } from "https://deno.land/std@0.161.0/testing/asserts.ts";
-import deleteTreeNodes from "./index.ts";
+import { assertEquals } from 'https://deno.land/std@0.161.0/testing/asserts.ts';
+
+import deleteTreeNodes from './index.ts';
 
 Deno.test("delete-tree-nodes", () => {
     const nodes = 7,

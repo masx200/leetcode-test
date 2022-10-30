@@ -1,5 +1,7 @@
-import { assertEquals } from "https://deno.land/std@0.161.0/testing/asserts.ts";
-import braceExpansionII from "./index.ts";
+import { assertEquals } from 'https://deno.land/std@0.161.0/testing/asserts.ts';
+
+import braceExpansionII from './index.ts';
+
 Deno.test("brace-expansion-ii", () => {
     const inputs = [
         "{a,b}",

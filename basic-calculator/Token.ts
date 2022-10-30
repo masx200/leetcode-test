@@ -1,3 +1,3 @@
-import { Tokens } from "./Tokens.ts";
+import { Tokens } from './Tokens.ts';
 
 export type Token = Tokens extends (infer P)[] ? P : never;

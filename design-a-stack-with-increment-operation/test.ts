@@ -1,7 +1,7 @@
-import { runScript } from "leetcode-class";
+import { runScript } from 'leetcode-class';
 
-import { assertEquals } from "../deps.ts";
-import CustomStack from "./index.ts";
+import { assertEquals } from '../deps.ts';
+import CustomStack from './index.ts';
 
 Deno.test("design-a-stack-with-increment-operation", () => {
     const e: any[][] = [

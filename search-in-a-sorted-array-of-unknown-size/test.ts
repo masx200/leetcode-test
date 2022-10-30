@@ -1,4 +1,4 @@
-import { assertEquals } from "https://deno.land/std@0.161.0/testing/asserts.ts";
+import { assertEquals } from "asserts";
 import { ArrayReader } from "./ArrayReader.ts";
 import search from "./index.ts";
 Deno.test("search-in-a-sorted-array-of-unknown-size", () => {

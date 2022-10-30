@@ -9,6 +9,7 @@ import { parseComplex } from "./complex-number-multiplication/parse_complex.ts";
 import { buildBST } from "./convert-sorted-list-to-binary-search-tree/buildBST.ts";
 import { PrefixTreeInsert } from "./design-add-and-search-words-data-structure/PrefixTreeInsert.ts";
 import { DoublyLinkedList } from "./design-linked-list/DoublyLinkedList.ts";
+import { HashMap } from "./design-movie-rental-system/HashMap.ts";
 import { reverseInOrderIterator } from "./er-cha-sou-suo-shu-de-di-kda-jie-dian-lcof/index.ts";
 import { ArrayToCircularDoublyTreeList } from "./er-cha-sou-suo-shu-yu-shuang-xiang-lian-biao-lcof/ArrayToCircularDoublyTreeList.ts";
 import { NestedIntegerFrom } from "./flatten-nested-list-iterator/NestedIntegerFrom.ts";
@@ -158,6 +159,7 @@ export {
 export {
     ArrayToCircularDoublyTreeList,
     getVariable,
+    HashMap,
     InOrderIterator,
     reverseInOrderIterator,
     ScopeList,

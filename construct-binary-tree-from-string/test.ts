@@ -1,5 +1,7 @@
-import { assertEquals } from "https://deno.land/std@0.161.0/testing/asserts.ts";
-import str2tree from "./index.ts";
+import { assertEquals } from 'https://deno.land/std@0.161.0/testing/asserts.ts';
+
+import str2tree from './index.ts';
+
 Deno.test("construct-binary-tree-from-string", () => {
     assertEquals(["", "4(2(3)(1))(6(5))"].map(str2tree), [
         null,

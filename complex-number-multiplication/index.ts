@@ -1,4 +1,4 @@
-import { parseComplex } from "./parse_complex.ts";
+import { parseComplex } from './parse_complex.ts';
 
 function complexNumberMultiply(num1: string, num2: string): string {
     const { real: real1, imag: imag1 } = parseComplex(num1);

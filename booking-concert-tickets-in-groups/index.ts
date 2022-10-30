@@ -1,4 +1,4 @@
-import { SegmentTree } from "./SegmentTree.ts";
+import { SegmentTree } from './SegmentTree.ts';
 
 export default class BookMyShow {
     #seats: number[];

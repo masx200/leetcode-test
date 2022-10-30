@@ -1,7 +1,7 @@
-import { runScript } from "leetcode-class";
+import { runScript } from 'leetcode-class';
 
-import { assertEquals } from "../deps.ts";
-import FoodRatings from "./index.ts";
+import { assertEquals } from '../deps.ts';
+import FoodRatings from './index.ts';
 
 Deno.test("design-a-food-rating-system", () => {
     const foodRatings = new FoodRatings(

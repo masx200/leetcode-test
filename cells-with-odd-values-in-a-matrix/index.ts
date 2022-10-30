@@ -1,4 +1,4 @@
-import { binaryCountOneBigint } from "./binary_count_one_bigint.ts";
+import { binaryCountOneBigint } from './binary_count_one_bigint.ts';
 
 function oddCells(m: number, n: number, indices: number[][]): number {
     let row = 0n;

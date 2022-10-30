@@ -1,4 +1,4 @@
-import { TreeNode } from "../binary-tree-inorder-traversal/TreeNode.ts";
+import { TreeNode } from '../binary-tree-inorder-traversal/TreeNode.ts';
 
 export default function convertBST(root: TreeNode | null): TreeNode | null {
     let pre = 0;

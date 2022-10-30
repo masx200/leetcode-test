@@ -1,7 +1,8 @@
-import { Poly } from "./Poly.ts";
-import { assertEquals } from "https://deno.land/std@0.161.0/testing/asserts.ts";
-import { tokenize } from "./tokenize.ts";
-import basicCalculatorIV from "./index.ts";
+import { assertEquals } from 'https://deno.land/std@0.161.0/testing/asserts.ts';
+
+import basicCalculatorIV from './index.ts';
+import { Poly } from './Poly.ts';
+import { tokenize } from './tokenize.ts';
 
 Deno.test("poly", () => {
     const p1 = new Poly([

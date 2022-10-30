@@ -1,7 +1,7 @@
-import { assertEquals } from "asserts";
-import { runScript } from "leetcode-class";
+import { assertEquals } from 'asserts';
+import { runScript } from 'leetcode-class';
 
-import BrowserHistory from "./index.ts";
+import BrowserHistory from './index.ts';
 
 Deno.test("design-browser-history", () => {
     assertEquals(

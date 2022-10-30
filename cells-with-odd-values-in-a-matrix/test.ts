@@ -1,5 +1,5 @@
-import { assertEquals } from "../deps.ts";
-import oddCells from "./index.ts";
+import { assertEquals } from '../deps.ts';
+import oddCells from './index.ts';
 
 Deno.test("cells-with-odd-values-in-a-matrix", () => {
     assertEquals(

@@ -1,4 +1,4 @@
-import { TreeNode } from "../binary-tree-inorder-traversal/TreeNode.ts";
+import { TreeNode } from '../binary-tree-inorder-traversal/TreeNode.ts';
 
 export default str2tree;
 function str2tree(s: string): TreeNode | null {

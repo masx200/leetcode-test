@@ -1,6 +1,6 @@
 import { default as plusOne } from "./index.ts";
-import * as asserts from "https://deno.land/std@0.161.0/testing/asserts.ts";
-import { assertEquals } from "https://deno.land/std@0.161.0/testing/asserts.ts";
+import * as asserts from "asserts";
+import { assertEquals } from "asserts";
 
 Deno.test({
     name: `

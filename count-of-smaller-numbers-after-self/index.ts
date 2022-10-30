@@ -1,4 +1,4 @@
-import { BinaryIndexTree } from "../rank-from-stream-lcci/BinaryIndexTree.ts";
+import { BinaryIndexTree } from '../rank-from-stream-lcci/BinaryIndexTree.ts';
 
 export default function countSmaller(nums: number[]): number[] {
     const bit = new BinaryIndexTree(20001);

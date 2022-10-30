@@ -1,4 +1,4 @@
-import { Node } from "./Node.ts";
+import { Node } from './Node.ts';
 
 const visited = new WeakMap<Node, Node>();
 export default function cloneGraph(node: Node | null): Node | null {

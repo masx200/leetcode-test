@@ -1,5 +1,5 @@
-import { buildBST } from "../convert-sorted-list-to-binary-search-tree/buildBST.ts";
-import { TreeNode } from "../mod.ts";
+import { buildBST } from '../convert-sorted-list-to-binary-search-tree/buildBST.ts';
+import { TreeNode } from '../mod.ts';
 
 export default function sortedArrayToBST(nums: number[]): TreeNode | null {
     if (nums.length === 0) return null;

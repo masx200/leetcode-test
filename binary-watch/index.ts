@@ -1,4 +1,4 @@
-import hammingWeight from "../number-of-1-bits/index.ts";
+import hammingWeight from '../number-of-1-bits/index.ts';
 
 export default function readBinaryWatch(num: number): string[] {
     const res: string[] = [];

@@ -1,4 +1,4 @@
-import { assertEquals } from "https://deno.land/std@0.161.0/testing/asserts.ts";
+import { assertEquals } from "asserts";
 import { CustomFunction } from "./CustomFunction.ts";
 import findSolution from "./index.ts";
 Deno.test("find-positive-integer-solution-for-a-given-equation", () => {

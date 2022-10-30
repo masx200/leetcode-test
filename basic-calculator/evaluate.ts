@@ -1,4 +1,4 @@
-import { Expression } from "./Expression.ts";
+import { Expression } from './Expression.ts';
 
 export function evaluate(ast: Expression): number {
     if (ast.type === "NumericLiteral") {

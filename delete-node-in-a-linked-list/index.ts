@@ -1,4 +1,4 @@
-import { ListNode } from "../reverse-linked-list/ListNode.ts";
+import { ListNode } from '../reverse-linked-list/ListNode.ts';
 
 export default function deleteNode(node: ListNode | null): void {
     if (!node) return;

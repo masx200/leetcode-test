@@ -1,4 +1,4 @@
-import { Node } from "../n-ary-tree-level-order-traversal/Node.ts";
+import { Node } from '../n-ary-tree-level-order-traversal/Node.ts';
 
 export default function cloneTree(root: Node | null): Node | null {
     if (!root) return root;

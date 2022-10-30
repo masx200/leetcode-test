@@ -1,5 +1,5 @@
-import { inorder } from "./inorder.ts";
-import { TreeNode } from "./TreeNode.ts";
+import { inorder } from './inorder.ts';
+import { TreeNode } from './TreeNode.ts';
 
 export default function inorderTraversal(root: TreeNode | null): number[] {
     if (!root) return [];

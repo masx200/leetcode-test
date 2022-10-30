@@ -1,4 +1,4 @@
-import { isEqual } from "../deps.ts";
+import { isEqual } from '../deps.ts';
 
 function canFormArray(arr: number[], pieces: number[][]): boolean {
     const map = new Map<number, number>();

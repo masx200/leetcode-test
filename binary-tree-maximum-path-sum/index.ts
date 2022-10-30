@@ -1,4 +1,4 @@
-import { TreeNode } from "../binary-tree-inorder-traversal/TreeNode.ts";
+import { TreeNode } from '../binary-tree-inorder-traversal/TreeNode.ts';
 
 function maxPathSum(root: TreeNode | null): number {
     let maxSum = Number.MIN_SAFE_INTEGER; // 最大路径和

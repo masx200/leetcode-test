@@ -1,4 +1,4 @@
-import { TreeNode } from "../mod.ts";
+import { TreeNode } from '../mod.ts';
 
 export default function pruneTree(root: TreeNode | null): TreeNode | null {
     if (!root) return null;

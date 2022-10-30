@@ -1,16 +1,16 @@
-import { BinaryExpression } from "./BinaryExpression.ts";
-import { buildNumericLiteralExpression } from "./buildNumericLiteralExpression.ts";
-import { buildParenthesizedExpression } from "./buildParenthesizedExpression.ts";
-import { Expression } from "./Expression.ts";
-import { ExpressionOperator } from "./ExpressionOperator.ts";
-import { ExpressionType } from "./ExpressionType.ts";
-import { getTokenType } from "./getTokenType.ts";
-import { State } from "./State.ts";
-import { Tokens } from "./Tokens.ts";
-import { TokenType } from "./TokenType.ts";
-import { transform } from "./transform.ts";
-import { UnaryExpression } from "./UnaryExpression.ts";
-import { valid_end_states } from "./valid_end_states.ts";
+import { BinaryExpression } from './BinaryExpression.ts';
+import { buildNumericLiteralExpression } from './buildNumericLiteralExpression.ts';
+import { buildParenthesizedExpression } from './buildParenthesizedExpression.ts';
+import { Expression } from './Expression.ts';
+import { ExpressionOperator } from './ExpressionOperator.ts';
+import { ExpressionType } from './ExpressionType.ts';
+import { getTokenType } from './getTokenType.ts';
+import { State } from './State.ts';
+import { Tokens } from './Tokens.ts';
+import { TokenType } from './TokenType.ts';
+import { transform } from './transform.ts';
+import { UnaryExpression } from './UnaryExpression.ts';
+import { valid_end_states } from './valid_end_states.ts';
 
 export function buildExpression(tokens: Tokens): Expression {
     if (tokens.length === 0) {
