@@ -47,6 +47,8 @@ Step 2. Add the dependency
 
 https://leetcode.cn/problems/inorder-successor-in-bst-ii/
 
+https://leetcode.cn/problems/check-if-two-string-arrays-are-equivalent/
+
 https://leetcode.cn/problems/boundary-of-binary-tree/
 
 https://leetcode.cn/problems/the-kth-factor-of-n/
