@@ -44,7 +44,8 @@ export default class FileSharing {
     request(userID: number, chunkID: number): Array<number> {
         const usersList = Array<number>();
         if (
-            !this.#chunkUsersMap.has(chunkID) || !this.#userChunksMap.has(userID)
+            !this.#chunkUsersMap.has(chunkID) ||
+            !this.#userChunksMap.has(userID)
         ) return [];
 
         usersList.push(...(this.#chunkUsersMap.get(chunkID) ?? []));

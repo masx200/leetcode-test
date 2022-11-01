@@ -45,6 +45,8 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode.cn/problems/coordinate-with-maximum-network-quality/
+
 https://leetcode.cn/problems/design-a-file-sharing-system/
 
 https://leetcode.cn/problems/append-k-integers-with-minimal-sum/
