@@ -1,11 +1,5 @@
-export class Node {
-    constructor(
-        public val = 0,
-        public left: Node | null = null,
-        public right: Node | null = null,
-        public parent: Node | null = null,
-    ) {}
-}
+import { Node } from "./Node.ts";
+
 export default function inorderSuccessor(x: Node): Node | null {
     if (x.right != null) {
         // 有右子树，则后继在树的相对较低的地方，往下走，尽量往右子树的左边走

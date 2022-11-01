@@ -1,27 +1,26 @@
-import inorderSuccessor, { Node } from "./index.ts";
+import inorderSuccessor from "./index.ts";
+import { Node } from "./Node.ts";
 import { also } from "./also.ts";
 import { assert, assertEquals } from "asserts";
+import { inorder } from "./Node.ts";
+
 Deno.test("inorder-successor-in-bst-ii", () => {
     const map = new Map<number, Node>();
 
-    also(new Node(5), (n) => {
-        map.set(n.val, n);
-        n.left = also(new Node(3, null, null, n), (n) => {
-            map.set(n.val, n);
-            n.left = also(new Node(2, null, null, n), (n) => {
-                map.set(n.val, n);
-                n.left = also(new Node(1, null, null, n), (n) => {
-                    map.set(n.val, n);
+    const root = also(new Node(5), (n) => {
+        n.left = also(new Node(3, n, null, null), (n) => {
+            n.left = also(new Node(2, n, null, null), (n) => {
+                n.left = also(new Node(1, n, null, null), () => {
                 });
             });
             n.right = also(
-                new Node(4, null, null, n),
+                new Node(4, n, null, null),
                 (n) => map.set(n.val, n),
             );
         });
-        n.right = also(new Node(6, null, null, n), (n) => map.set(n.val, n));
+        n.right = also(new Node(6, n, null, null), (n) => map.set(n.val, n));
     });
-
+    inorder(root, (n) => map.set(n.val, n));
     const input = map.get(6);
     const output = null;
 
@@ -31,12 +30,11 @@ Deno.test("inorder-successor-in-bst-ii", () => {
 Deno.test("inorder-successor-in-bst-ii", () => {
     const map = new Map<number, Node>();
 
-    also(new Node(2), (n) => {
-        map.set(n.val, n);
-        n.left = also(new Node(1, null, null, n), (n) => map.set(n.val, n));
-        n.right = also(new Node(3, null, null, n), (n) => map.set(n.val, n));
+    const root = also(new Node(2), (n) => {
+        n.left = also(new Node(1, n, null, null), (n) => map.set(n.val, n));
+        n.right = also(new Node(3, n, null, null), (n) => map.set(n.val, n));
     });
-
+    inorder(root, (n) => map.set(n.val, n));
     const input = map.get(1);
     const output = map.get(2);
 
@@ -46,40 +44,29 @@ Deno.test("inorder-successor-in-bst-ii", () => {
 Deno.test("inorder-successor-in-bst-ii", () => {
     const map = new Map<number, Node>();
 
-    also(new Node(15), (n) => {
-        map.set(n.val, n);
-        n.left = also(new Node(6, null, null, n), (n) => {
-            map.set(n.val, n);
-            n.left = also(new Node(3, null, null, n), (n) => {
-                map.set(n.val, n);
-                n.left = also(new Node(2, null, null, n), (n) => {
-                    map.set(n.val, n);
+    const root = also(new Node(15), (n) => {
+        n.left = also(new Node(6, n, null, null), (n) => {
+            n.left = also(new Node(3, n, null, null), (n) => {
+                n.left = also(new Node(2, n, null, null), () => {
                 });
-                n.right = also(new Node(4, null, null, n), (n) => {
-                    map.set(n.val, n);
+                n.right = also(new Node(4, n, null, null), () => {
                 });
             });
-            n.right = also(new Node(7, null, null, n), (n) => {
-                map.set(n.val, n);
-                n.right = also(new Node(13, null, null, n), (n) => {
-                    map.set(n.val, n);
-                    n.left = also(new Node(19, null, null, n), (n) => {
-                        map.set(n.val, n);
+            n.right = also(new Node(7, n, null, null), (n) => {
+                n.right = also(new Node(13, n, null, null), (n) => {
+                    n.left = also(new Node(19, n, null, null), () => {
                     });
                 });
             });
         });
-        n.right = also(new Node(18, null, null, n), (n) => {
-            map.set(n.val, n);
-            n.left = also(new Node(17, null, null, n), (n) => {
-                map.set(n.val, n);
+        n.right = also(new Node(18, n, null, null), (n) => {
+            n.left = also(new Node(17, n, null, null), () => {
             });
-            n.right = also(new Node(20, null, null, n), (n) => {
-                map.set(n.val, n);
+            n.right = also(new Node(20, n, null, null), () => {
             });
         });
     });
-
+    inorder(root, (n) => map.set(n.val, n));
     const input = map.get(15);
     const output = map.get(17);
 
@@ -90,40 +77,29 @@ Deno.test("inorder-successor-in-bst-ii", () => {
 Deno.test("inorder-successor-in-bst-ii", () => {
     const map = new Map<number, Node>();
 
-    also(new Node(15), (n) => {
-        map.set(n.val, n);
-        n.left = also(new Node(6, null, null, n), (n) => {
-            map.set(n.val, n);
-            n.left = also(new Node(3, null, null, n), (n) => {
-                map.set(n.val, n);
-                n.left = also(new Node(2, null, null, n), (n) => {
-                    map.set(n.val, n);
+    const root = also(new Node(15), (n) => {
+        n.left = also(new Node(6, n, null, null), (n) => {
+            n.left = also(new Node(3, n, null, null), (n) => {
+                n.left = also(new Node(2, n, null, null), () => {
                 });
-                n.right = also(new Node(4, null, null, n), (n) => {
-                    map.set(n.val, n);
+                n.right = also(new Node(4, n, null, null), () => {
                 });
             });
-            n.right = also(new Node(7, null, null, n), (n) => {
-                map.set(n.val, n);
-                n.right = also(new Node(13, null, null, n), (n) => {
-                    map.set(n.val, n);
-                    n.left = also(new Node(19, null, null, n), (n) => {
-                        map.set(n.val, n);
+            n.right = also(new Node(7, n, null, null), (n) => {
+                n.right = also(new Node(13, n, null, null), (n) => {
+                    n.left = also(new Node(19, n, null, null), () => {
                     });
                 });
             });
         });
-        n.right = also(new Node(18, null, null, n), (n) => {
-            map.set(n.val, n);
-            n.left = also(new Node(17, null, null, n), (n) => {
-                map.set(n.val, n);
+        n.right = also(new Node(18, n, null, null), (n) => {
+            n.left = also(new Node(17, n, null, null), () => {
             });
-            n.right = also(new Node(20, null, null, n), (n) => {
-                map.set(n.val, n);
+            n.right = also(new Node(20, n, null, null), () => {
             });
         });
     });
-
+    inorder(root, (n) => map.set(n.val, n));
     const input = map.get(13);
     const output = map.get(15);
 
