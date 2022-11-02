@@ -4,7 +4,7 @@ export default function isAdditiveNumber(num: string): boolean {
     if (checkAdditive(num.slice(0, 1), num.slice(1, 2), num.slice(2))) {
         return true;
     }
-    for (let i = 1; i <= max; i++) {
+    for (let i = 1; i <= Math.floor(num.length / 2); i++) {
         for (let j = i + 1; j <= max; j++) {
             if (checkAdditive(num.slice(0, i), num.slice(i, j), num.slice(j))) {
                 return true;
