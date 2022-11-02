@@ -45,7 +45,11 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode.cn/problems/h-index-ii/
+
 https://leetcode.cn/problems/maximum-repeating-substring/
+
+https://leetcode.cn/problems/h-index/
 
 https://leetcode.cn/problems/robot-bounded-in-circle/
 
