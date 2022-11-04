@@ -30,4 +30,4 @@ export {
     runScript,
     TreeNode,
 } from "https://esm.sh/@masx200/leetcode-class@1.2.5";
-export { default as group } from "https://esm.sh/array.prototype.group@1.1.1";
+export { default as group } from "https://esm.sh/array.prototype.group@1.1.2/";
