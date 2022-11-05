@@ -45,6 +45,8 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode.cn/problems/KqANN2
+
 https://leetcode.cn/problems/reach-a-number
 
 https://leetcode.cn/problems/minimum-number-of-removals-to-make-mountain-array
