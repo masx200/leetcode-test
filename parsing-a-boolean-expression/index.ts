@@ -17,10 +17,10 @@ const translator = new Map<string, string>([
     ["&", "and"],
     ["|", "or"],
 ]);
-function not(a: boolean) {
+export function not(a: boolean) {
     return !a;
 }
-function and(...a: boolean[]) {
+export function and(...a: boolean[]) {
     let ans = a[0];
     for (const value of a) {
         if (!value) {
@@ -30,7 +30,7 @@ function and(...a: boolean[]) {
     }
     return ans;
 }
-function or(...a: boolean[]) {
+export function or(...a: boolean[]) {
     let ans = a[0];
     for (const value of a) {
         if (value) {
