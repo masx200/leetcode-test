@@ -30,8 +30,8 @@ export {
     runScript,
     TreeNode,
 } from "https://esm.sh/@masx200/leetcode-class@1.2.5";
-export { default as group } from "https://esm.sh/array.prototype.group@1.1.2/";
-export { WalkEntry } from "https://deno.land/std@0.162.0/fs/_util.ts";
+
+export type { WalkEntry } from "https://deno.land/std@0.162.0/fs/_util.ts";
 import AsyncLimiterClass, {
     AsyncCurrentLimiter,
 } from "https://cdn.skypack.dev/@masx200/async-task-current-limiter@2.1.0?dts";
