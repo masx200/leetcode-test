@@ -1,5 +1,4 @@
 function addStrings(num1: string, num2: string) {
-    // console.log("add",num1,num2)
     if (
         Array.prototype.every.call(num1, (s) => s === "0") &&
         Array.prototype.every.call(num2, (s) => s === "0")
