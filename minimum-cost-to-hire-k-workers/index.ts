@@ -22,4 +22,4 @@ function mincostToHireWorkers(
     return ans;
 }
 
-import { PriorityQueue } from "https://esm.sh/@datastructures-js/priority-queue@6.1.3";
+import { PriorityQueue } from "https://esm.sh/@datastructures-js/priority-queue@6.1.4";
