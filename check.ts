@@ -1,20 +1,13 @@
-import AsyncLimiterClass, {
-    AsyncCurrentLimiter,
-} from "https://cdn.skypack.dev/@masx200/async-task-current-limiter@2.1.0?dts";
-import { WalkEntry } from "https://deno.land/std@0.162.0/fs/_util.ts";
+import { WalkEntry } from "./deps.ts";
 
 import { parse, walk } from "./deps.ts";
 import { split_by_count } from "./utils/split_by_count.ts";
-
+import { AsyncCurrentLimiter, AsyncLimiterClass } from "./deps.ts";
 function searchFilesNames({
     skip,
-}: // limiter,
-    {
-        skip?: RegExp | RegExp[];
-        // limiter: AsyncCurrentLimiter;
-    }) {
-    // console.log("type check start!");
-
+}: {
+    skip?: RegExp | RegExp[];
+}) {
     const entry_iter = walk(".", {
         includeFiles: true,
         includeDirs: false,
@@ -25,7 +18,6 @@ function searchFilesNames({
 }
 if (import.meta.main) {
     await start();
-    // .catch(console.error);
 }
 
 async function parallel_check(
@@ -59,7 +51,6 @@ async function start() {
         : undefined;
     const entry_iter = searchFilesNames({ skip });
     await parallel_check(entry_iter, limiter);
-    // console.log("type check Done!");
 }
 
 async function runDenoCheck(stack: string[]) {
