@@ -5,7 +5,7 @@ export {
     assertFalse,
     assertStrictEquals,
     equal,
-} from "asserts";
+} from "https://deno.land/std@0.162.0/testing/asserts.ts";
 export { default as random } from "https://cdn.skypack.dev/lodash@4.17.21/random?dts";
 export { default as countBy } from "https://cdn.skypack.dev/lodash@4.17.21/countBy?dts";
 export { default as zip } from "https://cdn.skypack.dev/lodash@4.17.21/zip?dts";
@@ -37,3 +37,5 @@ import AsyncLimiterClass, {
 } from "https://cdn.skypack.dev/@masx200/async-task-current-limiter@2.1.0?dts";
 export { AsyncLimiterClass };
 export type { AsyncCurrentLimiter };
+import memoize from "https://cdn.skypack.dev/lodash@4.17.21/memoize?dts";
+export { memoize };
