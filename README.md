@@ -45,6 +45,8 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode.cn/problems/total-cost-to-hire-k-workers/
+
 https://leetcode.cn/problems/maximum-sum-of-distinct-subarrays-with-length-k
 
 https://leetcode.cn/problems/apply-operations-to-an-array
