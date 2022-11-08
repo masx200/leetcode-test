@@ -45,6 +45,8 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode.cn/problems/apply-operations-to-an-array
+
 https://leetcode.cn/problems/count-the-number-of-consistent-strings
 
 https://leetcode.cn/problems/binary-tree-upside-down/
