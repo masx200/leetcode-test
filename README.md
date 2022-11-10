@@ -45,6 +45,8 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode.cn/problems/shortest-path-visiting-all-nodes
+
 https://leetcode.cn/problems/shortest-path-to-get-all-keys
 
 https://leetcode.cn/problems/removing-minimum-and-maximum-from-array

@@ -40,8 +40,9 @@ export default function shortestPathAllKeys(g: string[]): number {
                 "A" <= c &&
                 c <= "Z" &&
                 ((cur >> (c.charCodeAt(0) - "A".charCodeAt(0))) & 1) == 0
-            )
+            ) {
                 continue;
+            }
             let ncur = cur;
             if ("a" <= c && c <= "z") {
                 ncur |= 1 << (c.charCodeAt(0) - "a".charCodeAt(0));
