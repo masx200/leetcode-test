@@ -101,6 +101,7 @@
                                 <source>reveal-cards-in-increasing-order</source>
                                 <source>serialize-and-deserialize-binary-tree</source>
                                 <source>three-in-one-lcci</source>
+                                <source>count-ways-to-build-good-string</source>
                             </sourceDirs>
                         </configuration>
                     </execution>
