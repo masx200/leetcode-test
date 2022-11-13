@@ -131,6 +131,8 @@ https://leetcode.cn/problems/magical-string/
 
 https://leetcode.cn/problems/er-cha-sou-suo-shu-de-hou-xu-bian-li-xu-lie-lcof/
 
+https://leetcode.cn/problems/maximum-number-of-non-overlapping-palindrome-substrings
+
 https://leetcode.cn/problems/nge-tou-zi-de-dian-shu-lcof
 
 https://leetcode.cn/problems/count-of-matches-in-tournament/
