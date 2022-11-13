@@ -21,17 +21,6 @@ class Solution {
 ```
 
 ```kotlin []
-/**
- * Example:
- * var ti = TreeNode(5)
- * var v = ti.`val`
- * Definition for a binary tree node.
- * class TreeNode(var `val`: Int) {
- *     var left: TreeNode? = null
- *     var right: TreeNode? = null
- * }
- */
-
 class Solution {
     fun insertIntoBST(root: TreeNode?, `val`: Int): TreeNode? {
         if (root == null) return TreeNode(`val`)
@@ -43,20 +32,6 @@ class Solution {
 ```
 
 ```typescript []
-/**
- * Definition for a binary tree node.
- * class TreeNode {
- *     val: number
- *     left: TreeNode | null
- *     right: TreeNode | null
- *     constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
- *         this.val = (val===undefined ? 0 : val)
- *         this.left = (left===undefined ? null : left)
- *         this.right = (right===undefined ? null : right)
- *     }
- * }
- */
-
 function insertIntoBST(root: TreeNode | null, val: number): TreeNode | null {
     if (root === null) return { val, left: null, right: null };
     if (root.val > val) root.left = insertIntoBST(root.left, val);
@@ -115,19 +90,6 @@ class Solution
 ```
 
 ```csharp []
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     public int val;
- *     public TreeNode left;
- *     public TreeNode right;
- *     public TreeNode(int val=0, TreeNode left=null, TreeNode right=null) {
- *         this.val = val;
- *         this.left = left;
- *         this.right = right;
- *     }
- * }
- */
 public class Solution {
     public TreeNode InsertIntoBST(TreeNode root, int val) {
 
@@ -157,14 +119,6 @@ class Solution:
 ```
 
 ```scala []
-/**
- * Definition for a binary tree node.
- * class TreeNode(_value: Int = 0, _left: TreeNode = null, _right: TreeNode = null) {
- *   var value: Int = _value
- *   var left: TreeNode = _left
- *   var right: TreeNode = _right
- * }
- */
 object Solution {
     def insertIntoBST(root: TreeNode, `val`: Int): TreeNode = {
     if (root != null) {
