@@ -1,4 +1,4 @@
-package com.github.masx200.split_message_based_on_limit
+package com.github.masx200.leetcode_test.split_message_based_on_limit
 
 import org.junit.jupiter.api.Test
 import kotlin.test.assertContentEquals
@@ -40,6 +40,12 @@ internal class SolutionTest {
             arrayOf("short mess<1/2>", "age<2/2>"),
             Solution().splitMessage(
                 "short message", 15
+            )
+        );
+        assertContentEquals(
+            arrayOf("abc<1/7>", "dab<2/7>", "cda<3/7>", "bcd<4/7>", "abc<5/7>", "dab<6/7>", "cd<7/7>"),
+            Solution().splitMessage(
+                "abcdabcdabcdabcdabcd", 8
             )
         )
     }

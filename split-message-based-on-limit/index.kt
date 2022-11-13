@@ -1,12 +1,21 @@
-package com.github.masx200.split_message_based_on_limit
+package com.github.masx200.leetcode_test.split_message_based_on_limit
 
 class Solution {
     fun splitMessage(message: String, limit: Int): Array<String> {
         if (limit <= 5) return arrayOf()
+        val results = splitStrings(message, limit, 0, 10)
+        if (results.isNotEmpty()) return results
 
+        val results2 = splitStrings(message, limit, 10, message.length)
+        if (results2.isNotEmpty()) return results2
 
-        var left = 0
-        var right = message.length
+        return arrayOf()
+    }
+
+    private fun splitStrings(message: String, limit: Int, lleft: Int, rright: Int): Array<String> {
+        var left = lleft
+        var right = rright
+
 
         while (left < right) {
             val mid = (left + right) / 2
@@ -16,7 +25,8 @@ class Solution {
                 left = mid + 1
             }
         }
-        if (left > 0 && left < message.length + 1) {
+
+        if (left > 0 && left < rright) {
 
             var len = 0
             return Array(left) {
@@ -26,6 +36,7 @@ class Solution {
                 )
 
                 val s = message.substring(len, endIndex) + "<${it + 1}/${left}>";
+
                 if (len == endIndex) return arrayOf()
                 len = endIndex
                 s
