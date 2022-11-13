@@ -102,6 +102,7 @@
                                 <source>serialize-and-deserialize-binary-tree</source>
                                 <source>three-in-one-lcci</source>
                                 <source>count-ways-to-build-good-string</source>
+                                <sourceDir>split-message-based-on-limit</sourceDir>
                             </sourceDirs>
                         </configuration>
                     </execution>
@@ -214,7 +215,7 @@
         <dependency>
             <groupId>org.jetbrains.kotlinx</groupId>
             <artifactId>kotlinx-serialization-json</artifactId>
-            <version>1.4.0</version>
+            <version>1.4.1</version>
 
         </dependency>
 
