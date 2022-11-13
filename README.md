@@ -45,6 +45,8 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode.cn/problems/count-ways-to-build-good-string
+
 https://leetcode.cn/problems/number-of-distinct-averages
 
 https://leetcode.cn/problems/custom-sort-string
