@@ -127,6 +127,8 @@ https://leetcode.cn/problems/design-movie-rental-system/
 
 https://leetcode.cn/problems/XxZZjK/
 
+https://leetcode.cn/problems/most-profitable-path-in-a-tree
+
 https://leetcode.cn/problems/magical-string/
 
 https://leetcode.cn/problems/er-cha-sou-suo-shu-de-hou-xu-bian-li-xu-lie-lcof/
