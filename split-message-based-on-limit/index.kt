@@ -24,7 +24,7 @@ class Solution {
                 val endIndex = Math.max(
                     0, Math.min(message.length, len + limit - 3 - (it + 1).toString().length - left.toString().length)
                 )
-//                println("${it},${len},${endIndex}")
+
                 val s = message.substring(len, endIndex) + "<${it + 1}/${left}>";
                 if (len == endIndex) return arrayOf()
                 len = endIndex

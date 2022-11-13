@@ -45,6 +45,8 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode.cn/problems/split-message-based-on-limit
+
 https://leetcode.cn/problems/count-ways-to-build-good-string
 
 https://leetcode.cn/problems/number-of-distinct-averages
@@ -128,8 +130,6 @@ https://leetcode.cn/problems/XxZZjK/
 https://leetcode.cn/problems/magical-string/
 
 https://leetcode.cn/problems/er-cha-sou-suo-shu-de-hou-xu-bian-li-xu-lie-lcof/
-
-https://leetcode.cn/problems/split-message-based-on-limit
 
 https://leetcode.cn/problems/nge-tou-zi-de-dian-shu-lcof
 
