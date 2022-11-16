@@ -45,6 +45,10 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode.cn/problems/partition-equal-subset-sum/
+
+https://leetcode.cn/problems/NUPfPr/
+
 https://leetcode.cn/problems/number-of-matching-subsequences
 
 https://leetcode.cn/problems/is-subsequence/
