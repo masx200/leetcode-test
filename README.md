@@ -45,6 +45,8 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode.cn/problems/number-of-matching-subsequences
+
 https://leetcode.cn/problems/global-and-local-inversions
 
 https://leetcode.cn/problems/maximum-units-on-a-truck
