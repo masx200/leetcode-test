@@ -47,6 +47,8 @@ Step 2. Add the dependency
 
 https://leetcode.cn/problems/number-of-matching-subsequences
 
+https://leetcode.cn/problems/is-subsequence/
+
 https://leetcode.cn/problems/global-and-local-inversions
 
 https://leetcode.cn/problems/maximum-units-on-a-truck
