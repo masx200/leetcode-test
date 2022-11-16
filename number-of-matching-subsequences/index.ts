@@ -7,6 +7,7 @@ function numMatchingSubseq(s: string, words: string[]): number {
         .map(() => new Set<[string, number]>());
 
     for (const [w, count] of cnt) {
+        if (w.length > s.length) continue;
         arr[w.charCodeAt(0) - "a".charCodeAt(0)].add([w, count]);
     }
     let res = 0;
