@@ -30,4 +30,4 @@ export default function totalCost(
     costs.sort(compare);
     return ans + costs.slice(0, k).reduce((p, c) => p + c, 0);
 }
-import { BinaryHeap } from "https://deno.land/std@0.164.0/collections/binary_heap.ts";
+import { BinaryHeap } from "https://deno.land/std@0.165.0/collections/binary_heap.ts";
