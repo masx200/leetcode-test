@@ -45,6 +45,8 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode-cn.com/problems/sum-of-subsequence-widths/
+
 https://leetcode.cn/problems/partition-equal-subset-sum/
 
 https://leetcode.cn/problems/NUPfPr/
