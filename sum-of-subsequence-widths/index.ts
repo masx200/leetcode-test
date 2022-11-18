@@ -1,5 +1,4 @@
 export default function sumSubseqWidths(nums: number[]): number {
-
     const MOD = 1000000007;
     nums.sort((a, b) => a - b);
     let res = 0;
