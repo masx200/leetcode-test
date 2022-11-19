@@ -47,6 +47,8 @@ Step 2. Add the dependency
 
 https://leetcode.cn/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/
 
+https://leetcode.cn/problems/champagne-tower
+
 https://leetcode.cn/problems/last-stone-weight-ii/
 
 https://leetcode.cn/problems/delete-characters-to-make-fancy-string/
