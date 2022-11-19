@@ -45,6 +45,8 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode.cn/problems/last-stone-weight-ii/
+
 https://leetcode.cn/problems/delete-characters-to-make-fancy-string/
 
 https://leetcode.cn/problems/find-the-highest-altitude
