@@ -2,14 +2,14 @@ import { BinaryHeap } from "https://deno.land/std@0.165.0/collections/binary_hea
 export default function findTheCity(
     n: number,
     edges: number[][],
-    distanceThreshold: number
+    distanceThreshold: number,
 ): number {
     const dc: [number, number][][] = new Array(n).fill(0).map(() => []);
     const has: number[][] = Array(n)
         .fill(0)
         .map(() => Array(n).fill(distanceThreshold + 1));
     const heap = new BinaryHeap<[number, number, number]>(
-        (a, b) => a[0] - b[0]
+        (a, b) => a[0] - b[0],
     );
 
     for (const [from, to, weight] of edges) {
