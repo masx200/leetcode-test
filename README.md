@@ -45,6 +45,8 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode.cn/problems/soup-servings
+
 https://leetcode.cn/problems/number-of-beautiful-partitions
 
 https://leetcode.cn/problems/minimum-fuel-cost-to-report-to-the-capital
