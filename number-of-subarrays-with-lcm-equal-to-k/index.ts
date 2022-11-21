@@ -4,24 +4,24 @@ export default function subarrayLCM(nums: number[], k: number): number {
 
     for (let i = 0; i < len; i++) {
         if (k % nums[i]) continue;
-        let lcm = nums[i];
+        let lcm_num = nums[i];
         for (let j = i; j < len; j++) {
             if (k % nums[j]) break;
-            lcm = getLCM(lcm, nums[j]);
+            lcm_num = lcm(lcm_num, nums[j]);
 
-            if (lcm === k) cnt += 1;
+            if (lcm_num === k) cnt += 1;
         }
     }
 
     return cnt;
 }
 
-function getGCD<T extends number | bigint>(a: T, b: T): T {
+function gcd<T extends number | bigint>(a: T, b: T): T {
     if (b == 0) return a;
-    return getGCD(b, (a % b) as T) as T;
+    return gcd(b, (a % b) as T) as T;
 }
 
-function getLCM<T extends number | bigint>(a: T, b: T): T {
-    return ((a * b) / getGCD(a, b)) as T;
+function lcm<T extends number | bigint>(a: T, b: T): T {
+    return ((a * b) / gcd(a, b)) as T;
 }
-export { getGCD, getLCM };
+export { gcd, lcm };
