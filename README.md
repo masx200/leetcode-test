@@ -45,6 +45,8 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode.cn/problems/maximum-number-of-balls-in-a-box
+
 https://leetcode.cn/problems/nth-magical-number
 
 https://leetcode-cn.com/problems/target-sum/
