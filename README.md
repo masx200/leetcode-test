@@ -45,6 +45,8 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode.cn/problems/reachable-nodes-in-subdivided-graph
+
 https://leetcode.cn/problems/check-if-array-is-sorted-and-rotated
 
 https://leetcode.cn/problems/number-of-subarrays-with-bounded-maximum
