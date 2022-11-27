@@ -45,6 +45,8 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode.cn/problems/minimum-cuts-to-divide-a-circle
+
 https://leetcode.cn/problems/find-the-pivot-integer/
 
 https://leetcode.cn/problems/remove-nodes-from-linked-list/
