@@ -45,6 +45,8 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode.cn/problems/minimum-changes-to-make-alternating-binary-string
+
 https://leetcode.cn/problems/sum-of-all-odd-length-subarrays
 
 https://leetcode.cn/problems/combination-sum-iv/
