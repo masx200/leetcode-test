@@ -45,6 +45,8 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode.cn/problems/maximum-frequency-stack
+
 https://leetcode.cn/problems/calculate-amount-paid-in-taxes
 
 https://leetcode.cn/problems/third-maximum-number/
