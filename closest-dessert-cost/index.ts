@@ -10,6 +10,7 @@ function closestCost(
         for (let state = 0; state < Math.pow(3, m); ++state) {
             const top = topping(toppingCosts, state);
             const temp = Math.abs(base + top - target);
+            if (temp === 0) return base + top;
             if (temp < diff) {
                 ret = base + top;
                 diff = temp;
