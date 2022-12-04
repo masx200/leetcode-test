@@ -47,6 +47,12 @@ Step 2. Add the dependency
 
 https://leetcode.cn/problems/closest-dessert-cost
 
+https://leetcode.cn/problems/circular-sentence
+
+https://leetcode.cn/problems/divide-players-into-teams-of-equal-skill
+
+https://leetcode.cn/problems/minimum-score-of-a-path-between-two-cities
+
 https://leetcode.cn/problems/second-largest-digit-in-a-string
 
 https://leetcode.cn/problems/find-nearest-point-that-has-the-same-x-or-y-coordinate/
