@@ -7,8 +7,8 @@ function minScore(_n: number, roads: number[][]): number {
     }
     let ans = Infinity;
 
-    for (const [i, j, d] of roads) {
-        if (uf.connected(1, i) && uf.connected(1, j)) {
+    for (const [i, _, d] of roads) {
+        if (uf.connected(1, i)) {
             ans = Math.min(ans, d);
         }
     }

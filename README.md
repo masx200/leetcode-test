@@ -45,6 +45,8 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode.cn/problems/divide-nodes-into-the-maximum-number-of-groups
+
 https://leetcode.cn/problems/closest-dessert-cost
 
 https://leetcode.cn/problems/circular-sentence
