@@ -945,6 +945,8 @@ https://leetcode.cn/classic/problems/color-fill-lcci
 
 https://leetcode-cn.com/problems/final-prices-with-a-special-discount-in-a-shop/
 
+https://leetcode.cn/problems/maximum-height-by-stacking-cuboids
+
 https://leetcode-cn.com/problems/intersection-of-two-arrays/
 
 https://leetcode.cn/problems/zhan-de-ya-ru-dan-chu-xu-lie-lcof
