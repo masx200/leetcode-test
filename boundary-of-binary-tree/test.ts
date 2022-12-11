@@ -12,7 +12,7 @@ Deno.test("boundary-of-binary-tree", () => {
                 right: { val: 4, left: null, right: null },
             },
         }),
-        [1, 3, 4, 2]
+        [1, 3, 4, 2],
     );
 });
 Deno.test("boundary-of-binary-tree", () => {
@@ -23,14 +23,14 @@ Deno.test("boundary-of-binary-tree", () => {
                 new TreeNode(
                     2,
                     new TreeNode(4),
-                    new TreeNode(5, new TreeNode(7), new TreeNode(8))
+                    new TreeNode(5, new TreeNode(7), new TreeNode(8)),
                 ),
                 new TreeNode(
                     3,
-                    new TreeNode(6, new TreeNode(9), new TreeNode(10))
-                )
-            )
+                    new TreeNode(6, new TreeNode(9), new TreeNode(10)),
+                ),
+            ),
         ),
-        [1, 2, 4, 7, 8, 9, 10, 6, 3]
+        [1, 2, 4, 7, 8, 9, 10, 6, 3],
     );
 });

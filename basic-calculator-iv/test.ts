@@ -15,7 +15,7 @@ Deno.test("poly", () => {
             [[], 8],
             [["e"], 1],
         ],
-        [...p1]
+        [...p1],
     );
     const p2 = new Poly([
         [[], -8],
@@ -27,7 +27,7 @@ Deno.test("poly", () => {
             [[], -8],
             [["e"], 1],
         ],
-        [...p2]
+        [...p2],
     );
     const p3 = p1.mul(p2);
     // assertEquals([...p3]);
@@ -36,7 +36,7 @@ Deno.test("poly", () => {
             [[], -64],
             [["e", "e"], 1],
         ],
-        [...p3]
+        [...p3],
     );
     assertEquals(p1.toList(), ["1*e", "8"]);
     assertEquals(p2.toList(), ["1*e", "-8"]);
@@ -54,7 +54,7 @@ Deno.test("poly", () => {
         new Poly([
             [[], -8],
             [["a"], 1],
-        ])
+        ]),
     );
     assertEquals(
         [...p6],
@@ -63,7 +63,7 @@ Deno.test("poly", () => {
             [["a"], -8],
             [["e"], -8],
             [["a", "e"], 1],
-        ]
+        ],
     );
     assertEquals(p6.toList(), ["1*a*e", "-8*a", "-8*e", "64"]);
 });
@@ -81,9 +81,9 @@ Deno.test("tokenize", () => {
         tokenize(
             "e - 8 + temperature - pressure",
             ["e", "temperature"],
-            [1, 12]
+            [1, 12],
         ),
-        [1, "-", 8, "+", 12, "-", "pressure"]
+        [1, "-", 8, "+", 12, "-", "pressure"],
     );
     assertEquals(tokenize("(e + 8) * (e - 8)", [], []), [
         "(",
@@ -103,7 +103,7 @@ Deno.test("tokenize", () => {
         tokenize(
             "((a - b) * (b - c) + (c - a)) * ((a - b) + (b - c) * (c - a))",
             [],
-            []
+            [],
         ),
         [
             "(",
@@ -145,7 +145,7 @@ Deno.test("tokenize", () => {
             "a",
             ")",
             ")",
-        ]
+        ],
     );
     assertEquals(tokenize("a * b * c + b * a * c * 4", [], []), [
         "a",
@@ -168,9 +168,9 @@ Deno.test("basic-calculator-iv", () => {
         basicCalculatorIV(
             "e - 8 + temperature - pressure",
             ["e", "temperature"],
-            [1, 12]
+            [1, 12],
         ),
-        ["-1*pressure", "5"]
+        ["-1*pressure", "5"],
     );
     assertEquals(basicCalculatorIV("e + 8 - a + 5", ["e"], [1]), [
         "-1*a",
@@ -187,7 +187,7 @@ Deno.test("basic-calculator-iv", () => {
         basicCalculatorIV(
             "((a - b) * (b - c) + (c - a)) * ((a - b) + (b - c) * (c - a))",
             [],
-            []
+            [],
         ),
         [
             "-1*a*a*b*b",
@@ -212,7 +212,7 @@ Deno.test("basic-calculator-iv", () => {
             "1*a*b",
             "1*a*c",
             "-1*b*c",
-        ]
+        ],
     );
     assertEquals(
         basicCalculatorIV(
@@ -267,10 +267,54 @@ Deno.test("basic-calculator-iv", () => {
                 "cv",
             ],
             [
-                3, 6, 7, 9, 11, 1, 5, 7, 8, 9, 10, 11, 12, 2, 11, 12, 0, 1, 4,
-                12, 1, 3, 6, 9, 10, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 2, 5, 6, 7, 9,
-                10, 12, 5, 6, 7, 9, 10,
-            ]
+                3,
+                6,
+                7,
+                9,
+                11,
+                1,
+                5,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                2,
+                11,
+                12,
+                0,
+                1,
+                4,
+                12,
+                1,
+                3,
+                6,
+                9,
+                10,
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                2,
+                5,
+                6,
+                7,
+                9,
+                10,
+                12,
+                5,
+                6,
+                7,
+                9,
+                10,
+            ],
         ),
         [
             "54*b*cg*r",
@@ -310,6 +354,6 @@ Deno.test("basic-calculator-iv", () => {
             "4491*p",
             "-81*y",
             "-32400",
-        ]
+        ],
     );
 });

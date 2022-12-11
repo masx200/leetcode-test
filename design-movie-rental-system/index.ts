@@ -13,8 +13,7 @@ export default class MovieRentingSystem {
         for (const [shop, movie, price] of entries) {
             this.#price.set([shop, movie], price);
 
-            const tree =
-                this.#valid.get(movie) ??
+            const tree = this.#valid.get(movie) ??
                 new BinarySearchTree((a, b) =>
                     a[0] === b[0] ? a[1] - b[1] : a[0] - b[0]
                 );
@@ -68,7 +67,7 @@ export default class MovieRentingSystem {
     }
 }
 export function* InOrderIterator<T>(
-    root: BinarySearchTreeNode<T> | null
+    root: BinarySearchTreeNode<T> | null,
 ): Generator<BinarySearchTreeNode<T>> {
     if (!root) return;
     yield* InOrderIterator(root.getLeft());

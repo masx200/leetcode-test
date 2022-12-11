@@ -1,7 +1,7 @@
 export default function nthMagicalNumber(
     n: number,
     a: number,
-    b: number
+    b: number,
 ): number {
     const MOD = 1000000007;
 

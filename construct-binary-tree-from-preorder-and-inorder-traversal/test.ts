@@ -9,8 +9,8 @@ Deno.test("construct-binary-tree-from-preorder-and-inorder-traversal", () => {
         new TreeNode(
             3,
             new TreeNode(9),
-            new TreeNode(20, new TreeNode(15), new TreeNode(7))
-        )
+            new TreeNode(20, new TreeNode(15), new TreeNode(7)),
+        ),
     );
 });
 Deno.test("construct-binary-tree-from-preorder-and-inorder-traversal", () => {

@@ -1,7 +1,7 @@
 import { ListNode } from "../reverse-linked-list/ListNode.ts";
 
 export function ArrayToCircularLinkedList(
-    array: Array<number>
+    array: Array<number>,
 ): ListNode | null {
     if (array.length === 0) {
         return null;

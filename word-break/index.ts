@@ -2,12 +2,13 @@ export default wordBreak;
 function wordBreak(s: string, wordDict: string[]): boolean {
     if (
         Array.from(new Set(s)).some((c) => !wordDict.some((w) => w.includes(c)))
-    )
+    ) {
         return false;
+    }
 
     const set = new Set(wordDict);
     const lens = Array.from(new Set(wordDict.map((a) => a.length))).sort(
-        (a, b) => a - b
+        (a, b) => a - b,
     );
 
     const cached = new Map<string, boolean>();

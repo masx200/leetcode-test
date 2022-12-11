@@ -1,6 +1,6 @@
 export default function minimumFuelCost(
     roads: number[][],
-    seats: number
+    seats: number,
 ): number {
     let ans = 0;
     const g = Array(roads.length + 1)

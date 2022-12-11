@@ -12,6 +12,6 @@ Deno.test("add-strings", () => {
     ];
     assertEquals(
         outputs,
-        inputs.map(([x, y]) => addStrings(x, y))
+        inputs.map(([x, y]) => addStrings(x, y)),
     );
 });

@@ -1,7 +1,7 @@
 import { PolyNode } from "./PolyNode.ts";
 
 export function ArrayToPolyNode(
-    array: Array<[number, number]>
+    array: Array<[number, number]>,
 ): PolyNode | null {
     if (array.length === 0) {
         return null;

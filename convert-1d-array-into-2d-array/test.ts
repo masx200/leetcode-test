@@ -8,7 +8,7 @@ Deno.test("convert-1d-array-into-2d-array", () => {
             [4, 5, 6],
             [7, 8, 9],
         ],
-        convert1DArrayInto2DArray([1, 2, 3, 4, 5, 6, 7, 8, 9], 3, 3)
+        convert1DArrayInto2DArray([1, 2, 3, 4, 5, 6, 7, 8, 9], 3, 3),
     );
 });
 Deno.test("convert-1d-array-into-2d-array", () => {
@@ -20,7 +20,7 @@ Deno.test("convert-1d-array-into-2d-array", () => {
             [1, 2],
             [3, 4],
         ],
-        convert1DArrayInto2DArray(original, m, n)
+        convert1DArrayInto2DArray(original, m, n),
     );
 });
 Deno.test("convert-1d-array-into-2d-array", () => {

@@ -1,7 +1,7 @@
 export function tokenize(
     expression: string,
     evalvars: string[],
-    evalints: number[]
+    evalints: number[],
 ): (string | number)[] {
     const map = new Map(evalvars.map((v, i) => [v, evalints[i]]));
     return (

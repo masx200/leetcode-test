@@ -1,7 +1,7 @@
 export default function deleteTreeNodes(
     nodes: number,
     parent: number[],
-    value: number[]
+    value: number[],
 ): number {
     const children: number[][] = Array.from(parent)
         .fill(0)
@@ -16,12 +16,11 @@ export default function deleteTreeNodes(
         for (const c of children[node]) {
             dfs(c);
         }
-        sum[node] =
-            value[node] + children[node].reduce((a, c) => a + sum[c], 0);
-        count[node] =
-            sum[node] !== 0
-                ? 1 + children[node].reduce((a, c) => a + count[c], 0)
-                : 0;
+        sum[node] = value[node] +
+            children[node].reduce((a, c) => a + sum[c], 0);
+        count[node] = sum[node] !== 0
+            ? 1 + children[node].reduce((a, c) => a + count[c], 0)
+            : 0;
         // console.log(node);
     }
     const sum: number[] = Array.from(parent).fill(0);

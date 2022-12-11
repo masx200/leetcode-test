@@ -35,10 +35,9 @@ export function buildExpression(tokens: Tokens): Expression {
             }
         }
         if ([State.parentheses, State.number].includes(state)) {
-            const current_expression: Expression =
-                State.number === state
-                    ? buildNumericLiteralExpression(token)
-                    : buildParenthesizedExpression(token);
+            const current_expression: Expression = State.number === state
+                ? buildNumericLiteralExpression(token)
+                : buildParenthesizedExpression(token);
             if (pendingtype.length === 0 && pendingoperator.length === 0) {
                 pendingleft.push(current_expression);
             } else {

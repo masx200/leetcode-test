@@ -29,7 +29,7 @@ export default function closeLampInTree(root: TreeNode | null): number {
                 open + 1,
                 close + 1,
                 self + 3,
-                notSelf + 1
+                notSelf + 1,
             );
         }
 
@@ -41,7 +41,7 @@ export default function closeLampInTree(root: TreeNode | null): number {
                 open + 1,
                 close + 1,
                 self + 1,
-                notSelf + 3
+                notSelf + 3,
             );
         } else {
             allClose = Math.min(
@@ -49,7 +49,7 @@ export default function closeLampInTree(root: TreeNode | null): number {
                 open + 2,
                 close,
                 self + 2,
-                notSelf + 2
+                notSelf + 2,
             );
         }
 
@@ -60,7 +60,7 @@ export default function closeLampInTree(root: TreeNode | null): number {
                 open + 2,
                 close,
                 self + 2,
-                notSelf + 2
+                notSelf + 2,
             );
         } else {
             // 关着
@@ -69,7 +69,7 @@ export default function closeLampInTree(root: TreeNode | null): number {
                 open + 1,
                 close + 1,
                 self + 1,
-                notSelf + 3
+                notSelf + 3,
             );
         }
 
@@ -81,7 +81,7 @@ export default function closeLampInTree(root: TreeNode | null): number {
                 open + 1,
                 close + 1,
                 self + 3,
-                notSelf + 1
+                notSelf + 1,
             );
         } else {
             justNotSelf = Math.min(
@@ -89,7 +89,7 @@ export default function closeLampInTree(root: TreeNode | null): number {
                 open,
                 close + 2,
                 self + 2,
-                notSelf + 2
+                notSelf + 2,
             );
         }
 

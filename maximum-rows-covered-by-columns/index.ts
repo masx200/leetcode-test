@@ -1,6 +1,6 @@
 export default function maximumRows(
     mat: number[][],
-    numSelect: number
+    numSelect: number,
 ): number {
     const n = mat[0].length;
     //const m = mat.length

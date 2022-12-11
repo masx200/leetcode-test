@@ -1,7 +1,7 @@
 import memoize from "https://cdn.skypack.dev/lodash@4.17.21/memoize?dts";
 export default function minimumTotalDistance(
     robot: number[],
-    factory: number[][]
+    factory: number[][],
 ): number {
     factory.sort((a, b) => a[0] - b[0]);
     robot.sort((a, b) => a - b);
@@ -28,7 +28,7 @@ export default function minimumTotalDistance(
 
             return res;
         },
-        (i: number, j: number) => JSON.stringify([i, j])
+        (i: number, j: number) => JSON.stringify([i, j]),
     );
     return dfs(0, 0);
 }

@@ -1,7 +1,7 @@
 function closestCost(
     baseCosts: number[],
     toppingCosts: number[],
-    target: number
+    target: number,
 ): number {
     const m = toppingCosts.length;
     let ret = Infinity;

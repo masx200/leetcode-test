@@ -16,7 +16,7 @@ class VendingMachine {
         number: number,
         item: string,
         price: number,
-        duration: number
+        duration: number,
     ): void {
         const good = this.#item2good.get(item) ?? [
             new AvlTree((a, b) =>
@@ -72,7 +72,7 @@ class VendingMachine {
                     cost += value.price * diff;
                 }
             },
-            signal
+            signal,
         );
 
         toberemove.forEach((n) => tree.remove(n));

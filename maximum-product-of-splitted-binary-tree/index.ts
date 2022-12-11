@@ -11,7 +11,7 @@ export default function maxProduct(root: TreeNode | null): number {
 
 function maxTree(root: TreeNode | null, output?: (a: number) => void): number {
     if (!root) return output?.(0), 0;
-    const all =
-        maxTree(root.left, output) + maxTree(root.right, output) + root.val;
+    const all = maxTree(root.left, output) + maxTree(root.right, output) +
+        root.val;
     return output?.(all), all;
 }

@@ -1,6 +1,6 @@
 export default function productQueries(
     n: number,
-    queries: number[][]
+    queries: number[][],
 ): number[] {
     const powers = [1n];
     const mod = BigInt(1e9 + 7);
@@ -13,7 +13,8 @@ export default function productQueries(
     return queries.map(([left, right]) => {
         // console.log(INVERSES)
         return Number(
-            (powers[right + 1] * multiplicativeInverse(powers[left], mod)) % mod
+            (powers[right + 1] * multiplicativeInverse(powers[left], mod)) %
+                mod,
         );
     });
 }

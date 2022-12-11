@@ -34,9 +34,12 @@ function permute_index(nums: number[], output: (indexs: number[]) => void) {
             arrays.push(b);
         }
 
-        for (const res of uniqBy(arrays, (a: number[]) =>
-            Array.prototype.join.call(a, ",")
-        )) {
+        for (
+            const res of uniqBy(
+                arrays,
+                (a: number[]) => Array.prototype.join.call(a, ","),
+            )
+        ) {
             output(res);
         }
     });

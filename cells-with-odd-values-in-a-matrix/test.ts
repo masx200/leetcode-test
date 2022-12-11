@@ -7,14 +7,14 @@ Deno.test("cells-with-odd-values-in-a-matrix", () => {
         oddCells(2, 3, [
             [0, 1],
             [1, 1],
-        ])
+        ]),
     );
     assertEquals(
         0,
         oddCells(2, 2, [
             [1, 1],
             [0, 0],
-        ])
+        ]),
     );
     assertEquals(
         659,
@@ -40,6 +40,6 @@ Deno.test("cells-with-odd-values-in-a-matrix", () => {
             [30, 19],
             [28, 20],
             [28, 2],
-        ])
+        ]),
     );
 });

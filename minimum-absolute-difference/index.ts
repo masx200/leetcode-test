@@ -11,7 +11,7 @@ function minimumAbsDifference(arr: number[]): number[][] {
             }
             return [res, num];
         },
-        [[], Infinity] as [number[][], number]
+        [[], Infinity] as [number[][], number],
     )[0];
 }
 export default minimumAbsDifference;

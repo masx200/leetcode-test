@@ -8,6 +8,6 @@ function mostFrequentEven(nums: number[]): number {
 
     const freq = Math.max(...cnt.values());
     return Math.min(
-        ...[...cnt.entries()].filter(([_k, v]) => v === freq).map((a) => a[0])
+        ...[...cnt.entries()].filter(([_k, v]) => v === freq).map((a) => a[0]),
     );
 }

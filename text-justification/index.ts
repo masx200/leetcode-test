@@ -1,6 +1,6 @@
 export default function fullJustify(
     words: string[],
-    maxWidth: number
+    maxWidth: number,
 ): string[] {
     const L = words.length;
     const queue: string[] = [];
@@ -39,13 +39,13 @@ export default function fullJustify(
             queue.push(
                 tmp
                     .map((t, i) =>
-                        i === T
-                            ? t
-                            : `${t}${" ".repeat(
-                                  space + (extra-- <= 0 ? 0 : 1)
-                              )}`
+                        i === T ? t : `${t}${
+                            " ".repeat(
+                                space + (extra-- <= 0 ? 0 : 1),
+                            )
+                        }`
                     )
-                    .join("")
+                    .join(""),
             );
         }
     }

@@ -7,7 +7,7 @@ function findEvenNumbers(digits: number[]): number[] {
         .map((_, i) => 100 + i * 2)
         .filter((n) =>
             [...counter(n.toString())].every(
-                ([key, value]) => (cnt.get(Number(key)) ?? 0) >= value
+                ([key, value]) => (cnt.get(Number(key)) ?? 0) >= value,
             )
         );
 }

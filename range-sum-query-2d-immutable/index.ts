@@ -10,8 +10,8 @@ export default function NumMatrix(matrix: number[][]): NumMatrix {
     );
     matrix.forEach((a, i) =>
         a.forEach((v, j) => {
-            sums[i + 1][j + 1] =
-                sums[i][j + 1] + sums[i + 1][j] - sums[i][j] + v;
+            sums[i + 1][j + 1] = sums[i][j + 1] + sums[i + 1][j] - sums[i][j] +
+                v;
         })
     );
     return {
@@ -19,7 +19,7 @@ export default function NumMatrix(matrix: number[][]): NumMatrix {
             row1: number,
             col1: number,
             row2: number,
-            col2: number
+            col2: number,
         ): number {
             return (
                 sums[row2 + 1][col2 + 1] -

@@ -53,6 +53,6 @@ Deno.test("convert-bst-to-greater-tree", () => {
     ];
     assertEquals(
         inputs.map((input) => convertBST(input)),
-        outputs
+        outputs,
     );
 });

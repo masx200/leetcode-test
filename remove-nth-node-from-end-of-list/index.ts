@@ -2,7 +2,7 @@ import { ListNode } from "../reverse-linked-list/ListNode.ts";
 
 export default function removeNthFromEnd(
     head: ListNode | null,
-    n: number
+    n: number,
 ): ListNode | null {
     if (!head) return head;
     const nodes: ListNode[] = [];

@@ -27,6 +27,6 @@ export default function regionsBySlashes(grid: string[]): number {
     }
     return [...new Array(n * n * 4).keys()].reduce(
         (p, c) => p + Number(uf.find(c) === c),
-        0
+        0,
     );
 }

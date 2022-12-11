@@ -3,7 +3,7 @@ import { groupBy, sum } from "../deps.ts";
 function distanceBetweenBusStops(
     distance: number[],
     start: number,
-    destination: number
+    destination: number,
 ): number {
     [start, destination] = [
         Math.min(start, destination),
@@ -16,11 +16,11 @@ function distanceBetweenBusStops(
         ...Object.values(
             groupBy(
                 Array.from(distance.entries()),
-                ([index]) => start <= index && index < destination
-            )
+                ([index]) => start <= index && index < destination,
+            ),
             // deno-lint-ignore ban-ts-comment
             //@ts-ignore
-        ).map((value) => sum(value.map((a) => a[1])))
+        ).map((value) => sum(value.map((a) => a[1]))),
     );
 }
 export default distanceBetweenBusStops;

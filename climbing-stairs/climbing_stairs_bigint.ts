@@ -13,15 +13,14 @@ export function climbing_stairs_bigint(num: bigint): bigint {
         if (cacheClimbStairs.has(e)) {
             continue;
         } else {
-            const r =
-                cacheClimbStairs.get(e) ||
+            const r = cacheClimbStairs.get(e) ||
                 bigInt(
-                    cacheClimbStairs.get(e - 1n) ||
-                        climbing_stairs_bigint(e - 1n)
-                ) +
+                        cacheClimbStairs.get(e - 1n) ||
+                            climbing_stairs_bigint(e - 1n),
+                    ) +
                     bigInt(
                         cacheClimbStairs.get(e - 2n) ||
-                            climbing_stairs_bigint(e - 2n)
+                            climbing_stairs_bigint(e - 2n),
                     );
             cacheClimbStairs.set(e, r);
         }

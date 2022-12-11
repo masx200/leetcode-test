@@ -8,6 +8,6 @@ Deno.test("reContruct", () => {
             .map(ArrayToListNode)
             .map(reContruct)
             .map(ListNodeToArray),
-        [[1, 3], [5, 7, 9, 9, 1], [], []]
+        [[1, 3], [5, 7, 9, 9, 1], [], []],
     );
 });

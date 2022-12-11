@@ -6,6 +6,6 @@ export default function mostWordsFound(sentences: string[]): number {
             // deno-lint-ignore ban-ts-comment
             //@ts-ignore
             Array.prototype.reduce.call(s, (a, v) => a + Number(v === " "), 1)
-        )
+        ),
     );
 }

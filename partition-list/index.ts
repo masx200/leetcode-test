@@ -4,7 +4,7 @@ import { ListNodeToArray } from "../reverse-linked-list/ListNodeToArray.ts";
 
 export default function partition(
     head: ListNode | null,
-    x: number
+    x: number,
 ): ListNode | null {
     if (!head) return head;
     if (!head.next) return head;

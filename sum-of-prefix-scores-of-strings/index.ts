@@ -18,7 +18,7 @@ export default sumPrefixScores;
 function TrieNodeSum(
     root: TrieNode,
     word: string,
-    word2sum: Map<string, number>
+    word2sum: Map<string, number>,
 ): number {
     let sum = 0;
     let index = 0;

@@ -1,6 +1,6 @@
 export default function uncommonFromSentences(
     s1: string,
-    s2: string
+    s2: string,
 ): string[] {
     const a = s1.split(" ");
 

@@ -4,7 +4,7 @@ import { AvlTree, Heap } from "../deps.ts";
 function busiestServers(
     k: number,
     arrival: number[],
-    load: number[]
+    load: number[],
 ): number[] {
     const cnts = new Map<number, number>();
     const pq = new Heap<[number, number]>((a, b) => a[0] - b[0]);

@@ -62,6 +62,6 @@ Deno.test("binary-tree-pruning", () => {
 
     assertEquals(
         structuredClone(inputs.map((input) => pruneTree(input))),
-        outputs
+        outputs,
     );
 });

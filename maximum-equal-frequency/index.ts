@@ -14,11 +14,10 @@ export default function maxEqualFreq(nums: number[]) {
 
         freq.set(curCount, (freq.get(count.get(nums[i]) ?? 0) ?? 0) + 1);
         const maxFreqCount = freq.get(maxFreq) ?? 0;
-        const ok =
-            maxFreq === 1 ||
+        const ok = maxFreq === 1 ||
             (maxFreqCount * maxFreq +
-                (freq.get(maxFreq - 1) ?? 0) * (maxFreq - 1) ===
-                i + 1 &&
+                            (freq.get(maxFreq - 1) ?? 0) * (maxFreq - 1) ===
+                    i + 1 &&
                 maxFreqCount === 1) ||
             (maxFreqCount * maxFreq + 1 === i + 1 && freq.get(1) === 1);
         if (ok) {

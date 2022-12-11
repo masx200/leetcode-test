@@ -2,7 +2,7 @@ import { ListNode as Node } from "../reverse-linked-list/ListNode.ts";
 
 export default function insert(
     head: Node | null,
-    insertVal: number
+    insertVal: number,
 ): Node | null {
     if (!head) {
         const node = new Node(insertVal);

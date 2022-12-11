@@ -40,9 +40,9 @@ Deno.test("add-two-polynomials-represented-as-linked-lists", () => {
             PolyNodeToArray(
                 addPoly(
                     ArrayToPolyNode(a as [number, number][]),
-                    ArrayToPolyNode(b as [number, number][])
-                )
-            )
+                    ArrayToPolyNode(b as [number, number][]),
+                ),
+            ),
         );
     });
 });

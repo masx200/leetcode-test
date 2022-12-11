@@ -27,6 +27,6 @@ Deno.test("all-elements-in-two-binary-search-trees", () => {
     ];
     assertEquals(
         outputs,
-        inputs.map(([root1, root2]) => getAllElements(root1, root2))
+        inputs.map(([root1, root2]) => getAllElements(root1, root2)),
     );
 });

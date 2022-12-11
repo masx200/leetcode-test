@@ -32,13 +32,13 @@ Deno.test("binary-search-tree-iterator", () => {
                 [],
                 [],
             ],
-            [BSTIterator]
-        )
+            [BSTIterator],
+        ),
     );
 });
 Deno.test("binary-search-tree-iterator", () => {
     const iterator = new BSTIterator(
-        TreeNodeLeetCodeFromJSON([7, 3, 15, null, null, 9, 20])
+        TreeNodeLeetCodeFromJSON([7, 3, 15, null, null, 9, 20]),
     );
 
     const res: number[] = [];

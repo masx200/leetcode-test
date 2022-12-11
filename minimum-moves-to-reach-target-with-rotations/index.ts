@@ -7,7 +7,7 @@ function bfs(
     grid: number[][],
     visited: Set<string>,
     positions: [x: number, y: number, x: number, y: number][],
-    step: number
+    step: number,
 ): number {
     const n = grid.length;
     if (positions.length === 0) return -1;
@@ -50,7 +50,7 @@ function hash(position: [x: number, y: number, x: number, y: number]): string {
 }
 function isEnd(
     position: [x: number, y: number, x: number, y: number],
-    n: number
+    n: number,
 ): boolean {
     return (
         position[0] === n - 1 &&
