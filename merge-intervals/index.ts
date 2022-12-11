@@ -11,7 +11,7 @@ export default function merge(intervals: number[][]): number[][] {
         } else {
             merged[merged.length - 1][1] = Math.max(
                 merged[merged.length - 1][1],
-                interval[1],
+                interval[1]
             );
         }
     }

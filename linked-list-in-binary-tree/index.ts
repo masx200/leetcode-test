@@ -16,9 +16,12 @@ function dfs(rt: TreeNode | null, head: ListNode | null): boolean {
 
 export default function isSubPath(
     head: ListNode | null,
-    root: TreeNode | null,
+    root: TreeNode | null
 ): boolean {
     if (root == null) return !!0;
-    return dfs(root, head) || isSubPath(head, root.left) ||
-        isSubPath(head, root.right);
+    return (
+        dfs(root, head) ||
+        isSubPath(head, root.left) ||
+        isSubPath(head, root.right)
+    );
 }

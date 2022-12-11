@@ -3,7 +3,7 @@ import { TreeNode } from "../binary-tree-inorder-traversal/TreeNode.ts";
 
 // }
 export default function treeToDoublyList(
-    root: TreeNode | null,
+    root: TreeNode | null
 ): TreeNode | null {
     if (!root) return null;
     const tree = new TreeNode();

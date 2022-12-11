@@ -1,10 +1,10 @@
 export default function maximumRows(
     mat: number[][],
-    numSelect: number,
+    numSelect: number
 ): number {
     const n = mat[0].length;
     //const m = mat.length
-    const rows = mat.map((v) => ([...v.keys()].filter((j) => v[j])));
+    const rows = mat.map((v) => [...v.keys()].filter((j) => v[j]));
     let ans = 0;
 
     for (const selected of combinations(Array(n).keys(), numSelect)) {

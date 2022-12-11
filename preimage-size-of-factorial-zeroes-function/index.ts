@@ -1,5 +1,6 @@
 export default function preimageSizeFZF(k: number): number {
-    let left = 0, right = k;
+    let left = 0,
+        right = k;
     while (left <= right) {
         const mid = Math.floor((right + left) / 2);
 
@@ -13,6 +14,7 @@ export default function preimageSizeFZF(k: number): number {
 }
 
 function calc(b: number) {
-    return Array<number>(1 + Math.ceil(Math.log(10 ** 9) / Math.log(5))).fill(0)
+    return Array<number>(1 + Math.ceil(Math.log(10 ** 9) / Math.log(5)))
+        .fill(0)
         .reduce((a, _, i) => Math.floor(a + b / Math.pow(5, i)), 0);
 }

@@ -1,6 +1,6 @@
 export default function advantageCount(
     nums1: number[],
-    nums2: number[],
+    nums2: number[]
 ): number[] {
     const n = nums1.length;
     const idx1: number[] = new Array(n).fill(0);

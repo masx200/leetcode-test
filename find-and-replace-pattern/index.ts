@@ -16,8 +16,7 @@ function findAndReplacePattern(words: string[], pattern: string): string[] {
     const model = getModel(pattern);
     return words.filter(
         (word) =>
-            word.length === pattern.length &&
-            ArrayEquals(model, getModel(word)),
+            word.length === pattern.length && ArrayEquals(model, getModel(word))
     );
 }
 function ArrayEquals(a: Array<unknown>, b: Array<unknown>): boolean {

@@ -5,7 +5,7 @@ export default function longestUnivaluePath(root: TreeNode | null): number {
 
     let res = 0;
 
-    dfs(root, (s) => res = Math.max(res, s));
+    dfs(root, (s) => (res = Math.max(res, s)));
     return res;
 }
 function dfs(root: TreeNode | null, out: (s: number) => void) {
@@ -14,7 +14,8 @@ function dfs(root: TreeNode | null, out: (s: number) => void) {
     }
     const left = dfs(root.left, out);
     const right = dfs(root.right, out);
-    let left1 = 0, right1 = 0;
+    let left1 = 0,
+        right1 = 0;
     if (root.left && root.left.val === root.val) {
         left1 = left + 1;
     }

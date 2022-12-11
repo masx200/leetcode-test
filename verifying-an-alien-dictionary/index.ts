@@ -6,8 +6,8 @@ export default function isAlienSorted(words: string[], order: string): boolean {
 
         const result = String.fromCharCode(
             ...Array.from(word).map(
-                (char) => "a".charCodeAt(0) + (char_to_index.get(char) ?? -1),
-            ),
+                (char) => "a".charCodeAt(0) + (char_to_index.get(char) ?? -1)
+            )
         );
         decode_cache.set(word, result);
         return result;
@@ -20,7 +20,7 @@ export default function isAlienSorted(words: string[], order: string): boolean {
     }
 
     const char_to_index = new Map(
-        [...Array.from(order).entries()].map(([a, b]) => [b, a]),
+        [...Array.from(order).entries()].map(([a, b]) => [b, a])
     );
 
     return words.every((word, index, array) => {

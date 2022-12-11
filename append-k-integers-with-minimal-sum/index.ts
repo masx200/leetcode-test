@@ -11,5 +11,5 @@ export default function minimalKSum(nums: number[], k: number): number {
         }
     }
 
-    return k * (k + 1) / 2 - exist;
+    return (k * (k + 1)) / 2 - exist;
 }

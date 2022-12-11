@@ -18,7 +18,5 @@ export default function findMinDifference(timePoints: string[]): number {
 
 function getMinutes(t: string) {
     const a = t.split("").map(Number);
-    return ((
-                        a[0]
-                    ) * 10 + (a[1])) * 60 + (a[3]) * 10 + (a[4]);
+    return (a[0] * 10 + a[1]) * 60 + a[3] * 10 + a[4];
 }

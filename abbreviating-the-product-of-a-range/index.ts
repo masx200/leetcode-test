@@ -12,15 +12,18 @@ function init() {
 function abbreviateProduct(left: number, right: number): string {
     init();
 
-    const a = (left === right ? left : factorials[right] / factorials[left - 1])
-        .toString();
+    const a = (
+        left === right ? left : factorials[right] / factorials[left - 1]
+    ).toString();
 
     //@ts-ignore
     const index = Array.prototype.findLastIndex.call(a, (v) => v !== "0");
 
     const C = index >= 0 ? a.length - index - 1 : 0;
     const D = a.length - C;
-    return (D > 10
-        ? a.slice(0, 5) + "..." + a.slice(D - 5, D)
-        : a.slice(0, D)) + "e" + C;
+    return (
+        (D > 10 ? a.slice(0, 5) + "..." + a.slice(D - 5, D) : a.slice(0, D)) +
+        "e" +
+        C
+    );
 }

@@ -38,5 +38,8 @@ Deno.test("all-ancestors-of-a-node-in-a-directed-acyclic-graph", () => {
             ],
         ],
     ] as Array<Parameters<typeof getAncestors>>;
-    assertEquals(outputs, inputs.map(([n, edges]) => getAncestors(n, edges)));
+    assertEquals(
+        outputs,
+        inputs.map(([n, edges]) => getAncestors(n, edges))
+    );
 });

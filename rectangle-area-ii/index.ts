@@ -1,6 +1,7 @@
 function area(current: Interval): bigint {
-    return BigInt(current.right - current.left) *
-        BigInt(current.up - current.down);
+    return (
+        BigInt(current.right - current.left) * BigInt(current.up - current.down)
+    );
 }
 function rectangleArea(rectangles: number[][]): number {
     const left = Math.min(...rectangles.map((a) => a[0]));
@@ -17,11 +18,7 @@ function rectangleArea(rectangles: number[][]): number {
 
     return Number(root.value % BigInt(10 ** 9 + 7));
 }
-function change(
-    node: SegmentNode,
-    target: Interval,
-    value: bigint,
-) {
+function change(node: SegmentNode, target: Interval, value: bigint) {
     const current = node.interval;
     if (
         target.up < current.down ||
@@ -32,33 +29,27 @@ function change(
         return;
     }
 
-    if (
-        contains(target, current)
-    ) {
+    if (contains(target, current)) {
         if (node.children.length === 0) {
-            node.value = value *
-                area(current);
+            node.value = value * area(current);
 
             return;
         }
     } else {
         if (node.children.length === 0) {
-            const midx = [target.left, target.right].filter((a) =>
-                current.left < a && current.right > a
-            )[0] ?? current.right;
-            const midy = [target.down, target.up].filter((a) =>
-                current.down < a && current.up > a
-            )[0] ?? current.up;
+            const midx =
+                [target.left, target.right].filter(
+                    (a) => current.left < a && current.right > a
+                )[0] ?? current.right;
+            const midy =
+                [target.down, target.up].filter(
+                    (a) => current.down < a && current.up > a
+                )[0] ?? current.up;
             const subinterval = TwoDSplit(current, midx, midy);
 
             if (subinterval.length) {
                 node.children = subinterval.map(
-                    (c) =>
-                        new SegmentNode(
-                            c,
-                            area(c) *
-                                BigInt(node.value > 0),
-                        ),
+                    (c) => new SegmentNode(c, area(c) * BigInt(node.value > 0))
                 );
             }
         }
@@ -72,25 +63,24 @@ function change(
             ? node.children.reduce((a, n) => a + n.value, 0n)
             : node.value;
 
-        if (
-            node.value === value *
-                    area(current) || node.value === 0n
-        ) {
+        if (node.value === value * area(current) || node.value === 0n) {
             node.children.length = 0;
         }
     }
 }
 export function contains(target: Interval, current: Interval): boolean {
-    return target.left <= current.left &&
+    return (
+        target.left <= current.left &&
         target.down <= current.down &&
         target.right >= current.right &&
-        target.up >= current.up;
+        target.up >= current.up
+    );
 }
 
 export function TwoDSplit(
     current: Interval,
     midx: number,
-    midy: number,
+    midy: number
 ): Interval[] {
     const { left, right, up, down } = current;
 
@@ -116,16 +106,22 @@ export function TwoDSplit(
         .flat();
     return result.filter(
         ({ left, right, up, down }) =>
-            left <= right && down <= up && (right - left) * (up - down) &&
-            !(left === current.left && down === current.down &&
-                up === current.up && right === current.right),
+            left <= right &&
+            down <= up &&
+            (right - left) * (up - down) &&
+            !(
+                left === current.left &&
+                down === current.down &&
+                up === current.up &&
+                right === current.right
+            )
     );
 }
 export class SegmentNode {
     constructor(
         public interval: Interval = new Interval(),
         public value: bigint = 0n,
-        public children: SegmentNode[] = [],
+        public children: SegmentNode[] = []
     ) {}
 }
 export class Interval {
@@ -133,7 +129,7 @@ export class Interval {
         public left = 0,
         public right = 0,
         public down = 0,
-        public up = 0,
+        public up = 0
     ) {}
 }
 

@@ -3,7 +3,7 @@ import { get_length_of_list } from "../reverse-linked-list-ii/get_length_of_list
 import { buildBST } from "./buildBST.ts";
 
 export default function sortedListbuildBST(
-    head: ListNode | null,
+    head: ListNode | null
 ): TreeNode | null {
     if (!head) return null;
     let node: ListNode | null = head;
@@ -24,6 +24,6 @@ export default function sortedListbuildBST(
             if (!node) return;
 
             node = node.next;
-        },
+        }
     );
 }

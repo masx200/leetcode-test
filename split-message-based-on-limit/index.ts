@@ -1,6 +1,6 @@
 export default function splitMessage(message: string, limit: number): string[] {
     const n = message.length;
-    for (let i = 1, cap = 0, tail_len = 0;; ++i) {
+    for (let i = 1, cap = 0, tail_len = 0; ; ++i) {
         if (i < 10) tail_len = 5; // 结尾的长度
         else if (i < 100) {
             if (i == 10) cap -= 9; // 前面的结尾的长度都 +1，那么容量就要减小

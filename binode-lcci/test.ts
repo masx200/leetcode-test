@@ -5,7 +5,7 @@ import increasingBST from "./index.ts";
 Deno.test("binode-lcci-1", () => {
     assertEquals(
         increasingBST(new TreeNode(5, new TreeNode(1), new TreeNode(7))),
-        new TreeNode(1, null, new TreeNode(5, null, new TreeNode(7))),
+        new TreeNode(1, null, new TreeNode(5, null, new TreeNode(7)))
     );
 });
 Deno.test("binode-lcci-2", () => {
@@ -16,10 +16,10 @@ Deno.test("binode-lcci-2", () => {
                 new TreeNode(
                     2,
                     new TreeNode(1, new TreeNode(0)),
-                    new TreeNode(3),
+                    new TreeNode(3)
                 ),
-                new TreeNode(5, null, new TreeNode(6)),
-            ),
+                new TreeNode(5, null, new TreeNode(6))
+            )
         ),
         new TreeNode(
             0,
@@ -36,12 +36,12 @@ Deno.test("binode-lcci-2", () => {
                         new TreeNode(
                             4,
                             null,
-                            new TreeNode(5, null, new TreeNode(6)),
-                        ),
-                    ),
-                ),
-            ),
-        ),
+                            new TreeNode(5, null, new TreeNode(6))
+                        )
+                    )
+                )
+            )
+        )
     );
 });
 Deno.test("binode-lcci-3", () => {
@@ -67,7 +67,7 @@ Deno.test("binode-lcci-3", () => {
                         right: { val: 9, left: null, right: null },
                     },
                 },
-            }),
+            })
         ),
         JSON.stringify({
             val: 1,
@@ -105,6 +105,6 @@ Deno.test("binode-lcci-3", () => {
                     },
                 },
             },
-        }),
+        })
     );
 });

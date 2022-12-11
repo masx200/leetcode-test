@@ -6,7 +6,8 @@ export default function checkDistances(s: string, distance: number[]): boolean {
         const last = mp.get(key);
 
         if (
-            mp.has(key) && typeof last !== "undefined" &&
+            mp.has(key) &&
+            typeof last !== "undefined" &&
             i - last - 1 !== distance[key]
         ) {
             return false;

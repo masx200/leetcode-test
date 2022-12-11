@@ -1,11 +1,11 @@
 export default function wordBreak(s: string, wordDict: string[]): string[] {
     if (
         Array.from(new Set(s)).some((c) => !wordDict.some((w) => w.includes(c)))
-    ) return [];
-    const lens = Array.from(new Set(wordDict.map((a) => a.length))).sort((
-        a,
-        b,
-    ) => a - b);
+    )
+        return [];
+    const lens = Array.from(new Set(wordDict.map((a) => a.length))).sort(
+        (a, b) => a - b
+    );
     const n: number = s.length;
     const set: Set<string> = new Set(wordDict);
     const cache: string[][][] = Array(n);

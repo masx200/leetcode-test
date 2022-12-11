@@ -14,6 +14,6 @@ Deno.test("add-to-array-form-of-integer", () => {
             [4, 5, 5],
             [1, 0, 2, 1],
         ],
-        inputs.map(([A, K]) => addToArrayForm(A, K)),
+        inputs.map(([A, K]) => addToArrayForm(A, K))
     );
 });

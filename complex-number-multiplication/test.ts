@@ -8,8 +8,5 @@ Deno.test("complex-number-multiplication", () => {
     const actual = complexNumberMultiply(num1, num2);
     assertEquals(actual, expected);
 
-    assertEquals(
-        "0+-2i",
-        complexNumberMultiply("1+-1i", "1+-1i"),
-    );
+    assertEquals("0+-2i", complexNumberMultiply("1+-1i", "1+-1i"));
 });

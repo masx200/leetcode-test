@@ -21,7 +21,7 @@ function mergeArray(
     left1: number,
     right1: number,
     left2: number,
-    right2: number,
+    right2: number
 ) {
     const temp: number[] = Array(right2 - left2 + right1 - left1 + 2);
 

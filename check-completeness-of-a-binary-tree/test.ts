@@ -19,6 +19,6 @@ Deno.test("check-completeness-of-a-binary-tree", () => {
             const root = deserialize(input);
             return isCompleteTree(root);
         }),
-        outputs,
+        outputs
     );
 });

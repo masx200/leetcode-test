@@ -1,7 +1,7 @@
 export default function breakfastNumber(
     staple: number[],
     drinks: number[],
-    x: number,
+    x: number
 ): number {
     staple.sort((a, b) => a - b);
     drinks.sort((a, b) => a - b);

@@ -79,6 +79,6 @@ Deno.test("add-one-row-to-tree", () => {
         outputs,
         inputs.map((args) =>
             structuredClone(Reflect.apply(addOneRow, null, args))
-        ),
+        )
     );
 });

@@ -3,7 +3,7 @@ import { TreeNode } from "../binary-tree-inorder-traversal/TreeNode.ts";
 export function* InOrderIterator(root: TreeNode | null): Generator<number> {
     if (!root) return;
     yield* InOrderIterator(root.left);
-    yield (root.val);
+    yield root.val;
     yield* InOrderIterator(root.right);
 }
 class BSTIterator {
@@ -47,7 +47,7 @@ class BSTIterator {
     }
 
     hasPrev(): boolean {
-        return !!(this.#list?.left);
+        return !!this.#list?.left;
     }
 }
 

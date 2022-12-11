@@ -20,20 +20,14 @@ function findSecretWord(wordlist: string[], master: Master) {
         const d = master.guess(wordlist[j]);
         if (d === 6) return;
         if (d >= 0) {
-            possible = possible.filter((i) =>
-                !seen.has(i) &&
-                d === H[i][j]
-            );
+            possible = possible.filter((i) => !seen.has(i) && d === H[i][j]);
         } else {
             return;
         }
     }
 }
 
-function solve(
-    possible: number[],
-    H: number[][],
-) {
+function solve(possible: number[], H: number[][]) {
     const ansgrps: [number, number][] = [];
     for (const i of possible) {
         const groups: Array<number> = Array(7).fill(0);
@@ -42,22 +36,19 @@ function solve(
                 groups[H[i][j]]++;
             }
         }
-        const maxgroup = groups.reduce((a, v) => a > v ? a : v);
+        const maxgroup = groups.reduce((a, v) => (a > v ? a : v));
         ansgrps.push([maxgroup, i]);
     }
     const minlen = Math.min(...ansgrps.map((a) => a[0]));
 
-    const ansguesses: number[] = ansgrps.filter((a) => a[0] === minlen).map(
-        (a) => a[1],
-    );
+    const ansguesses: number[] = ansgrps
+        .filter((a) => a[0] === minlen)
+        .map((a) => a[1]);
     return ansguesses;
 }
 
 function getMatch(v: string, w: string) {
-    return Array.prototype.filter.call(
-        v,
-        (c, k) => w[k] === c,
-    ).length;
+    return Array.prototype.filter.call(v, (c, k) => w[k] === c).length;
 }
 
 export default findSecretWord;

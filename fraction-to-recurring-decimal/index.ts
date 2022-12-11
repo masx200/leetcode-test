@@ -2,7 +2,7 @@ import { absBigint } from "./abs_bigint.ts";
 
 export default function fractionToDecimal(
     numerator: number,
-    denominator: number,
+    denominator: number
 ): string {
     let a = BigInt(numerator);
     let b = BigInt(denominator);

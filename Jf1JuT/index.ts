@@ -61,7 +61,7 @@ function createEdgesAndIndegrees(words: string[]): {
 function topologicalsort(
     edges: Map<string, Set<string>>,
     indegrees: Map<string, number>,
-    chars: Set<string>,
+    chars: Set<string>
 ): string[] {
     const order: string[] = [];
 

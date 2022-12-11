@@ -1,8 +1,8 @@
 export default function finalValueAfterOperations(
-    operations: string[],
+    operations: string[]
 ): number {
     return operations.reduce(
-        (p, v) => ["X++", "++X"].includes(v) ? p + 1 : p - 1,
-        0,
+        (p, v) => (["X++", "++X"].includes(v) ? p + 1 : p - 1),
+        0
     );
 }

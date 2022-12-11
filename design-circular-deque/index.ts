@@ -11,7 +11,7 @@ export default interface MyCircularDeque<T = any> {
 }
 
 export default function MyCircularDeque<T = any>(
-    capacity = Infinity,
+    capacity = Infinity
 ): MyCircularDeque<T> {
     if (capacity < 1) throw Error("k greater than or equal  one");
     const storage = new Map<bigint, T>();

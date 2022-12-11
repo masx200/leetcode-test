@@ -1,6 +1,9 @@
 export default function maximumSubarraySum(nums: number[], k: number): number {
     const set = new Set<number>();
-    let right = 0, left = 0, ans = 0, res = 0;
+    let right = 0,
+        left = 0,
+        ans = 0,
+        res = 0;
     while (right != nums.length) {
         // 如果set存过  set就从left开始删  直到没存过nums[right]
         while (set.has(nums[right])) {

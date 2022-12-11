@@ -1,7 +1,7 @@
 import { ListNode } from "../reverse-linked-list/ListNode.ts";
 
 export default function deleteDuplicates(
-    head: ListNode | null,
+    head: ListNode | null
 ): ListNode | null {
     if (!head) return head;
 

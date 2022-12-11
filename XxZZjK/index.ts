@@ -1,9 +1,21 @@
 export default function sandyLandManagement(size: number): number[][] {
-    if (size < 4) { //size=1-3,直接返回
-        return [[[1, 1]], [[1, 1], [2, 1], [2, 3]], [[1, 1], [2, 1], [2, 3], [
-            3,
-            1,
-        ], [3, 5]]][size - 1];
+    if (size < 4) {
+        //size=1-3,直接返回
+        return [
+            [[1, 1]],
+            [
+                [1, 1],
+                [2, 1],
+                [2, 3],
+            ],
+            [
+                [1, 1],
+                [2, 1],
+                [2, 3],
+                [3, 1],
+                [3, 5],
+            ],
+        ][size - 1];
     }
     const res = [[1, 1]];
     for (let i = 2; i <= size; i++) {

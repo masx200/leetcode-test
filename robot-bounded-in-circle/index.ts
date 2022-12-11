@@ -13,6 +13,8 @@ export default function isRobotBounded(instructions: string): boolean {
         distance[direct]++;
     }
     // 面朝北方且不在原点
-    return !(direct == 0 &&
-        (distance[0] != distance[2] || distance[1] != distance[3]));
+    return !(
+        direct == 0 &&
+        (distance[0] != distance[2] || distance[1] != distance[3])
+    );
 }

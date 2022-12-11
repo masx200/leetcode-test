@@ -1,8 +1,7 @@
 export default class UndergroundSystem {
     #id2info = new Map<number, [string, number]>();
     #station2time = new Map<string, number[]>();
-    constructor() {
-    }
+    constructor() {}
 
     checkIn(id: number, stationName: string, t: number): void {
         const info: [string, number] = [stationName, t];
@@ -13,9 +12,7 @@ export default class UndergroundSystem {
         const info = this.#id2info.get(id);
         if (info) {
             const key = JSON.stringify([info[0], stationName]);
-            const time = this.#station2time.get(
-                key,
-            ) ?? [];
+            const time = this.#station2time.get(key) ?? [];
             time.push(t - info[1]);
             this.#station2time.set(key, time);
         } else {
@@ -25,9 +22,7 @@ export default class UndergroundSystem {
 
     getAverageTime(startStation: string, endStation: string): number {
         const key = JSON.stringify([startStation, endStation]);
-        const time = this.#station2time.get(
-            key,
-        );
+        const time = this.#station2time.get(key);
         if (!time) throw Error("accident");
 
         return time.reduce((a, v) => a + v, 0) / time.length;

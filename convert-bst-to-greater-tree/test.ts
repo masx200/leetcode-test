@@ -51,5 +51,8 @@ Deno.test("convert-bst-to-greater-tree", () => {
         },
         { val: 1, left: null, right: { val: 1, left: null, right: null } },
     ];
-    assertEquals(inputs.map((input) => convertBST(input)), outputs);
+    assertEquals(
+        inputs.map((input) => convertBST(input)),
+        outputs
+    );
 });

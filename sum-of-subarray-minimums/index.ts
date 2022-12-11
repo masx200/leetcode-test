@@ -11,9 +11,10 @@ export default function sumSubarrayMins(arr: number[]): number {
         ) {
             monoStack.pop();
         }
-        const k = monoStack.length === 0
-            ? (i + 1)
-            : (i - monoStack[monoStack.length - 1]);
+        const k =
+            monoStack.length === 0
+                ? i + 1
+                : i - monoStack[monoStack.length - 1];
         dp[i] = k * arr[i] + (monoStack.length === 0 ? 0 : dp[i - k]);
         ans = (ans + dp[i]) % MOD;
         monoStack.push(i);

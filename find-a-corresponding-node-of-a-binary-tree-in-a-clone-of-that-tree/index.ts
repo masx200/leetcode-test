@@ -3,7 +3,7 @@ import { TreeNode } from "../binary-tree-inorder-traversal/TreeNode.ts";
 export default function getTargetCopy(
     original: TreeNode | null,
     cloned: TreeNode | null,
-    target: TreeNode | null,
+    target: TreeNode | null
 ): TreeNode | null {
     if (!target || !cloned) return null;
     if (target.val === cloned.val) return cloned;

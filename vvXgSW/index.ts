@@ -2,7 +2,7 @@ import mergeTwoLists from "../merge-two-sorted-lists/index.ts";
 import { ListNode } from "../reverse-linked-list/ListNode.ts";
 
 export default function mergeKLists(
-    lists: Array<ListNode | null>,
+    lists: Array<ListNode | null>
 ): ListNode | null {
     const listsnotnull = lists.filter((a) => !!a) as Array<ListNode>;
 
@@ -15,7 +15,7 @@ export default function mergeKLists(
     if (listsnotnull.length % 2) {
         return mergeTwoLists(
             listsnotnull[0],
-            mergeKLists(listsnotnull.slice(1)),
+            mergeKLists(listsnotnull.slice(1))
         );
     } else {
         const half = Math.floor(lists.length / 2) - 1;

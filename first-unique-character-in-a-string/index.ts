@@ -1,7 +1,7 @@
 export default function firstUniqChar(s: string): number {
     const cnts: Record<string, number> = {};
-    for (const w of (s)) {
-        const arr = (cnts[w] ?? 0);
+    for (const w of s) {
+        const arr = cnts[w] ?? 0;
 
         cnts[w] = arr + 1;
     }

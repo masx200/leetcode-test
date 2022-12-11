@@ -1,5 +1,6 @@
 export default function kthFactor(n: number, k: number): number {
-    let count = 0, factor = 0;
+    let count = 0,
+        factor = 0;
     for (factor = 1; factor * factor <= n; ++factor) {
         if (n % factor == 0) {
             ++count;

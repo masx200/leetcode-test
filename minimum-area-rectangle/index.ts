@@ -9,17 +9,15 @@ export default function minAreaRect(points: number[][]): number {
                 points[i][0] !== points[j][0] &&
                 points[i][1] !== points[j][1]
             ) {
-                const area = Math.abs(points[j][0] - points[i][0]) *
+                const area =
+                    Math.abs(points[j][0] - points[i][0]) *
                     Math.abs(points[j][1] - points[i][1]);
                 if (area > ans) continue;
                 if (
                     ps.has(JSON.stringify([points[i][0], points[j][1]])) &&
                     ps.has(JSON.stringify([points[j][0], points[i][1]]))
                 ) {
-                    ans = Math.min(
-                        ans,
-                        area,
-                    );
+                    ans = Math.min(ans, area);
                 }
             }
         }

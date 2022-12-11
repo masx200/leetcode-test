@@ -6,7 +6,7 @@ class SegmentTree<T> {
         public start: number,
         public end: number,
         public initializer: (index: number) => T,
-        public operation: (a: T, b: T) => T,
+        public operation: (a: T, b: T) => T
     ) {
         this.#root = new TreeNode<T>();
         this.#build(this.#root, start, end);
@@ -28,7 +28,7 @@ class SegmentTree<T> {
         value: T,
         node: TreeNode<T> = this.#root,
         start: number = this.start,
-        end: number = this.end,
+        end: number = this.end
     ): void {
         if (start === end) {
             node.value = value;
@@ -50,7 +50,7 @@ class SegmentTree<T> {
         right: number,
         node: TreeNode<T> = this.#root,
         start: number = this.start,
-        end: number = this.end,
+        end: number = this.end
     ): T {
         if (start === left && right === end) {
             return node.value;
@@ -66,7 +66,7 @@ class SegmentTree<T> {
         } else {
             return this.operation(
                 this.query(left, mid, node.left, start, mid),
-                this.query(mid + 1, right, node.right, mid + 1, end),
+                this.query(mid + 1, right, node.right, mid + 1, end)
             );
         }
     }

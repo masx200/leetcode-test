@@ -14,8 +14,8 @@ Deno.test("booking-concert-tickets-in-groups", () => {
                 [5, 1],
                 [5, 1],
             ],
-            BookMyShow,
+            BookMyShow
         ),
-        [null, [0, 0], [], true, false],
+        [null, [0, 0], [], true, false]
     );
 });

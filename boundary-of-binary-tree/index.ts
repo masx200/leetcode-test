@@ -8,7 +8,8 @@ export default function boundaryOfBinaryTree(root: TreeNode): number[] {
     return ans;
     function dfs(root: TreeNode | null, dir: number) {
         if (!root) return;
-        if (dir == -1) { //左边界
+        if (dir == -1) {
+            //左边界
             ans.push(root.val); //前序遍历
             if (root.left) {
                 dfs(root.left, -1); //有左节点，进入左节点找
@@ -16,7 +17,8 @@ export default function boundaryOfBinaryTree(root: TreeNode): number[] {
             } else {
                 dfs(root.right, -1); //没有左节点，当成左边界
             }
-        } else if (dir == 1) { //右边界
+        } else if (dir == 1) {
+            //右边界
             // ans.push(root.val);//写这里错了
             if (root.right) {
                 dfs(root.left, 0);

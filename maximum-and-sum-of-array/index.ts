@@ -1,14 +1,11 @@
 const { pow, max, floor } = Math;
-function maximumANDSum(
-    nums: number[],
-    numSlots: number,
-): number {
+function maximumANDSum(nums: number[], numSlots: number): number {
     const n = nums.length;
     nums.unshift(0);
     const m = pow(3, numSlots);
-    const dp: number[][] = Array(n + 1).fill(0).map(() =>
-        Array(m).fill(-Infinity)
-    );
+    const dp: number[][] = Array(n + 1)
+        .fill(0)
+        .map(() => Array(m).fill(-Infinity));
     dp[0][0] = 0;
 
     let ret = 0;
@@ -27,7 +24,7 @@ function maximumANDSum(
             if (filled(state, j) >= 1) {
                 dp[i][state] = max(
                     dp[i][state],
-                    dp[i - 1][state - pow(3, j)] + (nums[i] & (j + 1)),
+                    dp[i - 1][state - pow(3, j)] + (nums[i] & (j + 1))
                 );
             }
         }

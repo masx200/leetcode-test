@@ -4,7 +4,7 @@ function decrypt(code: number[], k: number): number[] {
     const nums = [...code, ...code];
     const presum: number[] = Array(nums.length + 1).fill(0);
     nums.forEach((value, index) => {
-        presum[index + 1] = value + (presum[index]);
+        presum[index + 1] = value + presum[index];
     });
     return code.map((_, i) => presum[i + k + 1] - presum[i + 1]);
 }

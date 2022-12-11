@@ -9,26 +9,7 @@ Deno.test("best-time-to-buy-and-sell-stock", () => {
 });
 Deno.test("best-time-to-buy-and-sell-stock", () => {
     const outputs = [
-        5,
-        0,
-        4,
-        1,
-        5,
-        6,
-        1,
-        7,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14,
-        15,
-        16,
-        17,
-        5,
-        0,
-        4,
+        5, 0, 4, 1, 5, 6, 1, 7, 9, 10, 11, 12, 13, 14, 15, 16, 17, 5, 0, 4,
     ];
     const inputs = [
         [7, 1, 5, 3, 6, 4],

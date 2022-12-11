@@ -6,7 +6,7 @@ import { get_length_of_list } from "./get_length_of_list.ts";
 export default function reverseBetween(
     head: ListNode | null,
     left: number,
-    right: number,
+    right: number
 ): ListNode | null {
     if (!head) return head;
     if (!head.next) return head;
@@ -20,7 +20,7 @@ export default function reverseBetween(
     if (left !== 1) {
         return new ListNode(
             head.val,
-            reverseBetween(head.next, left - 1, right - 1),
+            reverseBetween(head.next, left - 1, right - 1)
         );
     }
     const start = get_deep_next_of_list(head, left - 1);

@@ -7,11 +7,7 @@ export default function findShortestPath(master: GridMaster): number {
     const end: number[] = [];
     grid.set(key, -1);
     dfs(0, 0, new Set<string>().add(key));
-    function dfs(
-        row: number,
-        col: number,
-        visited: Set<string>,
-    ) {
+    function dfs(row: number, col: number, visited: Set<string>) {
         const key = JSON.stringify([row, col]);
         if (master.isTarget()) {
             grid.set(key, 2);
@@ -38,7 +34,7 @@ export default function findShortestPath(master: GridMaster): number {
     function bfs(
         pos: [number, number][],
         distance: number,
-        visited: Set<string>,
+        visited: Set<string>
     ): number {
         const temp: [number, number][] = [];
         for (const [row, col] of pos) {
@@ -63,9 +59,9 @@ export default function findShortestPath(master: GridMaster): number {
 
     return distance;
 }
-const directions = [[0, -1, "L", "R"], [0, 1, "R", "L"], [-1, 0, "U", "D"], [
-    1,
-    0,
-    "D",
-    "U",
-]] as const;
+const directions = [
+    [0, -1, "L", "R"],
+    [0, 1, "R", "L"],
+    [-1, 0, "U", "D"],
+    [1, 0, "D", "U"],
+] as const;

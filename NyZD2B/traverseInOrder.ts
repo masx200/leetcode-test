@@ -1,11 +1,9 @@
 import { BinarySearchTree } from "https://esm.sh/@datastructures-js/binary-search-tree@5.1.0/";
 
-export function traverseInOrder<
-    T extends BinarySearchTree<any>,
->(
+export function traverseInOrder<T extends BinarySearchTree<any>>(
     tree: T,
     cb: (node: NonNullable<ReturnType<T["root"]>>) => void,
-    signal?: AbortSignal,
+    signal?: AbortSignal
 ) {
     if (typeof cb !== "function") {
         throw new Error(".traverseInOrder expects a callback function");

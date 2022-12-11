@@ -6,9 +6,10 @@ function reverseOddLevels(root: TreeNode | null): TreeNode | null {
     let depth = 0;
     level([root], (nodes) => {
         if (depth & 1) {
-            nodes.map((a) => a.val).reverse().forEach((v, i) =>
-                nodes[i].val = v
-            );
+            nodes
+                .map((a) => a.val)
+                .reverse()
+                .forEach((v, i) => (nodes[i].val = v));
         }
         depth++;
     });

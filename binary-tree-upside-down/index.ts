@@ -1,7 +1,7 @@
 import { TreeNode } from "../binary-tree-inorder-traversal/TreeNode.ts";
 
 export default function upsideDownBinaryTree(
-    root: TreeNode | null,
+    root: TreeNode | null
 ): TreeNode | null {
     if (root == null) {
         return root;

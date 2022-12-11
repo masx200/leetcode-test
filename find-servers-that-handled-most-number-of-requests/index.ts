@@ -4,7 +4,7 @@ import { AvlTree, Heap } from "../deps.ts";
 function busiestServers(
     k: number,
     arrival: number[],
-    load: number[],
+    load: number[]
 ): number[] {
     const cnts = new Map<number, number>();
     const pq = new Heap<[number, number]>((a, b) => a[0] - b[0]);
@@ -21,9 +21,7 @@ function busiestServers(
         if (free.count() === 0) continue;
         const hope = i % k;
 
-        const next = free.ceil(hope)?.getValue() ??
-            free.min()?.getValue() ??
-            0;
+        const next = free.ceil(hope)?.getValue() ?? free.min()?.getValue() ?? 0;
 
         const value = (cnts.get(next) ?? 0) + 1;
         cnts.set(next, value);

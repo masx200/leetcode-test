@@ -1,7 +1,8 @@
 function addToArrayForm(A: number[], K: number): number[] {
     const res = [];
 
-    let i = A.length - 1, carry = 0;
+    let i = A.length - 1,
+        carry = 0;
 
     while (i >= 0 || K != 0) {
         const x = i >= 0 ? A[i] : 0;

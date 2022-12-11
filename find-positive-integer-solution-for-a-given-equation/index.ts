@@ -6,7 +6,7 @@ function findSolution(customfunction: CustomFunction, z: number): number[][] {
     if (z < min || z > max) return [];
 
     const res: number[][] = [];
-    for (let i = 1, j = 1000; i <= 1000 && j >= 1;) {
+    for (let i = 1, j = 1000; i <= 1000 && j >= 1; ) {
         const diff = customfunction.f(i, j) - z;
         if (diff === 0) {
             res.push([i, j]);

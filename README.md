@@ -45,6 +45,8 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode-cn.com/problems/repeated-substring-pattern/
+
 https://leetcode.cn/problems/check-if-number-is-a-sum-of-powers-of-three
 
 https://leetcode.cn/problems/house-robber-iii

@@ -5,8 +5,11 @@ export default function canBeEqual(target: number[], arr: number[]): boolean {
 }
 
 function MapisEqual(a: Map<number, number>, b: Map<number, number>) {
-    return a === b || a.size === b.size &&
-            Array.from(a.keys()).every((k) =>
-                b.has(k) && a.get(k) === b.get(k)
-            );
+    return (
+        a === b ||
+        (a.size === b.size &&
+            Array.from(a.keys()).every(
+                (k) => b.has(k) && a.get(k) === b.get(k)
+            ))
+    );
 }

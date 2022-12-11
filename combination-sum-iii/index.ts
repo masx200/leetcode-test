@@ -12,7 +12,8 @@ function combinationSum3(k: number, n: number): number[][] {
         if (sum > n || path.length > k) return;
 
         if (
-            path.length >= 2 && path[path.length - 1] <= path[path.length - 2]
+            path.length >= 2 &&
+            path[path.length - 1] <= path[path.length - 2]
         ) {
             return;
         }

@@ -14,7 +14,7 @@ Deno.test("complete-binary-tree-inserter-1", () => {
 
     assertEquals(
         cbt.get_root(),
-        new TreeNode(1, new TreeNode(2, new TreeNode(4)), new TreeNode(3)),
+        new TreeNode(1, new TreeNode(2, new TreeNode(4)), new TreeNode(3))
     );
 });
 Deno.test("complete-binary-tree-inserter-2", () => {
@@ -26,7 +26,7 @@ Deno.test("complete-binary-tree-inserter-2", () => {
 
     assertEquals(
         cbt.get_root(),
-        new TreeNode(1, new TreeNode(2, new TreeNode(4)), new TreeNode(3)),
+        new TreeNode(1, new TreeNode(2, new TreeNode(4)), new TreeNode(3))
     );
     assertEquals(cbt.insert(13), 2);
     assertEquals(cbt.insert(14), 3);
@@ -36,7 +36,7 @@ Deno.test("complete-binary-tree-inserter-2", () => {
     assertEquals(cbt.insert(134), 13);
     assertEquals(
         [1, 2, 3, 4, 13, 14, 213, 124, 313, 134],
-        levelOrder(cbt.get_root()).flat(),
+        levelOrder(cbt.get_root()).flat()
     );
 });
 Deno.test("complete-binary-tree-inserter-3", () => {
@@ -75,18 +75,18 @@ Deno.test("complete-binary-tree-inserter-3", () => {
             [15],
             [16],
         ],
-        [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8],
+        [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8]
     ) as [string, number[], number][];
     const root = new TreeNode(1);
     const cbt = new CBTInserter(root);
     for (const [target, args, result] of data) {
         assertEquals(
             Reflect.apply(Reflect.get(cbt, target), cbt, args),
-            result,
+            result
         );
     }
     assertEquals(
         [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16],
-        levelOrder(cbt.get_root()).flat(),
+        levelOrder(cbt.get_root()).flat()
     );
 });

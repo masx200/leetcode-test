@@ -48,7 +48,7 @@ function dfs(
     rows: Record<string, boolean>[],
     columns: Record<string, boolean>[],
     subboxes: Record<string, boolean>[][],
-    board: string[][],
+    board: string[][]
 ): boolean {
     if (spaces.size === 0) {
         return true;
@@ -63,7 +63,7 @@ function dfs(
         spaces_and_chars.push([row, column, chars] as [
             number,
             number,
-            string[],
+            string[]
         ]);
         if (chars.length === 1) {
             break;
@@ -94,13 +94,7 @@ function dfs(
 
         board[i][j] = char;
         spaces.delete(pair_to_index(i, j));
-        const result = dfs(
-            spaces,
-            rows,
-            columns,
-            subboxes,
-            board,
-        );
+        const result = dfs(spaces, rows, columns, subboxes, board);
         if (result) {
             return result;
         }
@@ -117,7 +111,7 @@ function get_available_chars(
     column: number,
     rows: Record<string, boolean>[],
     columns: Record<string, boolean>[],
-    subboxes: Record<string, boolean>[][],
+    subboxes: Record<string, boolean>[][]
 ): Array<string> {
     const array = Array.from({ length: 9 }).map((_v, i) => String(i + 1));
     const charset = new Set(array);

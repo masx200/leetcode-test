@@ -6,10 +6,8 @@ function* RLEGenerator(encoding: number[]) {
         yield { count: encoding[i], value: encoding[i + 1] };
     }
 }
-export default function RLEIterator(
-    encoding: number[],
-): RLEIterator {
-    const generator = (RLEGenerator)(encoding);
+export default function RLEIterator(encoding: number[]): RLEIterator {
+    const generator = RLEGenerator(encoding);
 
     let count = 0;
     let value = 0;

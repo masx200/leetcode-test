@@ -2,7 +2,7 @@ export default mincostToHireWorkers;
 function mincostToHireWorkers(
     quality: number[],
     wage: number[],
-    k: number,
+    k: number
 ): number {
     const pairs = quality
         .map((q, i) => [q, wage[i]])

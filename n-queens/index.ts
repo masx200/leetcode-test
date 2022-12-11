@@ -17,7 +17,7 @@ export default function solveNQueens(n: number): string[][] {
                 return line.join("");
             });
             solutions.push(s);
-        },
+        }
     );
     return solutions;
 }

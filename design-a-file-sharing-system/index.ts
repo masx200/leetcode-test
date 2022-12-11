@@ -46,7 +46,8 @@ export default class FileSharing {
         if (
             !this.#chunkUsersMap.has(chunkID) ||
             !this.#userChunksMap.has(userID)
-        ) return [];
+        )
+            return [];
 
         usersList.push(...(this.#chunkUsersMap.get(chunkID) ?? []));
 

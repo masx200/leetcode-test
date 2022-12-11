@@ -6,13 +6,13 @@ export default class TweetCounts {
     #key_to_count = new Map<number, number>();
 
     recordTweet(tweetName: string, time: number): void {
-        const bst = this.#name_to_bst.get(tweetName) ??
-            new BinarySearchTree<number>();
+        const bst =
+            this.#name_to_bst.get(tweetName) ?? new BinarySearchTree<number>();
         const node = bst.find(time);
         if (node) {
             this.#key_to_count.set(
                 time,
-                (this.#key_to_count.get(time) ?? 0) + 1,
+                (this.#key_to_count.get(time) ?? 0) + 1
             );
 
             return;
@@ -26,26 +26,27 @@ export default class TweetCounts {
         freq: string,
         tweetName: string,
         startTime: number,
-        endTime: number,
+        endTime: number
     ): number[] {
         const bst = this.#name_to_bst.get(tweetName);
         if (!bst) return [];
-        const length = freq === "minute"
-            ? 60
-            : freq === "hour"
-            ? 3600
-            : freq === "day"
-            ? 86400
-            : 0;
+        const length =
+            freq === "minute"
+                ? 60
+                : freq === "hour"
+                ? 3600
+                : freq === "day"
+                ? 86400
+                : 0;
         if (length === 0) {
             throw Error("invalid frequency");
         }
         const result: number[] = Array(
-            Math.ceil((endTime - startTime + 1) / length),
+            Math.ceil((endTime - startTime + 1) / length)
         ).fill(0);
         traversal_bst_range(bst.root(), startTime, endTime, (num: number) => {
             const time = num;
-            const value = (this.#key_to_count.get(time) ?? 0);
+            const value = this.#key_to_count.get(time) ?? 0;
 
             result[Math.floor((num - startTime + 1) / length)] += value;
         });

@@ -16,8 +16,8 @@ Deno.test("VendingMachine", () => {
                 [3, "Mary", "Banana", 2],
                 [11, "Jim", "Apple", 1],
             ],
-            VendingMachine,
-        ),
+            VendingMachine
+        )
     );
 });
 Deno.test("VendingMachine", () => {
@@ -50,8 +50,8 @@ Deno.test("VendingMachine", () => {
                 [6, "Jim", "Apple", 100],
                 [7, "Mary", "Apple", 100],
             ],
-            VendingMachine,
-        ),
+            VendingMachine
+        )
     );
 });
 Deno.test("VendingMachine", () => {
@@ -357,7 +357,7 @@ Deno.test("VendingMachine", () => {
                 [488, "Patrick", "Atdinner", 1],
                 [491, "Roxanne", "Baguette", 36],
             ],
-            VendingMachine,
-        ),
+            VendingMachine
+        )
     );
 });

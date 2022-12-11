@@ -1,6 +1,7 @@
-function LRUCache(
-    capacity: number,
-): { get: (key: number) => number; put: (key: number, value: number) => void } {
+function LRUCache(capacity: number): {
+    get: (key: number) => number;
+    put: (key: number, value: number) => void;
+} {
     if (capacity < 1) throw Error("capacity invalid");
     const map = new Map<number, number>();
     function get(key: number): number {

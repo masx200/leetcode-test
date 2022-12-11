@@ -18,7 +18,7 @@ Deno.test("all-oone-data-structure", () => {
                 "getMinKey",
             ],
             [[], ["hello"], ["hello"], [], [], ["leet"], [], []],
-            [AllOne],
-        ),
+            [AllOne]
+        )
     );
 });

@@ -2,7 +2,7 @@ function boxDelivering(
     boxes: number[][],
     _portsCount: number,
     maxBoxes: number,
-    maxWeight: number,
+    maxWeight: number
 ): number {
     const { min } = Math;
     const n = boxes.length;

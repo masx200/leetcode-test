@@ -3,6 +3,6 @@ export class TreeNode<T> {
         //@ts-ignore
         public value: T = undefined,
         public left: TreeNode<T> | null = null,
-        public right: TreeNode<T> | null = null,
+        public right: TreeNode<T> | null = null
     ) {}
 }

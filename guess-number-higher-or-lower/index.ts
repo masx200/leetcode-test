@@ -1,4 +1,4 @@
-export default ((guess: (num: number) => number) =>
+export default (guess: (num: number) => number) =>
     function guessNumber(n: number): number {
         let left = 1;
         let right = n;
@@ -14,4 +14,4 @@ export default ((guess: (num: number) => number) =>
             }
         }
         return left;
-    });
+    };

@@ -1,5 +1,7 @@
 export default function minimumSum(num: number): number {
-    const nums = String(num).split("").map((s) => Number(s));
+    const nums = String(num)
+        .split("")
+        .map((s) => Number(s));
 
     nums.sort();
 

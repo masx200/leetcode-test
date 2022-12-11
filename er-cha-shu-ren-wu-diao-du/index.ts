@@ -16,8 +16,8 @@ function execTime(node: TreeNode | null): [number, number] {
     // 左右子树节点之和
     const sum = leftTime[1] + rightTime[1];
     // 当前节点执行完的最小消耗时间
-    const minTime = Math.max(Math.max(leftTime[0], rightTime[0]), sum / 2) +
-        node.val;
+    const minTime =
+        Math.max(Math.max(leftTime[0], rightTime[0]), sum / 2) + node.val;
     return [minTime, sum + node.val];
 }
 export default minimalExecTime;

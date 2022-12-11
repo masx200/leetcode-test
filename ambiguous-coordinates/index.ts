@@ -6,7 +6,7 @@ export default function ambiguousCoordinates(s: string): string[] {
         const lt = getPos(s.slice(0, l));
         const rt = getPos(s.slice(l));
         if ([lt, rt].every((a) => a.length)) {
-            res.push(...(lt.map((a) => rt.map((v) => `(${a}, ${v})`))).flat());
+            res.push(...lt.map((a) => rt.map((v) => `(${a}, ${v})`)).flat());
         }
     }
     return res;

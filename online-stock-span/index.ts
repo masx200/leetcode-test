@@ -10,7 +10,8 @@ export default class StockSpanner {
     next(price: number): number {
         this.#pos++;
         while (
-            this.#stk.length && this.#stk[this.#stk.length - 1][1] <= price
+            this.#stk.length &&
+            this.#stk[this.#stk.length - 1][1] <= price
         ) {
             this.#stk.pop();
         }

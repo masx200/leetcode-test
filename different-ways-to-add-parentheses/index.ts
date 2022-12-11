@@ -4,16 +4,16 @@ export default function diffWaysToCompute(expression: string): number[] {
     }
     const regexp = /(?<operator>[\+\-\*])|(?<digit>\d+)/g;
     const groups = Array.from(expression.matchAll(regexp)).map(
-        (a) => a.groups,
+        (a) => a.groups
     ) as unknown as (
         | {
-            digit: string;
-            operator?: undefined;
-        }
+              digit: string;
+              operator?: undefined;
+          }
         | {
-            digit?: undefined;
-            operator: string;
-        }
+              digit?: undefined;
+              operator: string;
+          }
     )[];
     const ans: number[] = diffWaysCalc(groups);
     return ans;
@@ -21,14 +21,14 @@ export default function diffWaysToCompute(expression: string): number[] {
 function diffWaysCalc(
     groups: (
         | {
-            digit: number | string;
-            operator?: undefined;
-        }
+              digit: number | string;
+              operator?: undefined;
+          }
         | {
-            digit?: undefined;
-            operator: string;
-        }
-    )[],
+              digit?: undefined;
+              operator: string;
+          }
+    )[]
 ): number[] {
     if (groups.length === 1) {
         return [Number(groups[0].digit)];
@@ -52,14 +52,14 @@ function diffWaysCalc(
 function calc_three(
     groups: (
         | {
-            digit: number | string;
-            operator?: undefined;
-        }
+              digit: number | string;
+              operator?: undefined;
+          }
         | {
-            digit?: undefined;
-            operator: string;
-        }
-    )[],
+              digit?: undefined;
+              operator: string;
+          }
+    )[]
 ): number {
     if (groups.length === 3) {
         const [a, b, c] = groups;

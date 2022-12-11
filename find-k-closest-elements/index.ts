@@ -1,16 +1,14 @@
 export default function findClosestElements(
     arr: number[],
     k: number,
-    x: number,
+    x: number
 ): number[] {
-    const size = (arr).length;
+    const size = arr.length;
     let left = 0;
     let right = size - k;
 
     while (left < right) {
-        const mid = Math.floor(
-            (left + right) / 2,
-        );
+        const mid = Math.floor((left + right) / 2);
         //  # 尝试从长度为 k + 1 的连续子区间删除一个元素
         // # 从而定位左区间端点的边界值
 

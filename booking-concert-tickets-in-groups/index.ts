@@ -11,13 +11,13 @@ export default class BookMyShow {
             0,
             n - 1,
             () => m,
-            (a, b) => Math.max(a, b),
+            (a, b) => Math.max(a, b)
         );
         this.#sumSegTree = new SegmentTree<number>(
             0,
             n - 1,
             () => m,
-            (a, b) => a + b,
+            (a, b) => a + b
         );
     }
 

@@ -4,7 +4,7 @@ export default function removeStones(stones: [number, number][]): number {
 
     function merge(
         ar: [row: number, col: number],
-        rp: Set<[row: number, col: number]>,
+        rp: Set<[row: number, col: number]>
     ) {
         parent_row.set(ar[0], rp);
 
@@ -18,7 +18,7 @@ export default function removeStones(stones: [number, number][]): number {
         const rp = parent_row.get(row);
         const cp = parent_col.get(col);
 
-        if ((parent_row.has(row) || parent_col.has(col)) && rp || cp) {
+        if (((parent_row.has(row) || parent_col.has(col)) && rp) || cp) {
             if (rp === cp && cp && rp) {
                 merge(stone, rp);
             } else {
@@ -38,7 +38,7 @@ export default function removeStones(stones: [number, number][]): number {
     function combine(
         stone: [number, number],
         rp: Set<[row: number, col: number]> | undefined,
-        cp: Set<[row: number, col: number]> | undefined,
+        cp: Set<[row: number, col: number]> | undefined
     ) {
         const series: Set<[row: number, col: number]> = rp || cp || new Set();
 
@@ -51,6 +51,8 @@ export default function removeStones(stones: [number, number][]): number {
             parent_row.set(row, series);
         });
     }
-    return stones.length -
-        new Set([...parent_col.values(), ...parent_row.values()]).size;
+    return (
+        stones.length -
+        new Set([...parent_col.values(), ...parent_row.values()]).size
+    );
 }

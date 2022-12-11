@@ -18,6 +18,6 @@ test("create-target-array-in-the-given-order", () => {
     const outputs = [[0, 4, 1, 3, 2], [0, 1, 2, 3, 4], [1]];
     assertEquals(
         inputs.map((input) => createTargetArray(input[0], input[1])),
-        outputs,
+        outputs
     );
 });

@@ -6,7 +6,7 @@ function storeWater(bucket: number[], vat: number[]): number {
         ...Array(m - 1)
             .fill(0)
             .map((_, i) => i + 1)
-            .map((i) => count(bucket, vat, i)),
+            .map((i) => count(bucket, vat, i))
     );
 }
 function count(bucket: number[], vat: number[], i: number): number {

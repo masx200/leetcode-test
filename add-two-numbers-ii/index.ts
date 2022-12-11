@@ -2,7 +2,7 @@ import { ListNode } from "../mod.ts";
 
 export default function addTwoNumbers(
     l1: ListNode | null,
-    l2: ListNode | null,
+    l2: ListNode | null
 ): ListNode | null {
     if (!l1) {
         return l2;

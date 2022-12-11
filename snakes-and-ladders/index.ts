@@ -7,14 +7,17 @@ function snakesAndLadders(board: number[][]): number {
         const p = queue.shift() as [number, number];
         for (let i = 1; i <= 6; ++i) {
             let nxt = p[0] + i;
-            if (nxt > n * n) { // 超出边界
+            if (nxt > n * n) {
+                // 超出边界
                 break;
             }
             const rc = id2rc(nxt, n); // 得到下一步的行列
-            if (board[rc[0]][rc[1]] > 0) { // 存在蛇或梯子
+            if (board[rc[0]][rc[1]] > 0) {
+                // 存在蛇或梯子
                 nxt = board[rc[0]][rc[1]];
             }
-            if (nxt === n * n) { // 到达终点
+            if (nxt === n * n) {
+                // 到达终点
                 return p[1] + 1;
             }
             if (!vis.has(nxt)) {

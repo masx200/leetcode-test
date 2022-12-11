@@ -1,6 +1,6 @@
 export default function makeIntegerBeautiful(
     n: number,
-    target: number,
+    target: number
 ): number {
     // 分隔n为数字数组
     const nArr = n.toString().split("").map(Number);

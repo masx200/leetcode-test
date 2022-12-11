@@ -3,7 +3,7 @@ import { PriorityQueue } from "../kth-largest-element-in-a-stream/PriorityQueue.
 function minRefuelStops(
     target: number,
     startFuel: number,
-    stations: number[][],
+    stations: number[][]
 ): number {
     const pq = PriorityQueue<number>((a, b) => b - a);
 

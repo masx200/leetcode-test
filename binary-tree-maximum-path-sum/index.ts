@@ -3,13 +3,14 @@ import { TreeNode } from "../binary-tree-inorder-traversal/TreeNode.ts";
 function maxPathSum(root: TreeNode | null): number {
     let maxSum = Number.MIN_SAFE_INTEGER; // 最大路径和
 
-    dfs(root, (a) => maxSum = Math.max(maxSum, a)); // 递归的入口
+    dfs(root, (a) => (maxSum = Math.max(maxSum, a))); // 递归的入口
 
     return maxSum;
 }
 export default maxPathSum;
 function dfs(root: TreeNode | null, o: (a: number) => void): number {
-    if (root == null) { // 遍历到null节点，收益0
+    if (root == null) {
+        // 遍历到null节点，收益0
         return 0;
     }
     const left = dfs(root.left, o); // 左子树提供的最大路径和

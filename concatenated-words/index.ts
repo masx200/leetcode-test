@@ -1,14 +1,12 @@
-import {
-    PrefixTreeInsert,
-} from "../design-add-and-search-words-data-structure/PrefixTreeInsert.ts";
+import { PrefixTreeInsert } from "../design-add-and-search-words-data-structure/PrefixTreeInsert.ts";
 import { PrefixTree } from "../implement-trie-prefix-tree/PrefixTree.ts";
 
 export default function findAllConcatenatedWordsInADict(
-    words: string[],
+    words: string[]
 ): string[] {
     const root = PrefixTree();
     const ans: string[] = new Array(0);
-    words.sort((a, b) => (a.length - b.length));
+    words.sort((a, b) => a.length - b.length);
     for (const word of words) {
         if (word.length == 0) {
             continue;

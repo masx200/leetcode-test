@@ -4,7 +4,7 @@ export function buildBST(
     start: number,
     end: number,
     get: () => number | undefined,
-    next: () => void,
+    next: () => void
 ): TreeNode | null {
     if (start > end) return null;
 

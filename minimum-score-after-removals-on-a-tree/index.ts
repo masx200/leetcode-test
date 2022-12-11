@@ -1,26 +1,26 @@
 export default function minimumScore(
     nums: number[],
-    edges: number[][],
+    edges: number[][]
 ): number {
     const n = nums.length;
     if (nums.length === 0) return 0;
-    const edgeMap = new Array<Array<number>>(nums.length).fill([]).map(() =>
-        [] as Array<number>
-    );
+    const edgeMap = new Array<Array<number>>(nums.length)
+        .fill([])
+        .map(() => [] as Array<number>);
 
     for (const [a, b] of edges) {
         edgeMap[a].push(b);
         edgeMap[b].push(a);
     }
-    const children = new Array<Array<number>>(nums.length).fill([]).map(() =>
-        [] as Array<number>
-    );
+    const children = new Array<Array<number>>(nums.length)
+        .fill([])
+        .map(() => [] as Array<number>);
 
     const visited = new Set<number>();
     const xor = new Array<number>(nums.length).fill(0);
-    const ancestorToGrandson = new Array(n).fill(0).map(() =>
-        new Array<boolean>(n).fill(false)
-    );
+    const ancestorToGrandson = new Array(n)
+        .fill(0)
+        .map(() => new Array<boolean>(n).fill(false));
 
     const root = 0;
     bfs([root], visited, edgeMap, children, ancestorToGrandson, xor, nums);
@@ -56,7 +56,7 @@ function bfs(
     children: number[][],
     ancestorToGrandson: boolean[][],
     xor: number[],
-    nums: number[],
+    nums: number[]
 ) {
     if (nodes.length === 0) return;
     const temp: number[] = [];

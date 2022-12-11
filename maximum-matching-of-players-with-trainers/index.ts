@@ -1,6 +1,6 @@
 export default function matchPlayersAndTrainers(
     players: number[],
-    trainers: number[],
+    trainers: number[]
 ): number {
     players.sort((a, b) => a - b);
     trainers.sort((a, b) => a - b);

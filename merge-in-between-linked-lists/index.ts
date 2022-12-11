@@ -1,6 +1,4 @@
-import {
-    get_deep_next_of_list as get_deep_next_of_list,
-} from "../reverse-linked-list-ii/get_deep_next_of_list.ts";
+import { get_deep_next_of_list as get_deep_next_of_list } from "../reverse-linked-list-ii/get_deep_next_of_list.ts";
 import { ListNode } from "../reverse-linked-list/ListNode.ts";
 import { getEndOfList } from "./get_end_of_list.ts";
 
@@ -8,7 +6,7 @@ export default function mergeInBetween(
     list1: ListNode | null,
     a: number,
     b: number,
-    list2: ListNode | null,
+    list2: ListNode | null
 ): ListNode | null {
     if (!list1) {
         return list1;
