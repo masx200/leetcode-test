@@ -45,6 +45,8 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode-cn.com/problems/maximum-value-of-a-string-in-an-array/
+
 https://leetcode-cn.com/problems/snapshot-array/
 
 https://leetcode.cn/problems/maximum-number-of-points-from-grid-queries
