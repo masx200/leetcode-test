@@ -45,6 +45,8 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode.cn/problems/maximum-number-of-points-from-grid-queries
+
 https://leetcode.cn/problems/checking-existence-of-edge-length-limited-paths/
 
 https://leetcode-cn.com/problems/repeated-substring-pattern/
