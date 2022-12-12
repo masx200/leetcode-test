@@ -1,8 +1,7 @@
-export default SnapshotArray;
 class SnapshotArray {
     shot: number;
     map: Map<string, number>;
-    constructor(length: number) {
+    constructor(_length: number) {
         this.shot = 0;
         this.map = new Map();
     }
@@ -25,3 +24,4 @@ class SnapshotArray {
         return 0;
     }
 }
+export default SnapshotArray;
