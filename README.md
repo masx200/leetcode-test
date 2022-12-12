@@ -45,6 +45,8 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode.cn/problems/check-if-the-sentence-is-pangram/
+
 https://leetcode-cn.com/problems/sum-of-beauty-of-all-substrings/
 
 https://leetcode-cn.com/problems/maximum-value-of-a-string-in-an-array/
