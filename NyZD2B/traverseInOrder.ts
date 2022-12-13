@@ -1,4 +1,4 @@
-import { BinarySearchTree } from "https://esm.sh/@datastructures-js/binary-search-tree@5.1.0/";
+import { BinarySearchTree } from "https://esm.sh/@datastructures-js/binary-search-tree@5.2.0/";
 
 export function traverseInOrder<T extends BinarySearchTree<any>>(
     tree: T,
