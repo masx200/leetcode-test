@@ -45,6 +45,10 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-iii/
+
+https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-ii/
+
 https://leetcode.cn/problems/check-if-the-sentence-is-pangram/
 
 https://leetcode-cn.com/problems/sum-of-beauty-of-all-substrings/
