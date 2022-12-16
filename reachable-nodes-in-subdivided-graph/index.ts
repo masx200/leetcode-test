@@ -44,4 +44,4 @@ export default function reachableNodes(
     }
     return reachableNodes;
 }
-import { BinaryHeap } from "https://deno.land/std@0.167.0/collections/binary_heap.ts";
+import { BinaryHeap } from "https://deno.land/std@0.168.0/collections/binary_heap.ts";
