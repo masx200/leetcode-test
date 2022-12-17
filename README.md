@@ -45,6 +45,10 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode.cn/problems/form-array-by-concatenating-subarrays-of-another-array/
+
+https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-with-cooldown/
+
 https://leetcode-cn.com/problems/minimum-elements-to-add-to-form-a-given-sum/
 
 https://leetcode.cn/problems/checking-existence-of-edge-length-limited-paths-ii/
