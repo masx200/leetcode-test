@@ -1,6 +1,8 @@
 function isPossible(n: number, edges: number[][]): boolean {
     const s = new Set<string>();
-
+    function has(a: number, b: number) {
+        return s.has(JSON.stringify([a, b]));
+    }
     const deg = new Map<number, number>();
 
     for (const [x, y] of edges) {
@@ -21,15 +23,15 @@ function isPossible(n: number, edges: number[][]): boolean {
         const x = odd[0];
         const y = odd[1];
 
-        if (!s.has(JSON.stringify([x, y]))) {
+        if (!has(x, y)) {
             return true;
         }
         for (let i = 1; i <= n; i++) {
             if (
                 i != x &&
                 i != y &&
-                !s.has(JSON.stringify([i, x])) &&
-                !s.has(JSON.stringify([i, y]))
+                !has(i, x) &&
+                !has(i, y)
             ) {
                 return true;
             }
@@ -38,10 +40,13 @@ function isPossible(n: number, edges: number[][]): boolean {
     }
     if (m == 4) {
         const [a, b, c, d] = odd;
-        return !s.has(JSON.stringify([a, b])) &&
-                !s.has(JSON.stringify([c, d])) ||
-            !s.has(JSON.stringify([a, c])) && !s.has(JSON.stringify([b, d])) ||
-            !s.has(JSON.stringify([a, d])) && !s.has(JSON.stringify([b, c]));
+        return (
+            (!has(a, b) &&
+                !has(c, d)) ||
+            (!has(a, c) &&
+                !has(b, d)) ||
+            (!has(a, d) && !has(b, c))
+        );
     }
     return false;
 }
