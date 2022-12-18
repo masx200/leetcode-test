@@ -45,6 +45,8 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode.cn/problems/minimum-adjacent-swaps-for-k-consecutive-ones
+
 https://leetcode.cn/problems/form-array-by-concatenating-subarrays-of-another-array/
 
 https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-with-cooldown/
