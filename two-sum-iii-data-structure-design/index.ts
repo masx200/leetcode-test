@@ -5,12 +5,12 @@ export default class TwoSum {
         this.#m.set(n, (this.#m.get(n) ?? 0) + 1);
     }
     find(n: number) {
-        for (const [a, cnt] of this.#m) {
+        for (const a of this.#m.keys()) {
             const b = n - a;
-            if (a > b) return false;
-            if (a === b) return cnt > 1;
-
-            if (this.#m.has(b)) return true;
+            if (this.#m.has(b)) {
+                if (a === b && (this.#m.get(b) ?? 0) < 2) continue;
+                return true;
+            }
         }
         return false;
     }
