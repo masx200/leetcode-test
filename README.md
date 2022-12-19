@@ -45,6 +45,8 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode.cn/problems/minimum-limit-of-balls-in-a-bag/
+
 https://leetcode.cn/problems/grumpy-bookstore-owner/
 
 https://leetcode.cn/problems/add-edges-to-make-degrees-of-all-nodes-even/
