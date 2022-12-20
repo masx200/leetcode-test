@@ -19,3 +19,19 @@ Deno.test("read-n-characters-given-read4", () => {
         assertEquals(buf.slice(0, count).join(""), content);
     }
 });
+Deno.test("read-n-characters-given-read4", () => {
+    const file = "abcdefghijk";
+
+    const read4 = createFileReader4(file);
+    const res: string[] = [];
+    while (true) {
+        const buf = Array<string>(4).fill("");
+        const count = read4(buf);
+        if (count > 0) {
+            res.push(buf.slice(0, count).join(""));
+        } else {
+            break;
+        }
+    }
+    assertEquals(res, ["abcd", "efgh", "ijk"]);
+});

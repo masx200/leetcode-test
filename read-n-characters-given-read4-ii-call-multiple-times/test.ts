@@ -21,3 +21,24 @@ Deno.test("read-n-characters-given-read4", () => {
         assertEquals(content, buf.slice(0, count).join(""));
     }
 });
+
+Deno.test("read-n-characters-given-read4", () => {
+    const file = "abc";
+
+    const read4 = createFileReader4(file);
+    const read = solution(read4);
+    const examples = [
+        [4, 3, "abc"],
+        [1, 0, ""],
+        [1, 0, ""],
+    ] as Array<[number, number, string]>;
+    for (const [n, count, content] of examples) {
+        const buf = Array<string>(n).fill("");
+
+        const result = read(buf, n);
+        // console.log(result, buf);
+        assertEquals(result, count);
+
+        assertEquals(content, buf.slice(0, count).join(""));
+    }
+});
