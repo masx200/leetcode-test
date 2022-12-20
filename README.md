@@ -45,6 +45,8 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode.cn/problems/maximum-score-from-removing-stones
+
 https://leetcode.cn/problems/minimum-limit-of-balls-in-a-bag/
 
 https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-with-transaction-fee
