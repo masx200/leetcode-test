@@ -1,6 +1,8 @@
 import { assertEquals } from "asserts";
+
 import numMatchingSubseq from "./index.ts";
 import numMatchingSubseq1 from "./numMatchingSubseq.ts";
+
 Deno.test("number-of-matching-subsequences", () => {
     const s = "abcde",
         words = ["a", "bb", "acd", "ace"];

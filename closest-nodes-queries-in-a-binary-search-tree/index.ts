@@ -1,5 +1,5 @@
-import { TreeNode } from "../binary-tree-inorder-traversal/TreeNode.ts";
 import inorderTraversal from "../binary-tree-inorder-traversal/index.ts";
+import { TreeNode } from "../binary-tree-inorder-traversal/TreeNode.ts";
 import { lowerBound } from "../maximum-profit-in-job-scheduling/lowerBound.ts";
 import { upperBound } from "../maximum-profit-in-job-scheduling/upperBound.ts";
 

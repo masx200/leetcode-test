@@ -1,5 +1,7 @@
 import { assertEquals } from "asserts";
+
 import maxAscendingSum from "./index.ts";
+
 Deno.test("maximum-ascending-subarray-sum", () => {
     assertEquals(
         [

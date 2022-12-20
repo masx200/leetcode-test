@@ -1,5 +1,7 @@
-import TwoSum from "./index.ts";
 import { assertEquals } from "asserts";
+
+import TwoSum from "./index.ts";
+
 Deno.test("two-sum-iii-data-structure-design", () => {
     const ts = new TwoSum();
     ts.add(3);

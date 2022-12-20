@@ -1,6 +1,8 @@
 import { assertEquals } from "asserts";
 import { runScript } from "leetcode-class";
+
 import FileSystem from "./index.ts";
+
 Deno.test("design-file-system", () => {
     assertEquals(
         runScript(

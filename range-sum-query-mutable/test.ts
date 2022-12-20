@@ -1,7 +1,9 @@
 import { assertEquals } from "asserts";
 import { runScript } from "leetcode-class";
+
 import NumArray from "./index.ts";
 import NumArray2 from "./NumArray.ts";
+
 Deno.test("range-sum-query-mutable", () => {
     assertEquals(
         runScript(

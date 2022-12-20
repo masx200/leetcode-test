@@ -1,4 +1,5 @@
 import { le as lowerBound } from "https://esm.sh/@masx200/binary-search-bounds@2.0.5";
+
 import { BinaryIndexTree } from "../rank-from-stream-lcci/BinaryIndexTree.ts";
 
 export default function reversePairs(nums: number[]): number {

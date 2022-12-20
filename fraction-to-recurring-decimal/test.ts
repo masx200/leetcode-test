@@ -1,5 +1,7 @@
 import { assertEquals } from "asserts";
+
 import fractionToDecimal from "./index.ts";
+
 Deno.test("fraction-to-recurring-decimal", () => {
     assertEquals(
         [

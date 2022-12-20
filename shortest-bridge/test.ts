@@ -1,5 +1,6 @@
-import shortestBridge from "./index.ts";
 import { assertEquals } from "asserts";
+
+import shortestBridge from "./index.ts";
 
 Deno.test("shortest-bridge", () => {
     assertEquals(

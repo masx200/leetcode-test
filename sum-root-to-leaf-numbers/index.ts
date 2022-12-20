@@ -1,4 +1,5 @@
 import { TreeNode } from "../binary-tree-inorder-traversal/TreeNode.ts";
+
 export default function sumNumbers(root: TreeNode | null): number {
     return pathSum(root)
         .map((a) => Number(a.join("")))

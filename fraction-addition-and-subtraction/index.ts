@@ -1,8 +1,8 @@
 import { gcd } from "../max-points-on-a-line/greatest_common_divisor.ts";
 import { deduplication } from "./deduplication.ts";
-import { Fraction } from "./Fraction.ts";
+import { Fraction, FractionToString } from "./Fraction.ts";
 import { parseFraction } from "./parseFraction.ts";
-import { FractionToString } from "./Fraction.ts";
+
 export function fractionAdd(fractions: Fraction[]): Fraction {
     const denominator = deduplication(
         fractions.map((f) => f.denominator),

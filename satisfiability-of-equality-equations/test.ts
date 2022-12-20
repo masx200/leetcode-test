@@ -1,5 +1,7 @@
 import { assertEquals } from "asserts";
+
 import equationsPossible from "./index.ts";
+
 Deno.test({
     name: "satisfiability-of-equality-equations",
     fn() {

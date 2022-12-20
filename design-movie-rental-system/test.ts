@@ -1,6 +1,8 @@
 import { assertEquals } from "asserts";
 import { runScript } from "leetcode-class";
+
 import MovieRentingSystem from "./index.ts";
+
 Deno.test("design-movie-rental-system", () => {
     assertEquals(
         runScript([

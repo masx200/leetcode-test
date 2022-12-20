@@ -1,6 +1,8 @@
 import { assertEquals } from "asserts";
+
 import { TreeNodeLeetCodeFromJSON } from "../utils/TreeNodeLeetCodeParse.ts";
 import widthOfBinaryTree from "./index.ts";
+
 Deno.test("maximum-width-of-binary-tree", () => {
     const trees = [
         [1, 3, 2, 5, 3, null, 9],

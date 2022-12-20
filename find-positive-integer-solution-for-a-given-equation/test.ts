@@ -1,6 +1,8 @@
 import { assertEquals } from "asserts";
+
 import { CustomFunction } from "./CustomFunction.ts";
 import findSolution from "./index.ts";
+
 Deno.test("find-positive-integer-solution-for-a-given-equation", () => {
     const inputs = [
         [1, 5],

@@ -1,4 +1,5 @@
 import { Heap } from "https://esm.sh/@datastructures-js/heap@4.1.2/src/heap.js";
+
 export default function countPaths(n: number, roads: number[][]): number {
     const mod = 10 ** 9 + 7;
     const map: [number, number][][] = Array(n)

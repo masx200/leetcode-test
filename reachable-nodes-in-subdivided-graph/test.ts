@@ -1,5 +1,7 @@
 import { assertEquals } from "asserts";
+
 import reachableNodes from "./index.ts";
+
 Deno.test("reachable-nodes-in-subdivided-graph", () => {
     const edges = [
             [0, 1, 10],

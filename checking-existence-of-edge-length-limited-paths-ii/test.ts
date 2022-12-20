@@ -1,5 +1,6 @@
-import DistanceLimitedPathsExist from "./index.ts";
 import { assertEquals } from "asserts";
+
+import DistanceLimitedPathsExist from "./index.ts";
 
 Deno.test("1724.Checking-Existence-of-Edge-Length-Limited-Paths-II", () => {
     const res: any[] = [];

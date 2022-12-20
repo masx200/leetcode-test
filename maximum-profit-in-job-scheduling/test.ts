@@ -1,5 +1,7 @@
 import { assertEquals } from "asserts";
+
 import jobScheduling from "./index.ts";
+
 Deno.test("maximum-profit-in-job-scheduling", () => {
     const cases = [
         [

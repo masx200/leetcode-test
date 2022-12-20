@@ -1,4 +1,5 @@
 import { upperBound } from "./upperBound.ts";
+
 function jobScheduling(
     startTime: number[],
     endTime: number[],

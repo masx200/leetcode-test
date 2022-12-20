@@ -1,6 +1,8 @@
 import { assertEquals } from "asserts";
-import reverseKGroup from "./index.ts";
+
 import { ArrayToListNode } from "../reverse-linked-list/ArrayToListNode.ts";
+import reverseKGroup from "./index.ts";
+
 Deno.test("reverse-nodes-in-k-group", () => {
     const inputs: [number[], number][] = [[[1, 2, 3, 4, 5], 2], [[
         1,

@@ -1,4 +1,5 @@
 import { UnionFind } from "../largest-component-size-by-common-factor/UnionFind.ts";
+
 function numberOfGoodPaths(vals: number[], edges: number[][]): number {
     const n = vals.length;
     const cnt = new Map<number, number[]>();

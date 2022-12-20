@@ -1,4 +1,5 @@
 import { TreeNode } from "../binary-tree-inorder-traversal/TreeNode.ts";
+
 const memo = new Map<string, Array<TreeNode | null>>();
 export default function generateTrees(n: number): Array<TreeNode | null> {
     if (n == 0) return [];

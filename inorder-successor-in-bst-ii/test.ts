@@ -1,8 +1,8 @@
-import inorderSuccessor from "./index.ts";
-import { Node } from "./Node.ts";
-import { also } from "./also.ts";
 import { assert, assertEquals } from "asserts";
-import { inorder } from "./Node.ts";
+
+import { also } from "./also.ts";
+import inorderSuccessor from "./index.ts";
+import { inorder, Node } from "./Node.ts";
 
 Deno.test("inorder-successor-in-bst-ii", () => {
     const map = new Map<number, Node>();

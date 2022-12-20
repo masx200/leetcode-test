@@ -1,4 +1,5 @@
 import { UnionFind } from "../largest-component-size-by-common-factor/UnionFind.ts";
+
 function minScore(_n: number, roads: number[][]): number {
     const uf = new UnionFind();
 

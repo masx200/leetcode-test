@@ -1,7 +1,7 @@
 import { assertEquals } from "asserts";
+import { runScript } from "leetcode-class";
 
 import Skiplist from "./index.ts";
-import { runScript } from "leetcode-class";
 
 Deno.test("design-skiplist", () => {
     const skiplist: Skiplist = Skiplist();

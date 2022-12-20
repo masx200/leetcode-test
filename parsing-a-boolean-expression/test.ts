@@ -1,6 +1,8 @@
-import parseBoolExpr from "./parseBoolExpr.ts";
-import parseBoolExpr2 from "./index.ts";
 import { assert, assertFalse } from "asserts";
+
+import parseBoolExpr2 from "./index.ts";
+import parseBoolExpr from "./parseBoolExpr.ts";
+
 Deno.test("parsing-a-boolean-expression", () => {
     testParseBoolExpr(parseBoolExpr);
     testParseBoolExpr(parseBoolExpr2);

@@ -1,5 +1,7 @@
 import { assertEquals } from "asserts";
+
 import minimumTotalDistance from "./index.ts";
+
 Deno.test("minimum-total-distance-traveled", () => {
     const robot = [0, 4, 6], factory = [[2, 2], [6, 2]];
     assertEquals(4, minimumTotalDistance(robot, factory));

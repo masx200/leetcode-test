@@ -1,5 +1,7 @@
 import { assertEquals } from "asserts";
+
 import getCoprimes from "./index.ts";
+
 Deno.test("tree-of-coprimes", () => {
     const inputs: [nums: number[], edges: number[][]][] = [
         [

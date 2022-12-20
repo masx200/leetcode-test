@@ -1,5 +1,7 @@
 import { assertEquals } from "asserts";
+
 import permuteUnique from "./index.ts";
+
 Deno.test("permutations-ii", () => {
     assertEquals(
         [[1, 1, 2], [1, 2, 3], [1, 3, 6, 8, 4, 2, 8, 4]].map(permuteUnique).map(

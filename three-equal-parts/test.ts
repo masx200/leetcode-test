@@ -1,5 +1,7 @@
 import { assertEquals } from "asserts";
+
 import threeEqualParts from "./index.ts";
+
 Deno.test("three-equal-parts", () => {
     assertEquals(
         [

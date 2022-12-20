@@ -1,6 +1,8 @@
 import { assertEquals } from "asserts";
+
 import { TreeNodeLeetCodeFromJSON } from "../utils/TreeNodeLeetCodeParse.ts";
 import closestNodes from "./index.ts";
+
 Deno.test("closest-nodes-queries-in-a-binary-search-tree", () => {
     const root = [
             6,

@@ -1,6 +1,8 @@
 import { assertEquals } from "asserts";
+
 import { TreeNode } from "../binary-tree-inorder-traversal/TreeNode.ts";
 import boundaryOfBinaryTree from "./index.ts";
+
 Deno.test("boundary-of-binary-tree", () => {
     assertEquals(
         boundaryOfBinaryTree({

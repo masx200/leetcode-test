@@ -1,6 +1,8 @@
 import { assertEquals } from "asserts";
+
 import { TreeNodeLeetCodeFromJSON } from "../utils/TreeNodeLeetCodeParse.ts";
 import findMode from "./index.ts";
+
 Deno.test("find-mode-in-binary-search-tree", () => {
     assertEquals(
         [[1, null, 2, 2], [0], [300, 23, 2222, 22, 111, 303]]

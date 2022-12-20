@@ -1,4 +1,5 @@
 import { assertEquals } from "asserts";
+
 import { ArrayToListNode } from "../reverse-linked-list/ArrayToListNode.ts";
 import { ListNodeToArray } from "../reverse-linked-list/ListNodeToArray.ts";
 import plusOne from "./index.ts";

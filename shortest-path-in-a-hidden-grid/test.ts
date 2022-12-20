@@ -1,6 +1,8 @@
 import { assertEquals } from "asserts";
+
 import { GridMaster } from "./GridMaster.ts";
 import findShortestPath from "./index.ts";
+
 Deno.test("shortest-path-in-a-hidden-grid", () => {
     assertEquals(
         [[[1, 2], [-1, 0]], [[0, 0, -1], [1, 1, 1], [2, 0, 0]], [[-1, 0], [

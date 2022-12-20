@@ -1,5 +1,7 @@
 import { assertEquals } from "asserts";
+
 import countComponents from "./index.ts";
+
 Deno.test("number-of-connected-components-in-an-undirected-graph", function () {
     const n = 5,
         edges = [

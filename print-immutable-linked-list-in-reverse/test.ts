@@ -1,6 +1,7 @@
+import { assertEquals } from "asserts";
+
 import { ImmutableListNode } from "./ImmutableListNode.ts";
 import printLinkedListInReverse from "./index.ts";
-import { assertEquals } from "asserts";
 
 Deno.test("print-immutable-linked-list-in-reverse", () => {
     const cases = [

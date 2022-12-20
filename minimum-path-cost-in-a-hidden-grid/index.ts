@@ -1,5 +1,6 @@
-import { GridMaster } from "./GridMaster.ts";
 import { Heap } from "https://esm.sh/@datastructures-js/heap@4.1.2/src/heap.js";
+
+import { GridMaster } from "./GridMaster.ts";
 
 export default function findShortestPath(master: GridMaster): number {
     const key = JSON.stringify([0, 0]);

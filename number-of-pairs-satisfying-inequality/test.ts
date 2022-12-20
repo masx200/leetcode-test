@@ -1,5 +1,7 @@
 import { assertEquals } from "asserts";
+
 import numberOfPairs from "./index.ts";
+
 Deno.test("number-of-pairs-satisfying-inequality", () => {
     assertEquals(
         [

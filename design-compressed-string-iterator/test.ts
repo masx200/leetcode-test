@@ -1,5 +1,7 @@
-import StringIterator from "./index.ts";
 import { assertEquals } from "asserts";
+
+import StringIterator from "./index.ts";
+
 Deno.test("design-compressed-string-iterator", () => {
     const iterator = new StringIterator("L1e2t1C1o1d1e1");
     const res: any[] = [];

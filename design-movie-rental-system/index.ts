@@ -1,5 +1,8 @@
-import { BinarySearchTreeNode } from "https://esm.sh/v92/@datastructures-js/binary-search-tree@5.0.2/src/binarySearchTreeNode.js";
 import { BinarySearchTree } from "https://esm.sh/@datastructures-js/binary-search-tree@5.2.0/";
+import {
+    BinarySearchTreeNode,
+} from "https://esm.sh/v92/@datastructures-js/binary-search-tree@5.0.2/src/binarySearchTreeNode.js";
+
 import { HashMap } from "./HashMap.ts";
 
 export default class MovieRentingSystem {

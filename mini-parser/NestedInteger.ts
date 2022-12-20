@@ -1,4 +1,5 @@
 import { NestedIntegerType } from "./NestedIntegerType.ts";
+
 export function NestedIntegerToJSON(ni: NestedInteger): NestedIntegerJSON {
     if (ni.isInteger()) {
         return Number(ni.getInteger());

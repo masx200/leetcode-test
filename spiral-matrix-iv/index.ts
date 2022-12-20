@@ -1,5 +1,6 @@
-import { ListNode } from "../reverse-linked-list/ListNode.ts";
 import { ListNodeIterator } from "../merge-nodes-in-between-zeros/ListNodeIterator.ts";
+import { ListNode } from "../reverse-linked-list/ListNode.ts";
+
 export default function spiralMatrix(
     m: number,
     n: number,

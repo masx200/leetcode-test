@@ -1,5 +1,7 @@
 import { assertEquals } from "asserts";
+
 import numberOfGoodPaths from "./index.ts";
+
 Deno.test("number-of-good-paths", () => {
     const inputs: [vals: number[], edges: number[][]][] = [
         [[1, 3, 2, 1, 3], [[0, 1], [0, 2], [2, 3], [2, 4]]],

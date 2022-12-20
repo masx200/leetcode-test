@@ -1,5 +1,5 @@
-import { ListNode } from "../reverse-linked-list/ListNode.ts";
 import { TreeNode } from "../binary-tree-inorder-traversal/TreeNode.ts";
+import { ListNode } from "../reverse-linked-list/ListNode.ts";
 
 function dfs(rt: TreeNode | null, head: ListNode | null): boolean {
     if (head == null) {

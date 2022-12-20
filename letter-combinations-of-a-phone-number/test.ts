@@ -1,5 +1,7 @@
 import { assertEquals } from "asserts";
+
 import letterCombinations from "./index.ts";
+
 Deno.test("letter-combinations-of-a-phone-number", () => {
     assertEquals(
         ["23", "", "2", "8885"].map(letterCombinations).map((a) => new Set(a)),

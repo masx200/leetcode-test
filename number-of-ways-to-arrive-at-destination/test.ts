@@ -1,5 +1,7 @@
 import { assertEquals } from "asserts";
+
 import countPaths from "./index.ts";
+
 Deno.test("number-of-ways-to-arrive-at-destination", () => {
     assertEquals(
         (

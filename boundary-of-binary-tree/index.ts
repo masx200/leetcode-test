@@ -1,4 +1,5 @@
 import { TreeNode } from "../binary-tree-inorder-traversal/TreeNode.ts";
+
 export default function boundaryOfBinaryTree(root: TreeNode): number[] {
     const ans: number[] = [];
     if (!root) return [];

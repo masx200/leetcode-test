@@ -1,4 +1,5 @@
 import { BinaryHeap } from "https://deno.land/std@0.170.0/collections/binary_heap.ts";
+
 export default function findTheCity(
     n: number,
     edges: number[][],

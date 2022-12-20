@@ -1,4 +1,5 @@
 import { UnionFind } from "../largest-component-size-by-common-factor/UnionFind.ts";
+
 export default function regionsBySlashes(grid: string[]): number {
     const uf = new UnionFind();
     const n = grid.length;

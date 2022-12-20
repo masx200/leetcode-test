@@ -1,6 +1,8 @@
-import splitMessage from "./index.ts";
 import { deepStrictEqual } from "assert";
 import { assertEquals } from "asserts";
+
+import splitMessage from "./index.ts";
+
 Deno.test("split-message-based-on-limit", () => {
     deepStrictEqual(
         Array.of(),

@@ -1,6 +1,8 @@
 import { assertEquals } from "asserts";
-import maxValue from "./index.ts";
+
 import { TreeNodeLeetCodeFromJSON } from "../utils/TreeNodeLeetCodeParse.ts";
+import maxValue from "./index.ts";
+
 Deno.test("er-cha-shu-ran-se-UGC", () => {
     assertEquals(12, maxValue(TreeNodeLeetCodeFromJSON([5, 2, 3, 4]), 2));
     assertEquals(

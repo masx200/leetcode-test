@@ -1,4 +1,5 @@
 import { assertEquals } from "asserts";
+
 import TripleInOne from "./index.ts";
 
 Deno.test("three-in-one-lcci", () => {

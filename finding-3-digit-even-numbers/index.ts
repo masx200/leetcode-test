@@ -1,4 +1,5 @@
 import { counter } from "../substring-with-concatenation-of-all-words/counter.ts";
+
 function findEvenNumbers(digits: number[]): number[] {
     if (digits.every((n) => n & 1)) return [];
     const cnt = counter(digits);

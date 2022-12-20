@@ -1,4 +1,5 @@
 import { UnionFind } from "../largest-component-size-by-common-factor/UnionFind.ts";
+
 function distanceLimitedPathsExist(
     _n: number,
     edgeList: number[][],

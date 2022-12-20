@@ -1,6 +1,8 @@
 import { assertEquals } from "asserts";
-import getNumber from "./index.ts";
+
 import { TreeNodeLeetCodeFromJSON } from "../utils/TreeNodeLeetCodeParse.ts";
+import getNumber from "./index.ts";
+
 Deno.test("QO5KpG", () => {
     assertEquals(
         2,

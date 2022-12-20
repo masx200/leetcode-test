@@ -1,6 +1,8 @@
+import { assert } from "asserts";
+
 import findSecretWord from "./index.ts";
 import { Master } from "./Master.ts";
-import { assert } from "asserts";
+
 Deno.test("guess-the-word", () => {
     const inputs: [secret: string, wordlist: string[], numguesses: number][] = [
         ["zzzzzz", [

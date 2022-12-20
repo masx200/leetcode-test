@@ -1,5 +1,7 @@
 import { assertEquals } from "asserts";
+
 import setZeroes from "../zero-matrix-lcci/index.ts";
+
 Deno.test("set-matrix-zeroes", () => {
     assertEquals(
         [

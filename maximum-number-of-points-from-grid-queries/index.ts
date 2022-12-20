@@ -1,4 +1,5 @@
 import { UnionFind } from "../largest-component-size-by-common-factor/UnionFind.ts";
+
 const dirs = [
     [-1, 0],
     [1, 0],

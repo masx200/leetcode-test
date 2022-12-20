@@ -1,6 +1,8 @@
 import { assertEquals } from "asserts";
+
 import { ArrayReader } from "./ArrayReader.ts";
 import search from "./index.ts";
+
 Deno.test("search-in-a-sorted-array-of-unknown-size", () => {
     const cases: Array<[number[], number, number]> = [
         [[-1, 0, 3, 5, 9, 12], 9, 4],

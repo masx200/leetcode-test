@@ -1,5 +1,6 @@
 import { BinaryIndexTree } from "../rank-from-stream-lcci/BinaryIndexTree.ts";
 import { lowerBound } from "./lowerBound.ts";
+
 export default function numberOfPairs(
     nums1: number[],
     nums2: number[],

@@ -1,6 +1,7 @@
-import mergeInBetween from "./index.ts";
 import { assertEquals } from "asserts";
+
 import { ArrayToListNode } from "../reverse-linked-list/ArrayToListNode.ts";
+import mergeInBetween from "./index.ts";
 
 Deno.test("merge-in-between-linked-lists", () => {
     const inputs: [

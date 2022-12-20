@@ -1,6 +1,7 @@
 import { TrieNode } from "../implement-trie-ii-prefix-tree/TrieNode.ts";
 import { TrieNodeInsert } from "../implement-trie-ii-prefix-tree/TrieNodeInsert.ts";
 import { PrefixTreeSearchPrefix } from "../implement-trie-prefix-tree/PrefixTreeSearchPrefix.ts";
+
 function sumPrefixScores(words: string[]): number[] {
     const root = new TrieNode();
     for (const word of words) {

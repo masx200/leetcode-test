@@ -1,4 +1,5 @@
 import { TreeNode } from "../binary-tree-inorder-traversal/TreeNode.ts";
+
 export default function findLeaves(root: TreeNode | null): number[][] {
     if (!root) {
         return [];

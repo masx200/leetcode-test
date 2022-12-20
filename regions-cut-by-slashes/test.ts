@@ -1,5 +1,7 @@
 import { assertEquals } from "asserts";
+
 import regionsBySlashes from "./index.ts";
+
 Deno.test("regions-cut-by-slashes", () => {
     assertEquals(
         [

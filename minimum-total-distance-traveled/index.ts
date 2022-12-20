@@ -1,4 +1,5 @@
 import memoize from "https://cdn.skypack.dev/lodash@4.17.21/memoize?dts";
+
 export default function minimumTotalDistance(
     robot: number[],
     factory: number[][],
