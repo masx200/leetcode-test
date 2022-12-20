@@ -1,5 +1,7 @@
 package index
 
+func TreeNodeConstructor() TreeNodeInterFace { return &TreeNode{} }
+
 type TreeNodeInterFace interface {
 	GetVal() int
 	SetVal(int)
@@ -48,6 +50,9 @@ func (t *TreeNode) SetRight(n TreeNodeInterFace) {
 }
 
 func TreeNodeInterFaceToStruct(n TreeNodeInterFace) *TreeNode {
+	if n == nil {
+		return nil
+	}
 	new := &TreeNode{Val: n.GetVal()}
 
 	new.SetLeft(n.GetLeft())
