@@ -1,4 +1,4 @@
-import { assertEquals } from "https://deno.land/std@0.168.0/testing/asserts.ts";
+import { assertEquals } from "https://deno.land/std@0.170.0/testing/asserts.ts";
 import { runScript } from "leetcode-class";
 
 import BookMyShow from "./index.ts";
