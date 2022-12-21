@@ -1,6 +1,11 @@
 export default MinStack;
 type MinStack = ReturnType<typeof MinStack>;
-function MinStack() {
+function MinStack(): {
+    push(x: number): void;
+    pop(): void;
+    top(): number;
+    min(): number;
+} {
     const stack = [] as [number, number][];
     return {
         push(x: number): void {
