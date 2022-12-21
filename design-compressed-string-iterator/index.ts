@@ -15,7 +15,9 @@ export default class StringIterator {
         return !this.#result.done;
     }
 }
-function* RLEGenerator(encoding: string) {
+export function* RLEGenerator(
+    encoding: string,
+): Generator<string, void, unknown> {
     for (let i = 0; i < encoding.length; i += 2) {
         const count = Number(encoding[i + 1]);
         for (let j = 0; j < count; j++) {
