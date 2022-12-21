@@ -47,6 +47,8 @@ Step 2. Add the dependency
 
 https://leetcode.cn/problems/bu-ke-pai-zhong-de-shun-zi-lcof
 
+https://leetcode.cn/problems/min-stack-lcci
+
 https://leetcode.cn/problems/WqXACV
 
 https://leetcode.cn/problems/compress-string-lcci
