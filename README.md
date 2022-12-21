@@ -45,6 +45,8 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode.cn/problems/bu-ke-pai-zhong-de-shun-zi-lcof
+
 https://leetcode.cn/problems/WqXACV
 
 https://leetcode.cn/problems/compress-string-lcci
