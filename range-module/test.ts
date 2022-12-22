@@ -42,7 +42,7 @@ Deno.test("RangeModule-1", () => {
         const target = targets[i];
         const arg = args[i];
         const result = results[i];
-        const ans = Reflect.apply(
+        const ans: any = Reflect.apply(
             Reflect.get(rangeModule, target),
             rangeModule,
             arg,
@@ -94,7 +94,7 @@ Deno.test("RangeModule-2", () => {
         const target = targets[i];
         const arg = args[i];
         const result = results[i];
-        const ans = Reflect.apply(
+        const ans: any = Reflect.apply(
             Reflect.get(rangeModule, target),
             rangeModule,
             arg,
@@ -21115,13 +21115,13 @@ Deno.test("RangeModule-3", () => {
         false,
     ] as const;
 
-    const rangeModule = new RangeModule(...args[0]);
+    const rangeModule = new RangeModule();
 
     for (let i = 1; i < targets.length; i++) {
         const target = targets[i];
         const arg = args[i];
         const result = results[i];
-        const ans = Reflect.apply(
+        const ans: any = Reflect.apply(
             Reflect.get(rangeModule, target),
             rangeModule,
             arg,
