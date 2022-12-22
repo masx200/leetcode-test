@@ -10,17 +10,18 @@ export default function shortestDistance(
     for (let i = 0; i < words.length; i++) {
         const word = words[i];
 
-        if (word === (word1)) {
+        if (word === word1) {
             posA = i;
-        } else if (word === (word2)) {
+        } else if (word === word2) {
             posB = i; // this is covering normal cases, word1 not same as word2
         }
 
-        if (posA != -1 && posB != -1 && posA != posB) { // @note: update before reset posB
+        if (posA != -1 && posB != -1 && posA != posB) {
+            // @note: update before reset posB
             minDistance = Math.min(minDistance, Math.abs(posA - posB));
         }
 
-        if (word1 === (word2)) {
+        if (word1 === word2) {
             // always updating posA in above line, so after checking update posB
             // so that, posB is always the most recent word's index
             posB = posA;
