@@ -2,7 +2,7 @@ export default function shortestDistance(
     words: string[],
     word1: string,
     word2: string,
-) {
+): number {
     const pos = new Map<string, number[]>();
 
     for (const [i, word] of words.entries()) {
