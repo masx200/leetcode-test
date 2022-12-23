@@ -45,6 +45,8 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode.cn/problems/simplify-path
+
 https://leetcode.cn/problems/minimum-path-sum
 
 https://leetcode.cn/problems/meeting-rooms/
