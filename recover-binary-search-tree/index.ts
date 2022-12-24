@@ -1,4 +1,5 @@
 import { TreeNode } from "../binary-tree-inorder-traversal/TreeNode.ts";
+
 export default recoverTree;
 function recoverTree(root: TreeNode | null): void {
     if (!root) return;
