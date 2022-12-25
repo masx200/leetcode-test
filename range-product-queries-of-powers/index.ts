@@ -11,7 +11,6 @@ export default function productQueries(
     }
 
     return queries.map(([left, right]) => {
-        // console.log(INVERSES)
         return Number(
             (powers[right + 1] * multiplicativeInverse(powers[left], mod)) %
                 mod,

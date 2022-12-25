@@ -1,4 +1,3 @@
-const MOD = 1000000007n;
 export default interface Fancy {
     getIndex: (idx: number) => number;
     multAll: (m: number) => void;
@@ -7,6 +6,7 @@ export default interface Fancy {
 }
 
 export default function Fancy(): Fancy {
+    const MOD = 1000000007n;
     const values: bigint[] = [];
     let add = 0n;
     let mult = 1n;
