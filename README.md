@@ -45,6 +45,8 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode.cn/problems/maximum-tastiness-of-candy-basket
+
 https://leetcode.cn/problems/count-number-of-homogenous-substrings
 
 https://leetcode.cn/contest/weekly-contest-325/problems/take-k-of-each-character-from-left-and-right/
