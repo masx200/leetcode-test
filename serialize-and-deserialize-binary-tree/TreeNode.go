@@ -1,6 +1,9 @@
 package index
 
-func TreeNodeConstructor() TreeNodeInterFace { return &TreeNode{} }
+func TreeNodeConstructor() TreeNodeInterFace {
+
+	return &TreeNode{}
+}
 
 type TreeNodeInterFace interface {
 	GetVal() int
