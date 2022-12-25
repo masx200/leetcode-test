@@ -45,6 +45,8 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode.cn/contest/cnunionpay2022/problems/6olJmJ/
+
 https://leetcode.cn/problems/number-of-great-partitions
 
 https://leetcode.cn/problems/maximum-tastiness-of-candy-basket
