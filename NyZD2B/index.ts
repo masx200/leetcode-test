@@ -39,7 +39,7 @@ class VendingMachine {
         let count = 0;
 
         let cost = 0;
-        const toberemove: {
+        const toBeRemoved: {
             expires: number;
             price: number;
             count: number;
@@ -58,7 +58,7 @@ class VendingMachine {
                 }
                 if (value.expires < time || value.count <= 0) {
                     good[1] -= value.count;
-                    toberemove.push(value);
+                    toBeRemoved.push(value);
                 } else {
                     const diff = Math.min(number - count, value.count);
                     count += diff;
@@ -75,7 +75,7 @@ class VendingMachine {
             signal,
         );
 
-        toberemove.forEach((n) => tree.remove(n));
+        toBeRemoved.forEach((n) => tree.remove(n));
         if (good[1] < number || cost === 0) {
             return -1;
         }
