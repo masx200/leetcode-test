@@ -27,6 +27,11 @@ export default class<T> extends RedBlackTree<T> {
             removeNode = successorNode;
         }
         this._size--;
+        const node = removeNode;
+        if (node && !node.red) {
+            this.removeFixup(node.parent, node.left ?? node.right);
+        }
+        return;
     }
 }
 export function* reverseInOrderIterator<
