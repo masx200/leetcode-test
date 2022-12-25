@@ -29,14 +29,14 @@ export { default as sum } from "https://cdn.skypack.dev/lodash@4.17.21/sum?dts";
 export {
     runScript,
     TreeNode,
-} from "https://esm.sh/@masx200/leetcode-class@1.2.5";
+} from "https://esm.sh/@masx200/leetcode-class@1.2.6/";
 
 export type { WalkEntry } from "https://deno.land/std@0.170.0/fs/_util.ts";
 
 import memoize from "https://cdn.skypack.dev/lodash@4.17.21/memoize?dts";
 import AsyncLimiterClass, {
     AsyncCurrentLimiter,
-} from "https://esm.sh/@masx200/async-task-current-limiter@2.1.0?dts";
+} from "https://esm.sh/@masx200/async-task-current-limiter@2.1.0/?dts";
 
 export { AsyncLimiterClass };
 export type { AsyncCurrentLimiter };

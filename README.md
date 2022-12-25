@@ -45,6 +45,8 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode.cn/problems/dinner-plate-stacks/
+
 https://leetcode.cn/problems/count-anagrams/
 
 https://leetcode.cn/contest/cnunionpay2022/problems/wMGN0t/

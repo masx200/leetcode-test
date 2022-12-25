@@ -12,4 +12,4 @@ export default function waysToBuyPensPencils(
     );
 }
 
-import iterate from "https://esm.sh/iterare@1.2.1";
+import iterate from "https://esm.sh/iterare@1.2.1/";
