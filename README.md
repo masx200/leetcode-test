@@ -45,6 +45,8 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode.cn/contest/weekly-contest-325/problems/take-k-of-each-character-from-left-and-right/
+
 https://leetcode.cn/contest/weekly-contest-325/problems/shortest-distance-to-target-string-in-a-circular-array/
 
 https://leetcode.cn/problems/integer-to-english-words/
