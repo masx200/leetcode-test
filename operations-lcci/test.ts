@@ -3,6 +3,12 @@ import { runScript } from "leetcode-class";
 import Operations from "./index.ts";
 
 Deno.test("operations-lcci", () => {
+    const operations = new Operations();
+    assertEquals(-1, operations.minus(1, 2)); //返回-1
+    assertEquals(12, operations.multiply(3, 4)); //返回12
+    assertEquals(-2, operations.divide(5, -2)); //返回-2
+});
+Deno.test("operations-lcci", () => {
     assertEquals(
         runScript(
             [
