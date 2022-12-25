@@ -1,50 +1,32 @@
-import memoize from "https://cdn.skypack.dev/lodash@4.17.21/memoize?dts";
 function takeCharacters(s: string, k: number): number {
+    const chars = s;
     const cnt = [0, 0, 0];
-    for (const c of s) {
+    for (const c of chars) {
         cnt[c.charCodeAt(0) - "a".charCodeAt(0)]++;
     }
-    if (cnt.some((a) => a < k)) {
+    if (cnt[0] < k || cnt[1] < k || cnt[2] < k) {
         return -1;
     }
-
-    if (k === 0) return 0;
-
-    let res = Infinity;
-
-    const dfs = memoize((s: string, cnt: number[], step: number) => {
-        // console.log(s, cnt, step);
-        if (cnt.every((a) => a >= k)) {
-            res = Math.min(res, step);
-            return;
+    // 使用滑动窗口找中间最长的片段使a最多移除aCnt-k个， b最多移除bCnt-k个， c最多移除cCnt-k个
+    const currentCnt = [0, 0, 0];
+    let maxWindowSize = 0;
+    let left = 0;
+    let right = 0;
+    while (left < chars.length) {
+        if (right < chars.length) {
+            currentCnt[chars[right++].charCodeAt(0) - "a".charCodeAt(0)]++;
         }
-
-        if (s.length === 0) return;
-
-        dfs(
-            s.slice(1),
-            cnt.map(
-                (c, i) =>
-                    c + Number(s[0].charCodeAt(0) === "a".charCodeAt(0) + i),
-            ),
-            step + 1,
-        );
-        dfs(
-            s.slice(0, -1),
-            cnt.map(
-                (c, i) =>
-                    c +
-                    Number(
-                        s[s.length - 1].charCodeAt(0) === "a".charCodeAt(0) + i,
-                    ),
-            ),
-            step + 1,
-        );
-    });
-
-    dfs(s, [0, 0, 0], 0);
-
-    return res;
+        while (
+            (currentCnt[0] > cnt[0] - k || currentCnt[1] > cnt[1] - k ||
+                currentCnt[2] > cnt[2] - k) && left < chars.length
+        ) {
+            currentCnt[chars[left++].charCodeAt(0) - "a".charCodeAt(0)]--;
+        }
+        maxWindowSize = Math.max(maxWindowSize, right - left);
+        if (right == chars.length) {
+            left++;
+        }
+    }
+    return s.length - maxWindowSize;
 }
-
 export default takeCharacters;
