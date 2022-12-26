@@ -78,10 +78,13 @@ class OperationsTest {
 //        }
         assertContentEquals(
 
-            expected.map { if (it is Number) it.toLong() else it },
-            actual.map { if (it is Number) it.toLong() else it }
+            mapToLong(expected),
+            mapToLong(actual)
         )
     }
+
+    private fun mapToLong(expected: List<Any?>) =
+        expected.map { if (it is Number) it.toLong() else it }
 
 
 }
