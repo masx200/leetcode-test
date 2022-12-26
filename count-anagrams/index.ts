@@ -1,4 +1,4 @@
-import { multiplicativeInverse } from "../fancy-sequence/Fancy.ts";
+import { multiplicativeInverse } from "../fancy-sequence/multiplicativeInverse.ts";
 
 function countAnagrams(s: string): number {
     const mod = 1e9 + 7;

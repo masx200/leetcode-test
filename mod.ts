@@ -171,4 +171,6 @@ export {
 import RedBlackTree, {
     reverseInOrderIterator,
 } from "./dinner-plate-stacks/RedBlackTree.ts";
+import { multiplicativeInverse } from "./range-product-queries-of-powers/multiplicativeInverse.ts";
 export { RedBlackTree, reverseInOrderIterator };
+export { multiplicativeInverse };
