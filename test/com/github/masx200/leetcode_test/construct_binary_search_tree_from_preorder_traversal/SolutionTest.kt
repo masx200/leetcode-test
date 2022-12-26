@@ -3,16 +3,16 @@ package com.github.masx200.leetcode_test.construct_binary_search_tree_from_preor
 import com.cedarsoftware.util.DeepEquals.deepEquals
 import com.github.masx200.leetcode_test.utils.TreeNodeLeetCodeParse
 import com.github.masx200.leetcode_test.utils.TreeNodeLeetCodeStringify
-import kotlin.test.assertTrue
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
+import kotlin.test.assertTrue
 
 internal class SolutionTest {
 
     @Test
-    fun testbstFromPreorder() {
+    fun testBstFromPreorder() {
 
         assertEquals(
                 listOf(intArrayOf(8, 5, 1, 7, 10, 12), intArrayOf(1, 3))

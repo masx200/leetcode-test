@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module version="4">
+  <component name="AutoImportedSourceRoots">
+    <option name="directories">
+      <list>
+        <option value="add-two-integers" />
+        <option value="binary-search-tree-iterator" />
+        <option value="construct-binary-search-tree-from-preorder-traversal" />
+        <option value="count-ways-to-build-good-string" />
+        <option value="design-skiplist" />
+        <option value="er-cha-shu-ran-se-UGC" />
+        <option value="er-cha-sou-suo-shu-de-di-kda-jie-dian-lcof" />
+        <option value="insert-into-a-binary-search-tree" />
+        <option value="letter-case-permutation" />
+        <option value="min-cost-to-connect-all-points" />
+        <option value="number-of-distinct-averages" />
+        <option value="operations-lcci" />
+        <option value="possible-bipartition" />
+        <option value="reveal-cards-in-increasing-order" />
+        <option value="serialize-and-deserialize-binary-tree" />
+        <option value="split-message-based-on-limit" />
+        <option value="three-in-one-lcci" />
+        <option value="utils" />
+      </list>
+    </option>
+  </component>
+</module>
