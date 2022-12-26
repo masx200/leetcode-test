@@ -28,6 +28,7 @@ fun runScript(commands: List<String>, inputs: ArrayList<ArrayList<Any>>, classes
 //            println(arg[0].javaClass)
 
             for (j in arg.indices) {
+                @Suppress("KotlinConstantConditions")
                 if (arg[j].javaClass != (fu.parameters[j + 1].type.classifier) as KClass<*>) {
                     val jvmName = (fu.parameters[j + 1].type.classifier as KClass<*>).jvmName
                     val old = arg[j]
@@ -41,7 +42,7 @@ fun runScript(commands: List<String>, inputs: ArrayList<ArrayList<Any>>, classes
                             "short" -> old.toShort()
                             "byte" -> old.toByte()
                             else -> {
-                                throw Error("error number type:" + jvmName)
+                                throw Error("error number type:$jvmName")
                             }
                         }
                     }

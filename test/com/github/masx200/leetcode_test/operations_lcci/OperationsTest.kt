@@ -35,7 +35,7 @@ class OperationsTest {
             ]
 """
         )
-        val expected: List<Any?> = runScript(
+        @Suppress("UNCHECKED_CAST") val expected: List<Any?> = runScript(
             Json.decodeFromString(
                 """
 [
@@ -80,7 +80,7 @@ class OperationsTest {
 
             expected.map { if (it is Number) it.toLong() else it },
             actual.map { if (it is Number) it.toLong() else it }
-        );
+        )
     }
 
 
