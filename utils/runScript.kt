@@ -19,6 +19,7 @@ fun runScript(commands: List<String>, inputs: ArrayList<ArrayList<Any>>, classes
 
         methodMap[fu.name] = fu
     }
+//    println(methodMap)
 //    println(instance)
     for ((i, arg) in inputs.withIndex()) {
         if (i != 0) {
