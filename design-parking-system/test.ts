@@ -1,6 +1,5 @@
 import { assertEquals } from "asserts";
 import { runScript } from "leetcode-class";
-
 import ParkingSystem from "./index.ts";
 
 Deno.test("design-parking-system", () => {
@@ -8,7 +7,7 @@ Deno.test("design-parking-system", () => {
         runScript(
             ["ParkingSystem", "addCar", "addCar", "addCar", "addCar"],
             [[1, 1, 0], [1], [2], [3], [1]],
-            [ParkingSystem],
+            ParkingSystem,
         ),
         [null, true, true, false, false],
     );

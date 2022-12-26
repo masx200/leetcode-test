@@ -1,13 +1,13 @@
 import { runScript } from "leetcode-class";
-
 import { assertEquals } from "../deps.ts";
 import FoodRatings from "./index.ts";
+
 
 Deno.test("design-a-food-rating-system", () => {
     const foodRatings = new FoodRatings(
         ["kimchi", "miso", "sushi", "moussaka", "ramen", "bulgogi"],
         ["korean", "japanese", "japanese", "greek", "japanese", "korean"],
-        [9, 12, 8, 15, 14, 7],
+        [9, 12, 8, 15, 14, 7]
     );
     assertEquals("kimchi", foodRatings.highestRated("korean")); // 返回 "kimchi"
     // "kimchi" 是分数最高的韩式料理，评分为 9 。
@@ -30,74 +30,87 @@ Deno.test("design-a-food-rating-system", () => {
         "highestRated",
     ];
     const i = [
-        [["shjnfxk", "dmqitcmuc", "jeegkoabpu", "ammxyb", "vjxqrvfnxv"], [
-            "yrfziuszqu",
-            "yrfziuszqu",
-            "yrfziuszqu",
-            "yrfziuszqu",
-            "yrfziuszqu",
-        ], [12, 19, 13, 12, 1]],
+        [
+            ["shjnfxk", "dmqitcmuc", "jeegkoabpu", "ammxyb", "vjxqrvfnxv"],
+            [
+                "yrfziuszqu",
+                "yrfziuszqu",
+                "yrfziuszqu",
+                "yrfziuszqu",
+                "yrfziuszqu",
+            ],
+            [12, 19, 13, 12, 1],
+        ],
         ["ammxyb", 17],
         ["dmqitcmuc", 9],
         ["vjxqrvfnxv", 4],
         ["yrfziuszqu"],
     ];
     const o = [null, null, null, null, "ammxyb"];
-    assertEquals(runScript(c, i, [FoodRatings]), o);
+    assertEquals(runScript(c, i, FoodRatings), o);
 });
 Deno.test("design-a-food-rating-system", () => {
-    const e: any[][] = [[[
-        "FoodRatings",
-        "highestRated",
-        "highestRated",
-        "changeRating",
-        "highestRated",
-        "changeRating",
-        "highestRated",
-    ], [
-        [["kimchi", "miso", "sushi", "moussaka", "ramen", "bulgogi"], [
-            "korean",
-            "japanese",
-            "japanese",
-            "greek",
-            "japanese",
-            "korean",
-        ], [9, 12, 8, 15, 14, 7]],
-        ["korean"],
-        ["japanese"],
-        ["sushi", 16],
-        ["japanese"],
-        ["ramen", 16],
-        ["japanese"],
-    ]], [
+    const e: any[][] = [
         [
-            "FoodRatings",
-            "changeRating",
-            "highestRated",
-            "changeRating",
-            "changeRating",
-            "highestRated",
+            [
+                "FoodRatings",
+                "highestRated",
+                "highestRated",
+                "changeRating",
+                "highestRated",
+                "changeRating",
+                "highestRated",
+            ],
+            [
+                [
+                    ["kimchi", "miso", "sushi", "moussaka", "ramen", "bulgogi"],
+                    [
+                        "korean",
+                        "japanese",
+                        "japanese",
+                        "greek",
+                        "japanese",
+                        "korean",
+                    ],
+                    [9, 12, 8, 15, 14, 7],
+                ],
+                ["korean"],
+                ["japanese"],
+                ["sushi", 16],
+                ["japanese"],
+                ["ramen", 16],
+                ["japanese"],
+            ],
         ],
         [
-            [["czopaaeyl", "lxoozsbh", "kbaxapl"], [
-                "dmnuqeatj",
-                "dmnuqeatj",
-                "dmnuqeatj",
-            ], [11, 2, 15]],
-            ["czopaaeyl", 12],
-            ["dmnuqeatj"],
-            ["kbaxapl", 8],
-            ["lxoozsbh", 5],
-            ["dmnuqeatj"],
+            [
+                "FoodRatings",
+                "changeRating",
+                "highestRated",
+                "changeRating",
+                "changeRating",
+                "highestRated",
+            ],
+            [
+                [
+                    ["czopaaeyl", "lxoozsbh", "kbaxapl"],
+                    ["dmnuqeatj", "dmnuqeatj", "dmnuqeatj"],
+                    [11, 2, 15],
+                ],
+                ["czopaaeyl", 12],
+                ["dmnuqeatj"],
+                ["kbaxapl", 8],
+                ["lxoozsbh", 5],
+                ["dmnuqeatj"],
+            ],
         ],
-    ]];
-    const o = [[null, "kimchi", "ramen", null, "sushi", null, "ramen"], [
-        null,
-        null,
-        "kbaxapl",
-        null,
-        null,
-        "czopaaeyl",
-    ]];
-    assertEquals(e.map((v) => runScript(v[0], v[1], [FoodRatings])), o);
+    ];
+    const o = [
+        [null, "kimchi", "ramen", null, "sushi", null, "ramen"],
+        [null, null, "kbaxapl", null, null, "czopaaeyl"],
+    ];
+    assertEquals(
+        e.map((v) => runScript(v[0], v[1], FoodRatings)),
+        o
+    );
 });

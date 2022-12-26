@@ -1,6 +1,5 @@
 import { assertEquals } from "asserts";
 import { runScript } from "leetcode-class";
-
 import NumMatrix from "./index.ts";
 
 Deno.test("range-sum-query-2d-immutable", () => {
@@ -21,7 +20,7 @@ Deno.test("range-sum-query-2d-immutable", () => {
                 [1, 1, 2, 2],
                 [1, 2, 2, 4],
             ],
-            [NumMatrix],
+            NumMatrix,
         ),
         [null, 8, 11, 12],
     );

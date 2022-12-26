@@ -1,7 +1,7 @@
 import { assertEquals } from "asserts";
 import { runScript } from "leetcode-class";
-
 import MyHashMap from "./index.ts";
+
 
 Deno.test("design-hashmap", () => {
     assertEquals(
@@ -18,8 +18,8 @@ Deno.test("design-hashmap", () => {
                 "get",
             ],
             [[], [1, 1], [2, 2], [1], [3], [2, 1], [2], [2], [2]],
-            [MyHashMap],
+            MyHashMap
         ),
-        [null, null, null, 1, -1, null, 1, null, -1],
+        [null, null, null, 1, -1, null, 1, null, -1]
     );
 });

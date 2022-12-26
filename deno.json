@@ -33,5 +33,8 @@
             "indentWidth": 4,
             "singleQuote": false
         }
+    },
+    "test": {
+        "files": { "exclude": ["target"] }
     }
 }

@@ -1,6 +1,5 @@
 import { assertEquals } from "asserts";
 import { runScript } from "leetcode-class";
-
 import BrowserHistory from "./index.ts";
 
 Deno.test("design-browser-history", () => {
@@ -32,7 +31,7 @@ Deno.test("design-browser-history", () => {
                 [2],
                 [7],
             ],
-            [BrowserHistory],
+            BrowserHistory,
         ),
         [
             null,

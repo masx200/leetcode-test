@@ -1,6 +1,5 @@
 import { assertEquals } from "asserts";
 import { runScript } from "leetcode-class";
-
 import ATM from "./index.ts";
 
 Deno.test("design-an-atm-machine", () => {
@@ -8,7 +7,7 @@ Deno.test("design-an-atm-machine", () => {
         runScript(
             ["ATM", "deposit", "withdraw", "deposit", "withdraw", "withdraw"],
             [[], [[0, 0, 1, 2, 1]], [600], [[0, 1, 0, 1, 1]], [600], [550]],
-            [ATM],
+            ATM,
         ),
         [null, null, [0, 0, 1, 0, 1], null, [-1], [0, 1, 0, 0, 1]],
     );
@@ -114,7 +113,7 @@ Deno.test("design-an-atm-machine", () => {
                 [[842662, 59261, 38287, 570862, 937593]],
                 [558135620],
             ],
-            [ATM],
+            ATM,
         ),
         [
             null,
