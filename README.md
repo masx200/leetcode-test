@@ -45,6 +45,8 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode.cn/problems/minimum-number-of-operations-to-make-string-sorted
+
 https://leetcode.cn/problems/longest-common-subsequence
 
 https://leetcode.cn/problems/dinner-plate-stacks/
