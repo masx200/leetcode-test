@@ -47,6 +47,8 @@ Step 2. Add the dependency
 
 https://leetcode.cn/problems/minimum-number-of-operations-to-make-string-sorted
 
+https://leetcode.cn/problems/maximize-number-of-nice-divisors
+
 https://leetcode.cn/problems/longest-common-subsequence
 
 https://leetcode.cn/problems/dinner-plate-stacks/
