@@ -64,22 +64,22 @@ class OperationsTest {
             ) as ArrayList<ArrayList<Any>>,
             Operations::class,
         )
-        println("expected")
-        expected.forEach {
-            if (it != null) {
-                println(it.javaClass)
-            }
-        }
-        println("actual")
-        actual.forEach {
-            if (it != null) {
-                println(it.javaClass)
-            }
-        }
+//        println("expected")
+//        expected.forEach {
+//            if (it != null) {
+//                println(it.javaClass)
+//            }
+//        }
+//        println("actual")
+//        actual.forEach {
+//            if (it != null) {
+//                println(it.javaClass)
+//            }
+//        }
         assertContentEquals(
 
-            expected,
-            actual,
+            expected.map { if (it is Number) it.toLong() else it },
+            actual.map { if (it is Number) it.toLong() else it }
         );
     }
 
