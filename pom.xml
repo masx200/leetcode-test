@@ -191,6 +191,11 @@
 
     <dependencies>
         <dependency>
+            <groupId>com.alibaba.fastjson2</groupId>
+            <artifactId>fastjson2-kotlin</artifactId>
+            <version>2.0.21</version>
+        </dependency>
+        <dependency>
             <groupId>com.github.masx200</groupId>
             <artifactId>leetcode-treenode-java</artifactId>
             <version>1.0.3</version>
@@ -219,6 +224,12 @@
             <artifactId>kotlinx-serialization-json</artifactId>
             <version>1.4.1</version>
 
+        </dependency>
+        <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-reflect</artifactId>
+            <version>1.7.21</version>
+            <scope>compile</scope>
         </dependency>
 
 
