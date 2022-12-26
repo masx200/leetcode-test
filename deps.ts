@@ -29,7 +29,7 @@ export { default as sum } from "https://cdn.skypack.dev/lodash@4.17.21/sum?dts";
 export {
     runScript,
     TreeNode,
-} from "https://esm.sh/@masx200/leetcode-class@1.2.6/";
+} from "https://esm.sh/@masx200/leetcode-class@1.2.7/";
 
 export type { WalkEntry } from "https://deno.land/std@0.170.0/fs/_util.ts";
 
