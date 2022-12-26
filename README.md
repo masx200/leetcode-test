@@ -8,6 +8,10 @@ leetcode 测试
 
 #### 软件架构说明
 
+这里有一些测试的工具:
+
+https://github.com/masx200/leetcode-test/tree/master/utils
+
 ### maven
 
 https://jitpack.io/#masx200/leetcode-test
