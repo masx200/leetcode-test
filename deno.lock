@@ -399,8 +399,7 @@
     "https://deno.land/x/combinatorics@1.1.2/permutations_with_replacement.ts": "4a90c4d86818ff877208d1eb19df4c6203d485904457a2ee85eb5269221836ec",
     "https://deno.land/x/combinatorics@1.1.2/power_set.ts": "ea9b3d81cc87e1e37c81cfe71f2df8480d66352ec6d72dec47a14dea35bf6405",
     "https://deno.land/x/masx200_deno_caddy_cluster_reverse_proxy@3.0.3/MapWithExpires.ts": "5c0dc7537f205398b0211629a0941164cea018efd449346c48d8211ae8aebbc2",
-    "https://esm.sh/@datastructures-js/binary-search-tree@5.2.0": "300c3415af0c76122fcdadf78149941ede52ec78d06b492abd360e292e898919",
-    "https://esm.sh/@datastructures-js/binary-search-tree@5.2.0/": "300c3415af0c76122fcdadf78149941ede52ec78d06b492abd360e292e898919",
+   
     "https://esm.sh/@datastructures-js/heap@4.1.2/src/heap.js": "50da02df9c4c41f0045f98d24d0effbae6a022a394e5f972f8d50cb604bff71b",
     "https://esm.sh/@datastructures-js/heap@4.1.2?dts": "e5ac35df34d4f08957bdd4c1389906e8ed61f8ae6a962f438a6daff1be51e3e9",
     "https://esm.sh/@datastructures-js/heap@4.2.1/?dts": "a304abaf505f4d71f71aad023ca9e35a514eeee01b54ad35f919a99bca17e90e",
