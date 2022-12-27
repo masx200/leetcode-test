@@ -49,6 +49,10 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode.cn/problems/redundant-connection-ii/
+
+https://leetcode.cn/problems/redundant-connection/
+
 https://leetcode.cn/problems/minimum-moves-to-convert-string
 
 https://leetcode.cn/problems/minimum-number-of-operations-to-make-string-sorted

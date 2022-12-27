@@ -2,12 +2,11 @@ import { runScript } from "leetcode-class";
 import { assertEquals } from "../deps.ts";
 import FoodRatings from "./index.ts";
 
-
 Deno.test("design-a-food-rating-system", () => {
     const foodRatings = new FoodRatings(
         ["kimchi", "miso", "sushi", "moussaka", "ramen", "bulgogi"],
         ["korean", "japanese", "japanese", "greek", "japanese", "korean"],
-        [9, 12, 8, 15, 14, 7]
+        [9, 12, 8, 15, 14, 7],
     );
     assertEquals("kimchi", foodRatings.highestRated("korean")); // 返回 "kimchi"
     // "kimchi" 是分数最高的韩式料理，评分为 9 。
@@ -111,6 +110,6 @@ Deno.test("design-a-food-rating-system", () => {
     ];
     assertEquals(
         e.map((v) => runScript(v[0], v[1], FoodRatings)),
-        o
+        o,
     );
 });

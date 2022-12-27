@@ -2,7 +2,6 @@ import { assertEquals } from "asserts";
 import { runScript } from "leetcode-class";
 import AllOne from "./index.ts";
 
-
 Deno.test("all-oone-data-structure", () => {
     assertEquals(
         [null, null, null, "hello", "hello", null, "hello", "leet"],
@@ -18,7 +17,7 @@ Deno.test("all-oone-data-structure", () => {
                 "getMinKey",
             ],
             [[], ["hello"], ["hello"], [], [], ["leet"], [], []],
-            AllOne
-        )
+            AllOne,
+        ),
     );
 });
