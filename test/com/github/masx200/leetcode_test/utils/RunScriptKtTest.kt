@@ -1,16 +1,34 @@
-package com.github.masx200.leetcode_test.operations_lcci
+package com.github.masx200.leetcode_test.utils
+
 
 import com.alibaba.fastjson2.JSON
 import com.alibaba.fastjson2.JSONArray
-import com.github.masx200.leetcode_test.utils.runScript
+
+import com.github.masx200.leetcode_test.operations_lcci.mapToLong
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
 import org.junit.jupiter.api.Test
 import kotlin.test.assertContentEquals
 import kotlin.test.assertEquals
 
-class OperationsTest {
+open class OperationsFather() {
 
+    fun minus(a: Int, b: Int): Int {
+        return a - b
+    }
+
+    fun multiply(a: Int, b: Int): Int {
+        return a * b
+    }
+
+    fun divide(a: Int, b: Int): Int {
+        return a / b
+    }
+
+}
+
+class Operations : OperationsFather() {}
+class RunScriptKtTest {
     @Test
     fun minus() {
         val operations = Operations()
@@ -20,7 +38,7 @@ class OperationsTest {
     }
 
     @Test
-    fun multiply() {
+    fun runScript() {
 
         val actual: JSONArray =
             JSON.parseArray(
@@ -72,9 +90,4 @@ class OperationsTest {
 
         assertContentEquals(mapToLong(expected), mapToLong(actual))
     }
-
-
 }
-
-fun mapToLong(expected: List<Any?>) =
-    expected.map { if (it is Number) it.toLong() else it }

@@ -3,12 +3,13 @@ package com.github.masx200.leetcode_test.utils
 import kotlin.reflect.KClass
 import kotlin.reflect.KFunction
 import kotlin.reflect.full.declaredFunctions
+import kotlin.reflect.full.memberFunctions
 import kotlin.reflect.jvm.jvmName
 
 fun runScript(
-        commands: List<String>,
-        inputs: ArrayList<ArrayList<Any>>,
-        classes: KClass<*>
+    commands: List<String>,
+    inputs: ArrayList<ArrayList<Any>>,
+    classes: KClass<*>
 ): List<Any?> {
 
     val kFunction = classes.constructors.first()
@@ -25,8 +26,11 @@ fun runScript(
     for ((i, arg) in inputs.withIndex()) {
         if (i != 0) {
             val name = commands[i]
-            val fu = methodMap[name] ?: throw Error("method not found")
-
+            val fu = methodMap[name] ?: classes.memberFunctions.firstOrNull { it.name == name }
+            ?: throw Error("method not found:$name")
+            methodMap[name] = fu
+//            println(methodMap)
+//            println(classes.memberFunctions)
             for (j in arg.indices) {
                 @Suppress("KotlinConstantConditions")
                 if (arg[j].javaClass != (fu.parameters[j + 1].type.classifier) as KClass<*>) {
@@ -34,18 +38,18 @@ fun runScript(
                     val old = arg[j]
                     if (old is Number) {
                         arg[j] =
-                                when (jvmName) {
-                                    "int" -> old.toInt()
-                                    "double" -> old.toDouble()
-                                    "float" -> old.toFloat()
-                                    "long" -> old.toLong()
-                                    "char" -> old.toChar()
-                                    "short" -> old.toShort()
-                                    "byte" -> old.toByte()
-                                    else -> {
-                                        throw Error("error number type:$jvmName")
-                                    }
+                            when (jvmName) {
+                                "int" -> old.toInt()
+                                "double" -> old.toDouble()
+                                "float" -> old.toFloat()
+                                "long" -> old.toLong()
+                                "char" -> old.toChar()
+                                "short" -> old.toShort()
+                                "byte" -> old.toByte()
+                                else -> {
+                                    throw Error("error number type:$jvmName")
                                 }
+                            }
                     }
                 }
             }
