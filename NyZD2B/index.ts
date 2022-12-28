@@ -1,5 +1,4 @@
-import { AvlTree } from "https://esm.sh/@datastructures-js/binary-search-tree@5.2.0/";
-
+import { AvlTree } from "npm:@datastructures-js/binary-search-tree@5.2.0";
 import { traverseInOrder } from "./traverseInOrder.ts";
 
 class VendingMachine {

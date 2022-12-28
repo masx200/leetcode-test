@@ -23,7 +23,7 @@ export {
     AvlTree,
     BinarySearchTree,
     BinarySearchTreeNode,
-} from "https://esm.sh/@datastructures-js/binary-search-tree@5.2.0/";
+} from "npm:@datastructures-js/binary-search-tree@5.2.0";
 export { default as groupBy } from "https://cdn.skypack.dev/lodash@4.17.21/groupBy?dts";
 export { default as sum } from "https://cdn.skypack.dev/lodash@4.17.21/sum?dts";
 export {

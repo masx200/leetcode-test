@@ -15,7 +15,10 @@
         "fmt": " deno fmt --config deno.json",
         "test": "deno test  --parallel --unstable -A --config deno.json",
         "lint": "deno lint --config deno.json",
-        "check": "deno run --unstable -A --config deno.json check.ts "
+        "check": "deno run --unstable -A --config deno.json check.ts ",
+        "esm:add": "deno run -A https://esm.sh/v102 add",
+        "esm:update": "deno run -A https://esm.sh/v102 update",
+        "esm:remove": "deno run -A https://esm.sh/v102 remove"
     },
     "lint": {
         "rules": {
@@ -28,13 +31,21 @@
         }
     },
     "fmt": {
-        "files": { "exclude": ["target"] },
+        "files": {
+            "exclude": [
+                "target"
+            ]
+        },
         "options": {
             "indentWidth": 4,
             "singleQuote": false
         }
     },
     "test": {
-        "files": { "exclude": ["target"] }
+        "files": {
+            "exclude": [
+                "target"
+            ]
+        }
     }
 }
