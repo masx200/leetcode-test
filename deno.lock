@@ -413,7 +413,8 @@
   "npm": {
     "specifiers": {
       "@datastructures-js/binary-search-tree@5.2.0": "@datastructures-js/binary-search-tree@5.2.0",
-      "@datastructures-js/heap@4.2.2": "@datastructures-js/heap@4.2.2"
+      "@datastructures-js/heap@4.2.2": "@datastructures-js/heap@4.2.2",
+      "@datastructures-js/priority-queue@6.1.4": "@datastructures-js/priority-queue@6.1.4"
     },
     "packages": {
       "@datastructures-js/binary-search-tree@5.2.0": {
@@ -423,6 +424,12 @@
       "@datastructures-js/heap@4.2.2": {
         "integrity": "sha512-PdjwgmOLfw/fwD9aB1XObbwYFD5HJJdJXJcg8rMXoThs50i0D4i558VUTHlFpkfrEA2WKiK5jncZSDQGkqAn7A==",
         "dependencies": {}
+      },
+      "@datastructures-js/priority-queue@6.1.4": {
+        "integrity": "sha512-bYjnSSxrLjfrlnKeUID7sEzHbbtb8ENLhT/jQ4VoKTDUrJfupHr7cuaUtSFEQS1AsRCDQSaTgaNwmF8FUs9dwQ==",
+        "dependencies": {
+          "@datastructures-js/heap": "@datastructures-js/heap@4.2.2"
+        }
       }
     }
   }
