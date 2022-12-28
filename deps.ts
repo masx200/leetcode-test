@@ -36,7 +36,7 @@ export type { WalkEntry } from "https://deno.land/std@0.170.0/fs/_util.ts";
 import memoize from "https://cdn.skypack.dev/lodash@4.17.21/memoize?dts";
 import AsyncLimiterClass, {
     AsyncCurrentLimiter,
-} from "https://esm.sh/@masx200/async-task-current-limiter@2.1.0/?dts";
+} from "npm:@masx200/async-task-current-limiter@2.1.0";
 
 export { AsyncLimiterClass };
 export type { AsyncCurrentLimiter };
