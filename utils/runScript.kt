@@ -19,7 +19,7 @@ fun runScript(
     val res = List<Any?>(commands.size) { null }.toMutableList()
     val methodMap = hashMapOf<String, KFunction<*>>()
    
-for (fs in listOf(classes.memberFunctions,classes.declaredFunctions)
+for (fs in listOf(classes.memberFunctions,classes.declaredFunctions))
  for (fu in fs) {
 
         methodMap[fu.name] = fu
