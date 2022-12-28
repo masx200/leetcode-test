@@ -18,7 +18,9 @@ fun runScript(
     val instance = kFunction.call(*Array(inputs[0].size) { inputs[0][it] })
     val res = List<Any?>(commands.size) { null }.toMutableList()
     val methodMap = hashMapOf<String, KFunction<*>>()
-    for (fu in classes.declaredFunctions) {
+   
+for (fs in listOf(classes.memberFunctions,classes.declaredFunctions)
+ for (fu in fs) {
 
         methodMap[fu.name] = fu
     }
@@ -26,11 +28,10 @@ fun runScript(
     for ((i, arg) in inputs.withIndex()) {
         if (i != 0) {
             val name = commands[i]
-            val fu = methodMap[name] ?: classes.memberFunctions.firstOrNull { it.name == name }
+            val fu = methodMap[name] 
             ?: throw Error("method not found:$name")
             methodMap[name] = fu
-//            println(methodMap)
-//            println(classes.memberFunctions)
+
             for (j in arg.indices) {
                 @Suppress("KotlinConstantConditions")
                 if (arg[j].javaClass != (fu.parameters[j + 1].type.classifier) as KClass<*>) {
