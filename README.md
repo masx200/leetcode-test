@@ -49,6 +49,12 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode.cn/problems/as-far-from-land-as-possible/
+
+https://leetcode.cn/problems/0H97ZC/
+
+https://leetcode.cn/problems/relative-sort-array/
+
 https://leetcode.cn/problems/uncrossed-lines/
 
 https://leetcode.cn/problems/two-out-of-three

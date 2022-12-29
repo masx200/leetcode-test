@@ -12,7 +12,7 @@ function twoOutOfThree(
             map.set(v, value);
         }
     }
-    // console.log(map)
+
     return [...map.entries()].filter(([_, s]) => s.size >= 2).map((a) => a[0]);
 }
 export default twoOutOfThree;
