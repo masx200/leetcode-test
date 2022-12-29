@@ -1,7 +1,13 @@
 {
   "version": "2",
   "remote": {
-    
+    "https://deno.land/std@0.170.0/fmt/colors.ts": "03ad95e543d2808bc43c17a3dd29d25b43d0f16287fe562a0be89bf632454a12",
+    "https://deno.land/std@0.170.0/testing/_diff.ts": "a23e7fc2b4d8daa3e158fa06856bedf5334ce2a2831e8bf9e509717f455adb2c",
+    "https://deno.land/std@0.170.0/testing/_format.ts": "cd11136e1797791045e639e9f0f4640d5b4166148796cad37e6ef75f7d7f3832",
+    "https://deno.land/std@0.170.0/testing/asserts.ts": "51353e79437361d4b02d8e32f3fc83b22231bc8f8d4c841d86fd32b0b0afe940",
+    "https://esm.sh/@masx200/leetcode-class@1.2.7/": "cdfa0b9374afc9bc9db7ed64d35042586d365fc6f76eabf048a1d80ac3b2aab0",
+    "https://esm.sh/v102/@masx200/leetcode-class@1.2.7/deno/leetcode-class.js": "1054f86462addeafe137f41467269370afa17520e6e4bcd5098d7cb2ed1fa2f4",
+    "https://esm.sh/v102/@masx200/leetcode-class@1.2.7/index.d.ts": "ada7809df878b87c949210899f288fa6f7ab9981659a21e45fb882deab9cea13"
   },
   "npm": {
     "specifiers": {
