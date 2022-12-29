@@ -6,9 +6,9 @@ Deno.test("exam-room", () => {
         runScript(
             ["ExamRoom", "seat", "seat", "seat", "seat", "leave", "seat"],
             [[10], [], [], [], [], [4], []],
-            ExamRoom
+            ExamRoom,
         ),
-        [null, 0, 9, 4, 2, null, 5]
+        [null, 0, 9, 4, 2, null, 5],
     );
 });
 Deno.test("exam-room", () => {
@@ -50,8 +50,8 @@ Deno.test("exam-room", () => {
                 [],
                 [0],
             ],
-            ExamRoom
+            ExamRoom,
         ),
-        [null, 0, 9, 4, null, null, 0, 4, 2, 6, 1, 3, 5, 7, 8, null]
+        [null, 0, 9, 4, null, null, 0, 4, 2, 6, 1, 3, 5, 7, 8, null],
     );
 });
