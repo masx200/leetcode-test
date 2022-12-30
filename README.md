@@ -49,6 +49,8 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode.cn/problems/minimum-number-of-moves-to-seat-everyone/
+
 https://leetcode.cn/problems/time-needed-to-inform-all-employees
 
 https://leetcode.cn/problems/rotting-oranges
