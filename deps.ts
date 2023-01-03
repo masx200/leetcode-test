@@ -13,7 +13,8 @@ export { default as isEqual } from "https://cdn.skypack.dev/lodash@4.17.21/isEqu
 export { default as uniqBy } from "https://cdn.skypack.dev/lodash@4.17.21/uniqBy?dts";
 
 export { default as intersection } from "https://cdn.skypack.dev/lodash@4.17.21/intersection?dts";
-
+import { BinaryHeap } from "https://deno.land/std@0.170.0/collections/binary_heap.ts";
+export { BinaryHeap };
 export { walk } from "https://deno.land/std@0.170.0/fs/mod.ts";
 export { parse } from "https://deno.land/std@0.170.0/flags/mod.ts";
 export { combinations } from "https://deno.land/x/combinatorics@1.1.2/mod.ts";
