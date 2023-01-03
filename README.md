@@ -51,6 +51,8 @@ Step 2. Add the dependency
 
 https://leetcode.cn/problems/path-with-minimum-effort
 
+https://leetcode.cn/problems/maximum-value-at-a-given-index-in-a-bounded-array/
+
 https://leetcode.cn/problems/last-day-where-you-can-still-cross/
 
 https://leetcode.cn/problems/bricks-falling-when-hit/
