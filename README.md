@@ -49,6 +49,8 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode.cn/problems/bricks-falling-when-hit/
+
 https://leetcode.cn/problems/number-of-orders-in-the-backlog
 
 https://leetcode.cn/problems/minimum-number-of-moves-to-seat-everyone/
