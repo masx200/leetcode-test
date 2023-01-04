@@ -49,6 +49,8 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode.cn/problems/count-pairs-with-xor-in-a-range
+
 https://leetcode.cn/problems/path-with-minimum-effort
 
 https://leetcode.cn/problems/maximum-value-at-a-given-index-in-a-bounded-array/
