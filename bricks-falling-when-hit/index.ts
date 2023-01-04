@@ -6,7 +6,7 @@ function hitBricks(grid: number[][], hits: number[][]): number[] {
     const w = grid[0].length;
 
     const uf = new UnionFind();
-    const status: number[][] = JSON.parse(JSON.stringify(grid));
+    const status: number[][] = grid.map((v) => v.slice());
     for (let i = 0; i < hits.length; i++) {
         status[hits[i][0]][hits[i][1]] = 0;
     }
