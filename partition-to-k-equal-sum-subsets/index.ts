@@ -7,11 +7,9 @@ export default function canPartitionKSubsets(
     const sub = Math.floor(sum / k);
     nums.sort((a, b) => a - b);
     if (nums[nums.length - 1] > sub) return false;
-    for (
-        let i = nums.length - 1;
-        i >= 0 && nums[i] === sub;
-        i--, k--, nums.pop()
-    ) { // deno-lint-ignore no-empty
+    let i = nums.length - 1;
+    while (i >= 0 && nums[i] === sub) {
+        i--, k--, nums.pop();
     }
 
     const n = nums.length;
