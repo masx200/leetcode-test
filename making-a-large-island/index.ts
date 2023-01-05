@@ -49,9 +49,9 @@ export default function largestIsland(grid: number[][]): number {
                 ];
                 const uniqed = uniqBy(
                     neighbours.filter(
-                        ([x, y]) => is_valid_position(x, y) && grid[x][y] === 1
+                        ([x, y]) => is_valid_position(x, y) && grid[x][y] === 1,
                     ),
-                    ([x, y]) => get_island_id_of_position(x, y)
+                    ([x, y]) => get_island_id_of_position(x, y),
                 );
                 for (const [x, y] of uniqed) {
                     //还要判断是否是相连的岛屿
@@ -101,7 +101,7 @@ function dfs(
     r: number,
     c: number,
     cache: Set<number>,
-    output: (p: [number, number]) => void
+    output: (p: [number, number]) => void,
 ): void {
     const m = grid.length;
     if (m === 0) {

@@ -48,7 +48,7 @@ export default function deserialize(s: string): NestedInteger {
 const nums = new Set(
     Array.from({
         length: 10,
-    }).map((_v, i) => String(i))
+    }).map((_v, i) => String(i)),
 );
 function isDigit(ch: string) {
     return nums.has(ch);

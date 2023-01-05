@@ -1,6 +1,6 @@
 export default function maximumUnits(
     boxTypes: number[][],
-    truckSize: number
+    truckSize: number,
 ): number {
     boxTypes.sort((a, b) => b[1] - a[1]);
     let res = 0;

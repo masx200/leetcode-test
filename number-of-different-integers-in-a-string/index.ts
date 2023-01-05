@@ -3,6 +3,6 @@ export default function numDifferentIntegers(word: string): number {
         word
             .split(/[^\d]+/)
             .filter(Boolean)
-            .map(BigInt)
+            .map(BigInt),
     ).size;
 }

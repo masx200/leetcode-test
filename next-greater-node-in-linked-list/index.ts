@@ -25,7 +25,7 @@ export default function nextLargerNodes(head: ListNode | null): number[] {
         res.push(
             monotoneStack.length > 0
                 ? monotoneStack[monotoneStack.length - 1]
-                : 0
+                : 0,
         );
         monotoneStack.push(node.val);
     }

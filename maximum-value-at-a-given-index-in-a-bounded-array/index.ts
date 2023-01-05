@@ -7,8 +7,7 @@ function maxValue(n: number, index: number, maxSum: number): number {
         right = temp;
     }
 
-    let upper =
-        ((left + 1) * (left + 1) - 3 * (left + 1)) / 2 +
+    let upper = ((left + 1) * (left + 1) - 3 * (left + 1)) / 2 +
         left +
         1 +
         (left + 1) +
@@ -22,8 +21,7 @@ function maxValue(n: number, index: number, maxSum: number): number {
         return Math.floor((-b + Math.sqrt(b * b - 4 * a * c)) / (2 * a));
     }
 
-    upper =
-        ((2 * (right + 1) - left - 1) * left) / 2 +
+    upper = ((2 * (right + 1) - left - 1) * left) / 2 +
         (right + 1) +
         ((right + 1) * (right + 1) - 3 * (right + 1)) / 2 +
         right +

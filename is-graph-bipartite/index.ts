@@ -8,8 +8,9 @@ export default function isBipartite(graph: number[][]): boolean {
             while (queue.length) {
                 const temp: number[] = [];
                 for (const node of queue) {
-                    const neighbor_color =
-                        color[node] === Colors.One ? Colors.Two : Colors.One;
+                    const neighbor_color = color[node] === Colors.One
+                        ? Colors.Two
+                        : Colors.One;
 
                     for (const neighbor of graph[node]) {
                         if (color[neighbor] === Colors.None) {

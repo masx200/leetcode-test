@@ -20,7 +20,7 @@ export function build(
     node: TreeNode,
     start: number,
     end: number,
-    nums: number[]
+    nums: number[],
 ) {
     if (start === end) {
         node.val = nums[start];
@@ -38,7 +38,7 @@ export function change(
     val: number,
     node: TreeNode,
     start: number,
-    end: number
+    end: number,
 ): void {
     if (start === end) {
         node.val = val;
@@ -60,7 +60,7 @@ export function query(
     right: number,
     node: TreeNode,
     start: number,
-    end: number
+    end: number,
 ): number {
     if (start === left && right === end) {
         return node.val;

@@ -1,6 +1,6 @@
 export default function canPartitionKSubsets(
     nums: number[],
-    k: number
+    k: number,
 ): boolean {
     const sum = nums.reduce((a, v) => a + v, 0);
     if (sum % k != 0) return false;
@@ -11,8 +11,8 @@ export default function canPartitionKSubsets(
         let i = nums.length - 1;
         i >= 0 && nums[i] === sub;
         i--, k--, nums.pop()
-    ) // deno-lint-ignore no-empty
-    {}
+    ) { // deno-lint-ignore no-empty
+    }
 
     const n = nums.length;
     const dp = new Array<number>(1 << n);

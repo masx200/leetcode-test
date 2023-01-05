@@ -22,7 +22,7 @@ function countAndSay(n: number): string {
                 } else {
                     const index = Array.prototype.findIndex.call(
                         prev,
-                        (v) => v !== start
+                        (v) => v !== start,
                     );
 
                     if (index >= 0) {

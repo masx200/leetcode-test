@@ -2,7 +2,7 @@ export default class Solution {
     #select: () => number;
     constructor(w: number[]) {
         this.#select = Selector(
-            w.map((v, i) => ({ result: i, chance: v }))
+            w.map((v, i) => ({ result: i, chance: v })),
         ).select;
     }
 

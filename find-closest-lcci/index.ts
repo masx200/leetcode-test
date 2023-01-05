@@ -1,7 +1,7 @@
 export default function findClosest(
     words: string[],
     word1: string,
-    word2: string
+    word2: string,
 ): number {
     let ans = words.length;
     let p1 = -Infinity;

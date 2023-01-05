@@ -4,7 +4,7 @@ export default function removeStones(stones: [number, number][]): number {
 
     function merge(
         ar: [row: number, col: number],
-        rp: Set<[row: number, col: number]>
+        rp: Set<[row: number, col: number]>,
     ) {
         parent_row.set(ar[0], rp);
 
@@ -38,7 +38,7 @@ export default function removeStones(stones: [number, number][]): number {
     function combine(
         stone: [number, number],
         rp: Set<[row: number, col: number]> | undefined,
-        cp: Set<[row: number, col: number]> | undefined
+        cp: Set<[row: number, col: number]> | undefined,
     ) {
         const series: Set<[row: number, col: number]> = rp || cp || new Set();
 

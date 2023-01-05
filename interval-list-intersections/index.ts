@@ -1,6 +1,6 @@
 export default function intervalIntersection(
     firstList: number[][],
-    secondList: number[][]
+    secondList: number[][],
 ): number[][] {
     const events: [number, number][] = [];
     for (let i = 0; i < firstList.length; i++) {

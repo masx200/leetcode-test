@@ -42,12 +42,11 @@ export default class DistanceLimitedPathsExist {
         return this.#findSnapRoot(p, limit) === this.#findSnapRoot(q, limit);
     }
     #findSnapRoot(node: number, limit: number): number {
-        const index =
-            lowerBound(
-                0,
-                this.#snaps[node].length,
-                (i: number) => this.#snaps[node][i][0] - limit
-            ) - 1;
+        const index = lowerBound(
+            0,
+            this.#snaps[node].length,
+            (i: number) => this.#snaps[node][i][0] - limit,
+        ) - 1;
         const f = this.#snaps[node][index][1];
 
         if (f == node) return f;

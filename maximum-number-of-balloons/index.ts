@@ -6,7 +6,7 @@ function maxNumberOfBalloons(text: string): number {
     return Math.min(
         ...Array.from(bat.entries()).map(([s, c]) =>
             Math.floor((cnt.get(s) ?? 0) / c)
-        )
+        ),
     );
 }
 

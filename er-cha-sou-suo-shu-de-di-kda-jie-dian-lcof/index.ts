@@ -9,7 +9,7 @@ function kthLargest(root: TreeNode | null, k: number): number {
     throw Error("unreachable");
 }
 export function* reverseInOrderIterator(
-    root: TreeNode | null
+    root: TreeNode | null,
 ): Generator<number> {
     if (!root) {
         return;

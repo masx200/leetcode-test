@@ -44,5 +44,5 @@ const MORSE = [
     "--..",
 ];
 const letterToMorse = new Map(
-    MORSE.map((v, i) => [String.fromCharCode(i + "a".charCodeAt(0)), v])
+    MORSE.map((v, i) => [String.fromCharCode(i + "a".charCodeAt(0)), v]),
 );

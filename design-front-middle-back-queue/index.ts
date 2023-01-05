@@ -21,8 +21,7 @@ export default class FrontMiddleBackQueue {
         // console.log(this)
         if (this.#queue.length === 0) return -1;
         // console.log(this.queue.length)
-        const mid =
-            Math.floor(this.#queue.length / 2) -
+        const mid = Math.floor(this.#queue.length / 2) -
             Number(!(this.#queue.length % 2));
         // console.log(mid)
         const result = this.#queue[mid];

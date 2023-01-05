@@ -1,7 +1,7 @@
 export default function reachableNodes(
     edges: number[][],
     maxMoves: number,
-    n: number
+    n: number,
 ): number {
     const adList: [number, number][][] = Array(n)
         .fill(0)
@@ -39,7 +39,7 @@ export default function reachableNodes(
         reachableNodes += Math.min(
             c,
             (used.get(JSON.stringify([u, v])) ?? 0) +
-                (used.get(JSON.stringify([v, u])) ?? 0)
+                (used.get(JSON.stringify([v, u])) ?? 0),
         );
     }
     return reachableNodes;

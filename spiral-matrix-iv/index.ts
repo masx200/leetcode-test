@@ -4,7 +4,7 @@ import { ListNode } from "../reverse-linked-list/ListNode.ts";
 export default function spiralMatrix(
     m: number,
     n: number,
-    head: ListNode | null
+    head: ListNode | null,
 ): number[][] {
     const si = spiralMatrixIterator(m, n);
 
@@ -25,7 +25,7 @@ export default function spiralMatrix(
 }
 export function* spiralMatrixIterator(
     m: number,
-    n: number
+    n: number,
 ): Generator<[number, number], void, unknown> {
     let left = 0,
         right = n,
