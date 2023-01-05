@@ -17,8 +17,10 @@ function takeCharacters(s: string, k: number): number {
             currentCnt[chars[right++].charCodeAt(0) - "a".charCodeAt(0)]++;
         }
         while (
-            (currentCnt[0] > cnt[0] - k || currentCnt[1] > cnt[1] - k ||
-                currentCnt[2] > cnt[2] - k) && left < chars.length
+            (currentCnt[0] > cnt[0] - k ||
+                currentCnt[1] > cnt[1] - k ||
+                currentCnt[2] > cnt[2] - k) &&
+            left < chars.length
         ) {
             currentCnt[chars[left++].charCodeAt(0) - "a".charCodeAt(0)]--;
         }

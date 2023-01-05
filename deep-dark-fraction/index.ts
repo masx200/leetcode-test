@@ -8,7 +8,7 @@ export default function fraction(cont: number[]): number[] {
                 new Fraction({ molecular: c, denominator: 1 }),
                 fractionReciprocal(p),
             ]),
-        new Fraction({ molecular: 1, denominator: 0 }),
+        new Fraction({ molecular: 1, denominator: 0 })
     );
     return [result.molecular, result.denominator];
 }

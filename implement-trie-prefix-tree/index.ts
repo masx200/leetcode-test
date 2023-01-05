@@ -1,6 +1,4 @@
-import {
-    PrefixTreeInsert,
-} from "../design-add-and-search-words-data-structure/PrefixTreeInsert.ts";
+import { PrefixTreeInsert } from "../design-add-and-search-words-data-structure/PrefixTreeInsert.ts";
 import { PrefixTree } from "./PrefixTree.ts";
 import { PrefixTreeSearch } from "./PrefixTreeSearch.ts";
 import { PrefixTreeStartsWith } from "./PrefixTreeStartsWith.ts";

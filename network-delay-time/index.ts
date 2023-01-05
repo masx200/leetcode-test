@@ -3,7 +3,7 @@ import { Heap } from "npm:@datastructures-js/heap@4.2.2";
 export default function networkDelayTime(
     times: number[][],
     n: number,
-    k: number,
+    k: number
 ): number {
     const pq = new Heap<[number, number]>((a, b) => a[1] - b[1]);
     const edge = new Map<number, [number, number][]>();

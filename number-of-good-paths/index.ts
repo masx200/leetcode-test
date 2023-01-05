@@ -11,7 +11,7 @@ function numberOfGoodPaths(vals: number[], edges: number[][]): number {
     }
     edges.sort(
         (a, b) =>
-            Math.max(vals[a[0]], vals[a[1]]) - Math.max(vals[b[0]], vals[b[1]]),
+            Math.max(vals[a[0]], vals[a[1]]) - Math.max(vals[b[0]], vals[b[1]])
     );
     const uf = new UnionFind();
     let ans = n;
@@ -36,7 +36,7 @@ function numberOfGoodPaths(vals: number[], edges: number[][]): number {
 
         ans += [...count.values()].reduce(
             (p, c) => p + Math.floor((c * (c - 1)) / 2),
-            0,
+            0
         );
     }
     return ans;

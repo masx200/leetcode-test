@@ -1,7 +1,7 @@
 import { ListNode } from "../mod.ts";
 
 export default function removeZeroSumSublists(
-    head: ListNode | null,
+    head: ListNode | null
 ): ListNode | null {
     const dummy = new ListNode(0, head);
 

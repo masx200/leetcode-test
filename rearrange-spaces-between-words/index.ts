@@ -7,7 +7,7 @@ export default function reorderSpaces(text: string): string {
         text,
         //@ts-ignore
         (a, v) => a + Number(v === " "),
-        0,
+        0
     ) as number;
 
     if (words.length <= 1) return words.join("") + " ".repeat(spaces);

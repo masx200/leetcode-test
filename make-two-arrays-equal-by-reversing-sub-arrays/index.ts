@@ -9,7 +9,7 @@ function MapisEqual(a: Map<number, number>, b: Map<number, number>) {
         a === b ||
         (a.size === b.size &&
             Array.from(a.keys()).every(
-                (k) => b.has(k) && a.get(k) === b.get(k),
+                (k) => b.has(k) && a.get(k) === b.get(k)
             ))
     );
 }

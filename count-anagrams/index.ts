@@ -16,7 +16,7 @@ function countAnagrams(s: string): number {
     }
 
     return Number(
-        (BigInt(ans) * multiplicativeInverse(mul, BigInt(mod))) % BigInt(mod),
+        (BigInt(ans) * multiplicativeInverse(mul, BigInt(mod))) % BigInt(mod)
     );
 }
 export default countAnagrams;

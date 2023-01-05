@@ -3,7 +3,8 @@ export default function addBinary(num1: string, num2: string): string {
     let carry = 0;
     for (let i = 0; i < Math.max(num2.length, num1.length); i++) {
         // console.log(i, num1[i], num2[i], carry);
-        const r = carry +
+        const r =
+            carry +
             Number(getIntegerReverse(num1, i)) +
             Number(getIntegerReverse(num2, i));
         result.push(r % 2);

@@ -9,7 +9,7 @@ export default class SubrectangleQueries {
         col1: number,
         row2: number,
         col2: number,
-        newValue: number,
+        newValue: number
     ): void {
         for (let i = row1; i <= row2; i++) {
             for (let j = col1; j <= col2; j++) {

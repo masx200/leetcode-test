@@ -24,10 +24,12 @@ function parse_equation(equation: string) {
     const nl = el.filter((g) => g?.b).map((g) => g?.b);
     const nr = er.filter((g) => g?.b).map((g) => g?.b);
     //console.log(cl,cr,nl,nr)
-    const bodya = "return " +
+    const bodya =
+        "return " +
         (cl.length ? cl.join(" ") : "0 ") +
         `-(${cr.length ? cr.join(" ") : "0"})`;
-    const bodyb = "return " +
+    const bodyb =
+        "return " +
         (nr.length ? nr.join(" ") : " 0 ") +
         `-(${nl.length ? nl.join(" ") : " 0 "})`;
 

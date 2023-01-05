@@ -1,5 +1,6 @@
 function minimumSize(nums: number[], maxOperations: number): number {
-    let left = 1, right = Math.max(...nums);
+    let left = 1,
+        right = Math.max(...nums);
     let ans = 0;
     while (left <= right) {
         const y = Math.floor((left + right) / 2);

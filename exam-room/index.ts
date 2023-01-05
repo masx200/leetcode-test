@@ -28,7 +28,7 @@ class ExamRoom {
             if (
                 seats.has(p[0]) &&
                 seats.has(p[1]) &&
-                (seats.upperBound(p[0], false)?.getValue() == p[1])
+                seats.upperBound(p[0], false)?.getValue() == p[1]
             ) {
                 // 不属于延迟删除的区间
                 const d = p[1] - p[0];

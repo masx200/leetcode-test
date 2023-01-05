@@ -5,7 +5,7 @@ export function serialize(root: Node | null): string {
 }
 export function deserialize(data: string): Node | null {
     return ArrayToNAryNode(
-        JSON.parse(data.replaceAll(",,", ",null,").replaceAll("[,", "[null,")),
+        JSON.parse(data.replaceAll(",,", ",null,").replaceAll("[,", "[null,"))
     );
 }
 function NAryNodeToArray(root: Node | null): (number[] | null)[][] {

@@ -1,7 +1,7 @@
 export default function busyStudent(
     startTime: number[],
     endTime: number[],
-    queryTime: number,
+    queryTime: number
 ): number {
     return startTime
         .map((s, i) => Number(queryTime <= endTime[i] && queryTime >= s))

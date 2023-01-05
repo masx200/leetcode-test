@@ -1,7 +1,7 @@
 import { ListNode } from "./ListNode.ts";
 
 export default function reverse_Linked_List(
-    head: ListNode | null,
+    head: ListNode | null
 ): ListNode | null {
     let ans = null;
     let x = head;

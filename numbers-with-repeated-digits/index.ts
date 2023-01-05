@@ -1,8 +1,7 @@
 export default function numDupDigitsAtMostN(n: number): number {
     const s = String(n),
-        dp: number[][] = Array.from(
-            { length: s.length },
-            () => Array(1 << 10).fill(-1),
+        dp: number[][] = Array.from({ length: s.length }, () =>
+            Array(1 << 10).fill(-1)
         );
 
     /**
@@ -16,7 +15,7 @@ export default function numDupDigitsAtMostN(n: number): number {
         i: number,
         mask: number,
         isLimit: boolean,
-        isNum: boolean,
+        isNum: boolean
     ): number {
         // 这次已经终点, 如果填过, 次数+1
         if (i === s.length) return isNum ? 1 : 0;

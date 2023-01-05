@@ -37,7 +37,7 @@ function dfs(
     r: number,
     c: number,
     cache: Set<number>,
-    output: () => void,
+    output: () => void
 ): void {
     const m = grid.length;
     if (m === 0) return;

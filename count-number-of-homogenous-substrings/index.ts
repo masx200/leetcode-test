@@ -8,12 +8,12 @@ function countHomogenous(s: string): number {
         if (c === prev) {
             cnt++;
         } else {
-            res += (cnt + 1) * cnt / 2;
+            res += ((cnt + 1) * cnt) / 2;
             cnt = 1;
             prev = c;
         }
     }
-    res += (cnt + 1) * cnt / 2;
+    res += ((cnt + 1) * cnt) / 2;
     return res % MOD;
 }
 export default countHomogenous;

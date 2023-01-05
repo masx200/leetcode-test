@@ -9,7 +9,7 @@ function buildTree(preorder: number[], inorder: number[]): TreeNode | null {
         pStart: number,
         pEnd: number,
         iStart: number,
-        iEnd: number,
+        iEnd: number
     ): TreeNode | null {
         if (pStart > pEnd) {
             return null;

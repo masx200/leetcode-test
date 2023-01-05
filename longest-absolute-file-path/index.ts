@@ -15,13 +15,13 @@ export default function lengthLongestPath(input: string): number {
             if (line.includes(".")) {
                 folder_current.length = count_char(line, "\t");
                 files_path.add(
-                    [...folder_current, line.replaceAll("\t", "")].join("/"),
+                    [...folder_current, line.replaceAll("\t", "")].join("/")
                 );
             } else {
                 folder_current.length = 1 + count_char(line, "\t");
                 folder_current[folder_current.length - 1] = line.replaceAll(
                     "\t",
-                    "",
+                    ""
                 );
             }
         }

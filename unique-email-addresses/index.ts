@@ -5,6 +5,6 @@ export default function numUniqueEmails(emails: string[]): number {
             // deno-lint-ignore ban-ts-comment
             //@ts-ignore
             return first.split("+")[0].replaceAll(".", "") + "@" + second;
-        }),
+        })
     ).size;
 }

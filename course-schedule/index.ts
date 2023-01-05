@@ -1,6 +1,6 @@
 export default function canFinish(
     numCourses: number,
-    prerequisites: number[][],
+    prerequisites: number[][]
 ): boolean {
     const dependents: Map<number, number[]> = new Map();
 
@@ -14,7 +14,7 @@ export default function canFinish(
         indegress.set(child, (indegress.get(child) ?? 0) + 1);
     }
     const queue: number[] = Array.from(Array(numCourses).fill(0).keys()).filter(
-        (i) => !indegress.has(i),
+        (i) => !indegress.has(i)
     );
 
     let result: number = 0;

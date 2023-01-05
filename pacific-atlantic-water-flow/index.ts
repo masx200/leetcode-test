@@ -29,7 +29,7 @@ export default function pacificAtlantic(heights: number[][]): number[][] {
         (pos) => {
             const [x, y] = pos.split(",");
             return [Number(x), Number(y)];
-        },
+        }
     );
 
     return result;
@@ -41,7 +41,7 @@ function dfs(
     m: number,
     n: number,
     pacific: Set<`${number},${number}`>,
-    heights: number[][],
+    heights: number[][]
 ) {
     const dirs = [
         [-1, 0],

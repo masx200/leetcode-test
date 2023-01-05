@@ -8,7 +8,7 @@ export default class Solution {
         for (const rect of rects) {
             const [a, b, x, y] = rect;
             this.#arr.push(
-                this.#arr[this.#arr.length - 1] + (x - a + 1) * (y - b + 1),
+                this.#arr[this.#arr.length - 1] + (x - a + 1) * (y - b + 1)
             );
         }
     }

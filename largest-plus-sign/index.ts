@@ -1,6 +1,6 @@
 export default function orderOfLargestPlusSign(
     n: number,
-    mines: number[][],
+    mines: number[][]
 ): number {
     const dp: number[][] = Array(n)
         .fill(0)

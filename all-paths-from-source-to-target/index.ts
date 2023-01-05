@@ -7,7 +7,7 @@ function dfs(
     graph: number[][],
     res: number[][],
     index: number,
-    path: number[],
+    path: number[]
 ) {
     if (index === graph.length - 1) {
         res.push(Array.from(path));

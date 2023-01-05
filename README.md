@@ -49,6 +49,10 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode.cn/problems/distinct-subsequences/
+
+https://leetcode.cn/problems/delete-operation-for-two-strings/
+
 https://leetcode.cn/problems/count-pairs-with-xor-in-a-range
 
 https://leetcode.cn/problems/path-with-minimum-effort

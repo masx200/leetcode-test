@@ -39,7 +39,11 @@ function maxPoints(grid: number[][], queries: number[]): number[] {
                 const x2 = x + d[0],
                     y2 = y + d[1];
                 if (
-                    0 <= x2 && x2 < m && 0 <= y2 && y2 < n && grid[x2][y2] < q
+                    0 <= x2 &&
+                    x2 < m &&
+                    0 <= y2 &&
+                    y2 < n &&
+                    grid[x2][y2] < q
                 ) {
                     uf.union(x * n + y, x2 * n + y2); // 把坐标压缩成一维的编号
                 }

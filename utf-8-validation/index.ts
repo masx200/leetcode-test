@@ -25,7 +25,7 @@ function validUtf8(data: number[]): boolean {
             value >> 3 === 0b11110 &&
             i + 3 < data.length &&
             [data[i + 1], data[i + 2], data[i + 3]].every(
-                (v) => v >> 6 === 0b10,
+                (v) => v >> 6 === 0b10
             )
         ) {
             i += 3;

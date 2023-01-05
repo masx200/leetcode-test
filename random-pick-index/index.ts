@@ -4,7 +4,8 @@ interface Solution {
 function Solution(nums: number[]): Solution {
     const pos: Map<number, number[]> = new Map();
     for (const [i, num] of nums.entries()) {
-        const indices: number[] = pos.get(num) ??
+        const indices: number[] =
+            pos.get(num) ??
             (() => {
                 const d: number[] = [];
                 pos.set(num, d);

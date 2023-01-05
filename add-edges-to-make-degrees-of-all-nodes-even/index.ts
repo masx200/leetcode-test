@@ -27,12 +27,7 @@ function isPossible(n: number, edges: number[][]): boolean {
             return true;
         }
         for (let i = 1; i <= n; i++) {
-            if (
-                i != x &&
-                i != y &&
-                !has(i, x) &&
-                !has(i, y)
-            ) {
+            if (i != x && i != y && !has(i, x) && !has(i, y)) {
                 return true;
             }
         }
@@ -41,10 +36,8 @@ function isPossible(n: number, edges: number[][]): boolean {
     if (m == 4) {
         const [a, b, c, d] = odd;
         return (
-            (!has(a, b) &&
-                !has(c, d)) ||
-            (!has(a, c) &&
-                !has(b, d)) ||
+            (!has(a, b) && !has(c, d)) ||
+            (!has(a, c) && !has(b, d)) ||
             (!has(a, d) && !has(b, c))
         );
     }

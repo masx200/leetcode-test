@@ -16,7 +16,7 @@ const dfs = (
     index: number,
     matchsticks: number[],
     edges: number[],
-    len: number,
+    len: number
 ) => {
     if (index === matchsticks.length) {
         return true;

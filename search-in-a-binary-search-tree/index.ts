@@ -2,7 +2,7 @@ import { TreeNode } from "../binary-tree-inorder-traversal/TreeNode.ts";
 
 export default function searchBST(
     root: TreeNode | null,
-    val: number,
+    val: number
 ): TreeNode | null | undefined {
     if (!root) return null;
     if (root.val > val) {

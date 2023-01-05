@@ -3,7 +3,7 @@ import { counter } from "../substring-with-concatenation-of-all-words/counter.ts
 function mostCommonWord(paragraph: string, banned: string[]): string {
     const ban = new Set(banned);
     const cnt = counter(
-        [...paragraph.matchAll(/\w+/g)].map((a) => a[0].toLowerCase()),
+        [...paragraph.matchAll(/\w+/g)].map((a) => a[0].toLowerCase())
     );
     return Array.from(cnt.entries())
         .filter((k) => !ban.has(k[0]))

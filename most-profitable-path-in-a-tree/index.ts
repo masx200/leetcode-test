@@ -1,7 +1,7 @@
 export default function mostProfitablePath(
     edges: number[][],
     bob: number,
-    amount: number[],
+    amount: number[]
 ): number {
     const g: number[][] = amount.map(() => []);
 

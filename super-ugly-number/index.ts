@@ -1,6 +1,6 @@
 export default function nthSuperUglyNumber(
     n: number,
-    primes: number[],
+    primes: number[]
 ): number {
     const dp: number[] = new Array(n + 1).fill(0);
     const m = primes.length;

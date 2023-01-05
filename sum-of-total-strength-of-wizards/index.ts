@@ -39,8 +39,9 @@ export default function totalStrength(strength: number[]): number {
     for (let i = 0; i < n; i++) {
         const l = left[i] + 1;
         const r = right[i] - 1;
-        const total = (BigInt((i - l + 1) * (ss[r + 2] - ss[i + 1])) -
-            BigInt((r - i + 1) * (ss[i + 1] - ss[l]))) %
+        const total =
+            (BigInt((i - l + 1) * (ss[r + 2] - ss[i + 1])) -
+                BigInt((r - i + 1) * (ss[i + 1] - ss[l]))) %
             BigMOD;
         ans = (ans + BigInt(strength[i]) * BigInt(total)) % BigMOD;
     }
