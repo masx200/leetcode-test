@@ -1,4 +1,4 @@
-import { BinaryHeap } from "https://deno.land/std@0.170.0/collections/binary_heap.ts";
+import { BinaryHeap } from "https://deno.land/std@0.171.0/collections/binary_heap.ts";
 
 function minimumEffortPath(heights: number[][]): number {
     const dirs = [
