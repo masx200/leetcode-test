@@ -5,7 +5,7 @@ export {
     assertFalse,
     assertStrictEquals,
     equal,
-} from "https://deno.land/std@0.170.0/testing/asserts.ts";
+} from "https://deno.land/std@0.171.0/testing/asserts.ts";
 export { default as random } from "https://cdn.skypack.dev/lodash@4.17.21/random?dts";
 export { default as countBy } from "https://cdn.skypack.dev/lodash@4.17.21/countBy?dts";
 export { default as zip } from "https://cdn.skypack.dev/lodash@4.17.21/zip?dts";
@@ -13,12 +13,12 @@ export { default as isEqual } from "https://cdn.skypack.dev/lodash@4.17.21/isEqu
 export { default as uniqBy } from "https://cdn.skypack.dev/lodash@4.17.21/uniqBy?dts";
 
 export { default as intersection } from "https://cdn.skypack.dev/lodash@4.17.21/intersection?dts";
-import { BinaryHeap } from "https://deno.land/std@0.170.0/collections/binary_heap.ts";
+import { BinaryHeap } from "https://deno.land/std@0.171.0/collections/binary_heap.ts";
 export { BinaryHeap };
-export { walk } from "https://deno.land/std@0.170.0/fs/mod.ts";
-export { parse } from "https://deno.land/std@0.170.0/flags/mod.ts";
+export { walk } from "https://deno.land/std@0.171.0/fs/mod.ts";
+export { parse } from "https://deno.land/std@0.171.0/flags/mod.ts";
 export { combinations } from "https://deno.land/x/combinatorics@1.1.2/mod.ts";
-export { isIP } from "https://deno.land/std@0.170.0/node/internal/net.ts";
+export { isIP } from "https://deno.land/std@0.171.0/node/internal/net.ts";
 export { Heap } from "npm:@datastructures-js/heap@4.2.2";
 export {
     AvlTree,
@@ -32,7 +32,7 @@ export {
     TreeNode,
 } from "https://esm.sh/@masx200/leetcode-class@1.2.7/";
 
-export type { WalkEntry } from "https://deno.land/std@0.170.0/fs/_util.ts";
+export type { WalkEntry } from "https://deno.land/std@0.171.0/fs/_util.ts";
 
 import memoize from "https://cdn.skypack.dev/lodash@4.17.21/memoize?dts";
 import AsyncLimiterClass, {
