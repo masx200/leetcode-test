@@ -1,5 +1,4 @@
-export function sum(a: Array<number>) {
-    // return a.reduce((p, v) => p + v, 0);
+export function sum(a: Array<number>): number {
     let r = 0;
     for (const v of a) {
         r += v;
