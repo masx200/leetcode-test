@@ -49,6 +49,8 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode.cn/problems/count-prefixes-of-a-given-string
+
 https://leetcode.cn/problems/minimum-operations-to-reduce-x-to-zero/
 
 https://leetcode.cn/problems/distinct-subsequences/
