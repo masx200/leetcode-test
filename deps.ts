@@ -19,7 +19,7 @@ export { walk } from "https://deno.land/std@0.171.0/fs/mod.ts";
 export { parse } from "https://deno.land/std@0.171.0/flags/mod.ts";
 export { combinations } from "https://deno.land/x/combinatorics@1.1.2/mod.ts";
 export { isIP } from "https://deno.land/std@0.171.0/node/internal/net.ts";
-export { Heap } from "npm:@datastructures-js/heap@4.2.2";
+export { Heap } from "npm:@datastructures-js/heap@4.3.1";
 export {
     AvlTree,
     BinarySearchTree,

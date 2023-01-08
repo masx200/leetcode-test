@@ -25,4 +25,4 @@ function kSmallestPairs(
 }
 export default kSmallestPairs;
 
-import { Heap } from "npm:@datastructures-js/heap@4.2.2";
+import { Heap } from "npm:@datastructures-js/heap@4.3.1";
