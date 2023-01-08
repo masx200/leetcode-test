@@ -19,6 +19,6 @@ export default function isBoomerang(points: number[][]): boolean {
     const innerProduct = dot(vector2, vector1);
     return !float64equals(
         Math.abs(innerProduct),
-        norm(vector2) * norm(vector1),
+        norm(vector2) * norm(vector1)
     );
 }

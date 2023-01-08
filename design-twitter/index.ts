@@ -51,8 +51,8 @@ export default class Twitter {
     }
 
     follow(followerId: number, followeeId: number): void {
-        const followee = this.#follower_to_followees.get(followerId) ??
-            new Set();
+        const followee =
+            this.#follower_to_followees.get(followerId) ?? new Set();
 
         followee.add(followeeId);
         this.#follower_to_followees.set(followerId, followee);

@@ -6,5 +6,5 @@ export default function sumRootToLeaf(root: TreeNode | null, sum = 0): number {
         : !root.left && !root.right
         ? sum * 2 + root.val
         : sumRootToLeaf(root.left, sum * 2 + root.val) +
-            sumRootToLeaf(root.right, sum * 2 + root.val);
+          sumRootToLeaf(root.right, sum * 2 + root.val);
 }

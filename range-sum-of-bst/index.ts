@@ -3,7 +3,7 @@ import { TreeNode } from "../binary-tree-inorder-traversal/TreeNode.ts";
 export default function rangeSumBST(
     root: TreeNode | null,
     low: number,
-    high: number,
+    high: number
 ): number {
     if (!root) {
         return 0;
@@ -24,7 +24,7 @@ function level(
     nodes: TreeNode[],
     low: number,
     high: number,
-    output: (r: number[]) => void,
+    output: (r: number[]) => void
 ) {
     if (nodes.length === 0) {
         return;
@@ -47,6 +47,6 @@ function level(
             .filter(Boolean) as TreeNode[],
         low,
         high,
-        output,
+        output
     );
 }

@@ -2,7 +2,7 @@ import { UnionFind } from "../largest-component-size-by-common-factor/UnionFind.
 
 export default function possibleBipartition(
     n: number,
-    dislikes: number[][],
+    dislikes: number[][]
 ): boolean {
     const uf = new UnionFind();
 

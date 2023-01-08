@@ -15,7 +15,7 @@ export default function groupThePeople(groupSizes: number[]): number[][] {
         ans.push(
             ...Array(Math.floor(people.length / size))
                 .fill(0)
-                .map((_, i) => people.slice(i, i + size)),
+                .map((_, i) => people.slice(i, i + size))
         );
     }
     return ans;

@@ -1,6 +1,6 @@
 export default function largestOverlap(
     img1: number[][],
-    img2: number[][],
+    img2: number[][]
 ): number {
     const len = img1.length;
     const count: number[][] = Array(2 * len + 1)

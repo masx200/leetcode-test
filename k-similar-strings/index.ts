@@ -17,7 +17,7 @@ export default function kSimilarity(s1: string, s2: string): number {
         cost: number,
         len: number,
         str1: string | string[],
-        str2: string,
+        str2: string
     ) {
         if (cost > ans) {
             return;

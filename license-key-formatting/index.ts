@@ -11,9 +11,9 @@ export default function licenseKeyFormatting(s: string, k: number): string {
                     : str.slice(i * k, i * k + k)
                 : str.length % k
                 ? str.slice(
-                    -k + (str.length % k) + i * k,
-                    -k + (str.length % k) + i * k + k,
-                )
+                      -k + (str.length % k) + i * k,
+                      -k + (str.length % k) + i * k + k
+                  )
                 : str.slice(i * k, i * k + k)
         )
         .join("-");

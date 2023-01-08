@@ -1,6 +1,6 @@
 export default function bestCoordinate(
     towers: number[][],
-    radius: number,
+    radius: number
 ): number[] {
     const xmax = Math.max(...towers.map((a) => a[0]));
     const ymax = Math.max(...towers.map((a) => a[1]));
@@ -15,7 +15,7 @@ export default function bestCoordinate(
                         (
                             p: [number, number, number],
                             _,
-                            y,
+                            y
                         ): [number, number, number] => {
                             const value: [number, number, number] = [
                                 x,
@@ -24,18 +24,18 @@ export default function bestCoordinate(
                             ];
                             return selectmax(p, value);
                         },
-                        [0, 0, 0],
+                        [0, 0, 0]
                     );
                 return selectmax(p, current);
             },
-            [0, 0, 0],
+            [0, 0, 0]
         )
         .slice(0, 2);
 }
 
 function selectmax(
     a: [number, number, number],
-    b: [number, number, number],
+    b: [number, number, number]
 ): [number, number, number] {
     if (a[2] > b[2]) return a;
     if (a[2] < b[2]) return b;
@@ -52,7 +52,7 @@ function calcquality(
     x: number,
     y: number,
     radius: number,
-    towers: number[][],
+    towers: number[][]
 ): number {
     return towers.reduce((p, [q, w, e]) => {
         const d = Math.hypot(x - q, y - w);

@@ -1,7 +1,7 @@
 function closetTarget(
     words: string[],
     target: string,
-    startIndex: number,
+    startIndex: number
 ): number {
     if (!words.includes(target)) return -1;
 
@@ -15,7 +15,7 @@ function closetTarget(
     return Math.min(
         ...indexes.map((index) => Math.abs(index - startIndex)),
         ...indexes.map((index) => Math.abs(words.length + index - startIndex)),
-        ...indexes.map((index) => Math.abs(-words.length + index - startIndex)),
+        ...indexes.map((index) => Math.abs(-words.length + index - startIndex))
     );
 }
 export default closetTarget;

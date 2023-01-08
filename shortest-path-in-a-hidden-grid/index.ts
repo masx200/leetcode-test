@@ -34,7 +34,7 @@ export default function findShortestPath(master: GridMaster): number {
     function bfs(
         pos: [number, number][],
         distance: number,
-        visited: Set<string>,
+        visited: Set<string>
     ): number {
         const temp: [number, number][] = [];
         for (const [row, col] of pos) {

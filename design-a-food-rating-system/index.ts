@@ -9,7 +9,8 @@ class FoodRatings {
             const cuisine = cuisines[index];
             const rating = ratings[index];
             this.#foodToRating.set(food, rating);
-            const tree = this.#cuisineToTree.get(cuisine) ??
+            const tree =
+                this.#cuisineToTree.get(cuisine) ??
                 new AvlTree((a, b) => {
                     const ra = this.#foodToRating.get(a) ?? 0;
                     const rb = this.#foodToRating.get(b) ?? 0;

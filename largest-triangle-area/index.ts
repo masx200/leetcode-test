@@ -9,7 +9,7 @@ export default function largestTriangleArea(points: number[][]): number {
             number,
             number,
             number,
-            number,
+            number
         ];
         const area = triangleArea(...pos);
         ret = Math.max(ret, area);
@@ -23,7 +23,7 @@ function triangleArea(
     x2: number,
     y2: number,
     x3: number,
-    y3: number,
+    y3: number
 ) {
     return (
         0.5 *

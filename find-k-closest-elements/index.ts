@@ -1,7 +1,7 @@
 export default function findClosestElements(
     arr: number[],
     k: number,
-    x: number,
+    x: number
 ): number[] {
     const size = arr.length;
     let left = 0;

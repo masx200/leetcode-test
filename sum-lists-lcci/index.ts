@@ -2,7 +2,7 @@ import { ListNode } from "../reverse-linked-list/ListNode.ts";
 
 function addTwoNumbers(
     l1: ListNode | null,
-    l2: ListNode | null,
+    l2: ListNode | null
 ): ListNode | null {
     if (!l1) {
         return l2;

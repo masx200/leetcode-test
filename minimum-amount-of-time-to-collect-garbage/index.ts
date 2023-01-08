@@ -2,7 +2,7 @@ import { groupBy } from "../deps.ts";
 
 export default function garbageCollection(
     garbage: string[],
-    travel: number[],
+    travel: number[]
 ): number {
     const pre: number[] = Array(travel.length + 1).fill(0);
     let mc = 0;

@@ -1,6 +1,6 @@
 export default function minimumScore(
     nums: number[],
-    edges: number[][],
+    edges: number[][]
 ): number {
     const n = nums.length;
     if (nums.length === 0) return 0;
@@ -56,7 +56,7 @@ function bfs(
     children: number[][],
     ancestorToGrandson: boolean[][],
     xor: number[],
-    nums: number[],
+    nums: number[]
 ) {
     if (nodes.length === 0) return;
     const temp: number[] = [];

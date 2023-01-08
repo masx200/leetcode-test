@@ -9,7 +9,8 @@ function minOperations(nums: number[], x: number): number {
     }
 
     let right = 0;
-    let lsum = 0, rsum = sumn;
+    let lsum = 0,
+        rsum = sumn;
     let ans = n + 1;
 
     for (let left = -1; left < n; ++left) {
@@ -21,7 +22,7 @@ function minOperations(nums: number[], x: number): number {
             ++right;
         }
         if (lsum + rsum === x) {
-            ans = Math.min(ans, (left + 1) + (n - right));
+            ans = Math.min(ans, left + 1 + (n - right));
         }
     }
 

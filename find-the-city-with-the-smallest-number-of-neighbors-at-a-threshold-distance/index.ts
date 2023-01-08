@@ -1,7 +1,7 @@
 export default function findTheCity(
     n: number,
     edges: number[][],
-    distanceThreshold: number,
+    distanceThreshold: number
 ): number {
     const dp: number[][] = Array(n)
         .fill(0)

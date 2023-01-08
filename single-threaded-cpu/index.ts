@@ -6,7 +6,7 @@ export default function getOrder(tasks: number[][]): number[] {
             index,
             processingTime,
             enqueueTime,
-        }),
+        })
     );
 
     tasks_indexed.sort((a, b) => -a.enqueueTime + b.enqueueTime);
@@ -26,7 +26,7 @@ export default function getOrder(tasks: number[][]): number[] {
         if (pq.isEmpty()) {
             time = Math.max(
                 time,
-                tasks_indexed[tasks_indexed.length - 1].enqueueTime,
+                tasks_indexed[tasks_indexed.length - 1].enqueueTime
             );
         }
 

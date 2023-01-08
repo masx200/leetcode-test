@@ -5,7 +5,7 @@ import { upperBound } from "../maximum-profit-in-job-scheduling/upperBound.ts";
 
 export default function closestNodes(
     root: TreeNode | null,
-    queries: number[],
+    queries: number[]
 ): number[][] {
     const nums = inorderTraversal(root);
 

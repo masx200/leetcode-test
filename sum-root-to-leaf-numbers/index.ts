@@ -15,7 +15,7 @@ function pathSum(root: TreeNode | null): number[][] {
 function dfs(
     root: TreeNode,
     route: number[],
-    output: (route: number[]) => void,
+    output: (route: number[]) => void
 ) {
     if (!root.left && !root.right) {
         output([...route, root.val]);

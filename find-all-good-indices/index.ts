@@ -19,16 +19,14 @@ export default function goodIndices(nums: number[], k: number): number[] {
     for (let i = 0; i < post.length; i++) {
         if (i === 0) {
             for (let j = n - 2; j > n - k - 1; j--) {
-                post[post.length - 1 - i] = nums[j] <= nums[j + 1]
-                    ? post[post.length - 1 - i] + 1
-                    : 1;
+                post[post.length - 1 - i] =
+                    nums[j] <= nums[j + 1] ? post[post.length - 1 - i] + 1 : 1;
             }
         } else {
             const j = nums.length - i - k;
 
-            post[post.length - 1 - i] = nums[j] <= nums[j + 1]
-                ? post[post.length - i] + 1
-                : 1;
+            post[post.length - 1 - i] =
+                nums[j] <= nums[j + 1] ? post[post.length - i] + 1 : 1;
         }
     }
 

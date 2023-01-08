@@ -20,9 +20,10 @@ function numDistinct(s: string, t: string): number {
 
     for (let i = 1; i <= m; i++) {
         for (let j = 1; j <= n; j++) {
-            dp[i][j] = s[j - 1] === t[i - 1]
-                ? dp[i - 1][j - 1] + dp[i][j - 1]
-                : dp[i][j - 1];
+            dp[i][j] =
+                s[j - 1] === t[i - 1]
+                    ? dp[i - 1][j - 1] + dp[i][j - 1]
+                    : dp[i][j - 1];
         }
     }
 

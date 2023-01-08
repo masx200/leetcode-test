@@ -6,7 +6,7 @@ function isSubStructure(A: TreeNode | null, B: TreeNode | null): boolean {
             B &&
             (helper(A, B) ||
                 isSubStructure(A.left, B) ||
-                isSubStructure(A.right, B)),
+                isSubStructure(A.right, B))
     );
 }
 export default isSubStructure;

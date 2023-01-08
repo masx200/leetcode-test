@@ -19,6 +19,6 @@ function level(nodes: TreeNode[], output: (r: number) => void) {
         nodes
             .map((n) => [n.left, n.right].filter(Boolean) as TreeNode[])
             .flat(),
-        output,
+        output
     );
 }

@@ -1,6 +1,6 @@
 export default function findMedianSortedArrays(
     nums1: number[],
-    nums2: number[],
+    nums2: number[]
 ): number {
     const arr = [...nums1, ...nums2].sort((a, b) => a - b);
     if (arr.length % 2) {

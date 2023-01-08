@@ -23,7 +23,7 @@ export default function largestLocal(grid: number[][]): number[][] {
             .map((_, j) => {
                 return Math.max(
                     grid[i + 1][j + 1],
-                    ...dirs.map(([r, c]) => grid[i + 1 + r]?.[j + 1 + c]),
+                    ...dirs.map(([r, c]) => grid[i + 1 + r]?.[j + 1 + c])
                 );
             })
     );

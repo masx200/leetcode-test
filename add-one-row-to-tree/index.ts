@@ -3,7 +3,7 @@ import { TreeNode } from "../mod.ts";
 export default function addOneRow(
     root: TreeNode | null,
     val: number,
-    depth: number,
+    depth: number
 ): TreeNode | null {
     if (!root || !depth) return null;
 
@@ -13,13 +13,13 @@ export default function addOneRow(
         return new TreeNode(
             root.val,
             new TreeNode(val, root.left),
-            new TreeNode(val, null, root.right),
+            new TreeNode(val, null, root.right)
         );
     }
 
     return new TreeNode(
         root.val,
         addOneRow(root.left, val, depth - 1),
-        addOneRow(root.right, val, depth - 1),
+        addOneRow(root.right, val, depth - 1)
     );
 }

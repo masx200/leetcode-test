@@ -4,7 +4,7 @@ export default trimBST;
 function trimBST(
     root: TreeNode | null,
     low: number,
-    high: number,
+    high: number
 ): TreeNode | null {
     if (!root) return null;
 
@@ -15,6 +15,6 @@ function trimBST(
     return new TreeNode(
         root.val,
         trimBST(root.left, low, high),
-        trimBST(root.right, low, high),
+        trimBST(root.right, low, high)
     );
 }

@@ -36,7 +36,7 @@ function multiply(x: string, y: string): string {
             const half = Math.floor(x.length / 2);
             return addStrings(
                 multiply(y, x.slice(0, half)) + "0".repeat(x.length - half),
-                multiply(y, x.slice(half)),
+                multiply(y, x.slice(half))
             );
         }
     } else {
@@ -44,7 +44,7 @@ function multiply(x: string, y: string): string {
             const half = Math.floor(y.length / 2);
             return addStrings(
                 multiply(x, y.slice(0, half)) + "0".repeat(y.length - half),
-                multiply(x, y.slice(half)),
+                multiply(x, y.slice(half))
             );
         }
     }

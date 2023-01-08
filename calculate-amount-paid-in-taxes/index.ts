@@ -7,7 +7,8 @@ function calculateTax(brackets: number[][], income: number): number {
                 if (brackets[i][1] === 0) a += 0;
                 else a += brackets[i][0] * (brackets[i][1] / 100);
             } else {
-                a += (brackets[i][0] - brackets[i - 1][0]) *
+                a +=
+                    (brackets[i][0] - brackets[i - 1][0]) *
                     (brackets[i][1] / 100);
             }
         } else {
