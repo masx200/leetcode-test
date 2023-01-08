@@ -72,4 +72,4 @@ class ExamRoom {
 }
 export default ExamRoom;
 import { AvlTree } from "npm:@datastructures-js/binary-search-tree@5.2.0";
-import { Heap } from "npm:@datastructures-js/heap@4.2.2";
+import { Heap } from "npm:@datastructures-js/heap@4.3.1";

@@ -56,4 +56,4 @@ function getNumberOfBacklogOrders(orders: number[][]): number {
 }
 
 export default getNumberOfBacklogOrders;
-import { Heap } from "https://cdn.skypack.dev/@datastructures-js/heap@4.2.2/src/heap.js?dts";
+import { Heap } from "https://cdn.skypack.dev/@datastructures-js/heap@4.3.1/src/heap.js?dts";

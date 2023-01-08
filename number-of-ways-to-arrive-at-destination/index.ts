@@ -1,4 +1,4 @@
-import { Heap } from "npm:@datastructures-js/heap@4.2.2";
+import { Heap } from "npm:@datastructures-js/heap@4.3.1";
 
 export default function countPaths(n: number, roads: number[][]): number {
     const mod = 10 ** 9 + 7;
