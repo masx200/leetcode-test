@@ -48,7 +48,7 @@ function getNumberOfBacklogOrders(orders: number[][]): number {
     let total = 0;
     for (const pq of [buyOrders, sellOrders]) {
         //@ts-ignore
-        for (const order of pq._nodes) {
+        for (const order of pq.toArray()) {
             total = (total + order[1]) % MOD;
         }
     }
@@ -56,4 +56,4 @@ function getNumberOfBacklogOrders(orders: number[][]): number {
 }
 
 export default getNumberOfBacklogOrders;
-import { Heap } from "https://cdn.skypack.dev/@datastructures-js/heap@4.3.1/src/heap.js?dts";
+import { Heap } from "npm:@datastructures-js/heap@4.3.1";
