@@ -49,6 +49,10 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode.cn/problems/find-the-middle-index-in-array/
+
+https://leetcode.cn/problems/find-pivot-index/
+
 https://leetcode.cn/problems/check-if-number-has-equal-digit-count-and-digit-value/
 
 https://leetcode.cn/problems/cracking-the-safe/
