@@ -4,7 +4,7 @@ const maxnum = 10 ** 5;
 function checkRecord(n: number): number {
     if (dp.length === 0) {
         dp.push(
-            ...new Array(maxnum + 1).fill(0).map(() => new Array(6).fill(0))
+            ...new Array(maxnum + 1).fill(0).map(() => new Array(6).fill(0)),
         );
         dp.length = maxnum + 1;
         // 长度，A 的数量，结尾连续 L 的数量

@@ -1,6 +1,6 @@
 function sequenceReconstruction(
     nums: number[],
-    sequences: number[][]
+    sequences: number[][],
 ): boolean {
     const s = new Set<string>();
     for (const seq of sequences) {

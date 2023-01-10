@@ -2,7 +2,7 @@ function numOfMinutes(
     n: number,
     headID: number,
     manager: number[],
-    informTime: number[]
+    informTime: number[],
 ): number {
     const max: number[] = [];
     const pretime: number[] = new Array(n).fill(-1);
@@ -12,8 +12,8 @@ function numOfMinutes(
     function dfs(currentNode: number): number {
         if (pretime[currentNode] >= 0) return pretime[currentNode];
 
-        pretime[currentNode] =
-            informTime[manager[currentNode]] + dfs(manager[currentNode]);
+        pretime[currentNode] = informTime[manager[currentNode]] +
+            dfs(manager[currentNode]);
         return pretime[currentNode];
     }
 

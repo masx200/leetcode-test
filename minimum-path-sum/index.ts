@@ -12,7 +12,7 @@ function minPathSum(grid: number[][]): number {
 
             return grid[i][j] + Math.min(dp(i - 1, j), dp(i, j - 1));
         },
-        (i, j) => i * n + j
+        (i, j) => i * n + j,
     );
     return dp(m - 1, n - 1);
 }

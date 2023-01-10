@@ -3,7 +3,7 @@ import { PrefixTreeInsert, PrefixTreeSearchPrefix } from "../mod.ts";
 
 export default function replaceWords(
     dictionary: string[],
-    sentence: string
+    sentence: string,
 ): string {
     const root = PrefixTree();
     dictionary.forEach((word) =>

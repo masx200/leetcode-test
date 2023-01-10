@@ -5,7 +5,7 @@ export default function wordBreak(s: string, wordDict: string[]): string[] {
         return [];
     }
     const lens = Array.from(new Set(wordDict.map((a) => a.length))).sort(
-        (a, b) => a - b
+        (a, b) => a - b,
     );
     const n: number = s.length;
     const set: Set<string> = new Set(wordDict);

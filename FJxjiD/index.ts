@@ -16,16 +16,16 @@ export default function chickenCoolRun(paths: number[][]): number {
             temp[1] = Math.min(
                 temp[1],
                 temp[0] < Infinity ? temp[0] + 1 : Infinity,
-                temp[2] < Infinity ? temp[2] + 1 : Infinity
+                temp[2] < Infinity ? temp[2] + 1 : Infinity,
             );
 
             temp[0] = Math.min(
                 temp[0],
-                paths[0][j] === 0 ? temp[1] + 1 : Infinity
+                paths[0][j] === 0 ? temp[1] + 1 : Infinity,
             );
             temp[2] = Math.min(
                 temp[2],
-                paths[2][j] === 0 ? temp[1] + 1 : Infinity
+                paths[2][j] === 0 ? temp[1] + 1 : Infinity,
             );
         }
 

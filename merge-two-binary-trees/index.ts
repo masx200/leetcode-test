@@ -2,7 +2,7 @@ import { TreeNode } from "../binary-tree-inorder-traversal/TreeNode.ts";
 
 function mergeTrees(
     root1: TreeNode | null,
-    root2: TreeNode | null
+    root2: TreeNode | null,
 ): TreeNode | null {
     if (!root1 && !root2) return null;
     if (!root1) return root2;

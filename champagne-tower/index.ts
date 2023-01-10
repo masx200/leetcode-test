@@ -1,7 +1,7 @@
 export default function champagneTower(
     poured: number,
     query_row: number,
-    query_glass: number
+    query_glass: number,
 ): number {
     let row = [poured];
     for (let i = 1; i <= query_row; i++) {

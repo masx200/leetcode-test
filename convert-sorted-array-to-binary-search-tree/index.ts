@@ -14,6 +14,6 @@ export default function sortedArrayToBST(nums: number[]): TreeNode | null {
             if (index >= n) return;
 
             index++;
-        }
+        },
     );
 }

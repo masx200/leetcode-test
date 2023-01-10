@@ -1,7 +1,7 @@
 export default function maxSatisfied(
     customers: number[],
     grumpy: number[],
-    minutes: number
+    minutes: number,
 ): number {
     let total = 0;
     const n = customers.length;
@@ -16,8 +16,7 @@ export default function maxSatisfied(
     }
     let maxIncrease = increase;
     for (let i = minutes; i < n; i++) {
-        increase =
-            increase -
+        increase = increase -
             customers[i - minutes] * grumpy[i - minutes] +
             customers[i] * grumpy[i];
         maxIncrease = Math.max(maxIncrease, increase);

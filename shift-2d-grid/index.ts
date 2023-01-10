@@ -7,9 +7,10 @@ export default function shiftGrid(grid: number[][], k: number): number[][] {
         grid
             .flat()
             .map(
-                (_, i, a) => a[(100 * a.length + a.length + (i - k)) % a.length]
+                (_, i, a) =>
+                    a[(100 * a.length + a.length + (i - k)) % a.length],
             ),
         m,
-        n
+        n,
     );
 }

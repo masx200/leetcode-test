@@ -3,7 +3,7 @@ import { UnionFind } from "../largest-component-size-by-common-factor/UnionFind.
 function distanceLimitedPathsExist(
     _n: number,
     edgeList: number[][],
-    queries: number[][]
+    queries: number[][],
 ): boolean[] {
     const uf = new UnionFind();
 

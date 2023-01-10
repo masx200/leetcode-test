@@ -29,7 +29,7 @@ function ArrayToTreeNode(array: TreeNodeArray): TreeNode | null {
         return new TreeNode(
             array[0],
             ArrayToTreeNode(array[1]),
-            ArrayToTreeNode(array[2])
+            ArrayToTreeNode(array[2]),
         );
     }
     if (Array.isArray(array) && array.length === 2) {
@@ -45,7 +45,7 @@ export function deserialize(data: string): TreeNode | null {
         return null;
     }
     const array = JSON.parse(
-        data.replaceAll(",,", ",null,")
+        data.replaceAll(",,", ",null,"),
         // .replaceAll(",]", ",null]"),
     );
     return ArrayToTreeNode(array);

@@ -1,6 +1,6 @@
 export default function isPrefixOfWord(
     sentence: string,
-    searchWord: string
+    searchWord: string,
 ): number {
     const index = sentence
         .split(" ")

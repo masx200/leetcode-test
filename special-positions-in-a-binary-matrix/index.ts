@@ -8,7 +8,7 @@ function numSpecial(mat: number[][]): number {
     mat.forEach(
         (a, i) =>
             rowsum[i] === 1 &&
-            a.forEach((v, j) => (ans += Number(v === 1 && colsum[j] === 1)))
+            a.forEach((v, j) => (ans += Number(v === 1 && colsum[j] === 1))),
     );
 
     return ans;

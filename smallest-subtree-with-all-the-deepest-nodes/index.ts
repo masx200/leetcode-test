@@ -2,7 +2,7 @@ import { TreeNode } from "../binary-tree-inorder-traversal/TreeNode.ts";
 import maxDepth from "../maximum-depth-of-binary-tree/index.ts";
 
 export default function subtreeWithAllDeepest(
-    root: TreeNode | null
+    root: TreeNode | null,
 ): TreeNode | null {
     if (root == null) {
         return null;

@@ -2,7 +2,7 @@ export default function countRoutes(
     locations: number[],
     start: number,
     finish: number,
-    fuel: number
+    fuel: number,
 ): number {
     const MOD = 1000000007;
 

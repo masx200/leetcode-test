@@ -2,7 +2,7 @@ function countGoodStrings(
     low: number,
     high: number,
     zero: number,
-    one: number
+    one: number,
 ): number {
     const dp: number[] = Array(high + 1).fill(0);
     dp[0] = 1;

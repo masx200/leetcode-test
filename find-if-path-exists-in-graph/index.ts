@@ -4,7 +4,7 @@ export default function validPath(
     n: number,
     edges: number[][],
     source: number,
-    destination: number
+    destination: number,
 ): boolean {
     if (source === destination) return true;
     if (edges.length === 0) return false;

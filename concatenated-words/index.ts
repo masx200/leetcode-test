@@ -2,7 +2,7 @@ import { PrefixTreeInsert } from "../design-add-and-search-words-data-structure/
 import { PrefixTree } from "../implement-trie-prefix-tree/PrefixTree.ts";
 
 export default function findAllConcatenatedWordsInADict(
-    words: string[]
+    words: string[],
 ): string[] {
     const root = PrefixTree();
     const ans: string[] = new Array(0);

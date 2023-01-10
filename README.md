@@ -49,6 +49,10 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode.cn/problems/cracking-the-safe/
+
+https://leetcode.cn/problems/reconstruct-itinerary/
+
 https://leetcode-cn.com/problems/longest-palindromic-subsequence/
 
 https://leetcode.cn/problems/minimum-number-of-operations-to-reinitialize-a-permutation/

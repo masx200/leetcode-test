@@ -4,7 +4,7 @@ import { lowerBound } from "./lowerBound.ts";
 export default function numberOfPairs(
     nums1: number[],
     nums2: number[],
-    diff: number
+    diff: number,
 ): number {
     for (const [i, x] of nums2.entries()) {
         nums1[i] -= x;

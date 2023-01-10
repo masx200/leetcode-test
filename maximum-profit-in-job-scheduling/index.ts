@@ -3,7 +3,7 @@ import { upperBound } from "./upperBound.ts";
 function jobScheduling(
     startTime: number[],
     endTime: number[],
-    profit: number[]
+    profit: number[],
 ): number {
     const jobs = startTime
         .map((v, i) => [v, endTime[i], profit[i]])

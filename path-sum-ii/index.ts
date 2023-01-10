@@ -11,7 +11,7 @@ function dfs(
     root: TreeNode,
     target: number,
     route: number[],
-    output: (route: number[]) => void
+    output: (route: number[]) => void,
 ) {
     if (!root.left && !root.right && target === root.val) {
         output([...route, root.val]);

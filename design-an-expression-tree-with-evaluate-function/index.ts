@@ -33,7 +33,7 @@ export class Node {
     constructor(
         public val: string = "",
         public left: Node | null = null,
-        public right: Node | null = null
+        public right: Node | null = null,
     ) {}
     evaluate(): number {
         if (this.left == null && this.right == null) return Number(this.val);
