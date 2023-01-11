@@ -19,15 +19,13 @@ export default function verticalTraversal(root: TreeNode | null): number[][] {
         current = next;
     }
 
-    for (
-        const arr of Array.from(map)
-            .sort((a, b) => a[0] - b[0])
-            .map((a) => a[1])
-    ) {
+    for (const arr of Array.from(map)
+        .sort((a, b) => a[0] - b[0])
+        .map((a) => a[1])) {
         res.push(
             arr
                 .sort((a, b) => (a[0] === b[0] ? a[1] - b[1] : a[0] - b[0]))
-                .map((a) => a[1]),
+                .map((a) => a[1])
         );
     }
     return res;

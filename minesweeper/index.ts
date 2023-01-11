@@ -1,6 +1,6 @@
 export default function updateBoard(
     board: string[][],
-    click: number[],
+    click: number[]
 ): string[][] {
     const [row, col] = click;
     if (board[row][col] === "M") {
@@ -13,14 +13,14 @@ export default function updateBoard(
             .filter((v) => typeof board[v[0]]?.[v[1]] !== "undefined");
         const count = validpos.reduce(
             (a, v) => a + Number(["X", "M"].includes(board[v[0]][v[1]])),
-            0,
+            0
         );
         if (count > 0) board[row][col] = String(count);
         else {
             board[row][col] = "B";
             return validpos.reduce(
                 (b, v) => updateBoard(b, [v[0], v[1]]),
-                board,
+                board
             );
         }
         return board;

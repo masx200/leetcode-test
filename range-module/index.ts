@@ -30,7 +30,7 @@ export default class RangeModule {
     #root: SegmentTree = SegmentTree(
         Number.MIN_SAFE_INTEGER,
         Number.MAX_SAFE_INTEGER,
-        0,
+        0
     );
 
     addRange(left: number, right: number): void {
@@ -73,7 +73,7 @@ export default class RangeModule {
             }
             if (
                 node.children.every(
-                    (child) => child.children.length === 0 && child.value === 0,
+                    (child) => child.children.length === 0 && child.value === 0
                 )
             ) {
                 node.children.length = 0;

@@ -2,7 +2,7 @@ import { TreeNode } from "../binary-tree-inorder-traversal/TreeNode.ts";
 
 export default function hasPathSum(
     root: TreeNode | null,
-    targetSum: number,
+    targetSum: number
 ): boolean {
     if (!root) {
         return false;

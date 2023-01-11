@@ -1,7 +1,7 @@
 export default function shortestDistance(
     words: string[],
     word1: string,
-    word2: string,
+    word2: string
 ): number {
     let posA = -1;
     let posB = -1;

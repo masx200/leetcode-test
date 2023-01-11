@@ -2,7 +2,7 @@ import { TreeNode } from "../binary-tree-inorder-traversal/TreeNode.ts";
 
 function inorderSuccessor(
     root: TreeNode | null,
-    p: TreeNode | null,
+    p: TreeNode | null
 ): TreeNode | null {
     if (!root) {
         return null;

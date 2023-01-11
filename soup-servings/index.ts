@@ -23,7 +23,7 @@ export default function soupServings(n: number): number {
                     dfs(a - 1, b - 3))
             );
         },
-        (a: number, b: number) => JSON.stringify([a, b]),
+        (a: number, b: number) => JSON.stringify([a, b])
     );
     return dfs(n, n);
 }

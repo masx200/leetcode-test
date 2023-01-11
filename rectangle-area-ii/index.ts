@@ -37,17 +37,19 @@ function change(node: SegmentNode, target: Interval, value: bigint) {
         }
     } else {
         if (node.children.length === 0) {
-            const midx = [target.left, target.right].filter(
-                (a) => current.left < a && current.right > a,
-            )[0] ?? current.right;
-            const midy = [target.down, target.up].filter(
-                (a) => current.down < a && current.up > a,
-            )[0] ?? current.up;
+            const midx =
+                [target.left, target.right].filter(
+                    (a) => current.left < a && current.right > a
+                )[0] ?? current.right;
+            const midy =
+                [target.down, target.up].filter(
+                    (a) => current.down < a && current.up > a
+                )[0] ?? current.up;
             const subinterval = TwoDSplit(current, midx, midy);
 
             if (subinterval.length) {
                 node.children = subinterval.map(
-                    (c) => new SegmentNode(c, area(c) * BigInt(node.value > 0)),
+                    (c) => new SegmentNode(c, area(c) * BigInt(node.value > 0))
                 );
             }
         }
@@ -78,7 +80,7 @@ export function contains(target: Interval, current: Interval): boolean {
 export function TwoDSplit(
     current: Interval,
     midx: number,
-    midy: number,
+    midy: number
 ): Interval[] {
     const { left, right, up, down } = current;
 
@@ -112,14 +114,14 @@ export function TwoDSplit(
                 down === current.down &&
                 up === current.up &&
                 right === current.right
-            ),
+            )
     );
 }
 export class SegmentNode {
     constructor(
         public interval: Interval = new Interval(),
         public value: bigint = 0n,
-        public children: SegmentNode[] = [],
+        public children: SegmentNode[] = []
     ) {}
 }
 export class Interval {
@@ -127,7 +129,7 @@ export class Interval {
         public left = 0,
         public right = 0,
         public down = 0,
-        public up = 0,
+        public up = 0
     ) {}
 }
 

@@ -5,7 +5,7 @@ export default function pathSum(root: TreeNode | null, sum: number): number {
         root: TreeNode | null,
         prefix: Map<number, number>,
         curr: number,
-        sum: number,
+        sum: number
     ) {
         if (root == null) {
             return 0;

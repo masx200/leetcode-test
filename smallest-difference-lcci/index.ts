@@ -10,8 +10,8 @@ export default function smallestDifference(a: number[], b: number[]): number {
                     p,
                     i === 0 || v[1] === a[i - 1][1]
                         ? 2147483647
-                        : Math.abs(v[0] - a[i - 1][0]),
+                        : Math.abs(v[0] - a[i - 1][0])
                 ),
-            2147483647,
+            2147483647
         );
 }

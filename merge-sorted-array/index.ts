@@ -2,7 +2,7 @@ export default function merge(
     nums1: number[],
     m: number,
     nums2: number[],
-    n: number,
+    n: number
 ): void {
     if (n === 0) {
         return;

@@ -4,7 +4,7 @@ export default function originalDigits(str: string): string {
     const cnt = counter(str);
     const [z, o, w, u, r, x, s, v, t, n] = Array.prototype.map.call(
         "zowurxsvtn",
-        (v) => cnt.get(v) ?? 0,
+        (v) => cnt.get(v) ?? 0
     ) as number[];
     return [
         z,

@@ -1,6 +1,6 @@
 export default function containsNearbyDuplicate(
     nums: number[],
-    k: number,
+    k: number
 ): boolean {
     const map: Map<number, number> = new Map();
     return nums.some((num, index) => {

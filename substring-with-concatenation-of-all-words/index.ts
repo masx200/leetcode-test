@@ -32,7 +32,7 @@ export default function findSubstring(s: string, words: string[]): number[] {
                     }
                 }
                 return true;
-            },
+            }
             // equal(
             //     cnts,
             //     counter(

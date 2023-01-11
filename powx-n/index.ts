@@ -17,20 +17,21 @@ export default function myPow(x: number, n: number): number {
     if (n === -Infinity) {
         return x === 0 ? Infinity : 0;
     }
-    const result = n === 1
-        ? x
-        : x < 0
-        ? (n % 2 === 0 ? 1 : -1) * myPow(-x, n)
-        : x === 1
-        ? 1
-        : x === 0
-        ? 0
-        : n === 0
-        ? 1
-        : n < 0
-        ? myPow(1 / x, -n)
-        : n % 2
-        ? x * myPow(x, n - 1)
-        : myPow(x * x, Math.floor(n / 2));
+    const result =
+        n === 1
+            ? x
+            : x < 0
+            ? (n % 2 === 0 ? 1 : -1) * myPow(-x, n)
+            : x === 1
+            ? 1
+            : x === 0
+            ? 0
+            : n === 0
+            ? 1
+            : n < 0
+            ? myPow(1 / x, -n)
+            : n % 2
+            ? x * myPow(x, n - 1)
+            : myPow(x * x, Math.floor(n / 2));
     return result;
 }

@@ -23,15 +23,21 @@ export default function movesToChessboard(board: number[][]): number {
     const rowDiff = board.reduce((a, v, i) => a + Number(v[0] == i % 2), 0);
     const colDiff = board.reduce(
         (a, _v, i) => a + Number(board[0][i] == i % 2),
-        0,
+        0
     );
 
-    const rD = n % 2
-        ? rowDiff % 2 ? n - rowDiff : rowDiff
-        : Math.min(n - rowDiff, rowDiff);
+    const rD =
+        n % 2
+            ? rowDiff % 2
+                ? n - rowDiff
+                : rowDiff
+            : Math.min(n - rowDiff, rowDiff);
 
-    const cD = n % 2
-        ? colDiff % 2 ? n - colDiff : colDiff
-        : Math.min(n - colDiff, colDiff);
+    const cD =
+        n % 2
+            ? colDiff % 2
+                ? n - colDiff
+                : colDiff
+            : Math.min(n - colDiff, colDiff);
     return Math.floor((rD + cD) / 2);
 }

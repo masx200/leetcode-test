@@ -1,7 +1,7 @@
 import { TreeNode } from "../binary-tree-inorder-traversal/TreeNode.ts";
 
 export default function recoverFromPreorder(
-    traversal: string,
+    traversal: string
 ): TreeNode | null {
     const depth_to_tree = new Map<number, TreeNode>();
     for (const [depth, value] of parse(traversal)) {

@@ -2,7 +2,7 @@ export default function colorBorder(
     grid: number[][],
     row: number,
     col: number,
-    color: number,
+    color: number
 ): number[][] {
     const m = grid.length,
         n = grid[0].length;

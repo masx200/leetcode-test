@@ -1,6 +1,6 @@
 export default function maxConsecutiveAnswers(
     answerKey: string,
-    k: number,
+    k: number
 ): number {
     let countF = 0; // 当前窗口内F的数量
     let countT = 0; // 当前窗口内T的数量

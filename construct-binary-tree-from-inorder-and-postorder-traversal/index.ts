@@ -2,7 +2,7 @@ import { TreeNode } from "../binary-tree-inorder-traversal/TreeNode.ts";
 
 export default function buildTree(
     inorder: number[],
-    postorder: number[],
+    postorder: number[]
 ): TreeNode | null {
     if (inorder.length === 0) return null;
     let post_idx = postorder.length - 1;

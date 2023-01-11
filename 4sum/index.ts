@@ -12,8 +12,8 @@ function fourSum(nums: number[], target: number): number[][] {
             let left: number = j + 1;
             let right: number = nums.length - 1;
             while (left < right) {
-                const res: number = nums[i] + nums[j] + nums[left] +
-                    nums[right];
+                const res: number =
+                    nums[i] + nums[j] + nums[left] + nums[right];
                 if (res > target) {
                     right--;
                 } else if (res < target) {

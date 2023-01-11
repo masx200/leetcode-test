@@ -4,7 +4,7 @@ import { lowerBound } from "../number-of-pairs-satisfying-inequality/lowerBound.
 
 export default function getNumber(
     root: TreeNode | null,
-    ops: number[][],
+    ops: number[][]
 ): number {
     const sorted = inorderTraversal(root);
     let ans = 0;

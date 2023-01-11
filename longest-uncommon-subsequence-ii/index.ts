@@ -13,7 +13,7 @@ export default function findLUSlength(strs: string[]): number {
 
                 return check;
             })
-            .map((str) => str.length),
+            .map((str) => str.length)
     );
 }
 

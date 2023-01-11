@@ -29,8 +29,8 @@ export default function widthOfBinaryTree(root: TreeNode | null): number {
                 Number(
                     1n +
                         bigintMax(...latest.keys()) -
-                        bigintMin(...latest.keys()),
-                ),
+                        bigintMin(...latest.keys())
+                )
             );
         } else break;
     }

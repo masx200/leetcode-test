@@ -1,6 +1,6 @@
 export default function alertNames(
     keyName: string[],
-    keyTime: string[],
+    keyTime: string[]
 ): string[] {
     const map = new Map<string, number[]>();
 
@@ -21,7 +21,7 @@ export default function alertNames(
                 v.length >= 3 &&
                 v
                     .sort((a, b) => a - b)
-                    .some((n, i, a) => i + 2 < a.length && 60 >= a[i + 2] - n),
+                    .some((n, i, a) => i + 2 < a.length && 60 >= a[i + 2] - n)
         )
         .map((a) => a[0])
         .sort();

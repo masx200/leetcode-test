@@ -2,7 +2,7 @@ export default function floodFill(
     image: number[][],
     sr: number,
     sc: number,
-    newColor: number,
+    newColor: number
 ): number[][] {
     if (newColor === image[sr][sc]) return image;
     const currColor = image[sr][sc];
@@ -20,7 +20,7 @@ function dfs(
     sr: number,
     sc: number,
     oldColor: number,
-    newColor: number,
+    newColor: number
 ) {
     const row = image.length;
     const col = image[0].length;

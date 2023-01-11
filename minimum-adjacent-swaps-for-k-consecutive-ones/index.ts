@@ -17,7 +17,7 @@ function minMoves(nums: number[], k: number): number {
             res,
             (1 - (k % 2)) * r +
                 (preSum[i + k] - preSum[mid + 1]) -
-                (preSum[mid] - preSum[i]),
+                (preSum[mid] - preSum[i])
         );
     }
     return res;

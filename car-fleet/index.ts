@@ -1,7 +1,7 @@
 export default function carFleet(
     target: number,
     position: number[],
-    speed: number[],
+    speed: number[]
 ): number {
     const n = position.length;
     const cars = position.map((v, i) => [v, (target - v) / speed[i]]);

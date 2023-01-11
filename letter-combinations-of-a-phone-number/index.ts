@@ -16,17 +16,18 @@ export default function letterCombinations(digits: string): string[] {
             (
                 //@ts-ignore
                 p,
-                c, //@ts-ignore
-            ) => p
-                .map(
-                    (v) =>
-                        //@ts-ignore
-                        KEY_MAP[c] //@ts-ignore
-                            .map((q) => /*@ts-ignore*/ v + q) //@ts-ignore
-                            .flat(Infinity) as string[], //@ts-ignore
-                ) //@ts-ignore
-                .flat(Infinity) as string[],
-            [""], //@ts-ignore
+                c //@ts-ignore
+            ) =>
+                p
+                    .map(
+                        (v) =>
+                            //@ts-ignore
+                            KEY_MAP[c] //@ts-ignore
+                                .map((q) => /*@ts-ignore*/ v + q) //@ts-ignore
+                                .flat(Infinity) as string[] //@ts-ignore
+                    ) //@ts-ignore
+                    .flat(Infinity) as string[],
+            [""] //@ts-ignore
         ) //@ts-ignore
         .flat(Infinity) as string[];
 }

@@ -1,6 +1,6 @@
 export default function combinationSum(
     candidates: number[],
-    target: number,
+    target: number
 ): number[][] {
     candidates.sort((a, b) => -b + a);
     const ans: number[][] = [];
@@ -12,7 +12,7 @@ function dfs(
     candidates: number[],
     target: number,
     path: number[],
-    output: (path: number[]) => void,
+    output: (path: number[]) => void
 ) {
     if (target === 0) {
         output(path);
@@ -25,7 +25,7 @@ function dfs(
                 index ? candidates.slice(index) : candidates,
                 target - can,
                 [...path, can],
-                output,
+                output
             );
         } else {
             return;

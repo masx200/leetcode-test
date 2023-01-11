@@ -1,7 +1,8 @@
 import { rand7 } from "./rand7.ts";
 
 export default function rand10(): number {
-    const a = rand7() -
+    const a =
+        rand7() -
         1 +
         7 * (rand7() - 1) +
         (rand7() - 1) * 7 * 7 +

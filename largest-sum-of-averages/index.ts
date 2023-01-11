@@ -17,12 +17,12 @@ function largestSumOfAverages(nums: number[], k: number): number {
             for (let i = k - 1; i < n; i++) {
                 ans = Math.max(
                     ans,
-                    dfs(i, k - 1) + (presum[n] - presum[i]) / (n - i),
+                    dfs(i, k - 1) + (presum[n] - presum[i]) / (n - i)
                 );
             }
             return ans;
         },
-        (n: number, k: number): string => JSON.stringify([n, k]),
+        (n: number, k: number): string => JSON.stringify([n, k])
     );
     return dfs(n, k);
 }

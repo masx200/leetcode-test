@@ -1,7 +1,7 @@
 export default function divideString(
     s: string,
     k: number,
-    fill: string,
+    fill: string
 ): string[] {
     const str = s.length % k ? s.padEnd(Math.ceil(s.length / k) * k, fill) : s;
 

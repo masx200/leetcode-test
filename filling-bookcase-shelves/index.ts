@@ -1,6 +1,6 @@
 export default function minHeightShelves(
     books: number[][],
-    shelfWidth: number,
+    shelfWidth: number
 ): number {
     const dp = Array(books.length + 1).fill(Infinity);
     dp[0] = 0;

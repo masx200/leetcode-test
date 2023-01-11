@@ -3,7 +3,7 @@ import { ListNode } from "../reverse-linked-list/ListNode.ts";
 
 export default function splitListToParts(
     head: ListNode | null,
-    k: number,
+    k: number
 ): Array<ListNode | null> {
     if (!head || k === 0) {
         return Array(k).fill(null);

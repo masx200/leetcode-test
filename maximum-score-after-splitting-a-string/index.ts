@@ -12,6 +12,6 @@ export default function maxScore(s: string): number {
     return Math.max(
         ...Array(s.length - 1)
             .fill(0)
-            .map((_, i) => prefixSum[i + 1] + suffixSum[i + 1]),
+            .map((_, i) => prefixSum[i + 1] + suffixSum[i + 1])
     );
 }

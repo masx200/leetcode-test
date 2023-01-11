@@ -1,7 +1,7 @@
 export default function validateBinaryTreeNodes(
     n: number,
     leftChild: number[],
-    rightChild: number[],
+    rightChild: number[]
 ): boolean {
     const degree = Array(n).fill(0);
     for (const i of leftChild) {

@@ -1,6 +1,6 @@
 export default function nextGreatestLetter(
     letters: string[],
-    target: string,
+    target: string
 ): string {
     const length = letters.length;
     if (target >= letters[length - 1]) {
