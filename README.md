@@ -49,6 +49,8 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode-cn.com/problems/rearrange-characters-to-make-target-string/
+
 https://leetcode-cn.com/problems/assign-cookies/
 
 https://leetcode-cn.com/problems/evaluate-the-bracket-pairs-of-a-string/
