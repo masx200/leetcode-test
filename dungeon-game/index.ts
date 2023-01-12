@@ -11,7 +11,7 @@ export default function calculateMinimumHP(dungeon: number[][]): number {
         for (let j = n - 1; j >= 0; j--) {
             dp[i][j] = Math.max(
                 1,
-                Math.min(dp[i][j + 1], dp[i + 1][j]) - dungeon[i][j]
+                Math.min(dp[i][j + 1], dp[i + 1][j]) - dungeon[i][j],
             );
         }
     }

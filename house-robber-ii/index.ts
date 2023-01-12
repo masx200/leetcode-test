@@ -7,7 +7,7 @@ function rob(nums: number[]): number {
     }
     return Math.max(
         robRange(nums, 0, length - 2),
-        robRange(nums, 1, length - 1)
+        robRange(nums, 1, length - 1),
     );
 }
 

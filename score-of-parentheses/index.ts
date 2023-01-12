@@ -6,8 +6,8 @@ function scoreOfParentheses(s: string): number {
                 `[${s}]`
                     .replaceAll(")(", "],[")
                     .replaceAll("(", "[")
-                    .replaceAll(")", "]")
-            )
+                    .replaceAll(")", "]"),
+            ),
         ) / 2
     );
 }

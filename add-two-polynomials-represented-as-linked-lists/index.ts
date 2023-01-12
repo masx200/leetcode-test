@@ -2,7 +2,7 @@ import { PolyNode } from "./PolyNode.ts";
 
 export default function addPoly(
     poly1: PolyNode | null,
-    poly2: PolyNode | null
+    poly2: PolyNode | null,
 ): PolyNode | null {
     const dummy = new PolyNode();
     let node = dummy;

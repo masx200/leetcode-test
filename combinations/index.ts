@@ -37,7 +37,7 @@ function dfs(
     n: number,
     k: number,
     temp: number[],
-    output: (nums: number[]) => void
+    output: (nums: number[]) => void,
 ) {
     if (temp.length > k) {
         return;

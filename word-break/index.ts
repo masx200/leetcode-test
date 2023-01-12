@@ -8,7 +8,7 @@ function wordBreak(s: string, wordDict: string[]): boolean {
 
     const set = new Set(wordDict);
     const lens = Array.from(new Set(wordDict.map((a) => a.length))).sort(
-        (a, b) => a - b
+        (a, b) => a - b,
     );
 
     const cached = new Map<string, boolean>();

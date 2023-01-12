@@ -9,7 +9,7 @@ export default function parseBoolExpr(expression: string): boolean {
             expression.replace(/(\!|\&|\|)/g, (a) => {
                 const value = translator.get(a);
                 return value ?? a;
-            })
+            }),
     )(true, false, not, and, or);
 }
 const translator = new Map<string, string>([

@@ -1,6 +1,6 @@
 export default function addNegabinary(
     arr1: number[],
-    arr2: number[]
+    arr2: number[],
 ): number[] {
     const len = Math.max(arr1.length, arr2.length);
     arr1 = arr1.reverse();

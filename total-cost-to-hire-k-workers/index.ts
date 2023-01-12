@@ -2,7 +2,7 @@ const compare = (a: number, b: number): number => a - b;
 export default function totalCost(
     costs: number[],
     k: number,
-    candidates: number
+    candidates: number,
 ): number {
     const n = costs.length;
     let ans = 0;

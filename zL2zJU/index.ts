@@ -1,6 +1,6 @@
 export default function observingPeriodicity(
     record: number[],
-    robot: number[]
+    robot: number[],
 ): number[] {
     const n = robot.length;
     const res: number[] = Array(n).fill(0);
@@ -12,7 +12,7 @@ function backtrack(
     robotIndex: number,
     record: number[],
     robot: number[],
-    res: number[]
+    res: number[],
 ): boolean {
     const n = robot.length;
     const m = record.length;
@@ -22,7 +22,8 @@ function backtrack(
 
     const maxPeriod = m - robot[robotIndex];
 
-    loop: for (let i = 1; i <= maxPeriod; i++) {
+    loop:
+    for (let i = 1; i <= maxPeriod; i++) {
         for (let j = robot[robotIndex]; j < m; j += i) {
             if (record[j] === 0) continue loop;
         }

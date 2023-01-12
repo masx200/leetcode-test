@@ -1,6 +1,6 @@
 export default function getKthFromEnd(
     head: ListNode | null,
-    k: number
+    k: number,
 ): ListNode | null {
     if (!head) return head;
     if (!head.next) return head;

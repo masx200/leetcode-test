@@ -5,7 +5,7 @@ export default ParkingSystem;
 function ParkingSystem(
     big: number,
     medium: number,
-    small: number
+    small: number,
 ): ParkingSystem {
     const park = new Map<number, number>();
     park.set(1, big);

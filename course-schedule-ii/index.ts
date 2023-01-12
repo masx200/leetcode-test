@@ -1,6 +1,6 @@
 export default function findOrder(
     numCourses: number,
-    prerequisites: number[][]
+    prerequisites: number[][],
 ): number[] {
     const dependents: number[][] = new Array(numCourses).fill(0).map(() => []);
     const indegress: number[] = new Array(numCourses).fill(0);

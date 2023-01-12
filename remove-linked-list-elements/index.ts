@@ -2,7 +2,7 @@ import { ListNode } from "../reverse-linked-list/ListNode.ts";
 
 export default function removeElements(
     head: ListNode | null,
-    val: number
+    val: number,
 ): ListNode | null {
     if (!head) {
         return head;

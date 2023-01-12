@@ -4,7 +4,7 @@ import { merge_sort } from "./merge_sort.ts";
 
 export default function getAllElements(
     root1: TreeNode | null,
-    root2: TreeNode | null
+    root2: TreeNode | null,
 ): number[] {
     const nums1: number[] = [];
     const nums2: number[] = [];

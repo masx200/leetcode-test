@@ -2,7 +2,7 @@ function minCostConnectPoints(points: number[][]): number {
     const p0 = points[0];
 
     const ds: Map<number, number> = new Map(
-        points.map((p, i) => [i, 曼哈顿距离(p, p0)])
+        points.map((p, i) => [i, 曼哈顿距离(p, p0)]),
     );
     ds.delete(0);
     let ans = 0;

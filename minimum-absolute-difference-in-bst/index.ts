@@ -5,6 +5,6 @@ export default function getMinimumDifference(root: TreeNode | null): number {
     const nums = inorderTraversal(root);
 
     return Math.min(
-        ...nums.map((v, i, a) => Math.abs((a[i + 1] ?? Infinity) - v))
+        ...nums.map((v, i, a) => Math.abs((a[i + 1] ?? Infinity) - v)),
     );
 }

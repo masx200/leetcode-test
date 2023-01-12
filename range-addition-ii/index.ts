@@ -1,7 +1,7 @@
 export default function maxCount(
     m: number,
     n: number,
-    ops: number[][]
+    ops: number[][],
 ): number {
     return ops
         .reduce(([a, b], [v, d]) => [Math.min(a, v), Math.min(b, d)], [m, n])

@@ -1,7 +1,7 @@
 export default function Solution(
     radius: number,
     x_center: number,
-    y_center: number
+    y_center: number,
 ) {
     return {
         randPoint(): number[] {

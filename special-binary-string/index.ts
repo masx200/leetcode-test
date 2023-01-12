@@ -4,7 +4,7 @@ export default function makeLargestSpecial(s: string): string {
         cur += s[i] === "1" ? 1 : -1;
         if (cur == 0) {
             candidates.push(
-                "1" + makeLargestSpecial(s.substring(last + 1, i)) + "0"
+                "1" + makeLargestSpecial(s.substring(last + 1, i)) + "0",
             );
             last = i + 1;
         }

@@ -4,7 +4,7 @@ import { searchSegmentLeaf } from "./searchSegmentLeaf.ts";
 export default class MyCalendarTwo {
     #root: SegmentTree = SegmentTree(
         Number.MIN_SAFE_INTEGER,
-        Number.MAX_SAFE_INTEGER
+        Number.MAX_SAFE_INTEGER,
     );
     // #result = 0;
 

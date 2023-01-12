@@ -1,7 +1,7 @@
 export default function containsNearbyAlmostDuplicate(
     nums: number[],
     k: number,
-    t: number
+    t: number,
 ): boolean {
     //要查找值<=t则桶的大小为t+1,这样一个桶内的最小值是x,最大值是x+t,桶的大小是t+1
     const bucket = t + 1;

@@ -6,7 +6,7 @@ function findWords(board: string[][], words: string[]): string[] {
 
     if (board.length === 1 && board[0].length === 1) {
         return words.filter(
-            (word) => word.length === 1 && word === board[0][0]
+            (word) => word.length === 1 && word === board[0][0],
         );
     }
     if (words.length === 0) return [];
@@ -68,7 +68,7 @@ function dfs(
     col: number,
     prefix: string,
     now: PrefixTree,
-    result: Set<string>
+    result: Set<string>,
 ) {
     const node = now.children.get(board[i][j]);
     if (!node) return;

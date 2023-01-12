@@ -1,6 +1,7 @@
 function minDistance(word1: string, word2: string): number {
-    const dp: number[][] = Array.from(Array(word1.length + 1), () =>
-        Array(word2.length + 1).fill(0)
+    const dp: number[][] = Array.from(
+        Array(word1.length + 1),
+        () => Array(word2.length + 1).fill(0),
     );
 
     for (let i = 1; i <= word1.length; i++) {
@@ -19,7 +20,7 @@ function minDistance(word1: string, word2: string): number {
                 dp[i][j] = Math.min(
                     dp[i - 1][j] + 1,
                     dp[i][j - 1] + 1,
-                    dp[i - 1][j - 1] + 1
+                    dp[i - 1][j - 1] + 1,
                 );
             }
         }

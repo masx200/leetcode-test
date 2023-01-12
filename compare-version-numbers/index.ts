@@ -1,6 +1,6 @@
 export default function compareVersion(
     version1: string,
-    version2: string
+    version2: string,
 ): number {
     const a = version1.split(".").map(Number);
 

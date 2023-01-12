@@ -18,9 +18,11 @@ export default function findCircleNum(isConnected: number[][]): number {
         }
         cache.add(i);
 
-        for (const [j] of [...isConnected[i].entries()].filter(
-            ([j, v]) => v === 1 && i !== j
-        )) {
+        for (
+            const [j] of [...isConnected[i].entries()].filter(
+                ([j, v]) => v === 1 && i !== j,
+            )
+        ) {
             dfs(j);
         }
     }

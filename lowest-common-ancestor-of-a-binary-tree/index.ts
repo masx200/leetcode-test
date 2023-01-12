@@ -3,7 +3,7 @@ import { TreeNode } from "../binary-tree-inorder-traversal/TreeNode.ts";
 function lowestCommonAncestor(
     root?: TreeNode | null,
     p?: TreeNode | null,
-    q?: TreeNode | null
+    q?: TreeNode | null,
 ): TreeNode | null {
     if (!root) return null;
     const visited = new WeakSet<TreeNode>();

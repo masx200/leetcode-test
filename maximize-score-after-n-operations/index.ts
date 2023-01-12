@@ -23,7 +23,7 @@ function maxScore(nums: number[]): number {
                         dp[s] = Math.max(
                             dp[s],
                             dp[s ^ (1 << i) ^ (1 << j)] +
-                                Math.floor(t / 2) * gcdTmp[i][j]
+                                Math.floor(t / 2) * gcdTmp[i][j],
                         );
                     }
                 }

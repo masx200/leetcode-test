@@ -1,6 +1,6 @@
 export default function countStudents(
     students: number[],
-    sandwiches: number[]
+    sandwiches: number[],
 ): number {
     const cnt = Object.assign([0, 0], countBy(students));
 

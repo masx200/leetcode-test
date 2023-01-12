@@ -1,13 +1,13 @@
 function kSmallestPairs(
     nums1: number[],
     nums2: number[],
-    k: number
+    k: number,
 ): number[][] {
     const res: number[][] = [];
     const m = nums1.length,
         n = nums2.length;
     const pq = new Heap<[number, number]>(
-        (a, b) => nums1[a[0]] + nums2[a[1]] - nums1[b[0]] - nums2[b[1]]
+        (a, b) => nums1[a[0]] + nums2[a[1]] - nums1[b[0]] - nums2[b[1]],
     );
     for (const i of Array(Math.min(k, m)).keys()) {
         pq.push([i, 0]);

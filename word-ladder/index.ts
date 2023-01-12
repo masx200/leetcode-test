@@ -1,7 +1,7 @@
 export default function ladderLength(
     beginWord: string,
     endWord: string,
-    wordList: string[]
+    wordList: string[],
 ): number {
     const words = new Set(wordList);
     if (!words.has(endWord)) return 0;

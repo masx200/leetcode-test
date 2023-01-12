@@ -2,7 +2,7 @@ import { ListNode } from "../reverse-linked-list/ListNode.ts";
 
 export default function getIntersectionNode(
     headA: ListNode | null,
-    headB: ListNode | null
+    headB: ListNode | null,
 ): ListNode | null {
     if (!headA) return null;
     if (!headB) return null;

@@ -2,7 +2,7 @@ class Node {
     constructor(
         public type: "file" | "folder" = "folder",
         public content: string = "",
-        public children: Set<string> = new Set()
+        public children: Set<string> = new Set(),
     ) {}
 }
 export { Node };

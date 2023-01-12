@@ -1,6 +1,6 @@
 export default function createTargetArray(
     nums: number[],
-    index: number[]
+    index: number[],
 ): number[] {
     const target: number[] = Array<number>();
     target.length = nums.length;

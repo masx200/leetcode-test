@@ -37,7 +37,7 @@ function dfs(
     parent: null | TreeNode,
     leaves: Set<TreeNode>,
     parents: Map<TreeNode, TreeNode | null>,
-    children: Map<TreeNode, number>
+    children: Map<TreeNode, number>,
 ) {
     if (!root) return;
     if (!root.left && !root.right) {

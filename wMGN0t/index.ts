@@ -1,7 +1,7 @@
 function storedEnergy(
     storeLimit: number,
     power: number[],
-    supply: number[][]
+    supply: number[][],
 ): number {
     const { min, max } = Math;
     let sum = 0;
