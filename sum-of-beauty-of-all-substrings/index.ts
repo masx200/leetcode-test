@@ -7,7 +7,7 @@ function beautySum(s: string): number {
             cnt[s[j].charCodeAt(0) - "a".charCodeAt(0)]++;
             maxFreq = Math.max(
                 maxFreq,
-                cnt[s[j].charCodeAt(0) - "a".charCodeAt(0)]
+                cnt[s[j].charCodeAt(0) - "a".charCodeAt(0)],
             );
             let minFreq = s.length;
             for (let k = 0; k < 26; k++) {

@@ -1,6 +1,6 @@
 export default function countBalls(
     lowLimit: number,
-    highLimit: number
+    highLimit: number,
 ): number {
     const cnt = new Map<number, number>();
     for (let index = lowLimit; index <= highLimit; index++) {

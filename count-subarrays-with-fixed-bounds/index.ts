@@ -1,7 +1,7 @@
 export default function countSubarrays(
     nums: number[],
     minK: number,
-    maxK: number
+    maxK: number,
 ): number {
     let ans = 0;
     const n = nums.length;

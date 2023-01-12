@@ -1,7 +1,7 @@
 export default function findMissingRanges(
     nums: number[],
     lower: number,
-    upper: number
+    upper: number,
 ): string[] {
     const ans: string[] = [];
     nums.push(upper + 1);

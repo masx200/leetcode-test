@@ -1,6 +1,6 @@
 export default function threeSumClosest(
     nums: number[],
-    target: number
+    target: number,
 ): number {
     const N = nums.length;
     let res = Number.MAX_SAFE_INTEGER;

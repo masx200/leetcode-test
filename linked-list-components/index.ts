@@ -2,7 +2,7 @@ import { ListNode } from "../reverse-linked-list/ListNode.ts";
 
 export default function numComponents(
     head: ListNode | null,
-    nums: number[]
+    nums: number[],
 ): number {
     const numsSet = new Set<number>();
     for (const num of nums) {

@@ -24,7 +24,7 @@ function maximumANDSum(nums: number[], numSlots: number): number {
             if (filled(state, j) >= 1) {
                 dp[i][state] = max(
                     dp[i][state],
-                    dp[i - 1][state - pow(3, j)] + (nums[i] & (j + 1))
+                    dp[i - 1][state - pow(3, j)] + (nums[i] & (j + 1)),
                 );
             }
         }

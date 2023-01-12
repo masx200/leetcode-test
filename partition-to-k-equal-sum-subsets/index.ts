@@ -1,6 +1,6 @@
 export default function canPartitionKSubsets(
     nums: number[],
-    k: number
+    k: number,
 ): boolean {
     const sum = nums.reduce((a, v) => a + v, 0);
     if (sum % k != 0) return false;

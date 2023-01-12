@@ -22,13 +22,13 @@ function countEval(s: string, result: number): number {
                 const right0 = dp[j + 1][i + step][0],
                     right1 = dp[j + 1][i + step][1];
                 if (s[j] == "&") {
-                    dp[i][i + step][0] +=
-                        left0 * (right0 + right1) + left1 * right0;
+                    dp[i][i + step][0] += left0 * (right0 + right1) +
+                        left1 * right0;
                     dp[i][i + step][1] += left1 * right1;
                 } else if (s[j] == "|") {
                     dp[i][i + step][0] += left0 * right0;
-                    dp[i][i + step][1] +=
-                        left0 * right1 + left1 * (right0 + right1);
+                    dp[i][i + step][1] += left0 * right1 +
+                        left1 * (right0 + right1);
                 } else {
                     //s[j]=='^'
                     dp[i][i + step][0] += left0 * right0 + left1 * right1;

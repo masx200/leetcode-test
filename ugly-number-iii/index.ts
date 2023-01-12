@@ -2,7 +2,7 @@ export default function nthUglyNumber(
     n: number,
     a: number,
     b: number,
-    c: number
+    c: number,
 ): number {
     return Number(nthUglyBigInt(BigInt(n), BigInt(a), BigInt(b), BigInt(c)));
 }
@@ -10,7 +10,7 @@ export function nthUglyBigInt(
     n: bigint,
     a: bigint,
     b: bigint,
-    c: bigint
+    c: bigint,
 ): bigint {
     // 先将数值转换为 BigInt 类型
     (a = BigInt(a)), (b = BigInt(b)), (c = BigInt(c)), (n = BigInt(n));
@@ -33,8 +33,7 @@ export function nthUglyBigInt(
     // 二分查找丑数
     while (l < r) {
         const mid = l + (r - l) / 2n;
-        const count =
-            mid / a +
+        const count = mid / a +
             mid / b +
             mid / c -
             mid / a_b -

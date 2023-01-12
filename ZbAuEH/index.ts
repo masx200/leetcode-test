@@ -23,7 +23,7 @@ function getMaximumNumber(moles: number[][]): number {
         for (let cnt = 0, j = i - 1; cnt < 10 && j >= 0; j--, cnt++) {
             if (
                 Math.abs(x - moles[j][1]) + Math.abs(y - moles[j][2]) <=
-                t - moles[j][0]
+                    t - moles[j][0]
             ) {
                 dp[i][1] = Math.max(dp[i][1], dp[j][1] + 1);
             }

@@ -3,8 +3,9 @@ function maxProfit(k: number, prices: number[]): number {
         return 0;
     }
 
-    const dp: number[][] = Array.from(Array(prices.length), () =>
-        Array(2 * k + 1).fill(0)
+    const dp: number[][] = Array.from(
+        Array(prices.length),
+        () => Array(2 * k + 1).fill(0),
     );
 
     for (let j = 1; j < 2 * k; j += 2) {
@@ -16,7 +17,7 @@ function maxProfit(k: number, prices: number[]): number {
             dp[i][j + 1] = Math.max(dp[i - 1][j + 1], dp[i - 1][j] - prices[i]);
             dp[i][j + 2] = Math.max(
                 dp[i - 1][j + 2],
-                dp[i - 1][j + 1] + prices[i]
+                dp[i - 1][j + 1] + prices[i],
             );
         }
     }

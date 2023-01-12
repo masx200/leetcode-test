@@ -7,7 +7,8 @@ export default function shortestBridge(grid: number[][]): number {
     ];
 
     let firstIsland: [number, number][] = [];
-    loop: for (const [i, a] of grid.entries()) {
+    loop:
+    for (const [i, a] of grid.entries()) {
         for (const [j, v] of a.entries()) {
             if (v === 1) {
                 firstIsland.push([i, j]);

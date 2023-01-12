@@ -4,7 +4,7 @@ import { SegmentTree } from "./SegmentTree.ts";
 export default class MyCalendarThree {
     #root: SegmentTree = SegmentTree(
         Number.MIN_SAFE_INTEGER,
-        Number.MAX_SAFE_INTEGER
+        Number.MAX_SAFE_INTEGER,
     );
     #result = 0;
 

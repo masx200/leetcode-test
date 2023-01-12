@@ -1,7 +1,6 @@
 function rearrangeCharacters(s: string, target: string): number {
-
-    const sCounts = new Map<string,number>();
-    const targetCounts = new Map<string,number>();
+    const sCounts = new Map<string, number>();
+    const targetCounts = new Map<string, number>();
     const n = s.length, m = target.length;
     for (let i = 0; i < m; i++) {
         const c = target[i];
@@ -15,7 +14,7 @@ function rearrangeCharacters(s: string, target: string): number {
     }
     let ans = Number.MAX_VALUE;
     for (const [c, count] of targetCounts) {
-        const totalCount =( sCounts.has(c) ? sCounts.get(c) : 0)??0;
+        const totalCount = (sCounts.has(c) ? sCounts.get(c) : 0) ?? 0;
         ans = Math.min(ans, Math.floor(totalCount / count));
         if (ans === 0) {
             return 0;
@@ -23,4 +22,4 @@ function rearrangeCharacters(s: string, target: string): number {
     }
     return ans;
 }
-export default rearrangeCharacters
+export default rearrangeCharacters;

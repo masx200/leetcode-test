@@ -18,9 +18,7 @@ function findRedundantDirectedConnection(edges: number[][]): number[] {
     }
 
     return confictEdge
-        ? circleEdge
-            ? [parent[confictEdge[1]], confictEdge[1]]
-            : confictEdge
+        ? circleEdge ? [parent[confictEdge[1]], confictEdge[1]] : confictEdge
         : circleEdge ?? [];
 }
 

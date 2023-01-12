@@ -1,7 +1,7 @@
 export default function calcEquation(
     equations: string[][],
     values: number[],
-    queries: string[][]
+    queries: string[][],
 ): number[] {
     const variables = new Set<string>();
 

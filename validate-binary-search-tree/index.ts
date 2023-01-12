@@ -22,7 +22,7 @@ export default function isValidBST(root: TreeNode | null): boolean {
                 }
             }
         },
-        signal
+        signal,
     );
     return result;
 }

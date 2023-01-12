@@ -1,7 +1,7 @@
 function numSubarrayBoundedMax(
     nums: number[],
     left: number,
-    right: number
+    right: number,
 ): number {
     return count(nums, right) - count(nums, left - 1);
 }

@@ -1,6 +1,6 @@
 export default function discountPrices(
     sentence: string,
-    discount: number
+    discount: number,
 ): string {
     return sentence
         .split(" ")

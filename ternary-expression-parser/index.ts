@@ -16,7 +16,7 @@ function parseTernaryReverse(expression: string): string {
                     return a === "T" ? b : c;
                 }
                 return s;
-            })
+            }),
         );
     }
     return expression;

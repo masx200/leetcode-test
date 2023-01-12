@@ -1,6 +1,6 @@
 export default function numJewelsInStones(
     jewels: string,
-    stones: string
+    stones: string,
 ): number {
     const set = new Set(jewels);
 
@@ -11,6 +11,6 @@ export default function numJewelsInStones(
         // deno-lint-ignore ban-ts-comment
         //@ts-ignore
         (a, v) => a + Number(set.has(v)),
-        0
+        0,
     );
 }
