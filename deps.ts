@@ -11,7 +11,8 @@ export { default as countBy } from "https://cdn.skypack.dev/lodash@4.17.21/count
 export { default as zip } from "https://cdn.skypack.dev/lodash@4.17.21/zip?dts";
 export { default as isEqual } from "https://cdn.skypack.dev/lodash@4.17.21/isEqual?dts";
 export { default as uniqBy } from "https://cdn.skypack.dev/lodash@4.17.21/uniqBy?dts";
-
+export { default as max } from "https://cdn.skypack.dev/lodash@4.17.21/max?dts";
+export { default as sum } from "https://cdn.skypack.dev/lodash@4.17.21/sum?dts";
 export { default as intersection } from "https://cdn.skypack.dev/lodash@4.17.21/intersection?dts";
 import { BinaryHeap } from "https://deno.land/std@0.171.0/collections/binary_heap.ts";
 export { BinaryHeap };
@@ -26,7 +27,7 @@ export {
     BinarySearchTreeNode,
 } from "npm:@datastructures-js/binary-search-tree@5.2.0";
 export { default as groupBy } from "https://cdn.skypack.dev/lodash@4.17.21/groupBy?dts";
-export { default as sum } from "https://cdn.skypack.dev/lodash@4.17.21/sum?dts";
+
 export {
     runScript,
     TreeNode,

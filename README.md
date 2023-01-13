@@ -49,6 +49,8 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode.cn/problems/number-of-different-subsequences-gcds/
+
 https://leetcode-cn.com/problems/rearrange-characters-to-make-target-string/
 
 https://leetcode-cn.com/problems/assign-cookies/
