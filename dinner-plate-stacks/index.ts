@@ -1,4 +1,4 @@
-import { ascend } from "https://deno.land/std@0.171.0/collections/binary_search_tree.ts";
+import { ascend } from "https://deno.land/std@0.172.0/collections/binary_search_tree.ts";
 
 import RedBlackTree from "./RedBlackTree.ts";
 import { reverseInOrderIterator } from "./RedBlackTree.ts";
