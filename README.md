@@ -49,6 +49,8 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode.cn/problems/min-max-game/
+
 https://leetcode-cn.com/problems/wiggle-subsequence/
 
 https://leetcode.cn/problems/number-of-different-subsequences-gcds/
