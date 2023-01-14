@@ -1,5 +1,4 @@
 function wiggleMaxLength(nums: number[]): number {
-
     const n = nums.length;
     if (n < 2) {
         return n;
@@ -15,4 +14,4 @@ function wiggleMaxLength(nums: number[]): number {
     }
     return ret;
 }
-export default wiggleMaxLength
+export default wiggleMaxLength;
