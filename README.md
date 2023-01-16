@@ -49,6 +49,8 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode-cn.com/problems/count-nice-pairs-in-an-array/
+
 https://leetcode-cn.com/problems/sentence-similarity-iii/
 
 https://leetcode.cn/problems/min-max-game/
