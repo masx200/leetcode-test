@@ -1,5 +1,5 @@
-import { RedBlackNode } from "https://deno.land/std@0.172.0/collections/red_black_node.ts";
-import { RedBlackTree } from "https://deno.land/std@0.172.0/collections/red_black_tree.ts";
+import { RedBlackNode } from "https://deno.land/std@0.173.0/collections/red_black_node.ts";
+import { RedBlackTree } from "https://deno.land/std@0.173.0/collections/red_black_tree.ts";
 
 export default class<T> extends RedBlackTree<T> {
     getRoot() {
