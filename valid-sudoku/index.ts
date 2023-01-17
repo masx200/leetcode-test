@@ -1,10 +1,4 @@
-/*
- * @lc app=leetcode.cn id=36 lang=typescript
- *
- * [36] 有效的数独
- */
 
-// @lc code=start
 export default function isValidSudoku(board: string[][]): boolean {
     const rows = new Array(9).fill(0).map(() => new Set<string>());
     const columns = new Array(9).fill(0).map(() => new Set<string>());
