@@ -1,10 +1,4 @@
-/*
- * @lc app=leetcode.cn id=46 lang=typescript
- *
- * [46] 全排列
- */
 
-// @lc code=start
 export default function permute(nums: number[]): number[][] {
     if (nums.length == 0) {
         return [];
