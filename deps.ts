@@ -31,7 +31,7 @@ export { default as groupBy } from "https://cdn.skypack.dev/lodash@4.17.21/group
 export {
     runScript,
     TreeNode,
-} from "https://esm.sh/@masx200/leetcode-class@undefined/";
+} from "https://esm.sh/@masx200/leetcode-class@1.2.7/";
 
 export type { WalkEntry } from "https://deno.land/std@0.173.0/fs/_util.ts";
 
