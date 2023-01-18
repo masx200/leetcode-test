@@ -1,4 +1,3 @@
-
 export default function permute(nums: number[]): number[][] {
     if (nums.length == 0) {
         return [];

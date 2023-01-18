@@ -1,4 +1,3 @@
-
 export default function isValidSudoku(board: string[][]): boolean {
     const rows = new Array(9).fill(0).map(() => new Set<string>());
     const columns = new Array(9).fill(0).map(() => new Set<string>());
