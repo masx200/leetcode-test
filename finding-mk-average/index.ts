@@ -72,9 +72,10 @@ class MKAverage {
                 if ((this.m2.get(value) ?? 0) === 0) this.s2.insertGetNode(max);
                 this.m2.set(value, (this.m2.get(value) ?? 0) + 1);
                 this.sum += max;
+
+                this.m1.set(max, (this.m1.get(max) ?? 0) - 1);
                 if ((this.m1.get(max) ?? 0) === 0)
                     this.s1.removeTreeNode(maxNode);
-                this.m1.set(max, (this.m1.get(max) ?? 0) - 1);
             } else {
                 const minNode = this.s3
                     .getRoot()
@@ -90,9 +91,10 @@ class MKAverage {
                         this.s2.insertGetNode(min);
                     this.m2.set(value, (this.m2.get(value) ?? 0) + 1);
                     this.sum += min;
+
+                    this.m3.set(min, (this.m3.get(min) ?? 0) - 1);
                     if ((this.m3.get(min) ?? 0) === 0)
                         this.s3.removeTreeNode(minNode);
-                    this.m3.set(min, (this.m3.get(min) ?? 0) - 1);
                 } else {
                     this.sum += num;
                     const value = num;
@@ -105,28 +107,29 @@ class MKAverage {
             if (!first) throw Error("accident");
 
             if (this.m1.get(first) ?? 0 > 0) {
-                if ((this.m1.get(first) ?? 0) === 0) this.s1.remove(first);
                 const min = this.s2.min() ?? 0;
-                if ((this.m1.get(min) ?? 0) === 0) this.s1.insertGetNode(min);
-                this.sum -= min;
-                if ((this.m2.get(min) ?? 0) === 0) this.s2.remove(min);
                 this.m1.set(first, (this.m1.get(first) ?? 0) - 1);
                 this.m1.set(min, (this.m1.get(min) ?? 0) + 1);
                 this.m2.set(min, (this.m2.get(min) ?? 0) - 1);
+                if ((this.m1.get(first) ?? 0) === 0) this.s1.remove(first);
+
+                if ((this.m1.get(min) ?? 0) === 0) this.s1.insertGetNode(min);
+                this.sum -= min;
+                if ((this.m2.get(min) ?? 0) === 0) this.s2.remove(min);
             } else if (this.m3.get(first) ?? 0 > 0) {
-                if ((this.m3.get(first) ?? 0) === 0) this.s3.remove(first);
                 const max = this.s2.max() ?? 0;
                 if ((this.m3.get(max) ?? 0) === 0) this.s3.insertGetNode(max);
                 this.sum -= max;
-                if ((this.m2.get(max) ?? 0) === 0) this.s2.remove(max);
 
                 this.m3.set(first, (this.m3.get(first) ?? 0) - 1);
                 this.m3.set(max, (this.m3.get(max) ?? 0) + 1);
                 this.m2.set(max, (this.m2.get(max) ?? 0) - 1);
+                if ((this.m3.get(first) ?? 0) === 0) this.s3.remove(first);
+                if ((this.m2.get(max) ?? 0) === 0) this.s2.remove(max);
             } else {
+                this.m2.set(first, (this.m2.get(first) ?? 0) - 1);
                 if ((this.m2.get(first) ?? 0) === 0) this.s2.remove(first);
                 this.sum -= first;
-                this.m2.set(first, (this.m2.get(first) ?? 0) - 1);
             }
             this.queue.shift();
             this.count++;
