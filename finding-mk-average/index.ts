@@ -148,7 +148,7 @@ class MKAverage {
             const tree = first[1].tree;
             const node = first[1].node;
             tree.removeTreeNode(node);
-            this.sum -= node.value.value;
+
             if (tree === this.s1) {
                 const minNode = this.s2
                     .getRoot()
@@ -157,7 +157,7 @@ class MKAverage {
                         value: number;
                     }>;
                 this.s2.removeTreeNode(minNode);
-
+                this.sum -= minNode.value.value;
                 const newNode = tree.insertGetNode(
                     minNode.value,
                 ) as RedBlackNode<{
@@ -177,7 +177,7 @@ class MKAverage {
                         value: number;
                     }>;
                 this.s2.removeTreeNode(maxNode);
-
+                this.sum -= maxNode.value.value;
                 const newNode = tree.insertGetNode(
                     maxNode.value,
                 ) as RedBlackNode<{
@@ -189,6 +189,8 @@ class MKAverage {
                     tree: tree,
                     node: newNode,
                 });
+            } else {
+                this.sum -= node.value.value;
             }
             this.queue.delete(first[0]);
             this.count++;
@@ -197,7 +199,7 @@ class MKAverage {
 
     calculateMKAverage(): number {
         if (this.count < this.m) return -1;
-
+        // console.log(this);
         return Math.floor(this.sum / (this.m - 2 * this.k));
     }
 }
