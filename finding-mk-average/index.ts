@@ -104,7 +104,7 @@ class MKAverage {
             const first = this.queue[0];
             if (!first) throw Error("accident");
 
-            if (this.m1.get(first)) {
+            if (this.m1.get(first) ?? 0 > 0) {
                 if ((this.m1.get(first) ?? 0) === 0) this.s1.remove(first);
                 const min = this.s2.min() ?? 0;
                 if ((this.m1.get(min) ?? 0) === 0) this.s1.insertGetNode(min);
@@ -113,7 +113,7 @@ class MKAverage {
                 this.m1.set(first, (this.m1.get(first) ?? 0) - 1);
                 this.m1.set(min, (this.m1.get(min) ?? 0) + 1);
                 this.m2.set(min, (this.m2.get(min) ?? 0) - 1);
-            } else if (this.m3.get(first)) {
+            } else if (this.m3.get(first) ?? 0 > 0) {
                 if ((this.m3.get(first) ?? 0) === 0) this.s3.remove(first);
                 const max = this.s2.max() ?? 0;
                 if ((this.m3.get(max) ?? 0) === 0) this.s3.insertGetNode(max);
@@ -130,12 +130,13 @@ class MKAverage {
             }
             this.queue.shift();
             this.count++;
+            this.queue.push(num)
         }
     }
 
     calculateMKAverage(): number {
         if (this.count < this.m) return -1;
-
+        console.log(this);
         return Math.floor(this.sum / (this.m - 2 * this.k));
     }
 }
