@@ -1,5 +1,6 @@
 import MKAverage from "./index.ts";
 import { assertEquals } from "asserts";
+import { runScript } from "leetcode-class";
 
 Deno.test("finding-mk-average", () => {
     const obj = new MKAverage(3, 1);
@@ -16,4 +17,38 @@ Deno.test("finding-mk-average", () => {
     assertEquals(5, obj.calculateMKAverage()); // 最后 3 个元素为 [5,5,5]
     // 删除最小以及最大的 1 个元素后，容器为 [5]
     // [5] 的平均值等于 5/1 = 5 ，故返回 5
+});
+Deno.test("finding-mk-average", () => {
+    assertEquals(
+        runScript(
+            [
+                "MKAverage",
+                "addElement",
+                "addElement",
+                "calculateMKAverage",
+                "addElement",
+                "addElement",
+                "calculateMKAverage",
+                "addElement",
+                "addElement",
+                "calculateMKAverage",
+                "addElement",
+            ],
+            [
+                [3, 1],
+                [3716],
+                [51094],
+                [],
+                [56724],
+                [79619],
+                [],
+                [99914],
+                [277],
+                [],
+                [91205],
+            ],
+            MKAverage
+        ),
+        [null, null, null, -1, null, null, 56724, null, null, 79619, null]
+    );
 });

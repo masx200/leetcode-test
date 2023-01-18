@@ -81,10 +81,7 @@ class MKAverage {
                 if (!node) throw Error("accident");
 
                 this.queue.set(count, { tree: this.s1, node });
-                const newNode = this.s2.insertGetNode({
-                    value: max,
-                    index: maxNode.value.index,
-                }) as RedBlackNode<{
+                const newNode = this.s2.insertGetNode(maxNode.value) as RedBlackNode<{
                     index: number;
                     value: number;
                 }>;
@@ -111,10 +108,7 @@ class MKAverage {
                     if (!node) throw Error("accident");
 
                     this.queue.set(count, { tree: this.s3, node });
-                    const newNode = this.s2.insertGetNode({
-                        value: max,
-                        index: minNode.value.index,
-                    }) as RedBlackNode<{
+                    const newNode = this.s2.insertGetNode(minNode.value) as RedBlackNode<{
                         index: number;
                         value: number;
                     }>;
