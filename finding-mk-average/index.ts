@@ -40,26 +40,38 @@ class MKAverage {
                             ? a.index - b.index
                             : a.value - b.value
                     );
-
+                const ordered: Array<{
+                    tree: RedBlackTreeExtended<{
+                        index: number;
+                        value: number;
+                    }>;
+                    node: RedBlackNode<{ index: number; value: number }>;
+                }> = [];
                 for (const [i, { value, index }] of sorted.entries()) {
                     if (i < this.k) {
                         const tree = this.s1;
                         const node = tree.insertGetNode({ value, index });
                         if (!node) throw Error("accident");
-                        this.queue.set(index, { tree, node });
+                        ordered[index] = { tree, node };
+                        // this.queue.set(index, { tree, node });
                     } else if (i < this.m - this.k) {
                         const tree = this.s2;
                         const node = tree.insertGetNode({ value, index });
                         if (!node) throw Error("accident");
-                        this.queue.set(index, { tree, node });
-
+                        // this.queue.set(index, { tree, node });
+                        ordered[index] = { tree, node };
                         this.sum += value;
                     } else {
                         const tree = this.s3;
                         const node = tree.insertGetNode({ value, index });
                         if (!node) throw Error("accident");
-                        this.queue.set(index, { tree, node });
+                        // this.queue.set(index, { tree, node });
+                        ordered[index] = { tree, node };
                     }
+                }
+
+                for (const [index, value] of ordered.entries()) {
+                    this.queue.set(index, value);
                 }
                 this.pending.length = 0;
             }
