@@ -14,7 +14,13 @@ export { default as uniqBy } from "https://cdn.skypack.dev/lodash@4.17.21/uniqBy
 export { default as max } from "https://cdn.skypack.dev/lodash@4.17.21/max?dts";
 export { default as sum } from "https://cdn.skypack.dev/lodash@4.17.21/sum?dts";
 export { default as intersection } from "https://cdn.skypack.dev/lodash@4.17.21/intersection?dts";
+
+import memoize from "https://cdn.skypack.dev/lodash@4.17.21/memoize?dts";
 import { BinaryHeap } from "https://deno.land/std@0.173.0/collections/binary_heap.ts";
+import { RedBlackNode } from "https://deno.land/std@0.173.0/collections/red_black_node.ts";
+import AsyncLimiterClass, {
+    AsyncCurrentLimiter,
+} from "npm:@masx200/async-task-current-limiter@2.1.0";
 export { BinaryHeap };
 export { walk } from "https://deno.land/std@0.173.0/fs/mod.ts";
 export { parse } from "https://deno.land/std@0.173.0/flags/mod.ts";
@@ -35,11 +41,7 @@ export {
 
 export type { WalkEntry } from "https://deno.land/std@0.173.0/fs/_util.ts";
 
-import memoize from "https://cdn.skypack.dev/lodash@4.17.21/memoize?dts";
-import AsyncLimiterClass, {
-    AsyncCurrentLimiter,
-} from "npm:@masx200/async-task-current-limiter@2.1.0";
-
 export { AsyncLimiterClass };
 export type { AsyncCurrentLimiter };
 export { memoize };
+export { RedBlackNode };

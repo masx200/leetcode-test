@@ -1,27 +1,23 @@
 import { RedBlackNode } from "https://deno.land/std@0.173.0/collections/red_black_node.ts";
 import RedBlackTreeExtended from "../dinner-plate-stacks/RedBlackTree.ts";
 
-function createRedBlackTreeExtended() {
-    return new RedBlackTreeExtended<{ index: number; value: number }>((a, b) =>
-        a.value === b.value ? a.index - b.index : a.value - b.value
-    );
-}
+
 class MKAverage {
-    s1 = createRedBlackTreeExtended();
-    s2 = createRedBlackTreeExtended();
-    s3 = createRedBlackTreeExtended();
+    m1 = new Map<number, number>();
+    m2 = new Map<number, number>();
+    m3 = new Map<number, number>();
+
+    s1 = new RedBlackTreeExtended<number>((a, b) => a - b);
+
+    s2 = new RedBlackTreeExtended<number>((a, b) => a - b);
+    s3 = new RedBlackTreeExtended<number>((a, b) => a - b);
     sum = 0;
     m: number;
     k: number;
-    queue = new Map<
-        number,
-        {
-            tree: RedBlackTreeExtended<{ index: number; value: number }>;
-            node: RedBlackNode<{ index: number; value: number }>;
-        }
-    >();
+    queue = new Array<number>();
     count = 0;
     pending: number[] = [];
+
     constructor(m: number, k: number) {
         this.m = m;
         this.k = k;
@@ -33,183 +29,113 @@ class MKAverage {
             this.count++;
 
             if (this.pending.length === this.m) {
-                const sorted = this.pending
-                    .map((value, index) => ({ value, index }))
-                    .sort((a, b) =>
-                        a.value === b.value
-                            ? a.index - b.index
-                            : a.value - b.value
-                    );
-                const ordered: Array<{
-                    tree: RedBlackTreeExtended<{
-                        index: number;
-                        value: number;
-                    }>;
-                    node: RedBlackNode<{ index: number; value: number }>;
-                }> = [];
-                for (const [i, { value, index }] of sorted.entries()) {
+                this.queue.push(...this.pending);
+                const sorted = this.pending.slice().sort((a, b) => a - b);
+
+                for (const [i, value] of sorted.entries()) {
                     if (i < this.k) {
                         const tree = this.s1;
-                        const node = tree.insertGetNode({ value, index });
-                        if (!node) throw Error("accident");
-                        ordered[index] = { tree, node };
-                        // this.queue.set(index, { tree, node });
+
+                        if ((this.m1.get(value) ?? 0) === 0) {
+                            tree.insertGetNode(value);
+                        }
+                        this.m1.set(value, 1 + (this.m1.get(value) ?? 0));
                     } else if (i < this.m - this.k) {
                         const tree = this.s2;
-                        const node = tree.insertGetNode({ value, index });
-                        if (!node) throw Error("accident");
-                        // this.queue.set(index, { tree, node });
-                        ordered[index] = { tree, node };
+                        if ((this.m2.get(value) ?? 0) === 0) {
+                            tree.insertGetNode(value);
+                        }
+                        this.m2.set(value, 1 + (this.m2.get(value) ?? 0));
                         this.sum += value;
                     } else {
                         const tree = this.s3;
-                        const node = tree.insertGetNode({ value, index });
-                        if (!node) throw Error("accident");
-                        // this.queue.set(index, { tree, node });
-                        ordered[index] = { tree, node };
+                        if ((this.m3.get(value) ?? 0) === 0) {
+                            tree.insertGetNode(value);
+                        }
+                        this.m3.set(value, 1 + (this.m3.get(value) ?? 0));
                     }
                 }
 
-                for (const [index, value] of ordered.entries()) {
-                    this.queue.set(index, value);
-                }
                 this.pending.length = 0;
             }
             return;
         } else {
-            const count = this.count;
-
-            const maxNode = this.s1.getRoot()?.findMaxNode() as RedBlackNode<{
-                index: number;
-                value: number;
-            }>;
+            const maxNode = this.s1
+                .getRoot()
+                ?.findMaxNode() as RedBlackNode<number>;
             if (!maxNode) throw Error("accident");
-            const max = maxNode?.value.value ?? 0;
+            const max = maxNode?.value ?? 0;
             if (num < max) {
-                const node = this.s1.insertGetNode({
-                    index: count,
-                    value: num,
-                });
-                if (!node) throw Error("accident");
-
-                this.queue.set(count, { tree: this.s1, node });
-                const newNode = this.s2.insertGetNode(
-                    maxNode.value,
-                ) as RedBlackNode<{
-                    index: number;
-                    value: number;
-                }>;
-                this.queue.set(maxNode.value.index, {
-                    tree: this.s2,
-                    node: newNode,
-                });
+                const value = num;
+                if ((this.m1.get(value) ?? 0) === 0) this.s1.insertGetNode(num);
+                this.m1.set(value, (this.m1.get(value) ?? 0) + 1);
+                if ((this.m2.get(value) ?? 0) === 0) this.s2.insertGetNode(max);
+                this.m2.set(value, (this.m2.get(value) ?? 0) + 1);
                 this.sum += max;
-                this.s1.removeTreeNode(maxNode);
+                if ((this.m1.get(max) ?? 0) === 0)
+                    this.s1.removeTreeNode(maxNode);
+                this.m1.set(max, (this.m1.get(max) ?? 0) - 1);
             } else {
                 const minNode = this.s3
                     .getRoot()
-                    ?.findMinNode() as RedBlackNode<{
-                        index: number;
-                        value: number;
-                    }>;
-                const min = minNode?.value.value ?? 0;
+                    ?.findMinNode() as RedBlackNode<number>;
+                const min = minNode?.value ?? 0;
 
                 if (num > min) {
-                    const node = this.s3.insertGetNode({
-                        index: count,
-                        value: num,
-                    });
-                    if (!node) throw Error("accident");
-
-                    this.queue.set(count, { tree: this.s3, node });
-                    const newNode = this.s2.insertGetNode(
-                        minNode.value,
-                    ) as RedBlackNode<{
-                        index: number;
-                        value: number;
-                    }>;
-                    this.queue.set(minNode.value.index, {
-                        tree: this.s2,
-                        node: newNode,
-                    });
+                    const value = num;
+                    if ((this.m3.get(value) ?? 0) === 0)
+                        this.s3.insertGetNode(num);
+                    this.m3.set(value, (this.m3.get(value) ?? 0) + 1);
+                    if ((this.m2.get(value) ?? 0) === 0)
+                        this.s2.insertGetNode(min);
+                    this.m2.set(value, (this.m2.get(value) ?? 0) + 1);
                     this.sum += min;
-                    this.s3.removeTreeNode(minNode);
+                    if ((this.m3.get(min) ?? 0) === 0)
+                        this.s3.removeTreeNode(minNode);
+                    this.m3.set(min, (this.m3.get(min) ?? 0) - 1);
                 } else {
-                    const newNode = this.s2.insertGetNode({
-                        value: num,
-                        index: count,
-                    }) as RedBlackNode<{
-                        index: number;
-                        value: number;
-                    }>;
-                    this.queue.set(count, {
-                        tree: this.s2,
-                        node: newNode,
-                    });
                     this.sum += num;
+                    const value = num;
+                    if ((this.m2.get(value) ?? 0) === 0)
+                        this.s2.insertGetNode(num);
+                    this.m2.set(value, (this.m2.get(value) ?? 0) + 1);
                 }
             }
-            const first = (() => {
-                for (const a of this.queue) return a;
-                return undefined;
-            })();
+            const first = this.queue[0];
             if (!first) throw Error("accident");
 
-            const tree = first[1].tree;
-            const node = first[1].node;
-            tree.removeTreeNode(node);
+            if (this.m1.get(first)) {
+                if ((this.m1.get(first) ?? 0) === 0) this.s1.remove(first);
+                const min = this.s2.min() ?? 0;
+                if ((this.m1.get(min) ?? 0) === 0) this.s1.insertGetNode(min);
+                this.sum -= min;
+                if ((this.m2.get(min) ?? 0) === 0) this.s2.remove(min);
+                this.m1.set(first, (this.m1.get(first) ?? 0) - 1);
+                this.m1.set(min, (this.m1.get(min) ?? 0) + 1);
+                this.m2.set(min, (this.m2.get(min) ?? 0) - 1);
+            } else if (this.m3.get(first)) {
+                if ((this.m3.get(first) ?? 0) === 0) this.s3.remove(first);
+                const max = this.s2.max() ?? 0;
+                if ((this.m3.get(max) ?? 0) === 0) this.s3.insertGetNode(max);
+                this.sum -= max;
+                if ((this.m2.get(max) ?? 0) === 0) this.s2.remove(max);
 
-            if (tree === this.s1) {
-                const minNode = this.s2
-                    .getRoot()
-                    ?.findMinNode() as RedBlackNode<{
-                        index: number;
-                        value: number;
-                    }>;
-                this.s2.removeTreeNode(minNode);
-                this.sum -= minNode.value.value;
-                const newNode = tree.insertGetNode(
-                    minNode.value,
-                ) as RedBlackNode<{
-                    index: number;
-                    value: number;
-                }>;
-
-                this.queue.set(minNode.value.index, {
-                    tree: tree,
-                    node: newNode,
-                });
-            } else if (tree === this.s3) {
-                const maxNode = this.s2
-                    .getRoot()
-                    ?.findMaxNode() as RedBlackNode<{
-                        index: number;
-                        value: number;
-                    }>;
-                this.s2.removeTreeNode(maxNode);
-                this.sum -= maxNode.value.value;
-                const newNode = tree.insertGetNode(
-                    maxNode.value,
-                ) as RedBlackNode<{
-                    index: number;
-                    value: number;
-                }>;
-
-                this.queue.set(maxNode.value.index, {
-                    tree: tree,
-                    node: newNode,
-                });
+                this.m3.set(first, (this.m3.get(first) ?? 0) - 1);
+                this.m3.set(max, (this.m3.get(max) ?? 0) + 1);
+                this.m2.set(max, (this.m2.get(max) ?? 0) - 1);
             } else {
-                this.sum -= node.value.value;
+                if ((this.m2.get(first) ?? 0) === 0) this.s2.remove(first);
+                this.sum -= first;
+                this.m2.set(first, (this.m2.get(first) ?? 0) - 1);
             }
-            this.queue.delete(first[0]);
+            this.queue.shift();
             this.count++;
         }
     }
 
     calculateMKAverage(): number {
         if (this.count < this.m) return -1;
-        // console.log(this);
+
         return Math.floor(this.sum / (this.m - 2 * this.k));
     }
 }
