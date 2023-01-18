@@ -113,11 +113,12 @@ class MKAverage {
             if (this.m1.get(first) ?? 0 > 0) {
                 const min = this.s2.min() ?? 0;
                 this.m1.set(first, (this.m1.get(first) ?? 0) - 1);
-                this.m1.set(min, (this.m1.get(min) ?? 0) + 1);
+
                 this.m2.set(min, (this.m2.get(min) ?? 0) - 1);
                 if ((this.m1.get(first) ?? 0) === 0) this.s1.remove(first);
 
                 if ((this.m1.get(min) ?? 0) === 0) this.s1.insertGetNode(min);
+                this.m1.set(min, (this.m1.get(min) ?? 0) + 1);
                 this.sum -= min;
                 if ((this.m2.get(min) ?? 0) === 0) this.s2.remove(min);
             } else if (this.m3.get(first) ?? 0 > 0) {
