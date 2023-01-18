@@ -4,20 +4,20 @@ import {
 } from "https://deno.land/std@0.173.0/collections/red_black_node.ts";
 import { RedBlackTree } from "https://deno.land/std@0.173.0/collections/red_black_tree.ts";
 
-
 export default class RedBlackTreeExtended<T> extends RedBlackTree<T> {
     insertGetNode(value: T): RedBlackNode<T> | null {
         let node = this.insertNode(
             RedBlackNode,
-            value
+            value,
         ) as RedBlackNode<T> | null;
         if (node) {
             while (node.parent?.red) {
                 let parent: RedBlackNode<T> = node.parent!;
-                const parentDirection: Direction =
-                    parent.directionFromParent()!;
-                const uncleDirection: Direction =
-                    parentDirection === "right" ? "left" : "right";
+                const parentDirection: Direction = parent
+                    .directionFromParent()!;
+                const uncleDirection: Direction = parentDirection === "right"
+                    ? "left"
+                    : "right";
                 const uncle: RedBlackNode<T> | null =
                     parent.parent![uncleDirection] ?? null;
 
@@ -42,7 +42,7 @@ export default class RedBlackTreeExtended<T> extends RedBlackTree<T> {
         return node;
     }
 
-    getRoot() {
+    getRoot(): RedBlackNode<T> | null {
         return this.root;
     }
     removeTreeNode(removeNode: RedBlackNode<T>) {
@@ -51,8 +51,8 @@ export default class RedBlackTreeExtended<T> extends RedBlackTree<T> {
                 ? removeNode
                 : removeNode.findSuccessorNode()!
         ) as RedBlackNode<T>;
-        const replacementNode: RedBlackNode<T> | null =
-            successorNode.left ?? successorNode.right;
+        const replacementNode: RedBlackNode<T> | null = successorNode.left ??
+            successorNode.right;
         if (replacementNode) replacementNode.parent = successorNode.parent;
 
         if (!successorNode.parent) {
@@ -75,7 +75,7 @@ export default class RedBlackTreeExtended<T> extends RedBlackTree<T> {
     }
 }
 export function* reverseInOrderIterator<
-    T extends { left: T | null; right: T | null }
+    T extends { left: T | null; right: T | null },
 >(root: T | null): Generator<T> {
     if (!root) {
         return;

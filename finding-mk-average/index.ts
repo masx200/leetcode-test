@@ -1,7 +1,5 @@
-import { BinarySearchNode } from "https://deno.land/std@0.173.0/collections/binary_search_node.ts";
 import { RedBlackNode } from "https://deno.land/std@0.173.0/collections/red_black_node.ts";
 import RedBlackTreeExtended from "../dinner-plate-stacks/RedBlackTree.ts";
-
 
 function createRedBlackTreeExtended() {
     return new RedBlackTreeExtended<{ index: number; value: number }>((a, b) =>
@@ -69,7 +67,10 @@ class MKAverage {
         } else {
             const count = this.count;
 
-            const maxNode = this.s1.getRoot()?.findMaxNode();
+            const maxNode = this.s1.getRoot()?.findMaxNode() as RedBlackNode<{
+                index: number;
+                value: number;
+            }>;
             if (!maxNode) throw Error("accident");
             const max = maxNode?.value.value ?? 0;
             if (num < max) {
@@ -92,13 +93,14 @@ class MKAverage {
                     node: newNode,
                 });
                 this.sum += max;
+                this.s1.removeTreeNode(maxNode);
             } else {
                 const minNode = this.s3
                     .getRoot()
-                    ?.findMinNode() as BinarySearchNode<{
-                    index: number;
-                    value: number;
-                }>;
+                    ?.findMinNode() as RedBlackNode<{
+                        index: number;
+                        value: number;
+                    }>;
                 const min = minNode?.value.value ?? 0;
 
                 if (num > min) {
@@ -111,19 +113,84 @@ class MKAverage {
                     this.queue.set(count, { tree: this.s3, node });
                     const newNode = this.s2.insertGetNode({
                         value: max,
-                        index: maxNode.value.index,
+                        index: minNode.value.index,
                     }) as RedBlackNode<{
                         index: number;
                         value: number;
                     }>;
-                    this.queue.set(maxNode.value.index, {
+                    this.queue.set(minNode.value.index, {
                         tree: this.s2,
                         node: newNode,
                     });
                     this.sum += min;
+                    this.s3.removeTreeNode(minNode);
+                } else {
+                    const newNode = this.s2.insertGetNode({
+                        value: num,
+                        index: count,
+                    }) as RedBlackNode<{
+                        index: number;
+                        value: number;
+                    }>;
+                    this.queue.set(count, {
+                        tree: this.s2,
+                        node: newNode,
+                    });
+                    this.sum += num;
                 }
             }
+            const first = (() => {
+                for (const a of this.queue) return a;
+                return undefined;
+            })();
+            if (!first) throw Error("accident");
 
+            const tree = first[1].tree;
+            const node = first[1].node;
+            tree.removeTreeNode(node);
+            this.sum -= node.value.value;
+            if (tree === this.s1) {
+                const minNode = this.s2
+                    .getRoot()
+                    ?.findMinNode() as RedBlackNode<{
+                        index: number;
+                        value: number;
+                    }>;
+                this.s2.removeTreeNode(minNode);
+
+                const newNode = tree.insertGetNode(
+                    minNode.value,
+                ) as RedBlackNode<{
+                    index: number;
+                    value: number;
+                }>;
+
+                this.queue.set(minNode.value.index, {
+                    tree: tree,
+                    node: newNode,
+                });
+            } else if (tree === this.s3) {
+                const maxNode = this.s2
+                    .getRoot()
+                    ?.findMaxNode() as RedBlackNode<{
+                        index: number;
+                        value: number;
+                    }>;
+                this.s2.removeTreeNode(maxNode);
+
+                const newNode = tree.insertGetNode(
+                    maxNode.value,
+                ) as RedBlackNode<{
+                    index: number;
+                    value: number;
+                }>;
+
+                this.queue.set(maxNode.value.index, {
+                    tree: tree,
+                    node: newNode,
+                });
+            }
+            this.queue.delete(first[0]);
             this.count++;
         }
     }
