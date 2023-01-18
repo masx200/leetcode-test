@@ -47,8 +47,63 @@ Deno.test("finding-mk-average", () => {
                 [],
                 [91205],
             ],
-            MKAverage
+            MKAverage,
         ),
-        [null, null, null, -1, null, null, 56724, null, null, 79619, null]
+        [null, null, null, -1, null, null, 56724, null, null, 79619, null],
+    );
+});
+Deno.test("finding-mk-average", () => {
+    assertEquals(
+        runScript(
+            [
+                "MKAverage",
+                "addElement",
+                "addElement",
+                "calculateMKAverage",
+                "addElement",
+                "calculateMKAverage",
+                "addElement",
+                "addElement",
+                "addElement",
+                "calculateMKAverage",
+            ],
+            [[3, 1], [3], [1], [], [10], [], [5], [5], [5], []],
+            MKAverage,
+        ),
+        [null, null, null, -1, null, 3, null, null, null, 5],
+    );
+});
+Deno.test("finding-mk-average", () => {
+    assertEquals(
+        runScript(
+            [
+                "MKAverage",
+                "addElement",
+                "addElement",
+                "calculateMKAverage",
+                "addElement",
+                "addElement",
+                "calculateMKAverage",
+                "addElement",
+                "addElement",
+                "calculateMKAverage",
+                "addElement",
+            ],
+            [
+                [3, 1],
+                [58378],
+                [34909],
+                [],
+                [94574],
+                [29985],
+                [],
+                [77484],
+                [13400],
+                [],
+                [41607],
+            ],
+            MKAverage,
+        ),
+        [null, null, null, -1, null, null, 34909, null, null, 29985, null],
     );
 });
