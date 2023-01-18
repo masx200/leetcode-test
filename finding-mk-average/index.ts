@@ -130,8 +130,9 @@ class MKAverage {
             }
             this.queue.shift();
             this.count++;
-            this.queue.push(num)
+            this.queue.push(num);
         }
+        console.log(this);
     }
 
     calculateMKAverage(): number {
