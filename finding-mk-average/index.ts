@@ -1,7 +1,6 @@
 import { RedBlackNode } from "https://deno.land/std@0.173.0/collections/red_black_node.ts";
 import RedBlackTreeExtended from "../dinner-plate-stacks/RedBlackTree.ts";
 
-
 class MKAverage {
     m1 = new Map<number, number>();
     m2 = new Map<number, number>();
@@ -74,8 +73,9 @@ class MKAverage {
                 this.sum += max;
 
                 this.m1.set(max, (this.m1.get(max) ?? 0) - 1);
-                if ((this.m1.get(max) ?? 0) === 0)
+                if ((this.m1.get(max) ?? 0) === 0) {
                     this.s1.removeTreeNode(maxNode);
+                }
             } else {
                 const minNode = this.s3
                     .getRoot()
@@ -84,22 +84,26 @@ class MKAverage {
 
                 if (num > min) {
                     const value = num;
-                    if ((this.m3.get(value) ?? 0) === 0)
+                    if ((this.m3.get(value) ?? 0) === 0) {
                         this.s3.insertGetNode(num);
+                    }
                     this.m3.set(value, (this.m3.get(value) ?? 0) + 1);
-                    if ((this.m2.get(value) ?? 0) === 0)
+                    if ((this.m2.get(value) ?? 0) === 0) {
                         this.s2.insertGetNode(min);
+                    }
                     this.m2.set(value, (this.m2.get(value) ?? 0) + 1);
                     this.sum += min;
 
                     this.m3.set(min, (this.m3.get(min) ?? 0) - 1);
-                    if ((this.m3.get(min) ?? 0) === 0)
+                    if ((this.m3.get(min) ?? 0) === 0) {
                         this.s3.removeTreeNode(minNode);
+                    }
                 } else {
                     this.sum += num;
                     const value = num;
-                    if ((this.m2.get(value) ?? 0) === 0)
+                    if ((this.m2.get(value) ?? 0) === 0) {
                         this.s2.insertGetNode(num);
+                    }
                     this.m2.set(value, (this.m2.get(value) ?? 0) + 1);
                 }
             }
