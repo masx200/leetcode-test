@@ -49,6 +49,8 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode.cn/problems/finding-the-users-active-minutes
+
 https://leetcode.cn/problems/strong-password-checker-ii/
 
 https://leetcode.cn/problems/finding-mk-average
