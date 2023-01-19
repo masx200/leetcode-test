@@ -36,16 +36,15 @@ export class MultiRedBlackTree<T> extends RedBlackTreeExtended<T> {
     insertGetNode(value: T): MultiRedBlackNode<T> | null {
         let node = this.insertNode(
             MultiRedBlackNode,
-            value,
+            value
         ) as MultiRedBlackNode<T> | null;
         if (node) {
             while (node.parent?.red) {
                 let parent: MultiRedBlackNode<T> = node.parent!;
-                const parentDirection: Direction = parent
-                    .directionFromParent()!;
-                const uncleDirection: Direction = parentDirection === "right"
-                    ? "left"
-                    : "right";
+                const parentDirection: Direction =
+                    parent.directionFromParent()!;
+                const uncleDirection: Direction =
+                    parentDirection === "right" ? "left" : "right";
                 const uncle: MultiRedBlackNode<T> | null =
                     parent.parent![uncleDirection] ?? null;
 
