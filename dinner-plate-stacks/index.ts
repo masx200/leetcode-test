@@ -1,7 +1,6 @@
 import { ascend } from "https://deno.land/std@0.173.0/collections/binary_search_tree.ts";
-
 import RedBlackTree from "./RedBlackTree.ts";
-import { reverseInOrderIterator } from "./RedBlackTree.ts";
+import { reverseInOrderIterator } from "./reverseInOrderIterator.ts";
 
 class DinnerPlates {
     #available = new RedBlackTree<number>(ascend);

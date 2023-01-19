@@ -10,7 +10,8 @@ import { buildBST } from "./convert-sorted-list-to-binary-search-tree/buildBST.t
 import { PrefixTreeInsert } from "./design-add-and-search-words-data-structure/PrefixTreeInsert.ts";
 import { DoublyLinkedList } from "./design-linked-list/DoublyLinkedList.ts";
 import { HashMap } from "./design-movie-rental-system/HashMap.ts";
-
+import RedBlackTree from "./dinner-plate-stacks/RedBlackTree.ts";
+import { reverseInOrderIterator } from "./dinner-plate-stacks/reverseInOrderIterator.ts";
 import { ArrayToCircularDoublyTreeList } from "./er-cha-sou-suo-shu-yu-shuang-xiang-lian-biao-lcof/ArrayToCircularDoublyTreeList.ts";
 import { NestedIntegerFrom } from "./flatten-nested-list-iterator/NestedIntegerFrom.ts";
 import { deduplication } from "./fraction-addition-and-subtraction/deduplication.ts";
@@ -49,6 +50,7 @@ import { Node as NAryNode } from "./n-ary-tree-level-order-traversal/Node.ts";
 import { lowerBound } from "./number-of-pairs-satisfying-inequality/lowerBound.ts";
 import { traverseInOrder } from "./NyZD2B/traverseInOrder.ts";
 import { getVariable, ScopeList } from "./parse-lisp-expression/index.ts";
+import { multiplicativeInverse } from "./range-product-queries-of-powers/multiplicativeInverse.ts";
 import { BinaryIndexTree } from "./rank-from-stream-lcci/BinaryIndexTree.ts";
 import {
     contains,
@@ -168,9 +170,5 @@ export {
     traverseInOrder,
     UnionFind,
 };
-import RedBlackTree, {
-    reverseInOrderIterator,
-} from "./dinner-plate-stacks/RedBlackTree.ts";
-import { multiplicativeInverse } from "./range-product-queries-of-powers/multiplicativeInverse.ts";
 export { RedBlackTree, reverseInOrderIterator };
 export { multiplicativeInverse };

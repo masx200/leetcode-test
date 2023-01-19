@@ -1,4 +1,5 @@
 import { TreeNode } from "../binary-tree-inorder-traversal/TreeNode.ts";
+import { reverseInOrderIterator } from "./reverseInOrderIterator.ts";
 
 function kthLargest(root: TreeNode | null, k: number): number {
     let i = 1;
@@ -7,15 +8,5 @@ function kthLargest(root: TreeNode | null, k: number): number {
         i++;
     }
     throw Error("unreachable");
-}
-export function* reverseInOrderIterator(
-    root: TreeNode | null,
-): Generator<number> {
-    if (!root) {
-        return;
-    }
-    yield* reverseInOrderIterator(root.right);
-    yield root.val;
-    yield* reverseInOrderIterator(root.left);
 }
 export default kthLargest;
