@@ -16,16 +16,20 @@ class MKAverage {
     }
 
     addElement(num: number) {
-        const willBeDelete = this.queue[0];
-        this.queue.shift();
+        if (this.queue.length === this.m) {
+            const willBeDelete: number = this.queue[0];
+            this.queue.shift();
+
+            this.total -= willBeDelete;
+            this.tree.remove(willBeDelete);
+        }
 
         this.queue.push(num);
 
-        this.total -= willBeDelete;
-        this.tree.remove(willBeDelete);
         this.tree.insert(num);
         this.total += num;
         this.count++;
+        // debugger;
     }
 
     calculateMKAverage(): number {
@@ -34,20 +38,24 @@ class MKAverage {
         let ret = this.total;
         const root = this.tree.getRoot();
         if (!root) throw Error("null root");
+        // console.log(root)
         let k = this.k;
 
         for (const node of InOrderIterator(root)) {
+            // console.log(node)
             const min = Math.min(k, node.count);
             ret -= node.value * min;
             k -= min;
             if (k === 0) break;
         }
         for (const node of reverseInOrderIterator(root)) {
+            // debugger;
             const min = Math.min(k, node.count);
             ret -= node.value * min;
             k -= min;
             if (k === 0) break;
         }
+        // console.log(ret)
         return Math.floor(ret / (this.m - this.k * 2));
     }
 }
