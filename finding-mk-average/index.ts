@@ -68,8 +68,9 @@ class MKAverage {
                 const value = num;
                 if ((this.m1.get(value) ?? 0) === 0) this.s1.insertGetNode(num);
                 this.m1.set(value, (this.m1.get(value) ?? 0) + 1);
-                if ((this.m2.get(value) ?? 0) === 0) this.s2.insertGetNode(max);
-                this.m2.set(value, (this.m2.get(value) ?? 0) + 1);
+                const max = this.s1.max() ?? 0;
+                if ((this.m2.get(max) ?? 0) === 0) this.s2.insertGetNode(max);
+                this.m2.set(max, (this.m2.get(max) ?? 0) + 1);
                 this.sum += max;
 
                 this.m1.set(max, (this.m1.get(max) ?? 0) - 1);
@@ -88,6 +89,8 @@ class MKAverage {
                         this.s3.insertGetNode(num);
                     }
                     this.m3.set(value, (this.m3.get(value) ?? 0) + 1);
+
+                    const min = this.s3.min() ?? 0;
                     if ((this.m2.get(value) ?? 0) === 0) {
                         this.s2.insertGetNode(min);
                     }
@@ -111,25 +114,25 @@ class MKAverage {
             if (!first) throw Error("accident");
 
             if ((this.m1.get(first) ?? 0) > 0) {
-                const min = this.s2.min() ?? 0;
                 this.m1.set(first, (this.m1.get(first) ?? 0) - 1);
-
-                this.m2.set(min, (this.m2.get(min) ?? 0) - 1);
                 if ((this.m1.get(first) ?? 0) <= 0) this.s1.remove(first);
-
+                const min = this.s2.min() ?? 0;
                 if ((this.m1.get(min) ?? 0) === 0) this.s1.insertGetNode(min);
                 this.m1.set(min, (this.m1.get(min) ?? 0) + 1);
+                this.m2.set(min, (this.m2.get(min) ?? 0) - 1);
+
                 this.sum -= min;
                 if ((this.m2.get(min) ?? 0) <= 0) this.s2.remove(min);
             } else if ((this.m3.get(first) ?? 0) > 0) {
+                this.m3.set(first, (this.m3.get(first) ?? 0) - 1);
+                if ((this.m3.get(first) ?? 0) <= 0) this.s3.remove(first);
                 const max = this.s2.max() ?? 0;
                 if ((this.m3.get(max) ?? 0) === 0) this.s3.insertGetNode(max);
                 this.sum -= max;
 
-                this.m3.set(first, (this.m3.get(first) ?? 0) - 1);
                 this.m3.set(max, (this.m3.get(max) ?? 0) + 1);
                 this.m2.set(max, (this.m2.get(max) ?? 0) - 1);
-                if ((this.m3.get(first) ?? 0) <= 0) this.s3.remove(first);
+
                 if ((this.m2.get(max) ?? 0) <= 0) this.s2.remove(max);
             } else {
                 this.m2.set(first, (this.m2.get(first) ?? 0) - 1);
