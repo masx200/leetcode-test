@@ -110,7 +110,7 @@ class MKAverage {
             const first = this.queue[0];
             if (!first) throw Error("accident");
 
-            if (this.m1.get(first) ?? 0 > 0) {
+            if ((this.m1.get(first) ?? 0) > 0) {
                 const min = this.s2.min() ?? 0;
                 this.m1.set(first, (this.m1.get(first) ?? 0) - 1);
 
@@ -121,7 +121,7 @@ class MKAverage {
                 this.m1.set(min, (this.m1.get(min) ?? 0) + 1);
                 this.sum -= min;
                 if ((this.m2.get(min) ?? 0) <= 0) this.s2.remove(min);
-            } else if (this.m3.get(first) ?? 0 > 0) {
+            } else if ((this.m3.get(first) ?? 0) > 0) {
                 const max = this.s2.max() ?? 0;
                 if ((this.m3.get(max) ?? 0) === 0) this.s3.insertGetNode(max);
                 this.sum -= max;
