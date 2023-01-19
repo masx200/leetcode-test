@@ -6,4 +6,7 @@ export class MultiRedBlackTree<T> extends RedBlackTreeExtended<T> {
     getRoot(): MultiRedBlackNode<T> | null {
         return this.root;
     }
+    remove(value: T): boolean {}
+    insert(value: T): boolean {
+    }
 }
