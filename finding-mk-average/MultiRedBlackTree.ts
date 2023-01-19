@@ -3,12 +3,11 @@ import { Direction } from "https://deno.land/std@0.173.0/collections/binary_sear
 import { RedBlackNode } from "https://deno.land/std@0.173.0/collections/red_black_node.ts";
 import RedBlackTreeExtended from "../dinner-plate-stacks/RedBlackTree.ts";
 
-
 export class MultiRedBlackTree<T> extends RedBlackTreeExtended<T> {
     hash: (v: T) => any;
     constructor(
         compare: (a: T, b: T) => number = ascend,
-        hash: (v: T) => any = (v) => v
+        hash: (v: T) => any = (v) => v,
     ) {
         super(compare);
         this.hash = hash;
@@ -68,17 +67,18 @@ export class MultiRedBlackTree<T> extends RedBlackTreeExtended<T> {
     insertGetNode(value: T): RedBlackNode<T> | null {
         let node = this.insertNode(
             RedBlackNode,
-            value
+            value,
         ) as RedBlackNode<T> | null;
         if (node) this.setCount(value, 1);
 
         if (node) {
             while (node.parent?.red) {
                 let parent: RedBlackNode<T> = node.parent!;
-                const parentDirection: Direction =
-                    parent.directionFromParent()!;
-                const uncleDirection: Direction =
-                    parentDirection === "right" ? "left" : "right";
+                const parentDirection: Direction = parent
+                    .directionFromParent()!;
+                const uncleDirection: Direction = parentDirection === "right"
+                    ? "left"
+                    : "right";
                 const uncle: RedBlackNode<T> | null =
                     parent.parent![uncleDirection] ?? null;
 
