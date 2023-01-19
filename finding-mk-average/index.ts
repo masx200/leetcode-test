@@ -38,7 +38,13 @@ class MKAverage {
         let ret = this.total;
         const root = this.tree.getRoot();
         if (!root) throw Error("null root");
-        // console.log(root)
+        {
+            const temp: [number, number][] = [];
+            for (const node of reverseInOrderIterator(root)) {
+                temp.push([node.value, node.count]);
+            }
+            console.log(JSON.stringify(temp));
+        } // console.log(root)
         let k = this.k;
 
         for (const node of InOrderIterator(root)) {
