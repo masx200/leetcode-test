@@ -1,12 +1,24 @@
+import { ascend } from "https://deno.land/std@0.173.0/collections/_comparators.ts";
 import { Direction } from "https://deno.land/std@0.173.0/collections/binary_search_node.ts";
 import { RedBlackNode } from "https://deno.land/std@0.173.0/collections/red_black_node.ts";
 import RedBlackTreeExtended from "../dinner-plate-stacks/RedBlackTree.ts";
 
 export class MultiRedBlackTree<T> extends RedBlackTreeExtended<T> {
-    static node2count = new WeakMap<RedBlackNode<any>, number>();
+    hash: (v: T) => any;
+    constructor(
+        compare: (a: T, b: T) => number = ascend,
+        hash: (v: T) => any = (v) => v,
+    ) {
+        super(compare);
+        this.hash = hash;
+    }
+    value2count = new Map<any, number>();
 
-    static getCount(node: RedBlackNode<any>): number {
-        return MultiRedBlackTree.node2count.get(node) ?? 1;
+    getCount(value: T): number {
+        return this.value2count.get(this.hash(value)) ?? 1;
+    }
+    setCount(value: T, count: number) {
+        return this.value2count.set(this.hash(value), count);
     }
     root: RedBlackNode<T> | null = null;
     getRoot(): RedBlackNode<T> | null {
@@ -16,21 +28,20 @@ export class MultiRedBlackTree<T> extends RedBlackTreeExtended<T> {
         return super.findNode(value) as RedBlackNode<T> | null;
     }
     remove(value: T): boolean {
+        // console.log("remove", value);
         const node = this.findNode(value);
 
         if (!node) {
             return false;
         } else {
             // node.count--;
-            MultiRedBlackTree.node2count.set(
-                node,
-                (MultiRedBlackTree.node2count.get(node) ?? 1) - 1,
-            );
-            console.log("decrement", node);
+            this.setCount(value, (this.getCount(value) ?? 1) - 1);
+            // console.log("decrement", node);
             // console.trace();
-            if ((MultiRedBlackTree.node2count.get(node) ?? 1) <= 0) {
+            if ((this.getCount(value) ?? 1) <= 0) {
                 // if (node.count <= 0) {
-                this.removeTreeNode(node);
+                // this.removeTreeNode(node);
+                super.remove(value);
             }
             return true;
         }
@@ -40,14 +51,12 @@ export class MultiRedBlackTree<T> extends RedBlackTreeExtended<T> {
 
         if (node) {
             // node.count++;
-            MultiRedBlackTree.node2count.set(
-                node,
-                (MultiRedBlackTree.node2count.get(node) ?? 1) + 1,
-            );
-            console.log("increment", node);
+            this.setCount(value, (this.getCount(value) ?? 1) + 1);
+            // console.log("increment", node);
             return true;
         } else {
-            this.insertGetNode(value);
+            // this.insertGetNode(value);
+            super.insert(value);
         }
         return true;
     }
@@ -56,7 +65,7 @@ export class MultiRedBlackTree<T> extends RedBlackTreeExtended<T> {
             RedBlackNode,
             value,
         ) as RedBlackNode<T> | null;
-        if (node) MultiRedBlackTree.node2count.set(node, 1);
+        if (node) this.setCount(value, 1);
 
         if (node) {
             while (node.parent?.red) {

@@ -16,38 +16,39 @@ class MKAverage {
     }
 
     addElement(num: number) {
-        if (this.queue.length === this.m) {
-            const willBeDelete: number = this.queue[0];
-            this.queue.shift();
-            console.log("deleteElement", willBeDelete);
-            this.total -= willBeDelete;
-            this.tree.remove(willBeDelete);
-            const root = this.tree.getRoot();
-            if (!root) throw Error("null root");
-            {
-                const temp: [number, number][] = [];
-                for (const node of InOrderIterator(root)) {
-                    temp.push([node.value, MultiRedBlackTree.getCount(node)]);
-                }
-                console.log(JSON.stringify(temp));
-            }
-        }
-
         this.queue.push(num);
 
         this.tree.insert(num);
         this.total += num;
         this.count++;
         // debugger;
-        console.log("addElement", num);
+        // console.log("addElement", num);
         const root = this.tree.getRoot();
         if (!root) throw Error("null root");
-        {
-            const temp: [number, number][] = [];
-            for (const node of InOrderIterator(root)) {
-                temp.push([node.value, MultiRedBlackTree.getCount(node)]);
-            }
-            console.log(JSON.stringify(temp));
+        // {
+        // console.log(root);
+        // const temp: [number, number][] = [];
+        // for (const node of InOrderIterator(root)) {
+        //     temp.push([node.value, this.tree.getCount(node.value)]);
+        // }
+        // console.log(JSON.stringify(temp));
+        // }
+        if (this.queue.length === this.m + 1) {
+            const willBeDelete: number = this.queue[0];
+            this.queue.shift();
+            // console.log("deleteElement", willBeDelete);
+            this.total -= willBeDelete;
+            this.tree.remove(willBeDelete);
+            const root = this.tree.getRoot();
+            if (!root) throw Error("null root");
+            // {
+            //     console.log(root);
+            //     const temp: [number, number][] = [];
+            //     for (const node of InOrderIterator(root)) {
+            //         temp.push([node.value, this.tree.getCount(node.value)]);
+            //     }
+            //     console.log(JSON.stringify(temp));
+            // }
         }
     }
 
@@ -57,21 +58,22 @@ class MKAverage {
         let ret = this.total;
         const root = this.tree.getRoot();
         if (!root) throw Error("null root");
-        console.log("calculateMKAverage");
-        {
-            const temp: [number, number][] = [];
-            for (const node of InOrderIterator(root)) {
-                temp.push([node.value, MultiRedBlackTree.getCount(node)]);
-            }
-            console.log(JSON.stringify(temp));
-        }
+        // console.log("calculateMKAverage");
+        // {
+        //     console.log(root);
+        //     const temp: [number, number][] = [];
+        //     for (const node of InOrderIterator(root)) {
+        //         temp.push([node.value, this.tree.getCount(node.value)]);
+        //     }
+        //     console.log(JSON.stringify(temp));
+        // }
 
         // console.log(root)
         let k = this.k;
 
         for (const node of InOrderIterator(root)) {
             // console.log(node)
-            const min = Math.min(k, MultiRedBlackTree.getCount(node));
+            const min = Math.min(k, this.tree.getCount(node.value));
             ret -= node.value * min;
             k -= min;
             if (k === 0) break;
@@ -79,7 +81,7 @@ class MKAverage {
         k = this.k;
         for (const node of reverseInOrderIterator(root)) {
             // debugger;
-            const min = Math.min(k, MultiRedBlackTree.getCount(node));
+            const min = Math.min(k, this.tree.getCount(node.value));
             ret -= node.value * min;
             k -= min;
             if (k === 0) break;
