@@ -48,6 +48,7 @@ class MKAverage {
             k -= min;
             if (k === 0) break;
         }
+        k = this.k;
         for (const node of reverseInOrderIterator(root)) {
             // debugger;
             const min = Math.min(k, node.count);
@@ -56,6 +57,7 @@ class MKAverage {
             if (k === 0) break;
         }
         // console.log(ret)
+        // debugger;
         return Math.floor(ret / (this.m - this.k * 2));
     }
 }
