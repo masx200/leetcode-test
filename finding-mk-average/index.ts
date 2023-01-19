@@ -1,7 +1,6 @@
 import { RedBlackNode } from "https://deno.land/std@0.173.0/collections/red_black_node.ts";
 import RedBlackTreeExtended from "../dinner-plate-stacks/RedBlackTree.ts";
 
-
 class MKAverage {
     m1 = new Map<number, number>();
     m2 = new Map<number, number>();
