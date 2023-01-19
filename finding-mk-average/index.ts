@@ -1,12 +1,12 @@
 import { reverseInOrderIterator } from "../dinner-plate-stacks/reverseInOrderIterator.ts";
 import { InOrderIterator } from "./InOrderIterator.ts";
 import { MultiRedBlackTree } from "./MultiRedBlackTree.ts";
-
+import { Deque } from "https://esm.sh/@datastructures-js/deque@1.0.4/";
 class MKAverage {
     total = 0;
     m: number;
     k: number;
-    queue = new Array<number>();
+    queue = new Deque<number>();
     count = 0;
 
     tree = new MultiRedBlackTree<number>((a, b) => a - b);
@@ -16,7 +16,7 @@ class MKAverage {
     }
 
     addElement(num: number) {
-        this.queue.push(num);
+        this.queue.pushBack(num);
 
         this.tree.insert(num);
         this.total += num;
@@ -33,9 +33,9 @@ class MKAverage {
         // }
         // console.log(JSON.stringify(temp));
         // }
-        if (this.queue.length === this.m + 1) {
-            const willBeDelete: number = this.queue[0];
-            this.queue.shift();
+        if (this.queue.size() === this.m + 1) {
+            const willBeDelete: number = this.queue.front();
+            this.queue.popFront();
             // console.log("deleteElement", willBeDelete);
             this.total -= willBeDelete;
             this.tree.remove(willBeDelete);
