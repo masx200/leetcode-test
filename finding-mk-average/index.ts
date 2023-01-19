@@ -2,7 +2,6 @@ import { reverseInOrderIterator } from "../dinner-plate-stacks/reverseInOrderIte
 import { InOrderIterator } from "./InOrderIterator.ts";
 import { MultiRedBlackTree } from "./MultiRedBlackTree.ts";
 
-
 class MKAverage {
     total = 0;
     m: number;
@@ -28,7 +27,7 @@ class MKAverage {
             {
                 const temp: [number, number][] = [];
                 for (const node of InOrderIterator(root)) {
-                    temp.push([node.value, node.count]);
+                    temp.push([node.value, MultiRedBlackTree.getCount(node)]);
                 }
                 console.log(JSON.stringify(temp));
             }
@@ -46,7 +45,7 @@ class MKAverage {
         {
             const temp: [number, number][] = [];
             for (const node of InOrderIterator(root)) {
-                temp.push([node.value, node.count]);
+                temp.push([node.value, MultiRedBlackTree.getCount(node)]);
             }
             console.log(JSON.stringify(temp));
         }
@@ -62,7 +61,7 @@ class MKAverage {
         {
             const temp: [number, number][] = [];
             for (const node of InOrderIterator(root)) {
-                temp.push([node.value, node.count]);
+                temp.push([node.value, MultiRedBlackTree.getCount(node)]);
             }
             console.log(JSON.stringify(temp));
         }
@@ -72,7 +71,7 @@ class MKAverage {
 
         for (const node of InOrderIterator(root)) {
             // console.log(node)
-            const min = Math.min(k, node.count);
+            const min = Math.min(k, MultiRedBlackTree.getCount(node));
             ret -= node.value * min;
             k -= min;
             if (k === 0) break;
@@ -80,7 +79,7 @@ class MKAverage {
         k = this.k;
         for (const node of reverseInOrderIterator(root)) {
             // debugger;
-            const min = Math.min(k, node.count);
+            const min = Math.min(k, MultiRedBlackTree.getCount(node));
             ret -= node.value * min;
             k -= min;
             if (k === 0) break;
