@@ -2,6 +2,7 @@ import { reverseInOrderIterator } from "../dinner-plate-stacks/reverseInOrderIte
 import { InOrderIterator } from "./InOrderIterator.ts";
 import { MultiRedBlackTree } from "./MultiRedBlackTree.ts";
 
+
 class MKAverage {
     total = 0;
     m: number;
@@ -30,6 +31,15 @@ class MKAverage {
         this.total += num;
         this.count++;
         // debugger;
+        const root = this.tree.getRoot();
+        if (!root) throw Error("null root");
+        {
+            const temp: [number, number][] = [];
+            for (const node of InOrderIterator(root)) {
+                temp.push([node.value, node.count]);
+            }
+            console.log(JSON.stringify(temp));
+        }
     }
 
     calculateMKAverage(): number {
@@ -40,11 +50,14 @@ class MKAverage {
         if (!root) throw Error("null root");
         {
             const temp: [number, number][] = [];
-            for (const node of reverseInOrderIterator(root)) {
+            for (const node of InOrderIterator(root)) {
                 temp.push([node.value, node.count]);
             }
             console.log(JSON.stringify(temp));
-        } // console.log(root)
+        }
+       
+
+        // console.log(root)
         let k = this.k;
 
         for (const node of InOrderIterator(root)) {
