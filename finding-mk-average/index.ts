@@ -1,6 +1,7 @@
 import { RedBlackNode } from "https://deno.land/std@0.173.0/collections/red_black_node.ts";
 import RedBlackTreeExtended from "../dinner-plate-stacks/RedBlackTree.ts";
 
+
 class MKAverage {
     m1 = new Map<number, number>();
     m2 = new Map<number, number>();
@@ -73,7 +74,7 @@ class MKAverage {
                 this.sum += max;
 
                 this.m1.set(max, (this.m1.get(max) ?? 0) - 1);
-                if ((this.m1.get(max) ?? 0) === 0) {
+                if ((this.m1.get(max) ?? 0) <= 0) {
                     this.s1.removeTreeNode(maxNode);
                 }
             } else {
@@ -95,7 +96,7 @@ class MKAverage {
                     this.sum += min;
 
                     this.m3.set(min, (this.m3.get(min) ?? 0) - 1);
-                    if ((this.m3.get(min) ?? 0) === 0) {
+                    if ((this.m3.get(min) ?? 0) <= 0) {
                         this.s3.removeTreeNode(minNode);
                     }
                 } else {
@@ -115,12 +116,12 @@ class MKAverage {
                 this.m1.set(first, (this.m1.get(first) ?? 0) - 1);
 
                 this.m2.set(min, (this.m2.get(min) ?? 0) - 1);
-                if ((this.m1.get(first) ?? 0) === 0) this.s1.remove(first);
+                if ((this.m1.get(first) ?? 0) <= 0) this.s1.remove(first);
 
                 if ((this.m1.get(min) ?? 0) === 0) this.s1.insertGetNode(min);
                 this.m1.set(min, (this.m1.get(min) ?? 0) + 1);
                 this.sum -= min;
-                if ((this.m2.get(min) ?? 0) === 0) this.s2.remove(min);
+                if ((this.m2.get(min) ?? 0) <= 0) this.s2.remove(min);
             } else if (this.m3.get(first) ?? 0 > 0) {
                 const max = this.s2.max() ?? 0;
                 if ((this.m3.get(max) ?? 0) === 0) this.s3.insertGetNode(max);
@@ -129,23 +130,23 @@ class MKAverage {
                 this.m3.set(first, (this.m3.get(first) ?? 0) - 1);
                 this.m3.set(max, (this.m3.get(max) ?? 0) + 1);
                 this.m2.set(max, (this.m2.get(max) ?? 0) - 1);
-                if ((this.m3.get(first) ?? 0) === 0) this.s3.remove(first);
-                if ((this.m2.get(max) ?? 0) === 0) this.s2.remove(max);
+                if ((this.m3.get(first) ?? 0) <= 0) this.s3.remove(first);
+                if ((this.m2.get(max) ?? 0) <= 0) this.s2.remove(max);
             } else {
                 this.m2.set(first, (this.m2.get(first) ?? 0) - 1);
-                if ((this.m2.get(first) ?? 0) === 0) this.s2.remove(first);
+                if ((this.m2.get(first) ?? 0) <= 0) this.s2.remove(first);
                 this.sum -= first;
             }
             this.queue.shift();
             this.count++;
             this.queue.push(num);
         }
-        console.log(this);
+        // console.log(this);
     }
 
     calculateMKAverage(): number {
         if (this.count < this.m) return -1;
-        console.log(this);
+        // console.log(this);
         return Math.floor(this.sum / (this.m - 2 * this.k));
     }
 }
