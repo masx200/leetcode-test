@@ -1,4 +1,4 @@
-import { assertEquals } from "https://deno.land/std@0.173.0/testing/asserts.ts";
+import { assertEquals } from "https://deno.land/std@0.174.0/testing/asserts.ts";
 
 import basicCalculatorIV from "./index.ts";
 import { Poly } from "./Poly.ts";
