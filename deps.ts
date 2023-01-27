@@ -6,6 +6,8 @@ export {
     assertStrictEquals,
     equal,
 } from "https://deno.land/std@0.174.0/testing/asserts.ts";
+import { Deque } from "https://esm.sh/@datastructures-js/deque@1.0.4/";
+export { Deque };
 export { default as random } from "https://cdn.skypack.dev/lodash@4.17.21/random?dts";
 export { default as countBy } from "https://cdn.skypack.dev/lodash@4.17.21/countBy?dts";
 export { default as zip } from "https://cdn.skypack.dev/lodash@4.17.21/zip?dts";

@@ -1,7 +1,8 @@
+import { Deque } from "../deps.ts";
 import { reverseInOrderIterator } from "../dinner-plate-stacks/reverseInOrderIterator.ts";
 import { InOrderIterator } from "./InOrderIterator.ts";
 import { MultiRedBlackTree } from "./MultiRedBlackTree.ts";
-import { Deque } from "https://esm.sh/@datastructures-js/deque@1.0.4/";
+
 class MKAverage {
     total = 0;
     m: number;
@@ -21,34 +22,18 @@ class MKAverage {
         this.tree.insert(num);
         this.total += num;
         this.count++;
-        // debugger;
-        // console.log("addElement", num);
+
         const root = this.tree.getRoot();
         if (!root) throw Error("null root");
-        // {
-        // console.log(root);
-        // const temp: [number, number][] = [];
-        // for (const node of InOrderIterator(root)) {
-        //     temp.push([node.value, this.tree.getCount(node.value)]);
-        // }
-        // console.log(JSON.stringify(temp));
-        // }
+
         if (this.queue.size() === this.m + 1) {
             const willBeDelete: number = this.queue.front();
             this.queue.popFront();
-            // console.log("deleteElement", willBeDelete);
+
             this.total -= willBeDelete;
             this.tree.remove(willBeDelete);
             const root = this.tree.getRoot();
             if (!root) throw Error("null root");
-            // {
-            //     console.log(root);
-            //     const temp: [number, number][] = [];
-            //     for (const node of InOrderIterator(root)) {
-            //         temp.push([node.value, this.tree.getCount(node.value)]);
-            //     }
-            //     console.log(JSON.stringify(temp));
-            // }
         }
     }
 
@@ -58,21 +43,10 @@ class MKAverage {
         let ret = this.total;
         const root = this.tree.getRoot();
         if (!root) throw Error("null root");
-        // console.log("calculateMKAverage");
-        // {
-        //     console.log(root);
-        //     const temp: [number, number][] = [];
-        //     for (const node of InOrderIterator(root)) {
-        //         temp.push([node.value, this.tree.getCount(node.value)]);
-        //     }
-        //     console.log(JSON.stringify(temp));
-        // }
 
-        // console.log(root)
         let k = this.k;
 
         for (const node of InOrderIterator(root)) {
-            // console.log(node)
             const min = Math.min(k, this.tree.getCount(node.value));
             ret -= node.value * min;
             k -= min;
@@ -80,14 +54,12 @@ class MKAverage {
         }
         k = this.k;
         for (const node of reverseInOrderIterator(root)) {
-            // debugger;
             const min = Math.min(k, this.tree.getCount(node.value));
             ret -= node.value * min;
             k -= min;
             if (k === 0) break;
         }
-        // console.log(ret)
-        // debugger;
+
         return Math.floor(ret / (this.m - this.k * 2));
     }
 }
