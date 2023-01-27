@@ -4,24 +4,24 @@ import { RedBlackNode } from "https://deno.land/std@0.174.0/collections/red_blac
 import RedBlackTreeExtended from "../dinner-plate-stacks/RedBlackTree.ts";
 
 export class MultiRedBlackTree<T> extends RedBlackTreeExtended<T> {
-    hash: (v: T) => any;
+    #hash: (v: T) => any;
     constructor(
         compare: (a: T, b: T) => number = ascend,
         hash: (v: T) => any = (v) => v,
     ) {
         super(compare);
-        this.hash = hash;
+        this.#hash = hash;
     }
-    value2count = new Map<any, number>();
+    #value2count = new Map<any, number>();
 
     getCount(value: T): number {
-        return this.value2count.get(this.hash(value)) ?? 0;
+        return this.#value2count.get(this.#hash(value)) ?? 0;
     }
     setCount(value: T, count: number) {
-        return this.value2count.set(this.hash(value), count);
+        return this.#value2count.set(this.#hash(value), count);
     }
     hasCount(value: T) {
-        return (this.value2count.get(this.hash(value)) ?? 0) > 0;
+        return (this.#value2count.get(this.#hash(value)) ?? 0) > 0;
     }
     root: RedBlackNode<T> | null = null;
     getRoot(): RedBlackNode<T> | null {
