@@ -305,8 +305,6 @@ https://leetcode.cn/problems/buddy-strings
 
 https://leetcode.cn/problems/maximum-frequency-stack
 
-https://leetcode.cn/problems/calculate-amount-paid-in-taxes
-
 https://leetcode.cn/problems/third-maximum-number/
 
 https://leetcode.cn/problems/toeplitz-matrix/
