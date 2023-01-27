@@ -49,6 +49,10 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode.cn/problems/rank-transform-of-a-matrix/
+
+https://leetcode.cn/problems/smallest-string-with-a-given-numeric-value
+
 https://leetcode.cn/problems/greatest-english-letter-in-upper-and-lower-case/
 
 https://leetcode-cn.com/problems/minimum-sideway-jumps/
@@ -826,8 +830,6 @@ https://leetcode.cn/problems/replace-all-digits-with-characters/
 https://leetcode.cn/problems/largest-odd-number-in-string/
 
 https://leetcode.cn/problems/scramble-string/
-
-https://leetcode.cn/problems/smallest-string-with-a-given-numeric-value/
 
 https://leetcode.cn/problems/dungeon-game/
 
