@@ -49,6 +49,10 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode.cn/problems/check-if-point-is-reachable/
+
+https://leetcode.cn/problems/calculate-amount-paid-in-taxes/
+
 https://leetcode.cn/problems/rank-transform-of-a-matrix/
 
 https://leetcode.cn/problems/smallest-string-with-a-given-numeric-value
