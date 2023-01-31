@@ -33,7 +33,7 @@ export {
     AvlTree,
     BinarySearchTree,
     BinarySearchTreeNode,
-} from "npm:@datastructures-js/binary-search-tree@5.2.0";
+} from "npm:@datastructures-js/binary-search-tree@5.3.1";
 export { default as groupBy } from "https://cdn.skypack.dev/lodash@4.17.21/groupBy?dts";
 
 export {
