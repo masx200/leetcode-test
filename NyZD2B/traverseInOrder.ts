@@ -1,4 +1,4 @@
-import { BinarySearchTree } from "npm:@datastructures-js/binary-search-tree@5.2.0";
+import { BinarySearchTree } from "npm:@datastructures-js/binary-search-tree@5.3.1";
 
 export function traverseInOrder<T extends BinarySearchTree<any>>(
     tree: T,
