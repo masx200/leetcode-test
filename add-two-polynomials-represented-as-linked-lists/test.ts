@@ -1,4 +1,4 @@
-import { assertEquals } from "https://deno.land/std@0.175.0/testing/asserts.ts";
+import { assertEquals } from "https://deno.land/std@0.176.0/testing/asserts.ts";
 
 import { ArrayToPolyNode } from "./ArrayToPolyNode.ts";
 import addPoly from "./index.ts";
