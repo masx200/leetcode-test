@@ -1,8 +1,8 @@
 import {
     Direction,
     RedBlackNode,
-} from "https://deno.land/std@0.176.0/collections/red_black_node.ts";
-import { RedBlackTree } from "https://deno.land/std@0.176.0/collections/red_black_tree.ts";
+} from "https://deno.land/std@0.177.0/collections/red_black_node.ts";
+import { RedBlackTree } from "https://deno.land/std@0.177.0/collections/red_black_tree.ts";
 
 export default class RedBlackTreeExtended<T> extends RedBlackTree<T> {
     insertGetNode(value: T): RedBlackNode<T> | null {
