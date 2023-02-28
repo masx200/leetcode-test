@@ -9,7 +9,7 @@ export {
 
 import AsyncLimiterClass, {
     AsyncCurrentLimiter,
-} from "npm:@masx200/async-task-current-limiter@2.1.0";
+} from "https://esm.sh/@masx200/async-task-current-limiter@2.1.0/";
 
 import { BinaryHeap } from "https://deno.land/std@0.177.0/collections/binary_heap.ts";
 import { Deque } from "https://esm.sh/@datastructures-js/deque@1.0.4/";
