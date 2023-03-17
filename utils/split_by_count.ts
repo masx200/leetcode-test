@@ -1,4 +1,4 @@
-import { chunk } from "https://deno.land/std@0.179.0/collections/chunk.ts";
+import { chunk } from "https://deno.land/std@0.180.0/collections/chunk.ts";
 
 export function split_by_count<T>(files: T[], limit: number): T[][] {
     return chunk(files, limit) as T[][];

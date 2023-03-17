@@ -1,4 +1,4 @@
-import { assertEquals } from "https://deno.land/std@0.179.0/testing/asserts.ts";
+import { assertEquals } from "https://deno.land/std@0.180.0/testing/asserts.ts";
 
 import { TreeNodeLeetCodeFromJSON } from "../utils/TreeNodeLeetCodeParse.ts";
 import { TreeNodeLeetCodeToJSON } from "../utils/TreeNodeLeetCodeStringify.ts";
