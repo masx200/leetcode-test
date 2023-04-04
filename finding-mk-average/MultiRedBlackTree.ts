@@ -1,6 +1,6 @@
-import { ascend } from "https://deno.land/std@0.181.0/collections/_comparators.ts";
-import { Direction } from "https://deno.land/std@0.181.0/collections/binary_search_node.ts";
-import { RedBlackNode } from "https://deno.land/std@0.181.0/collections/red_black_node.ts";
+import { ascend } from "https://deno.land/std@0.182.0/collections/_comparators.ts";
+import { Direction } from "https://deno.land/std@0.182.0/collections/binary_search_node.ts";
+import { RedBlackNode } from "https://deno.land/std@0.182.0/collections/red_black_node.ts";
 import RedBlackTreeExtended from "../dinner-plate-stacks/RedBlackTree.ts";
 
 export class MultiRedBlackTree<T> extends RedBlackTreeExtended<T> {
