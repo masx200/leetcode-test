@@ -131,3 +131,4 @@ build
 .run/所有.run.xml
 *.gch
 .vs
+x64/
