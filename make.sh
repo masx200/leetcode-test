@@ -1,1 +1,1 @@
-g++ -std=c++20 ./insert-into-a-binary-search-tree/test.cpp -o test -I ./insert-into-a-binary-search-tree -v
+g++ ./insert-into-a-binary-search-tree/test.cpp -o test -I ./insert-into-a-binary-search-tree -v
