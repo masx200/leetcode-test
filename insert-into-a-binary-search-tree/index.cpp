@@ -1,3 +1,4 @@
+// +build ignore
 class Solution {
 public:
     TreeNode* insertIntoBST(TreeNode* root, int val) {
