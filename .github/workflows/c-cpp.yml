@@ -13,7 +13,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-
+    - name: install
+      run: sh ./install.sh
     - name: make
       run: sh ./make.sh
     - name: test
