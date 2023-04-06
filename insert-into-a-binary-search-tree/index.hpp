@@ -4,7 +4,7 @@
 // #ifndef _insert_into_a_binary_search_tree_SOLUTION_
 // #define _insert_into_a_binary_search_tree_SOLUTION_
 
-#include "TreeNode.cpp"
+#include "TreeNode.hpp"
 #include <stdio.h>
 class Solution
 {

@@ -1,10 +1,10 @@
 // +build ignore
 
-#include "TreeNode.cpp"
-#include "index.cpp"
+#include "TreeNode.hpp"
+#include "index.hpp"
 #include <iostream>
 #include <stdio.h>
-#include "serializeTreeNode.cpp"
+#include "serializeTreeNode.hpp"
 
 // #include <stdexcept>
 #include <cppunit/TestResult.h>

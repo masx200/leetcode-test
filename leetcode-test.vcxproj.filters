@@ -15,17 +15,19 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="insert-into-a-binary-search-tree\index.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="insert-into-a-binary-search-tree\serializeTreeNode.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="insert-into-a-binary-search-tree\test.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="insert-into-a-binary-search-tree\TreeNode.cpp">
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="insert-into-a-binary-search-tree\index.hpp">
       <Filter>Source Files</Filter>
-    </ClCompile>
+    </ClInclude>
+    <ClInclude Include="insert-into-a-binary-search-tree\serializeTreeNode.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="insert-into-a-binary-search-tree\TreeNode.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

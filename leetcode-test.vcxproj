@@ -101,17 +101,25 @@
     <ClCompile>
       <AdditionalIncludeDirectories>C:\Users\Administrator\Documents\vcpkg-master\installed\x64-windows\include</AdditionalIncludeDirectories>
     </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>C:\Users\Administrator\Documents\vcpkg-master\installed\x64-windows\lib</AdditionalLibraryDirectories>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <AdditionalIncludeDirectories>C:\Users\Administrator\Documents\vcpkg-master\installed\x64-windows\include</AdditionalIncludeDirectories>
     </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>C:\Users\Administrator\Documents\vcpkg-master\installed\x64-windows\lib</AdditionalLibraryDirectories>
+    </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="insert-into-a-binary-search-tree\index.cpp" />
-    <ClCompile Include="insert-into-a-binary-search-tree\serializeTreeNode.cpp" />
     <ClCompile Include="insert-into-a-binary-search-tree\test.cpp" />
-    <ClCompile Include="insert-into-a-binary-search-tree\TreeNode.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="insert-into-a-binary-search-tree\index.hpp" />
+    <ClInclude Include="insert-into-a-binary-search-tree\serializeTreeNode.hpp" />
+    <ClInclude Include="insert-into-a-binary-search-tree\TreeNode.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
