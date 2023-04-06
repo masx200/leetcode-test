@@ -15,7 +15,7 @@ jobs:
     - uses: actions/checkout@v3
 
     - name: make
-      run: make.sh
+      run: sh ./make.sh
     - name: test
-      run: test.sh
+      run: sh ./test.sh
 
