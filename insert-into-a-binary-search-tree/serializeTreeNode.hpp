@@ -19,7 +19,7 @@ string serializeTreeNode(TreeNode *root)
     {
 
         sstream
-            << "NULL";
+            << "null";
         return sstream.str();
     }
     // auto root = root;

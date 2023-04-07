@@ -5,14 +5,14 @@
 #include <iostream>
 #include <stdio.h>
 #include "serializeTreeNode.hpp"
+#include "freeTreeNode.hpp"
 
-// #include <stdexcept>
 #include <cppunit/TestResult.h>
 #include <cppunit/TestResultCollector.h>
 #include <cppunit/TextOutputter.h>
 #include <cppunit/TestRunner.h>
 #include <cppunit/extensions/HelperMacros.h>
-// #include "ss"
+
 using namespace std;
 void println(string s)
 {
@@ -36,6 +36,12 @@ void test1()
     assertEquals(serializeTreeNode(none), "NULL");
     println(serializeTreeNode(result2));
     assertEquals(serializeTreeNode(result2), "TreeNode{val:111,left:NULL,right:NULL}");
+
+    auto nodes = set{none, result2};
+    for (auto node : nodes)
+    {
+        freeTreeNode(node);
+    } // freeTreeNode(result2);
 }
 
 void test2()
@@ -47,82 +53,55 @@ void test2()
 
     println(serializeTreeNode(result));
     assertEquals(serializeTreeNode(result), "TreeNode{val:99,left:NULL,right:TreeNode{val:111,left:NULL,right:NULL}}");
+    // freeTreeNode(result);
+    auto nodes = set{tree, result};
+    for (auto node : nodes)
+    {
+        freeTreeNode(node);
+    }
 }
 
-// 定义测试类
 class StringTest : public CppUnit::TestFixture
 {
-    CPPUNIT_TEST_SUITE(StringTest); // 定义测试包
-    CPPUNIT_TEST(testSwap);         // 添加测试用例1
-    CPPUNIT_TEST(testFind);         // 添加测试用例2
-    CPPUNIT_TEST_SUITE_END();       // 结束测试包定义
+    CPPUNIT_TEST_SUITE(StringTest);
+    CPPUNIT_TEST(testSwap);
+    CPPUNIT_TEST(testFind);
+    CPPUNIT_TEST_SUITE_END();
 
 public:
-    void setUp() // 初始化
-    {
-        // m_str1 =  "Hello, world";
-        // m_str2 =  "Hi, cppunit";
-    }
-
-    void tearDown() // 清理
+    void setUp()
     {
     }
 
-    void testSwap() // 测试方法1
+    void tearDown()
+    {
+    }
+
+    void testSwap()
     {
         test1();
-        //  std:: string str1 = m_str1;
-        //  std:: string str2 = m_str2;
-        // m_str1.swap(m_str2);
-
-        // CPPUNIT_ASSERT(m_str1 == str2);
-        // CPPUNIT_ASSERT(m_str2 == str1);
     }
 
-    void testFind() // 测试方法2
+    void testFind()
     {
         test2();
-        //  int pos1 = m_str1.find(',');
-        //  int pos2 = m_str2.rfind(',');
-
-        // CPPUNIT_ASSERT_EQUAL(5, pos1);
-        // CPPUNIT_ASSERT_EQUAL(2, pos2);
     }
-
-    // protected:
-    //      std:: string     m_str1;
-    //      std:: string     m_str2;
 };
 
-CPPUNIT_TEST_SUITE_REGISTRATION(StringTest); // 自动注册测试包
-// int main(int argc, char const *argv[])
-// {
-//     try
-//     {
-//         test1();
-//         test2();
-//         // assertEquals("a", "b");
-//     }
-//     catch (string e)
-//     {
-//         cerr << e << endl;
-//         exit(1);
-//     }
+CPPUNIT_TEST_SUITE_REGISTRATION(StringTest);
 
-//     return 0;
-// }
 int main(int argc, char *argv[])
 {
     CppUnit::TestResult r;
     CppUnit::TestResultCollector rc;
-    r.addListener(&rc); // 准备好结果收集器
+    r.addListener(&rc);
 
-    CppUnit::TestRunner runner; // 定义执行实体
+    CppUnit::TestRunner runner;
     runner.addTest(CppUnit::TestFactoryRegistry::getRegistry().makeTest());
-    runner.run(r); // 运行测试
+    runner.run(r);
 
     CppUnit::TextOutputter o(&rc, std::cout);
-    o.write(); // 将结果输出
+    o.write();
 
     return rc.wasSuccessful() ? 0 : -1;
 }
