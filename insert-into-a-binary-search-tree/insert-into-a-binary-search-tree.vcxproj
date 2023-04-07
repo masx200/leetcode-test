@@ -107,6 +107,7 @@
     <ClInclude Include="freeTreeNode.hpp" />
     <ClInclude Include="HashTreeNode.hpp" />
     <ClInclude Include="index.hpp" />
+    <ClInclude Include="LeetCodeTreeNodeToString.hpp" />
     <ClInclude Include="printTreeNode.hpp" />
     <ClInclude Include="serializeTreeNode.hpp" />
     <ClInclude Include="TreeNode.hpp" />

@@ -4,15 +4,15 @@
 #include "freeTreeNode.hpp"
 #include "index.hpp"
 #include "serializeTreeNode.hpp"
-#include <iostream>
-#include <stdio.h>
-
-// #include <set>
 #include <cppunit/TestResult.h>
 #include <cppunit/TestResultCollector.h>
 #include <cppunit/TestRunner.h>
 #include <cppunit/TextOutputter.h>
 #include <cppunit/extensions/HelperMacros.h>
+#include <iostream>
+#include <stdio.h>
+#include <string>
+#include <vector>
 
 #include <sstream>
 #include <unordered_set>
@@ -24,6 +24,11 @@ using namespace std;
 #include "debugTreeNode.hpp"
 #include "printTreeNode.hpp"
 #include "treeparse.hpp"
+
+void println(int s)
+{
+    cout << s << endl;
+}
 
 void println(string s)
 {
@@ -81,18 +86,48 @@ void test2()
     }
     println("test2 end");
 }
-
+struct ExampleType {
+    string root;
+    int val;
+    string output;
+};
 class StringTest : public CppUnit::TestFixture {
     CPPUNIT_TEST_SUITE(StringTest);
     CPPUNIT_TEST(testSwap);
     CPPUNIT_TEST(testFind);
 
     CPPUNIT_TEST(test3);
+    CPPUNIT_TEST(test4);
     CPPUNIT_TEST_SUITE_END();
 
 public:
     void setUp() { }
+    void test4()
+    {
 
+        auto examples = vector<ExampleType> { { "[4,2,7,1,3]", 5, "[4,2,7,1,3,5]" },
+
+            { "[40,20,60,10,30,50,70]", 25, "[40,20,60,10,30,50,70,null,null,25]" },
+            { "[4,2,7,1,3,null,null,null,null,null,null]", 5, "[4,2,7,1,3,5]" } };
+
+        for (auto& example : examples) {
+            TreeNode* root = nullptr;
+            int status = parseLeetCodeBinaryTree(example.root, &root);
+            CPPUNIT_ASSERT_EQUAL(0, status);
+            auto output = Solution().insertIntoBST(root, example.val);
+
+            CPPUNIT_ASSERT_EQUAL(LeetCodeTreeNodeToString(output),
+                example.output);
+            println(example.root);
+            println(example.val);
+            println(example.output);
+            auto nodes = unordered_set<TreeNode*, HashTreeNode, EqualTreeNode> { root, output };
+            for (auto node : nodes) {
+                printTreeNode(node);
+                freeTreeNode(node);
+            }
+        }
+    }
     void tearDown() { }
 
     void testSwap() { test1(); }
