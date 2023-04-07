@@ -1,0 +1,1 @@
+clang-formatter -c ./format.json                                                            
