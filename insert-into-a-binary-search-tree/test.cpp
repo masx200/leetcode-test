@@ -17,30 +17,15 @@
 #include <sstream>
 #include <unordered_set>
 using namespace std;
-void println(string s) { cout << s << endl; }
-string debugTreeNode(TreeNode* root)
+#include "EqualTreeNode.hpp"
+#include "HashTreeNode.hpp"
+#include "debugTreeNode.hpp"
+#include "printTreeNode.hpp"
+void println(string s)
 {
-
-    stringstream sstream;
-    if (root == NULL) {
-
-        sstream << "null";
-        return sstream.str();
-    }
-
-    sstream << "TreeNode@" << root;
-    sstream << "{val:" << root->val;
-    sstream << ",left:" << debugTreeNode(root->left);
-    sstream << ",right:" << debugTreeNode(root->right) << "}";
-    return sstream.str();
-}
-void printTreeNode(TreeNode* node)
-{
-
-    auto s = debugTreeNode(node);
     cout << s << endl;
-    return;
 }
+
 void assertEquals(string s1, string s2)
 {
     CPPUNIT_ASSERT_EQUAL(s1, s2);
@@ -49,18 +34,7 @@ void assertEquals(string s1, string s2)
     //     throw(("assertion error: " + s1 + " != " + s2));
     // }
 }
-struct HashTreeNode {
-    std::size_t operator()(const TreeNode* k) const
-    {
-        return std::hash<long long>()((long long)k);
-    }
-};
-struct EqualTreeNode {
-    bool operator()(const TreeNode* lhs, const TreeNode* rhs) const
-    {
-        return lhs == rhs;
-    }
-};
+
 void test1()
 {
     println("test1 start");
