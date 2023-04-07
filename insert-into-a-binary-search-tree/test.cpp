@@ -105,7 +105,7 @@ public:
 
     printTreeNode(root);
     std::string result = LeetCodeTreeNodeToString(root);
-
+    CPPUNIT_ASSERT_EQUAL(result, rawString);
     println(result);
     cleanTreeNode(root);
     println("test3 end");
