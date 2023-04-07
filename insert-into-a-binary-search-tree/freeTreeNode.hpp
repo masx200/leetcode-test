@@ -16,13 +16,14 @@ void freeTreeNode(TreeNode *root)
 
     if (root == NULL)
     {
-       
+
         return;
     }
-    
+
     freeTreeNode(root->left);
-    freeTreeNode(root->right); 
+    freeTreeNode(root->right);
     delete root;
+    cout << "freeTreeNode:" << root << endl;
     return;
 }
 // #endif //
