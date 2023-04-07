@@ -1,3 +1,5 @@
+// +build ignore
+
 #pragma once
 #include "TreeNode.hpp"
 #include <stdio.h>

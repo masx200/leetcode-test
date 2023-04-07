@@ -1,5 +1,6 @@
 // +build ignore
 
+#pragma once
 #include "TreeNode.hpp"
 #include <queue>
 #include <string>
