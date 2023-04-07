@@ -23,7 +23,7 @@ string serializeTreeNode(TreeNode *root)
         return sstream.str();
     }
     // auto root = root;
-    sstream << "TreeNode";
+    sstream << "TreeNode";//@"<<root;
     sstream << "{val:" << root->val;
     sstream << ",left:" << serializeTreeNode(root->left);
     sstream << ",right:" << serializeTreeNode(root->right) << "}";
