@@ -19,10 +19,11 @@
 using namespace std;
 #include "EqualTreeNode.hpp"
 #include "HashTreeNode.hpp"
-#include "bfsTravelsal.hpp"
+// #include "bfsTravelsal.hpp"
 #include "debugTreeNode.hpp"
 #include "printTreeNode.hpp"
 #include "treeparse.hpp"
+#include "LeetCodeTreeNodeToString.hpp"
 
 void println(string s) { cout << s << endl; }
 
@@ -103,7 +104,7 @@ public:
     CPPUNIT_ASSERT_EQUAL(0, status);
 
     printTreeNode(root);
-    std::string result = bfsTravelsal(root);
+    std::string result = LeetCodeTreeNodeToString(root);
 
     println(result);
     cleanTreeNode(root);
