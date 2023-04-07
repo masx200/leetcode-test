@@ -5,17 +5,16 @@
 // #ifndef _serialize_Tree_Node_
 // #define _serialize_Tree_Node_
 #include "TreeNode.hpp"
-#include <stdio.h>
 #include <iostream>
+#include <stdio.h>
 #include <string>
 
 #include <sstream>
 using namespace std;
-void freeTreeNode(TreeNode *root)
+void freeTreeNode(TreeNode* root)
 {
 
-    if (root == NULL)
-    {
+    if (root == NULL) {
 
         return;
     }

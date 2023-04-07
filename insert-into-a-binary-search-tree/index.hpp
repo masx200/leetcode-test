@@ -6,14 +6,12 @@
 
 #include "TreeNode.hpp"
 #include <stdio.h>
-class Solution
-{
+class Solution {
 public:
-    TreeNode *insertIntoBST(TreeNode *root, int val)
+    TreeNode* insertIntoBST(TreeNode* root, int val)
     {
-        if (root == NULL)
-        {
-            TreeNode *node = new TreeNode(val);
+        if (root == NULL) {
+            TreeNode* node = new TreeNode(val);
             return node;
         }
         if (root->val > val)
