@@ -111,7 +111,7 @@
     <ClInclude Include="printTreeNode.hpp" />
     <ClInclude Include="serializeTreeNode.hpp" />
     <ClInclude Include="TreeNode.hpp" />
-    <ClInclude Include="treeparse.hpp" />
+    <ClInclude Include="parseLeetCodeBinaryTree.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

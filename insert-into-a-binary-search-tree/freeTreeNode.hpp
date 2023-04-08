@@ -22,7 +22,7 @@ void freeTreeNode(TreeNode* root)
     freeTreeNode(root->left);
     freeTreeNode(root->right);
     delete root;
-    cout << "freeTreeNode:" << root << endl;
+    // cout << "freeTreeNode:" << root << endl;
     return;
 }
 // #endif //

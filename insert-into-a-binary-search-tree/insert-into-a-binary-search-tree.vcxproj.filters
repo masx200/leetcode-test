@@ -47,7 +47,7 @@
     <ClInclude Include="TreeNode.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="treeparse.hpp">
+    <ClInclude Include="parseLeetCodeBinaryTree.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="LeetCodeTreeNodeToString.hpp">
