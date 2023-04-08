@@ -20,8 +20,10 @@ struct token
 
 int tokenize(std::string &rawString, std::queue<token> &tokenQueue)
 {
+    auto sign = 1;
     int digit = 0;
     bool digitFlag = false;
+
     for (int i = 0; i < rawString.size(); i++)
     {
         if (rawString[i] <= '9' && rawString[i] >= '0')
@@ -29,12 +31,17 @@ int tokenize(std::string &rawString, std::queue<token> &tokenQueue)
             digit = digit * 10 + rawString[i] - '0';
             digitFlag = true;
         }
+        else if (rawString[i] == '-')
+        {
+            sign = -1;
+        }
         else if (rawString[i] == ',')
         {
             if (digitFlag)
-                tokenQueue.push(token{true, digit});
+                tokenQueue.push(token{true, digit * sign});
             digit = 0;
             digitFlag = false;
+            sign = 1;
         }
         else if (rawString[i] == ' ')
         {
