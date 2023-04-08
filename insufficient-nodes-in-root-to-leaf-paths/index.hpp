@@ -11,7 +11,7 @@
  * };
  */
 
-#include <../insert-into-a-binary-search-tree/TreeNode.hpp>
+#include "../insert-into-a-binary-search-tree/TreeNode.hpp"
 class Solution
 {
 public:
