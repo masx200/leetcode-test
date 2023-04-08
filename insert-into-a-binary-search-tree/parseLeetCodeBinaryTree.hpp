@@ -55,7 +55,7 @@ int tokenize(std::string &rawString, std::queue<token> &tokenQueue)
         {
             if (digitFlag)
             {
-                tokenQueue.push(token{true, digit});
+                tokenQueue.push(token{true, digit * sign });
             }
             continue;
         }

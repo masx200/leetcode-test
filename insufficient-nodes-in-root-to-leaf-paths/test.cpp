@@ -55,6 +55,8 @@ TEST(leetcode1080, test3)
 
     EXPECT_EQ(0, status);
     printTreeNode(tree);
+
+    EXPECT_EQ(root, LeetCodeTreeNodeToString(tree));
     auto result = Solution().sufficientSubset(tree, limit);
 
     printTreeNode(result);
