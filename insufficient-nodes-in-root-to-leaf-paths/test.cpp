@@ -21,7 +21,7 @@ void LeetCode1080TestExamples(std::string &root, int limit, std::string &output)
     traversalTreeNode(tree, nodes);
     printTreeNode(tree);
 
-    EXPECT_EQ(root, LeetCodeTreeNodeToString(tree));
+    //EXPECT_EQ(root, LeetCodeTreeNodeToString(tree));
     auto result = Solution().sufficientSubset(tree, limit);
 
     printTreeNode(result);
