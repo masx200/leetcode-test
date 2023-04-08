@@ -4,7 +4,7 @@
 #include <vector>
 
 using namespace std;
-#include<numeric>
+#include <numeric>
 #include <algorithm>
 //template <class InputIt, class T, class BinaryOperation>
 //constexpr // since C++20
