@@ -132,3 +132,4 @@ build
 *.gch
 .vs
 x64/
+*.obj
