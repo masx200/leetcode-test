@@ -46,6 +46,7 @@ void assertEquals(string s1, string s2)
 
 void test1()
 {
+    println("insert-into-a-binary-search-tree");
     println("test1 start");
     TreeNode *none = NULL;
 
