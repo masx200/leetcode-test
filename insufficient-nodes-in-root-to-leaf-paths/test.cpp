@@ -5,7 +5,7 @@
 #include <iostream>
 #include <string>
 #include "../insert-into-a-binary-search-tree/LeetCodeTreeNodeToString.hpp"
-
+#include "../insert-into-a-binary-search-tree/printTreeNode.hpp"
 #include "../insert-into-a-binary-search-tree/parseLeetCodeBinaryTree.hpp"
 using namespace std;
 
@@ -20,8 +20,12 @@ TEST(leetcode1080, test1)
     int status = parseLeetCodeBinaryTree(root, &tree);
 
     EXPECT_EQ(0, status);
+    printTreeNode(tree);
+    auto result = Solution().sufficientSubset(tree, limit);
 
-    EXPECT_EQ(output, LeetCodeTreeNodeToString(Solution().sufficientSubset(tree, limit)));
+   
+    printTreeNode(result);
+    EXPECT_EQ(output, LeetCodeTreeNodeToString(result));
 };
 TEST(leetcode1080, test2)
 {
@@ -34,8 +38,12 @@ TEST(leetcode1080, test2)
     int status = parseLeetCodeBinaryTree(root, &tree);
 
     EXPECT_EQ(0, status);
+    printTreeNode(tree);
+    auto result = Solution().sufficientSubset(tree, limit);
 
-    EXPECT_EQ(output, LeetCodeTreeNodeToString(Solution().sufficientSubset(tree, limit)));
+    
+    printTreeNode(result);
+    EXPECT_EQ(output, LeetCodeTreeNodeToString(result));
 };
 TEST(leetcode1080, test3)
 {
@@ -48,8 +56,12 @@ TEST(leetcode1080, test3)
     int status = parseLeetCodeBinaryTree(root, &tree);
 
     EXPECT_EQ(0, status);
+    printTreeNode(tree);
+    auto result = Solution().sufficientSubset(tree, limit);
 
-    EXPECT_EQ(output, LeetCodeTreeNodeToString(Solution().sufficientSubset(tree, limit)));
+   
+    printTreeNode(result);
+    EXPECT_EQ(output, LeetCodeTreeNodeToString(result));
 };
 
 int main(int argc, char **argv)

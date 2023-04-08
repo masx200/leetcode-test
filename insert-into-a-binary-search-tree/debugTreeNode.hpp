@@ -15,9 +15,9 @@ string debugTreeNode(TreeNode* root)
         return sstream.str();
     }
 
-    sstream << "TreeNode@" << root;
-    sstream << "{val:" << root->val;
+    sstream << "TreeNode";//@" << root;
+    sstream << "{\nval:" << root->val;
     sstream << ",left:" << debugTreeNode(root->left);
-    sstream << ",right:" << debugTreeNode(root->right) << "}";
+    sstream << ",right:" << debugTreeNode(root->right) << "\n}";
     return sstream.str();
 }
