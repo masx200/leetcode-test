@@ -4,7 +4,7 @@
 
 // #ifndef _serialize_Tree_Node_
 // #define _serialize_Tree_Node_
-#include "TreeNode.hpp"
+#include "../insert-into-a-binary-search-tree/TreeNode.hpp"
 #include <iostream>
 #include <stdio.h>
 #include <string>
