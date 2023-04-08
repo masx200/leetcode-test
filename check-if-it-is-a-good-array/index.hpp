@@ -4,6 +4,8 @@
 #include <vector>
 
 using namespace std;
+#include<numeric>
+#include <algorithm>
 //template <class InputIt, class T, class BinaryOperation>
 //constexpr // since C++20
 //    T
@@ -14,13 +16,13 @@ using namespace std;
 
 //    return init;
 //};
-int gcd2(int num1, int num2)
+int gcd(int num1, int num2)
 {
-    while (num2 != 0) {
-        int temp = num1;
-        num1 = num2;
+   while (num2 != 0) {
+       int temp = num1;
+       num1 = num2;
         num2 = temp % num2;
-    }
+   }
     return num1;
 };
 
@@ -28,7 +30,7 @@ class Solution {
 public:
     bool isGoodArray(vector<int>& nums)
     {
-        int divisor = accumulate(nums.begin(), nums.end(), nums[0], gcd2);
+        int divisor = accumulate<std::vector<int>::iterator, int, int(int, int)>(nums.begin(), nums.end(), nums[0], gcd);
         return divisor == 1;
     }
 };
