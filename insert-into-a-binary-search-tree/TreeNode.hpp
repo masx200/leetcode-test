@@ -3,23 +3,28 @@
 #pragma once
 #include <iostream>
 using namespace std;
-struct TreeNode
-{
+struct TreeNode {
     int val;
-    TreeNode *left;
-    TreeNode *right;
+    TreeNode* left;
+    TreeNode* right;
     TreeNode()
-        : val(0), left(nullptr), right(nullptr)
+        : val(0)
+        , left(nullptr)
+        , right(nullptr)
     {
         // cout << "newTreeNode:" << this << endl;
     }
     TreeNode(int x)
-        : val(x), left(nullptr), right(nullptr)
+        : val(x)
+        , left(nullptr)
+        , right(nullptr)
     {
         // cout << "newTreeNode:" << this << endl;
     }
-    TreeNode(int x, TreeNode *left, TreeNode *right)
-        : val(x), left(left), right(right)
+    TreeNode(int x, TreeNode* left, TreeNode* right)
+        : val(x)
+        , left(left)
+        , right(right)
     {
         // cout << "newTreeNode:" << this << endl;
     }
