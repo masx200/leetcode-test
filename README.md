@@ -49,6 +49,10 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode.cn/problems/insufficient-nodes-in-root-to-leaf-paths
+
+https://leetcode.cn/problems/check-if-it-is-a-good-array
+
 https://leetcode.cn/problems/maximum-number-of-groups-getting-fresh-donuts/
 
 https://leetcode.cn/problems/check-if-point-is-reachable/
