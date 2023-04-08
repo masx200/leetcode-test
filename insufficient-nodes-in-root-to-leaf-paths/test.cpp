@@ -23,7 +23,6 @@ TEST(leetcode1080, test1)
     printTreeNode(tree);
     auto result = Solution().sufficientSubset(tree, limit);
 
-   
     printTreeNode(result);
     EXPECT_EQ(output, LeetCodeTreeNodeToString(result));
 };
@@ -41,7 +40,6 @@ TEST(leetcode1080, test2)
     printTreeNode(tree);
     auto result = Solution().sufficientSubset(tree, limit);
 
-    
     printTreeNode(result);
     EXPECT_EQ(output, LeetCodeTreeNodeToString(result));
 };
@@ -59,7 +57,23 @@ TEST(leetcode1080, test3)
     printTreeNode(tree);
     auto result = Solution().sufficientSubset(tree, limit);
 
-   
+    printTreeNode(result);
+    EXPECT_EQ(output, LeetCodeTreeNodeToString(result));
+};
+TEST(leetcode1080, test4)
+{
+    auto root = string{"[1,2,-3,-5,null,4,null]"};
+
+    auto limit = -1;
+    auto output = string("[1,null,-3,4]");
+
+    TreeNode *tree = nullptr;
+    int status = parseLeetCodeBinaryTree(root, &tree);
+
+    EXPECT_EQ(0, status);
+    printTreeNode(tree);
+    auto result = Solution().sufficientSubset(tree, limit);
+
     printTreeNode(result);
     EXPECT_EQ(output, LeetCodeTreeNodeToString(result));
 };
