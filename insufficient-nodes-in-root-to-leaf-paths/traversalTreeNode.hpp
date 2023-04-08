@@ -6,16 +6,15 @@
 // #define _serialize_Tree_Node_
 #include "../insert-into-a-binary-search-tree/TreeNode.hpp"
 #include <iostream>
+#include <sstream>
 #include <stdio.h>
 #include <string>
 #include <vector>
-#include <sstream>
 using namespace std;
-void traversalTreeNode(TreeNode *root, vector<TreeNode *> &nodes)
+void traversalTreeNode(TreeNode* root, vector<TreeNode*>& nodes)
 {
 
-    if (root == NULL)
-    {
+    if (root == NULL) {
 
         return;
     }
