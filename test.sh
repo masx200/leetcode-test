@@ -1,2 +1,2 @@
-chmod +x test.bin
-./test.bin
+chmod +x ./insert-into-a-binary-search-tree/test.bin
+./insert-into-a-binary-search-tree/test.bin
