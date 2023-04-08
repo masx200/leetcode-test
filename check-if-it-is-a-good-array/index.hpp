@@ -4,16 +4,16 @@
 #include <vector>
 
 using namespace std;
-template <class InputIt, class T, class BinaryOperation>
-constexpr // since C++20
-    T
-    accumulate2(InputIt first, InputIt last, T init, BinaryOperation op)
-{
-    for (; first != last; ++first)
-        init = op(std::move(init), *first); // std::move since C++11
+//template <class InputIt, class T, class BinaryOperation>
+//constexpr // since C++20
+//    T
+//    accumulate2(InputIt first, InputIt last, T init, BinaryOperation op)
+//{
+//    for (; first != last; ++first)
+//        init = op(std::move(init), *first); // std::move since C++11
 
-    return init;
-};
+//    return init;
+//};
 int gcd2(int num1, int num2)
 {
     while (num2 != 0) {
@@ -28,7 +28,7 @@ class Solution {
 public:
     bool isGoodArray(vector<int>& nums)
     {
-        int divisor = accumulate2(nums.begin(), nums.end(), nums[0], gcd2);
+        int divisor = accumulate(nums.begin(), nums.end(), nums[0], gcd2);
         return divisor == 1;
     }
 };
