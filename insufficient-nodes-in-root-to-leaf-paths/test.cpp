@@ -14,6 +14,8 @@ using namespace leetcode_treenode_cpp;
 import leetcode_treenode_cpp.traversalTreeNode;
 import leetcode_treenode_cpp.LeetCodeTreeNodeToString;
 import leetcode_treenode_cpp.parseLeetCodeBinaryTree;
+
+using namespace insufficient_nodes_in_root_to_leaf_paths;
 void LeetCode1080TestExamples(std::string& root, int limit, std::string& output)
 {
     TreeNode* tree = nullptr;
