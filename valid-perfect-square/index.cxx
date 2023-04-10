@@ -8,7 +8,7 @@ namespace valid_perfect_square
     class Solution
     {
 
-    private:
+    public:
         auto sqrt(int num)
         {
             auto x0 = double(num);
