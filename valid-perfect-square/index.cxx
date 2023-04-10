@@ -32,4 +32,4 @@ namespace valid_perfect_square
         }
     };
     export Solution;
-}
+} // namespace valid_perfect_square
