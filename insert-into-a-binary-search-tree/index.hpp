@@ -4,8 +4,10 @@
 // #ifndef _insert_into_a_binary_search_tree_SOLUTION_
 // #define _insert_into_a_binary_search_tree_SOLUTION_
 
-#include "TreeNode.hpp"
+// #include "TreeNode.hpp"
 #include <stdio.h>
+import leetcode_treenode_cpp.TreeNode;
+using namespace leetcode_treenode_cpp;
 class Solution {
 public:
     TreeNode* insertIntoBST(TreeNode* root, int val)

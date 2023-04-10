@@ -18,6 +18,27 @@
     <ClCompile Include="test.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\..\cppmodules\leetcode-treenode-cpp-1.1.1\bfsTravelsal.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cppmodules\leetcode-treenode-cpp-1.1.1\freeTreeNode.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cppmodules\leetcode-treenode-cpp-1.1.1\LeetCodeTreeNodeToString.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cppmodules\leetcode-treenode-cpp-1.1.1\parseLeetCodeBinaryTree.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cppmodules\leetcode-treenode-cpp-1.1.1\serializeTreeNode.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cppmodules\leetcode-treenode-cpp-1.1.1\traversalTreeNode.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\cppmodules\leetcode-treenode-cpp-1.1.1\TreeNode.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="bfsTravelsal.hpp">
