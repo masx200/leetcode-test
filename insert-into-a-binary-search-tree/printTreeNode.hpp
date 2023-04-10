@@ -3,9 +3,12 @@
 #pragma once
 #include <string>
 using namespace std;
-#include "TreeNode.hpp"
+//#include "TreeNode.hpp"
 #include "debugTreeNode.hpp"
 #include <sstream>
+#include <iostream>
+import leetcode_treenode_cpp.TreeNode;
+using namespace   leetcode_treenode_cpp;
 void printTreeNode(TreeNode* node)
 {
 

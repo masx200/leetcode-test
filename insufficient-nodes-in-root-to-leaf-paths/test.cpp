@@ -1,15 +1,19 @@
 // +build ignore
 
-#include "../insert-into-a-binary-search-tree/LeetCodeTreeNodeToString.hpp"
-#include "../insert-into-a-binary-search-tree/parseLeetCodeBinaryTree.hpp"
+// #include "../insert-into-a-binary-search-tree/LeetCodeTreeNodeToString.hpp"
+// #include "../insert-into-a-binary-search-tree/parseLeetCodeBinaryTree.hpp"
 #include "../insert-into-a-binary-search-tree/printTreeNode.hpp"
 #include "index.hpp"
-#include "traversalTreeNode.hpp"
+// #include "traversalTreeNode.hpp"
 #include <gtest/gtest.h>
 #include <iostream>
 #include <string>
 using namespace std;
-
+import leetcode_treenode_cpp.TreeNode;
+using namespace leetcode_treenode_cpp;
+import leetcode_treenode_cpp.traversalTreeNode;
+import leetcode_treenode_cpp.LeetCodeTreeNodeToString;
+import leetcode_treenode_cpp.parseLeetCodeBinaryTree;
 void LeetCode1080TestExamples(std::string& root, int limit, std::string& output)
 {
     TreeNode* tree = nullptr;

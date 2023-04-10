@@ -3,8 +3,10 @@
 #pragma once
 #include <string>
 using namespace std;
-#include "TreeNode.hpp"
+//#include "TreeNode.hpp"
 #include <sstream>
+import leetcode_treenode_cpp.TreeNode;
+using namespace   leetcode_treenode_cpp;
 string debugTreeNode(TreeNode* root)
 {
 

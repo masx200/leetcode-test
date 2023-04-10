@@ -11,7 +11,9 @@
  * };
  */
 
-#include "../insert-into-a-binary-search-tree/TreeNode.hpp"
+// #include "../insert-into-a-binary-search-tree/TreeNode.hpp"
+import leetcode_treenode_cpp.TreeNode;
+using namespace leetcode_treenode_cpp;
 class Solution {
 public:
     TreeNode* sufficientSubset(TreeNode* root, int limit)
