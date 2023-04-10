@@ -1,7 +1,7 @@
 module;
 #include <cmath>
 
-export module valid_perfect_square;
+export module valid_perfect_square.Solution;
 namespace valid_perfect_square
 {
 
