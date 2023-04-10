@@ -33,7 +33,9 @@
     "fmt": {
         "files": {
             "exclude": [
-                "target"
+                "target",
+                "x64",
+                "*.cxx.ifc.d.json"
             ]
         },
         "options": {
