@@ -1,3 +1,4 @@
+
 cd ~
 git clone https://gitcode.net/mirrors/microsoft/vcpkg
 cd vcpkg
@@ -24,4 +25,8 @@ cmake ..
 
 make -j8
 sudo make install
-
+cd ~
+mkdir cppmodules
+cd cppmodules
+wget https://github.com/masx200/leetcode-treenode-cpp/archive/refs/tags/1.1.1.zip
+unzip 1.1.1.zip
