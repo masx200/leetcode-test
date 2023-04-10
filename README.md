@@ -49,6 +49,10 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode.cn/problems/complement-of-base-10-integer
+
+https://leetcode.cn/problems/number-complement
+
 https://leetcode.cn/problems/ransom-note
 
 https://leetcode.cn/problems/valid-perfect-square
