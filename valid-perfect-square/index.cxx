@@ -9,7 +9,7 @@ namespace valid_perfect_square
     {
 
     public:
-        auto sqrt(int num)
+        static auto sqrt(int num)
         {
             auto x0 = double(num);
             auto x1 = (10 * double(num) + 10);
