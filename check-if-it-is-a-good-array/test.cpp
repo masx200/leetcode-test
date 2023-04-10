@@ -5,7 +5,7 @@
 #include <iostream>
 
 using namespace std;
-
+using namespace check_if_it_is_a_good_array;
 TEST(check_if_it_is_a_good_array, test1)
 {
     cout << "check-if-it-is-a-good-array" << endl;
