@@ -1,7 +1,7 @@
 package com.github.masx200.leetcode_test.split_message_based_on_limit
 
-import kotlin.test.assertContentEquals
 import org.junit.jupiter.api.Test
+import kotlin.test.assertContentEquals
 
 internal class SolutionTest {
 

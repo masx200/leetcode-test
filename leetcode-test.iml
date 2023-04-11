@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module version="4">
+  <component name="AdditionalModuleElements">
+    <content url="file://$MODULE_DIR$" dumb="true">
+      <sourceFolder url="file://$MODULE_DIR$/remove-vowels-from-a-string" isTestSource="false" />
+    </content>
+  </component>
   <component name="AutoImportedSourceRoots">
     <option name="directories">
       <list>
@@ -17,6 +22,7 @@
         <option value="number-of-distinct-averages" />
         <option value="operations-lcci" />
         <option value="possible-bipartition" />
+        <option value="remove-vowels-from-a-string" />
         <option value="reveal-cards-in-increasing-order" />
         <option value="serialize-and-deserialize-binary-tree" />
         <option value="split-message-based-on-limit" />

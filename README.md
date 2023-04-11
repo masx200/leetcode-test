@@ -49,6 +49,8 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode.cn/problems/remove-vowels-from-a-string/
+
 https://leetcode.cn/problems/sort-the-students-by-their-kth-score
 
 https://leetcode.cn/problems/complement-of-base-10-integer
