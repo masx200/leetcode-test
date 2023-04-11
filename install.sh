@@ -28,5 +28,5 @@ sudo make install
 cd ~
 mkdir cppmodules
 cd cppmodules
-wget  -v -o leetcode-treenode-cpp.zip https://github.com/masx200/leetcode-treenode-cpp/archive/refs/tags/1.1.2.zip
+wget  -v  --output-document=leetcode-treenode-cpp.zip https://github.com/masx200/leetcode-treenode-cpp/archive/refs/tags/1.1.2.zip
 unzip leetcode-treenode-cpp.zip
