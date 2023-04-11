@@ -121,26 +121,21 @@
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\cppmodules\leetcode-treenode-cpp-1.1.1\bfsTravelsal.cxx" />
-    <ClCompile Include="..\..\..\..\cppmodules\leetcode-treenode-cpp-1.1.1\freeTreeNode.cxx" />
-    <ClCompile Include="..\..\..\..\cppmodules\leetcode-treenode-cpp-1.1.1\LeetCodeTreeNodeToString.cxx" />
-    <ClCompile Include="..\..\..\..\cppmodules\leetcode-treenode-cpp-1.1.1\parseLeetCodeBinaryTree.cxx" />
-    <ClCompile Include="..\..\..\..\cppmodules\leetcode-treenode-cpp-1.1.1\serializeTreeNode.cxx" />
-    <ClCompile Include="..\..\..\..\cppmodules\leetcode-treenode-cpp-1.1.1\traversalTreeNode.cxx" />
-    <ClCompile Include="..\..\..\..\cppmodules\leetcode-treenode-cpp-1.1.1\TreeNode.cxx" />
+    <ClCompile Include="..\..\..\..\..\..\cppmoudules\leetcode-treenode-cpp-1.1.2\leetcode-treenode-cpp-1.1.2\bfsTravelsal.cxx" />
+    <ClCompile Include="..\..\..\..\..\..\cppmoudules\leetcode-treenode-cpp-1.1.2\leetcode-treenode-cpp-1.1.2\freeTreeNode.cxx" />
+    <ClCompile Include="..\..\..\..\..\..\cppmoudules\leetcode-treenode-cpp-1.1.2\leetcode-treenode-cpp-1.1.2\LeetCodeTreeNodeToString.cxx" />
+    <ClCompile Include="..\..\..\..\..\..\cppmoudules\leetcode-treenode-cpp-1.1.2\leetcode-treenode-cpp-1.1.2\parseLeetCodeBinaryTree.cxx" />
+    <ClCompile Include="..\..\..\..\..\..\cppmoudules\leetcode-treenode-cpp-1.1.2\leetcode-treenode-cpp-1.1.2\serializeTreeNode.cxx" />
+    <ClCompile Include="..\..\..\..\..\..\cppmoudules\leetcode-treenode-cpp-1.1.2\leetcode-treenode-cpp-1.1.2\traversalTreeNode.cxx" />
+    <ClCompile Include="..\..\..\..\..\..\cppmoudules\leetcode-treenode-cpp-1.1.2\leetcode-treenode-cpp-1.1.2\TreeNode.cxx" />
     <ClCompile Include="test.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="bfsTravelsal.hpp" />
     <ClInclude Include="debugTreeNode.hpp" />
     <ClInclude Include="EqualTreeNode.hpp" />
-    <ClInclude Include="freeTreeNode.hpp" />
     <ClInclude Include="HashTreeNode.hpp" />
     <ClInclude Include="index.hpp" />
-    <ClInclude Include="LeetCodeTreeNodeToString.hpp" />
     <ClInclude Include="printTreeNode.hpp" />
-    <ClInclude Include="serializeTreeNode.hpp" />
-    <ClInclude Include="TreeNode.hpp" />
     <ClInclude Include="parseLeetCodeBinaryTree.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
