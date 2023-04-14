@@ -1,8 +1,8 @@
 
 #include<unordered_map>
-using std::unordered_map;
-namespace fibonacci_number{
 
+namespace fibonacci_number{
+using std::unordered_map;
 class Solution {
 
     
