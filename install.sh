@@ -12,19 +12,15 @@ cd vcpkg
  
  ~/vcpkg/vcpkg install  gtest
 cd ~
-#sudo apt install -y libcppunit-dev
+sudo apt install -y libcppunit-dev
 cd ~
-#git clone https://github.com/google/googletest
-#cd googletest
-
-#mkdir build
-
-#cd build
-
-#cmake ..
-
-#make -j8
-#sudo make install
+git clone https://github.com/google/googletest
+cd googletest
+mkdir build
+cd build
+cmake ..
+make -j8
+sudo make install
 cd ~
 mkdir cppmodules
 cd cppmodules
