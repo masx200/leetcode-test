@@ -65,7 +65,7 @@ jobs:
                  /usr/local/opt/llvm/bin/clang --version
                  /usr/local/share/vcpkg/vcpkg install cppunit:x64-osx
 
-    - name: make test
+    - name: make test check-if-it-is-a-good-array
 
       run: |
             cd check-if-it-is-a-good-array
