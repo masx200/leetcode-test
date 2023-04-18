@@ -7,9 +7,9 @@ name: Build
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "master" ]
 
 
   # Path to the solution file relative to the root of the project.
