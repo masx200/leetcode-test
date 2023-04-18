@@ -1,41 +1,54 @@
 // +build ignore
 
-#include "index.hpp"
+//#include "index.ixx"
 #include <gtest/gtest.h>
 #include <iostream>
 
+import check_if_it_is_a_good_array.Solution;
 using namespace std;
 using namespace check_if_it_is_a_good_array;
-TEST(check_if_it_is_a_good_array, test1)
+TEST(check_if_it_is_a_good_array, test1
+)
 {
-    cout << "check-if-it-is-a-good-array" << endl;
-    auto nums = vector<int>{12, 5, 7, 23};
+cout << "check-if-it-is-a-good-array" <<
+endl;
+auto nums = vector < int > {12, 5, 7, 23};
 
-    auto output = true;
+auto output = true;
 
-    EXPECT_EQ(output, Solution().isGoodArray(nums));
+EXPECT_EQ(output, Solution()
+.
+isGoodArray(nums)
+);
 }
-TEST(check_if_it_is_a_good_array, test2)
+TEST(check_if_it_is_a_good_array, test2
+)
 {
 
-    auto nums = vector<int>{29, 6, 10};
+auto nums = vector < int > {29, 6, 10};
 
-    auto output = true;
+auto output = true;
 
-    EXPECT_EQ(output, Solution().isGoodArray(nums));
+EXPECT_EQ(output, Solution()
+.
+isGoodArray(nums)
+);
 }
-TEST(check_if_it_is_a_good_array, test3)
+TEST(check_if_it_is_a_good_array, test3
+)
 {
 
-    auto nums = vector<int>{3, 6};
+auto nums = vector < int > {3, 6};
 
-    auto output = false;
+auto output = false;
 
-    EXPECT_EQ(output, Solution().isGoodArray(nums));
+EXPECT_EQ(output, Solution()
+.
+isGoodArray(nums)
+);
 }
 
-int main(int argc, char **argv)
-{
+int main(int argc, char **argv) {
     testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
 }
