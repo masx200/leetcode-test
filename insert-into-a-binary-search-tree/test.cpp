@@ -2,7 +2,7 @@
 
 // #include "TreeNode.hpp"
 // #include "freeTreeNode.hpp"
-#include "index.hpp"
+//#include "index.hpp"
 // #include "serializeTreeNode.hpp"
 #include <cppunit/TestResult.h>
 #include <cppunit/TestResultCollector.h>
@@ -17,20 +17,25 @@
 #include <sstream>
 #include <unordered_set>
 using namespace std;
-#include "EqualTreeNode.hpp"
-#include "HashTreeNode.hpp"
+//#include "EqualTreeNode.hpp"
+//#include "HashTreeNode.hpp"
 // #include "bfsTravelsal.hpp"
 // #include "LeetCodeTreeNodeToString.hpp"
-#include "debugTreeNode.hpp"
+//#include "debugTreeNode.mxx"
 // #include "parseLeetCodeBinaryTree.hpp"
-#include "printTreeNode.hpp"
+//#include "printTreeNode.hpp"
 import leetcode_treenode_cpp.TreeNode;
 using namespace leetcode_treenode_cpp;
 import leetcode_treenode_cpp.freeTreeNode;
 import leetcode_treenode_cpp.serializeTreeNode;
 import leetcode_treenode_cpp.LeetCodeTreeNodeToString;
 import leetcode_treenode_cpp.parseLeetCodeBinaryTree;
-using namespace insert_into_a_binary_search_tree;
+
+import insert_into_a_binary_search_tree.Solution;
+import insert_into_a_binary_search_tree.HashTreeNode;
+import insert_into_a_binary_search_tree.EqualTreeNode;
+using
+namespace insert_into_a_binary_search_tree;
 void println(int s)
 {
     cout << s << endl;
