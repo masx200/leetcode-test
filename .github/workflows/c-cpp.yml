@@ -1,4 +1,10 @@
 name: C/C++ CI
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+
+#name: Build
 
 on:
   push:
@@ -6,17 +12,69 @@ on:
   pull_request:
     branches: [ "master" ]
 
+
+  # Path to the solution file relative to the root of the project.
+
+
+  # Configuration type to build.
+  # You can convert this to a build matrix if you need coverage of multiple configuration types.
+  # https://docs.github.com/actions/learn-github-actions/managing-complex-workflows#using-a-build-matrix
+  
+
+permissions:
+  contents: read
+
 jobs:
   build:
-
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
 
     steps:
     - uses: actions/checkout@v3
-    - name: install
-      run: sh ./install.sh
-    - name: make
-      run: sh ./make.sh
-    - name: test
-      run: sh ./test.sh
 
+    
+
+    - name: install
+
+      run: |
+            brew install llvm@16
+
+            brew install xmake
+            brew install libtool automake
+
+                  cd ~
+
+                  git clone https://gitcode.net/mirrors/microsoft/vcpkg
+
+                  cd vcpkg
+
+                  sh bootstrap-vcpkg.sh
+
+                  ~/vcpkg/vcpkg integrate install
+
+                  ~/vcpkg/vcpkg integrate bash
+
+                  
+                   #cd ~
+                 #  bash <(curl -fsSL https://xmake.io/shget.text)   
+                 export LDFLAGS="-L/usr/local/opt/llvm/lib"
+
+                 export CPPFLAGS="-I/usr/local/opt/llvm/include"
+                 
+                 echo 'export PATH="/usr/local/opt/llvm/bin:$PATH"' >> /Users/runner/.bash_profile
+                 
+                 /usr/bin/clang --version
+                 /usr/local/opt/llvm/bin/clang --version
+                 /usr/local/share/vcpkg/vcpkg install cppunit:x64-osx
+
+ 
+
+    - name: make test insufficient-nodes-in-root-to-leaf-paths
+
+      run: |
+            cd insert-into-a-binary-search-tree
+      
+      
+            xmake f --toolchain=llvm --sdk=/usr/local/opt/llvm/ -y -v
+            xmake build -v -y
+            xmake run -v
+           
