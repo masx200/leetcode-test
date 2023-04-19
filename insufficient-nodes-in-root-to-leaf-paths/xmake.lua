@@ -9,7 +9,7 @@ target("insufficient-nodes-in-root-to-leaf-paths")
     set_kind("static")
     add_files("debugTreeNode.mxx")
     add_files("printTreeNode.mxx")
-
+target_end()
 target("test")
     set_kind("binary")
     
@@ -19,6 +19,7 @@ set_policy("build.c++.modules", true)
 add_packages("vcpkg::gtest")
     add_deps("insufficient-nodes-in-root-to-leaf-paths")
 add_packages("leetcode-treenode-cpp")
+target_end()
 --
 -- If you want to known more usage about xmake, please see https://xmake.io
 --
