@@ -2,7 +2,7 @@
 
 module;
 
-//#pragma once
+// #pragma once
 
 export module insert_into_a_binary_search_tree.EqualTreeNode;
 
@@ -11,11 +11,11 @@ export module insert_into_a_binary_search_tree.EqualTreeNode;
 import leetcode_treenode_cpp.TreeNode;
 using namespace leetcode_treenode_cpp;
 
-namespace insert_into_a_binary_search_tree{
-    export
-struct EqualTreeNode {
+namespace insert_into_a_binary_search_tree {
+export struct EqualTreeNode {
     bool operator()(const TreeNode* lhs, const TreeNode* rhs) const
     {
         return lhs == rhs;
     }
-};}
+};
+}

@@ -2,7 +2,7 @@
 
 // #include "TreeNode.hpp"
 // #include "freeTreeNode.hpp"
-//#include "index.hpp"
+// #include "index.hpp"
 // #include "serializeTreeNode.hpp"
 
 #include <cppunit/TestResult.h>
@@ -18,13 +18,13 @@
 #include <sstream>
 #include <unordered_set>
 
-//#include "EqualTreeNode.hpp"
-//#include "HashTreeNode.hpp"
-// #include "bfsTravelsal.hpp"
-// #include "LeetCodeTreeNodeToString.hpp"
-//#include "debugTreeNode.mxx"
-// #include "parseLeetCodeBinaryTree.hpp"
-//#include "printTreeNode.hpp"
+// #include "EqualTreeNode.hpp"
+// #include "HashTreeNode.hpp"
+//  #include "bfsTravelsal.hpp"
+//  #include "LeetCodeTreeNodeToString.hpp"
+// #include "debugTreeNode.mxx"
+//  #include "parseLeetCodeBinaryTree.hpp"
+// #include "printTreeNode.hpp"
 
 import leetcode_treenode_cpp.serializeTreeNode;
 import leetcode_treenode_cpp.TreeNode;
@@ -40,7 +40,6 @@ import insert_into_a_binary_search_tree.EqualTreeNode;
 using namespace insert_into_a_binary_search_tree;
 using namespace leetcode_treenode_cpp;
 using namespace std;
-
 
 import insert_into_a_binary_search_tree.printTreeNode;
 
@@ -67,7 +66,7 @@ void test1()
 {
     println("insert-into-a-binary-search-tree");
     println("test1 start");
-    TreeNode *none = NULL;
+    TreeNode* none = NULL;
 
     auto result2 = Solution().insertIntoBST(none, 111);
 
@@ -75,11 +74,10 @@ void test1()
     assertEquals(serializeTreeNode(none), "null");
     println(serializeTreeNode(result2));
     assertEquals(serializeTreeNode(result2),
-                 "TreeNode{val:111,left:null,right:null}");
+        "TreeNode{val:111,left:null,right:null}");
 
-    auto nodes = unordered_set<TreeNode *, HashTreeNode, EqualTreeNode>{none, result2};
-    for (auto node : nodes)
-    {
+    auto nodes = unordered_set<TreeNode*, HashTreeNode, EqualTreeNode> { none, result2 };
+    for (auto node : nodes) {
         printTreeNode(node);
         freeTreeNode(node);
     }
@@ -92,30 +90,27 @@ void test2()
     auto tree = new TreeNode(99);
     println(serializeTreeNode(tree));
     assertEquals(serializeTreeNode(tree),
-                 "TreeNode{val:99,left:null,right:null}");
+        "TreeNode{val:99,left:null,right:null}");
     auto result = Solution().insertIntoBST(tree, 111);
 
     println(serializeTreeNode(result));
     assertEquals(serializeTreeNode(result),
-                 "TreeNode{val:99,left:null,right:TreeNode{val:111,left:null,"
-                 "right:null}}");
+        "TreeNode{val:99,left:null,right:TreeNode{val:111,left:null,"
+        "right:null}}");
 
-    auto nodes = unordered_set<TreeNode *, HashTreeNode, EqualTreeNode>{tree, result};
-    for (auto node : nodes)
-    {
+    auto nodes = unordered_set<TreeNode*, HashTreeNode, EqualTreeNode> { tree, result };
+    for (auto node : nodes) {
         printTreeNode(node);
         freeTreeNode(node);
     }
     println("test2 end");
 }
-struct ExampleType
-{
+struct ExampleType {
     string root;
     int val;
     string output;
 };
-class StringTest : public CppUnit::TestFixture
-{
+class StringTest : public CppUnit::TestFixture {
     CPPUNIT_TEST_SUITE(StringTest);
     CPPUNIT_TEST(testSwap);
     CPPUNIT_TEST(testFind);
@@ -126,36 +121,34 @@ class StringTest : public CppUnit::TestFixture
     CPPUNIT_TEST_SUITE_END();
 
 public:
-    void setUp() {}
+    void setUp() { }
     void test4()
     {
 
-        auto examples = vector<ExampleType>{{"[4,2,7,1,3]", 5, "[4,2,7,1,3,5]"},
+        auto examples = vector<ExampleType> { { "[4,2,7,1,3]", 5, "[4,2,7,1,3,5]" },
 
-                                            {"[40,20,60,10,30,50,70]", 25, "[40,20,60,10,30,50,70,null,null,25]"},
-                                            {"[4,2,7,1,3,null,null,null,null,null,null]", 5, "[4,2,7,1,3,5]"}};
+            { "[40,20,60,10,30,50,70]", 25, "[40,20,60,10,30,50,70,null,null,25]" },
+            { "[4,2,7,1,3,null,null,null,null,null,null]", 5, "[4,2,7,1,3,5]" } };
 
-        for (auto &example : examples)
-        {
-            TreeNode *root = nullptr;
+        for (auto& example : examples) {
+            TreeNode* root = nullptr;
             int status = parseLeetCodeBinaryTree(example.root, &root);
             CPPUNIT_ASSERT_EQUAL(0, status);
             auto output = Solution().insertIntoBST(root, example.val);
 
             CPPUNIT_ASSERT_EQUAL(LeetCodeTreeNodeToString(output),
-                                 example.output);
+                example.output);
             println(example.root);
             println(example.val);
             println(example.output);
-            auto nodes = unordered_set<TreeNode *, HashTreeNode, EqualTreeNode>{root, output};
-            for (auto node : nodes)
-            {
+            auto nodes = unordered_set<TreeNode*, HashTreeNode, EqualTreeNode> { root, output };
+            for (auto node : nodes) {
                 printTreeNode(node);
                 freeTreeNode(node);
             }
         }
     }
-    void tearDown() {}
+    void tearDown() { }
 
     void testSwap() { test1(); }
 
@@ -166,7 +159,7 @@ public:
         println("test3 start");
         auto rawString = string("[4,2,7,1,3]");
         auto val = 5;
-        TreeNode *root = nullptr;
+        TreeNode* root = nullptr;
         int status = parseLeetCodeBinaryTree(rawString, &root);
         CPPUNIT_ASSERT_EQUAL(0, status);
 
@@ -177,7 +170,7 @@ public:
         println(serializeTreeNode(root));
         auto serialized = string("TreeNode{val:4,left:TreeNode{val:2,left:TreeNode{val:1,left:null,right:null},right:TreeNode{val:3,left:null,right:null}},right:TreeNode{val:7,left:null,right:null}}");
         CPPUNIT_ASSERT_EQUAL(serializeTreeNode(root),
-                             serialized);
+            serialized);
         freeTreeNode(root);
         println("test3 end");
     }
@@ -186,7 +179,7 @@ public:
         println("test5 start");
         auto rawString = string("[-4,-2,-7,-1,-3]");
         auto val = 5;
-        TreeNode *root = nullptr;
+        TreeNode* root = nullptr;
         int status = parseLeetCodeBinaryTree(rawString, &root);
         CPPUNIT_ASSERT_EQUAL(0, status);
 
@@ -197,7 +190,7 @@ public:
         println(serializeTreeNode(root));
         auto serialized = string("TreeNode{val:-4,left:TreeNode{val:-2,left:TreeNode{val:-1,left:null,right:null},right:TreeNode{val:-3,left:null,right:null}},right:TreeNode{val:-7,left:null,right:null}}");
         CPPUNIT_ASSERT_EQUAL(serializeTreeNode(root),
-                             serialized);
+            serialized);
         freeTreeNode(root);
         println("test5 end");
     }
@@ -205,7 +198,7 @@ public:
 
 CPPUNIT_TEST_SUITE_REGISTRATION(StringTest);
 
-int main(int argc, char *argv[])
+int main(int argc, char* argv[])
 {
     CppUnit::TestResult r;
     CppUnit::TestResultCollector rc;
