@@ -40,6 +40,10 @@ import insert_into_a_binary_search_tree.EqualTreeNode;
 using namespace insert_into_a_binary_search_tree;
 using namespace leetcode_treenode_cpp;
 using namespace std;
+
+
+import insert_into_a_binary_search_tree.printTreeNode;
+
 void println(int s)
 {
     cout << s << endl;
