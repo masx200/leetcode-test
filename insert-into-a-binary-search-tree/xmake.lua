@@ -1,5 +1,8 @@
-add_repositories("repo1 https://ghproxy.com/https://github.com/masx200/xmake-repo.git")
+
 add_repositories("repo2 https://gitee.com/masx200/xmake-repo.git")
+
+add_repositories("repo1 https://ghproxy.com/https://github.com/masx200/xmake-repo.git")
+
 add_rules("mode.debug", "mode.release")
 add_requires("leetcode-treenode-cpp")
 add_requires("vcpkg::cppunit")

@@ -4,6 +4,7 @@
 // #include "freeTreeNode.hpp"
 //#include "index.hpp"
 // #include "serializeTreeNode.hpp"
+
 #include <cppunit/TestResult.h>
 #include <cppunit/TestResultCollector.h>
 #include <cppunit/TestRunner.h>
@@ -24,10 +25,12 @@
 //#include "debugTreeNode.mxx"
 // #include "parseLeetCodeBinaryTree.hpp"
 //#include "printTreeNode.hpp"
+
+import leetcode_treenode_cpp.serializeTreeNode;
 import leetcode_treenode_cpp.TreeNode;
 
 import leetcode_treenode_cpp.freeTreeNode;
-import leetcode_treenode_cpp.serializeTreeNode;
+
 import leetcode_treenode_cpp.LeetCodeTreeNodeToString;
 import leetcode_treenode_cpp.parseLeetCodeBinaryTree;
 
