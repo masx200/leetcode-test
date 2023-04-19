@@ -16,6 +16,7 @@ import leetcode_treenode_cpp.LeetCodeTreeNodeToString;
 import leetcode_treenode_cpp.parseLeetCodeBinaryTree;
 import insert_into_a_binary_search_tree.printTreeNode;
 using namespace insufficient_nodes_in_root_to_leaf_paths;
+using insert_into_a_binary_search_tree::printTreeNode;
 void LeetCode1080TestExamples(std::string& root, int limit, std::string& output)
 {
     TreeNode* tree = nullptr;
