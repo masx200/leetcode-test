@@ -75,3 +75,14 @@ jobs:
             xmake build -v -y
             xmake run -v
            
+
+    - name: make test insert-into-a-binary-search-tree
+
+      run: |
+            cd insert-into-a-binary-search-tree
+      
+      
+            xmake f --toolchain=llvm --sdk=/usr/local/opt/llvm/ -y -v
+            xmake build -v -y
+            xmake run -v
+           

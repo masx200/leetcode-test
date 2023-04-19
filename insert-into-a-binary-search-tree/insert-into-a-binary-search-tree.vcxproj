@@ -131,12 +131,11 @@
     <ClCompile Include="test.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="debugTreeNode.hpp" />
-    <ClInclude Include="EqualTreeNode.hpp" />
-    <ClInclude Include="HashTreeNode.hpp" />
-    <ClInclude Include="index.hpp" />
-    <ClInclude Include="printTreeNode.hpp" />
-    <ClInclude Include="parseLeetCodeBinaryTree.hpp" />
+    <None Include="debugTreeNode.mxx" />
+    <None Include="EqualTreeNode.mxx" />
+    <None Include="HashTreeNode.mxx" />
+    <None Include="index.mxx" />
+    <None Include="printTreeNode.mxx" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
