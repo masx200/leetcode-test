@@ -2,7 +2,7 @@
 
 // #include "../insert-into-a-binary-search-tree/LeetCodeTreeNodeToString.hpp"
 // #include "../insert-into-a-binary-search-tree/parseLeetCodeBinaryTree.hpp"
-#include "../insert-into-a-binary-search-tree/printTreeNode.hpp"
+//#include "../insert-into-a-binary-search-tree/printTreeNode.hpp"
 #include "index.hpp"
 // #include "traversalTreeNode.hpp"
 #include <gtest/gtest.h>
@@ -14,7 +14,7 @@ using namespace leetcode_treenode_cpp;
 import leetcode_treenode_cpp.traversalTreeNode;
 import leetcode_treenode_cpp.LeetCodeTreeNodeToString;
 import leetcode_treenode_cpp.parseLeetCodeBinaryTree;
-
+import insert_into_a_binary_search_tree.printTreeNode;
 using namespace insufficient_nodes_in_root_to_leaf_paths;
 void LeetCode1080TestExamples(std::string& root, int limit, std::string& output)
 {
