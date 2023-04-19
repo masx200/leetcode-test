@@ -16,7 +16,7 @@
 
 #include <sstream>
 #include <unordered_set>
-using namespace std;
+
 //#include "EqualTreeNode.hpp"
 //#include "HashTreeNode.hpp"
 // #include "bfsTravelsal.hpp"
@@ -25,7 +25,7 @@ using namespace std;
 // #include "parseLeetCodeBinaryTree.hpp"
 //#include "printTreeNode.hpp"
 import leetcode_treenode_cpp.TreeNode;
-using namespace leetcode_treenode_cpp;
+
 import leetcode_treenode_cpp.freeTreeNode;
 import leetcode_treenode_cpp.serializeTreeNode;
 import leetcode_treenode_cpp.LeetCodeTreeNodeToString;
@@ -34,8 +34,9 @@ import leetcode_treenode_cpp.parseLeetCodeBinaryTree;
 import insert_into_a_binary_search_tree.Solution;
 import insert_into_a_binary_search_tree.HashTreeNode;
 import insert_into_a_binary_search_tree.EqualTreeNode;
-using
-namespace insert_into_a_binary_search_tree;
+using namespace insert_into_a_binary_search_tree;
+using namespace leetcode_treenode_cpp;
+using namespace std;
 void println(int s)
 {
     cout << s << endl;
