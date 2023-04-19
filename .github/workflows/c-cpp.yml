@@ -71,7 +71,7 @@ jobs:
     - name: make test insufficient-nodes-in-root-to-leaf-paths
 
       run: |
-            cd insert-into-a-binary-search-tree
+            cd insufficient-nodes-in-root-to-leaf-paths
       
       
             xmake f --toolchain=llvm --sdk=/usr/local/opt/llvm/ -y -v
