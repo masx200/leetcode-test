@@ -121,17 +121,27 @@
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\cppmodules\leetcode-treenode-cpp-1.1.1\bfsTravelsal.cxx" />
-    <ClCompile Include="..\..\..\..\cppmodules\leetcode-treenode-cpp-1.1.1\freeTreeNode.cxx" />
-    <ClCompile Include="..\..\..\..\cppmodules\leetcode-treenode-cpp-1.1.1\LeetCodeTreeNodeToString.cxx" />
-    <ClCompile Include="..\..\..\..\cppmodules\leetcode-treenode-cpp-1.1.1\parseLeetCodeBinaryTree.cxx" />
-    <ClCompile Include="..\..\..\..\cppmodules\leetcode-treenode-cpp-1.1.1\serializeTreeNode.cxx" />
-    <ClCompile Include="..\..\..\..\cppmodules\leetcode-treenode-cpp-1.1.1\traversalTreeNode.cxx" />
-    <ClCompile Include="..\..\..\..\cppmodules\leetcode-treenode-cpp-1.1.1\TreeNode.cxx" />
+    <ClInclude Include="index.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\AppData\Local\.xmake\packages\l\leetcode-treenode-cpp\1.1.5\b1903a6858b741129d0a3829b3410c34\modules\leetcode-treenode-cpp\bfsTravelsal.ixx" />
+    <ClCompile Include="..\..\..\..\AppData\Local\.xmake\packages\l\leetcode-treenode-cpp\1.1.5\b1903a6858b741129d0a3829b3410c34\modules\leetcode-treenode-cpp\freeTreeNode.ixx" />
+    <ClCompile Include="..\..\..\..\AppData\Local\.xmake\packages\l\leetcode-treenode-cpp\1.1.5\b1903a6858b741129d0a3829b3410c34\modules\leetcode-treenode-cpp\parseLeetCodeBinaryTree.ixx" />
+    <ClCompile Include="..\..\..\..\AppData\Local\.xmake\packages\l\leetcode-treenode-cpp\1.1.5\b1903a6858b741129d0a3829b3410c34\modules\leetcode-treenode-cpp\serializeTreeNode.ixx" />
+    <ClCompile Include="..\..\..\..\AppData\Local\.xmake\packages\l\leetcode-treenode-cpp\1.1.5\b1903a6858b741129d0a3829b3410c34\modules\leetcode-treenode-cpp\traversalTreeNode.ixx" />
+    <ClCompile Include="..\..\..\..\AppData\Local\.xmake\packages\l\leetcode-treenode-cpp\1.1.5\b1903a6858b741129d0a3829b3410c34\modules\leetcode-treenode-cpp\TreeNode.ixx" />
     <ClCompile Include="test.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="index.hpp" />
+    <ClCompile Include="..\..\..\..\AppData\Local\.xmake\packages\l\leetcode-treenode-cpp\1.1.5\b1903a6858b741129d0a3829b3410c34\modules\leetcode-treenode-cpp\LeetCodeTreeNodeToString.mpp">
+      <FileType>Document</FileType>
+    </ClCompile>
+    <ClCompile Include="debugTreeNode.mxx">
+      <FileType>Document</FileType>
+    </ClCompile>
+    <ClCompile Include="printTreeNode.mxx">
+      <FileType>Document</FileType>
+    </ClCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
