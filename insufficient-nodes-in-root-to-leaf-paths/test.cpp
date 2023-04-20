@@ -3,12 +3,13 @@
 // #include "../insert-into-a-binary-search-tree/LeetCodeTreeNodeToString.hpp"
 // #include "../insert-into-a-binary-search-tree/parseLeetCodeBinaryTree.hpp"
 // #include "../insert-into-a-binary-search-tree/printTreeNode.hpp"
-#include "index.hpp"
+//#include "index.ixx"
 // #include "traversalTreeNode.hpp"
 #include <gtest/gtest.h>
 #include <iostream>
 #include <string>
 using namespace std;
+import insufficient_nodes_in_root_to_leaf_paths.Solution;
 import leetcode_treenode_cpp.TreeNode;
 using namespace leetcode_treenode_cpp;
 import leetcode_treenode_cpp.traversalTreeNode;

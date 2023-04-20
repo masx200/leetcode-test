@@ -1,5 +1,7 @@
-add_repositories("masx200/xmake-repo https://ghproxy.com/https://github.com/masx200/xmake-repo.git")
+
 add_repositories("masx200/xmake-repo https://gitee.com/masx200/xmake-repo.git")
+
+add_repositories("masx200/xmake-repo https://ghproxy.com/https://github.com/masx200/xmake-repo.git")
 
 add_rules("mode.debug", "mode.release")
 add_requires("leetcode-treenode-cpp")
@@ -14,7 +16,7 @@ add_requires("vcpkg::gtest")
 target("test")
     set_kind("binary")
     add_files("debugTreeNode.mxx")
-    add_files("printTreeNode.mxx")
+    add_files("printTreeNode.mxx","*.ixx")
 set_languages("c++20")
 set_policy("build.c++.modules", true)
     add_files("test.cpp")
