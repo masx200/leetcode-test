@@ -18,10 +18,8 @@
     <ClCompile Include="test.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="index.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
+    <ClCompile Include="index.ixx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
