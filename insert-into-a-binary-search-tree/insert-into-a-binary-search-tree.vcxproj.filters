@@ -1,56 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
-    </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="test.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\..\cppmoudules\leetcode-treenode-cpp-1.1.2\leetcode-treenode-cpp-1.1.2\bfsTravelsal.cxx">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\..\cppmoudules\leetcode-treenode-cpp-1.1.2\leetcode-treenode-cpp-1.1.2\freeTreeNode.cxx">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\..\cppmoudules\leetcode-treenode-cpp-1.1.2\leetcode-treenode-cpp-1.1.2\LeetCodeTreeNodeToString.cxx">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\..\cppmoudules\leetcode-treenode-cpp-1.1.2\leetcode-treenode-cpp-1.1.2\parseLeetCodeBinaryTree.cxx">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\..\cppmoudules\leetcode-treenode-cpp-1.1.2\leetcode-treenode-cpp-1.1.2\serializeTreeNode.cxx">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\..\cppmoudules\leetcode-treenode-cpp-1.1.2\leetcode-treenode-cpp-1.1.2\traversalTreeNode.cxx">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\..\cppmoudules\leetcode-treenode-cpp-1.1.2\leetcode-treenode-cpp-1.1.2\TreeNode.cxx">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="HashTreeNode.mxx">
-      <Filter>Source Files</Filter>
-    </None>
-    <None Include="printTreeNode.mxx">
-      <Filter>Source Files</Filter>
-    </None>
-    <None Include="EqualTreeNode.mxx">
-      <Filter>Source Files</Filter>
-    </None>
-    <None Include="index.mxx">
-      <Filter>Source Files</Filter>
-    </None>
-    <None Include="debugTreeNode.mxx">
-      <Filter>Source Files</Filter>
-    </None>
+    <ClCompile Include="..\..\..\..\AppData\Local\.xmake\packages\l\leetcode-treenode-cpp\1.1.5\cfc2bdf7726b496bad82152ad88c5cc0\modules\leetcode-treenode-cpp\bfsTravelsal.ixx" />
+    <ClCompile Include="..\..\..\..\AppData\Local\.xmake\packages\l\leetcode-treenode-cpp\1.1.5\cfc2bdf7726b496bad82152ad88c5cc0\modules\leetcode-treenode-cpp\freeTreeNode.ixx" />
+    <ClCompile Include="..\..\..\..\AppData\Local\.xmake\packages\l\leetcode-treenode-cpp\1.1.5\cfc2bdf7726b496bad82152ad88c5cc0\modules\leetcode-treenode-cpp\parseLeetCodeBinaryTree.ixx" />
+    <ClCompile Include="..\..\..\..\AppData\Local\.xmake\packages\l\leetcode-treenode-cpp\1.1.5\cfc2bdf7726b496bad82152ad88c5cc0\modules\leetcode-treenode-cpp\serializeTreeNode.ixx" />
+    <ClCompile Include="..\..\..\..\AppData\Local\.xmake\packages\l\leetcode-treenode-cpp\1.1.5\cfc2bdf7726b496bad82152ad88c5cc0\modules\leetcode-treenode-cpp\traversalTreeNode.ixx" />
+    <ClCompile Include="..\..\..\..\AppData\Local\.xmake\packages\l\leetcode-treenode-cpp\1.1.5\cfc2bdf7726b496bad82152ad88c5cc0\modules\leetcode-treenode-cpp\TreeNode.ixx" />
+    <ClCompile Include="test.cpp" />
+    <ClCompile Include="debugTreeNode.mxx" />
+    <ClCompile Include="..\..\..\..\AppData\Local\.xmake\packages\l\leetcode-treenode-cpp\1.1.5\b1903a6858b741129d0a3829b3410c34\modules\leetcode-treenode-cpp\LeetCodeTreeNodeToString.mpp" />
+    <ClCompile Include="index.mxx" />
+    <ClCompile Include="EqualTreeNode.mxx" />
+    <ClCompile Include="HashTreeNode.mxx" />
+    <ClCompile Include="printTreeNode.mxx" />
   </ItemGroup>
 </Project>
