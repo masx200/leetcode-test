@@ -6,4 +6,4 @@ set(CMAKE_CXX_STANDARD 20)
 include_directories(.)
 
 add_executable(fibonacci_number
-        index.cpp)
+        index.ixx)

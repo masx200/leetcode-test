@@ -2,7 +2,7 @@ add_rules("mode.debug", "mode.release")
 
 target("fibonacci-number")
     set_kind("static")
-    add_files("index.cpp")
+    add_files("index.ixx")
 set_languages("c++20")
 set_policy("build.c++.modules", true)
 target_end()
