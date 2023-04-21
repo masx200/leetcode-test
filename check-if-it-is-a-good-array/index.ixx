@@ -1,11 +1,11 @@
 module;
 // +build ignore
 
-#pragma once
+//#pragma once
 
 #include <vector>
 
-#include <algorithm>
+//#include <algorithm>
 #include <numeric>
 
 export module check_if_it_is_a_good_array.Solution;
