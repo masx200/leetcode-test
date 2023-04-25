@@ -2415,6 +2415,8 @@ https://leetcode.cn/problems/flatten-deeply-nested-array
 
 https://leetcode.cn/problems/promise-time-limit/
 
+https://leetcode.cn/problems/design-cancellable-function/
+
 </details>
 
 #### 安装教程
