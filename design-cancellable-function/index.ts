@@ -2,6 +2,13 @@ function cancellable<T>(
     generator: Generator<Promise<any>, T, unknown>,
 ): [() => void, Promise<T>] {
     const ac = new AbortController();
+    const cancel_promise = new Promise((_s, j) => {
+        ac.signal.addEventListener(
+            "abort",
+            //@ts-ignore
+            () => j("Cancelled"),
+        );
+    });
 
     function cancel() {
         //@ts-ignore
@@ -32,13 +39,7 @@ function cancellable<T>(
                 try {
                     yield_value = await Promise.race([
                         value,
-                        new Promise((_s, j) => {
-                            ac.signal.addEventListener(
-                                "abort",
-                                //@ts-ignore
-                                () => j("Cancelled"),
-                            );
-                        }),
+                        cancel_promise,
                     ]);
                     rejected = false;
                 } catch (error) {
@@ -63,5 +64,4 @@ function cancellable<T>(
  * setTimeout(cancel, 50);
  * promise.catch(console.log); // logs "Cancelled" at t=50ms
  */
-
 export default cancellable;
