@@ -2393,6 +2393,8 @@ Step 2. Add the dependency
 
 <https://leetcode.cn/problems/insert-interval/>
 
+https://leetcode.cn/problems/check-if-object-instance-of-class/
+
 <https://leetcode.cn/problems/shu-zu-zhong-shu-zi-chu-xian-de-ci-shu-lcof/>
 
 <https://leetcode.cn/problems/shu-zu-zhong-shu-zi-chu-xian-de-ci-shu-ii-lcof/>
