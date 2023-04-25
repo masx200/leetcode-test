@@ -2411,6 +2411,8 @@ https://leetcode.cn/problems/json-deep-equal
 
 https://leetcode.cn/problems/nested-array-generator/
 
+https://leetcode.cn/problems/flatten-deeply-nested-array
+
 </details>
 
 #### 安装教程
