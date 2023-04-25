@@ -49,6 +49,8 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode.cn/problems/promise-pool/
+
 https://leetcode.cn/problems/memoize
 
 <https://leetcode.cn/problems/convert-object-to-json-string>
