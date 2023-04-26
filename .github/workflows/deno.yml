@@ -9,33 +9,35 @@
 name: Deno
 
 on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+    push:
+        branches: [master]
+    pull_request:
+        branches: [master]
 
 permissions:
-  contents: read
+    contents: read
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
+    test:
+        runs-on: ubuntu-latest
 
-    steps:
-      - name: Setup repo
-        uses: actions/checkout@v3
+        steps:
+            - name: Setup repo
+              uses: actions/checkout@v3
 
-      - name: Setup Deno
- 
-        uses: denoland/setup-deno@v1.1.0
-        with:
-          deno-version: v1.31.1
+            - name: Setup Deno
 
-      - name: Run linter
-        run: deno lint
+              uses: denoland/setup-deno@v1.1.0
+              with:
+                  deno-version: v1.31.1
 
-      - name: Run tests
-        run: deno task test
+            - run: deno task cache
 
-      - name: Run check
-        run: deno task check
+            - name: Run linter
+              run: deno lint
+
+            - name: Run tests
+              run: deno task test
+
+            - name: Run check
+              run: deno task check
