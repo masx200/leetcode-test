@@ -43,6 +43,103 @@ Step 2. Add the dependency
 </dependency>
 ```
 
+#### 安装教程
+
+1.安装`deno`
+
+<https://deno.land/#installation>
+
+2.安装 `udd`
+
+<https://deno.land/x/udd#installation>
+
+#### 使用说明
+
+1.测试
+
+```bash
+deno task test
+```
+
+2.升级依赖
+
+```bash
+deno task udd
+```
+
+3.格式化
+
+```shell
+deno task fmt
+```
+
+4.lint
+
+```bash
+deno task lint
+```
+
+5.type check
+
+```bash
+deno task check
+```
+
+### Deno
+
+<https://deno.land/x/masx200_leetcode_test>
+
+<https://denopkg.com/masx200/leetcode-test>
+
+<https://cdn.jsdelivr.net/gh/masx200/leetcode-test/>
+
+1.导入模块
+
+指定版本号
+
+```ts
+import {} from "https://deno.land/x/masx200_leetcode_test@7.0.0/mod.ts";
+```
+
+2.使用举例
+
+```ts
+import { climbing_stairs_bigint } from "https://deno.land/x/masx200_leetcode_test@7.0.0/mod.ts";
+```
+
+```ts
+import climbing_stairs from "https://deno.land/x/masx200_leetcode_test@7.0.0/climbing-stairs/index.ts";
+```
+
+### Golang
+
+```bash
+go get github.com/masx200/leetcode-test
+```
+
+<https://pkg.go.dev/github.com/masx200/leetcode-test>
+
+#### 参与贡献
+
+1. Fork 本仓库
+2. 新建 Feat_xxx 分支
+3. 提交代码
+4. 新建 Pull Request
+
+### Building a Monorepo in Golang
+
+<https://earthly.dev/blog/golang-monorepo/>
+
+.vscode/settings.json
+
+```json
+{
+    "gopls": {
+        "experimentalWorkspaceModule": true
+    }
+}
+```
+
 ##### 包含的内容如下
 
 <details>
@@ -2445,101 +2542,6 @@ https://leetcode.cn/problems/promise-time-limit/
 
 https://leetcode.cn/problems/design-cancellable-function/
 
+https://leetcode.cn/problems/group-by
+
 </details>
-
-#### 安装教程
-
-1.安装`deno`
-
-<https://deno.land/#installation>
-
-2.安装 `udd`
-
-<https://deno.land/x/udd#installation>
-
-#### 使用说明
-
-1.测试
-
-```bash
-deno task test
-```
-
-2.升级依赖
-
-```bash
-deno task udd
-```
-
-3.格式化
-
-```shell
-deno task fmt
-```
-
-4.lint
-
-```bash
-deno task lint
-```
-
-5.type check
-
-```bash
-deno task check
-```
-
-### Deno
-
-<https://deno.land/x/masx200_leetcode_test>
-
-<https://denopkg.com/masx200/leetcode-test>
-
-<https://cdn.jsdelivr.net/gh/masx200/leetcode-test/>
-
-1.导入模块
-
-指定版本号
-
-```ts
-import {} from "https://deno.land/x/masx200_leetcode_test@7.0.0/mod.ts";
-```
-
-2.使用举例
-
-```ts
-import { climbing_stairs_bigint } from "https://deno.land/x/masx200_leetcode_test@7.0.0/mod.ts";
-```
-
-```ts
-import climbing_stairs from "https://deno.land/x/masx200_leetcode_test@7.0.0/climbing-stairs/index.ts";
-```
-
-### Golang
-
-```bash
-go get github.com/masx200/leetcode-test
-```
-
-<https://pkg.go.dev/github.com/masx200/leetcode-test>
-
-#### 参与贡献
-
-1. Fork 本仓库
-2. 新建 Feat_xxx 分支
-3. 提交代码
-4. 新建 Pull Request
-
-### Building a Monorepo in Golang
-
-<https://earthly.dev/blog/golang-monorepo/>
-
-.vscode/settings.json
-
-```json
-{
-    "gopls": {
-        "experimentalWorkspaceModule": true
-    }
-}
-```
