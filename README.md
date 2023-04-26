@@ -51,6 +51,8 @@ Step 2. Add the dependency
 
 https://leetcode.cn/problems/array-prototype-last
 
+https://leetcode.cn/problems/counter
+
 https://leetcode.cn/problems/filter-elements-from-array
 
 https://leetcode.cn/problems/apply-transform-over-each-element-in-array
