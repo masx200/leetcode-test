@@ -49,6 +49,8 @@ Step 2. Add the dependency
 
 <summary>展开查看</summary>
 
+https://leetcode.cn/problems/snail-traversal/
+
 https://leetcode.cn/problems/function-composition
 
 https://leetcode.cn/problems/array-reduce-transformation/
