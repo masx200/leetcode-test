@@ -50,12 +50,10 @@ public:
 
         if (dog < cat) {
 
-            dogs.pop();
-            return { dog, 1 };
+            return dequeueDog();
         } else {
 
-            cats.pop();
-            return { cat, 0 };
+            return dequeueCat();
         }
     }
 
