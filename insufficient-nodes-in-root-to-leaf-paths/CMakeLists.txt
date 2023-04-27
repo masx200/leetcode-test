@@ -5,65 +5,31 @@
 # project
 cmake_minimum_required(VERSION 3.15.0)
 cmake_policy(SET CMP0091 NEW)
-project(insufficient-nodes-in-root-to-leaf-paths LANGUAGES CXX C)
+project(test LANGUAGES CXX C)
 
 # target
-add_library(insufficient-nodes-in-root-to-leaf-paths STATIC "")
-set_target_properties(insufficient-nodes-in-root-to-leaf-paths PROPERTIES OUTPUT_NAME "insufficient-nodes-in-root-to-leaf-paths")
-set_target_properties(insufficient-nodes-in-root-to-leaf-paths PROPERTIES ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/build/windows/x86/release")
-add_custom_command(OUTPUT output_insufficient-nodes-in-root-to-leaf-paths_FAA879DB
-    COMMAND echo [  0%]: compiling.module.release insert_into_a_binary_search_tree.debugTreeNode
-    COMMAND ${CMAKE_COMMAND} -E make_directory ${CMAKE_SOURCE_DIR}/build/.objs/insufficient-nodes-in-root-to-leaf-paths/windows/x86/release
-    COMMAND "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.35.32215/bin/HostX86/x86/cl.exe" -nologo -O2 -fp:fast -std:c++20 /EHsc -experimental:module -DNDEBUG -TP -c ${CMAKE_SOURCE_DIR}/debugTreeNode.mxx -Fo${CMAKE_SOURCE_DIR}/build/.objs/insufficient-nodes-in-root-to-leaf-paths/windows/x86/release/debugTreeNode.mxx.obj -ifcOutput ${CMAKE_SOURCE_DIR}/build/.gens/insufficient-nodes-in-root-to-leaf-paths/windows/x86/release/rules/modules/cache/18c21dd2/insert_into_a_binary_search_tree.debugTreeNode.ifc -interface
-    COMMAND echo [  0%]: compiling.module.release insert_into_a_binary_search_tree.printTreeNode
-    COMMAND ${CMAKE_COMMAND} -E make_directory ${CMAKE_SOURCE_DIR}/build/.objs/insufficient-nodes-in-root-to-leaf-paths/windows/x86/release
-    COMMAND "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.35.32215/bin/HostX86/x86/cl.exe" -nologo -O2 -fp:fast -std:c++20 /EHsc -experimental:module -DNDEBUG -TP -c ${CMAKE_SOURCE_DIR}/printTreeNode.mxx -Fo${CMAKE_SOURCE_DIR}/build/.objs/insufficient-nodes-in-root-to-leaf-paths/windows/x86/release/printTreeNode.mxx.obj -ifcOutput ${CMAKE_SOURCE_DIR}/build/.gens/insufficient-nodes-in-root-to-leaf-paths/windows/x86/release/rules/modules/cache/18c21dd2/insert_into_a_binary_search_tree.printTreeNode.ifc -interface -reference insert_into_a_binary_search_tree.debugTreeNode=${CMAKE_SOURCE_DIR}/build/.gens/insufficient-nodes-in-root-to-leaf-paths/windows/x86/release/rules/modules/cache/18c21dd2/insert_into_a_binary_search_tree.debugTreeNode.ifc
-    VERBATIM
-)
-add_custom_target(target_insufficient-nodes-in-root-to-leaf-paths_FAA879DB
-    DEPENDS output_insufficient-nodes-in-root-to-leaf-paths_FAA879DB
-)
-add_dependencies(insufficient-nodes-in-root-to-leaf-paths target_insufficient-nodes-in-root-to-leaf-paths_FAA879DB)
-target_compile_options(insufficient-nodes-in-root-to-leaf-paths PRIVATE
-    $<$<COMPILE_LANGUAGE:C>:-DNDEBUG>
-    $<$<COMPILE_LANGUAGE:CXX>:-DNDEBUG>
-    $<$<COMPILE_LANGUAGE:CXX>:-experimental:module>
-)
-if(CMAKE_CXX_COMPILER_FRONTEND_VARIANT STREQUAL "MSVC")
-    target_compile_options(insufficient-nodes-in-root-to-leaf-paths PRIVATE /EHsc)
-else()
-    target_compile_options(insufficient-nodes-in-root-to-leaf-paths PRIVATE -fcxx-exceptions)
-endif()
-set_target_properties(insufficient-nodes-in-root-to-leaf-paths PROPERTIES CXX_EXTENSIONS OFF)
-target_compile_features(insufficient-nodes-in-root-to-leaf-paths PRIVATE cxx_std_20)
-if(MSVC)
-    target_compile_options(insufficient-nodes-in-root-to-leaf-paths PRIVATE $<$<CONFIG:Release>:-Ox -fp:fast>)
-else()
-    target_compile_options(insufficient-nodes-in-root-to-leaf-paths PRIVATE -O3)
-endif()
-if(MSVC)
-else()
-    target_compile_options(insufficient-nodes-in-root-to-leaf-paths PRIVATE -fvisibility=hidden)
-endif()
-if(MSVC)
-    set_property(TARGET insufficient-nodes-in-root-to-leaf-paths PROPERTY
-        MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
-endif()
-target_link_libraries(insufficient-nodes-in-root-to-leaf-paths PRIVATE
-    ${CMAKE_SOURCE_DIR}/build/.objs/insufficient-nodes-in-root-to-leaf-paths/windows/x86/release/debugTreeNode.mxx.obj
-    ${CMAKE_SOURCE_DIR}/build/.objs/insufficient-nodes-in-root-to-leaf-paths/windows/x86/release/printTreeNode.mxx.obj
-)
-target_sources(insufficient-nodes-in-root-to-leaf-paths PRIVATE
-)
-
-# target
-add_executable(test "")
+add_executable(test "" printTreeNode.ixx index.ixx debugTreeNode.ixx)
 set_target_properties(test PROPERTIES OUTPUT_NAME "test")
 set_target_properties(test PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/build/windows/x86/release")
-add_dependencies(test insufficient-nodes-in-root-to-leaf-paths)
+add_custom_command(OUTPUT output_test_FD819566
+    COMMAND echo [  0%]: compiling.module.release insufficient_nodes_in_root_to_leaf_paths.Solution
+    COMMAND ${CMAKE_COMMAND} -E make_directory ${CMAKE_SOURCE_DIR}/build/.objs/test/windows/x86/release
+    COMMAND "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.35.32215/bin/HostX86/x86/cl.exe" -nologo -O2 -fp:fast -std:c++20 /EHsc -external:W0 -external:IC:/Users/Administrator/Documents/vcpkg-master/installed/x86-windows-static/include -external:W0 -external:IC:/Users/Administrator/AppData/Local/.xmake/packages/l/leetcode-treenode-cpp/1.1.6/211379a6b5ca44ac96c02258817ddd07/include -experimental:module -DNDEBUG -TP -c ${CMAKE_SOURCE_DIR}/index.ixx -Fo${CMAKE_SOURCE_DIR}/build/.objs/test/windows/x86/release/index.ixx.obj -ifcOutput ${CMAKE_SOURCE_DIR}/build/.gens/test/windows/x86/release/rules/modules/cache/574a3743/insufficient_nodes_in_root_to_leaf_paths.Solution.ifc -interface
+    COMMAND echo [  0%]: compiling.module.release insert_into_a_binary_search_tree.debugTreeNode
+    COMMAND ${CMAKE_COMMAND} -E make_directory ${CMAKE_SOURCE_DIR}/build/.objs/test/windows/x86/release
+    COMMAND "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.35.32215/bin/HostX86/x86/cl.exe" -nologo -O2 -fp:fast -std:c++20 /EHsc -external:W0 -external:IC:/Users/Administrator/Documents/vcpkg-master/installed/x86-windows-static/include -external:W0 -external:IC:/Users/Administrator/AppData/Local/.xmake/packages/l/leetcode-treenode-cpp/1.1.6/211379a6b5ca44ac96c02258817ddd07/include -experimental:module -DNDEBUG -TP -c ${CMAKE_SOURCE_DIR}/debugTreeNode.ixx -Fo${CMAKE_SOURCE_DIR}/build/.objs/test/windows/x86/release/debugTreeNode.ixx.obj -ifcOutput ${CMAKE_SOURCE_DIR}/build/.gens/test/windows/x86/release/rules/modules/cache/574a3743/insert_into_a_binary_search_tree.debugTreeNode.ifc -interface
+    COMMAND echo [  0%]: compiling.module.release insert_into_a_binary_search_tree.printTreeNode
+    COMMAND ${CMAKE_COMMAND} -E make_directory ${CMAKE_SOURCE_DIR}/build/.objs/test/windows/x86/release
+    COMMAND "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.35.32215/bin/HostX86/x86/cl.exe" -nologo -O2 -fp:fast -std:c++20 /EHsc -external:W0 -external:IC:/Users/Administrator/Documents/vcpkg-master/installed/x86-windows-static/include -external:W0 -external:IC:/Users/Administrator/AppData/Local/.xmake/packages/l/leetcode-treenode-cpp/1.1.6/211379a6b5ca44ac96c02258817ddd07/include -experimental:module -DNDEBUG -TP -c ${CMAKE_SOURCE_DIR}/printTreeNode.ixx -Fo${CMAKE_SOURCE_DIR}/build/.objs/test/windows/x86/release/printTreeNode.ixx.obj -ifcOutput ${CMAKE_SOURCE_DIR}/build/.gens/test/windows/x86/release/rules/modules/cache/574a3743/insert_into_a_binary_search_tree.printTreeNode.ifc -interface -reference insert_into_a_binary_search_tree.debugTreeNode=${CMAKE_SOURCE_DIR}/build/.gens/test/windows/x86/release/rules/modules/cache/574a3743/insert_into_a_binary_search_tree.debugTreeNode.ifc
+    VERBATIM
+)
+add_custom_target(target_test_FD819566
+    DEPENDS output_test_FD819566
+)
+add_dependencies(test target_test_FD819566)
 target_include_directories(test PRIVATE
     C:/Users/Administrator/Documents/vcpkg-master/installed/x86-windows-static/include
-    C:/Users/Administrator/AppData/Local/.xmake/packages/l/leetcode-treenode-cpp/1.1.5/cfc2bdf7726b496bad82152ad88c5cc0/include
+    C:/Users/Administrator/AppData/Local/.xmake/packages/l/leetcode-treenode-cpp/1.1.6/211379a6b5ca44ac96c02258817ddd07/include
 )
 target_compile_options(test PRIVATE
     $<$<COMPILE_LANGUAGE:C>:-DNDEBUG>
@@ -71,7 +37,7 @@ target_compile_options(test PRIVATE
     $<$<COMPILE_LANGUAGE:CXX>:-experimental:module>
 )
 set_source_files_properties(${CMAKE_SOURCE_DIR}/test.cpp PROPERTIES COMPILE_OPTIONS
-    "$<$<COMPILE_LANGUAGE:CXX>:-TP>;$<$<COMPILE_LANGUAGE:CXX>:-c>;$<$<COMPILE_LANGUAGE:CXX>:${CMAKE_SOURCE_DIR}/test.cpp>;$<$<COMPILE_LANGUAGE:CXX>:-Fo${CMAKE_SOURCE_DIR}/build/.objs/test/windows/x86/release/test.cpp.obj>;$<$<COMPILE_LANGUAGE:CXX>:-reference>;$<$<COMPILE_LANGUAGE:CXX>:insert_into_a_binary_search_tree.printTreeNode=${CMAKE_SOURCE_DIR}/build/.gens/insufficient-nodes-in-root-to-leaf-paths/windows/x86/release/rules/modules/cache/18c21dd2/insert_into_a_binary_search_tree.printTreeNode.ifc>;$<$<COMPILE_LANGUAGE:CXX>:-reference>;$<$<COMPILE_LANGUAGE:CXX>:insert_into_a_binary_search_tree.debugTreeNode=${CMAKE_SOURCE_DIR}/build/.gens/insufficient-nodes-in-root-to-leaf-paths/windows/x86/release/rules/modules/cache/18c21dd2/insert_into_a_binary_search_tree.debugTreeNode.ifc>"
+    "$<$<COMPILE_LANGUAGE:CXX>:-TP>;$<$<COMPILE_LANGUAGE:CXX>:-c>;$<$<COMPILE_LANGUAGE:CXX>:${CMAKE_SOURCE_DIR}/test.cpp>;$<$<COMPILE_LANGUAGE:CXX>:-Fo${CMAKE_SOURCE_DIR}/build/.objs/test/windows/x86/release/test.cpp.obj>;$<$<COMPILE_LANGUAGE:CXX>:-reference>;$<$<COMPILE_LANGUAGE:CXX>:insert_into_a_binary_search_tree.printTreeNode=${CMAKE_SOURCE_DIR}/build/.gens/test/windows/x86/release/rules/modules/cache/574a3743/insert_into_a_binary_search_tree.printTreeNode.ifc>;$<$<COMPILE_LANGUAGE:CXX>:-reference>;$<$<COMPILE_LANGUAGE:CXX>:insert_into_a_binary_search_tree.debugTreeNode=${CMAKE_SOURCE_DIR}/build/.gens/test/windows/x86/release/rules/modules/cache/574a3743/insert_into_a_binary_search_tree.debugTreeNode.ifc>;$<$<COMPILE_LANGUAGE:CXX>:-reference>;$<$<COMPILE_LANGUAGE:CXX>:insufficient_nodes_in_root_to_leaf_paths.Solution=${CMAKE_SOURCE_DIR}/build/.gens/test/windows/x86/release/rules/modules/cache/574a3743/insufficient_nodes_in_root_to_leaf_paths.Solution.ifc>"
 )
 if(CMAKE_CXX_COMPILER_FRONTEND_VARIANT STREQUAL "MSVC")
     target_compile_options(test PRIVATE /EHsc)
@@ -99,13 +65,16 @@ target_link_libraries(test PRIVATE
     gmock_main
     gtest_main
     leetcode-treenode-cpp
-    insufficient-nodes-in-root-to-leaf-paths
+)
+target_link_libraries(test PRIVATE
+    ${CMAKE_SOURCE_DIR}/build/.objs/test/windows/x86/release/debugTreeNode.ixx.obj
+    ${CMAKE_SOURCE_DIR}/build/.objs/test/windows/x86/release/printTreeNode.ixx.obj
+    ${CMAKE_SOURCE_DIR}/build/.objs/test/windows/x86/release/index.ixx.obj
 )
 target_link_directories(test PRIVATE
     C:/Users/Administrator/Documents/vcpkg-master/installed/x86-windows-static/lib
     C:/Users/Administrator/Documents/vcpkg-master/installed/x86-windows-static/lib/manual-link
-    C:/Users/Administrator/AppData/Local/.xmake/packages/l/leetcode-treenode-cpp/1.1.5/cfc2bdf7726b496bad82152ad88c5cc0/lib
-    build/windows/x86/release
+    C:/Users/Administrator/AppData/Local/.xmake/packages/l/leetcode-treenode-cpp/1.1.6/211379a6b5ca44ac96c02258817ddd07/lib
 )
 target_sources(test PRIVATE
     test.cpp

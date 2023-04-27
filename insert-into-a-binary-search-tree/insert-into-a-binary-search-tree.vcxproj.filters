@@ -8,11 +8,11 @@
     <ClCompile Include="..\..\..\..\AppData\Local\.xmake\packages\l\leetcode-treenode-cpp\1.1.5\cfc2bdf7726b496bad82152ad88c5cc0\modules\leetcode-treenode-cpp\traversalTreeNode.ixx" />
     <ClCompile Include="..\..\..\..\AppData\Local\.xmake\packages\l\leetcode-treenode-cpp\1.1.5\cfc2bdf7726b496bad82152ad88c5cc0\modules\leetcode-treenode-cpp\TreeNode.ixx" />
     <ClCompile Include="test.cpp" />
-    <ClCompile Include="debugTreeNode.mxx" />
-    <ClCompile Include="..\..\..\..\AppData\Local\.xmake\packages\l\leetcode-treenode-cpp\1.1.5\b1903a6858b741129d0a3829b3410c34\modules\leetcode-treenode-cpp\LeetCodeTreeNodeToString.mpp" />
-    <ClCompile Include="index.mxx" />
-    <ClCompile Include="EqualTreeNode.mxx" />
-    <ClCompile Include="HashTreeNode.mxx" />
-    <ClCompile Include="printTreeNode.mxx" />
+    <ClCompile Include="debugTreeNode.ixx" />
+    <ClCompile Include="..\..\..\..\AppData\Local\.xmake\packages\l\leetcode-treenode-cpp\1.1.5\b1903a6858b741129d0a3829b3410c34\modules\leetcode-treenode-cpp\LeetCodeTreeNodeToString.ixx" />
+    <ClCompile Include="index.ixx" />
+    <ClCompile Include="EqualTreeNode.ixx" />
+    <ClCompile Include="HashTreeNode.ixx" />
+    <ClCompile Include="printTreeNode.ixx" />
   </ItemGroup>
 </Project>

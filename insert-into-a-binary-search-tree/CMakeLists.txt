@@ -8,25 +8,25 @@ cmake_policy(SET CMP0091 NEW)
 project(test LANGUAGES CXX C)
 
 # target
-add_executable(test "" debugTreeNode.mxx EqualTreeNode.mxx index.mxx printTreeNode.mxx HashTreeNode.mxx)
+add_executable(test "" debugTreeNode.ixx EqualTreeNode.ixx index.ixx printTreeNode.ixx HashTreeNode.ixx)
 set_target_properties(test PROPERTIES OUTPUT_NAME "test")
 set_target_properties(test PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/build/windows/x64/release")
 add_custom_command(OUTPUT output_test_1F049C3C
-    COMMAND echo [  0%]: compiling.module.release printTreeNode.mxx
+    COMMAND echo [  0%]: compiling.module.release printTreeNode.ixx
     COMMAND ${CMAKE_COMMAND} -E make_directory ${CMAKE_SOURCE_DIR}/build/.objs/test/windows/x64/release
-    COMMAND "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.35.32215/bin/HostX64/x64/cl.exe" -nologo -O2 -fp:fast -std:c++20 /EHsc -external:W0 -external:IC:/Users/Administrator/Documents/vcpkg-master/installed/x64-windows-static/include -external:W0 -external:IC:/Users/Administrator/AppData/Local/.xmake/packages/l/leetcode-treenode-cpp/1.1.4/1fe8830461144a9a9a2e83efa281352c/include -experimental:module -DNDEBUG -TP -c ${CMAKE_SOURCE_DIR}/printTreeNode.mxx -Fo${CMAKE_SOURCE_DIR}/build/.objs/test/windows/x64/release/printTreeNode.mxx.obj
-    COMMAND echo [  0%]: compiling.module.release index.mxx
+    COMMAND "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.35.32215/bin/HostX64/x64/cl.exe" -nologo -O2 -fp:fast -std:c++20 /EHsc -external:W0 -external:IC:/Users/Administrator/Documents/vcpkg-master/installed/x64-windows-static/include -external:W0 -external:IC:/Users/Administrator/AppData/Local/.xmake/packages/l/leetcode-treenode-cpp/1.1.4/1fe8830461144a9a9a2e83efa281352c/include -experimental:module -DNDEBUG -TP -c ${CMAKE_SOURCE_DIR}/printTreeNode.ixx -Fo${CMAKE_SOURCE_DIR}/build/.objs/test/windows/x64/release/printTreeNode.ixx.obj
+    COMMAND echo [  0%]: compiling.module.release index.ixx
     COMMAND ${CMAKE_COMMAND} -E make_directory ${CMAKE_SOURCE_DIR}/build/.objs/test/windows/x64/release
-    COMMAND "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.35.32215/bin/HostX64/x64/cl.exe" -nologo -O2 -fp:fast -std:c++20 /EHsc -external:W0 -external:IC:/Users/Administrator/Documents/vcpkg-master/installed/x64-windows-static/include -external:W0 -external:IC:/Users/Administrator/AppData/Local/.xmake/packages/l/leetcode-treenode-cpp/1.1.4/1fe8830461144a9a9a2e83efa281352c/include -experimental:module -DNDEBUG -TP -c ${CMAKE_SOURCE_DIR}/index.mxx -Fo${CMAKE_SOURCE_DIR}/build/.objs/test/windows/x64/release/index.mxx.obj
-    COMMAND echo [  0%]: compiling.module.release HashTreeNode.mxx
+    COMMAND "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.35.32215/bin/HostX64/x64/cl.exe" -nologo -O2 -fp:fast -std:c++20 /EHsc -external:W0 -external:IC:/Users/Administrator/Documents/vcpkg-master/installed/x64-windows-static/include -external:W0 -external:IC:/Users/Administrator/AppData/Local/.xmake/packages/l/leetcode-treenode-cpp/1.1.4/1fe8830461144a9a9a2e83efa281352c/include -experimental:module -DNDEBUG -TP -c ${CMAKE_SOURCE_DIR}/index.ixx -Fo${CMAKE_SOURCE_DIR}/build/.objs/test/windows/x64/release/index.ixx.obj
+    COMMAND echo [  0%]: compiling.module.release HashTreeNode.ixx
     COMMAND ${CMAKE_COMMAND} -E make_directory ${CMAKE_SOURCE_DIR}/build/.objs/test/windows/x64/release
-    COMMAND "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.35.32215/bin/HostX64/x64/cl.exe" -nologo -O2 -fp:fast -std:c++20 /EHsc -external:W0 -external:IC:/Users/Administrator/Documents/vcpkg-master/installed/x64-windows-static/include -external:W0 -external:IC:/Users/Administrator/AppData/Local/.xmake/packages/l/leetcode-treenode-cpp/1.1.4/1fe8830461144a9a9a2e83efa281352c/include -experimental:module -DNDEBUG -TP -c ${CMAKE_SOURCE_DIR}/HashTreeNode.mxx -Fo${CMAKE_SOURCE_DIR}/build/.objs/test/windows/x64/release/HashTreeNode.mxx.obj
-    COMMAND echo [  0%]: compiling.module.release EqualTreeNode.mxx
+    COMMAND "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.35.32215/bin/HostX64/x64/cl.exe" -nologo -O2 -fp:fast -std:c++20 /EHsc -external:W0 -external:IC:/Users/Administrator/Documents/vcpkg-master/installed/x64-windows-static/include -external:W0 -external:IC:/Users/Administrator/AppData/Local/.xmake/packages/l/leetcode-treenode-cpp/1.1.4/1fe8830461144a9a9a2e83efa281352c/include -experimental:module -DNDEBUG -TP -c ${CMAKE_SOURCE_DIR}/HashTreeNode.ixx -Fo${CMAKE_SOURCE_DIR}/build/.objs/test/windows/x64/release/HashTreeNode.ixx.obj
+    COMMAND echo [  0%]: compiling.module.release EqualTreeNode.ixx
     COMMAND ${CMAKE_COMMAND} -E make_directory ${CMAKE_SOURCE_DIR}/build/.objs/test/windows/x64/release
-    COMMAND "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.35.32215/bin/HostX64/x64/cl.exe" -nologo -O2 -fp:fast -std:c++20 /EHsc -external:W0 -external:IC:/Users/Administrator/Documents/vcpkg-master/installed/x64-windows-static/include -external:W0 -external:IC:/Users/Administrator/AppData/Local/.xmake/packages/l/leetcode-treenode-cpp/1.1.4/1fe8830461144a9a9a2e83efa281352c/include -experimental:module -DNDEBUG -TP -c ${CMAKE_SOURCE_DIR}/EqualTreeNode.mxx -Fo${CMAKE_SOURCE_DIR}/build/.objs/test/windows/x64/release/EqualTreeNode.mxx.obj
-    COMMAND echo [  0%]: compiling.module.release debugTreeNode.mxx
+    COMMAND "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.35.32215/bin/HostX64/x64/cl.exe" -nologo -O2 -fp:fast -std:c++20 /EHsc -external:W0 -external:IC:/Users/Administrator/Documents/vcpkg-master/installed/x64-windows-static/include -external:W0 -external:IC:/Users/Administrator/AppData/Local/.xmake/packages/l/leetcode-treenode-cpp/1.1.4/1fe8830461144a9a9a2e83efa281352c/include -experimental:module -DNDEBUG -TP -c ${CMAKE_SOURCE_DIR}/EqualTreeNode.ixx -Fo${CMAKE_SOURCE_DIR}/build/.objs/test/windows/x64/release/EqualTreeNode.ixx.obj
+    COMMAND echo [  0%]: compiling.module.release debugTreeNode.ixx
     COMMAND ${CMAKE_COMMAND} -E make_directory ${CMAKE_SOURCE_DIR}/build/.objs/test/windows/x64/release
-    COMMAND "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.35.32215/bin/HostX64/x64/cl.exe" -nologo -O2 -fp:fast -std:c++20 /EHsc -external:W0 -external:IC:/Users/Administrator/Documents/vcpkg-master/installed/x64-windows-static/include -external:W0 -external:IC:/Users/Administrator/AppData/Local/.xmake/packages/l/leetcode-treenode-cpp/1.1.4/1fe8830461144a9a9a2e83efa281352c/include -experimental:module -DNDEBUG -TP -c ${CMAKE_SOURCE_DIR}/debugTreeNode.mxx -Fo${CMAKE_SOURCE_DIR}/build/.objs/test/windows/x64/release/debugTreeNode.mxx.obj
+    COMMAND "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.35.32215/bin/HostX64/x64/cl.exe" -nologo -O2 -fp:fast -std:c++20 /EHsc -external:W0 -external:IC:/Users/Administrator/Documents/vcpkg-master/installed/x64-windows-static/include -external:W0 -external:IC:/Users/Administrator/AppData/Local/.xmake/packages/l/leetcode-treenode-cpp/1.1.4/1fe8830461144a9a9a2e83efa281352c/include -experimental:module -DNDEBUG -TP -c ${CMAKE_SOURCE_DIR}/debugTreeNode.ixx -Fo${CMAKE_SOURCE_DIR}/build/.objs/test/windows/x64/release/debugTreeNode.ixx.obj
     VERBATIM
 )
 add_custom_target(target_test_1F049C3C
@@ -67,11 +67,11 @@ target_link_libraries(test PRIVATE
     leetcode-treenode-cpp
 )
 target_link_libraries(test PRIVATE
-    ${CMAKE_SOURCE_DIR}/build/.objs/test/windows/x64/release/debugTreeNode.mxx.obj
-    ${CMAKE_SOURCE_DIR}/build/.objs/test/windows/x64/release/EqualTreeNode.mxx.obj
-    ${CMAKE_SOURCE_DIR}/build/.objs/test/windows/x64/release/HashTreeNode.mxx.obj
-    ${CMAKE_SOURCE_DIR}/build/.objs/test/windows/x64/release/index.mxx.obj
-    ${CMAKE_SOURCE_DIR}/build/.objs/test/windows/x64/release/printTreeNode.mxx.obj
+    ${CMAKE_SOURCE_DIR}/build/.objs/test/windows/x64/release/debugTreeNode.ixx.obj
+    ${CMAKE_SOURCE_DIR}/build/.objs/test/windows/x64/release/EqualTreeNode.ixx.obj
+    ${CMAKE_SOURCE_DIR}/build/.objs/test/windows/x64/release/HashTreeNode.ixx.obj
+    ${CMAKE_SOURCE_DIR}/build/.objs/test/windows/x64/release/index.ixx.obj
+    ${CMAKE_SOURCE_DIR}/build/.objs/test/windows/x64/release/printTreeNode.ixx.obj
 )
 target_link_directories(test PRIVATE
     C:/Users/Administrator/Documents/vcpkg-master/installed/x64-windows-static/lib

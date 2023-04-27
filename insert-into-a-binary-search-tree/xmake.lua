@@ -12,11 +12,11 @@ set_kind("binary")
 
 set_languages("c++20")
 set_policy("build.c++.modules", true)
-add_files("*.mxx")
+add_files("*.ixx")
 add_files("test.cpp")
 add_packages("vcpkg::cppunit")
 --add_files("C:/Users/Administrator/AppData/Local/.xmake/packages/l/leetcode-treenode-cpp/1.1.4/1fe8830461144a9a9a2e83efa281352c/modules/leetcode-treenode-cpp/*.ixx")
---add_files("C:/Users/Administrator/AppData/Local/.xmake/packages/l/leetcode-treenode-cpp/1.1.4/1fe8830461144a9a9a2e83efa281352c/modules/leetcode-treenode-cpp/*.mpp")
+--add_files("C:/Users/Administrator/AppData/Local/.xmake/packages/l/leetcode-treenode-cpp/1.1.4/1fe8830461144a9a9a2e83efa281352c/modules/leetcode-treenode-cpp/*.ixx")
 
 add_packages("leetcode-treenode-cpp")
 target_end()

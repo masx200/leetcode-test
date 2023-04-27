@@ -22,7 +22,7 @@
 // #include "HashTreeNode.hpp"
 //  #include "bfsTravelsal.hpp"
 //  #include "LeetCodeTreeNodeToString.hpp"
-// #include "debugTreeNode.mxx"
+// #include "debugTreeNode.ixx"
 //  #include "parseLeetCodeBinaryTree.hpp"
 // #include "printTreeNode.hpp"
 
