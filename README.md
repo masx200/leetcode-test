@@ -2546,4 +2546,6 @@ https://leetcode.cn/problems/group-by
 
 https://leetcode.cn/problems/debounce
 
+https://leetcode.cn/problems/animal-shelter-lcci
+
 </details>
