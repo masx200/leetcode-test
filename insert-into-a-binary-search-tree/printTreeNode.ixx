@@ -23,6 +23,5 @@ export void printTreeNode(TreeNode* node)
 
     auto s = debugTreeNode(node);
     cout << s << endl;
-    return;
 }
 }

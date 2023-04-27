@@ -3,7 +3,7 @@
 module;
 // #pragma once
 
-#include <stdio.h>
+#include <cstdio>
 
 export module insert_into_a_binary_search_tree.Solution;
 import leetcode_treenode_cpp.TreeNode;

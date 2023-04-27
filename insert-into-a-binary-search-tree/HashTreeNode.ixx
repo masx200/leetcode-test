@@ -8,7 +8,7 @@ module;
 
 #include <cstdlib>
 
-#include <stdio.h>
+#include <cstdio>
 
 export module insert_into_a_binary_search_tree.HashTreeNode;
 import leetcode_treenode_cpp.TreeNode;
