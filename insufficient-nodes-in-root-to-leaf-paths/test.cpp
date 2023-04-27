@@ -39,7 +39,7 @@ void LeetCode1080TestExamples(std::string& root, int limit, std::string& output)
 
         delete node;
     }
-};
+}
 
 TEST(LeetCode1080, test1)
 {
