@@ -2552,4 +2552,6 @@ https://leetcode.cn/problems/reverse-nodes-in-even-length-groups/
 
 https://leetcode.cn/problems/find-the-minimum-and-maximum-number-of-nodes-between-critical-points
 
+https://leetcode.cn/problems/implement-magic-dictionary
+
 </details>
