@@ -10,84 +10,73 @@ namespace animal_shelter_lcci {
 export class AnimalShelf {
 
 private:
-    queue<int> cats;
-    queue<int> dogs;
+  queue<int> cats;
+  queue<int> dogs;
 
 public:
-    AnimalShelf() = default;
+  AnimalShelf() = default;
 
-    void enqueue(vector<int> animal)
-    {
+  void enqueue(vector<int> animal) {
 
-        auto number = animal[0];
-        auto species = animal[1];
+    auto number = animal[0];
+    auto species = animal[1];
 
-        if (0 == species) {
-            cats.push(number);
-        } else {
+    if (0 == species) {
+      cats.push(number);
+    } else {
 
-            dogs.push(number);
-        }
+      dogs.push(number);
+    }
+  }
+
+  vector<int> dequeueAny()
+
+  {
+
+    if (dogs.empty() and cats.empty()) {
+      return {-1, -1};
     }
 
-    vector<int> dequeueAny()
-
-    {
-
-        if (dogs.empty() and cats.empty()) {
-            return { -1, -1 };
-        }
-
-        if (dogs.empty() and (cats.size())) {
-            return dequeueCat();
-        }
-        if (cats.empty() and (dogs.size())) {
-            return dequeueDog();
-        }
-
-        auto dog = dogs.front();
-        auto cat = cats.front();
-
-        if (dog < cat) {
-
-            return dequeueDog();
-        } else {
-
-            return dequeueCat();
-        }
+    if (dogs.empty() and (cats.size())) {
+      return dequeueCat();
+    }
+    if (cats.empty() and (dogs.size())) {
+      return dequeueDog();
     }
 
-    vector<int> dequeueDog()
-    {
-        if (dogs.empty()) {
-            return { -1, -1 };
-        } else {
-            auto number = dogs.front();
-            dogs.pop();
+    auto dog = dogs.front();
+    auto cat = cats.front();
 
-            return { number, 1 };
-        }
+    if (dog < cat) {
+
+      return dequeueDog();
+    } else {
+
+      return dequeueCat();
     }
+  }
 
-    vector<int> dequeueCat()
-    {
-        if (cats.empty()) {
-            return { -1, -1 };
-        } else {
-            auto number = cats.front();
-            cats.pop();
+  vector<int> dequeueDog() {
+    if (dogs.empty()) {
+      return {-1, -1};
+    } else {
+      auto number = dogs.front();
+      dogs.pop();
 
-            return { number, 0 };
-        }
+      return {number, 1};
     }
+  }
+
+  vector<int> dequeueCat() {
+    if (cats.empty()) {
+      return {-1, -1};
+    } else {
+      auto number = cats.front();
+      cats.pop();
+
+      return {number, 0};
+    }
+  }
 };
 
-/**
- * Your AnimalShelf object will be instantiated and called as such:
- * AnimalShelf* obj = new AnimalShelf();
- * obj->enqueue(animal);
- * vector<int> param_2 = obj->dequeueAny();
- * vector<int> param_3 = obj->dequeueDog();
- * vector<int> param_4 = obj->dequeueCat();
- */
-}
+} // namespace animal_shelter_lcci

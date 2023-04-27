@@ -8,19 +8,19 @@ cmake_policy(SET CMP0091 NEW)
 project(animal-shelter-lcci LANGUAGES CXX C)
 
 # target
-add_library(animal-shelter-lcci STATIC "" index.ixx)
+add_library(animal-shelter-lcci STATIC "")
 set_target_properties(animal-shelter-lcci PROPERTIES OUTPUT_NAME "animal-shelter-lcci")
 set_target_properties(animal-shelter-lcci PROPERTIES ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/build/windows/x86/release")
-add_custom_command(OUTPUT output_animal-shelter-lcci_6F3E520F
+add_custom_command(OUTPUT output_animal-shelter-lcci_130AA1E2
     COMMAND echo [  0%]: compiling.module.release animal_shelter_lcci.AnimalShelf
     COMMAND ${CMAKE_COMMAND} -E make_directory ${CMAKE_SOURCE_DIR}/build/.objs/animal-shelter-lcci/windows/x86/release
-    COMMAND "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.35.32215/bin/HostX86/x86/cl.exe" -nologo -O2 -fp:fast /EHsc -experimental:module -DNDEBUG -TP -c ${CMAKE_SOURCE_DIR}/index.ixx -Fo${CMAKE_SOURCE_DIR}/build/.objs/animal-shelter-lcci/windows/x86/release/index.ixx.obj -ifcOutput ${CMAKE_SOURCE_DIR}/build/.gens/animal-shelter-lcci/windows/x86/release/rules/modules/cache/77ed3856/animal_shelter_lcci.AnimalShelf.ifc -interface
+    COMMAND "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.35.32215/bin/HostX86/x86/cl.exe" -nologo -O2 -fp:fast -std:c++20 /EHsc -experimental:module -DNDEBUG -TP -c ${CMAKE_SOURCE_DIR}/index.ixx -Fo${CMAKE_SOURCE_DIR}/build/.objs/animal-shelter-lcci/windows/x86/release/index.ixx.obj -ifcOutput ${CMAKE_SOURCE_DIR}/build/.gens/animal-shelter-lcci/windows/x86/release/rules/modules/cache/77ed3856/animal_shelter_lcci.AnimalShelf.ifc -interface
     VERBATIM
 )
-add_custom_target(target_animal-shelter-lcci_6F3E520F
-    DEPENDS output_animal-shelter-lcci_6F3E520F
+add_custom_target(target_animal-shelter-lcci_130AA1E2
+    DEPENDS output_animal-shelter-lcci_130AA1E2
 )
-add_dependencies(animal-shelter-lcci target_animal-shelter-lcci_6F3E520F)
+add_dependencies(animal-shelter-lcci target_animal-shelter-lcci_130AA1E2)
 target_compile_options(animal-shelter-lcci PRIVATE
     $<$<COMPILE_LANGUAGE:C>:-DNDEBUG>
     $<$<COMPILE_LANGUAGE:CXX>:-DNDEBUG>
@@ -31,6 +31,8 @@ if(CMAKE_CXX_COMPILER_FRONTEND_VARIANT STREQUAL "MSVC")
 else()
     target_compile_options(animal-shelter-lcci PRIVATE -fcxx-exceptions)
 endif()
+set_target_properties(animal-shelter-lcci PROPERTIES CXX_EXTENSIONS OFF)
+target_compile_features(animal-shelter-lcci PRIVATE cxx_std_20)
 if(MSVC)
     target_compile_options(animal-shelter-lcci PRIVATE $<$<CONFIG:Release>:-Ox -fp:fast>)
 else()
@@ -47,6 +49,6 @@ endif()
 target_link_libraries(animal-shelter-lcci PRIVATE
     ${CMAKE_SOURCE_DIR}/build/.objs/animal-shelter-lcci/windows/x86/release/index.ixx.obj
 )
-target_sources(animal-shelter-lcci PRIVATE
+target_sources(animal-shelter-lcci PRIVATE index.ixx
 )
 
