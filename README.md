@@ -2550,4 +2550,6 @@ https://leetcode.cn/problems/animal-shelter-lcci
 
 https://leetcode.cn/problems/reverse-nodes-in-even-length-groups/
 
+https://leetcode.cn/problems/find-the-minimum-and-maximum-number-of-nodes-between-critical-points
+
 </details>
