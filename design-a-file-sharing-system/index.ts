@@ -65,4 +65,4 @@ export default class FileSharing {
         return usersList;
     }
 }
-import { BinaryHeap } from "https://deno.land/std@0.184.0/collections/binary_heap.ts";
+import { BinaryHeap } from "https://deno.land/std@0.185.0/collections/binary_heap.ts";
