@@ -2554,4 +2554,6 @@ https://leetcode.cn/problems/find-the-minimum-and-maximum-number-of-nodes-betwee
 
 https://leetcode.cn/problems/implement-magic-dictionary
 
+https://leetcode.cn/problems/design-linked-list/
+
 </details>

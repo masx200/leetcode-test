@@ -6,7 +6,7 @@ export module implement_trie_prefix_tree.Trie;
 using std::string;
 using std::vector;
 namespace implement_trie_prefix_tree {
-export class TrieNode {
+/*export*/ class TrieNode {
 public:
     vector<TrieNode*> children;
     bool isWord;
