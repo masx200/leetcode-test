@@ -113,6 +113,10 @@ void test2()
 
     for (auto node : nodes) {
         printTreeNode(node);
+        //delete (node);
+    }
+    for (auto node : nodes) {
+        //printTreeNode(node);
         delete (node);
     }
     println("test2 end");
