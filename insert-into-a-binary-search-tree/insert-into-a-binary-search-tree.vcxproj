@@ -19,42 +19,14 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\AppData\Local\.xmake\packages\l\leetcode-treenode-cpp\1.1.5\cfc2bdf7726b496bad82152ad88c5cc0\modules\leetcode-treenode-cpp\bfsTravelsal.ixx">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\.xmake\packages\l\leetcode-treenode-cpp\1.1.5\cfc2bdf7726b496bad82152ad88c5cc0\modules\leetcode-treenode-cpp\freeTreeNode.ixx">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\.xmake\packages\l\leetcode-treenode-cpp\1.1.5\cfc2bdf7726b496bad82152ad88c5cc0\modules\leetcode-treenode-cpp\parseLeetCodeBinaryTree.ixx">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\.xmake\packages\l\leetcode-treenode-cpp\1.1.5\cfc2bdf7726b496bad82152ad88c5cc0\modules\leetcode-treenode-cpp\serializeTreeNode.ixx">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\.xmake\packages\l\leetcode-treenode-cpp\1.1.5\cfc2bdf7726b496bad82152ad88c5cc0\modules\leetcode-treenode-cpp\traversalTreeNode.ixx">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\AppData\Local\.xmake\packages\l\leetcode-treenode-cpp\1.1.5\cfc2bdf7726b496bad82152ad88c5cc0\modules\leetcode-treenode-cpp\TreeNode.ixx">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
-    </ClCompile>
+    <ClCompile Include="..\..\Users\Administrator\AppData\Local\.xmake\packages\l\leetcode-treenode-cpp\1.1.6\211379a6b5ca44ac96c02258817ddd07\modules\leetcode-treenode-cpp\bfsTravelsal.ixx" />
+    <ClCompile Include="..\..\Users\Administrator\AppData\Local\.xmake\packages\l\leetcode-treenode-cpp\1.1.6\211379a6b5ca44ac96c02258817ddd07\modules\leetcode-treenode-cpp\freeTreeNode.ixx" />
+    <ClCompile Include="..\..\Users\Administrator\AppData\Local\.xmake\packages\l\leetcode-treenode-cpp\1.1.6\211379a6b5ca44ac96c02258817ddd07\modules\leetcode-treenode-cpp\LeetCodeTreeNodeToString.ixx" />
+    <ClCompile Include="..\..\Users\Administrator\AppData\Local\.xmake\packages\l\leetcode-treenode-cpp\1.1.6\211379a6b5ca44ac96c02258817ddd07\modules\leetcode-treenode-cpp\parseLeetCodeBinaryTree.ixx" />
+    <ClCompile Include="..\..\Users\Administrator\AppData\Local\.xmake\packages\l\leetcode-treenode-cpp\1.1.6\211379a6b5ca44ac96c02258817ddd07\modules\leetcode-treenode-cpp\serializeTreeNode.ixx" />
+    <ClCompile Include="..\..\Users\Administrator\AppData\Local\.xmake\packages\l\leetcode-treenode-cpp\1.1.6\211379a6b5ca44ac96c02258817ddd07\modules\leetcode-treenode-cpp\traversalTreeNode.ixx" />
+    <ClCompile Include="..\..\Users\Administrator\AppData\Local\.xmake\packages\l\leetcode-treenode-cpp\1.1.6\211379a6b5ca44ac96c02258817ddd07\modules\leetcode-treenode-cpp\TreeNode.ixx" />
+    <ClCompile Include="PostOrderTraversal.ixx" />
     <ClCompile Include="test.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
       <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
@@ -63,13 +35,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\AppData\Local\.xmake\packages\l\leetcode-treenode-cpp\1.1.5\b1903a6858b741129d0a3829b3410c34\modules\leetcode-treenode-cpp\LeetCodeTreeNodeToString.ixx">
-      <FileType>Document</FileType>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
-    </ClCompile>
     <ClCompile Include="debugTreeNode.ixx">
       <FileType>Document</FileType>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>

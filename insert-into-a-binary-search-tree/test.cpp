@@ -37,6 +37,7 @@ import leetcode_treenode_cpp.parseLeetCodeBinaryTree;
 import insert_into_a_binary_search_tree.Solution;
 import insert_into_a_binary_search_tree.HashTreeNode;
 import insert_into_a_binary_search_tree.EqualTreeNode;
+import insert_into_a_binary_search_tree.PostOrderTraversal;
 using namespace insert_into_a_binary_search_tree;
 using namespace leetcode_treenode_cpp;
 using namespace std;
@@ -67,19 +68,24 @@ void test1()
     println("insert-into-a-binary-search-tree");
     println("test1 start");
     TreeNode* none = NULL;
+    auto nodes = unordered_set<TreeNode*, HashTreeNode, EqualTreeNode> {};
 
+    PostOrderTraversal(none, [&](auto* node) {
+        nodes.emplace(node);
+    });
     auto result2 = Solution().insertIntoBST(none, 111);
-
+    PostOrderTraversal(result2, [&](auto* node) {
+        nodes.emplace(node);
+    });
     println(serializeTreeNode(none));
     assertEquals(serializeTreeNode(none), "null");
     println(serializeTreeNode(result2));
     assertEquals(serializeTreeNode(result2),
         "TreeNode{val:111,left:null,right:null}");
 
-    auto nodes = unordered_set<TreeNode*, HashTreeNode, EqualTreeNode> { none, result2 };
     for (auto node : nodes) {
         printTreeNode(node);
-        freeTreeNode(node);
+        delete (node);
     }
     println("test1 end");
 }
@@ -88,20 +94,26 @@ void test2()
 {
     println("test2 start");
     auto tree = new TreeNode(99);
+    auto nodes = unordered_set<TreeNode*, HashTreeNode, EqualTreeNode> {};
+
+    PostOrderTraversal(tree, [&](auto* node) {
+        nodes.emplace(node);
+    });
     println(serializeTreeNode(tree));
     assertEquals(serializeTreeNode(tree),
         "TreeNode{val:99,left:null,right:null}");
     auto result = Solution().insertIntoBST(tree, 111);
-
+    PostOrderTraversal(result, [&](auto* node) {
+        nodes.emplace(node);
+    });
     println(serializeTreeNode(result));
     assertEquals(serializeTreeNode(result),
         "TreeNode{val:99,left:null,right:TreeNode{val:111,left:null,"
         "right:null}}");
 
-    auto nodes = unordered_set<TreeNode*, HashTreeNode, EqualTreeNode> { tree, result };
     for (auto node : nodes) {
         printTreeNode(node);
-        freeTreeNode(node);
+        delete (node);
     }
     println("test2 end");
 }
@@ -134,17 +146,23 @@ public:
             TreeNode* root = nullptr;
             int status = parseLeetCodeBinaryTree(example.root, &root);
             CPPUNIT_ASSERT_EQUAL(0, status);
-            auto output = Solution().insertIntoBST(root, example.val);
+            auto nodes = unordered_set<TreeNode*, HashTreeNode, EqualTreeNode> {};
 
+            PostOrderTraversal(root, [&](auto* node) {
+                nodes.emplace(node);
+            });
+            auto output = Solution().insertIntoBST(root, example.val);
+            PostOrderTraversal(output, [&](auto* node) {
+                nodes.emplace(node);
+            });
             CPPUNIT_ASSERT_EQUAL(LeetCodeTreeNodeToString(output),
                 example.output);
             println(example.root);
             println(example.val);
             println(example.output);
-            auto nodes = unordered_set<TreeNode*, HashTreeNode, EqualTreeNode> { root, output };
             for (auto node : nodes) {
                 printTreeNode(node);
-                freeTreeNode(node);
+                delete (node);
             }
         }
     }
