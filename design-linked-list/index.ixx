@@ -91,7 +91,7 @@ public:
             pred = succ->prev;
         }
         size++;
-        DLinkListNode* toAdd = new DLinkListNode(val);
+        auto* toAdd = new DLinkListNode(val);
         toAdd->prev = pred;
         toAdd->next = succ;
         pred->next = toAdd;
