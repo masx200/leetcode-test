@@ -160,8 +160,12 @@ public:
             println(example.root);
             println(example.val);
             println(example.output);
-            for (auto node : nodes) {
+            for (auto *node : nodes) {
                 printTreeNode(node);
+                //delete (node);
+            }
+            for (auto* node : nodes) {
+               // printTreeNode(node);
                 delete (node);
             }
         }
