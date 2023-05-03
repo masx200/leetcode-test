@@ -10,35 +10,42 @@ namespace design_linked_list {
 struct DLinkListNode {
     int val;
     DLinkListNode *prev, *next;
-    DLinkListNode(int _val) : val(_val), prev(nullptr), next(nullptr) {}
-};
-export
-class MyLinkedList {
-public:
- ~MyLinkedList() {
-    DLinkListNode* dLinkListNode = head;
-    while (dLinkListNode) {
-      DLinkListNode* cur = dLinkListNode;
-      dLinkListNode = dLinkListNode->next;
-      delete cur;
+    DLinkListNode(int _val)
+        : val(_val)
+        , prev(nullptr)
+        , next(nullptr)
+    {
     }
-    head = nullptr;
-    tail = nullptr;
-  }
-  
-    MyLinkedList() {
+};
+export class MyLinkedList {
+public:
+    ~MyLinkedList()
+    {
+        DLinkListNode* dLinkListNode = head;
+        while (dLinkListNode) {
+            DLinkListNode* cur = dLinkListNode;
+            dLinkListNode = dLinkListNode->next;
+            delete cur;
+        }
+        head = nullptr;
+        tail = nullptr;
+    }
+
+    MyLinkedList()
+    {
         this->size = 0;
         this->head = new DLinkListNode(0);
         this->tail = new DLinkListNode(0);
         head->next = tail;
         tail->prev = head;
     }
-    
-    int get(int index) {
+
+    int get(int index)
+    {
         if (index < 0 || index >= size) {
             return -1;
         }
-        DLinkListNode *curr;
+        DLinkListNode* curr;
         if (index + 1 < size - index) {
             curr = head;
             for (int i = 0; i <= index; i++) {
@@ -52,16 +59,19 @@ public:
         }
         return curr->val;
     }
-    
-    void addAtHead(int val) {
+
+    void addAtHead(int val)
+    {
         addAtIndex(0, val);
     }
-    
-    void addAtTail(int val) {
+
+    void addAtTail(int val)
+    {
         addAtIndex(size, val);
     }
-    
-    void addAtIndex(int index, int val) {
+
+    void addAtIndex(int index, int val)
+    {
         if (index > size) {
             return;
         }
@@ -81,14 +91,15 @@ public:
             pred = succ->prev;
         }
         size++;
-        DLinkListNode *toAdd = new DLinkListNode(val);
+        DLinkListNode* toAdd = new DLinkListNode(val);
         toAdd->prev = pred;
         toAdd->next = succ;
         pred->next = toAdd;
         succ->prev = toAdd;
     }
-    
-    void deleteAtIndex(int index) {
+
+    void deleteAtIndex(int index)
+    {
         if (index < 0 || index >= size) {
             return;
         }
@@ -107,14 +118,15 @@ public:
             pred = succ->prev->prev;
         }
         size--;
-        DLinkListNode *p = pred->next;
+        DLinkListNode* p = pred->next;
         pred->next = succ;
         succ->prev = pred;
         delete p;
     }
+
 private:
     int size;
-    DLinkListNode *head;
-    DLinkListNode *tail;
+    DLinkListNode* head;
+    DLinkListNode* tail;
 };
 }

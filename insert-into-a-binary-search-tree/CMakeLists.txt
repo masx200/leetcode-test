@@ -8,10 +8,10 @@ cmake_policy(SET CMP0091 NEW)
 project(test LANGUAGES CXX C)
 
 # target
-add_executable(test "" debugTreeNode.ixx EqualTreeNode.ixx HashTreeNode.ixx index.ixx printTreeNode.ixx)
+add_executable(test "" index.ixx debugTreeNode.ixx EqualTreeNode.ixx HashTreeNode.ixx printTreeNode.ixx)
 set_target_properties(test PROPERTIES OUTPUT_NAME "test")
 set_target_properties(test PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/build/windows/x86/release")
-add_custom_command(OUTPUT output_test_3E2140B3
+add_custom_command(OUTPUT output_test_F6254F91
     COMMAND echo [  0%]: compiling.module.release insert_into_a_binary_search_tree.Solution
     COMMAND ${CMAKE_COMMAND} -E make_directory ${CMAKE_SOURCE_DIR}/build/.objs/test/windows/x86/release
     COMMAND "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.35.32215/bin/HostX86/x86/cl.exe" -nologo -O2 -fp:fast -std:c++20 /EHsc -external:W0 -external:IC:/Users/Administrator/Documents/vcpkg-master/installed/x86-windows-static/include -external:W0 -external:IC:/Users/Administrator/AppData/Local/.xmake/packages/l/leetcode-treenode-cpp/1.1.6/211379a6b5ca44ac96c02258817ddd07/include -experimental:module -DNDEBUG -TP -c ${CMAKE_SOURCE_DIR}/index.ixx -Fo${CMAKE_SOURCE_DIR}/build/.objs/test/windows/x86/release/index.ixx.obj -ifcOutput ${CMAKE_SOURCE_DIR}/build/.gens/test/windows/x86/release/rules/modules/cache/574a3743/insert_into_a_binary_search_tree.Solution.ifc -interface
@@ -29,10 +29,10 @@ add_custom_command(OUTPUT output_test_3E2140B3
     COMMAND "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.35.32215/bin/HostX86/x86/cl.exe" -nologo -O2 -fp:fast -std:c++20 /EHsc -external:W0 -external:IC:/Users/Administrator/Documents/vcpkg-master/installed/x86-windows-static/include -external:W0 -external:IC:/Users/Administrator/AppData/Local/.xmake/packages/l/leetcode-treenode-cpp/1.1.6/211379a6b5ca44ac96c02258817ddd07/include -experimental:module -DNDEBUG -TP -c ${CMAKE_SOURCE_DIR}/printTreeNode.ixx -Fo${CMAKE_SOURCE_DIR}/build/.objs/test/windows/x86/release/printTreeNode.ixx.obj -ifcOutput ${CMAKE_SOURCE_DIR}/build/.gens/test/windows/x86/release/rules/modules/cache/574a3743/insert_into_a_binary_search_tree.printTreeNode.ifc -interface -reference insert_into_a_binary_search_tree.debugTreeNode=${CMAKE_SOURCE_DIR}/build/.gens/test/windows/x86/release/rules/modules/cache/574a3743/insert_into_a_binary_search_tree.debugTreeNode.ifc
     VERBATIM
 )
-add_custom_target(target_test_3E2140B3
-    DEPENDS output_test_3E2140B3
+add_custom_target(target_test_F6254F91
+    DEPENDS output_test_F6254F91
 )
-add_dependencies(test target_test_3E2140B3)
+add_dependencies(test target_test_F6254F91)
 target_include_directories(test PRIVATE
     C:/Users/Administrator/Documents/vcpkg-master/installed/x86-windows-static/include
     C:/Users/Administrator/AppData/Local/.xmake/packages/l/leetcode-treenode-cpp/1.1.6/211379a6b5ca44ac96c02258817ddd07/include
