@@ -2,7 +2,7 @@
 
 #include <gtest/gtest.h>
 #include <iostream>
-
+#include <vector>
 import check_if_it_is_a_good_array.Solution;
 using namespace std;
 using namespace check_if_it_is_a_good_array;

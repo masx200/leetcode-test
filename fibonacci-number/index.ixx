@@ -7,8 +7,6 @@ namespace fibonacci_number {
 using std::unordered_map;
 export class Solution {
 
-    // static unordered_map<int,int> cache;
-
 public:
     int fib(int n)
     {
