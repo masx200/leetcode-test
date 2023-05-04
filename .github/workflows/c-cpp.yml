@@ -69,4 +69,4 @@ jobs:
                        /usr/local/opt/llvm/bin/clang --version
                        /usr/local/share/vcpkg/vcpkg install cppunit:x64-osx
 
-            - run: deno run -A xmake.ts
+            - run: deno run -A xmake.ts --toolchain=llvm --sdk=/usr/local/opt/llvm/
