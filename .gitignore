@@ -138,3 +138,4 @@ x64/
 *.obj
 *.o
 cmake-build-debug
+temp
