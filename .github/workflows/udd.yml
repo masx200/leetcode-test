@@ -16,7 +16,9 @@ jobs:
           chmod +x llvm.sh
           sudo ./llvm.sh 16
           wget https://github.com/masx200/clang-formatter/releases/download/Continuous-integration-872a21f072385aa2f4035176711aeba263a27ca0/clang-formatter_Linux_x86_64.tar.gz
-          
+          mkdir -p -v ./temp/clang-formatter
+          tar zxvf ./clang-formatter_Linux_x86_64.tar.gz -C ./temp/clang-formatter
+          ls ./temp/clang-formatter -l
           
       - name: Set up Go
         uses: actions/setup-go@v3
