@@ -67,7 +67,7 @@ void test1()
 {
     println("insert-into-a-binary-search-tree");
     println("test1 start");
-    TreeNode* none = NULL;
+    TreeNode* none = nullptr;
     auto nodes = unordered_set<TreeNode*, HashTreeNode, EqualTreeNode> {};
 
     PostOrderTraversal(none, [&](auto* node) {

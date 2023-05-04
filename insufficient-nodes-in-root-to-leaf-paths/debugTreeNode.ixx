@@ -21,7 +21,7 @@ export
 {
 
     stringstream sstream;
-    if (root == NULL) {
+    if (root == nullptr) {
 
         sstream << "null";
         return sstream.str();

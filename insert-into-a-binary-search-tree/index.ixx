@@ -14,7 +14,7 @@ export class Solution {
 public:
     TreeNode* insertIntoBST(TreeNode* root, int val)
     {
-        if (root == NULL) {
+        if (root == nullptr) {
             TreeNode* node = new TreeNode(val);
             return node;
         }
