@@ -1,4 +1,4 @@
-name: ktlint-dependencies
+name: ktlint
 
 on:
   push:
