@@ -11,6 +11,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - run: |
+          wget https://apt.llvm.org/llvm.sh
+          chmod +x llvm.sh
+          sudo ./llvm.sh 16
+          wget https://github.com/masx200/clang-formatter/releases/download/Continuous-integration-872a21f072385aa2f4035176711aeba263a27ca0/clang-formatter_Linux_x86_64.tar.gz
+          
+          
       - name: Set up Go
         uses: actions/setup-go@v3
         with:
