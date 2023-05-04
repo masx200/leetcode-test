@@ -31,12 +31,12 @@ jobs:
           cache: maven
      
      
-      - run: wget https://github.com/pinterest/ktlint/releases/download/0.49.0/ktlint
+      - run: wget -O ktlint.jar https://github.com/pinterest/ktlint/releases/download/0.49.0/ktlint
       
       
       - name: ktlint
         continue-on-error: true
-        run: java --add-opens=java.base/java.lang=ALL-UNNAMED -jar "./ktlint" -F
+        run: java --add-opens=java.base/java.lang=ALL-UNNAMED -jar "./ktlint.jar" -F
         
       - name: Update dependencies
         
