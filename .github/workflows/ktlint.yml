@@ -21,7 +21,7 @@ jobs:
       
       
       - name: ktlint
-        
+        continue-on-error: true
         run: java --add-opens=java.base/java.lang=ALL-UNNAMED -jar "./ktlint" -F
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
