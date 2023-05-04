@@ -3,6 +3,7 @@ target
 .idea
 deno.lock
 .run
+ktlint.jar
 # Logs
 logs
 *.log
