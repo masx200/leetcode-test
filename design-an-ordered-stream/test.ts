@@ -1,5 +1,6 @@
 import { assertEquals } from "asserts";
 import { runScript } from "leetcode-class";
+
 import OrderedStream from "./index.ts";
 
 Deno.test("design-an-ordered-stream", () => {

@@ -1,4 +1,5 @@
 import { runScript } from "leetcode-class";
+
 import { assertEquals } from "../deps.ts";
 import CustomStack from "./index.ts";
 

@@ -1,6 +1,8 @@
 import { assertEquals } from "asserts";
 import { runScript } from "leetcode-class";
+
 import DinnerPlates from "./index.ts";
+
 Deno.test("dinner-plate-stacks", () => {
     assertEquals(
         runScript(

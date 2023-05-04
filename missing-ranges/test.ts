@@ -1,5 +1,7 @@
 import { assertEquals } from "asserts";
+
 import findMissingRanges from "./index.ts";
+
 Deno.test("missing-ranges", () => {
     assertEquals(
         ["2", "4->49", "51->74", "76->99"],

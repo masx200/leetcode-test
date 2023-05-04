@@ -1,5 +1,7 @@
 import { assertEquals } from "asserts";
+
 import countAnagrams from "./index.ts";
+
 Deno.test("count-anagrams", () => {
     const s = "too hot",
         输出 = 18;

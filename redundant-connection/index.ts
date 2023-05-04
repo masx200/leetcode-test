@@ -1,4 +1,5 @@
 import { UnionFind } from "../largest-component-size-by-common-factor/UnionFind.ts";
+
 function findRedundantConnection(edges: number[][]): number[] {
     const uf = new UnionFind();
     const n = edges.length;

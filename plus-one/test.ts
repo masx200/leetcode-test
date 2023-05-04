@@ -1,4 +1,5 @@
 import { assertEquals } from "asserts";
+
 import { default as plusOne } from "./index.ts";
 
 Deno.test({

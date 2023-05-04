@@ -1,5 +1,7 @@
 import { assertEquals } from "asserts";
+
 import getNumberOfBacklogOrders from "./index.ts";
+
 Deno.test("number-of-orders-in-the-backlog", () => {
     assertEquals(
         getNumberOfBacklogOrders([

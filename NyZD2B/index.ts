@@ -1,4 +1,5 @@
 import { AvlTree } from "npm:@datastructures-js/binary-search-tree@5.3.1";
+
 import { traverseInOrder } from "./traverseInOrder.ts";
 
 class VendingMachine {

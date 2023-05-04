@@ -16,5 +16,6 @@ Deno.test("remove-9", () => {
     );
 });
 
-import solution from "./index.ts";
 import { assertEquals } from "asserts";
+
+import solution from "./index.ts";

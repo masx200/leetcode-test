@@ -1,5 +1,6 @@
 import { assertEquals } from "asserts";
 import { runScript } from "leetcode-class";
+
 import MyHashSet from "./index.ts";
 
 Deno.test("design-hashset", () => {

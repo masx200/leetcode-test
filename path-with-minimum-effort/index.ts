@@ -1,4 +1,5 @@
 import { UnionFind } from "../largest-component-size-by-common-factor/UnionFind.ts";
+
 function minimumEffortPath(heights: number[][]): number {
     const edges: [number, number, number][] = [];
     const N = heights.length;

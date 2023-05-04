@@ -1,4 +1,5 @@
 import { assertEquals } from "asserts";
+
 import { runScript } from "../deps.ts";
 import { TreeNodeLeetCodeFromJSON } from "../utils/TreeNodeLeetCodeParse.ts";
 import BSTIterator from "./index.ts";

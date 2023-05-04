@@ -1,6 +1,8 @@
-import solution from "./index.ts";
 import { assertEquals } from "asserts";
+
 import { createFileReader4 } from "../read-n-characters-given-read4/createFileReader4.ts";
+import solution from "./index.ts";
+
 Deno.test("read-n-characters-given-read4", () => {
     const file = "abc";
 

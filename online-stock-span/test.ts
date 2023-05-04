@@ -1,5 +1,6 @@
 import { assertEquals } from "asserts";
 import { runScript } from "leetcode-class";
+
 import StockSpanner from "./index.ts";
 
 Deno.test("online-stock-span", () => {

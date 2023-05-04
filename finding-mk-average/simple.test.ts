@@ -1,5 +1,6 @@
 import { assertEquals } from "https://deno.land/std@0.185.0/testing/asserts.ts";
 import { runScript } from "leetcode-class";
+
 import MKAverage from "./index.ts";
 
 Deno.test("finding-mk-average", () => {

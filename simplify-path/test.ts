@@ -1,5 +1,7 @@
 import { assertEquals } from "asserts";
+
 import simplifyPath from "./index.ts";
+
 Deno.test("simplify-path", () => {
     assertEquals(
         "/kdZamHVZIcbthizmUQBg/HYcOYVqzhhhgWgkV/xqpbNSHugkzda/R/RmNu/dFBzXI/YIgBwwhGKgtnwMKqjiZK/Ju/ELXRJQljUYsW/lJvosXSqmmULnXpenaK/LsWzkuYrTKZfMcFcmgv/cUESBaPzUmhRLCmm/BKycLloEYKu/ph/TpswBgAASdSDLVv/SBrbHopECJDlhNs/eROO/uj/AaKrETHioJhWdmM/myvNFuQwTklfQ/QIAqDUzcYesxKpOqgb/USxjuNlGdyipIQgqIlC/CzkZHnnwxNFrDrqPtqa/EWOfSWxHgmabUfJLIC/OXorq/SBPyPldIgQOa/UYAPKibcMvd/vcxSvKvs/yNtuaHkBSduLeTDv/OMvTMy/yBFWPAQtMWxnMRsGo/sOHoiVvBqQpQ/ADpmfIW/DFduAPq/pyDAXQiS/UWbjYgwNDQjgvjuHv/TWZNfsOAD/CzZha/kjpWJhgfjsm/BrVmnfkfB/JCnEJL/cf/PlmYUbsZHNSTAdTcD/OamtA/uVckLjw/TRDLoNicILTPq/YzVbQrwhuFDxWNTuqB/ZPZHAeGYPctPZpSlV/Aha/Yjfjq/SjQ/pJiaByOvYxBTSqVm/trX/lF/mhQLuewidQvK/NYPO/uxuhKOj/VtLKRjAng/GWrvFVHLIazclsDzZDj/vgbEBJXAQyltpTmpBF/zVeqKznVZ/H/YEUlnzNFXaZCCPTnBAOM/qvLpBVlazhgWPP/YSfbiEKhmjW/rpHmy",

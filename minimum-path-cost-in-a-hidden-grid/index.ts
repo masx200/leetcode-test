@@ -1,4 +1,5 @@
 import { Heap } from "npm:@datastructures-js/heap@4.3.1";
+
 import { GridMaster } from "./GridMaster.ts";
 
 export default function findShortestPath(master: GridMaster): number {

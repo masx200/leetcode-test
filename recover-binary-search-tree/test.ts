@@ -1,7 +1,9 @@
 import { assertEquals } from "asserts";
+
 import { TreeNodeLeetCodeFromJSON } from "../utils/TreeNodeLeetCodeParse.ts";
-import recoverTree from "./index.ts";
 import { TreeNodeLeetCodeToJSON } from "../utils/TreeNodeLeetCodeStringify.ts";
+import recoverTree from "./index.ts";
+
 Deno.test("recover-binary-search-tree", () => {
     const examples = [
         [

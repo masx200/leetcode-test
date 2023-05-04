@@ -1,5 +1,7 @@
 import { assertEquals } from "asserts";
+
 import minMeetingRooms from "./index.ts";
+
 Deno.test("meeting-rooms-ii", () => {
     const Input = [
             [0, 30],

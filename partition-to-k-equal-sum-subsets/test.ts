@@ -1,5 +1,7 @@
 import { assertEquals } from "asserts";
+
 import canPartitionKSubsets from "./index.ts";
+
 Deno.test("partition-to-k-equal-sum-subsets", () => {
     const nums = [4, 3, 2, 3, 5, 2, 1],
         k = 4,

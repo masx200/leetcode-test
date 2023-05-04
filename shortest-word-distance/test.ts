@@ -1,5 +1,7 @@
 import { assertEquals } from "asserts";
+
 import shortestDistance from "./index.ts";
+
 Deno.test("shortest-word-distance", () => {
     const words = ["practice", "makes", "perfect", "coding", "makes"];
 

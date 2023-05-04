@@ -1,5 +1,7 @@
 import { assertEquals } from "asserts";
+
 import explorationSupply from "./index.ts";
+
 Deno.test("explorationSupply", () => {
     const station = [2, 7, 8, 10],
         pos = [4, 9],

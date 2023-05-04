@@ -1,5 +1,6 @@
 import { assertEquals } from "asserts";
 import { runScript } from "leetcode-class";
+
 import Operations from "./index.ts";
 
 Deno.test("operations-lcci", () => {

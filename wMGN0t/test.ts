@@ -1,5 +1,7 @@
 import { assertEquals } from "asserts";
+
 import storedEnergy from "./index.ts";
+
 Deno.test("storedEnergy", () => {
     const storeLimit = 10,
         power = [1, 3, 4, 3, 6],

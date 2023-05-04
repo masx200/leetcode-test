@@ -1,4 +1,6 @@
-import { MapWithExpires } from "https://deno.land/x/masx200_deno_caddy_cluster_reverse_proxy@3.1.0/MapWithExpires.ts";
+import {
+    MapWithExpires,
+} from "https://deno.land/x/masx200_deno_caddy_cluster_reverse_proxy@3.1.0/MapWithExpires.ts";
 
 class AuthenticationManager {
     #map = new MapWithExpires<string, { expires: number }>();

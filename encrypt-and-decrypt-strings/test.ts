@@ -1,5 +1,6 @@
 import { assertEquals } from "asserts";
 import { runScript } from "leetcode-class";
+
 import Encrypter from "./index.ts";
 
 Deno.test("encrypt-and-decrypt-strings", () => {

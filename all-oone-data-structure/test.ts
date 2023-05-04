@@ -1,5 +1,6 @@
 import { assertEquals } from "asserts";
 import { runScript } from "leetcode-class";
+
 import AllOne from "./index.ts";
 
 Deno.test("all-oone-data-structure", () => {
