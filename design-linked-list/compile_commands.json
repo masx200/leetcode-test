@@ -1,6 +1,23 @@
 [
-{
-  "directory": "C:\\leetcode-test\\design-linked-list",
-  "arguments": ["C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX86\\x86\\cl.exe", "/nologo", "/O2", "/fp:fast", "/std:c++20", "/EHsc", "/experimental:module", "/DNDEBUG", "/TP", "/c", "index.ixx", "/Fobuild\\.objs\\design-linked-list\\windows\\x86\\release\\index.ixx.obj", "/ifcOutput", "build\\.gens\\design-linked-list\\windows\\x86\\release\\rules\\modules\\cache\\6f8ecd67\\design_linked_list.MyLinkedList.ifc", "/interface"],
-  "file": "index.ixx"
-}]
+    {
+        "directory": "C:\\leetcode-test\\design-linked-list",
+        "arguments": [
+            "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.35.32215\\bin\\HostX86\\x86\\cl.exe",
+            "/nologo",
+            "/O2",
+            "/fp:fast",
+            "/std:c++20",
+            "/EHsc",
+            "/experimental:module",
+            "/DNDEBUG",
+            "/TP",
+            "/c",
+            "index.ixx",
+            "/Fobuild\\.objs\\design-linked-list\\windows\\x86\\release\\index.ixx.obj",
+            "/ifcOutput",
+            "build\\.gens\\design-linked-list\\windows\\x86\\release\\rules\\modules\\cache\\6f8ecd67\\design_linked_list.MyLinkedList.ifc",
+            "/interface"
+        ],
+        "file": "index.ixx"
+    }
+]
