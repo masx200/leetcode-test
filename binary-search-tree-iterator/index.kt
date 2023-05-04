@@ -11,12 +11,10 @@ class BSTIterator(root: TreeNode?) {
     fun hasNext(): Boolean {
         return this.generator.hasNext()
     }
-
 }
 
 fun InOrderIterator(root: TreeNode?): Sequence<Int> {
     return sequence {
-
         if (root == null) return@sequence
 
         yieldAll(InOrderIterator(root.left))
@@ -24,4 +22,3 @@ fun InOrderIterator(root: TreeNode?): Sequence<Int> {
         yieldAll(InOrderIterator(root.right))
     }
 }
-

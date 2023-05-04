@@ -10,12 +10,14 @@ internal class SolutionTest {
     @Test
     fun testpossibleBipartition() {
         assertContentEquals(
-            listOf(true, false, false), listOf(
+            listOf(true, false, false),
+            listOf(
                 Pair(4, "[[1,2],[1,3],[2,4]]"),
-                Pair(3, "[[1,2],[1,3],[2,3]]"), Pair(5, "[[1,2],[2,3],[3,4],[4,5],[1,5]]")
+                Pair(3, "[[1,2],[1,3],[2,3]]"),
+                Pair(5, "[[1,2],[2,3],[3,4],[4,5],[1,5]]"),
             ).map {
                 Solution().possibleBipartition(it.first, Json.decodeFromString(it.second))
-            }
+            },
         )
     }
 }

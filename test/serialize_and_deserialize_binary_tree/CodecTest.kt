@@ -7,57 +7,58 @@ import org.junit.jupiter.api.Test
 internal class CodecTest {
     @Test
     fun testserialize() {
-
         assertEquals(
-                "[100,[-200,null,null],[300,[100,[20,null,null],[300,null,null]],null]]",
-                Codec().serialize(
-                                Codec().deserialize(
-                                                "[100,[-200,null,null],[300,[100,[20,null,null],[300,null,null]],null]]"
-                                        )
-                        )
+            "[100,[-200,null,null],[300,[100,[20,null,null],[300,null,null]],null]]",
+            Codec().serialize(
+                Codec().deserialize(
+                    "[100,[-200,null,null],[300,[100,[20,null,null],[300,null,null]],null]]",
+                ),
+            ),
         )
         assertEquals(
-                Codec().serialize(
-                                (TreeNode(
-                                        100,
-                                        TreeNode(-200),
-                                        TreeNode(300, TreeNode(100, TreeNode(20), TreeNode(300)))
-                                ))
+            Codec().serialize(
+                (
+                    TreeNode(
+                        100,
+                        TreeNode(-200),
+                        TreeNode(300, TreeNode(100, TreeNode(20), TreeNode(300))),
+                    )
+                    ),
+            ),
+            Codec().serialize(
+                Codec().deserialize(
+                    Codec().serialize(
+                        TreeNode(
+                            100,
+                            TreeNode(-200),
+                            TreeNode(
+                                300,
+                                TreeNode(
+                                    100,
+                                    TreeNode(
+                                        20,
+                                    ),
+                                    TreeNode(
+                                        300,
+                                    ),
+                                ),
+                            ),
                         ),
-                Codec().serialize(
-                                Codec().deserialize(
-                                                Codec().serialize(
-                                                                TreeNode(
-                                                                        100,
-                                                                        TreeNode(-200),
-                                                                        TreeNode(
-                                                                                300,
-                                                                                TreeNode(
-                                                                                        100,
-                                                                                        TreeNode(
-                                                                                                20
-                                                                                        ),
-                                                                                        TreeNode(
-                                                                                                300
-                                                                                        )
-                                                                                )
-                                                                        )
-                                                                )
-                                                        )
-                                        )
-                        )
+                    ),
+                ),
+            ),
         )
     }
 
     @Test
     fun testdeserialize() {
         assertEquals(
-                "[100,[20,null,null],[300,[100,[20,null,null],[300,null,null]],null]]",
-                Codec().serialize(
-                                Codec().deserialize(
-                                                "[100,[20,null,null],[300,[100,[20,null,null],[300,null,null]],null]]"
-                                        )
-                        )
+            "[100,[20,null,null],[300,[100,[20,null,null],[300,null,null]],null]]",
+            Codec().serialize(
+                Codec().deserialize(
+                    "[100,[20,null,null],[300,[100,[20,null,null],[300,null,null]],null]]",
+                ),
+            ),
         )
         assertEquals("null", Codec().serialize(Codec().deserialize("null")))
         assertEquals(null, Codec().deserialize(Codec().serialize(null)))

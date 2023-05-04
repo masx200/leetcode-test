@@ -14,6 +14,4 @@ internal class SolutionTest {
             Solution().maxValue(TreeNodeLeetCodeParse("[4, 1, 3, 9, null, null, 2]"), 2),
         )
     }
-
-
 }

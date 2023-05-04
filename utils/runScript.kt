@@ -7,11 +7,10 @@ import kotlin.reflect.full.memberFunctions
 import kotlin.reflect.jvm.jvmName
 
 fun runScript(
-        commands: List<String>,
-        inputs: ArrayList<ArrayList<Any>>,
-        classes: KClass<*>
+    commands: List<String>,
+    inputs: ArrayList<ArrayList<Any>>,
+    classes: KClass<*>,
 ): List<Any?> {
-
     val kFunction = classes.constructors.first()
     if (kFunction.parameters.size != inputs[0].size) throw Error("constructor parameters mismatch")
 
@@ -21,7 +20,6 @@ fun runScript(
 
     for (fs in listOf(classes.memberFunctions, classes.declaredFunctions)) {
         for (fu in fs) {
-
             methodMap[fu.name] = fu
         }
     }
@@ -39,18 +37,18 @@ fun runScript(
                     val old = arg[j]
                     if (old is Number) {
                         arg[j] =
-                                when (jvmName) {
-                                    "int" -> old.toInt()
-                                    "double" -> old.toDouble()
-                                    "float" -> old.toFloat()
-                                    "long" -> old.toLong()
-                                    "char" -> old.toChar()
-                                    "short" -> old.toShort()
-                                    "byte" -> old.toByte()
-                                    else -> {
-                                        throw Error("error number type:$jvmName")
-                                    }
+                            when (jvmName) {
+                                "int" -> old.toInt()
+                                "double" -> old.toDouble()
+                                "float" -> old.toFloat()
+                                "long" -> old.toLong()
+                                "char" -> old.toChar()
+                                "short" -> old.toShort()
+                                "byte" -> old.toByte()
+                                else -> {
+                                    throw Error("error number type:$jvmName")
                                 }
+                            }
                     }
                 }
             }

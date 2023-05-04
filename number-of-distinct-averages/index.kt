@@ -1,4 +1,4 @@
-package  com.github.masx200.leetcode_test.number_of_distinct_averages
+package com.github.masx200.leetcode_test.number_of_distinct_averages
 
 class Solution {
     fun distinctAverages(nums: IntArray): Int {

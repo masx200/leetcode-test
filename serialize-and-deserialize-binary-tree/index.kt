@@ -9,7 +9,7 @@ class Codec {
             return when (node) {
                 null -> "null"
                 is TreeNode -> {
-                    listOf(node.`val`, node.left, node.right).joinToString(",", "[", "]") { element
+                    listOf(node.`val`, node.left, node.right).joinToString(",", "[", "]") { element,
                         ->
                         dfs(element)
                     }
@@ -29,9 +29,9 @@ class Codec {
             val children = mutableListOf<TreeNode?>()
             var sign = 1
             while (i < data.length) {
-
-                if (data[i] == ',') i++
-                else if (data[i] == '-') {
+                if (data[i] == ',') {
+                    i++
+                } else if (data[i] == '-') {
                     sign = -1
                     i++
                 } else if (data[i].isDigit()) {
@@ -61,7 +61,9 @@ class Codec {
                 } else if (data.substring(i, i + 4) == "null") {
                     i += 4
                     children.add(null)
-                } else i++
+                } else {
+                    i++
+                }
             }
 
             return children[0]

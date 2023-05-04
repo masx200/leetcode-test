@@ -9,7 +9,6 @@ class TripleInOne(stackSize: Int) {
     }
 
     fun push(stackNum: Int, value: Int) {
-
         if (stack[stackNum] == size) return
         stack[3 + stackNum * size + stack[stackNum]] = value
 

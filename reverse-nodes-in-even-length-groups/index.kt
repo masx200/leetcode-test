@@ -14,7 +14,6 @@ class Solution {
     }
 
     private fun generateEvenGroups(head: ListNode?): Sequence<MutableList<ListNode>> {
-
         return sequence {
             if (null == head) return@sequence
             var cur = head
@@ -23,16 +22,12 @@ class Solution {
             var group = 1
             while (null != cur) {
                 if (nodes.size == group) {
-
                     if ((group and 1) == 0) {
-
                         yield(nodes)
                     }
 
                     nodes.clear()
                     group++
-
-
                 }
                 nodes.add(cur)
 
@@ -40,15 +35,12 @@ class Solution {
             }
 
             if (nodes.size > 0) {
-
                 if ((nodes.size and 1) == 0) {
-
                     yield(nodes)
                 }
             }
 
             return@sequence
         }
-
     }
 }

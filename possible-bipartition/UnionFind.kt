@@ -28,13 +28,11 @@ class UnionFind<T> {
     fun find(x: T): T {
         if (x != (this.parents[x] ?: x)) {
             this.parents[x] = this.find(this.parents[x] ?: x)
-
         }
         return this.parents[x] ?: x
     }
 
     fun size(x: T): Int {
         return this.sizes.getOrDefault(x, 1)
-
     }
 }

@@ -5,4 +5,3 @@ class Solution {
         return num1 + num2
     }
 }
-

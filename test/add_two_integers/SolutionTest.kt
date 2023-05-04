@@ -12,6 +12,5 @@ internal class SolutionTest {
 
         assertNotEquals(Solution().sum(111, 555), 6626)
         assertEquals(Solution().sum(1111, 555), 1666)
-
     }
 }

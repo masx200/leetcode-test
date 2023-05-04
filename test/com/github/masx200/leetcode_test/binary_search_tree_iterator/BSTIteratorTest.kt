@@ -15,6 +15,5 @@ internal class BSTIteratorTest {
             res.add(iterator.next())
         }
         assertContentEquals(res, listOf(3, 7, 9, 15, 20))
-
     }
 }

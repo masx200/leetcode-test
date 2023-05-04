@@ -13,25 +13,24 @@ internal class SolutionTest {
 
     @Test
     fun testBstFromPreorder() {
-
         assertEquals(
-                listOf(intArrayOf(8, 5, 1, 7, 10, 12), intArrayOf(1, 3))
-                        .map { Solution().bstFromPreorder(it) }
-                        .map { TreeNodeLeetCodeStringify(it) },
-                listOf(arrayOf(8, 5, 10, 1, 7, null, 12), arrayOf(1, null, 3)).map {
-                    Json.encodeToString(it)
-                }
+            listOf(intArrayOf(8, 5, 1, 7, 10, 12), intArrayOf(1, 3))
+                .map { Solution().bstFromPreorder(it) }
+                .map { TreeNodeLeetCodeStringify(it) },
+            listOf(arrayOf(8, 5, 10, 1, 7, null, 12), arrayOf(1, null, 3)).map {
+                Json.encodeToString(it)
+            },
         )
 
         assertTrue(
-                deepEquals(
-                        listOf(intArrayOf(8, 5, 1, 7, 10, 12), intArrayOf(1, 3)).map {
-                            Solution().bstFromPreorder(it)
-                        },
-                        listOf("[8, 5, 10, 1, 7, null, 12]", "[1, null, 3]").map {
-                            TreeNodeLeetCodeParse(it)
-                        }
-                )
+            deepEquals(
+                listOf(intArrayOf(8, 5, 1, 7, 10, 12), intArrayOf(1, 3)).map {
+                    Solution().bstFromPreorder(it)
+                },
+                listOf("[8, 5, 10, 1, 7, null, 12]", "[1, null, 3]").map {
+                    TreeNodeLeetCodeParse(it)
+                },
+            ),
         )
     }
 }

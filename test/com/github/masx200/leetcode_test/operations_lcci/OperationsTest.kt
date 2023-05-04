@@ -21,7 +21,6 @@ class OperationsTest {
 
     @Test
     fun multiply() {
-
         val actual: JSONArray =
             JSON.parseArray(
                 """
@@ -34,7 +33,7 @@ class OperationsTest {
                 -2147483647,
                 -2147483648
             ]
-"""
+""",
             )
 
         @Suppress("UNCHECKED_CAST")
@@ -51,7 +50,7 @@ class OperationsTest {
                     "divide",
                     "divide"
 ]
-                """
+                """,
                 ),
                 JSON.parseArray(
                     """
@@ -64,16 +63,14 @@ class OperationsTest {
                     [2147483647, -1],
                     [-2147483648, 1]
                 ]
-"""
+""",
                 ) as
-                        ArrayList<ArrayList<Any>>,
+                    ArrayList<ArrayList<Any>>,
                 Operations::class,
             )
 
         assertContentEquals(mapToLong(expected), mapToLong(actual))
     }
-
-
 }
 
 fun mapToLong(expected: List<Any?>) =

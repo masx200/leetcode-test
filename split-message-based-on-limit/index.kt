@@ -27,22 +27,21 @@ class Solution {
         }
 
         if (left > 0 && left < rright) {
-
             var len = 0
             return Array(left) {
                 val endIndex =
-                        Math.max(
-                                0,
-                                Math.min(
-                                        message.length,
-                                        len + limit -
-                                                3 -
-                                                (it + 1).toString().length -
-                                                left.toString().length
-                                )
-                        )
+                    Math.max(
+                        0,
+                        Math.min(
+                            message.length,
+                            len + limit -
+                                3 -
+                                (it + 1).toString().length -
+                                left.toString().length,
+                        ),
+                    )
 
-                val s = message.substring(len, endIndex) + "<${it + 1}/${left}>"
+                val s = message.substring(len, endIndex) + "<${it + 1}/$left>"
 
                 if (len == endIndex) return arrayOf()
                 len = endIndex

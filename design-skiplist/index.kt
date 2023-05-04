@@ -23,5 +23,4 @@ class Skiplist {
             return false
         }
     }
-
 }

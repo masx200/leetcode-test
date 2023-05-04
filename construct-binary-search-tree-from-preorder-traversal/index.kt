@@ -1,5 +1,4 @@
-package  com.github.masx200.leetcode_test.construct_binary_search_tree_from_preorder_traversal
-
+package com.github.masx200.leetcode_test.construct_binary_search_tree_from_preorder_traversal
 
 import com.github.masx200.leetcode_test.insert_into_a_binary_search_tree.TreeNode
 

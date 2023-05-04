@@ -1,9 +1,7 @@
 package com.github.masx200.leetcode_test.utils
 
-
 import com.alibaba.fastjson2.JSON
 import com.alibaba.fastjson2.JSONArray
-
 import com.github.masx200.leetcode_test.operations_lcci.mapToLong
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
@@ -24,10 +22,9 @@ open class OperationsFather() {
     fun divide(a: Int, b: Int): Int {
         return a / b
     }
-
 }
 
-class Operations : OperationsFather() {}
+class Operations : OperationsFather()
 class RunScriptKtTest {
     @Test
     fun minus() {
@@ -39,7 +36,6 @@ class RunScriptKtTest {
 
     @Test
     fun runScript() {
-
         val actual: JSONArray =
             JSON.parseArray(
                 """
@@ -52,7 +48,7 @@ class RunScriptKtTest {
                 -2147483647,
                 -2147483648
             ]
-"""
+""",
             )
 
         @Suppress("UNCHECKED_CAST")
@@ -69,7 +65,7 @@ class RunScriptKtTest {
                     "divide",
                     "divide"
 ]
-                """
+                """,
                 ),
                 JSON.parseArray(
                     """
@@ -82,9 +78,9 @@ class RunScriptKtTest {
                     [2147483647, -1],
                     [-2147483648, 1]
                 ]
-"""
+""",
                 ) as
-                        ArrayList<ArrayList<Any>>,
+                    ArrayList<ArrayList<Any>>,
                 Operations::class,
             )
 

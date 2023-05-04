@@ -17,10 +17,8 @@ class Solution {
             for (d in v) {
                 uf.union(d, v[0])
                 if (uf.connected(d, i)) return false
-
             }
         }
         return true
     }
 }
-
