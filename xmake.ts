@@ -62,9 +62,8 @@ async function xmake(file: string, toolchain: string, sdk: string) {
 
     const { success, stderr, stdout, code } = await command.output();
 
-    assertEquals(success, true);
-    assertEquals(code, 0);
-
     await writeAll(Deno.stdout, stdout);
     await writeAll(Deno.stderr, stderr);
+    assertEquals(success, true);
+    assertEquals(code, 0);
 }
