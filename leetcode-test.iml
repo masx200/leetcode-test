@@ -2,7 +2,8 @@
 <module version="4">
   <component name="AdditionalModuleElements">
     <content url="file://$MODULE_DIR$" dumb="true">
-      <sourceFolder url="file://$MODULE_DIR$/remove-vowels-from-a-string" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" packagePrefix="com.github.masx200.leetcode_test" />
+      <sourceFolder url="file://$MODULE_DIR$/test" isTestSource="true" packagePrefix="com.github.masx200.leetcode_test" />
     </content>
   </component>
   <component name="AutoImportedSourceRoots">
