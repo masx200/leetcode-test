@@ -29,7 +29,7 @@
     </repositories>
 
     <build>
-        <sourceDirectory>./add-two-integers</sourceDirectory>
+        <sourceDirectory>./</sourceDirectory>
 
         <testSourceDirectory>./test</testSourceDirectory>
 
@@ -87,6 +87,7 @@
                         </goals>
                         <configuration>
                             <sourceDirs>
+                                <sourceDir>reverse-nodes-in-even-length-groups</sourceDir>
                                 <sourceDir>number-of-distinct-averages</sourceDir>
                                 <source>letter-case-permutation</source>
                                 <source>operations-lcci</source>
