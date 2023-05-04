@@ -1,11 +1,11 @@
-import * as path from "https://deno.land/std@0.185.0/path/mod.ts";
+import * as path from "https://deno.land/std@0.186.0/path/mod.ts";
 
-import { join, resolve } from "https://deno.land/std@0.185.0/path/mod.ts";
+import { join, resolve } from "https://deno.land/std@0.186.0/path/mod.ts";
 
 import { assertEquals } from "asserts";
 import { dirname } from "https://deno.land/x/dirname_es@v1.0.1/mod.ts";
 import parse from "npm:@masx200/mini-cli-args-parser@1.0.5";
-import { writeAll } from "https://deno.land/std@0.185.0/streams/mod.ts";
+import { writeAll } from "https://deno.land/std@0.186.0/streams/mod.ts";
 
 async function* findFilesRecursive(
     path: string,
