@@ -6,87 +6,80 @@
 name: Build
 
 on:
-  push:
-    branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
+    push:
+        branches: ["master"]
+    pull_request:
+        branches: ["master"]
 
+    # Path to the solution file relative to the root of the project.
 
-  # Path to the solution file relative to the root of the project.
-
-
-  # Configuration type to build.
-  # You can convert this to a build matrix if you need coverage of multiple configuration types.
-  # https://docs.github.com/actions/learn-github-actions/managing-complex-workflows#using-a-build-matrix
-  
+    # Configuration type to build.
+    # You can convert this to a build matrix if you need coverage of multiple configuration types.
+    # https://docs.github.com/actions/learn-github-actions/managing-complex-workflows#using-a-build-matrix
 
 permissions:
-  contents: read
+    contents: read
 
 jobs:
-  build:
-    runs-on: macos-latest
+    build:
+        runs-on: macos-latest
 
-    steps:
-    - uses: actions/checkout@v3
+        steps:
+            - uses: actions/checkout@v3
 
-        
-    - uses: xmake-io/github-action-setup-xmake@v1
-      with:
-       xmake-version: latest
-    
+            - uses: xmake-io/github-action-setup-xmake@v1
+              with:
+                  xmake-version: latest
 
-    - name: install
+            - name: install
 
-      run: |
-            brew install llvm@16
+              run: |
+                  brew install llvm@16
 
-            brew install xmake
-            brew install libtool automake
+                  brew install xmake
+                  brew install libtool automake
 
-                  cd ~
+                        cd ~
 
-                  git clone https://gitcode.net/mirrors/microsoft/vcpkg
+                        git clone https://gitcode.net/mirrors/microsoft/vcpkg
 
-                  cd vcpkg
+                        cd vcpkg
 
-                  sh bootstrap-vcpkg.sh
+                        sh bootstrap-vcpkg.sh
 
-                  ~/vcpkg/vcpkg integrate install
+                        ~/vcpkg/vcpkg integrate install
 
-                  ~/vcpkg/vcpkg integrate bash
+                        ~/vcpkg/vcpkg integrate bash
 
-                  
-                   #cd ~
-                 #  bash <(curl -fsSL https://xmake.io/shget.text)   
-                 export LDFLAGS="-L/usr/local/opt/llvm/lib"
+                        
+                         #cd ~
+                       #  bash <(curl -fsSL https://xmake.io/shget.text)   
+                       export LDFLAGS="-L/usr/local/opt/llvm/lib"
 
-                 export CPPFLAGS="-I/usr/local/opt/llvm/include"
-                 
-                 echo 'export PATH="/usr/local/opt/llvm/bin:$PATH"' >> /Users/runner/.bash_profile
-                 
-                 /usr/bin/clang --version
-                 /usr/local/opt/llvm/bin/clang --version
-                 /usr/local/share/vcpkg/vcpkg install cppunit:x64-osx
+                       export CPPFLAGS="-I/usr/local/opt/llvm/include"
+                       
+                       echo 'export PATH="/usr/local/opt/llvm/bin:$PATH"' >> /Users/runner/.bash_profile
+                       
+                       /usr/bin/clang --version
+                       /usr/local/opt/llvm/bin/clang --version
+                       /usr/local/share/vcpkg/vcpkg install cppunit:x64-osx
 
-    - name: make test check-if-it-is-a-good-array
+            - name: make test check-if-it-is-a-good-array
 
-      run: |
-            cd check-if-it-is-a-good-array
-      
-      
-            xmake f --toolchain=llvm --sdk=/usr/local/opt/llvm/ -y -v
-            xmake build -v -y
-            xmake run -v
-           
+              run: |
+                  cd check-if-it-is-a-good-array
 
-    - name: make test insert-into-a-binary-search-tree
 
-      run: |
-            cd insert-into-a-binary-search-tree
-      
-      
-            xmake f --toolchain=llvm --sdk=/usr/local/opt/llvm/ -y -v
-            xmake build -v -y
-            xmake run -v
-           
+                  xmake f --toolchain=llvm --sdk=/usr/local/opt/llvm/ -y -v
+                  xmake build -v -y
+                  xmake run -v
+
+            - name: make test insert-into-a-binary-search-tree
+
+              run: |
+                  cd insert-into-a-binary-search-tree
+
+
+                  xmake f --toolchain=llvm --sdk=/usr/local/opt/llvm/ -y -v
+                  xmake build -v -y
+                  xmake run -v

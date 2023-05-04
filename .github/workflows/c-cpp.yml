@@ -7,78 +7,66 @@ name: C/C++ CI
 #name: Build
 
 on:
-  push:
-    branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
+    push:
+        branches: ["master"]
+    pull_request:
+        branches: ["master"]
 
+    # Path to the solution file relative to the root of the project.
 
-  # Path to the solution file relative to the root of the project.
-
-
-  # Configuration type to build.
-  # You can convert this to a build matrix if you need coverage of multiple configuration types.
-  # https://docs.github.com/actions/learn-github-actions/managing-complex-workflows#using-a-build-matrix
-  
+    # Configuration type to build.
+    # You can convert this to a build matrix if you need coverage of multiple configuration types.
+    # https://docs.github.com/actions/learn-github-actions/managing-complex-workflows#using-a-build-matrix
 
 permissions:
-  contents: read
+    contents: read
 
 jobs:
-  build:
-    runs-on: macos-latest
+    build:
+        runs-on: macos-latest
 
-    steps:
-    - uses: actions/checkout@v3
-    
-    - uses: xmake-io/github-action-setup-xmake@v1
-      with:
-       xmake-version: latest
-    
-    
+        steps:
+            - uses: actions/checkout@v3
+            - name: Setup Deno
 
-    - name: install
+              uses: denoland/setup-deno@v1.1.0
+              with:
+                  deno-version: v1.33.1
+            - uses: xmake-io/github-action-setup-xmake@v1
+              with:
+                  xmake-version: latest
 
-      run: |
-            brew install llvm@16
+            - name: install
 
-            brew install xmake
-            brew install libtool automake
+              run: |
+                  brew install llvm@16
 
-                  cd ~
+                  brew install xmake
+                  brew install libtool automake
 
-                  git clone https://gitcode.net/mirrors/microsoft/vcpkg
+                        cd ~
 
-                  cd vcpkg
+                        git clone https://gitcode.net/mirrors/microsoft/vcpkg
 
-                  sh bootstrap-vcpkg.sh
+                        cd vcpkg
 
-                  ~/vcpkg/vcpkg integrate install
+                        sh bootstrap-vcpkg.sh
 
-                  ~/vcpkg/vcpkg integrate bash
+                        ~/vcpkg/vcpkg integrate install
 
-                  
-                   #cd ~
-                 #  bash <(curl -fsSL https://xmake.io/shget.text)   
-                 export LDFLAGS="-L/usr/local/opt/llvm/lib"
+                        ~/vcpkg/vcpkg integrate bash
 
-                 export CPPFLAGS="-I/usr/local/opt/llvm/include"
-                 
-                 echo 'export PATH="/usr/local/opt/llvm/bin:$PATH"' >> /Users/runner/.bash_profile
-                 
-                 /usr/bin/clang --version
-                 /usr/local/opt/llvm/bin/clang --version
-                 /usr/local/share/vcpkg/vcpkg install cppunit:x64-osx
+                        
+                         #cd ~
+                       #  bash <(curl -fsSL https://xmake.io/shget.text)   
+                       export LDFLAGS="-L/usr/local/opt/llvm/lib"
 
- 
+                       export CPPFLAGS="-I/usr/local/opt/llvm/include"
+                       
+                       echo 'export PATH="/usr/local/opt/llvm/bin:$PATH"' >> /Users/runner/.bash_profile
+                       
+                       /usr/bin/clang --version
+                       /usr/local/opt/llvm/bin/clang --version
+                       /usr/local/share/vcpkg/vcpkg install cppunit:x64-osx
 
-    - name: make test insufficient-nodes-in-root-to-leaf-paths
-
-      run: |
-            cd insufficient-nodes-in-root-to-leaf-paths
-      
-      
-            xmake f --toolchain=llvm --sdk=/usr/local/opt/llvm/ -y -v
-            xmake build -v -y
-            xmake run -v
-           
+            - run: deno run -A xmake.ts
