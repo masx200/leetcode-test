@@ -113,10 +113,10 @@ void test2()
 
     for (auto node : nodes) {
         printTreeNode(node);
-        //delete (node);
+        // delete (node);
     }
     for (auto node : nodes) {
-        //printTreeNode(node);
+        // printTreeNode(node);
         delete (node);
     }
     println("test2 end");
@@ -164,12 +164,12 @@ public:
             println(example.root);
             println(example.val);
             println(example.output);
-            for (auto *node : nodes) {
+            for (auto* node : nodes) {
                 printTreeNode(node);
-                //delete (node);
+                // delete (node);
             }
             for (auto* node : nodes) {
-               // printTreeNode(node);
+                // printTreeNode(node);
                 delete (node);
             }
         }
