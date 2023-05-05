@@ -38,7 +38,7 @@ async function main() {
 async function xmake(file: string, toolchain: string, sdk: string) {
     const os = Deno.build.os;
     console.log({ file });
-    console.log({ os });
+    // console.log({ os });
     const cmd = os === "windows" ? "cmd.exe" : "bash";
     const others = `xmake clean &&  xmake f ${
         toolchain ? "--toolchain=" + toolchain : ""
@@ -61,7 +61,7 @@ async function xmake(file: string, toolchain: string, sdk: string) {
     const command = new Deno.Command(cmd, { cwd: cwd, args });
 
     const { success, stderr, stdout, code } = await command.output();
-
+    console.log({ success, code });
     await writeAll(Deno.stdout, stdout);
     await writeAll(Deno.stderr, stderr);
     assertEquals(success, true);

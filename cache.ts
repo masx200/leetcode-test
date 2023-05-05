@@ -5,6 +5,7 @@ import {
     walk,
     WalkEntry,
 } from "./deps.ts";
+
 import { split_by_count } from "./utils/split_by_count.ts";
 
 function searchFilesNames({
@@ -60,22 +61,18 @@ async function start() {
 async function runDenocache(stack: string[]) {
     const cmd = ["deno", "cache", "--unstable", ...stack];
     console.log(cmd);
-    const process = Deno.run({
-        cmd: cmd,
+    const process = new Deno.Command(cmd[0], {
+        args: cmd.slice(1),
         stderr: "piped",
         stdout: "piped",
     });
-    const [status, stdout, stderr] = await Promise.all([
-        process.status(),
-        process.output(),
-        process.stderrOutput(),
-    ]);
+    const { stderr, stdout, code, success } = await process.output();
     const decoder = new TextDecoder();
     const out = decoder.decode(stdout);
     const err = decoder.decode(stderr);
-    console.log(status, out, err);
-    process.close();
-    if (!status.success) {
+    console.log({ code, success }, out, err);
+
+    if (!success) {
         throw new Error("type cache failed:" + out + err);
     }
 }
