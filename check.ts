@@ -1,9 +1,9 @@
 import {
     AsyncCurrentLimiter,
     AsyncLimiterClass,
-    WalkEntry,
     parse,
     walk,
+    WalkEntry,
 } from "./deps.ts";
 
 import { split_by_count } from "./utils/split_by_count.ts";
