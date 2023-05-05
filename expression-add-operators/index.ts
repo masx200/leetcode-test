@@ -30,7 +30,7 @@ function addOperators(num: string, target: number): string[] {
                 backtrack(expr, j + 1, res - mul + mul * val, mul * val);
             }
         }
-        expr = expr.splice(signIndex, expr.length - signIndex);
+        expr.length = signIndex;
     }
 
     backtrack(expr, 0, 0, 0);
