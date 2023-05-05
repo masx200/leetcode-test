@@ -33,7 +33,7 @@ jobs:
               with:
                    token: ${{ github.token }}
                    triplet: x64-osx-release
-                   pkgs: ''
+                   pkgs: 'gtest cppunit'
                    
             - name: Setup Deno
 
