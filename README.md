@@ -2566,4 +2566,6 @@ https://leetcode.cn/problems/left-and-right-sum-differences
 
 https://leetcode.cn/problems/difference-between-element-sum-and-digit-sum-of-an-array
 
+https://leetcode.cn/problems/expression-add-operators/
+
 </details>
