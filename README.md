@@ -2562,4 +2562,8 @@ https://leetcode.cn/problems/calculate-delayed-arrival-time/
 
 https://leetcode.cn/problems/sum-multiples/
 
+https://leetcode.cn/problems/left-and-right-sum-differences
+
+https://leetcode.cn/problems/difference-between-element-sum-and-digit-sum-of-an-array
+
 </details>
