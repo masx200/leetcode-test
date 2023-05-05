@@ -2558,4 +2558,6 @@ https://leetcode.cn/problems/design-linked-list/
 
 https://leetcode.cn/problems/maximum-sum-with-exactly-k-elements
 
+https://leetcode.cn/problems/calculate-delayed-arrival-time/
+
 </details>
