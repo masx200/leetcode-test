@@ -2572,4 +2572,6 @@ https://leetcode.cn/problems/minimum-number-of-frogs-croaking
 
 https://leetcode.cn/problems/largest-rectangle-in-histogram
 
+https://leetcode.cn/problems/frog-jump-ii
+
 </details>
