@@ -13,7 +13,7 @@ func isPrefixOfWord(sentence string, searchWord string) int {
 	}
 }
 
-//func FindIndex[S ~[]T, T any](items S, f func(el T) bool) int {
+// func FindIndex[S ~[]T, T any](items S, f func(el T) bool) int {
 func FindIndex(items []string, f func(el string) bool) int {
 	for i, el := range items {
 		if f(el) {
