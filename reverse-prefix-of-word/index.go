@@ -1,6 +1,5 @@
 package reverse_prefix_of_word
 
-
 import "strings"
 import "github.com/webx-top/com"
 

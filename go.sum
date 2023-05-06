@@ -79,10 +79,6 @@ github.com/magiconair/properties v1.8.7/go.mod h1:Dhd985XPs7jluiymwWYZ0G4Z61jb3v
 github.com/mailru/easyjson v0.0.0-20190312143242-1de009706dbe/go.mod h1:C1wdFJiN94OJF2b5HbByQZoLdCWB1Yqtg26g4irojpc=
 github.com/masx200/leetcode-TreeNode-go v1.0.5 h1:SCl1Ku93oMHWstzjoEa1hkh+gsRu9Lv/9/R9gIUamqI=
 github.com/masx200/leetcode-TreeNode-go v1.0.5/go.mod h1:eIc8UV+ltx46u5IfGFBG/U5CZ4hhWNckYbwykIBClqA=
-github.com/masx200/leetcode-test/serialize-and-deserialize-binary-tree v0.0.0-20221017071457-61edb01aa260 h1:tm7hXj3W0kOvdvS9lUMHn4Ql63nSKifeB7k5ow8OcuI=
-github.com/masx200/leetcode-test/serialize-and-deserialize-binary-tree v0.0.0-20221017071457-61edb01aa260/go.mod h1:nc1u6804gce5vgxkH1Bg5ygDoAc/1AAJKCH0/XCB8/w=
-github.com/masx200/leetcode-test/utils v0.0.0-20221017065832-df73c286eb18 h1:ac2yrYrNQrHrdizousepISR21jpaAeFZKPK8L9Jr2vM=
-github.com/masx200/leetcode-test/utils v0.0.0-20221017065832-df73c286eb18/go.mod h1:taQg1hvh+G8bzv0i78083nfa/i8+e9P8SdDGB/paLws=
 github.com/matttproud/golang_protobuf_extensions v1.0.1/go.mod h1:D8He9yQNgCq6Z5Ld7szi9bcBfOoFv/3dc6xSMkL2PC0=
 github.com/microcosm-cc/bluemonday v1.0.1/go.mod h1:hsXNsILzKxV+sX77C5b8FSuKF00vh2OMYv+xgHpAMF4=
 github.com/modern-go/concurrent v0.0.0-20180228061459-e0a39a4cb421/go.mod h1:6dJC0mAP4ikYIbvyc7fijjWJddQyLn8Ig3JB5CqoB9Q=

@@ -1,4 +1,4 @@
-package index
+package maximum_equal_frequency
 
 func maxEqualFreq(nums []int) (ans int) {
 	freq := map[int]int{}

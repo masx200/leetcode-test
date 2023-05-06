@@ -12,7 +12,7 @@ func Constructor() Codec {
 	return Codec{}
 }
 
-type any=interface{}
+type any = interface{}
 
 func replacer(root *TreeNode) any {
 	if root == nil {

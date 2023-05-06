@@ -1,4 +1,4 @@
-package index
+package transform_to_chessboard
 
 func MovesToChessboard(board [][]int) int {
 	return movesToChessboard(board)

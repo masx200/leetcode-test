@@ -1,4 +1,4 @@
-package index
+package maximum_product_difference_between_two_pairs
 
 import "sort"
 
