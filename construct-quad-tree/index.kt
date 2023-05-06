@@ -1,6 +1,5 @@
 package com.github.masx200.leetcode_test.construct_quad_tree
 
-
 class Solution {
 
     fun construct(grid: Array<IntArray>): Node? {
@@ -11,10 +10,8 @@ class Solution {
         }
 
         fun dfs(top: Int, left: Int, n: Int): Node? {
-
             var ans: Node? = null
             if (n == 0) {
-
             } else {
                 val value = grid[top][left] == 1
 
@@ -32,8 +29,6 @@ class Solution {
             }
             return ans
         }
-
-
 
         for (i in 0 until n) {
             for (j in 0 until n) {
@@ -57,5 +52,4 @@ class Solution {
 
         return dfs(0, 0, n)
     }
-
 }
