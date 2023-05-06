@@ -26,7 +26,7 @@ class Solution {
             }
         }
 
-        if (left > 0 && left < rright) {
+        if (left in 1 until rright) {
             var len = 0
             return Array(left) {
                 val endIndex =
@@ -35,8 +35,8 @@ class Solution {
                         Math.min(
                             message.length,
                             len + limit -
-                                3 -
-                                (it + 1).toString().length -
+                                    3 -
+                                    (it + 1).toString().length -
                                 left.toString().length,
                         ),
                     )

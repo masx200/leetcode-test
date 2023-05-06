@@ -8,7 +8,7 @@ class Skiplist {
     }
 
     fun add(num: Int) {
-        storage.set(num, storage.getOrDefault(num, 0) + 1)
+        storage[num] = storage.getOrDefault(num, 0) + 1
     }
 
     fun erase(num: Int): Boolean {
@@ -16,11 +16,11 @@ class Skiplist {
             storage.remove(num)
             return true
         }
-        if (search(num)) {
-            storage.set(num, storage.getOrDefault(num, 0) - 1)
-            return true
+        return if (search(num)) {
+            storage[num] = storage.getOrDefault(num, 0) - 1
+            true
         } else {
-            return false
+            false
         }
     }
 }

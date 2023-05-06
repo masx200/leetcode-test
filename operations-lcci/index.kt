@@ -1,6 +1,6 @@
 package com.github.masx200.leetcode_test.operations_lcci
 
-class Operations() {
+class Operations {
 
     fun minus(a: Int, b: Int): Int {
         return a - b
