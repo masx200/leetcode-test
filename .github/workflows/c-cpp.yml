@@ -27,15 +27,15 @@ jobs:
 
         steps:
             - uses: actions/checkout@v3
-            
+
             - uses: actions/cache@v3
               with:
-                path: |
-                 ~/.deno
-                 ~/Library/Caches/deno
-		      
-                key: ${{ runner.os }}-deno-${{ hashFiles('**/deps.ts') }}
-                
+                  path: |
+                      ~/.deno
+                      ~/Library/Caches/deno
+
+                  key: ${{ runner.os }}-deno-${{ hashFiles('**/deps.ts') }}
+
             - name: install
 
               run: |
@@ -57,16 +57,14 @@ jobs:
 
                        echo 'export PATH="/usr/local/opt/llvm/bin:$PATH"' >> /Users/runner/.bash_profile
 
-                       
-
             - name: vcpkg-action
 
               uses: johnwason/vcpkg-action@v4
               with:
-                   token: ${{ github.token }}
-                   triplet: x64-osx-release
-                   pkgs: 'gtest cppunit'
-                   
+                  token: ${{ github.token }}
+                  triplet: x64-osx-release
+                  pkgs: "gtest cppunit"
+
             - name: Setup Deno
 
               uses: denoland/setup-deno@v1.1.0
@@ -76,5 +74,5 @@ jobs:
               with:
                   xmake-version: latest
                   actions-cache-folder: ".xmake-cache"
-            
+
             - run: deno run -A xmake.ts --toolchain=llvm --sdk=/usr/local/opt/llvm/
