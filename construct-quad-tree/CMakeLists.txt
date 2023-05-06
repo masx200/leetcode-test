@@ -8,7 +8,7 @@ cmake_policy(SET CMP0091 NEW)
 project(construct-quad-tree LANGUAGES CXX C)
 
 # target
-add_library(construct-quad-tree STATIC "")
+add_library(construct-quad-tree STATIC "" index.ixx Node.ixx)
 set_target_properties(construct-quad-tree PROPERTIES OUTPUT_NAME "construct-quad-tree")
 set_target_properties(construct-quad-tree PROPERTIES ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/build/windows/x86/release")
 add_custom_command(OUTPUT output_construct-quad-tree_9FF4B28E
