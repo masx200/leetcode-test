@@ -27,6 +27,14 @@ jobs:
 
         steps:
             - uses: actions/checkout@v3
+            
+            - uses: actions/cache@v3
+              with:
+                path: |
+                    ~/.deno
+                     ~/.cache/deno
+                key: ${{ runner.os }}-deno-${{ hashFiles('**/deps.ts') }}
+                
             - name: install
 
               run: |
@@ -37,23 +45,13 @@ jobs:
 
                   brew install libtool automake
 
-                        #cd ~
-
-                        #git clone https://gitcode.net/mirrors/microsoft/vcpkg
-
-                        #cd vcpkg
-
-                        #sh bootstrap-vcpkg.sh
-
-                        #~/vcpkg/vcpkg integrate install
-
-                        #~/vcpkg/vcpkg integrate bash
+                        
 
                         
 
                          #cd ~
 
-                       #  bash <(curl -fsSL https://xmake.io/shget.text)   
+                      
 
                        export LDFLAGS="-L/usr/local/opt/llvm/lib"
 
@@ -65,13 +63,6 @@ jobs:
 
                        
 
-                       #/usr/bin/clang --version
-
-                       #/usr/local/opt/llvm/bin/clang --version
-
-                       #/usr/local/share/vcpkg/
-
-                       #vcpkg install cppunit:x64-osx
             - name: vcpkg-action
 
               uses: johnwason/vcpkg-action@v4
