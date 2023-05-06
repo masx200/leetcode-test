@@ -8,22 +8,22 @@ cmake_policy(SET CMP0091 NEW)
 project(construct-quad-tree LANGUAGES CXX C)
 
 # target
-add_library(construct-quad-tree STATIC "" index.ixx Node.ixx)
+add_library(construct-quad-tree STATIC "")
 set_target_properties(construct-quad-tree PROPERTIES OUTPUT_NAME "construct-quad-tree")
 set_target_properties(construct-quad-tree PROPERTIES ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/build/windows/x86/release")
-add_custom_command(OUTPUT output_construct-quad-tree_80B4D578
+add_custom_command(OUTPUT output_construct-quad-tree_9FF4B28E
     COMMAND echo [  0%]: compiling.module.release construct_quad_tree.Node
     COMMAND ${CMAKE_COMMAND} -E make_directory ${CMAKE_SOURCE_DIR}/build/.objs/construct-quad-tree/windows/x86/release
-    COMMAND "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.35.32215/bin/HostX86/x86/cl.exe" -nologo /EHsc -experimental:module -TP -c ${CMAKE_SOURCE_DIR}/Node.ixx -Fo${CMAKE_SOURCE_DIR}/build/.objs/construct-quad-tree/windows/x86/release/Node.ixx.obj -ifcOutput ${CMAKE_SOURCE_DIR}/build/.gens/construct-quad-tree/windows/x86/release/rules/modules/cache/f5d5c97b/construct_quad_tree.Node.ifc -interface
+    COMMAND "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.35.32215/bin/HostX86/x86/cl.exe" -nologo -std:c++20 /EHsc -experimental:module -TP -c ${CMAKE_SOURCE_DIR}/Node.ixx -Fo${CMAKE_SOURCE_DIR}/build/.objs/construct-quad-tree/windows/x86/release/Node.ixx.obj -ifcOutput ${CMAKE_SOURCE_DIR}/build/.gens/construct-quad-tree/windows/x86/release/rules/modules/cache/f5d5c97b/construct_quad_tree.Node.ifc -interface
     COMMAND echo [  0%]: compiling.module.release construct_quad_tree.Solution
     COMMAND ${CMAKE_COMMAND} -E make_directory ${CMAKE_SOURCE_DIR}/build/.objs/construct-quad-tree/windows/x86/release
-    COMMAND "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.35.32215/bin/HostX86/x86/cl.exe" -nologo /EHsc -experimental:module -TP -c ${CMAKE_SOURCE_DIR}/index.ixx -Fo${CMAKE_SOURCE_DIR}/build/.objs/construct-quad-tree/windows/x86/release/index.ixx.obj -ifcOutput ${CMAKE_SOURCE_DIR}/build/.gens/construct-quad-tree/windows/x86/release/rules/modules/cache/f5d5c97b/construct_quad_tree.Solution.ifc -interface -reference construct_quad_tree.Node=${CMAKE_SOURCE_DIR}/build/.gens/construct-quad-tree/windows/x86/release/rules/modules/cache/f5d5c97b/construct_quad_tree.Node.ifc
+    COMMAND "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.35.32215/bin/HostX86/x86/cl.exe" -nologo -std:c++20 /EHsc -experimental:module -TP -c ${CMAKE_SOURCE_DIR}/index.ixx -Fo${CMAKE_SOURCE_DIR}/build/.objs/construct-quad-tree/windows/x86/release/index.ixx.obj -ifcOutput ${CMAKE_SOURCE_DIR}/build/.gens/construct-quad-tree/windows/x86/release/rules/modules/cache/f5d5c97b/construct_quad_tree.Solution.ifc -interface -reference construct_quad_tree.Node=${CMAKE_SOURCE_DIR}/build/.gens/construct-quad-tree/windows/x86/release/rules/modules/cache/f5d5c97b/construct_quad_tree.Node.ifc
     VERBATIM
 )
-add_custom_target(target_construct-quad-tree_80B4D578
-    DEPENDS output_construct-quad-tree_80B4D578
+add_custom_target(target_construct-quad-tree_9FF4B28E
+    DEPENDS output_construct-quad-tree_9FF4B28E
 )
-add_dependencies(construct-quad-tree target_construct-quad-tree_80B4D578)
+add_dependencies(construct-quad-tree target_construct-quad-tree_9FF4B28E)
 target_compile_options(construct-quad-tree PRIVATE
     $<$<COMPILE_LANGUAGE:CXX>:-experimental:module>
 )
@@ -32,6 +32,8 @@ if(CMAKE_CXX_COMPILER_FRONTEND_VARIANT STREQUAL "MSVC")
 else()
     target_compile_options(construct-quad-tree PRIVATE -fcxx-exceptions)
 endif()
+set_target_properties(construct-quad-tree PROPERTIES CXX_EXTENSIONS OFF)
+target_compile_features(construct-quad-tree PRIVATE cxx_std_20)
 if(MSVC)
     set_property(TARGET construct-quad-tree PROPERTY
         MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
