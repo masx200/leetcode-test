@@ -11,6 +11,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v3
+
             - uses: actions/cache@v3
               with:
                   path: |
@@ -25,10 +26,10 @@ jobs:
                   chmod +x llvm.sh
                   sudo ./llvm.sh 16
             - run: |
-                  wget https://github.com/masx200/clang-formatter/releases/download/Continuous-integration-15fd2be5fd7385143d90a352d1d9160cfb805bdf/clang-formatter_Linux_x86_64.tar.gz
+                  wget -O ./temp/clang-formatter_Linux_x86_64.tar.gz  https://github.com/masx200/clang-formatter/releases/download/Continuous-integration-15fd2be5fd7385143d90a352d1d9160cfb805bdf/clang-formatter_Linux_x86_64.tar.gz
                   mkdir -p -v ./temp/clang-formatter
-                  tar zxvf ./clang-formatter_Linux_x86_64.tar.gz -C ./temp/clang-formatter
-                  #ls ./temp/clang-formatter -l
+                  tar zxvf ./temp/clang-formatter_Linux_x86_64.tar.gz -C ./temp/clang-formatter
+
             - name: clang-formatter
               continue-on-error: true
               run: ./temp/clang-formatter/clang-formatter
@@ -38,7 +39,7 @@ jobs:
               with:
                   go-version: 1.20.4
                   cache: true
-
+            - run: deno task cache
             - run: deno fmt
 
             - run: go fmt ./...
@@ -50,11 +51,11 @@ jobs:
                   distribution: "temurin"
                   cache: maven
 
-            - run: wget -O ktlint.jar https://github.com/pinterest/ktlint/releases/download/0.49.0/ktlint
+            - run: wget -O ./temp/ktlint/ktlint.jar https://github.com/pinterest/ktlint/releases/download/0.49.0/ktlint
 
             - name: ktlint
               continue-on-error: true
-              run: java --add-opens=java.base/java.lang=ALL-UNNAMED -jar "./ktlint.jar" -F
+              run: java --add-opens=java.base/java.lang=ALL-UNNAMED -jar "./temp/ktlint/ktlint.jar" -F
 
             - name: Update dependencies
 
