@@ -2570,4 +2570,6 @@ https://leetcode.cn/problems/expression-add-operators/
 
 https://leetcode.cn/problems/minimum-number-of-frogs-croaking
 
+https://leetcode.cn/problems/largest-rectangle-in-histogram
+
 </details>
