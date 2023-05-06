@@ -1,4 +1,4 @@
-package index
+package design_skiplist
 
 type Skiplist struct {
 	store map[int]int

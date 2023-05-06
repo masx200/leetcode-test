@@ -1,4 +1,4 @@
-package index
+package deepest_leaves_sum
 
 import (
 	"testing"

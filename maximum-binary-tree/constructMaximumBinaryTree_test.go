@@ -1,4 +1,4 @@
-package index
+package maximum_binary_tree
 
 import (
 	"strings"

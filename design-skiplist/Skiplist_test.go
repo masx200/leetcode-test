@@ -1,4 +1,4 @@
-package index
+package design_skiplist
 
 import "testing"
 import "gotest.tools/v3/assert"

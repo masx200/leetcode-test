@@ -1,4 +1,4 @@
-package index
+package maximum_binary_tree
 
 import maximum_binary_tree_ii "github.com/masx200/leetcode-test/maximum-binary-tree-ii"
 import serialize_and_deserialize_binary_tree "github.com/masx200/leetcode-test/serialize-and-deserialize-binary-tree"
