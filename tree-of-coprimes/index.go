@@ -1,4 +1,4 @@
-package index
+package tree_of_coprimes
 
 var prime = make([][]bool, 0)
 

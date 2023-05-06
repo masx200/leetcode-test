@@ -1,4 +1,4 @@
-package index
+package tree_of_coprimes
 
 import (
 	"testing"

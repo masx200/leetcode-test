@@ -1,4 +1,4 @@
-package index
+package serialize_and_deserialize_binary_tree
 
 func Serialize(root *TreeNode) string {
 	ser := Constructor()

@@ -1,4 +1,4 @@
-package index
+package abbreviating_the_product_of_a_range
 
 import (
 	"fmt"

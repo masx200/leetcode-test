@@ -1,4 +1,4 @@
-package index
+package count_complete_tree_nodes
 
 import "math"
 
