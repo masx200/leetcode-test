@@ -16,7 +16,7 @@ function searchFilesNames({
     const entry_iter = walk(".", {
         includeFiles: true,
         includeDirs: false,
-        exts: ["ts"],
+        exts: [".ts"],
         skip: [/node_modules/, skip].flat().filter(Boolean) as RegExp[],
     });
     return entry_iter;
