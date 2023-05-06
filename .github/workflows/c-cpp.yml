@@ -31,8 +31,8 @@ jobs:
             - uses: actions/cache@v3
               with:
                 path: |
-                    ~/.deno
-                     ~/.cache/deno
+						~/.deno
+						~/Library/Caches/deno
                 key: ${{ runner.os }}-deno-${{ hashFiles('**/deps.ts') }}
                 
             - name: install
@@ -47,11 +47,6 @@ jobs:
 
                         
 
-                        
-
-                         #cd ~
-
-                      
 
                        export LDFLAGS="-L/usr/local/opt/llvm/lib"
 
