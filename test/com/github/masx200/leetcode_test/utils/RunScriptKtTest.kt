@@ -9,21 +9,20 @@ import org.junit.jupiter.api.Test
 import kotlin.test.assertContentEquals
 import kotlin.test.assertEquals
 
- class Operations {
+class Operations {
 
-     fun minus(a: Int, b: Int): Int {
-         return a - b
-     }
+    fun minus(a: Int, b: Int): Int {
+        return a - b
+    }
 
-     fun multiply(a: Int, b: Int): Int {
-         return a * b
-     }
+    fun multiply(a: Int, b: Int): Int {
+        return a * b
+    }
 
-     fun divide(a: Int, b: Int): Int {
+    fun divide(a: Int, b: Int): Int {
         return a / b
     }
 }
-
 
 class RunScriptKtTest {
     @Test
