@@ -2574,4 +2574,6 @@ https://leetcode.cn/problems/largest-rectangle-in-histogram
 
 https://leetcode.cn/problems/frog-jump-ii
 
+https://leetcode.cn/problems/construct-quad-tree
+
 </details>
