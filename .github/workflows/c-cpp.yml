@@ -31,8 +31,9 @@ jobs:
             - uses: actions/cache@v3
               with:
                 path: |
-						~/.deno
-						~/Library/Caches/deno
+                 ~/.deno
+                 ~/Library/Caches/deno
+		      
                 key: ${{ runner.os }}-deno-${{ hashFiles('**/deps.ts') }}
                 
             - name: install
