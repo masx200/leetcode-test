@@ -27,10 +27,11 @@ function minNumberOfFrogs(croakOfFrogs: string): number {
             k += 1;
             now -= 1;
         }
+        if (!(c >= r && r >= o && o >= a && a >= k)) {
+            return -1;
+        }
     }
-    if (!(c >= r && r >= o && o >= a && a >= k)) {
-        return -1;
-    }
+
     return now == 0 ? res : -1;
 }
 export default minNumberOfFrogs;
