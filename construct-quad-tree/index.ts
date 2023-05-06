@@ -1,4 +1,4 @@
-import Node from "./node.ts";
+import Node from "./Node.ts";
 
 export default function construct(grid: number[][]): Node | null {
     return dfs(grid, 0, 0, grid.length, grid.length);
