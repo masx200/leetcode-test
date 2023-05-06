@@ -2568,4 +2568,6 @@ https://leetcode.cn/problems/difference-between-element-sum-and-digit-sum-of-an-
 
 https://leetcode.cn/problems/expression-add-operators/
 
+https://leetcode.cn/problems/minimum-number-of-frogs-croaking
+
 </details>
