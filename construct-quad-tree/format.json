@@ -1,15 +1,15 @@
 {
-    "style": "WebKit",
-    "filter": [
-        "*.c",
-        "*.cc",
-        "*.cpp",
-        "*.ixx",
-        "*.h",
-        "*.hh",
-        "*.hpp"
-    ],
-    "dirs": [
-        "./"
-    ]
+  "style": "WebKit",
+  "filter": [
+    "*.c",
+    "*.cc",
+    "*.cpp",
+    "*.ixx",
+    "*.h",
+    "*.hh",
+    "*.hpp"
+  ],
+  "dirs": [
+    "./"
+  ]
 }
