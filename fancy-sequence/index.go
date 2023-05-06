@@ -1,4 +1,4 @@
-package index
+package fancy_sequence
 
 type Fancy struct {
 	v, a, b []int

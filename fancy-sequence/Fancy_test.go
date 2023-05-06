@@ -1,4 +1,4 @@
-package index
+package fancy_sequence
 
 import (
 	"testing"
