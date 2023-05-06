@@ -3,7 +3,7 @@ module;
 #include <functional>
 #include <vector>
 export module NAMESPACE.Solution;
-import NAMESPACE.Node;
+import construct_quad_tree.Node;
 using std::function;
 using std::vector;
 namespace NAMESPACE {

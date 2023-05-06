@@ -1,6 +1,6 @@
 module;
 #define NAMESPACE construct_quad_tree
-export module NAMESPACE.Node;
+export module construct_quad_tree.Node;
 namespace NAMESPACE {
 
 export class Node {
