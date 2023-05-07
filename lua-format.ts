@@ -1,11 +1,9 @@
+import { RunCommandShell } from "./xmake.ts";
+import parse from "npm:@masx200/mini-cli-args-parser@1.0.5";
+import { walk } from "https://deno.land/std@0.186.0/fs/walk.ts";
 if (import.meta.main) {
     await start();
 }
-
-import { RunCommandShell } from "./xmake.ts";
-import { assertEquals } from "https://deno.land/std@0.186.0/testing/asserts.ts";
-import parse from "npm:@masx200/mini-cli-args-parser@1.0.5";
-import { walk } from "https://deno.land/std@0.186.0/fs/walk.ts";
 
 async function start() {
     const entry_iter = walk(".", {
@@ -17,8 +15,8 @@ async function start() {
     const args = parse(Deno.args);
 
     console.log(JSON.stringify(args));
-    const { executable } = args;
-    assertEquals(typeof executable, "string", "input lua-format executable");
+    const { executable = "lua-format" } = args;
+    console.log("input lua-format executable:--executable=lua-format");
     const files: string[] = [];
     for await (const entry of entry_iter) {
         console.log(entry);
