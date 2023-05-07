@@ -46,7 +46,7 @@ async function xmake(file: string, toolchain: string, sdk: string) {
         `  xmake f ${toolchain ? "--toolchain=" + toolchain : ""} ${
             sdk ? "--sdk=" + sdk : ""
         } -y -v `,
-        ` xmake build -v -y  -w`,
+        ` xmake build -v -y  -w test`,
         ` xmake build -v -y  -w`,
         ` xmake build -v -y  -w`,
         `  xmake run -v test`,
