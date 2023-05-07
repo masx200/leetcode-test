@@ -37,7 +37,7 @@ async function main() {
 }
 
 async function RunXmake(file: string, toolchain: string, sdk: string) {
-    const os = Deno.build.os;
+    //const os = Deno.build.os;
     await RunXmakeConfig(file, toolchain, sdk);
     await retry(RunXmakeBuild.bind(null, file), {
         //maxAttempts: os === "windows" ? 10 : 1,
