@@ -13,7 +13,7 @@ TEST(check_if_it_is_a_good_array, test1)
 
     auto output = true;
 
-    EXPECT_EQ(output, Solution().isGoodArray(nums));
+    ASSERT_EQ(output, Solution().isGoodArray(nums));
 }
 TEST(check_if_it_is_a_good_array, test2)
 {
@@ -22,7 +22,7 @@ TEST(check_if_it_is_a_good_array, test2)
 
     auto output = true;
 
-    EXPECT_EQ(output, Solution().isGoodArray(nums));
+    ASSERT_EQ(output, Solution().isGoodArray(nums));
 }
 TEST(check_if_it_is_a_good_array, test3)
 {
@@ -31,7 +31,7 @@ TEST(check_if_it_is_a_good_array, test3)
 
     auto output = false;
 
-    EXPECT_EQ(output, Solution().isGoodArray(nums));
+    ASSERT_EQ(output, Solution().isGoodArray(nums));
 }
 
 int main(int argc, char** argv)

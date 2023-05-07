@@ -23,17 +23,17 @@ void LeetCode1080TestExamples(std::string& root, int limit, std::string& output)
     TreeNode* tree = nullptr;
     int status = parseLeetCodeBinaryTree(root, &tree);
 
-    EXPECT_EQ(0, status);
+    ASSERT_EQ(0, status);
 
     auto nodes = vector<TreeNode*> {};
     traversalTreeNode(tree, nodes);
     printTreeNode(tree);
 
-    // EXPECT_EQ(root, LeetCodeTreeNodeToString(tree));
+    // ASSERT_EQ(root, LeetCodeTreeNodeToString(tree));
     auto result = Solution().sufficientSubset(tree, limit);
 
     printTreeNode(result);
-    EXPECT_EQ(output, LeetCodeTreeNodeToString(result));
+    ASSERT_EQ(output, LeetCodeTreeNodeToString(result));
 
     for (auto node : nodes) {
 
