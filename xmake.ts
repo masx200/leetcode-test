@@ -5,7 +5,7 @@ import { join, resolve } from "https://deno.land/std@0.186.0/path/mod.ts";
 import { assertEquals } from "asserts";
 import { dirname } from "https://deno.land/x/dirname_es@v1.0.1/mod.ts";
 import parse from "npm:@masx200/mini-cli-args-parser@1.0.5";
-import { retry } from "https://deno.land/std@0.186.0/async/retry.ts";
+import { retry } from "./retry.ts";
 
 async function* findFilesRecursive(
     path: string,
@@ -40,6 +40,11 @@ async function RunXmake(file: string, toolchain: string, sdk: string) {
     await RunXmakeConfig(file, toolchain, sdk);
     await retry(RunXmakeBuild.bind(null, file), {
         maxAttempts: os === "windows" ? 10 : 1,
+        retryOnError: (e) => {
+            return Boolean(
+                e?.stdout?.match(/error:.*cannot open file:.*Unknown/g),
+            );
+        },
     });
     await RunXmakeTest(file);
 }
