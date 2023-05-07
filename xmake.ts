@@ -45,16 +45,22 @@ async function RunXmake(file: string, toolchain: string, sdk: string) {
 }
 
 async function RunXmakeConfig(file: string, toolchain: string, sdk: string) {
-    const os = Deno.build.os;
     console.log({ file });
-    // console.log({ os });
-    const cmd = os === "windows" ? "powershell.exe" : "bash";
+    const cwd = path.dirname(file);
     const others = [
         `xmake clean `,
         `  xmake f ${toolchain ? "--toolchain=" + toolchain : ""} ${
             sdk ? "--sdk=" + sdk : ""
         } -y -v `,
     ];
+    await RunCommandShell(others, cwd);
+}
+
+async function RunCommandShell(others: string[], cwd: string) {
+    const os = Deno.build.os;
+    // console.log({ os });
+    const cmd = os === "windows" ? "powershell.exe" : "bash";
+
     const args = os === "windows"
         ? [
             "-command",
@@ -64,78 +70,47 @@ async function RunXmakeConfig(file: string, toolchain: string, sdk: string) {
             "-c",
             others.join(" && "),
         ];
-    const cwd = path.dirname(file);
+
     console.log(JSON.stringify({ cmd, cwd, args }));
     const command = new Deno.Command(cmd, { cwd: cwd, args });
 
     const { success, stderr, stdout, code } = await command.output();
-    console.log(new TextDecoder().decode(stdout));
-    console.error(new TextDecoder().decode(stderr));
+    const decoded = {
+        stdout: new TextDecoder().decode(stdout),
+        stderr: new TextDecoder().decode(stderr),
+    };
+    console.log(decoded.stdout);
+    console.error(decoded.stderr);
     console.log({ success, code });
     // await writeAll(Deno.stdout, stdout);
     //await writeAll(Deno.stderr, stderr);
-    assertEquals(success, true);
-    assertEquals(code, 0);
+    try {
+        assertEquals(success, true);
+        assertEquals(code, 0);
+    } catch (error) {
+        Object.assign(error, { success, code, ...decoded });
+        throw error;
+    }
 }
 
 async function RunXmakeBuild(file: string) {
-    const os = Deno.build.os;
+    const cwd = path.dirname(file);
+
     console.log({ file });
     // console.log({ os });
-    const cmd = os === "windows" ? "powershell.exe" : "bash";
+
     const others = [
         ` xmake build -v -y  -w test`,
     ];
-    const args = os === "windows"
-        ? [
-            "-command",
-            others.join(" \n "),
-        ]
-        : [
-            "-c",
-            others.join(" && "),
-        ];
-    const cwd = path.dirname(file);
-    console.log(JSON.stringify({ cmd, cwd, args }));
-    const command = new Deno.Command(cmd, { cwd: cwd, args });
-
-    const { success, stderr, stdout, code } = await command.output();
-    console.log(new TextDecoder().decode(stdout));
-    console.error(new TextDecoder().decode(stderr));
-    console.log({ success, code });
-    // await writeAll(Deno.stdout, stdout);
-    //await writeAll(Deno.stderr, stderr);
-    assertEquals(success, true);
-    assertEquals(code, 0);
+    await RunCommandShell(others, cwd);
 }
 
 async function RunXmakeTest(file: string) {
-    const os = Deno.build.os;
     console.log({ file });
     // console.log({ os });
-    const cmd = os === "windows" ? "powershell.exe" : "bash";
     const others = [
         `  xmake run -v test`,
     ];
-    const args = os === "windows"
-        ? [
-            "-command",
-            others.join(" \n "),
-        ]
-        : [
-            "-c",
-            others.join(" && "),
-        ];
     const cwd = path.dirname(file);
-    console.log(JSON.stringify({ cmd, cwd, args }));
-    const command = new Deno.Command(cmd, { cwd: cwd, args });
-
-    const { success, stderr, stdout, code } = await command.output();
-    console.log(new TextDecoder().decode(stdout));
-    console.error(new TextDecoder().decode(stderr));
-    console.log({ success, code });
-    // await writeAll(Deno.stdout, stdout);
-    //await writeAll(Deno.stderr, stderr);
-    assertEquals(success, true);
-    assertEquals(code, 0);
+    await RunCommandShell(others, cwd);
 }

@@ -17,7 +17,7 @@ jobs:
                   path: |
                       ~/.deno
                        ~/.cache/deno
-                  key: ${{ runner.os }}-deno-${{ hashFiles('**/deps.ts') }}
+                  key: ${{ runner.os }}-deno-${{ hashFiles('**/deps.ts') }}-${{ hashFiles('**/import_map.json') }}
             - uses: denoland/setup-deno@v1
               with:
                   deno-version: v1.32.1
@@ -53,8 +53,8 @@ jobs:
                   cache: maven
 
             - run: |
-                mkdir -p ./temp/ktlint
-                wget -O ./temp/ktlint/ktlint.jar https://github.com/pinterest/ktlint/releases/download/0.49.0/ktlint
+                  mkdir -p ./temp/ktlint
+                  wget -O ./temp/ktlint/ktlint.jar https://github.com/pinterest/ktlint/releases/download/0.49.0/ktlint
 
             - name: ktlint
               continue-on-error: true
