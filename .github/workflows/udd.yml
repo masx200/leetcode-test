@@ -21,15 +21,16 @@ jobs:
                       ~/.deno
                       ~/.cache/deno
                   key: ${{ runner.os }}-deno-${{ hashFiles('**/deps.ts') }}-${{ hashFiles('**/import_map.json') }}
+            - uses: denoland/setup-deno@v1
+              with:
+                  deno-version: v1.32.1
             - name: download lua-format
               run: |
                   mkdir -p ./temp/lua-format
                   wget -O ./temp/lua-format/lua-format https://cdn.jsdelivr.net/gh/Koihik/vscode-lua-format@master/bin/linux/lua-format
                   chmod 777 ./temp/lua-format/lua-format
             - run: deno run -A lua-format.ts --executable=./temp/lua-format/lua-format
-            - uses: denoland/setup-deno@v1
-              with:
-                  deno-version: v1.32.1
+
             - name: download llvm 16
               run: |
                   mkdir -p ./temp/llvm
