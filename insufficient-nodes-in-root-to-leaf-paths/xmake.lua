@@ -1,5 +1,6 @@
 add_repositories("masx200/xmake-repo https://gitee.com/masx200/xmake-repo.git");
-add_repositories("masx200/xmake-repo https://ghproxy.com/https://github.com/masx200/xmake-repo.git");
+add_repositories(
+    "masx200/xmake-repo https://ghproxy.com/https://github.com/masx200/xmake-repo.git");
 add_rules("mode.debug", "mode.release");
 add_requires("leetcode-treenode-cpp 1.1.6");
 set_languages("c17", "cxx20");

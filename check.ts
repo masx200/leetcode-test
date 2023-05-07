@@ -73,6 +73,9 @@ async function runDenoCheck(stack: string[]) {
     console.log({ code, success }, out, err);
 
     if (!success) {
-        throw new Error("type check failed:" + out + err);
+        throw new Error(
+            "type cache failed:" +
+                JSON.stringify({ code, success, stdout: out, stderr: err }),
+        );
     }
 }

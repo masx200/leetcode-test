@@ -1,0 +1,28 @@
+if (import.meta.main) {
+    await start();
+}
+
+import { RunCommandShell } from "./xmake.ts";
+import { assertEquals } from "https://deno.land/std@0.186.0/testing/asserts.ts";
+import parse from "npm:@masx200/mini-cli-args-parser@1.0.5";
+import { walk } from "https://deno.land/std@0.186.0/fs/walk.ts";
+
+async function start() {
+    const entry_iter = walk(".", {
+        includeFiles: true,
+        includeDirs: false,
+        exts: [".lua"],
+        skip: [].flat().filter(Boolean) as RegExp[],
+    });
+    const args = parse(Deno.args);
+
+    console.log(JSON.stringify(args));
+    const { executable } = args;
+    assertEquals(typeof executable, "string", "input lua-format executable");
+    const files: string[] = [];
+    for await (const entry of entry_iter) {
+        console.log(entry);
+        files.push(entry.path);
+    }
+    await RunCommandShell([[executable, ...files, "-i", "-v"].join(" ")]);
+}

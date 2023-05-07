@@ -81,8 +81,7 @@ async function RunXmakeConfig(file: string, toolchain: string, sdk: string) {
     ];
     await RunCommandShell(others, cwd);
 }
-
-async function RunCommandShell(others: string[], cwd: string) {
+export async function RunCommandShell(others: string[], cwd?: string) {
     const os = Deno.build.os;
     // console.log({ os });
     const cmd = os === "windows" ? "powershell.exe" : "bash";
