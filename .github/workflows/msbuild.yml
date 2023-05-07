@@ -57,11 +57,10 @@ jobs:
               uses: denoland/setup-deno@v1.1.0
               with:
                   deno-version: v1.33.1
-            - run: deno task cache
             - uses: xmake-io/github-action-setup-xmake@v1
               with:
                   xmake-version: branch@dev
                   actions-cache-folder: ".xmake-cache"
             - run: xmake update -s dev
-
+            - run: deno task cache
             - run: deno run -A xmake.ts
