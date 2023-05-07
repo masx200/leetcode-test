@@ -1,0 +1,68 @@
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+
+name: MSBuild
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+env:
+  # Path to the solution file relative to the root of the project.
+  SOLUTION_FILE_PATH: .
+
+  # Configuration type to build.
+  # You can convert this to a build matrix if you need coverage of multiple configuration types.
+  # https://docs.github.com/actions/learn-github-actions/managing-complex-workflows#using-a-build-matrix
+  BUILD_CONFIGURATION: Release
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/cache@v3
+      with:
+         key: ${{ runner.os }}-deno-${{ hashFiles('**/deps.ts') }}-${{ hashFiles('**/import_map.json') }}
+         path: |
+                      ~\.deno
+                      ~\AppData\Local\deno
+    - uses: actions/cache@v3
+      with:
+          path: |
+            C:\vcpkg
+
+          key: ${{ runner.os }}-vcpkg-${{ hashFiles('**/xmake.lua') }}
+
+    - name: Add MSBuild to PATH
+      uses: microsoft/setup-msbuild@v1.0.2
+      with:
+        vs-prerelease: true
+
+    - name: vcpkg-action
+
+      uses: johnwason/vcpkg-action@v4
+      with:
+          triplet: x64-windows-release
+          pkgs: "gtest cppunit"
+
+          token: ${{ github.token }}
+    - name: Setup Deno
+
+      uses: denoland/setup-deno@v1.1.0
+      with:
+            deno-version: v1.33.1
+    - run: deno task cache
+    - uses: xmake-io/github-action-setup-xmake@v1
+      with:
+          xmake-version: latest
+          actions-cache-folder: ".xmake-cache"
+    - run: deno run -A xmake.ts
