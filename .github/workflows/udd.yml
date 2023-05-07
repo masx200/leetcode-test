@@ -39,7 +39,7 @@ jobs:
                   sudo ./temp/llvm/llvm.sh 16
             - name: download clang-formatter
               run: |
-                  mkdir ./temp
+                  mkdir -p ./temp
                   wget -O ./temp/clang-formatter_Linux_x86_64.tar.gz  https://github.com/masx200/clang-formatter/releases/download/Continuous-integration-15fd2be5fd7385143d90a352d1d9160cfb805bdf/clang-formatter_Linux_x86_64.tar.gz
                   mkdir -p -v ./temp/clang-formatter
                   tar zxvf ./temp/clang-formatter_Linux_x86_64.tar.gz -C ./temp/clang-formatter
