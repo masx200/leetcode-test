@@ -34,7 +34,7 @@ export async function retry<T>(
         try {
             return await fn();
         } catch (err) {
-            if (!retryOnError(err)) {
+            if (!await retryOnError(err)) {
                 throw err;
             }
 
