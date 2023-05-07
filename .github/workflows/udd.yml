@@ -21,14 +21,23 @@ jobs:
                       ~/.deno
                       ~/.cache/deno
                   key: ${{ runner.os }}-deno-${{ hashFiles('**/deps.ts') }}-${{ hashFiles('**/import_map.json') }}
+            - name: download lua-format
+              run: |
+                  mkdir -p ./temp/lua-format
+                  wget -O ./temp/lua-format/lua-format https://cdn.jsdelivr.net/gh/Koihik/vscode-lua-format@master/bin/linux/lua-format
+                  chmod 777 ./temp/lua-format/lua-format
+            - run: deno run -A lua-format.ts --executable=./temp/lua-format/lua-format
             - uses: denoland/setup-deno@v1
               with:
                   deno-version: v1.32.1
-            - run: |
-                  wget https://apt.llvm.org/llvm.sh
-                  chmod +x llvm.sh
-                  sudo ./llvm.sh 16
-            - run: |
+            - name: download llvm 16
+              run: |
+                  mkdir -p ./temp/llvm
+                  wget -O ./temp/llvm/llvm.sh https://apt.llvm.org/llvm.sh
+                  chmod +x ./temp/llvm/llvm.sh
+                  sudo ./temp/llvm/llvm.sh 16
+            - name: download clang-formatter
+              run: |
                   mkdir ./temp
                   wget -O ./temp/clang-formatter_Linux_x86_64.tar.gz  https://github.com/masx200/clang-formatter/releases/download/Continuous-integration-15fd2be5fd7385143d90a352d1d9160cfb805bdf/clang-formatter_Linux_x86_64.tar.gz
                   mkdir -p -v ./temp/clang-formatter
@@ -55,7 +64,8 @@ jobs:
                   distribution: "temurin"
                   cache: maven
 
-            - run: |
+            - name: download ktlint
+              run: |
                   mkdir -p ./temp/ktlint
                   wget -O ./temp/ktlint/ktlint.jar https://github.com/pinterest/ktlint/releases/download/0.49.0/ktlint
 
