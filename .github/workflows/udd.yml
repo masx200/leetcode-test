@@ -9,6 +9,9 @@ on:
 jobs:
     update-dependencies:
         runs-on: ubuntu-latest
+        strategy:
+            matrix:
+                node-version: [18.x]
         steps:
             - uses: actions/checkout@v3
 
@@ -16,7 +19,7 @@ jobs:
               with:
                   path: |
                       ~/.deno
-                       ~/.cache/deno
+                      ~/.cache/deno
                   key: ${{ runner.os }}-deno-${{ hashFiles('**/deps.ts') }}-${{ hashFiles('**/import_map.json') }}
             - uses: denoland/setup-deno@v1
               with:
@@ -63,6 +66,11 @@ jobs:
             - name: Update dependencies
 
               run: deno run -A https://deno.land/x/udd/main.ts deps.ts *.ts '*/*.ts'  '*.json'
+            - name: Use Node.js ${{ matrix.node-version }}
+              uses: actions/setup-node@v3
+              with:
+                  node-version: ${{ matrix.node-version }}
+            - run: npx -y prettier --w */*/*.yml */*.yml
             - name: Create Pull Request
               uses: peter-evans/create-pull-request@v3
               id: pr
