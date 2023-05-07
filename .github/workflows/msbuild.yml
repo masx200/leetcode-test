@@ -38,10 +38,15 @@ jobs:
     - uses: actions/cache@v3
       with:
           path: |
-            C:\vcpkg
+                  C:\vcpkg
 
           key: ${{ runner.os }}-vcpkg-${{ hashFiles('**/xmake.lua') }}
+    - uses: actions/cache@v3
+      with:
+            path: |
+                   C:\Users\runneradmin\AppData\Local\.xmake
 
+            key: ${{ runner.os }}-xmake-${{ hashFiles('**/xmake.lua') }}
     - name: Add MSBuild to PATH
       uses: microsoft/setup-msbuild@v1.0.2
       with:
