@@ -42,7 +42,7 @@ async function RunXmake(file: string, toolchain: string, sdk: string) {
         maxAttempts: os === "windows" ? 10 : 1,
         retryOnError: (e) => {
             return Boolean(
-                e?.stdout?.match(/error:.*cannot open file:.*Unknown/g),
+                e?.stdout?.match(/error:.*cannot open file:.*, Unknown/g),
             );
         },
     });
