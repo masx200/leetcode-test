@@ -63,5 +63,5 @@ jobs:
                   xmake-version: branch@dev
                   actions-cache-folder: ".xmake-cache"
             - run: xmake update -s dev
-      
+
             - run: deno run -A xmake.ts
