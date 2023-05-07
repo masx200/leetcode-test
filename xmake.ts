@@ -40,7 +40,7 @@ async function RunXmake(file: string, toolchain: string, sdk: string) {
     const os = Deno.build.os;
     await RunXmakeConfig(file, toolchain, sdk);
     await retry(RunXmakeBuild.bind(null, file), {
-        maxAttempts: os === "windows" ? 10 : 1,
+        //maxAttempts: os === "windows" ? 10 : 1,
         retryOnError: async (e) => {
             const regexp = /error:.*cannot open file:(.*), Unknown/g;
             const matched = e?.stdout?.match(
