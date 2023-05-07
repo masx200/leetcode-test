@@ -30,7 +30,6 @@ jobs:
                   wget -O ./temp/lua-format/lua-format https://cdn.jsdelivr.net/gh/Koihik/vscode-lua-format@master/bin/linux/lua-format
                   chmod 777 ./temp/lua-format/lua-format
             - run: deno run -A lua-format.ts --executable=./temp/lua-format/lua-format
-
             - name: download llvm 16
               run: |
                   mkdir -p ./temp/llvm
