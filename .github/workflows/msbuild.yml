@@ -69,4 +69,4 @@ jobs:
                   actions-cache-folder: ".xmake-cache"
 
             - run: deno task cache
-            - run: deno run -A xmake.ts
+            - run: deno run -A xmake.ts --executable=C:\hostedtoolcache\windows\xmake\dev\x64\xmake.exe

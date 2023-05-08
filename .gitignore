@@ -139,3 +139,4 @@ x64/
 *.o
 cmake-build-debug
 temp
+package-lock.json

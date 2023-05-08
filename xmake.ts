@@ -31,15 +31,21 @@ async function main() {
 
     console.log(JSON.stringify(args));
     const { sdk, toolchain } = args;
+    const { executable = "xmake" } = args;
     for await (const file of findFilesRecursive(__dirname, "test.cpp")) {
-        await RunXmake(file, toolchain, sdk);
+        await RunXmake(file, toolchain, sdk, executable);
     }
 }
 
-async function RunXmake(file: string, toolchain: string, sdk: string) {
+async function RunXmake(
+    file: string,
+    toolchain: string,
+    sdk: string,
+    executable: string,
+) {
     //const os = Deno.build.os;
-    await RunXmakeConfig(file, toolchain, sdk);
-    await retry(RunXmakeBuild.bind(null, file), {
+    await RunXmakeConfig(file, toolchain, sdk, executable);
+    await retry(RunXmakeBuild.bind(null, file, executable), {
         //maxAttempts: os === "windows" ? 10 : 1,
         retryOnError: async (e) => {
             const regexp = /error:.*cannot open file:(.*), Unknown/g;
@@ -67,15 +73,20 @@ async function RunXmake(file: string, toolchain: string, sdk: string) {
             } else return false;
         },
     });
-    await RunXmakeTest(file);
+    await RunXmakeTest(file, executable);
 }
 
-async function RunXmakeConfig(file: string, toolchain: string, sdk: string) {
+async function RunXmakeConfig(
+    file: string,
+    toolchain: string,
+    sdk: string,
+    executable: string,
+) {
     console.log({ file });
     const cwd = path.dirname(file);
     const others = [
-        `xmake clean `,
-        `  xmake f ${toolchain ? "--toolchain=" + toolchain : ""} ${
+        `${executable} clean `,
+        `${executable} f ${toolchain ? "--toolchain=" + toolchain : ""} ${
             sdk ? "--sdk=" + sdk : ""
         } -y -v `,
     ];
@@ -118,23 +129,23 @@ export async function RunCommandShell(others: string[], cwd?: string) {
     }
 }
 
-async function RunXmakeBuild(file: string) {
+async function RunXmakeBuild(file: string, executable: string) {
     const cwd = path.dirname(file);
 
     console.log({ file });
     // console.log({ os });
 
     const others = [
-        ` xmake build -v -y  -w test`,
+        `${executable} build -v -y  -w test`,
     ];
     await RunCommandShell(others, cwd);
 }
 
-async function RunXmakeTest(file: string) {
+async function RunXmakeTest(file: string, executable: string) {
     console.log({ file });
     // console.log({ os });
     const others = [
-        `  xmake run -v test`,
+        `${executable} run -v test`,
     ];
     const cwd = path.dirname(file);
     await RunCommandShell(others, cwd);
