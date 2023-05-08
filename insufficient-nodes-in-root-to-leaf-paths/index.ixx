@@ -1,11 +1,11 @@
 // +build ignore
 
 // #pragma once
-export module insufficient_nodes_in_root_to_leaf_paths.Solution;
+export module leetcode_test.insufficient_nodes_in_root_to_leaf_paths.Solution;
 import leetcode_treenode_cpp.TreeNode;
 using namespace leetcode_treenode_cpp;
 
-namespace insufficient_nodes_in_root_to_leaf_paths {
+namespace leetcode_test::insufficient_nodes_in_root_to_leaf_paths {
 export class Solution {
 public:
     TreeNode* sufficientSubset(TreeNode* root, int limit)

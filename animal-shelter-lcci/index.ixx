@@ -3,10 +3,10 @@ module;
 #include <queue>
 #include <vector>
 
-export module animal_shelter_lcci.AnimalShelf;
+export module leetcode_test.animal_shelter_lcci.AnimalShelf;
 using std::queue;
 using std::vector;
-namespace animal_shelter_lcci {
+namespace leetcode_test::animal_shelter_lcci {
 export class AnimalShelf {
 
 private:
