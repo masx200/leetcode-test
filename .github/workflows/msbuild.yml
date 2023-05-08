@@ -63,11 +63,11 @@ jobs:
               with:
                   deno-version: v1.33.1
             - uses: xmake-io/github-action-setup-xmake@v1
-              if:  steps.cache-xmake.outputs.cache-hit != 'true'
+              if: steps.cache-xmake.outputs.cache-hit != 'true'
               with:
                   xmake-version: branch@dev
                   actions-cache-folder: ".xmake-cache"
             - run: xmake update -s dev
-              if:  steps.cache-xmake.outputs.cache-hit != 'true'
+              if: steps.cache-xmake.outputs.cache-hit != 'true'
             - run: deno task cache
             - run: deno run -A xmake.ts
