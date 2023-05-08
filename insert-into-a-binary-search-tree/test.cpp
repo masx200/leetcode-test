@@ -1,10 +1,5 @@
 // +build ignore
 
-// #include "TreeNode.hpp"
-// #include "freeTreeNode.hpp"
-// #include "index.hpp"
-// #include "serializeTreeNode.hpp"
-
 #include <cppunit/TestResult.h>
 #include <cppunit/TestResultCollector.h>
 #include <cppunit/TestRunner.h>
@@ -18,14 +13,6 @@
 #include <sstream>
 #include <unordered_set>
 
-// #include "EqualTreeNode.hpp"
-// #include "HashTreeNode.hpp"
-//  #include "bfsTravelsal.hpp"
-//  #include "LeetCodeTreeNodeToString.hpp"
-// #include "debugTreeNode.ixx"
-//  #include "parseLeetCodeBinaryTree.hpp"
-// #include "printTreeNode.hpp"
-
 import leetcode_treenode_cpp.serializeTreeNode;
 import leetcode_treenode_cpp.TreeNode;
 
@@ -34,15 +21,15 @@ import leetcode_treenode_cpp.freeTreeNode;
 import leetcode_treenode_cpp.LeetCodeTreeNodeToString;
 import leetcode_treenode_cpp.parseLeetCodeBinaryTree;
 
-import insert_into_a_binary_search_tree.Solution;
-import insert_into_a_binary_search_tree.HashTreeNode;
-import insert_into_a_binary_search_tree.EqualTreeNode;
-import insert_into_a_binary_search_tree.PostOrderTraversal;
-using namespace insert_into_a_binary_search_tree;
+import leetcode_test.insert_into_a_binary_search_tree.Solution;
+import leetcode_test.insert_into_a_binary_search_tree.HashTreeNode;
+import leetcode_test.insert_into_a_binary_search_tree.EqualTreeNode;
+import leetcode_test.insert_into_a_binary_search_tree.PostOrderTraversal;
+using namespace leetcode_test::insert_into_a_binary_search_tree;
 using namespace leetcode_treenode_cpp;
 using namespace std;
 
-import insert_into_a_binary_search_tree.printTreeNode;
+import leetcode_test.insert_into_a_binary_search_tree.printTreeNode;
 
 void println(int s)
 {
