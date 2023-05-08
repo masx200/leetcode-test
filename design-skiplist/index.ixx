@@ -1,9 +1,9 @@
 module;
 #include <unordered_map>
-export module design_skiplist.Skiplist;
+export module leetcode_test.design_skiplist.Skiplist;
 using std::unordered_map;
 
-namespace design_skiplist {
+namespace leetcode_test::design_skiplist {
 export class Skiplist {
 private:
     unordered_map<int, int> storage;

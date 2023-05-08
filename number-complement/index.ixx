@@ -1,8 +1,8 @@
 module;
 
-export module number_complement.Solution;
+export module leetcode_test.number_complement.Solution;
 
-namespace number_complement {
+namespace leetcode_test::number_complement {
 
 export class Solution {
 public:

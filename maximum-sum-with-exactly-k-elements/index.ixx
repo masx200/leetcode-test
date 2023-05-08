@@ -1,9 +1,9 @@
 module;
 #include <algorithm>
 #include <vector>
-export module maximum_sum_with_exactly_k_elements.Solution;
+export module leetcode_test.maximum_sum_with_exactly_k_elements.Solution;
 using std::vector;
-namespace maximum_sum_with_exactly_k_elements {
+namespace leetcode_test::maximum_sum_with_exactly_k_elements {
 
 export class Solution {
 

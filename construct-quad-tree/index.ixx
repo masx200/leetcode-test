@@ -2,11 +2,11 @@ module;
 #define NAMESPACE construct_quad_tree
 #include <functional>
 #include <vector>
-export module NAMESPACE.Solution;
-import construct_quad_tree.Node;
+export module leetcode_test.NAMESPACE.Solution;
+import leetcode_test.construct_quad_tree.Node;
 using std::function;
 using std::vector;
-namespace NAMESPACE {
+namespace leetcode_test::NAMESPACE {
 
 export class Solution {
 public:

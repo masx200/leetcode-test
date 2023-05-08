@@ -2,10 +2,10 @@ module;
 #include <string>
 #include <vector>
 
-export module implement_trie_prefix_tree.Trie;
+export module leetcode_test.implement_trie_prefix_tree.Trie;
 using std::string;
 using std::vector;
-namespace implement_trie_prefix_tree {
+namespace leetcode_test::implement_trie_prefix_tree {
 /*export*/ class TrieNode {
 public:
     vector<TrieNode*> children;

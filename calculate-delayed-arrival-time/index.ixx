@@ -1,5 +1,5 @@
-export module calculate_delayed_arrival_time.Solution;
-namespace calculate_delayed_arrival_time {
+export module leetcode_test.calculate_delayed_arrival_time.Solution;
+namespace leetcode_test::calculate_delayed_arrival_time {
 
 export class Solution {
 public:

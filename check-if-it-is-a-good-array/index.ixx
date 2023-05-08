@@ -8,10 +8,10 @@ module;
 // #include <algorithm>
 #include <numeric>
 
-export module check_if_it_is_a_good_array.Solution;
+export module leetcode_test.check_if_it_is_a_good_array.Solution;
 using namespace std;
 // #include "gcd.hpp"
-namespace check_if_it_is_a_good_array {
+namespace leetcode_test::check_if_it_is_a_good_array {
 
 export class Solution {
 

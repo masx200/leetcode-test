@@ -2,10 +2,10 @@ module;
 
 #include <algorithm>
 
-export module design_linked_list.MyLinkedList;
+export module leetcode_test.design_linked_list.MyLinkedList;
 using std::max;
 
-namespace design_linked_list {
+namespace leetcode_test::design_linked_list {
 
 struct DLinkListNode {
     int val;

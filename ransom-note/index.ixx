@@ -1,8 +1,8 @@
 module;
 #include <string>
 #include <unordered_map>
-export module ransom_note.Solution;
-namespace ransom_note {
+export module leetcode_test.ransom_note.Solution;
+namespace leetcode_test::ransom_note {
 using std::string;
 using std::unordered_map;
 export class Solution {
