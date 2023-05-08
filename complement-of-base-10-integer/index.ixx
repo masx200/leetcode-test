@@ -1,8 +1,8 @@
 module;
 
-export module complement_of_base_10_integer.Solution;
+export module leetcode_test.complement_of_base_10_integer.Solution;
 
-namespace complement_of_base_10_integer {
+namespace leetcode_test::complement_of_base_10_integer {
 
 export class Solution {
 public:

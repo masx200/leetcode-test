@@ -7,13 +7,13 @@ module;
 
 // #include "TreeNode.hpp"
 #include <sstream>
-export module insert_into_a_binary_search_tree.debugTreeNode;
+export module leetcode_test.insufficient_nodes_in_root_to_leaf_paths.debugTreeNode;
 
 import leetcode_treenode_cpp.TreeNode;
 using namespace leetcode_treenode_cpp;
 
 using namespace std;
-namespace insert_into_a_binary_search_tree {
+namespace leetcode_test::insufficient_nodes_in_root_to_leaf_paths {
 export
 
     string

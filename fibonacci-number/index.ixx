@@ -2,8 +2,8 @@ module;
 
 #include <unordered_map>
 
-export module fibonacci_number.Solution;
-namespace fibonacci_number {
+export module leetcode_test.fibonacci_number.Solution;
+namespace leetcode_test::fibonacci_number {
 using std::unordered_map;
 export class Solution {
 

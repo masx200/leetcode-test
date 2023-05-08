@@ -1,8 +1,8 @@
 module;
 #include <cmath>
 
-export module valid_perfect_square.Solution;
-namespace valid_perfect_square {
+export module leetcode_test.valid_perfect_square.Solution;
+namespace leetcode_test::valid_perfect_square {
 
 class Solution {
 

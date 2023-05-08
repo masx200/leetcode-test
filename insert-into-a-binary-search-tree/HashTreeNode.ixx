@@ -10,10 +10,10 @@ module;
 
 #include <cstdio>
 
-export module insert_into_a_binary_search_tree.HashTreeNode;
+export module leetcode_test.insert_into_a_binary_search_tree.HashTreeNode;
 import leetcode_treenode_cpp.TreeNode;
 using namespace leetcode_treenode_cpp;
-namespace insert_into_a_binary_search_tree {
+namespace leetcode_test::insert_into_a_binary_search_tree {
 export struct HashTreeNode {
     std::size_t operator()(const TreeNode* k) const
     {

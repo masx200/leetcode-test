@@ -2,12 +2,12 @@ module;
 #include <algorithm>
 #include <stack>
 #include <vector>
-export module largest_rectangle_in_histogram.Solution;
+export module leetcode_test.largest_rectangle_in_histogram.Solution;
 // 版本二
 using std::max;
 using std::stack;
 using std::vector;
-namespace largest_rectangle_in_histogram {
+namespace leetcode_test::largest_rectangle_in_histogram {
 export class Solution {
 
 public:

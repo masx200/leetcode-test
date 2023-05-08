@@ -5,11 +5,11 @@ module;
 
 #include <cstdio>
 
-export module insert_into_a_binary_search_tree.Solution;
+export module leetcode_test.insert_into_a_binary_search_tree.Solution;
 import leetcode_treenode_cpp.TreeNode;
 using namespace leetcode_treenode_cpp;
 
-namespace insert_into_a_binary_search_tree {
+namespace leetcode_test::insert_into_a_binary_search_tree {
 export class Solution {
 public:
     TreeNode* insertIntoBST(TreeNode* root, int val)

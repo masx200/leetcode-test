@@ -1,5 +1,5 @@
-export module sum_multiples.Solution;
-namespace sum_multiples {
+export module leetcode_test.sum_multiples.Solution;
+namespace leetcode_test::sum_multiples {
 export class Solution {
 public:
     int sumOfMultiples(int n)
