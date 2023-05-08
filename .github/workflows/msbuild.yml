@@ -67,7 +67,6 @@ jobs:
               with:
                   xmake-version: branch@dev
                   actions-cache-folder: ".xmake-cache"
-            - run: xmake update -s dev
-              if: steps.cache-xmake.outputs.cache-hit != 'true'
+
             - run: deno task cache
             - run: deno run -A xmake.ts
