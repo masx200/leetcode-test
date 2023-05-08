@@ -3,9 +3,9 @@
 #include <gtest/gtest.h>
 #include <iostream>
 
-import fibonacci_number.Solution;
+import leetcode_test.fibonacci_number.Solution;
 using namespace std;
-using namespace fibonacci_number;
+using namespace leetcode_test::fibonacci_number;
 TEST(fibonacci_number, test1)
 {
     cout << "fibonacci_number" << endl;

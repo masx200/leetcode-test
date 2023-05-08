@@ -3,9 +3,9 @@
 #include <gtest/gtest.h>
 #include <iostream>
 #include <vector>
-import check_if_it_is_a_good_array.Solution;
+import leetcode_test.check_if_it_is_a_good_array.Solution;
 using namespace std;
-using namespace check_if_it_is_a_good_array;
+using namespace leetcode_test::check_if_it_is_a_good_array;
 TEST(check_if_it_is_a_good_array, test1)
 {
     cout << "check-if-it-is-a-good-array" << endl;

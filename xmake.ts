@@ -46,7 +46,7 @@ async function RunXmake(file: string, toolchain: string, sdk: string) {
             const matched = e?.stdout?.match(
                 regexp,
             );
-            const filepathmatched = regexp.exec(matched[0])?.[1]?.trim();
+            const filepathmatched = regexp.exec(matched?.[0])?.[1]?.trim();
 
             if (
                 filepathmatched && (
