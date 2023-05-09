@@ -88,7 +88,7 @@ async function RunXmakeConfig(
         `${executable} clean `,
         `${executable} f ${toolchain ? "--toolchain=" + toolchain : ""} ${
             sdk ? "--sdk=" + sdk : ""
-        } -y -v `,
+        } -y -v --project=. "--file=./xmake.lua" `,
     ];
     await RunCommandShell(others, cwd);
 }
@@ -136,7 +136,7 @@ async function RunXmakeBuild(file: string, executable: string) {
     // console.log({ os });
 
     const others = [
-        `${executable} build -v -y  -w test`,
+        `${executable} build -v -y  -w --project=. "--file=./xmake.lua" test`,
     ];
     await RunCommandShell(others, cwd);
 }
@@ -145,7 +145,7 @@ async function RunXmakeTest(file: string, executable: string) {
     console.log({ file });
     // console.log({ os });
     const others = [
-        `${executable} run -v test`,
+        `${executable} run -v --project=. "--file=./xmake.lua" test`,
     ];
     const cwd = path.dirname(file);
     await RunCommandShell(others, cwd);

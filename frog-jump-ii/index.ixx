@@ -1,11 +1,11 @@
 module;
 #include <algorithm>
 #include <vector>
-#define NAMESPACE frog_jump_ii
-export module leetcode_test.NAMESPACE.Solution;
+
+export module leetcode_test.frog_jump_ii.Solution;
 using std::max;
 using std::vector;
-namespace leetcode_test::NAMESPACE {
+namespace leetcode_test::frog_jump_ii {
 
 export class Solution {
 public:

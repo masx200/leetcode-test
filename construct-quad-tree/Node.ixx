@@ -1,7 +1,7 @@
 module;
-#define NAMESPACE construct_quad_tree
+
 export module leetcode_test.construct_quad_tree.Node;
-namespace leetcode_test::NAMESPACE {
+namespace leetcode_test::construct_quad_tree {
 
 export class Node {
 public:

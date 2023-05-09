@@ -140,3 +140,4 @@ x64/
 cmake-build-debug
 temp
 package-lock.json
+*.pdb

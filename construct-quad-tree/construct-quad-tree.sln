@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33627.172
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "construct-quad-tree", "construct-quad-tree.vcxproj", "{34C23CAE-7F4E-42AE-8F3B-D529172BD68C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{34C23CAE-7F4E-42AE-8F3B-D529172BD68C}.Debug|x64.ActiveCfg = Debug|x64
+		{34C23CAE-7F4E-42AE-8F3B-D529172BD68C}.Debug|x64.Build.0 = Debug|x64
+		{34C23CAE-7F4E-42AE-8F3B-D529172BD68C}.Debug|x86.ActiveCfg = Debug|Win32
+		{34C23CAE-7F4E-42AE-8F3B-D529172BD68C}.Debug|x86.Build.0 = Debug|Win32
+		{34C23CAE-7F4E-42AE-8F3B-D529172BD68C}.Release|x64.ActiveCfg = Release|x64
+		{34C23CAE-7F4E-42AE-8F3B-D529172BD68C}.Release|x64.Build.0 = Release|x64
+		{34C23CAE-7F4E-42AE-8F3B-D529172BD68C}.Release|x86.ActiveCfg = Release|Win32
+		{34C23CAE-7F4E-42AE-8F3B-D529172BD68C}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {94491995-E94F-4151-AF3C-7706B7DF6AB0}
+	EndGlobalSection
+EndGlobal
