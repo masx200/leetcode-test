@@ -7,6 +7,6 @@ target('leetcode-test')
 set_languages("c++20");
 set_kind('static')
 set_policy("build.c++.modules", true);
-add_files('*/*.ixx',{install=true})
+add_files('*/*.ixx', {install = true})
 add_packages("leetcode-treenode-cpp");
 target_end()
