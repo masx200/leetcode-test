@@ -3,7 +3,7 @@ import * as path from "https://deno.land/std@0.186.0/path/mod.ts";
 import { join, resolve } from "https://deno.land/std@0.186.0/path/mod.ts";
 
 import { assertEquals } from "asserts";
-import { dirname } from "https://deno.land/x/dirname_es@v1.0.1/mod.ts";
+// import { dirname } from "https://deno.land/x/dirname_es@v1.0.1/mod.ts";
 import { ensureDir } from "https://deno.land/std@0.186.0/fs/mod.ts";
 import parse from "npm:@masx200/mini-cli-args-parser@1.0.5";
 import { retry } from "./retry.ts";
@@ -26,9 +26,9 @@ if (import.meta.main) {
     await main();
 }
 async function main() {
-    const __dirname = dirname(import.meta);
+    // const __dirname = dirname(import.meta);
     const args = parse(Deno.args);
-
+    const __dirname = Deno.cwd();
     console.log(JSON.stringify(args));
     const { sdk, toolchain } = args;
     const { executable = "xmake" } = args;
@@ -49,16 +49,10 @@ async function RunXmake(
         //maxAttempts: os === "windows" ? 10 : 1,
         retryOnError: async (e) => {
             const regexp = /error:.*cannot open file:(.*), Unknown/g;
-            const matched = e?.stdout?.match(
-                regexp,
-            );
+            const matched = e?.stdout?.match(regexp);
             const filepathmatched = regexp.exec(matched?.[0])?.[1]?.trim();
 
-            if (
-                filepathmatched && (
-                    matched
-                )
-            ) {
+            if (filepathmatched && matched) {
                 const cwd = path.dirname(file);
                 const dirtobecreate = path.join(
                     cwd,
@@ -98,14 +92,8 @@ export async function RunCommandShell(others: string[], cwd?: string) {
     const cmd = os === "windows" ? "powershell.exe" : "bash";
 
     const args = os === "windows"
-        ? [
-            "-command",
-            others.join(" \n "),
-        ]
-        : [
-            "-c",
-            others.join(" && "),
-        ];
+        ? ["-command", others.join(" \n ")]
+        : ["-c", others.join(" && ")];
 
     console.log(JSON.stringify({ cmd, cwd, args }));
     const command = new Deno.Command(cmd, { cwd: cwd, args });
