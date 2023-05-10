@@ -1,13 +1,9 @@
 {
     "style": "WebKit",
     "filter": [
-        "*.c",
-        "*.cc",
         "*.cpp",
-        "*.h",
-        "*.hh",
-        "*.ixx",
-        "*.hpp"
+
+        "*.ixx"
     ],
     "dirs": [
         "./"
