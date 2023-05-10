@@ -26,4 +26,4 @@ public:
     }
 };
 
-}
+} // namespace leetcode_test::ransom_note

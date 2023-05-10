@@ -9,18 +9,14 @@ private:
     unordered_map<int, int> storage;
 
 public:
-    Skiplist()
-        = default;
+    Skiplist() = default;
 
     bool search(int target)
     {
         return (storage.count(target) ? storage.at(target) : 0) > 0;
     }
 
-    void add(int num)
-    {
-        storage[num]++;
-    }
+    void add(int num) { storage[num]++; }
 
     bool erase(int num)
     {
@@ -38,4 +34,4 @@ public:
     }
 };
 
-}
+} // namespace leetcode_test::design_skiplist

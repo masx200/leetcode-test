@@ -7,7 +7,8 @@ using leetcode_treenode_cpp::TreeNode;
 namespace leetcode_test::insert_into_a_binary_search_tree {
 using std::function;
 
-export void PostOrderTraversal(TreeNode* root, function<void(TreeNode*)> callback)
+export void PostOrderTraversal(TreeNode* root,
+    function<void(TreeNode*)> callback)
 {
 
     if (root == nullptr) {
@@ -21,4 +22,4 @@ export void PostOrderTraversal(TreeNode* root, function<void(TreeNode*)> callbac
     callback(root);
 }
 
-}
+} // namespace leetcode_test::insert_into_a_binary_search_tree

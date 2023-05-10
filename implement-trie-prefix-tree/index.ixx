@@ -23,15 +23,9 @@ public:
 };
 export class Trie {
 public:
-    ~Trie()
-    {
-        delete root;
-    }
+    ~Trie() { delete root; }
     /** Initialize your data structure here. */
-    Trie()
-    {
-        root = new TrieNode();
-    }
+    Trie() { root = new TrieNode(); }
 
     /** Inserts a word into the trie. */
     void insert(string word)
@@ -59,7 +53,8 @@ public:
         return p->isWord;
     }
 
-    /** Returns if there is any word in the trie that starts with the given prefix. */
+    /** Returns if there is any word in the trie that starts with the given
+     * prefix. */
     bool startsWith(string prefix)
     {
         TrieNode* p = root;
@@ -75,4 +70,4 @@ public:
 private:
     TrieNode* root;
 };
-}
+} // namespace leetcode_test::implement_trie_prefix_tree

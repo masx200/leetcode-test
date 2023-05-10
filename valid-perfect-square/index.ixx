@@ -29,4 +29,4 @@ public:
     }
 };
 export Solution;
-} // namespace valid_perfect_square
+} // namespace leetcode_test::valid_perfect_square

@@ -33,4 +33,4 @@ export
     sstream << ",right:" << debugTreeNode(root->right) << "\n}";
     return sstream.str();
 }
-}
+} // namespace leetcode_test::insert_into_a_binary_search_tree

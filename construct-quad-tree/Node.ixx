@@ -12,7 +12,9 @@ public:
     Node* bottomLeft;
     Node* bottomRight;
 
-    Node(bool _val = false, bool _isLeaf = false, Node* _topLeft = nullptr, Node* _topRight = nullptr, Node* _bottomLeft = nullptr, Node* _bottomRight = nullptr)
+    Node(bool _val = false, bool _isLeaf = false, Node* _topLeft = nullptr,
+        Node* _topRight = nullptr, Node* _bottomLeft = nullptr,
+        Node* _bottomRight = nullptr)
     {
         val = _val;
         isLeaf = _isLeaf;
@@ -22,4 +24,4 @@ public:
         bottomRight = _bottomRight;
     }
 };
-}
+} // namespace leetcode_test::construct_quad_tree

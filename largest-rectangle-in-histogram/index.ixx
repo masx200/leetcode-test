@@ -11,8 +11,7 @@ namespace leetcode_test::largest_rectangle_in_histogram {
 export class Solution {
 
 public:
-    int
-    largestRectangleArea(vector<int>& heights)
+    int largestRectangleArea(vector<int>& heights)
     {
         stack<int> st;
         heights.insert(heights.begin(), 0); // 数组头部加入元素0
@@ -32,4 +31,4 @@ public:
         return result;
     }
 };
-}
+} // namespace leetcode_test::largest_rectangle_in_histogram

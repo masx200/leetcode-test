@@ -20,4 +20,4 @@ export struct HashTreeNode {
         return std::hash<long long>()((long long)k);
     }
 };
-}
+} // namespace leetcode_test::insert_into_a_binary_search_tree

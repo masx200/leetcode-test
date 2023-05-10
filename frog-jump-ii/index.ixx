@@ -19,4 +19,4 @@ public:
         return res;
     }
 };
-}
+} // namespace leetcode_test::frog_jump_ii

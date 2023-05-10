@@ -14,4 +14,4 @@ public:
         return k * (m + m + k - 1) / 2;
     }
 };
-}
+} // namespace leetcode_test::maximum_sum_with_exactly_k_elements

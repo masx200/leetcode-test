@@ -32,4 +32,4 @@ public:
             return root;
     }
 };
-}
+} // namespace leetcode_test::insufficient_nodes_in_root_to_leaf_paths

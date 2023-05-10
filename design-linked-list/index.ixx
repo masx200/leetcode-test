@@ -60,15 +60,9 @@ public:
         return curr->val;
     }
 
-    void addAtHead(int val)
-    {
-        addAtIndex(0, val);
-    }
+    void addAtHead(int val) { addAtIndex(0, val); }
 
-    void addAtTail(int val)
-    {
-        addAtIndex(size, val);
-    }
+    void addAtTail(int val) { addAtIndex(size, val); }
 
     void addAtIndex(int index, int val)
     {
@@ -129,4 +123,4 @@ private:
     DLinkListNode* head;
     DLinkListNode* tail;
 };
-}
+} // namespace leetcode_test::design_linked_list

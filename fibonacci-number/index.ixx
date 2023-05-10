@@ -24,4 +24,4 @@ public:
         return res;
     }
 };
-}
+} // namespace leetcode_test::fibonacci_number

@@ -8,9 +8,6 @@ public:
     }
 
 private:
-    auto sum(int n, int m) -> int
-    {
-        return ((m + (n - n % m)) * (n / m)) / 2;
-    }
+    auto sum(int n, int m) -> int { return ((m + (n - n % m)) * (n / m)) / 2; }
 };
-}
+} // namespace leetcode_test::sum_multiples

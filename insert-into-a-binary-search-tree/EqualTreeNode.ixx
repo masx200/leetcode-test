@@ -18,4 +18,4 @@ export struct EqualTreeNode {
         return lhs == rhs;
     }
 };
-}
+} // namespace leetcode_test::insert_into_a_binary_search_tree

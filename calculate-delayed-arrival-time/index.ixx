@@ -8,4 +8,4 @@ public:
         return (arrivalTime + delayedTime) % 24;
     }
 };
-}
+} // namespace leetcode_test::calculate_delayed_arrival_time
