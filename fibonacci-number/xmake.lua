@@ -1,7 +1,7 @@
 add_rules("mode.debug", "mode.release")
 add_requires("vcpkg::gtest")
 set_languages("c17", "cxx20")
-target("test")
+target("ibonacci-number-test")
 set_kind("binary")
 add_files("index.ixx")
 add_files("test.cpp")

@@ -5,7 +5,7 @@ add_rules("mode.debug", "mode.release");
 add_requires("leetcode-treenode-cpp 1.1.7");
 set_languages("c17", "cxx20");
 add_requires("vcpkg::gtest");
-target("test");
+target("insufficient-nodes-in-root-to-leaf-paths-test");
 set_group("test")
 set_default(false)
 set_kind("binary");

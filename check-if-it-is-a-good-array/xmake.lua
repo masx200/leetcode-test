@@ -1,6 +1,6 @@
 add_requires("vcpkg::gtest")
 set_languages("c17", "cxx20")
-target("test")
+target("check-if-it-is-a-good-array-test")
 set_kind("binary")
 add_files("index.ixx")
 add_files("test.cpp")

@@ -3,5 +3,5 @@ target("construct-quad-tree")
 set_kind("static")
 add_files("index.ixx")
 add_files("Node.ixx")
-
+add_files("*.ixx",{install=true})
 target_end()
