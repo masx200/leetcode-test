@@ -11,4 +11,4 @@ set_policy("build.c++.modules", true);
 add_files('*/*.ixx', {install = true})
 add_packages("leetcode-treenode-cpp");
 target_end()
-includes("**/xmake.lua")
+includes("./**/xmake.lua")
