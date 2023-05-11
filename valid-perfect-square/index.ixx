@@ -3,7 +3,7 @@ module;
 
 export module leetcode_test.valid_perfect_square.Solution;
 namespace leetcode_test::valid_perfect_square {
-
+export
 class Solution {
 
 public:
@@ -28,5 +28,5 @@ public:
         return x * x == num;
     }
 };
-export Solution;
+//export Solution;
 } // namespace leetcode_test::valid_perfect_square
