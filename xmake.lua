@@ -1,3 +1,4 @@
+set_policy("platform.longpaths", true)
 set_languages("c17", "cxx20");
 add_repositories("masx200/xmake-repo https://gitee.com/masx200/xmake-repo.git");
 add_repositories(

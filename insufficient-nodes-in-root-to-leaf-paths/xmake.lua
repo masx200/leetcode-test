@@ -1,3 +1,4 @@
+set_policy("platform.longpaths", true)
 add_repositories("masx200/xmake-repo https://gitee.com/masx200/xmake-repo.git");
 add_repositories(
     "masx200/xmake-repo https://ghproxy.com/https://github.com/masx200/xmake-repo.git");
