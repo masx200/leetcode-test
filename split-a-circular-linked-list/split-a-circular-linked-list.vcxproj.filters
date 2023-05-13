@@ -21,5 +21,9 @@
     <ClCompile Include="ArrayToCircularLinkedList.ixx">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TraversalCircularListNode.ixx" />
   </ItemGroup>
 </Project>
