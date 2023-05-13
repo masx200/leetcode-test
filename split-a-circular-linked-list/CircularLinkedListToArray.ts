@@ -1,7 +1,7 @@
 import { ListNode } from "../reverse-linked-list/ListNode.ts";
 
 export function CircularLinkedListToArray(
-    list: ListNode | null | undefined
+    list: ListNode | null | undefined,
 ): number[] {
     if (!list) return [];
     const array = [];
