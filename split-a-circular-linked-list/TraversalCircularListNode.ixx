@@ -18,6 +18,5 @@ export auto TraversalCircularListNode(ListNode* list, function<void(ListNode*)> 
     }
     if (cur)
         callback(cur);
-    return;
-};
+}
 }
