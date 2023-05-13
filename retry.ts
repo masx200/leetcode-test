@@ -1,7 +1,7 @@
 import {
     RetryError,
     RetryOptions,
-} from "https://deno.land/std@0.186.0/async/retry.ts";
+} from "https://deno.land/std@0.187.0/async/retry.ts";
 
 export const defaultRetryOptions = {
     multiplier: 2,
