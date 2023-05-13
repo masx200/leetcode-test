@@ -1,6 +1,6 @@
 import { ListNode } from "../reverse-linked-list/ListNode.ts";
 export default function splitCircularLinkedList(
-    list: ListNode | null | undefined
+    list: ListNode | null | undefined,
 ): Array<ListNode | null | undefined> {
     if (!list) return [];
     let a: ListNode | null | undefined = list;

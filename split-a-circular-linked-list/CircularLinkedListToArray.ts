@@ -12,5 +12,6 @@ export function CircularLinkedListToArray(
         array.push(cur?.val);
         cur = cur?.next;
     }
+    cur && array.push(cur?.val);
     return array;
 }
