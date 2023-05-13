@@ -6,7 +6,7 @@ import leetcode_test.split_a_circular_linked_list.ListNode;
 using std::vector;
 namespace leetcode_test::split_a_circular_linked_list {
 export auto ArrayToCircularLinkedList(
-    vector<int> array) -> ListNode*
+    vector<int>& array) -> ListNode*
 {
     if (array.size() == 0) {
         return nullptr;
