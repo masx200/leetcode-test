@@ -12,28 +12,31 @@ using namespace leetcode_test::split_a_circular_linked_list;
 using namespace std;
 using std::vector;
 template <class T>
-concept sizable = requires(T& t) {
+concept sizable = requires(T& t)
+{
     {
         t.size()
-    } -> std::same_as<size_t>;
+        } -> std::same_as<size_t>;
 };
 template <class T>
-concept iterable = requires(T& t) {
+concept iterable = requires(T& t)
+{
     ++t.begin();
     {
         t.begin() != t.end()
 
-    } -> std::same_as<bool>;
+        } -> std::same_as<bool>;
 };
 
 template <class T, typename Y>
-concept equalable = requires(T& t, Y& y, size_t i) {
+concept equalable = requires(T& t, Y& y, size_t i)
+{
     {
         *t.begin() == *y.begin()
-    } -> std::same_as<bool>;
+        } -> std::same_as<bool>;
 };
 template <typename T, typename Y>
-    requires sizable<T> and sizable<Y> and equalable<T, Y> and iterable<T> and iterable<Y>
+requires sizable<T> and sizable<Y> and equalable<T, Y> and iterable<T> and iterable<Y>
 auto assertContentEquals(T& left, Y& right)
 {
 
