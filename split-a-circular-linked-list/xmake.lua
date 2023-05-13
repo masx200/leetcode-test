@@ -9,7 +9,7 @@ set_group("test")
 set_default(false)
 set_kind("binary");
 
-add_files( "*.ixx");
+add_files("*.ixx");
 set_languages("c++20");
 set_policy("build.c++.modules", true);
 add_files("test.cpp");
