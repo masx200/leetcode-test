@@ -121,6 +121,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ArrayToCircularLinkedList.ixx" />
+    <ClCompile Include="CircularLinkedListToArray.ixx" />
     <ClCompile Include="index.ixx" />
     <ClCompile Include="ListNode.ixx" />
   </ItemGroup>
