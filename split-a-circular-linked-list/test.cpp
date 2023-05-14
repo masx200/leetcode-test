@@ -108,9 +108,10 @@ TEST(split_a_circular_linked_list, test2)
     auto input = vector<int> { 2, 6, 1, 5 };
     auto output = vector<vector<int>> { { 2, 6 }, { 1, 5 } };
     auto* list = ArrayToCircularLinkedList(input);
-    auto result = Solution().splitCircularLinkedList(list) | transform(CircularLinkedListToArray);
+
     auto nodes = unordered_set<ListNode*> {};
     TraversalCircularListNode(list, [&](auto* node) { nodes.insert(node); });
+    auto result = Solution().splitCircularLinkedList(list) | transform(CircularLinkedListToArray);
     assertContentEquals(result, output);
     for (auto* node : nodes) {
         delete node;
