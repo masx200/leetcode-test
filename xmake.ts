@@ -30,10 +30,10 @@ async function main() {
     const args = parse(Deno.args);
     const __dirname = Deno.cwd();
     console.log(JSON.stringify(args));
-    const { sdk, toolchain } = args;
+    const { sdk, toolchain, group, mode } = args;
     const { executable = "xmake" } = args;
     for await (const file of findFilesRecursive(__dirname, "test.cpp")) {
-        await RunXmake(file, toolchain, sdk, executable);
+        await RunXmake(file, toolchain, sdk, executable, group, mode);
     }
 }
 
@@ -42,10 +42,12 @@ async function RunXmake(
     toolchain: string,
     sdk: string,
     executable: string,
+    group: string,
+    mode: string,
 ) {
     //const os = Deno.build.os;
-    await RunXmakeConfig(file, toolchain, sdk, executable);
-    await retry(RunXmakeBuild.bind(null, file, executable), {
+    await RunXmakeConfig(file, toolchain, sdk, executable, mode);
+    await retry(RunXmakeBuild.bind(null, file, executable, group), {
         //maxAttempts: os === "windows" ? 10 : 1,
         retryOnError: async (e) => {
             const regexp = /error:.*cannot open file:(.*), Unknown/g;
@@ -67,7 +69,7 @@ async function RunXmake(
             } else return false;
         },
     });
-    await RunXmakeTest(file, executable);
+    await RunXmakeTest(file, executable, group);
 }
 
 async function RunXmakeConfig(
@@ -75,6 +77,7 @@ async function RunXmakeConfig(
     toolchain: string,
     sdk: string,
     executable: string,
+    mode: string,
 ) {
     console.log({ file });
     const cwd = path.dirname(file);
@@ -82,7 +85,9 @@ async function RunXmakeConfig(
         `${executable} clean `,
         `${executable} f ${toolchain ? "--toolchain=" + toolchain : ""} ${
             sdk ? "--sdk=" + sdk : ""
-        } -y -v --project=. "--file=./xmake.lua" `,
+        } -y -v --project=. "--file=./xmake.lua" ${
+            mode ? "--mode=" + mode : ""
+        }`,
     ];
     await RunCommandShell(others, cwd);
 }
@@ -117,23 +122,27 @@ export async function RunCommandShell(others: string[], cwd?: string) {
     }
 }
 
-async function RunXmakeBuild(file: string, executable: string) {
+async function RunXmakeBuild(file: string, executable: string, group: string) {
     const cwd = path.dirname(file);
 
     console.log({ file });
     // console.log({ os });
 
     const others = [
-        `${executable} build -v -y  -w --project=. "--file=./xmake.lua" -g test`,
+        `${executable} build -v -y  -w --project=. "--file=./xmake.lua" ${
+            group ? "--group=" + group : ""
+        }`,
     ];
     await RunCommandShell(others, cwd);
 }
 
-async function RunXmakeTest(file: string, executable: string) {
+async function RunXmakeTest(file: string, executable: string, group: string) {
     console.log({ file });
     // console.log({ os });
     const others = [
-        `${executable} run -v --project=. "--file=./xmake.lua" -g test`,
+        `${executable} run -v --project=. "--file=./xmake.lua" ${
+            group ? "--group=" + group : ""
+        } `,
     ];
     const cwd = path.dirname(file);
     await RunCommandShell(others, cwd);

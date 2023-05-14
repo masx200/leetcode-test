@@ -20,12 +20,7 @@ jobs:
 
         steps:
             - uses: actions/checkout@v3
-            #             - name: Cache xmake
-            #               id: cache-xmake
-            #               uses: actions/cache@v3
-            #               with:
-            #                   path: C:\hostedtoolcache\windows\xmake\dev\x64
-            #                   key: ${{ runner.os }}-xmake-4fe1c80f57ce093a0f0c38100a773e9b2ad0512c
+
             - uses: actions/cache@v3
               with:
                   key: ${{ runner.os }}-deno-${{ hashFiles('**/deps.ts') }}-${{ hashFiles('**/import_map.json') }}
@@ -64,12 +59,12 @@ jobs:
               with:
                   deno-version: v1.33.1
             - uses: xmake-io/github-action-setup-xmake@v1
-              #if: steps.cache-xmake.outputs.cache-hit != 'true'
+
               with:
                   xmake-version: branch@dev
                   actions-cache-folder: ".xmake-cache"
 
             - run: deno task cache
-            - run: deno run -A xmake.ts --executable=C:\hostedtoolcache\windows\xmake\dev\x64\xmake.exe
+            - run: deno run -A xmake.ts --mode=test --group=test --executable=C:\hostedtoolcache\windows\xmake\dev\x64\xmake.exe
             - run: C:\hostedtoolcache\windows\xmake\dev\x64\xmake.exe clean  && C:\hostedtoolcache\windows\xmake\dev\x64\xmake.exe f   -y -v --project=. "--file=./xmake.lua"
             - run: C:\hostedtoolcache\windows\xmake\dev\x64\xmake.exe build -v -y  -w --project=. "--file=./xmake.lua"

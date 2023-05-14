@@ -75,6 +75,6 @@ jobs:
                   xmake-version: branch@dev
                   actions-cache-folder: ".xmake-cache"
 
-            - run: deno run -A xmake.ts --toolchain=llvm --sdk=/usr/local/opt/llvm/
+            - run: deno run -A xmake.ts --mode=test --group=test  --toolchain=llvm --sdk=/usr/local/opt/llvm/
             - run: xmake clean  && xmake f --toolchain=llvm --sdk=/usr/local/opt/llvm/ -y -v --project=. "--file=./xmake.lua"
             - run: xmake build -v -y  -w --project=. "--file=./xmake.lua"
