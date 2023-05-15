@@ -25,12 +25,32 @@ local function movefilesinfolder(src, dest, callback)
     end
 
 end
+
+local function checkfilesexists(archivefile)
+    if os.exists(archivefile .. '.list') then
+        local installedlistfile = io.open(archivefile .. '.list', "r")
+        if nil == installedlistfile then
+            print("open file: " .. archivefile .. '.list' .. " fail")
+            return
+        end
+        while (true) do
+            local content2 = installedlistfile:read("*l")
+
+            if content2 == nil then return true end
+
+            if not os.exists(content2) then return false end
+
+        end
+    end
+    return false
+end
 function main()
 
     local name = "leetcode-treenode-cpp"
     local version = "1.1.8"
     local folder = name .. "-" .. version
     local archivefile = path.join('downloads', folder .. '.tar.gz')
+    if checkfilesexists(archivefile) then return end
     if not os.exists(archivefile) then
         local url = 'https://ghproxy.com/https://github.com/masx200/' .. name ..
                         '/archive/' .. version .. '.tar.gz'
