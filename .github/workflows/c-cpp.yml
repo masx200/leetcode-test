@@ -76,5 +76,10 @@ jobs:
                   actions-cache-folder: ".xmake-cache"
             - run: xmake l install.lua
             - run: deno run -A xmake.ts --mode=test --group=test  --toolchain=llvm --sdk=/usr/local/opt/llvm/
-            - run: xmake clean  && xmake f --toolchain=llvm --sdk=/usr/local/opt/llvm/ -y -v --project=. "--file=./xmake.lua"
+            - run: xmake clean  -a
+            - run: xmake f --toolchain=llvm --sdk=/usr/local/opt/llvm/ -y -v --project=. "--file=./xmake.lua"
             - run: xmake build -v -y  -w --project=. "--file=./xmake.lua"
+            - run: xmake clean  -a
+            - run: xmake f --toolchain=llvm --sdk=/usr/local/opt/llvm/ -y -v --project=. "--file=./xmake.lua" --mode=test
+            - run: xmake build -v -y  -w --project=. "--file=./xmake.lua" --group=test
+            - run: xmake run --group=test
