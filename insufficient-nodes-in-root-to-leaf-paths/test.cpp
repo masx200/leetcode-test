@@ -2,8 +2,8 @@
 
 #include <gtest/gtest.h>
 #include <iostream>
-#include <unordered_set>
 #include <string>
+#include <unordered_set>
 #ifdef __TEST__
 #include <eventpp/callbacklist.h>
 #endif
