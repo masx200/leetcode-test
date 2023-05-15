@@ -2566,6 +2566,8 @@ https://leetcode.cn/problems/left-and-right-sum-differences
 
 https://leetcode.cn/problems/difference-between-element-sum-and-digit-sum-of-an-array
 
+https://leetcode.cn/problems/flip-columns-for-maximum-number-of-equal-rows
+
 https://leetcode.cn/problems/expression-add-operators/
 
 https://leetcode.cn/problems/minimum-number-of-frogs-croaking

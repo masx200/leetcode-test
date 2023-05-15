@@ -1,13 +1,8 @@
-import * as path from "https://deno.land/std@0.187.0/path/mod.ts";
-
-import { join, resolve } from "https://deno.land/std@0.187.0/path/mod.ts";
+import { ensureDir, join, path, resolve } from "./deps.ts";
 
 import { assertEquals } from "asserts";
-// import { dirname } from "https://deno.land/x/dirname_es@v1.0.1/mod.ts";
-import { ensureDir } from "https://deno.land/std@0.187.0/fs/mod.ts";
 import parse from "npm:@masx200/mini-cli-args-parser@1.0.5";
 import { retry } from "./retry.ts";
-
 async function* findFilesRecursive(
     path: string,
     name: string,
@@ -21,12 +16,10 @@ async function* findFilesRecursive(
         }
     }
 }
-
 if (import.meta.main) {
     await main();
 }
 async function main() {
-    // const __dirname = dirname(import.meta);
     const args = parse(Deno.args);
     const __dirname = Deno.cwd();
     console.log(JSON.stringify(args));
@@ -45,10 +38,8 @@ async function RunXmake(
     group: string,
     mode: string,
 ) {
-    //const os = Deno.build.os;
     await RunXmakeConfig(file, toolchain, sdk, executable, mode);
     await retry(RunXmakeBuild.bind(null, file, executable, group), {
-        //maxAttempts: os === "windows" ? 10 : 1,
         retryOnError: async (e) => {
             const regexp = /error:.*cannot open file:(.*), Unknown/g;
             const matched = e?.stdout?.match(regexp);
@@ -93,7 +84,7 @@ async function RunXmakeConfig(
 }
 export async function RunCommandShell(others: string[], cwd?: string) {
     const os = Deno.build.os;
-    // console.log({ os });
+
     const cmd = os === "windows" ? "powershell.exe" : "bash";
 
     const args = os === "windows"
@@ -111,8 +102,7 @@ export async function RunCommandShell(others: string[], cwd?: string) {
     console.log(decoded.stdout);
     console.error(decoded.stderr);
     console.log({ success, code });
-    // await writeAll(Deno.stdout, stdout);
-    //await writeAll(Deno.stderr, stderr);
+
     try {
         assertEquals(success, true);
         assertEquals(code, 0);
@@ -126,7 +116,6 @@ async function RunXmakeBuild(file: string, executable: string, group: string) {
     const cwd = path.dirname(file);
 
     console.log({ file });
-    // console.log({ os });
 
     const others = [
         `${executable} build -v -y  -w --project=. "--file=./xmake.lua" ${
@@ -138,7 +127,7 @@ async function RunXmakeBuild(file: string, executable: string, group: string) {
 
 async function RunXmakeTest(file: string, executable: string, group: string) {
     console.log({ file });
-    // console.log({ os });
+
     const others = [
         `${executable} run -v --project=. "--file=./xmake.lua" ${
             group ? "--group=" + group : ""
