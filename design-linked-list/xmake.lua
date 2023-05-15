@@ -1,11 +1,16 @@
 if is_mode("test") then add_requires("vcpkg::eventpp") end
 add_rules("mode.debug", "mode.release")
 set_languages('cxx20')
+add_requires("vcpkg::gtest") 
 target("design-linked-list")
 set_kind("static")
 
 
 add_files("*.ixx", {install = true})
+if is_mode("test") then
+    add_defines("__TEST__")
+    add_packages("vcpkg::eventpp")
+end
 target_end()
 target("design-linked-list-test");
 set_group('test')
