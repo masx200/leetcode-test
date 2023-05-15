@@ -79,4 +79,5 @@ function main()
         installedlistfile:write("\n")
     end)
     installedlistfile:close()
+    print("save installedlistfile to "..archivefile .. '.list')
 end
