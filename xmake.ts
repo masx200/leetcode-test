@@ -30,7 +30,7 @@ async function main() {
     const args = parse(Deno.args);
     const __dirname = Deno.cwd();
     console.log(JSON.stringify(args));
-    const { sdk, toolchain, group, mode } = args;
+    const { sdk, toolchain, group = "test", mode = "test" } = args;
     const { executable = "xmake" } = args;
     for await (const file of findFilesRecursive(__dirname, "test.cpp")) {
         await RunXmake(file, toolchain, sdk, executable, group, mode);

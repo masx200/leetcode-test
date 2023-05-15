@@ -1,10 +1,10 @@
 if is_mode("test") then add_requires("vcpkg::eventpp") end
 set_policy("platform.longpaths", true)
-add_repositories("masx200/xmake-repo https://gitee.com/masx200/xmake-repo.git");
-add_repositories(
-    "masx200/xmake-repo https://ghproxy.com/https://github.com/masx200/xmake-repo.git");
+-- add_repositories("masx200/xmake-repo https://gitee.com/masx200/xmake-repo.git");
+-- add_repositories(
+--    "masx200/xmake-repo https://ghproxy.com/https://github.com/masx200/xmake-repo.git");
 add_rules("mode.debug", "mode.release");
-add_requires("leetcode-treenode-cpp 1.1.7");
+-- add_requires("leetcode-treenode-cpp 1.1.7");
 add_requires("vcpkg::cppunit");
 set_languages("c17", "cxx20");
 target("insert-into-a-binary-search-tree-test");
@@ -23,5 +23,6 @@ set_policy("build.c++.modules", true);
 add_files("*.ixx");
 add_files("test.cpp");
 add_packages("vcpkg::cppunit");
-add_packages("leetcode-treenode-cpp");
+-- add_packages("leetcode-treenode-cpp");
+add_files("../leetcode-treenode-cpp/*.ixx");
 target_end();
