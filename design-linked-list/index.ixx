@@ -1,13 +1,14 @@
 module;
 
 #include <algorithm>
-
+#ifdef __TEST__
+#include <eventpp/callbacklist.h>
+#endif
 export module leetcode_test.design_linked_list.MyLinkedList;
 using std::max;
 
 namespace leetcode_test::design_linked_list {
-
-struct DLinkListNode {
+export struct DLinkListNode {
     int val;
     DLinkListNode *prev, *next;
     DLinkListNode(int _val)
@@ -15,16 +16,34 @@ struct DLinkListNode {
         , prev(nullptr)
         , next(nullptr)
     {
+#ifdef __TEST__
+        CallbackNew(this);
+#endif
     }
+    ~DLinkListNode()
+
+    {
+#ifdef __TEST__
+        CallbackDelete(this);
+#endif
+    }
+#ifdef __TEST__
+    static eventpp::CallbackList<void(DLinkListNode*)> CallbackNew;
+    static eventpp::CallbackList<void(DLinkListNode*)> CallbackDelete;
+#endif
 };
+#ifdef __TEST__
+eventpp::CallbackList<void(DLinkListNode*)> DLinkListNode::CallbackDelete {};
+eventpp::CallbackList<void(DLinkListNode*)> DLinkListNode::CallbackNew {};
+#endif
 export class MyLinkedList {
 public:
     ~MyLinkedList()
     {
-        DLinkListNode* dLinkListNode = head;
-        while (dLinkListNode) {
-            DLinkListNode* cur = dLinkListNode;
-            dLinkListNode = dLinkListNode->next;
+        DLinkListNode* node = head;
+        while (node) {
+            DLinkListNode* cur = node;
+            node = node->next;
             delete cur;
         }
         head = nullptr;
