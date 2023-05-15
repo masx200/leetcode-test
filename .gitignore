@@ -141,3 +141,5 @@ cmake-build-debug
 temp
 package-lock.json
 *.pdb
+leetcode-treenode-cpp
+downloads
