@@ -2,7 +2,11 @@
 
 #include <gtest/gtest.h>
 #include <iostream>
+#include <unordered_set>
 #include <string>
+#ifdef __TEST__
+#include <eventpp/callbacklist.h>
+#endif
 using namespace std;
 import leetcode_test.insufficient_nodes_in_root_to_leaf_paths.Solution;
 import leetcode_treenode_cpp.TreeNode;
@@ -13,8 +17,37 @@ import leetcode_treenode_cpp.parseLeetCodeBinaryTree;
 import leetcode_test.insufficient_nodes_in_root_to_leaf_paths.printTreeNode;
 using namespace leetcode_test::insufficient_nodes_in_root_to_leaf_paths;
 using leetcode_test::insufficient_nodes_in_root_to_leaf_paths::printTreeNode;
+#ifdef __TEST__
+struct TreeNodeInspector {
+    unordered_set<TreeNode*> nodes;
+    eventpp::CallbackList<void(TreeNode*)>::Handle handleNew;
+    eventpp::CallbackList<void(TreeNode*)>::Handle handleDelete;
+    TreeNodeInspector()
+    {
+        auto handleNew = TreeNode::CallbackNew.append([this](auto* node) {
+            std::cout << "TreeNode New:" << node << std::endl;
+            nodes.insert(node);
+        });
+        this->handleNew = handleNew;
+        auto handleDelete = TreeNode::CallbackDelete.append([this](auto* node) {
+            std::cout << "TreeNode Delete:" << node << std::endl;
+
+            nodes.erase(node);
+        });
+        this->handleDelete = handleDelete;
+    }
+    ~TreeNodeInspector()
+    {
+        TreeNode::CallbackNew.remove(handleNew);
+        TreeNode::CallbackDelete.remove(handleDelete);
+    }
+};
+#endif
 void LeetCode1080TestExamples(std::string& root, int limit, std::string& output)
 {
+#ifdef __TEST__
+    TreeNodeInspector inspector;
+#endif
     TreeNode* tree = nullptr;
     int status = parseLeetCodeBinaryTree(root, &tree);
 
@@ -34,6 +67,9 @@ void LeetCode1080TestExamples(std::string& root, int limit, std::string& output)
 
         delete node;
     }
+#ifdef __TEST__
+    ASSERT_EQ(size_t(0), inspector.nodes.size());
+#endif
 }
 
 TEST(LeetCode1080, test1)
