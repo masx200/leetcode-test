@@ -1,0 +1,155 @@
+[
+    {
+        "directory": "C:\\leetcode-test",
+        "arguments": [
+            "C:\\Program Files\\LLVM\\bin\\clang.exe",
+            "-c",
+            "-Qunused-arguments",
+            "-m64",
+            "-fvisibility=hidden",
+            "-fvisibility-inlines-hidden",
+            "-O3",
+            "-std=c++20",
+            "-fexceptions",
+            "-fcxx-exceptions",
+            "-isystem",
+            "C:\\Users\\Administrator\\Documents\\vcpkg-master\\installed\\x64-windows-static\\include",
+            "-DNDEBUG",
+            "-o",
+            "build\\.objs\\split-a-circular-linked-list-test\\windows\\x64\\release\\split-a-circular-linked-list\\test.cpp.obj",
+            "split-a-circular-linked-list\\test.cpp"
+        ],
+        "file": "split-a-circular-linked-list\\test.cpp"
+    },
+    {
+        "directory": "C:\\leetcode-test",
+        "arguments": [
+            "C:\\Program Files\\LLVM\\bin\\clang.exe",
+            "-c",
+            "-Qunused-arguments",
+            "-m64",
+            "-fvisibility=hidden",
+            "-fvisibility-inlines-hidden",
+            "-O3",
+            "-std=c++20",
+            "-fexceptions",
+            "-fcxx-exceptions",
+            "-isystem",
+            "C:\\Users\\Administrator\\Documents\\vcpkg-master\\installed\\x64-windows-static\\include",
+            "-DNDEBUG",
+            "-o",
+            "build\\.objs\\insert-into-a-binary-search-tree-test\\windows\\x64\\release\\insert-into-a-binary-search-tree\\test.cpp.obj",
+            "insert-into-a-binary-search-tree\\test.cpp"
+        ],
+        "file": "insert-into-a-binary-search-tree\\test.cpp"
+    },
+    {
+        "directory": "C:\\leetcode-test",
+        "arguments": [
+            "C:\\Program Files\\LLVM\\bin\\clang.exe",
+            "-c",
+            "-Qunused-arguments",
+            "-m64",
+            "-fvisibility=hidden",
+            "-fvisibility-inlines-hidden",
+            "-O3",
+            "-std=c++20",
+            "-fexceptions",
+            "-fcxx-exceptions",
+            "-isystem",
+            "C:\\Users\\Administrator\\Documents\\vcpkg-master\\installed\\x64-windows-static\\include",
+            "-DNDEBUG",
+            "-fmodule-file=leetcode_test.design_linked_list.MyLinkedList=build\\.gens\\leetcode-test\\windows\\x64\\release\\rules\\modules\\cache\\f3246e21\\leetcode_test.design_linked_list.MyLinkedList.pcm",
+            "-o",
+            "build\\.objs\\design-linked-list-test\\windows\\x64\\release\\design-linked-list\\test.cpp.obj",
+            "design-linked-list\\test.cpp"
+        ],
+        "file": "design-linked-list\\test.cpp"
+    },
+    {
+        "directory": "C:\\leetcode-test",
+        "arguments": [
+            "C:\\Program Files\\LLVM\\bin\\clang.exe",
+            "-c",
+            "-Qunused-arguments",
+            "-m64",
+            "-std=c++20",
+            "-fexceptions",
+            "-fcxx-exceptions",
+            "-isystem",
+            "C:\\Users\\Administrator\\Documents\\vcpkg-master\\installed\\x64-windows-static\\include",
+            "-fmodule-file=leetcode_treenode_cpp.freeTreeNode=build\\.gens\\leetcode-test\\windows\\x64\\release\\rules\\modules\\cache\\f3246e21\\leetcode_treenode_cpp.freeTreeNode.pcm",
+            "-fmodule-file=leetcode_treenode_cpp.TreeNode=build\\.gens\\leetcode-test\\windows\\x64\\release\\rules\\modules\\cache\\f3246e21\\leetcode_treenode_cpp.TreeNode.pcm",
+            "-fmodule-file=leetcode_treenode_cpp.LeetCodeTreeNodeToString=build\\.gens\\leetcode-test\\windows\\x64\\release\\rules\\modules\\cache\\f3246e21\\leetcode_treenode_cpp.LeetCodeTreeNodeToString.pcm",
+            "-fmodule-file=leetcode_treenode_cpp.bfsTravelsal=build\\.gens\\leetcode-test\\windows\\x64\\release\\rules\\modules\\cache\\f3246e21\\leetcode_treenode_cpp.bfsTravelsal.pcm",
+            "-fmodule-file=leetcode_treenode_cpp.serializeTreeNode=build\\.gens\\leetcode-test\\windows\\x64\\release\\rules\\modules\\cache\\f3246e21\\leetcode_treenode_cpp.serializeTreeNode.pcm",
+            "-fmodule-file=leetcode_treenode_cpp.parseLeetCodeBinaryTree=build\\.gens\\leetcode-test\\windows\\x64\\release\\rules\\modules\\cache\\f3246e21\\leetcode_treenode_cpp.parseLeetCodeBinaryTree.pcm",
+            "-o",
+            "build\\.objs\\test\\windows\\x64\\release\\leetcode-treenode-cpp\\test.cpp.obj",
+            "leetcode-treenode-cpp\\test.cpp"
+        ],
+        "file": "leetcode-treenode-cpp\\test.cpp"
+    },
+    {
+        "directory": "C:\\leetcode-test",
+        "arguments": [
+            "C:\\Program Files\\LLVM\\bin\\clang.exe",
+            "-c",
+            "-Qunused-arguments",
+            "-m64",
+            "-fvisibility=hidden",
+            "-fvisibility-inlines-hidden",
+            "-O3",
+            "-std=c++20",
+            "-fexceptions",
+            "-fcxx-exceptions",
+            "-isystem",
+            "C:\\Users\\Administrator\\Documents\\vcpkg-master\\installed\\x64-windows-static\\include",
+            "-DNDEBUG",
+            "-o",
+            "build\\.objs\\ibonacci-number-test\\windows\\x64\\release\\fibonacci-number\\test.cpp.obj",
+            "fibonacci-number\\test.cpp"
+        ],
+        "file": "fibonacci-number\\test.cpp"
+    },
+    {
+        "directory": "C:\\leetcode-test",
+        "arguments": [
+            "C:\\Program Files\\LLVM\\bin\\clang.exe",
+            "-c",
+            "-Qunused-arguments",
+            "-m64",
+            "-fvisibility=hidden",
+            "-fvisibility-inlines-hidden",
+            "-O3",
+            "-std=c++20",
+            "-fexceptions",
+            "-fcxx-exceptions",
+            "-isystem",
+            "C:\\Users\\Administrator\\Documents\\vcpkg-master\\installed\\x64-windows-static\\include",
+            "-DNDEBUG",
+            "-o",
+            "build\\.objs\\insufficient-nodes-in-root-to-leaf-paths-test\\windows\\x64\\release\\insufficient-nodes-in-root-to-leaf-paths\\test.cpp.obj",
+            "insufficient-nodes-in-root-to-leaf-paths\\test.cpp"
+        ],
+        "file": "insufficient-nodes-in-root-to-leaf-paths\\test.cpp"
+    },
+    {
+        "directory": "C:\\leetcode-test",
+        "arguments": [
+            "C:\\Program Files\\LLVM\\bin\\clang.exe",
+            "-c",
+            "-Qunused-arguments",
+            "-m64",
+            "-std=c++20",
+            "-fexceptions",
+            "-fcxx-exceptions",
+            "-isystem",
+            "C:\\Users\\Administrator\\Documents\\vcpkg-master\\installed\\x64-windows-static\\include",
+            "-o",
+            "build\\.objs\\check-if-it-is-a-good-array-test\\windows\\x64\\release\\check-if-it-is-a-good-array\\test.cpp.obj",
+            "check-if-it-is-a-good-array\\test.cpp"
+        ],
+        "file": "check-if-it-is-a-good-array\\test.cpp"
+    }
+]

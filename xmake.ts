@@ -3,6 +3,7 @@ import { ensureDir, join, path, resolve } from "./deps.ts";
 import { assertEquals } from "asserts";
 import parse from "npm:@masx200/mini-cli-args-parser@1.0.5";
 import { retry } from "./retry.ts";
+
 async function* findFilesRecursive(
     path: string,
     name: string,
@@ -75,7 +76,7 @@ async function RunXmakeConfig(
     const others = [
         `${executable} clean `,
         `${executable} f ${toolchain ? "--toolchain=" + toolchain : ""} ${
-            sdk ? "--sdk=" + sdk : ""
+            sdk ? "'--sdk=" + sdk + "'" : ""
         } -y -v --project=. "--file=./xmake.lua" ${
             mode ? "--mode=" + mode : ""
         }`,
