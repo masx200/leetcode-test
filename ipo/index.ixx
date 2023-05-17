@@ -10,9 +10,10 @@ using std::priority_queue;
 using std::vector;
 namespace leetcode_test::ipo {
 export class Solution {
-  public:
-    int findMaximizedCapital(int k, int w, vector<int> &profits,
-                             vector<int> &capital) {
+public:
+    int findMaximizedCapital(int k, int w, vector<int>& profits,
+        vector<int>& capital)
+    {
         int n = profits.size();
         int curr = 0;
         priority_queue<int, vector<int>, less<int>> pq;
