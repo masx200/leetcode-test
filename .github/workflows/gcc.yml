@@ -63,6 +63,7 @@ jobs:
       - run: |
           export PATH=/opt/gcc-latest/bin:$PATH
           export LD_RUN_PATH=/opt/gcc-latest/lib64
+          echo 'export PATH="/opt/gcc-latest/bin:$PATH"' >> ~/.profile
 
       - name: vcpkg-action
 
