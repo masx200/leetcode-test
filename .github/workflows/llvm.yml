@@ -50,7 +50,7 @@ jobs:
 
               run: |
                   brew install xmake python@3.11 six z3 zstd 
-                  brew install xmake
+
                   brew install libtool automake
                    export LDFLAGS="-L/usr/local/opt/llvm/lib"
                        export CPPFLAGS="-I/usr/local/opt/llvm/include"
