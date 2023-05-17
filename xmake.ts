@@ -74,7 +74,7 @@ async function RunXmakeConfig(
     console.log({ file });
     const cwd = path.dirname(file);
     const others = [
-        `${executable} clean `,
+        `${executable} clean --project=. "--file=./xmake.lua"`,
         `${executable} f ${toolchain ? "--toolchain=" + toolchain : ""} ${
             sdk ? "'--sdk=" + sdk + "'" : ""
         } -y -v --project=. "--file=./xmake.lua" ${
