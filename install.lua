@@ -26,11 +26,11 @@ local function movefilesinfolder(src, dest, callback)
 
 end
 
-local function checkfilesexists(archivefile)
-    if os.exists(archivefile .. '.list') then
-        local installedlistfile = io.open(archivefile .. '.list', "r")
+local function checkfilesexists(listfile)
+    if os.exists(listfile) then
+        local installedlistfile = io.open(listfile, "r")
         if nil == installedlistfile then
-            print("open file: " .. archivefile .. '.list' .. " fail")
+            print("open file: " .. listfile .. " fail")
             return
         end
         while (true) do
@@ -47,10 +47,11 @@ end
 function main()
 
     local name = "leetcode-treenode-cpp"
-    local version = "1.1.8"
+    local version = "1.1.9"
     local folder = name .. "-" .. version
     local archivefile = path.join('downloads', folder .. '.tar.gz')
-    if checkfilesexists(archivefile) then return end
+    local listfile = path.join('downloads', folder .. '.list')
+    if checkfilesexists(listfile) then return end
     if not os.exists(archivefile) then
         local url = 'https://ghproxy.com/https://github.com/masx200/' .. name ..
                         '/archive/' .. version .. '.tar.gz'
@@ -69,9 +70,9 @@ function main()
         print("remove folder:" .. name)
         os.rmdir(name)
     end
-    local installedlistfile = io.open(archivefile .. '.list', "w")
+    local installedlistfile = io.open(listfile, "w")
     if nil == installedlistfile then
-        print("open file: " .. archivefile .. '.list' .. " fail")
+        print("open file: " .. listfile .. " fail")
         return
     end
     movefilesinfolder(src, name, function(installedfile)
@@ -79,5 +80,5 @@ function main()
         installedlistfile:write("\n")
     end)
     installedlistfile:close()
-    print("save installedlistfile to " .. archivefile .. '.list')
+    print("save installedlistfile to " .. listfile)
 end
