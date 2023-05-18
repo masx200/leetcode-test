@@ -6,7 +6,7 @@ export module leetcode_test.print_foobar_alternately.FooBar;
 import leetcode_test.print_foobar_alternately.BlockingQueue;
 using namespace std;
 namespace leetcode_test::print_foobar_alternately {
-class FooBar {
+export class FooBar {
 private:
     int n = 0;
     BlockingQueue<int> fooinput;
