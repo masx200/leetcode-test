@@ -108,6 +108,8 @@
                                 <source>count-ways-to-build-good-string</source>
                                 <sourceDir>split-message-based-on-limit</sourceDir>
                                 <source>remove-vowels-from-a-string</source>
+
+                                <sourceDir>zigzag-iterator</sourceDir>
                             </sourceDirs>
                         </configuration>
                     </execution>
