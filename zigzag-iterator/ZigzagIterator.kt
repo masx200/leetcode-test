@@ -1,13 +1,8 @@
 package com.github.masx200.leetcode_test.zigzag_iterator
 
-
-
-
 class ZigzagIterator(v1: List<Int>, v2: List<Int>) {
 
-
     private val generator = ZigzagGenerator(v1, v2)
-
 
     private val iterator = generator.iterator()
     fun next(): Int {
@@ -28,10 +23,8 @@ private fun ZigzagGenerator(v1: List<Int>, v2: List<Int>): Sequence<Int> = seque
         }
         for (i in v1.size until v2.size) {
             yield(v2[i])
-
         }
     } else {
         yieldAll(ZigzagGenerator(v2, v1))
     }
-
 }
