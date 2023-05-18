@@ -2584,4 +2584,6 @@ https://leetcode.cn/problems/ipo
 
 https://leetcode.cn/problems/print-in-order/
 
+https://leetcode.cn/problems/print-foobar-alternately
+
 </details>
