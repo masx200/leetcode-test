@@ -2590,4 +2590,6 @@ https://leetcode.cn/problems/zigzag-iterator/
 
 https://leetcode.cn/problems/traffic-light-controlled-intersection/
 
+https://leetcode.cn/problems/web-crawler-multithreaded/
+
 </details>
