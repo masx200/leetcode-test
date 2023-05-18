@@ -2588,4 +2588,6 @@ https://leetcode.cn/problems/print-foobar-alternately
 
 https://leetcode.cn/problems/zigzag-iterator/
 
+https://leetcode.cn/problems/traffic-light-controlled-intersection/
+
 </details>
