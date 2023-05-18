@@ -2,9 +2,10 @@ module;
 #include <functional>
 #include <future>
 #include <thread>
+
+export module leetcode_test.print_in_order.Foo;
 using std::function;
 using std::future;
-export module leetcode_test.print_in_order.Foo;
 namespace leetcode_test::print_in_order {
 export class Foo {
 private:
