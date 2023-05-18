@@ -1,5 +1,4 @@
 import { assertEquals } from "asserts";
-
 import findRedundantDirectedConnection from "./index.ts";
 
 Deno.test("redundant-connection-ii", () => {
@@ -8,9 +7,9 @@ Deno.test("redundant-connection-ii", () => {
             [1, 3],
             [2, 3],
         ],
-        输出 = [2, 3];
+        OUTPUT = [2, 3];
 
-    assertEquals(findRedundantDirectedConnection(edges), 输出);
+    assertEquals(findRedundantDirectedConnection(edges), OUTPUT);
 });
 Deno.test("redundant-connection-ii", () => {
     const edges = [
@@ -20,7 +19,7 @@ Deno.test("redundant-connection-ii", () => {
             [4, 1],
             [1, 5],
         ],
-        输出 = [4, 1];
+        OUTPUT = [4, 1];
 
-    assertEquals(findRedundantDirectedConnection(edges), 输出);
+    assertEquals(findRedundantDirectedConnection(edges), OUTPUT);
 });

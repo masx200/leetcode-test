@@ -2586,4 +2586,6 @@ https://leetcode.cn/problems/print-in-order/
 
 https://leetcode.cn/problems/print-foobar-alternately
 
+https://leetcode.cn/problems/zigzag-iterator/
+
 </details>
