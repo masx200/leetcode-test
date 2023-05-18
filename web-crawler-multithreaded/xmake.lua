@@ -1,7 +1,15 @@
+add_requires("gtest")
 set_languages('c++20')
 target("web-crawler-multithreaded")
 set_kind("static")
 
-
 add_files("*.ixx", {install = true})
+target_end()
+target("web-crawler-multithreaded-test")
+set_kind("binary")
+add_files("*.ixx")
+add_files("test.cpp")
+add_packages("gtest")
+set_group("test")
+set_default(false)
 target_end()
