@@ -2596,4 +2596,6 @@ https://leetcode.cn/problems/letter-tile-possibilities
 
 https://leetcode.cn/problems/print-zero-even-odd/
 
+https://leetcode.cn/problems/powerful-integers
+
 </details>
