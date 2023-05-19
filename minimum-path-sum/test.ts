@@ -1,4 +1,4 @@
-import { assertStrictEquals } from "https://deno.land/std@0.187.0/testing/asserts.ts";
+import { assertStrictEquals } from "https://deno.land/std@0.188.0/testing/asserts.ts";
 import minPathSum from "./index.ts";
 
 Deno.test("minimum-path-sum", () => {
