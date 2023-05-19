@@ -1,8 +1,9 @@
 module;
 #include <functional>
 #include <mutex>
-using namespace std;
+
 export module leetcode_test.traffic_light_controlled_intersection.TrafficLight;
+using namespace std;
 namespace leetcode_test ::traffic_light_controlled_intersection {
 
 export class TrafficLight {
