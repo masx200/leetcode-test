@@ -2594,4 +2594,6 @@ https://leetcode.cn/problems/web-crawler-multithreaded/
 
 https://leetcode.cn/problems/letter-tile-possibilities
 
+https://leetcode.cn/problems/print-zero-even-odd/
+
 </details>
