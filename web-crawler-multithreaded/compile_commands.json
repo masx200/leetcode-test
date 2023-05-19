@@ -1,26 +1,101 @@
 [
-{
-  "directory": "C:\\leetcode-test\\web-crawler-multithreaded",
-  "arguments": ["C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\cl.exe", "/nologo", "/std:c++20", "/EHsc", "/IC:\\Users\\Administrator\\AppData\\Local\\.xmake\\packages\\g\\gtest\\1.12.1\\188944e346694ce89eb8bc3d2f0b7138\\include", "/experimental:module", "/TP", "/c", "HtmlParser.ixx", "/Fobuild\\.objs\\web-crawler-multithreaded-test\\windows\\x64\\test\\HtmlParser.ixx.obj", "/ifcOutput", "build\\.gens\\web-crawler-multithreaded-test\\windows\\x64\\test\\rules\\modules\\cache\\16979b81\\leetcode_test.web_crawler_multithreaded.HtmlParser.ifc", "/interface"],
-  "file": "HtmlParser.ixx"
-},
-{
-  "directory": "C:\\leetcode-test\\web-crawler-multithreaded",
-  "arguments": ["C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\cl.exe", "/nologo", "/std:c++20", "/EHsc", "/IC:\\Users\\Administrator\\AppData\\Local\\.xmake\\packages\\g\\gtest\\1.12.1\\188944e346694ce89eb8bc3d2f0b7138\\include", "/experimental:module", "/TP", "/c", "index.ixx", "/Fobuild\\.objs\\web-crawler-multithreaded-test\\windows\\x64\\test\\index.ixx.obj", "/ifcOutput", "build\\.gens\\web-crawler-multithreaded-test\\windows\\x64\\test\\rules\\modules\\cache\\16979b81\\leetcode_test.web_crawler_multithreaded.Solution.ifc", "/interface", "/reference", "leetcode_test.web_crawler_multithreaded.HtmlParser=build\\.gens\\web-crawler-multithreaded-test\\windows\\x64\\test\\rules\\modules\\cache\\16979b81\\leetcode_test.web_crawler_multithreaded.HtmlParser.ifc"],
-  "file": "index.ixx"
-},
-{
-  "directory": "C:\\leetcode-test\\web-crawler-multithreaded",
-  "arguments": ["C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\cl.exe", "/c", "/nologo", "/std:c++20", "/EHsc", "/IC:\\Users\\Administrator\\AppData\\Local\\.xmake\\packages\\g\\gtest\\1.12.1\\188944e346694ce89eb8bc3d2f0b7138\\include", "/experimental:module", "/TP", "/c", "/reference", "leetcode_test.web_crawler_multithreaded.HtmlParser=build\\.gens\\web-crawler-multithreaded-test\\windows\\x64\\test\\rules\\modules\\cache\\16979b81\\leetcode_test.web_crawler_multithreaded.HtmlParser.ifc", "/reference", "leetcode_test.web_crawler_multithreaded.Solution=build\\.gens\\web-crawler-multithreaded-test\\windows\\x64\\test\\rules\\modules\\cache\\16979b81\\leetcode_test.web_crawler_multithreaded.Solution.ifc", "/Fobuild\\.objs\\web-crawler-multithreaded-test\\windows\\x64\\test\\test.cpp.obj", "test.cpp"],
-  "file": "test.cpp"
-},
-{
-  "directory": "C:\\leetcode-test\\web-crawler-multithreaded",
-  "arguments": ["C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\cl.exe", "/nologo", "/std:c++20", "/EHsc", "/experimental:module", "/TP", "/c", "HtmlParser.ixx", "/Fobuild\\.objs\\web-crawler-multithreaded\\windows\\x64\\test\\HtmlParser.ixx.obj", "/ifcOutput", "build\\.gens\\web-crawler-multithreaded-test\\windows\\x64\\test\\rules\\modules\\cache\\16979b81\\leetcode_test.web_crawler_multithreaded.HtmlParser.ifc", "/interface"],
-  "file": "HtmlParser.ixx"
-},
-{
-  "directory": "C:\\leetcode-test\\web-crawler-multithreaded",
-  "arguments": ["C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\cl.exe", "/nologo", "/std:c++20", "/EHsc", "/experimental:module", "/TP", "/c", "index.ixx", "/Fobuild\\.objs\\web-crawler-multithreaded\\windows\\x64\\test\\index.ixx.obj", "/ifcOutput", "build\\.gens\\web-crawler-multithreaded-test\\windows\\x64\\test\\rules\\modules\\cache\\16979b81\\leetcode_test.web_crawler_multithreaded.Solution.ifc", "/interface", "/reference", "leetcode_test.web_crawler_multithreaded.HtmlParser=build\\.gens\\web-crawler-multithreaded-test\\windows\\x64\\test\\rules\\modules\\cache\\16979b81\\leetcode_test.web_crawler_multithreaded.HtmlParser.ifc"],
-  "file": "index.ixx"
-}]
+    {
+        "directory": "C:\\leetcode-test\\web-crawler-multithreaded",
+        "arguments": [
+            "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\cl.exe",
+            "/nologo",
+            "/std:c++20",
+            "/EHsc",
+            "/IC:\\Users\\Administrator\\AppData\\Local\\.xmake\\packages\\g\\gtest\\1.12.1\\188944e346694ce89eb8bc3d2f0b7138\\include",
+            "/experimental:module",
+            "/TP",
+            "/c",
+            "HtmlParser.ixx",
+            "/Fobuild\\.objs\\web-crawler-multithreaded-test\\windows\\x64\\test\\HtmlParser.ixx.obj",
+            "/ifcOutput",
+            "build\\.gens\\web-crawler-multithreaded-test\\windows\\x64\\test\\rules\\modules\\cache\\16979b81\\leetcode_test.web_crawler_multithreaded.HtmlParser.ifc",
+            "/interface"
+        ],
+        "file": "HtmlParser.ixx"
+    },
+    {
+        "directory": "C:\\leetcode-test\\web-crawler-multithreaded",
+        "arguments": [
+            "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\cl.exe",
+            "/nologo",
+            "/std:c++20",
+            "/EHsc",
+            "/IC:\\Users\\Administrator\\AppData\\Local\\.xmake\\packages\\g\\gtest\\1.12.1\\188944e346694ce89eb8bc3d2f0b7138\\include",
+            "/experimental:module",
+            "/TP",
+            "/c",
+            "index.ixx",
+            "/Fobuild\\.objs\\web-crawler-multithreaded-test\\windows\\x64\\test\\index.ixx.obj",
+            "/ifcOutput",
+            "build\\.gens\\web-crawler-multithreaded-test\\windows\\x64\\test\\rules\\modules\\cache\\16979b81\\leetcode_test.web_crawler_multithreaded.Solution.ifc",
+            "/interface",
+            "/reference",
+            "leetcode_test.web_crawler_multithreaded.HtmlParser=build\\.gens\\web-crawler-multithreaded-test\\windows\\x64\\test\\rules\\modules\\cache\\16979b81\\leetcode_test.web_crawler_multithreaded.HtmlParser.ifc"
+        ],
+        "file": "index.ixx"
+    },
+    {
+        "directory": "C:\\leetcode-test\\web-crawler-multithreaded",
+        "arguments": [
+            "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\cl.exe",
+            "/c",
+            "/nologo",
+            "/std:c++20",
+            "/EHsc",
+            "/IC:\\Users\\Administrator\\AppData\\Local\\.xmake\\packages\\g\\gtest\\1.12.1\\188944e346694ce89eb8bc3d2f0b7138\\include",
+            "/experimental:module",
+            "/TP",
+            "/c",
+            "/reference",
+            "leetcode_test.web_crawler_multithreaded.HtmlParser=build\\.gens\\web-crawler-multithreaded-test\\windows\\x64\\test\\rules\\modules\\cache\\16979b81\\leetcode_test.web_crawler_multithreaded.HtmlParser.ifc",
+            "/reference",
+            "leetcode_test.web_crawler_multithreaded.Solution=build\\.gens\\web-crawler-multithreaded-test\\windows\\x64\\test\\rules\\modules\\cache\\16979b81\\leetcode_test.web_crawler_multithreaded.Solution.ifc",
+            "/Fobuild\\.objs\\web-crawler-multithreaded-test\\windows\\x64\\test\\test.cpp.obj",
+            "test.cpp"
+        ],
+        "file": "test.cpp"
+    },
+    {
+        "directory": "C:\\leetcode-test\\web-crawler-multithreaded",
+        "arguments": [
+            "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\cl.exe",
+            "/nologo",
+            "/std:c++20",
+            "/EHsc",
+            "/experimental:module",
+            "/TP",
+            "/c",
+            "HtmlParser.ixx",
+            "/Fobuild\\.objs\\web-crawler-multithreaded\\windows\\x64\\test\\HtmlParser.ixx.obj",
+            "/ifcOutput",
+            "build\\.gens\\web-crawler-multithreaded-test\\windows\\x64\\test\\rules\\modules\\cache\\16979b81\\leetcode_test.web_crawler_multithreaded.HtmlParser.ifc",
+            "/interface"
+        ],
+        "file": "HtmlParser.ixx"
+    },
+    {
+        "directory": "C:\\leetcode-test\\web-crawler-multithreaded",
+        "arguments": [
+            "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.36.32532\\bin\\HostX64\\x64\\cl.exe",
+            "/nologo",
+            "/std:c++20",
+            "/EHsc",
+            "/experimental:module",
+            "/TP",
+            "/c",
+            "index.ixx",
+            "/Fobuild\\.objs\\web-crawler-multithreaded\\windows\\x64\\test\\index.ixx.obj",
+            "/ifcOutput",
+            "build\\.gens\\web-crawler-multithreaded-test\\windows\\x64\\test\\rules\\modules\\cache\\16979b81\\leetcode_test.web_crawler_multithreaded.Solution.ifc",
+            "/interface",
+            "/reference",
+            "leetcode_test.web_crawler_multithreaded.HtmlParser=build\\.gens\\web-crawler-multithreaded-test\\windows\\x64\\test\\rules\\modules\\cache\\16979b81\\leetcode_test.web_crawler_multithreaded.HtmlParser.ifc"
+        ],
+        "file": "index.ixx"
+    }
+]
