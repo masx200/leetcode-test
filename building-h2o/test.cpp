@@ -1,24 +1,25 @@
 
-#include <gtest/gtest.h>
+#include <algorithm>
 #include <functional>
 #include <future>
+#include <gtest/gtest.h>
 #include <iostream>
 #include <mutex>
 #include <queue>
+#include <sstream>
 #include <thread>
-#include<sstream>
-#include  <algorithm>
 import leetcode_test.building_h2o.H2O;
 using namespace std;
 using leetcode_test::building_h2o::H2O;
-TEST(building_h2o,main) {
+TEST(building_h2o, main)
+{
     stringstream output;
     mutex lock;
     H2O h2o {};
 
     auto t1 = thread([&]() {
         h2o.hydrogen([&]() {
-            lock_guard<mutex> gaurd{lock};
+            lock_guard<mutex> gaurd { lock };
             cout << "H" << endl;
             output << "H";
         });
@@ -76,7 +77,8 @@ TEST(building_h2o,main) {
     ASSERT_EQ(2, count(two.begin(), two.end(), 'H'));
 }
 
-int main(int argc, char **argv) {
+int main(int argc, char** argv)
+{
     testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
 }
