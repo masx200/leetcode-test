@@ -3,7 +3,7 @@ import * as path from "https://deno.land/std@0.188.0/path/mod.ts";
 import AsyncLimiterClass, {
     AsyncCurrentLimiter,
 } from "https://esm.sh/@masx200/async-task-current-limiter@2.1.0/";
-import {join, resolve}from "https://deno.land/std@0.188.0/path/mod.ts";
+import { join, resolve } from "https://deno.land/std@0.188.0/path/mod.ts";
 
 import { BinaryHeap } from "https://deno.land/std@0.188.0/collections/binary_heap.ts";
 import { Deque } from "https://esm.sh/@datastructures-js/deque@1.0.4/";
