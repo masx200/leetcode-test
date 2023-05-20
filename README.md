@@ -2600,4 +2600,6 @@ https://leetcode.cn/problems/powerful-integers
 
 https://leetcode.cn/problems/maximum-sum-bst-in-binary-tree
 
+https://leetcode.cn/problems/building-h2o
+
 </details>
