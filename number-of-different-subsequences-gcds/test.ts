@@ -1,4 +1,5 @@
 import { assertEquals } from "asserts";
+
 import countDifferentSubsequenceGCDs from "./index.ts";
 
 Deno.test("number-of-different-subsequences-gcds", () => {

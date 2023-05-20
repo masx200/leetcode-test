@@ -1,5 +1,6 @@
-import ZigzagIterator from "./index.ts";
 import { assertEquals } from "asserts";
+
+import ZigzagIterator from "./index.ts";
 
 Deno.test("zigzag-iterator", () => {
     const v1 = [1, 2],

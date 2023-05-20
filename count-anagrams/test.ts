@@ -1,4 +1,5 @@
 import { assertEquals } from "asserts";
+
 import countAnagrams from "./index.ts";
 
 Deno.test("count-anagrams", () => {

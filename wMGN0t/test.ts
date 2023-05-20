@@ -1,4 +1,5 @@
 import { assertEquals } from "asserts";
+
 import storedEnergy from "./index.ts";
 
 Deno.test("storedEnergy", () => {

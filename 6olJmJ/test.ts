@@ -1,4 +1,5 @@
 import { assertEquals } from "asserts";
+
 import explorationSupply from "./index.ts";
 
 Deno.test("explorationSupply", () => {

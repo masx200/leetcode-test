@@ -1,7 +1,9 @@
+import { assertEquals } from "asserts";
+
 import { ArrayToCircularLinkedList } from "./ArrayToCircularLinkedList.ts";
 import { CircularLinkedListToArray } from "./CircularLinkedListToArray.ts";
-import { assertEquals } from "asserts";
 import splitCircularLinkedList from "./index.ts";
+
 Deno.test("split-a-circular-linked-list", () => {
     const input = [1, 5, 7];
     const output = [[1, 5], [7]];

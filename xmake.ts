@@ -1,7 +1,7 @@
-import { ensureDir, join, path, resolve } from "./deps.ts";
-
 import { assertEquals } from "asserts";
 import parse from "npm:@masx200/mini-cli-args-parser@1.0.5";
+
+import { ensureDir, join, path, resolve } from "./deps.ts";
 import { retry } from "./retry.ts";
 
 async function* findFilesRecursive(

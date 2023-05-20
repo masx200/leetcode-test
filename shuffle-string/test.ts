@@ -1,4 +1,5 @@
 import { assertEquals } from "asserts";
+
 import restoreString from "./index.ts";
 
 Deno.test("shuffle-string", () => {

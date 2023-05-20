@@ -1,4 +1,5 @@
 import { assertEquals } from "asserts";
+
 import makeStringSorted from "./index.ts";
 
 Deno.test("minimum-number-of-operations-to-make-string-sorted", () => {

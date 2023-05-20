@@ -1,15 +1,13 @@
+import memoize from "https://cdn.skypack.dev/lodash@4.17.21/memoize?dts";
+import { BinaryHeap } from "https://deno.land/std@0.188.0/collections/binary_heap.ts";
+import { RedBlackNode } from "https://deno.land/std@0.188.0/collections/red_black_node.ts";
+import { ensureDir } from "https://deno.land/std@0.188.0/fs/mod.ts";
 import * as path from "https://deno.land/std@0.188.0/path/mod.ts";
-
+import { Deque } from "https://esm.sh/@datastructures-js/deque@1.0.4/";
 import AsyncLimiterClass, {
     AsyncCurrentLimiter,
 } from "https://esm.sh/@masx200/async-task-current-limiter@2.1.0/";
-import { join, resolve } from "https://deno.land/std@0.188.0/path/mod.ts";
 
-import { BinaryHeap } from "https://deno.land/std@0.188.0/collections/binary_heap.ts";
-import { Deque } from "https://esm.sh/@datastructures-js/deque@1.0.4/";
-import { RedBlackNode } from "https://deno.land/std@0.188.0/collections/red_black_node.ts";
-import { ensureDir } from "https://deno.land/std@0.188.0/fs/mod.ts";
-import memoize from "https://cdn.skypack.dev/lodash@4.17.21/memoize?dts";
 import { retry } from "./retry.ts";
 
 export { ensureDir, join, path, resolve, retry };

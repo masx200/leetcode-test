@@ -1,4 +1,5 @@
 import { assertEquals } from "asserts";
+
 import productQueries from "./index.ts";
 
 Deno.test("range-product-queries-of-powers", () => {

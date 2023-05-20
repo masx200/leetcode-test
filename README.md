@@ -2598,4 +2598,6 @@ https://leetcode.cn/problems/print-zero-even-odd/
 
 https://leetcode.cn/problems/powerful-integers
 
+https://leetcode.cn/problems/maximum-sum-bst-in-binary-tree
+
 </details>

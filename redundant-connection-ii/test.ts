@@ -1,4 +1,5 @@
 import { assertEquals } from "asserts";
+
 import findRedundantDirectedConnection from "./index.ts";
 
 Deno.test("redundant-connection-ii", () => {

@@ -1,6 +1,8 @@
-import { RunCommandShell } from "./xmake.ts";
-import parse from "npm:@masx200/mini-cli-args-parser@1.0.5";
 import { walk } from "https://deno.land/std@0.188.0/fs/walk.ts";
+import parse from "npm:@masx200/mini-cli-args-parser@1.0.5";
+
+import { RunCommandShell } from "./xmake.ts";
+
 if (import.meta.main) {
     await start();
 }
