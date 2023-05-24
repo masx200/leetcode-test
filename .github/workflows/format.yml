@@ -1,9 +1,9 @@
-name: udd-update-dependencies
+name: format
 
 on:
-    workflow_dispatch:
-    schedule:
-        - cron: "42 19 * * *"
+    #    workflow_dispatch:
+    #    schedule:
+    #        - cron: "42 19 * * *"
     push:
         branches: ["master"]
 jobs:
@@ -73,9 +73,9 @@ jobs:
               continue-on-error: true
               run: java --add-opens=java.base/java.lang=ALL-UNNAMED -jar "./temp/ktlint/ktlint.jar" -F
 
-            - name: Update dependencies
+            #            - name: Update dependencies
 
-              run: deno run -A https://deno.land/x/udd/main.ts deps.ts *.ts '*/*.ts'  '*.json'
+            #              run: deno run -A https://deno.land/x/udd/main.ts deps.ts *.ts '*/*.ts'  '*.json'
             #             - name: Use Node.js ${{ matrix.node-version }}
             #               uses: actions/setup-node@v3
             #               with:
