@@ -34,7 +34,7 @@ concept iterable = requires(T& t)
 };
 
 template <class T, typename Y>
-concept equalable = requires(T& t, Y& y, size_t i)
+concept equalable = requires(T& t, Y& y)
 {
     {
         *t.begin() == *y.begin()
