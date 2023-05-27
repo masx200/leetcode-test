@@ -24,9 +24,12 @@ concept sizable = requires(T& t)
         } -> std::same_as<size_t>;
 };
 template <class T>
-concept iterable = requires(T& t)
+concept iterable =std::ranges::input_range<T>&& requires(T& t)
 {
-    ++t.begin();
+    { std::begin(t) };
+    { std::end(t) } ;
+    { ++std::begin(t) };
+
     {
         t.begin() != t.end()
 
@@ -41,7 +44,7 @@ concept equalable = requires(T& t, Y& y)
         } -> std::same_as<bool>;
 };
 template <typename T, typename Y>
-requires sizable<T> and sizable<Y> and equalable<T, Y> and iterable<T> and iterable<Y>
+    requires sizable<T> and sizable<Y> and equalable<T, Y> and iterable<T> and iterable<Y>
 auto assertContentEquals(T& left, Y& right)
 {
 
@@ -86,7 +89,7 @@ TEST(split_a_circular_linked_list, test1)
 #ifdef __TEST__
     ListNodeInspector inspector;
 #endif
-    // using std::ranges::views::transform;
+  
     auto input = vector<int> { 1, 5, 7 };
     auto output = vector<vector<int>> { { 1, 5 }, { 7 } };
     auto* list = ArrayToCircularLinkedList(input);
@@ -109,7 +112,7 @@ TEST(split_a_circular_linked_list, test2)
 #ifdef __TEST__
     ListNodeInspector inspector;
 #endif
-    // using std::ranges::views::transform;
+   
     auto input = vector<int> { 2, 6, 1, 5 };
     auto output = vector<vector<int>> { { 2, 6 }, { 1, 5 } };
     auto* list = ArrayToCircularLinkedList(input);

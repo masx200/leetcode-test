@@ -17,12 +17,17 @@ concept sizable = requires(T& t)
         t.size()
         } -> std::same_as<size_t>;
 };
+
 template <class T>
-concept iterable = requires(T& t)
+concept iterable =std::ranges::input_range<T>&& requires(T& t)
 {
-    ++t.begin();
+    { std::begin(t) };
+    { std::end(t) } ;
+    { ++std::begin(t) };
+
     {
         t.begin() != t.end()
+
         } -> std::same_as<bool>;
 };
 
