@@ -19,10 +19,10 @@ concept sizable = requires(T& t)
 };
 
 template <class T>
-concept iterable =std::ranges::input_range<T>&& requires(T& t)
+concept iterable = std::ranges::input_range<T> && requires(T& t)
 {
     { std::begin(t) };
-    { std::end(t) } ;
+    { std::end(t) };
     { ++std::begin(t) };
 
     {
