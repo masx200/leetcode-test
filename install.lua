@@ -45,12 +45,17 @@ local function checkfilesexists(listfile)
     return false
 end
 function main()
-
+local homepath=os.getenv('HOME')
+if not homepath then
+homepath=os.getenv('USERPROFILE')
+ end
+ 
+ local downloadpath=path.join(homepath,"cache",'downloads')
     local name = "leetcode-treenode-cpp"
     local version = "1.1.9"
     local folder = name .. "-" .. version
-    local archivefile = path.join('downloads', folder .. '.tar.gz')
-    local listfile = path.join('downloads', folder .. '.list')
+    local archivefile = path.join(downloadpath, folder .. '.tar.gz')
+    local listfile = path.join(downloadpath, folder .. '.list')
     if checkfilesexists(listfile) then return end
     if not os.exists(archivefile) then
         local url = 'https://ghproxy.com/https://github.com/masx200/' .. name ..
@@ -58,14 +63,14 @@ function main()
         print('download url:' .. url .. " to file:" .. archivefile)
         download(url, archivefile)
     end
-    local outputdir = path.join('downloads', folder)
+    local outputdir = path.join(downloadpath, folder)
     if os.exists(outputdir) then
         print("remove folder:" .. outputdir)
         os.rmdir(outputdir)
     end
     print('extract file:' .. archivefile .. " to folder:" .. outputdir)
     extract(archivefile, outputdir)
-    local src = path.join('downloads', folder, folder)
+    local src = path.join(downloadpath, folder, folder)
     if os.exists(name) then
         print("remove folder:" .. name)
         os.rmdir(name)
