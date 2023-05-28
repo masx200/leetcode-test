@@ -1,7 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xmlns="http://maven.apache.org/POM/4.0.0"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8" ?>
+<project
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://maven.apache.org/POM/4.0.0"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>leetcode-test</artifactId>
@@ -87,26 +89,36 @@
                         </goals>
                         <configuration>
                             <sourceDirs>
-                                <sourceDir>reverse-nodes-in-even-length-groups</sourceDir>
-                                <sourceDir>number-of-distinct-averages</sourceDir>
+                                <sourceDir
+                                >reverse-nodes-in-even-length-groups</sourceDir>
+                                <sourceDir
+                                >number-of-distinct-averages</sourceDir>
                                 <source>letter-case-permutation</source>
                                 <source>operations-lcci</source>
-                                <sourceDir>binary-search-tree-iterator</sourceDir>
-                                <sourceDir>construct-binary-search-tree-from-preorder-traversal</sourceDir>
+                                <sourceDir
+                                >binary-search-tree-iterator</sourceDir>
+                                <sourceDir
+                                >construct-binary-search-tree-from-preorder-traversal</sourceDir>
                                 <source>er-cha-shu-ran-se-UGC</source>
-                                <source>er-cha-sou-suo-shu-de-di-kda-jie-dian-lcof</source>
+                                <source
+                                >er-cha-sou-suo-shu-de-di-kda-jie-dian-lcof</source>
                                 <source>utils</source>
-                                <source>minimum-number-of-moves-to-seat-everyone</source>
+                                <source
+                                >minimum-number-of-moves-to-seat-everyone</source>
                                 <source>add-two-integers</source>
                                 <source>design-skiplist</source>
-                                <source>insert-into-a-binary-search-tree</source>
+                                <source
+                                >insert-into-a-binary-search-tree</source>
                                 <source>min-cost-to-connect-all-points</source>
                                 <source>possible-bipartition</source>
-                                <source>reveal-cards-in-increasing-order</source>
-                                <source>serialize-and-deserialize-binary-tree</source>
+                                <source
+                                >reveal-cards-in-increasing-order</source>
+                                <source
+                                >serialize-and-deserialize-binary-tree</source>
                                 <source>three-in-one-lcci</source>
                                 <source>count-ways-to-build-good-string</source>
-                                <sourceDir>split-message-based-on-limit</sourceDir>
+                                <sourceDir
+                                >split-message-based-on-limit</sourceDir>
                                 <source>remove-vowels-from-a-string</source>
 
                                 <sourceDir>zigzag-iterator</sourceDir>
