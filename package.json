@@ -10,7 +10,7 @@
     "author": "masx200 <34191203+masx200@users.noreply.github.com>",
     "license": "MIT",
     "description": "#### 介绍",
-    "scripts": { "format": "prettier --w */*/*.yml */*.yml *.xml" },
+    "scripts": { "format": "./node_modules/.bin/prettier --w */*/*.yml */*.yml *.xml" },
     "keywords": [],
     "devDependencies": {
         "prettier": "^2.8.8",
