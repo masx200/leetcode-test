@@ -76,14 +76,14 @@ jobs:
             #            - name: Update dependencies
 
             #              run: deno run -A https://deno.land/x/udd/main.ts deps.ts *.ts '*/*.ts'  '*.json'
-            #             - name: Use Node.js ${{ matrix.node-version }}
-            #               uses: actions/setup-node@v3
-            #               with:
-            #                   node-version: ${{ matrix.node-version }}
-            #             - run: |
-            #                   npm i -g cnpm
-            #                   npx cnpm  i
-            #                   npx -y prettier --w */*/*.yml */*.yml
+            - name: Use Node.js ${{ matrix.node-version }}
+              uses: actions/setup-node@v3
+              with:
+                               node-version: ${{ matrix.node-version }}
+            - run: |
+                               npm i -g cnpm
+                               npx cnpm  i
+                               npx -y prettier --w */*/*.yml */*.yml *.xml
             - name: Create Pull Request
               uses: peter-evans/create-pull-request@v3
               id: pr
