@@ -45,12 +45,10 @@ local function checkfilesexists(listfile)
     return false
 end
 function main()
-local homepath=os.getenv('HOME')
-if not homepath then
-homepath=os.getenv('USERPROFILE')
- end
- 
- local downloadpath=path.join(homepath,"cache",'downloads')
+    local homepath = os.getenv('HOME')
+    if not homepath then homepath = os.getenv('USERPROFILE') end
+
+    local downloadpath = path.join(homepath, "cache", 'downloads')
     local name = "leetcode-treenode-cpp"
     local version = "1.1.9"
     local folder = name .. "-" .. version
