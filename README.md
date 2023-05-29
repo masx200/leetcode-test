@@ -111,6 +111,12 @@ import { climbing_stairs_bigint } from "https://deno.land/x/masx200_leetcode_tes
 import climbing_stairs from "https://deno.land/x/masx200_leetcode_test@7.0.0/climbing-stairs/index.ts";
 ```
 
+`deno` 要设定`--import-map`参数
+
+```
+--import-map https://denopkg.com/masx200/leetcode-test@12.3.0/import_map.json
+```
+
 ### Golang
 
 ```bash
