@@ -65,7 +65,7 @@ jobs:
                   actions-cache-folder: ".xmake-cache"
 
             - run: deno task cache
-            - run: xmake l install.lua
+            - run: xmake lua install.lua
             - run: deno run -A xmake.ts --mode=test --group=test --executable=C:\hostedtoolcache\windows\xmake\dev\x64\xmake.exe
             - run: C:\hostedtoolcache\windows\xmake\dev\x64\xmake.exe clean  -a
             - run: C:\hostedtoolcache\windows\xmake\dev\x64\xmake.exe f   -y -v --project=. "--file=./xmake.lua"
