@@ -61,14 +61,14 @@ function main()
         print('download url:' .. url .. " to file:" .. archivefile)
         download(url, archivefile)
     end
-    local outputdir = path.join(downloadpath, folder)
+    local outputdir = path.join('downloads', folder)
     if os.exists(outputdir) then
         print("remove folder:" .. outputdir)
         os.rmdir(outputdir)
     end
     print('extract file:' .. archivefile .. " to folder:" .. outputdir)
     extract(archivefile, outputdir)
-    local src = path.join(downloadpath, folder, folder)
+    local src = path.join(outputdir, folder)
     if os.exists(name) then
         print("remove folder:" .. name)
         os.rmdir(name)
@@ -84,4 +84,6 @@ function main()
     end)
     installedlistfile:close()
     print("save installedlistfile to " .. listfile)
+    print("remove folder:" .. 'downloads')
+    os.rmdir('downloads')
 end
