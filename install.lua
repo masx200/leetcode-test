@@ -52,12 +52,12 @@ function main()
     local name = "leetcode-treenode-cpp"
     local version = "1.1.9"
     local folder = name .. "-" .. version
-    local archivefile = path.join(downloadpath, folder .. '.tar.gz')
+    local archivefile = path.join(downloadpath, folder .. '.zip')
     local listfile = path.join(downloadpath, folder .. '.list')
     if checkfilesexists(listfile) then return end
     if not os.exists(archivefile) then
         local url = 'https://ghproxy.com/https://github.com/masx200/' .. name ..
-                        '/archive/' .. version .. '.tar.gz'
+                        '/archive/' .. version .. '.zip'
         print('download url:' .. url .. " to file:" .. archivefile)
         download(url, archivefile)
     end
