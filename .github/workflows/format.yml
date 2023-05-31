@@ -88,10 +88,10 @@ jobs:
               uses: peter-evans/create-pull-request@v3
               id: pr
               with:
-                  commit-message: "Update dependencies"
-                  title: Update dependencies
+                  commit-message: "format"
+                  title: format
                   body: >
-                      Dependencies updated by [udd](https://github.com/hayd/deno-udd).
+                      format
                   branch: deno-dependency-updates
                   author: GitHub <noreply@github.com>
                   delete-branch: true
