@@ -45,6 +45,7 @@ local function checkfilesexists(listfile)
     return false
 end
 function main()
+    print("download dependences")
     local homepath = os.getenv('HOME')
     if not homepath then homepath = os.getenv('USERPROFILE') end
 
