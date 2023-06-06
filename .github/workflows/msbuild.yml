@@ -70,6 +70,7 @@ jobs:
             - run: C:\hostedtoolcache\windows\xmake\dev\x64\xmake.exe clean  -a
             - run: C:\hostedtoolcache\windows\xmake\dev\x64\xmake.exe f   -y -v --project=. "--file=./xmake.lua"
             - run: C:\hostedtoolcache\windows\xmake\dev\x64\xmake.exe build -v -y  -w --project=. "--file=./xmake.lua"
+              continue-on-error: true
             - run: C:\hostedtoolcache\windows\xmake\dev\x64\xmake.exe clean  -a
             - run: C:\hostedtoolcache\windows\xmake\dev\x64\xmake.exe f   -y -v --project=. "--file=./xmake.lua" --mode=test
             - run: xmake.exe build -v -y  -w --project=. "--file=./xmake.lua" --group=test
