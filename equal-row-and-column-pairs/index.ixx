@@ -10,9 +10,10 @@ using namespace std;
 namespace leetcode_test::equal_row_and_column_pairs {
 
 export class Solution {
-  public:
-    int equalPairs(vector<vector<int>> &grid) {
-        auto toString = [](auto const &vec) {
+public:
+    int equalPairs(vector<vector<int>>& grid)
+    {
+        auto toString = [](auto const& vec) {
             stringstream s;
             for (auto i : vec) {
                 s << to_string(i) + "#";
