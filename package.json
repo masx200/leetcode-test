@@ -11,7 +11,7 @@
     "license": "MIT",
     "description": "#### 介绍",
     "scripts": {
-        "format": "./node_modules/.bin/prettier --w */*/*.yml */*.yml *.xml"
+        "format": "./node_modules/.bin/prettier --w  *.xml"
     },
     "keywords": [],
     "devDependencies": {
