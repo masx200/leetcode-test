@@ -2608,4 +2608,6 @@ https://leetcode.cn/problems/maximum-sum-bst-in-binary-tree
 
 https://leetcode.cn/problems/building-h2o
 
+https://leetcode.cn/problems/equal-row-and-column-pairs
+
 </details>
