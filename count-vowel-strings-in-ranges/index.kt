@@ -15,7 +15,7 @@ class Solution {
         return IntArray(queries.size) {
             val li = queries[it][0]
             val ri = queries[it][1]
-            if (li == ri) booleanToInt(isVowelString(words[li])) else prefixs[ri] - if (li == 0) 0 else prefixs[li - 1]
+            if (li == ri) booleanToInt(isVowelString(words[li])) else prefixs[ri] - (if (li == 0) 0 else prefixs[li - 1])
         }
     }
     private val vowels = hashSetOf('a', 'e', 'i', 'o', 'u')
