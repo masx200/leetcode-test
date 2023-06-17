@@ -2,19 +2,14 @@ package com.github.masx200.leetcode_test.count_vowel_strings_in_ranges
 
 class Solution {
     fun vowelStrings(words: Array<String>, queries: Array<IntArray>): IntArray {
-
-
         val prefixs = IntArray(words.size) { 0 }
 
         words.forEachIndexed { i, s ->
             if (i == 0) {
-
                 prefixs[i] = booleanToInt(isVowelString(s))
             } else {
                 prefixs[i] = prefixs[i - 1] + booleanToInt(isVowelString(s))
-
             }
-
         }
         return IntArray(queries.size) {
             val li = queries[it][0]
