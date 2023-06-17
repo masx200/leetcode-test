@@ -92,7 +92,7 @@ jobs:
                   title: format
                   body: >
                       format
-                  branch: deno-dependency-updates
+                  branch: format-updates
                   author: GitHub <noreply@github.com>
                   delete-branch: true
             - name: Retrieve commit sha
