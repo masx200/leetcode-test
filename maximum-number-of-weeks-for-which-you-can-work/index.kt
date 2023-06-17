@@ -9,7 +9,5 @@ class Solution {
             max = Math.max(max, it.toLong())
         }
         return if (max * 2 > sum) (sum - max) * 2 + 1 else sum
-
-
     }
 }
