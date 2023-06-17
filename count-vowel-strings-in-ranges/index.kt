@@ -17,9 +17,8 @@ class Solution {
             if (li == ri) booleanToInt(isVowelString(words[li])) else prefixs[ri] - if (li == 0) 0 else prefixs[li - 1]
         }
     }
- private val vowels = hashSetOf('a', 'e', 'i', 'o', 'u')
+    private val vowels = hashSetOf('a', 'e', 'i', 'o', 'u')
     private fun isVowelString(s: String): Boolean {
-       
         return s.isNotEmpty() && vowels.contains(s[0]) && vowels.contains(s.last())
     }
 
