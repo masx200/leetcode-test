@@ -14,9 +14,9 @@ class ZigzagIterator(v1: List<Int>, v2: List<Int>) {
     }
 }
 
-private fun ZigzagGenerator(v1: List<Int>, v2: List<Int>): Sequence<Int> = sequence<Int> {
+private fun ZigzagGenerator(v1: List<Int>, v2: List<Int>): Sequence<Int> = sequence {
     if (v1.size < v2.size) {
-        for (i in 0 until v1.size) {
+        for (i in v1.indices) {
             yield(v1[i])
 
             yield(v2[i])
