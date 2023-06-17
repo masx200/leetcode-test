@@ -2612,4 +2612,6 @@ https://leetcode.cn/problems/equal-row-and-column-pairs
 
 https://leetcode.cn/problems/count-vowel-strings-in-ranges
 
+https://leetcode.cn/problems/maximum-number-of-weeks-for-which-you-can-work
+
 </details>
