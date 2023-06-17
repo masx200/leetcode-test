@@ -2610,4 +2610,6 @@ https://leetcode.cn/problems/building-h2o
 
 https://leetcode.cn/problems/equal-row-and-column-pairs
 
+https://leetcode.cn/problems/count-vowel-strings-in-ranges
+
 </details>
