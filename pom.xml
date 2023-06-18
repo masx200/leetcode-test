@@ -14,12 +14,14 @@
     <name>leetcode-test</name>
 
     <properties>
+    <kotlin.compiler.languageVersion>1.9</kotlin.compiler.languageVersion>
         <dokka.version>1.7.20</dokka.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <kotlin.code.style>official</kotlin.code.style>
         <kotlin.compiler.jvmTarget>17</kotlin.compiler.jvmTarget>
         <kotlin.version>1.8.0</kotlin.version>
         <serialization.version>1.4.0</serialization.version>
+        <kotlin.compiler.incremental>true</kotlin.compiler.incremental>
     </properties>
 
     <repositories>
