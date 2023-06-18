@@ -3,9 +3,8 @@
   <component name="AdditionalModuleElements">
     <content url="file://$MODULE_DIR$" dumb="true">
       <sourceFolder url="file://$MODULE_DIR$/count-vowel-strings-in-ranges" isTestSource="false" packagePrefix="com.github.masx200.leetcode_test.count_vowel_strings_in_ranges" />
-      <sourceFolder url="file://$MODULE_DIR$/test" isTestSource="true" packagePrefix="com.github.masx200.leetcode_test" />
-      <sourceFolder url="file://$MODULE_DIR$/zigzag-iterator" isTestSource="false" packagePrefix="com.github.masx200.leetcode_test.zigzag_iterator" />
       <sourceFolder url="file://$MODULE_DIR$/maximum-number-of-weeks-for-which-you-can-work" isTestSource="false" packagePrefix="com.github.masx200.leetcode_test.maximum_number_of_weeks_for_which_you_can_work" />
+      <sourceFolder url="file://$MODULE_DIR$/test" isTestSource="true" packagePrefix="com.github.masx200.leetcode_test" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
   </component>
@@ -15,12 +14,15 @@
         <option value="add-two-integers" />
         <option value="binary-search-tree-iterator" />
         <option value="construct-binary-search-tree-from-preorder-traversal" />
+        <option value="construct-quad-tree" />
+        <option value="count-vowel-strings-in-ranges" />
         <option value="count-ways-to-build-good-string" />
         <option value="design-skiplist" />
         <option value="er-cha-shu-ran-se-UGC" />
         <option value="er-cha-sou-suo-shu-de-di-kda-jie-dian-lcof" />
         <option value="insert-into-a-binary-search-tree" />
         <option value="letter-case-permutation" />
+        <option value="maximum-number-of-weeks-for-which-you-can-work" />
         <option value="min-cost-to-connect-all-points" />
         <option value="minimum-number-of-moves-to-seat-everyone" />
         <option value="number-of-distinct-averages" />
