@@ -2614,4 +2614,6 @@ https://leetcode.cn/problems/count-vowel-strings-in-ranges
 
 https://leetcode.cn/problems/maximum-number-of-weeks-for-which-you-can-work
 
+https://leetcode.cn/problems/subarray-sum-equals-k
+
 </details>
