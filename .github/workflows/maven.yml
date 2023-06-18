@@ -22,5 +22,5 @@ jobs:
               run: mvn compile --file pom.xml
             - name: test with Maven
               run: mvn test --file pom.xml
-            - name: install with maven
-              run: mvn  install -DskipTests
+            - name: package with maven
+              run: mvn  package -DskipTests
