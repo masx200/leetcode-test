@@ -18,6 +18,8 @@ jobs:
                   java-version: "19"
                   distribution: "temurin"
                   cache: maven
+            - name: compile with Maven
+              run: mvn compile --file pom.xml
             - name: test with Maven
               run: mvn test --file pom.xml
             - name: install with maven
