@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <project
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns="http://maven.apache.org/POM/4.0.0"
@@ -91,29 +91,39 @@
                             <sourceDirs>
                                 <source>add-two-integers</source>
                                 <source>binary-search-tree-iterator</source>
-                                <source>construct-binary-search-tree-from-preorder-traversal</source>
+                                <source
+                                >construct-binary-search-tree-from-preorder-traversal</source>
                                 <source>construct-quad-tree</source>
                                 <source>construct-quad-tree</source>
                                 <source>count-vowel-strings-in-ranges</source>
                                 <source>count-ways-to-build-good-string</source>
                                 <source>design-skiplist</source>
                                 <source>er-cha-shu-ran-se-UGC</source>
-                                <source>er-cha-sou-suo-shu-de-di-kda-jie-dian-lcof</source>
-                                <source>insert-into-a-binary-search-tree</source>
-                                <source>insert-into-a-binary-search-tree</source>
+                                <source
+                                >er-cha-sou-suo-shu-de-di-kda-jie-dian-lcof</source>
+                                <source
+                                >insert-into-a-binary-search-tree</source>
+                                <source
+                                >insert-into-a-binary-search-tree</source>
                                 <source>letter-case-permutation</source>
-                                <source>maximum-number-of-weeks-for-which-you-can-work</source>
+                                <source
+                                >maximum-number-of-weeks-for-which-you-can-work</source>
                                 <source>min-cost-to-connect-all-points</source>
-                                <source>minimum-number-of-moves-to-seat-everyone</source>
+                                <source
+                                >minimum-number-of-moves-to-seat-everyone</source>
                                 <source>number-of-distinct-averages</source>
                                 <source>operations-lcci</source>
                                 <source>possible-bipartition</source>
                                 <source>possible-bipartition</source>
                                 <source>remove-vowels-from-a-string</source>
-                                <source>reveal-cards-in-increasing-order</source>
-                                <source>reverse-nodes-in-even-length-groups</source>
-                                <source>reverse-nodes-in-even-length-groups</source>
-                                <source>serialize-and-deserialize-binary-tree</source>
+                                <source
+                                >reveal-cards-in-increasing-order</source>
+                                <source
+                                >reverse-nodes-in-even-length-groups</source>
+                                <source
+                                >reverse-nodes-in-even-length-groups</source>
+                                <source
+                                >serialize-and-deserialize-binary-tree</source>
                                 <source>split-message-based-on-limit</source>
 
                                 <source>three-in-one-lcci</source>
