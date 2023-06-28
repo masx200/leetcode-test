@@ -32,7 +32,7 @@ require (
 )
 
 require (
-	github.com/datreeio/datree v1.9.6
+	github.com/datreeio/datree v1.9.7
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/google/go-cmp v0.5.9 // indirect
 	github.com/magiconair/properties v1.8.7
