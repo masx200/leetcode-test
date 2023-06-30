@@ -2,7 +2,7 @@ module github.com/masx200/leetcode-test
 
 go 1.18
 
-require gotest.tools/v3 v3.4.0
+require gotest.tools/v3 v3.5.0
 
 require (
 	github.com/akrennmair/slice v0.0.0-20220105203817-49445747ab81
