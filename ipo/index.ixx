@@ -1,15 +1,15 @@
 module;
+#include <algorithm>
 #include <functional>
 #include <queue>
 #include <utility>
 #include <vector>
-#include <algorithm>
 export module leetcode_test.ipo.Solution;
 using std::less;
 using std::pair;
 using std::priority_queue;
-using std::vector;
 using std::sort;
+using std::vector;
 namespace leetcode_test::ipo {
 export class Solution {
 public:
