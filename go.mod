@@ -38,6 +38,6 @@ require (
 	github.com/magiconair/properties v1.8.7
 	github.com/masx200/leetcode-TreeNode-go v1.0.5
 	github.com/pmezard/go-difflib v1.0.0 // indirect
-	github.com/webx-top/com v0.9.8
+	github.com/webx-top/com v1.0.1
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
