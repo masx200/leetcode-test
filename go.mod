@@ -1,6 +1,6 @@
 module github.com/masx200/leetcode-test
 
-go 1.21.3
+go 1.21
 
 require gotest.tools/v3 v3.5.1
 
