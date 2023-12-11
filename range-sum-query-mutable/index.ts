@@ -27,12 +27,12 @@ export function build(
         return;
     }
     const mid = Math.floor((start + end) / 2);
-    pushdown(start, end, node);
+    pushdown(node);
     if (node.left) build(node.left, start, mid, nums);
     if (node.right) build(node.right, mid + 1, end, nums);
     pushup(node);
 }
-function pushdown(start: number, end: number, node: TreeNode) {
+function pushdown(node: TreeNode) {
     if (!node.left) node.left = new TreeNode();
     if (!node.right) node.right = new TreeNode();
 }
