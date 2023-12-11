@@ -33,8 +33,8 @@ export function build(
     pushup(node);
 }
 function pushdown(start: number, end: number, node: TreeNode) {
-    node.left = new TreeNode();
-    node.right = new TreeNode();
+    if (!node.left) node.left = new TreeNode();
+    if (!node.right) node.right = new TreeNode();
 }
 
 export function change(
