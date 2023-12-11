@@ -28,6 +28,9 @@ export function build(
     }
     const mid = Math.floor((start + end) / 2);
     pushdown(node);
+    if (!node.left || !node.right) {
+        throw Error("node.left and node.right empty");
+    }
     if (node.left) build(node.left, start, mid, nums);
     if (node.right) build(node.right, mid + 1, end, nums);
     pushup(node);
