@@ -31,16 +31,16 @@ export default class RangeModule {
             return node.value > 0;
         }
     }
+    /** 范围模块树结构的根节点 */
     #root: SegmentTree;
     constructor(
         public left: number = Number.MIN_SAFE_INTEGER,
         public right: number = Number.MAX_SAFE_INTEGER,
     ) {
-        this.#root = /** 范围模块树结构的根节点 */
-            SegmentTree(
-                left,
-                right,
-            );
+        this.#root = SegmentTree(
+            left,
+            right,
+        );
     }
     /**添加指定范围的方法 */
     addRange(left: number, right: number): void {
