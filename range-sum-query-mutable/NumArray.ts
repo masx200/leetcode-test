@@ -1,7 +1,7 @@
 export function lowbit(x: number) {
     return x & -x;
 }
-const add = Symbol();
+// const add = Symbol();
 export default class NumArray {
     #tree: number[];
     #nums: number[];
@@ -9,10 +9,10 @@ export default class NumArray {
         this.#tree = new Array(nums.length + 1).fill(0);
         this.#nums = nums;
         for (let i = 0; i < nums.length; i++) {
-            this[add](i + 1, nums[i]);
+            this.#add(i + 1, nums[i]);
         }
     }
-    [add](index: number, val: number) {
+    #add(index: number, val: number) {
         while (index < this.#tree.length) {
             this.#tree[index] += val;
             index += lowbit(index);
@@ -20,7 +20,7 @@ export default class NumArray {
     }
 
     update(index: number, val: number): void {
-        this[add](index + 1, val - this.#nums[index]);
+        this.#add(index + 1, val - this.#nums[index]);
         this.#nums[index] = val;
     }
 
