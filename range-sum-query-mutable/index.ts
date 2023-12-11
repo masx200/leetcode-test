@@ -20,25 +20,29 @@ export function build(
     node: TreeNode,
     start: number,
     end: number,
-    nums: number[],
+    nums: number[]
 ) {
     if (start === end) {
         node.val = nums[start];
         return;
     }
     const mid = Math.floor((start + end) / 2);
+    pushdown(start, end, node);
+    if (node.left) build(node.left, start, mid, nums);
+    if (node.right) build(node.right, mid + 1, end, nums);
+    pushup(node);
+}
+function pushdown(start: number, end: number, node: TreeNode) {
     node.left = new TreeNode();
     node.right = new TreeNode();
-    build(node.left, start, mid, nums);
-    build(node.right, mid + 1, end, nums);
-    node.val = node.left.val + node.right.val;
 }
+
 export function change(
     index: number,
     val: number,
     node: TreeNode,
     start: number,
-    end: number,
+    end: number
 ): void {
     if (start === end) {
         node.val = val;
@@ -53,14 +57,18 @@ export function change(
     } else {
         change(index, val, node.right, mid + 1, end);
     }
-    node.val = node.left.val + node.right.val;
+    pushup(node);
 }
+function pushup(node: TreeNode) {
+    node.val = (node.left?.val ?? 0) + (node.right?.val ?? 0);
+}
+
 export function query(
     left: number,
     right: number,
     node: TreeNode,
     start: number,
-    end: number,
+    end: number
 ): number {
     if (start === left && right === end) {
         return node.val;
