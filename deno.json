@@ -30,11 +30,7 @@
     },
     "fmt": {
         "files": {
-            "exclude": [
-                "target",
-                "x64",
-                "*.cxx.ifc.d.json"
-            ]
+            "exclude": ["target", "x64", "*.cxx.ifc.d.json"]
         },
         "options": {
             "indentWidth": 4,
@@ -43,9 +39,7 @@
     },
     "test": {
         "files": {
-            "exclude": [
-                "target"
-            ]
+            "exclude": ["target"]
         }
     }
 }

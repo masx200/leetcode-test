@@ -2,7 +2,6 @@
     "type": "module",
     "name": "@masx200/leetcode-test",
     "version": "10.10.0",
-
     "repository": {
         "type": "git",
         "url": "https://github.com/masx200/leetcode-test"
@@ -11,7 +10,7 @@
     "license": "MIT",
     "description": "#### 介绍",
     "scripts": {
-        "format": "prettier --w  *.xml"
+        "format": "prettier --w  *.xml *.ts *.json  *.md"
     },
     "keywords": [],
     "devDependencies": {

@@ -1,11 +1,5 @@
 {
     "style": "WebKit",
-    "filter": [
-        "*.cpp",
-
-        "*.ixx"
-    ],
-    "dirs": [
-        "./"
-    ]
+    "filter": ["*.cpp", "*.ixx"],
+    "dirs": ["./"]
 }

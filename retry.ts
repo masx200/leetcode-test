@@ -15,7 +15,7 @@ export async function retry<T>(
         retryOnError?:
             | ((error: any) => Promise<boolean>)
             | ((error: any) => boolean);
-    },
+    }
 ) {
     const retryOnError = opts?.retryOnError ?? (() => true);
     const options: Required<RetryOptions> = {
@@ -34,7 +34,7 @@ export async function retry<T>(
         try {
             return await fn();
         } catch (err) {
-            if (!await retryOnError(err)) {
+            if (!(await retryOnError(err))) {
                 throw err;
             }
 

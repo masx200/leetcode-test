@@ -7,11 +7,7 @@ import {
 } from "./deps.ts";
 import { split_by_count } from "./utils/split_by_count.ts";
 
-function searchFilesNames({
-    skip,
-}: {
-    skip?: RegExp | RegExp[];
-}) {
+function searchFilesNames({ skip }: { skip?: RegExp | RegExp[] }) {
     const entry_iter = walk(".", {
         includeFiles: true,
         includeDirs: false,
@@ -26,7 +22,7 @@ if (import.meta.main) {
 
 async function parallel_cache(
     entry_iter: AsyncIterableIterator<WalkEntry>,
-    limiter: AsyncCurrentLimiter,
+    limiter: AsyncCurrentLimiter
 ) {
     const files: string[] = [];
 
@@ -38,21 +34,24 @@ async function parallel_cache(
 
     await Promise.all(
         entries.map((stack) =>
-            limiter.run(function (stack: string[]) {
-                return runDenocache(stack);
-            }.bind(null, stack))
-        ),
+            limiter.run(
+                function (stack: string[]) {
+                    return runDenocache(stack);
+                }.bind(null, stack)
+            )
+        )
     );
 }
 async function start() {
     const limiter = new AsyncLimiterClass(1);
     const args = parse(Deno.args);
     console.log(args);
-    const skip = typeof args.skip === "string"
-        ? new RegExp(String(args.skip))
-        : Array.isArray(args.skip)
-        ? args.skip.map((s: string | RegExp) => new RegExp(s))
-        : undefined;
+    const skip =
+        typeof args.skip === "string"
+            ? new RegExp(String(args.skip))
+            : Array.isArray(args.skip)
+            ? args.skip.map((s: string | RegExp) => new RegExp(s))
+            : undefined;
     const entry_iter = searchFilesNames({ skip });
     await parallel_cache(entry_iter, limiter);
 }
@@ -74,7 +73,7 @@ async function runDenocache(stack: string[]) {
     if (!success) {
         throw new Error(
             "type cache failed:" +
-                JSON.stringify({ code, success, stdout: out, stderr: err }),
+                JSON.stringify({ code, success, stdout: out, stderr: err })
         );
     }
 }
