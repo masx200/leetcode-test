@@ -1,7 +1,6 @@
 import { searchSegmentLeaf } from "../mod.ts";
 import { SegmentTree } from "../my-calendar-iii/SegmentTree.ts";
 
-
 /**
  * 这个代码实现了一个RangeModule类，该类用于管理一系列不重叠的数字范围，并支持添加、查询和移除操作。使用了区间树（Segment Tree）数据结构来高效地处理这些操作。
  */
@@ -39,7 +38,8 @@ export default class RangeModule {
     ) {
         this.#root = /** 范围模块树结构的根节点 */
             SegmentTree(
-                left, right
+                left,
+                right,
             );
     }
     /**添加指定范围的方法 */
@@ -72,7 +72,9 @@ export default class RangeModule {
     #update_parents(nodes: SegmentTree[]) {
         for (let i = nodes.length - 1; i >= 0; i--) {
             const node = nodes[i];
-            node.value = node.children.every((child) => child.value > 0) ? 1 : 0;
+            node.value = node.children.every((child) => child.value > 0)
+                ? 1
+                : 0;
         }
     }
     /**合并子节点的方法 */
