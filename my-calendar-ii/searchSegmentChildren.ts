@@ -1,6 +1,9 @@
 import { SegmentTree } from "../my-calendar-iii/SegmentTree.ts";
 import { searchSegmentLeaf } from "./searchSegmentLeaf.ts";
 
+/**
+ * 搜索子区间的节点的方法
+ */
 export function searchSegmentChildren(
     start: number,
     end: number,

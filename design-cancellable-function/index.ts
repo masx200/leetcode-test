@@ -34,7 +34,7 @@ function cancellable<T>(
                 : generator.next(yield_value);
 
             if (done) {
-                return (value);
+                return value;
             } else {
                 try {
                     yield_value = await Promise.race([
