@@ -6,7 +6,7 @@ import { retry } from "./retry.ts";
 
 async function* findFilesRecursive(
     path: string,
-    name: string,
+    name: string
 ): AsyncGenerator<string, void, unknown> {
     for await (const entry of Deno.readDir(path)) {
         const fullPath = resolve(join(path, entry.name));
@@ -37,7 +37,7 @@ async function RunXmake(
     sdk: string,
     executable: string,
     group: string,
-    mode: string,
+    mode: string
 ) {
     await RunXmakeConfig(file, toolchain, sdk, executable, mode);
     await retry(RunXmakeBuild.bind(null, file, executable, group), {
@@ -50,11 +50,11 @@ async function RunXmake(
                 const cwd = path.dirname(file);
                 const dirtobecreate = path.join(
                     cwd,
-                    path.dirname(filepathmatched),
+                    path.dirname(filepathmatched)
                 );
 
                 console.log(
-                    "Ensures that the directory exists:" + dirtobecreate,
+                    "Ensures that the directory exists:" + dirtobecreate
                 );
                 await ensureDir(dirtobecreate);
                 return true;
@@ -69,7 +69,7 @@ async function RunXmakeConfig(
     toolchain: string,
     sdk: string,
     executable: string,
-    mode: string,
+    mode: string
 ) {
     console.log({ file });
     const cwd = path.dirname(file);
@@ -88,9 +88,10 @@ export async function RunCommandShell(others: string[], cwd?: string) {
 
     const cmd = os === "windows" ? "powershell.exe" : "bash";
 
-    const args = os === "windows"
-        ? ["-command", others.join(" \n ")]
-        : ["-c", others.join(" && ")];
+    const args =
+        os === "windows"
+            ? ["-command", others.join(" \n ")]
+            : ["-c", others.join(" && ")];
 
     console.log(JSON.stringify({ cmd, cwd, args }));
     const command = new Deno.Command(cmd, { cwd: cwd, args });
