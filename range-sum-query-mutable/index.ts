@@ -49,6 +49,7 @@ export function change(
         return;
     }
     const mid = Math.floor((start + end) / 2);
+    pushdown(node);
     if (!node.left || !node.right) {
         throw Error("node.left and node.right empty");
     }
