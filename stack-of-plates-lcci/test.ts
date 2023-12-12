@@ -8,7 +8,7 @@ Deno.test("StackOfPlates test", () => {
         runScript(
             ["StackOfPlates", "push", "push", "popAt", "pop", "pop"],
             [[1], [1], [2], [1], [], []],
-            StackOfPlates
-        )
+            StackOfPlates,
+        ),
     );
 });
