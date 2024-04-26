@@ -152,6 +152,8 @@ go get github.com/masx200/leetcode-test
 
 <summary>展开查看</summary>
 
+https://leetcode.cn/problems/kth-ancestor-of-a-tree-node
+
 https://leetcode.cn/problems/counter-ii/
 
 https://leetcode.cn/problems/flipping-an-image/

@@ -23,7 +23,7 @@ jobs:
                   key: ${{ runner.os }}-deno-${{ hashFiles('**/deps.ts') }}-${{ hashFiles('**/import_map.json') }}
             - uses: denoland/setup-deno@v1
               with:
-                  deno-version: v1.42.2
+                  deno-version: v1.42.4
             - name: download lua-format
               run: |
                   mkdir -p ./temp/lua-format
