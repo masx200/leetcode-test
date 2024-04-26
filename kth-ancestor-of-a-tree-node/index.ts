@@ -11,12 +11,12 @@ class TreeAncestor {
         // console.log(this.cache)
         // console.log(node, k)
         if (!this.cache.has(node)) this.cache.set(node, new Map());
-        const map = this.cache.get(node);
+        const map = this.cache.get(node)!!;
         // this.cache[node] ??= {}
-        if (typeof map.get(k) != "undefined") {
+        if (typeof map?.get(k) != "undefined") {
             // console.log(node, k)
             //  console.log(this.cache)
-            return map.get(k); //this.cache[node][k]
+            return map.get(k)!!; //this.cache[node][k]
         }
         if (node == 0) return -1;
         if (node == -1) return -1;
@@ -31,7 +31,7 @@ class TreeAncestor {
             k - half,
         );
         //const res = this.getKthAncestor(this.getKthAncestor(node,k- half),  half)
-        map.set(k, res);
+        map!!.set(k, res);
         // if(k==2)
         // console.log(this.cache)
         return res;
