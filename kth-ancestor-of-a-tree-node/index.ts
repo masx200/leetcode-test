@@ -13,7 +13,7 @@ class TreeAncestor {
         // console.log(node, k)
         if (!this.cache.has(node)) this.cache.set(node, new Map());
 
-        const map = this.cache.get(node)!!;
+        const map = this.cache.get(node)!! as Map<number, number>;
         // this.cache[node] ??= {}
         if (typeof map?.get(k) != "undefined") {
             // console.log(node, k)
