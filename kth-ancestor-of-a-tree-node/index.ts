@@ -1,3 +1,4 @@
+// deno-lint-ignore-file no-extra-non-null-assertion
 class TreeAncestor {
     n: number;
     parent: number[];
@@ -11,6 +12,7 @@ class TreeAncestor {
         // console.log(this.cache)
         // console.log(node, k)
         if (!this.cache.has(node)) this.cache.set(node, new Map());
+
         const map = this.cache.get(node)!!;
         // this.cache[node] ??= {}
         if (typeof map?.get(k) != "undefined") {
