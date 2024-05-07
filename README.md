@@ -2642,4 +2642,6 @@ https://leetcode.cn/problems/the-masseuse-lcci
 
 https://leetcode.cn/problems/number-of-employees-who-met-the-target/
 
+https://leetcode.cn/problems/cherry-pickup-ii
+
 </details>
