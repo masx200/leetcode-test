@@ -80,8 +80,8 @@ jobs:
                   actions-cache-folder: ".xmake-cache"
             - run: xmake l install.lua
             - run: deno run -A xmake.ts --mode=test --group=test  --toolchain=llvm --sdk=/opt/homebrew/opt/llvm@16/
-                env: 
-                    VCPKG_ROOT: "/Users/runner/work/leetcode-treenode-cpp/leetcode-treenode-cpp/vcpkg"
+              env: 
+                    VCPKG_ROOT: "/Users/runner/work/leetcode-test/leetcode-test/vcpkg"
             - run: xmake clean  -a
             - run: xmake f --toolchain=llvm --sdk=/opt/homebrew/opt/llvm@16/ -y -v --project=. "--file=./xmake.lua"
             - run: xmake build -v -y  -w --project=. "--file=./xmake.lua"
