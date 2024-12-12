@@ -65,11 +65,11 @@ jobs:
                   sudo chmod 777 /etc/apt/sources.list
                   sudo cat >>/etc/apt/sources.list<<EOF
 
-                  deb http://azure.archive.ubuntu.com/ubuntu/ lunar-proposed main restricted universe multiverse
-                  deb http://azure.archive.ubuntu.com/ubuntu/ lunar main restricted universe multiverse
-                  deb http://azure.archive.ubuntu.com/ubuntu/ lunar-backports main restricted universe multiverse
-                  deb http://azure.archive.ubuntu.com/ubuntu/ lunar-security main restricted universe multiverse
-                  deb http://azure.archive.ubuntu.com/ubuntu/ lunar-updates main restricted universe multiverse
+                  deb https://mirrors.huaweicloud.com/ubuntu/ lunar-proposed main restricted universe multiverse
+                  deb https://mirrors.huaweicloud.com/ubuntu/ lunar main restricted universe multiverse
+                  deb https://mirrors.huaweicloud.com/ubuntu/ lunar-backports main restricted universe multiverse
+                  deb https://mirrors.huaweicloud.com/ubuntu/ lunar-security main restricted universe multiverse
+                  deb https://mirrors.huaweicloud.com/ubuntu/ lunar-updates main restricted universe multiverse
                   EOF
                   sudo apt update
                   sudo apt install gcc-13 g++-13 gcc g++ gcc-13-locales g++-multilib -y
