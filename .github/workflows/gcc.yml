@@ -72,7 +72,8 @@ jobs:
                   deb https://mirrors.huaweicloud.com/ubuntu/ jammy-updates main restricted universe multiverse
                   EOF
                   sudo apt update
-                  sudo apt install gcc-13 g++-13 gcc g++ gcc-13-locales g++-multilib -y
+                  # sudo apt install gcc-13 g++-13 gcc g++ gcc-13-locales g++-multilib -y
+                  sudo apt install  gcc g++ gcc-locales g++-multilib -y
                   export PATH="/opt/gcc-latest/bin:$PATH"
                   export LD_RUN_PATH="/opt/gcc-latest/lib64"
                   echo 'export PATH="/opt/gcc-latest/bin:$PATH"' >> ~/.profile
