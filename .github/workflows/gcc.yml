@@ -65,15 +65,15 @@ jobs:
                   sudo chmod 777 /etc/apt/sources.list
                   sudo cat >>/etc/apt/sources.list<<EOF
 
-                  deb https://mirrors.huaweicloud.com/ubuntu/ jammy-proposed main restricted universe multiverse
-                  deb https://mirrors.huaweicloud.com/ubuntu/ jammy main restricted universe multiverse
-                  deb https://mirrors.huaweicloud.com/ubuntu/ jammy-backports main restricted universe multiverse
-                  deb https://mirrors.huaweicloud.com/ubuntu/ jammy-security main restricted universe multiverse
-                  deb https://mirrors.huaweicloud.com/ubuntu/ jammy-updates main restricted universe multiverse
+                  deb https://mirrors.huaweicloud.com/ubuntu/ noble-proposed main restricted universe multiverse
+                  deb https://mirrors.huaweicloud.com/ubuntu/ noble main restricted universe multiverse
+                  deb https://mirrors.huaweicloud.com/ubuntu/ noble-backports main restricted universe multiverse
+                  deb https://mirrors.huaweicloud.com/ubuntu/ noble-security main restricted universe multiverse
+                  deb https://mirrors.huaweicloud.com/ubuntu/ noble-updates main restricted universe multiverse
                   EOF
                   sudo apt update
-                  # sudo apt install gcc-13 g++-13 gcc g++ gcc-13-locales g++-multilib -y
-                  sudo apt install  gcc g++  g++-multilib -y
+                  sudo apt install gcc-13 g++-13 gcc g++ gcc-13-locales g++-multilib -y
+                  #sudo apt install  gcc g++  g++-multilib -y
                   export PATH="/opt/gcc-latest/bin:$PATH"
                   export LD_RUN_PATH="/opt/gcc-latest/lib64"
                   echo 'export PATH="/opt/gcc-latest/bin:$PATH"' >> ~/.profile
