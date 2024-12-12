@@ -76,7 +76,7 @@ jobs:
             - run: deno task cache
             - uses: xmake-io/github-action-setup-xmake@v1
               with:
-                  xmake-version: branch@v2.9.6
+                  xmake-version: 2.9.6
                   actions-cache-folder: ".xmake-cache"
             - run: xmake l install.lua
             - run: deno run -A xmake.ts --mode=test --group=test  --toolchain=llvm --sdk=/opt/homebrew/opt/llvm@16/
