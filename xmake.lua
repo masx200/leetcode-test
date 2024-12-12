@@ -11,6 +11,6 @@ set_kind('static')
 set_policy("build.c++.modules", true);
 add_files('*/*.ixx', {install = true})
 
-add_files("./leetcode-treenode-cpp/*.ixx",{public = true});
+add_files("./leetcode-treenode-cpp/*.ixx", {public = true});
 target_end()
 includes("./*/xmake.lua")

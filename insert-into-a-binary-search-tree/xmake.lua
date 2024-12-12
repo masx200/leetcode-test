@@ -22,5 +22,5 @@ add_files("*.ixx");
 add_files("test.cpp");
 add_packages("vcpkg::cppunit");
 
-add_files("../leetcode-treenode-cpp/*.ixx",{public = true});
+add_files("../leetcode-treenode-cpp/*.ixx", {public = true});
 target_end();
