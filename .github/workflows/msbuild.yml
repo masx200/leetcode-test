@@ -61,7 +61,7 @@ jobs:
             - uses: xmake-io/github-action-setup-xmake@v1
 
               with:
-                  xmake-version: branch@dev
+                  xmake-version: branch@v2.9.6
                   actions-cache-folder: ".xmake-cache"
 
             - run: deno task cache
