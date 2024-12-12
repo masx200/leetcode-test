@@ -3,7 +3,7 @@ set_languages('c++20')
 target("web-crawler-multithreaded")
 set_kind("static")
 
-add_files("*.ixx", {install = true,public = true})
+add_files("*.ixx", {install = true, public = true})
 target_end()
 target("web-crawler-multithreaded-test")
 set_kind("binary")

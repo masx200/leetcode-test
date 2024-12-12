@@ -5,7 +5,7 @@ add_requires("gtest")
 target("design-linked-list")
 set_kind("static")
 
-add_files("*.ixx", {install = true,public = true})
+add_files("*.ixx", {install = true, public = true})
 if is_mode("test") then
     add_defines("__TEST__")
     add_packages("vcpkg::eventpp")

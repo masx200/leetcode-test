@@ -23,5 +23,5 @@ set_policy("build.c++.modules", true);
 add_files("test.cpp");
 add_packages("gtest");
 
-add_files("../leetcode-treenode-cpp/*.ixx",{public = true});
+add_files("../leetcode-treenode-cpp/*.ixx", {public = true});
 target_end();
