@@ -19,7 +19,7 @@ jobs:
               id: cache-llvm-16
               with:
                   path: |
-                      /usr/local/opt/llvm@16/
+                      /opt/homebrew/Cellar/llvm@16/
 
                       /usr/local/Cellar/llvm/
                   key: ${{ runner.os }}-llvm-16
@@ -46,18 +46,18 @@ jobs:
               if: ${{ steps.cache-llvm-16.outputs.cache-hit!= 'true' }}
               run: |
                   brew install llvm@16
-                  export PATH="/usr/local/opt/llvm@16/bin:$PATH"
-                  export LDFLAGS="-L/usr/local/opt/llvm@16/lib"
-                  export CPPFLAGS="-I/usr/local/opt/llvm@16/include"
+                  export PATH="/opt/homebrew/Cellar/llvm@16/bin:$PATH"
+                  export LDFLAGS="-L/opt/homebrew/Cellar/llvm@16/lib"
+                  export CPPFLAGS="-I/opt/homebrew/Cellar/llvm@16/include"
 
             - name: install
               run: |
                   brew install xmake python@3.11 six z3 zstd 
 
                   brew install libtool automake
-                   export LDFLAGS="-L/usr/local/opt/llvm@16/lib"
-                       export CPPFLAGS="-I/usr/local/opt/llvm@16/include"
-                       echo 'export PATH="/usr/local/opt/llvm@16/bin:$PATH"' >> /Users/runner/.bash_profile
+                   export LDFLAGS="-L/opt/homebrew/Cellar/llvm@16/lib"
+                       export CPPFLAGS="-I/opt/homebrew/Cellar/llvm@16/include"
+                       echo 'export PATH="/opt/homebrew/Cellar/llvm@16/bin:$PATH"' >> /Users/runner/.bash_profile
 
             - name: vcpkg-action
 
@@ -78,11 +78,11 @@ jobs:
                   xmake-version: branch@dev
                   actions-cache-folder: ".xmake-cache"
             - run: xmake l install.lua
-            - run: deno run -A xmake.ts --mode=test --group=test  --toolchain=llvm --sdk=/usr/local/opt/llvm@16/
+            - run: deno run -A xmake.ts --mode=test --group=test  --toolchain=llvm --sdk=/opt/homebrew/Cellar/llvm@16/
             - run: xmake clean  -a
-            - run: xmake f --toolchain=llvm --sdk=/usr/local/opt/llvm@16/ -y -v --project=. "--file=./xmake.lua"
+            - run: xmake f --toolchain=llvm --sdk=/opt/homebrew/Cellar/llvm@16/ -y -v --project=. "--file=./xmake.lua"
             - run: xmake build -v -y  -w --project=. "--file=./xmake.lua"
             - run: xmake clean  -a
-            - run: xmake f --toolchain=llvm --sdk=/usr/local/opt/llvm@16/ -y -v --project=. "--file=./xmake.lua" --mode=test
+            - run: xmake f --toolchain=llvm --sdk=/opt/homebrew/Cellar/llvm@16/ -y -v --project=. "--file=./xmake.lua" --mode=test
             - run: xmake build -v -y  -w --project=. "--file=./xmake.lua" --group=test
             - run: xmake run --group=test
