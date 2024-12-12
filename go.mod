@@ -10,11 +10,11 @@ require (
 )
 
 require (
-	github.com/admpub/fsnotify v1.5.0 // indirect
+	github.com/admpub/fsnotify v1.7.0 // indirect
 	github.com/francoispqt/gojay v1.2.13 // indirect
 	github.com/go-ole/go-ole v1.2.6 // indirect
-	github.com/goccy/go-json v0.9.11 // indirect
-	github.com/hashicorp/go-version v1.6.0 // indirect
+	github.com/goccy/go-json v0.10.3 // indirect
+	github.com/hashicorp/go-version v1.7.0 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/kr/pretty v0.3.0 // indirect
 	github.com/lufia/plan9stats v0.0.0-20211012122336-39d0f177ccd0 // indirect
@@ -39,6 +39,6 @@ require (
 	github.com/magiconair/properties v1.8.7
 	github.com/masx200/leetcode-TreeNode-go v1.0.5
 	github.com/pmezard/go-difflib v1.0.0 // indirect
-	github.com/webx-top/com v1.2.13
+	github.com/webx-top/com v1.3.19
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
