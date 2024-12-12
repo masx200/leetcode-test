@@ -51,7 +51,7 @@ function main()
 
     local downloadpath = path.join(homepath, "cache", 'downloads')
     local name = "leetcode-treenode-cpp"
-    local version = "1.1.9"
+    local version = "1.2.0"
     local folder = name .. "-" .. version
     local archivefile = path.join(downloadpath, folder .. '.zip')
     local listfile = path.join(downloadpath, folder .. '.list')
