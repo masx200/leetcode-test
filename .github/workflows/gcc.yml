@@ -73,7 +73,7 @@ jobs:
                   EOF
                   sudo apt update
                   # sudo apt install gcc-13 g++-13 gcc g++ gcc-13-locales g++-multilib -y
-                  sudo apt install  gcc g++ gcc-locales g++-multilib -y
+                  sudo apt install  gcc g++  g++-multilib -y
                   export PATH="/opt/gcc-latest/bin:$PATH"
                   export LD_RUN_PATH="/opt/gcc-latest/lib64"
                   echo 'export PATH="/opt/gcc-latest/bin:$PATH"' >> ~/.profile
