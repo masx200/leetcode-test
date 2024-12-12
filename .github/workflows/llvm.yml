@@ -19,6 +19,7 @@ jobs:
               id: cache-llvm-16
               with:
                   path: |
+                    /opt/homebrew/Cellar/llvm@16/
                       opt/homebrew/opt/llvm@16/
 
                       /usr/local/Cellar/llvm/
@@ -57,7 +58,7 @@ jobs:
                   brew install libtool automake
                    export LDFLAGS="-Lopt/homebrew/opt/llvm@16/lib"
                        export CPPFLAGS="-Iopt/homebrew/opt/llvm@16/include"
-                       echo 'export PATH="opt/homebrew/opt/llvm@16/bin:$PATH"' >> /Users/runner/.bash_profile
+                    echo 'export PATH="opt/homebrew/opt/llvm@16/bin:$PATH"' >> ~/.bash_profile
 
             - name: vcpkg-action
 
@@ -66,7 +67,7 @@ jobs:
                   token: ${{ github.token }}
                   triplet: x64-osx-release
                   pkgs: "gtest cppunit"
-
+            - run: echo 'VCPKG_ROOT="/Users/runner/work/leetcode-test/leetcode-test/vcpkg"' >> ~/.bash_profile
             - name: Setup Deno
 
               uses: denoland/setup-deno@v1.1.0
