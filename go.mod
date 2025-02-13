@@ -13,7 +13,7 @@ require (
 	github.com/admpub/fsnotify v1.7.0 // indirect
 	github.com/francoispqt/gojay v1.2.13 // indirect
 	github.com/go-ole/go-ole v1.2.6 // indirect
-	github.com/goccy/go-json v0.10.3 // indirect
+	github.com/goccy/go-json v0.10.5 // indirect
 	github.com/hashicorp/go-version v1.7.0 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/kr/pretty v0.3.0 // indirect
@@ -26,9 +26,9 @@ require (
 	github.com/tklauser/go-sysconf v0.3.9 // indirect
 	github.com/tklauser/numcpus v0.3.0 // indirect
 	github.com/yusufpapurcu/wmi v1.2.2 // indirect
-	golang.org/x/crypto v0.31.0 // indirect
-	golang.org/x/sys v0.28.0 // indirect
-	golang.org/x/text v0.21.0 // indirect
+	golang.org/x/crypto v0.33.0 // indirect
+	golang.org/x/sys v0.30.0 // indirect
+	golang.org/x/text v0.22.0 // indirect
 	gopkg.in/check.v1 v1.0.0-20201130134442-10cb98267c6c // indirect
 )
 
@@ -39,6 +39,6 @@ require (
 	github.com/magiconair/properties v1.8.7
 	github.com/masx200/leetcode-TreeNode-go v1.0.5
 	github.com/pmezard/go-difflib v1.0.0 // indirect
-	github.com/webx-top/com v1.3.19
+	github.com/webx-top/com v1.3.21
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
